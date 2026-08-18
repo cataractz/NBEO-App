@@ -1099,6 +1099,59 @@ const RETINAPHARMINDICATIONS_OBJECTIVES = [
   { id: "retinapharm-antivegf-risks", name: "Anti-VEGF Therapy Risks — Endophthalmitis & Systemic Thromboembolic Considerations", built: true },
 ];
 
+const ORBITALNERVES_TOPIC_ID = "t-13-0-0"; // Optic Nerve/Neuro-Ophthalmic Pathways(13) > Anatomy(Gross)(0) > Ocular and orbital nerves(0)
+// Ties directly into existing Corneal Innervation, Sympathetic Pathway,
+// and CN III/IV/VI Palsy content.
+const ORBITALNERVES_OBJECTIVES = [
+  { id: "orbitalnerves-sensory", name: "Trigeminal (V1) Sensory Innervation of the Eye & Orbit", built: true },
+  { id: "orbitalnerves-motor", name: "CN III Superior & Inferior Divisions Within the Orbit", built: true },
+];
+
+const OPTICNERVEGROSS_TOPIC_ID = "t-13-0-1"; // Optic Nerve/Neuro-Ophthalmic Pathways(13) > Anatomy(Gross)(0) > Optic nerve(1)
+// Ties directly into existing Papilledema content.
+const OPTICNERVEGROSS_OBJECTIVES = [
+  { id: "opticnervegross-segments", name: "Optic Nerve Segments — Intraocular, Intraorbital, Intracanalicular, Intracranial", built: true },
+  { id: "opticnervegross-sheath", name: "Optic Nerve Sheath & CSF Continuity — the Papilledema Mechanism", built: true },
+];
+
+const VISPATHGROSS_TOPIC_ID = "t-13-0-2"; // Optic Nerve/Neuro-Ophthalmic Pathways(13) > Anatomy(Gross)(0) > Visual pathway(2)
+// Ties directly into existing Visual Field Defect Localization content.
+const VISPATHGROSS_OBJECTIVES = [
+  { id: "vispathgross-course", name: "Optic Radiations — Meyer's Loop vs. Parietal Fibers", built: true },
+];
+
+const OPTICNERVEDEV_TOPIC_ID = "t-13-1-0"; // Optic Nerve/Neuro-Ophthalmic Pathways(13) > Anatomy(Developmental)(1) > Optic nerve and visual pathway(0)
+const OPTICNERVEDEV_OBJECTIVES = [
+  { id: "opticnervedev-formation", name: "Optic Nerve Development from the Optic Stalk", built: true },
+  { id: "opticnervedev-anomalies", name: "Optic Nerve Hypoplasia & Morning Glory Disc Anomaly", built: true },
+];
+
+const ONPHARMGEN_TOPIC_ID = "t-13-4-0"; // Optic Nerve/Neuro-Ophthalmic Pathways(13) > Pharmacology(4) > General principles(0)
+const ONPHARMGEN_OBJECTIVES = [
+  { id: "onpharmgen-neuroprotection", name: "Neuroprotection Limits in Optic Neuropathy — CNS Axon Regeneration", built: true },
+];
+
+const ONPHARMMYDRIATIC_TOPIC_ID = "t-13-4-1"; // Optic Nerve/Neuro-Ophthalmic Pathways(13) > Pharmacology(4) > Mydriatics and cycloplegics(1)
+const ONPHARMMYDRIATIC_OBJECTIVES = [
+  { id: "onpharm-mydriasis-diagnostic", name: "Diagnostic Pupillary Dilation for Optic Nerve Examination", built: true },
+];
+
+const ONPHARMMIOTIC_TOPIC_ID = "t-13-4-2"; // Optic Nerve/Neuro-Ophthalmic Pathways(13) > Pharmacology(4) > Miotics(2)
+const ONPHARMMIOTIC_OBJECTIVES = [
+  { id: "onpharm-miotic-rapd-interference", name: "Miotic-Induced Pupil Constriction — Interference with RAPD Testing", built: true },
+];
+
+const ONPHARMANTIINFLAMM_TOPIC_ID = "t-13-4-3"; // Optic Nerve/Neuro-Ophthalmic Pathways(13) > Pharmacology(4) > Anti-inflammatory agents(3)
+const ONPHARMANTIINFLAMM_OBJECTIVES = [
+  { id: "onpharm-iv-steroid-neuritis", name: "Intravenous Corticosteroids for Optic Neuritis — The ONTT Rationale", built: true },
+  { id: "onpharm-steroid-caution-naion", name: "Corticosteroid Caution in NAION — Lack of Proven Benefit", built: true },
+];
+
+const ONPHARMINDICATIONS_TOPIC_ID = "t-13-4-4"; // Optic Nerve/Neuro-Ophthalmic Pathways(13) > Pharmacology(4) > Indications/contraindications/side effects/drug interactions(4)
+const ONPHARMINDICATIONS_OBJECTIVES = [
+  { id: "onpharm-neuritis-naion-differential", name: "Age & Risk Factor Differential Guiding Steroid Treatment Decisions", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -2121,6 +2174,11 @@ const TOPIC_OBJECTIVES = {
   [RETINAPHARMGEN_TOPIC_ID]: RETINAPHARMGEN_OBJECTIVES, [RETINAPHARMANTIINFLAMM_TOPIC_ID]: RETINAPHARMANTIINFLAMM_OBJECTIVES,
   [RETINAPHARMANTIINFECT_TOPIC_ID]: RETINAPHARMANTIINFECT_OBJECTIVES, [RETINAPHARMDYES_TOPIC_ID]: RETINAPHARMDYES_OBJECTIVES,
   [RETINAPHARMNUTRITION_TOPIC_ID]: RETINAPHARMNUTRITION_OBJECTIVES, [RETINAPHARMINDICATIONS_TOPIC_ID]: RETINAPHARMINDICATIONS_OBJECTIVES,
+  [ORBITALNERVES_TOPIC_ID]: ORBITALNERVES_OBJECTIVES, [OPTICNERVEGROSS_TOPIC_ID]: OPTICNERVEGROSS_OBJECTIVES,
+  [VISPATHGROSS_TOPIC_ID]: VISPATHGROSS_OBJECTIVES, [OPTICNERVEDEV_TOPIC_ID]: OPTICNERVEDEV_OBJECTIVES,
+  [ONPHARMGEN_TOPIC_ID]: ONPHARMGEN_OBJECTIVES, [ONPHARMMYDRIATIC_TOPIC_ID]: ONPHARMMYDRIATIC_OBJECTIVES,
+  [ONPHARMMIOTIC_TOPIC_ID]: ONPHARMMIOTIC_OBJECTIVES, [ONPHARMANTIINFLAMM_TOPIC_ID]: ONPHARMANTIINFLAMM_OBJECTIVES,
+  [ONPHARMINDICATIONS_TOPIC_ID]: ONPHARMINDICATIONS_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -2343,6 +2401,15 @@ const CONTENT_TOPICS = [
   { topicId: RETINAPHARMDYES_TOPIC_ID, name: "Retina/Vitreous Diagnostic & Surgical Dyes", objectives: RETINAPHARMDYES_OBJECTIVES },
   { topicId: RETINAPHARMNUTRITION_TOPIC_ID, name: "Retina/Vitreous Nutritional Supplements", objectives: RETINAPHARMNUTRITION_OBJECTIVES },
   { topicId: RETINAPHARMINDICATIONS_TOPIC_ID, name: "Retina/Vitreous Pharmacology — Indications & Contraindications", objectives: RETINAPHARMINDICATIONS_OBJECTIVES },
+  { topicId: ORBITALNERVES_TOPIC_ID, name: "Ocular & Orbital Nerve Anatomy", objectives: ORBITALNERVES_OBJECTIVES },
+  { topicId: OPTICNERVEGROSS_TOPIC_ID, name: "Optic Nerve Gross Anatomy", objectives: OPTICNERVEGROSS_OBJECTIVES },
+  { topicId: VISPATHGROSS_TOPIC_ID, name: "Visual Pathway Gross Anatomy", objectives: VISPATHGROSS_OBJECTIVES },
+  { topicId: OPTICNERVEDEV_TOPIC_ID, name: "Optic Nerve Developmental Anatomy", objectives: OPTICNERVEDEV_OBJECTIVES },
+  { topicId: ONPHARMGEN_TOPIC_ID, name: "Optic Nerve Pharmacology — General Principles", objectives: ONPHARMGEN_OBJECTIVES },
+  { topicId: ONPHARMMYDRIATIC_TOPIC_ID, name: "Optic Nerve Exam — Diagnostic Dilation", objectives: ONPHARMMYDRIATIC_OBJECTIVES },
+  { topicId: ONPHARMMIOTIC_TOPIC_ID, name: "Miotics & Optic Nerve Exam Interference", objectives: ONPHARMMIOTIC_OBJECTIVES },
+  { topicId: ONPHARMANTIINFLAMM_TOPIC_ID, name: "Optic Nerve Anti-Inflammatory Therapy", objectives: ONPHARMANTIINFLAMM_OBJECTIVES },
+  { topicId: ONPHARMINDICATIONS_TOPIC_ID, name: "Optic Nerve Pharmacology — Indications & Contraindications", objectives: ONPHARMINDICATIONS_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -13648,6 +13715,258 @@ const STUDY_PAGES = {
       "This gives you the safety-counseling framework directly extending your existing Anti-VEGF Therapy mechanism content and Lens/Cataract Endophthalmitis Prophylaxis content — a patient starting long-term anti-VEGF therapy for wet AMD (already covered) should be counseled on both the small per-injection endophthalmitis risk (mitigated by proper sterile technique at each visit) and, particularly if they have a recent cardiovascular event history, the theoretical systemic thromboembolic consideration that factors into an individualized risk-benefit discussion.",
     ],
   },
+  "orbitalnerves-sensory": {
+    name: "Trigeminal (V1) Sensory Innervation of the Eye & Orbit",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The ophthalmic division of the trigeminal nerve (V1) branches into three named nerves within the orbit, and knowing their specific distributions grounds your existing Corneal Sensation and Sympathetic Pathway Anatomy content in precise anatomic detail." },
+      { h: "V1's three orbital branches", t: "After entering the orbit through the superior orbital fissure (already covered under Orbital Fissures content), V1 divides into three branches: the LACRIMAL nerve (sensory to the lacrimal gland and adjacent conjunctiva/lid), the FRONTAL nerve (sensory to the forehead and upper eyelid, its largest branch), and the NASOCILIARY nerve (sensory to the globe itself, plus the medial orbit and nose)." },
+      { h: "The nasociliary nerve and corneal/globe sensation", t: "The nasociliary nerve gives rise to the LONG CILIARY NERVES, which provide corneal and iris sensation (already covered under Corneal Innervation and the afferent limb of the corneal reflex) and, importantly, also carry SYMPATHETIC fibers to the iris dilator muscle (already covered under Iris Layers and Sympathetic Pathway Anatomy content) traveling alongside these sensory fibers en route to the globe — meaning the long ciliary nerves serve a genuinely dual sensory-plus-sympathetic-conduit function." },
+    ],
+    memorizeIt: [
+      "V1's three orbital branches: LACRIMAL (gland/lid), FRONTAL (forehead/upper lid, largest), NASOCILIARY (globe, medial orbit, nose).",
+      "Nasociliary nerve → long ciliary nerves: corneal/iris SENSATION (already covered under Corneal Innervation) PLUS carries SYMPATHETIC fibers to the iris dilator (already covered).",
+      "Long ciliary nerves serve a dual sensory + sympathetic-conduit function — genuinely important anatomic overlap.",
+    ],
+    applyIt: [
+      "This gives you the precise anatomic pathway directly extending your existing Corneal Innervation and Sympathetic Pathway Anatomy content — understanding that the long ciliary nerves carry BOTH corneal sensory fibers AND sympathetic dilator fibers together explains why certain orbital or nasociliary nerve lesions can produce a combined pattern of reduced corneal sensation and pupillary abnormality, rather than these findings necessarily indicating two separate, unrelated pathologic processes.",
+    ],
+  },
+  "orbitalnerves-motor": {
+    name: "CN III Superior & Inferior Divisions Within the Orbit",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Upon entering the orbit, CN III splits into two distinct divisions — a genuinely important anatomic detail extending your existing CN III Palsy content with the specific basis for certain PARTIAL (rather than complete) CN III palsy presentations." },
+      { h: "The superior division", t: "The CN III superior division innervates the superior rectus and the levator palpebrae superioris — meaning an isolated lesion affecting specifically this division produces ptosis (levator weakness) and hypotropia/limited elevation (superior rectus weakness) WITHOUT necessarily affecting the pupil or other extraocular muscles." },
+      { h: "The inferior division", t: "The CN III inferior division innervates the medial rectus, inferior rectus, and inferior oblique, AND carries the parasympathetic fibers to the pupillary sphincter and ciliary muscle (already covered under Pupillary Light & Near Reflexes and Iris Muscle content) — meaning an isolated inferior division lesion produces limited adduction/depression, and CAN involve the pupil, while sparing the levator (no ptosis) and superior rectus." },
+      { h: "Clinical significance of divisional palsies", t: "Recognizing a divisional (superior-only or inferior-only) pattern rather than a complete CN III palsy pattern (already covered) is a genuinely useful localizing clue, since divisional palsies suggest a lesion specifically within the orbit (after the nerve has already split into its two divisions) rather than more proximally along the nerve's intracranial or cavernous sinus course, where the two divisions remain unified." },
+    ],
+    memorizeIt: [
+      "CN III superior division: superior rectus + levator palpebrae superioris — isolated lesion causes ptosis + limited elevation, pupil typically spared.",
+      "CN III inferior division: medial rectus, inferior rectus, inferior oblique + parasympathetic pupillary/ciliary fibers — isolated lesion causes limited adduction/depression, CAN involve the pupil.",
+      "A divisional (partial) CN III palsy pattern localizes the lesion to WITHIN the orbit (after the nerve splits), distinct from a complete CN III palsy suggesting a more proximal (intracranial/cavernous sinus) lesion.",
+    ],
+    applyIt: [
+      "This gives you a genuinely useful localizing refinement extending your existing CN III Palsy content (already covered under Head & Neck Anatomy) — a patient with ptosis and limited elevation but normal pupil, adduction, and depression has a superior division palsy pointing to an orbital lesion, a meaningfully different localization and differential diagnosis from the complete CN III palsy pattern (all functions affected) already covered as classically arising from posterior communicating artery aneurysm or diabetic microvascular disease at a more proximal site.",
+    ],
+  },
+  "opticnervegross-segments": {
+    name: "Optic Nerve Segments — Intraocular, Intraorbital, Intracanalicular, Intracranial",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The optic nerve is divided into four anatomically and clinically distinct segments, each vulnerable to different characteristic pathology, extending your existing Optic Nerve Neurophysiology and Papilledema content with a segment-specific localization framework." },
+      { h: "The four segments", t: "From anterior to posterior: the INTRAOCULAR segment (shortest, within the globe, includes the optic disc); the INTRAORBITAL segment (the longest segment, deliberately possessing more length/slack than the direct orbital distance requires, allowing full eye movement without traction on the nerve); the INTRACANALICULAR segment (passing through the bony optic canal, already covered under Orbital Fissures content, alongside the ophthalmic artery); and the INTRACRANIAL segment (from the canal to the optic chiasm, already covered under Visual Pathway Physiology)." },
+      { h: "Segment-specific vulnerability", t: "Each segment has characteristic vulnerabilities: the intraorbital segment can be compressed by orbital masses or thyroid eye disease-related muscle enlargement; the intracanalicular segment is particularly vulnerable to TRAUMATIC optic neuropathy from optic canal fractures, since this segment is tightly fixed within unyielding bone with minimal room for swelling; and the intracranial segment is vulnerable to compression from pituitary or parasellar masses (already covered under Pituitary Adenoma/bitemporal hemianopia content)." },
+    ],
+    memorizeIt: [
+      "Four optic nerve segments, anterior to posterior: INTRAOCULAR → INTRAORBITAL (longest, has slack for eye movement) → INTRACANALICULAR (through the optic canal with the ophthalmic artery) → INTRACRANIAL (to the chiasm).",
+      "Intracanalicular segment: tightly fixed in bone, minimal swelling room — particularly vulnerable to TRAUMATIC optic neuropathy from canal fracture.",
+      "Intracranial segment: vulnerable to pituitary/parasellar mass compression (already covered).",
+    ],
+    applyIt: [
+      "This gives you a segment-based localization framework directly extending your existing traumatic and compressive optic neuropathy content — a patient with vision loss after head trauma and evidence of an optic canal fracture on imaging is experiencing intracanalicular segment injury specifically because this segment's tight bony confinement prevents the swelling accommodation available to the more generously-slacked intraorbital segment, explaining why this particular injury location is so functionally devastating.",
+    ],
+  },
+  "opticnervegross-sheath": {
+    name: "Optic Nerve Sheath & CSF Continuity — the Papilledema Mechanism",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The optic nerve sheath's continuity with the intracranial meninges and subarachnoid space is THE key anatomic fact completing your existing Papilledema content's mechanistic explanation — genuinely satisfying to connect a previously covered clinical finding to its precise structural basis." },
+      { h: "Meningeal continuity", t: "The optic nerve, as a CNS structure (already covered under Myelination & the Optic Nerve's CNS Classification content), is surrounded by a sheath continuous with the intracranial meninges — dura, arachnoid, and pia mater — extending from the brain along the entire intracranial and intracanalicular optic nerve segments (this topic's sibling objective) and partway along the intraorbital segment." },
+      { h: "CSF continuity — the papilledema mechanism", t: "Critically, the SUBARACHNOID SPACE surrounding the optic nerve is directly continuous with the intracranial subarachnoid space, meaning cerebrospinal fluid (CSF) surrounds the optic nerve within this sheath — this is the precise anatomic mechanism already implicit in your existing Papilledema content: elevated intracranial pressure is transmitted directly along this CSF-filled perioptic subarachnoid space to the optic nerve head, causing axoplasmic flow stasis and swelling at the optic disc (papilledema, by definition specifically referring to disc swelling FROM elevated intracranial pressure via this exact mechanism, distinguishing it from disc swelling due to other causes)." },
+    ],
+    memorizeIt: [
+      "Optic nerve sheath is continuous with the intracranial meninges (dura/arachnoid/pia) — reflects the optic nerve's CNS classification (already covered).",
+      "The perioptic SUBARACHNOID SPACE is directly continuous with the intracranial subarachnoid space — CSF surrounds the optic nerve.",
+      "THIS is the precise mechanism of papilledema (already covered): elevated intracranial pressure transmits along this CSF-filled sheath space to the optic nerve head, causing axoplasmic stasis and disc swelling.",
+      "'Papilledema' specifically means disc swelling FROM elevated ICP via this mechanism — distinct terminology from disc edema of other causes.",
+    ],
+    applyIt: [
+      "This gives you the precise anatomic completion of your existing Papilledema content's mechanism — understanding that CSF directly bathes the optic nerve via this meningeal/subarachnoid continuity explains not just WHY elevated intracranial pressure causes optic disc swelling, but also why papilledema is typically BILATERAL (since both optic nerves share continuity with the same single intracranial CSF space), a clinically important distinguishing feature from unilateral disc swelling of other causes (e.g., NAION, already covered).",
+    ],
+  },
+  "vispathgross-course": {
+    name: "Optic Radiations — Meyer's Loop vs. Parietal Fibers",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The optic radiations, carrying visual information from the LGN to the occipital cortex, split into two anatomically distinct bundles with different intracranial courses — a genuinely high-yield localization detail extending your existing Visual Field Defect Localization content beyond the chiasm/tract level already covered." },
+      { h: "Meyer's loop — temporal lobe fibers", t: "The INFERIOR optic radiation fibers, carrying information from the SUPERIOR visual field, loop anteriorly through the temporal lobe before turning posteriorly to reach the occipital cortex — this anatomic detour is called Meyer's loop, and a temporal lobe lesion affecting this loop characteristically produces a contralateral SUPERIOR quadrantanopia, classically described as 'pie in the sky.'" },
+      { h: "Parietal lobe fibers", t: "The SUPERIOR optic radiation fibers, carrying information from the INFERIOR visual field, take a more direct course through the parietal lobe to reach the occipital cortex — a parietal lobe lesion affecting these fibers characteristically produces a contralateral INFERIOR quadrantanopia, classically described as 'pie on the floor.'" },
+      { h: "Clinical localizing value", t: "This temporal-vs-parietal, superior-vs-inferior quadrantanopia pattern provides genuine lesion-localizing value beyond simply identifying a homonymous visual field defect (already covered) — distinguishing which specific lobe (temporal vs. parietal) is involved based on which visual field quadrant is affected, extending the stepwise localization principle already established under Visual Field Defect Localization Along the Pathway content to this specific retrochiasmal level." },
+    ],
+    memorizeIt: [
+      "Meyer's loop (inferior radiation fibers, temporal lobe route): carries SUPERIOR visual field — temporal lobe lesion → contralateral SUPERIOR quadrantanopia ('pie in the sky').",
+      "Parietal fibers (superior radiation fibers, direct parietal route): carry INFERIOR visual field — parietal lobe lesion → contralateral INFERIOR quadrantanopia ('pie on the floor').",
+      "Mnemonic: Temporal = superior field/pie in the SKY (up); Parietal = inferior field/pie on the FLOOR (down).",
+    ],
+    applyIt: [
+      "This gives you a genuinely high-yield extension of your existing Visual Field Defect Localization Along the Pathway content — a patient with a contralateral superior quadrantanopia has a temporal lobe lesion (Meyer's loop), while a contralateral inferior quadrantanopia points to a parietal lobe lesion, adding lobe-specific localizing precision beyond the monocular/bitemporal/homonymous stepwise framework already established, and connecting to any associated temporal lobe (e.g., seizure, memory) or parietal lobe (e.g., neglect, apraxia) symptoms that might accompany the visual finding.",
+    ],
+  },
+  "opticnervedev-formation": {
+    name: "Optic Nerve Development from the Optic Stalk",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The optic nerve forms from the optic stalk, and its glial support and myelination pattern directly extend your existing Myelination & the Optic Nerve's CNS Classification content with the developmental basis for the optic nerve's distinctive myelination boundary." },
+      { h: "The optic stalk and axonal growth", t: "The optic stalk is the connecting structure between the developing optic vesicle/cup and the forebrain; as the retina differentiates (already covered under Retinal Development from the Optic Cup content), retinal ganglion cell axons (already covered under Retinal Gross Anatomy's nerve fiber layer content) grow centrally along this stalk toward the brain, with ASTROCYTES (not Schwann cells, consistent with the optic nerve's CNS classification already covered) providing the initial glial scaffold supporting this axonal growth." },
+      { h: "Postnatal myelination and its boundary", t: "Myelination of the optic nerve begins in the LATE prenatal period and continues progressing anteriorly after birth, but normally STOPS at the lamina cribrosa (the point where the optic nerve exits the globe, already relevant to existing Optic Nerve Segments content) — explaining why the intraocular portion of the optic nerve/nerve fiber layer is normally UNMYELINATED (already implicit in existing content, since myelin would opacify the nerve fiber layer and interfere with light transmission to the photoreceptors), while the retrobulbar (intraorbital and beyond) optic nerve IS myelinated, consistent with its oligodendrocyte-based CNS myelination already covered." },
+    ],
+    memorizeIt: [
+      "Optic nerve forms from the optic stalk — retinal ganglion cell axons grow along it toward the brain, supported by ASTROCYTES (consistent with CNS classification, already covered).",
+      "Myelination begins late prenatally, continues postnatally, but normally STOPS at the lamina cribrosa.",
+      "Intraocular optic nerve/nerve fiber layer: normally UNMYELINATED (myelin would opacify it and block light transmission).",
+      "Retrobulbar optic nerve: myelinated via oligodendrocytes (already covered under Myelination content).",
+    ],
+    applyIt: [
+      "This gives you the developmental basis for a structural fact already implicit in your existing Myelination & the Optic Nerve's CNS Classification content — understanding that myelination normally halts precisely at the lamina cribrosa explains why finding MYELINATED nerve fiber layer on fundus exam (a benign but visually notable finding where myelination extends abnormally anterior to this boundary) is a recognized normal variant rather than pathology, since it simply represents this normal developmental stopping point occurring slightly later or further anterior than typical.",
+    ],
+  },
+  "opticnervedev-anomalies": {
+    name: "Optic Nerve Hypoplasia & Morning Glory Disc Anomaly",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pediatric ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "Optic nerve hypoplasia and morning glory disc anomaly are two distinct congenital optic nerve malformations, each with important systemic/CNS associations extending your existing Fetal Alcohol Spectrum Disorder content and completing this platform's congenital anomaly coverage." },
+      { h: "Optic nerve hypoplasia and septo-optic dysplasia", t: "Optic nerve hypoplasia is a small, underdeveloped optic disc (sometimes with a surrounding pale or pigmented ring — the 'double ring sign') from a reduction in retinal ganglion cell axon number — already relevant to existing Fetal Alcohol Spectrum Disorder content's optic nerve hypoplasia finding — and when associated with absent septum pellucidum and pituitary hormone deficiency, constitutes septo-optic dysplasia (de Morsier syndrome), a genuinely important systemic screening trigger requiring endocrine evaluation and brain MRI given the significant risk of hypopituitarism (growth hormone deficiency, among others) in affected infants." },
+      { h: "Morning glory disc anomaly", t: "Morning glory disc anomaly is a distinctive funnel-shaped, excavated optic disc malformation with surrounding pigmentary/glial disturbance (resembling the flower for which it is named) — associated with basal encephalocele and other midline CNS anomalies, making brain imaging an important part of the evaluation in an infant with this finding, analogous to the systemic screening already established for aniridia (this session) and optic nerve hypoplasia's septo-optic dysplasia association." },
+    ],
+    memorizeIt: [
+      "Optic nerve hypoplasia: small disc, 'double ring sign' — reduced ganglion cell axon number; already relevant to existing FASD content.",
+      "Septo-optic dysplasia (de Morsier syndrome): optic nerve hypoplasia + absent septum pellucidum + pituitary hormone deficiency — requires endocrine workup + brain MRI.",
+      "Morning glory disc anomaly: funnel-shaped, excavated disc with pigmentary disturbance — associated with basal encephalocele and other midline CNS anomalies, requiring brain imaging.",
+    ],
+    applyIt: [
+      "This gives you two genuinely important congenital optic nerve findings, both requiring systemic/CNS workup beyond the eye exam alone — an infant with a small, hypoplastic optic disc should prompt evaluation for septo-optic dysplasia (endocrine screening for hypopituitarism, brain MRI), directly extending your existing Fetal Alcohol Spectrum Disorder content's optic nerve hypoplasia association, while morning glory disc anomaly's distinctive funnel shape should prompt brain imaging for associated midline CNS anomalies, paralleling the systemic screening principle already established this session for aniridia/WAGR syndrome.",
+    ],
+  },
+  "onpharmgen-neuroprotection": {
+    name: "Neuroprotection Limits in Optic Neuropathy — CNS Axon Regeneration",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Unlike glaucoma (where IOP is a modifiable pharmacologic target, already covered) or acute inflammatory optic neuropathies (where anti-inflammatory therapy has established benefit, this topic's sibling objectives), many optic neuropathies lack an effective disease-modifying treatment once axonal damage has occurred, extending your existing Myelination & the Optic Nerve's CNS Classification content with its direct treatment implication." },
+      { h: "Why CNS axons don't regenerate well", t: "As already established under Myelination content, the optic nerve is a CNS structure, and mature CNS axons have dramatically limited regenerative capacity compared to peripheral nerves — once retinal ganglion cell axons are damaged or lost (e.g., in NAION, already covered, or glaucomatous optic neuropathy, already covered), there is currently no proven pharmacologic therapy that reliably regrows these axons or restores lost visual function." },
+      { h: "Treatment focus on underlying cause, not axon regeneration", t: "This regenerative limitation explains why optic neuropathy management generally focuses on treating or modifying the UNDERLYING cause to prevent further damage (e.g., controlling vascular risk factors after NAION to reduce fellow-eye risk, already implicit in existing NAION content; lowering IOP in glaucoma, already covered) rather than attempting to reverse already-established axonal loss — a fundamentally different therapeutic philosophy from, for example, treating active inflammation in optic neuritis (this topic's sibling objective) BEFORE permanent axonal damage accumulates." },
+    ],
+    memorizeIt: [
+      "Optic nerve = CNS structure (already covered) — mature CNS axons have very limited regenerative capacity, unlike peripheral nerves.",
+      "No proven pharmacologic therapy currently regrows damaged retinal ganglion cell axons or reliably restores vision lost to established optic nerve damage.",
+      "Treatment philosophy: modify the UNDERLYING cause to prevent FURTHER damage (vascular risk factors in NAION, IOP in glaucoma, already covered) rather than reversing existing damage.",
+    ],
+    applyIt: [
+      "This gives you the fundamental treatment-philosophy framework directly extending your existing NAION and Glaucoma content — explaining why NAION management (already covered) focuses on vascular risk factor modification for the FELLOW eye rather than attempting to reverse the already-affected eye's vision loss, and why the timing of anti-inflammatory intervention in optic neuritis (this topic's sibling objective, treating BEFORE permanent damage) is so much more therapeutically impactful than intervention after axonal loss has already occurred.",
+    ],
+  },
+  "onpharm-mydriasis-diagnostic": {
+    name: "Diagnostic Pupillary Dilation for Optic Nerve Examination",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Pupillary dilation for direct optic nerve head visualization serves a purely diagnostic purpose, genuinely distinct from the refractive cycloplegia (already covered under Mydriatics & Cycloplegics) and uveitis-treatment cycloplegia (already covered under Anterior Uvea Pharmacology) purposes covered elsewhere on this platform." },
+      { h: "Purpose and agent selection", t: "Diagnostic dilation enables direct, detailed visualization of the optic disc for conditions like papilledema, optic atrophy, and optic disc drusen (all already covered under Optic Nerve pathology content) — for this purely diagnostic purpose, a short-acting mydriatic (tropicamide alone, WITHOUT a full cycloplegic combination) is generally preferred, since only pupil dilation (not necessarily accommodation paralysis) is needed, and shorter duration of action minimizes the functional disruption (blurred near vision, light sensitivity) time for the patient after a routine exam." },
+      { h: "Why full cycloplegia is unnecessary here", t: "Since the goal is purely visualizing the optic nerve head (rather than performing cycloplegic refraction, already covered, or providing therapeutic pupillary mobility during active uveitis, already covered), the additional accommodation-paralyzing effect of a full cycloplegic agent is unnecessary and would only prolong the patient's post-exam visual disruption without added diagnostic benefit." },
+    ],
+    memorizeIt: [
+      "Diagnostic dilation for optic nerve exam: purely to visualize the disc — genuinely distinct purpose from refractive cycloplegia and uveitis cycloplegia (both already covered).",
+      "Tropicamide ALONE (short-acting mydriatic, without full cycloplegic combination) is generally preferred — minimizes post-exam functional disruption time.",
+      "Full cycloplegia (accommodation paralysis) is unnecessary for pure diagnostic dilation, unlike its necessity for cycloplegic refraction.",
+    ],
+    applyIt: [
+      "This gives you the practical agent-selection rationale distinguishing this diagnostic-only dilation purpose from your existing Mydriatics & Cycloplegics and Cycloplegia for Uveitis content — choosing tropicamide alone for a routine dilated optic nerve exam (rather than a full cycloplegic combination) reflects matching the specific clinical goal (disc visualization only) to the minimum necessary pharmacologic effect, minimizing unnecessary patient inconvenience.",
+    ],
+  },
+  "onpharm-miotic-rapd-interference": {
+    name: "Miotic-Induced Pupil Constriction — Interference with RAPD Testing",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Miotic agents (already covered mechanistically) create a genuine practical examination limitation for optic nerve assessment via the swinging flashlight test, extending your existing RAPD (Relative Afferent Pupillary Defect) content with an important pharmacologic confounding factor." },
+      { h: "Why a constricted pupil interferes with RAPD testing", t: "The swinging flashlight test for RAPD (already covered) relies on observing the DIRECTION and MAGNITUDE of pupillary size change as light is alternated between the two eyes — a pharmacologically (or pathologically) constricted pupil, such as from a patient using miotic glaucoma drops (already covered), has less available range of motion and a smaller overall pupil area to observe, making subtle paradoxical dilation (the key RAPD finding, already covered) genuinely harder to detect reliably." },
+      { h: "Clinical implication", t: "This means a patient on chronic miotic therapy for glaucoma (already covered) who also has a genuine optic nerve pathology causing a true RAPD may have this finding technically MASKED or made more difficult to elicit confidently on exam — an important exam-technique caveat, since a technically difficult or equivocal RAPD assessment in a miotic-treated patient should not be over-interpreted as reassuring evidence against optic nerve pathology." },
+    ],
+    memorizeIt: [
+      "Miotic-constricted pupils have reduced range of motion and smaller pupil area — makes the swinging flashlight test's paradoxical dilation finding (already covered) harder to detect reliably.",
+      "A patient on chronic miotic glaucoma therapy (already covered) with true optic nerve pathology may have RAPD findings technically masked/hard to elicit.",
+      "A difficult/equivocal RAPD exam in a miotic-treated patient should NOT be over-interpreted as reassuring — technical limitation, not necessarily true absence of pathology.",
+    ],
+    applyIt: [
+      "This gives you a genuinely practical exam-technique caveat directly extending your existing Relative Afferent Pupillary Defect content — recognizing that a glaucoma patient on miotic therapy presenting with new visual complaints may have a technically difficult RAPD assessment due to their constricted pupil, meaning additional or alternative optic nerve function testing (visual fields, OCT of the nerve fiber layer) may be needed rather than relying solely on a potentially confounded pupillary exam.",
+    ],
+  },
+  "onpharm-iv-steroid-neuritis": {
+    name: "Intravenous Corticosteroids for Optic Neuritis — The ONTT Rationale",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology/neuro-ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "The Optic Neuritis Treatment Trial (ONTT) established a specific, counterintuitive corticosteroid treatment protocol for acute optic neuritis, directly extending your existing content on optic neuritis's relationship to MS and demyelination (already covered under Effects of Demyelination on Conduction content)." },
+      { h: "IV methylprednisolone accelerates visual recovery", t: "The ONTT established that HIGH-DOSE INTRAVENOUS methylprednisolone (followed by an oral taper) speeds the RATE of visual recovery in acute optic neuritis compared to no treatment, though final long-term visual outcome was similar between treated and untreated groups in the trial — meaning IV steroids provide faster, but not necessarily better ultimate, visual recovery." },
+      { h: "The critical, counterintuitive finding: oral-alone prednisone is worse", t: "Critically, the ONTT also found that ORAL prednisone used ALONE (as standard-dose oral therapy, without preceding IV treatment) was associated with an INCREASED RATE of recurrent optic neuritis episodes compared to both the IV-treated group and the untreated (placebo) group — a genuinely important, counterintuitive, high-yield finding that directly shapes standard practice: oral corticosteroid monotherapy (without preceding IV treatment) is specifically AVOIDED for acute optic neuritis." },
+    ],
+    memorizeIt: [
+      "ONTT: IV methylprednisolone (+ oral taper) SPEEDS visual recovery in acute optic neuritis vs. no treatment; final long-term outcome was similar between groups.",
+      "CRITICAL finding: ORAL prednisone used ALONE (without preceding IV) was associated with an INCREASED RATE of recurrent optic neuritis — a genuinely counterintuitive result.",
+      "Standard practice: avoid oral corticosteroid MONOTHERAPY for acute optic neuritis, given this increased recurrence risk.",
+    ],
+    applyIt: [
+      "This gives you a genuinely high-yield, counterintuitive pharmacology fact directly extending your existing optic neuritis/demyelination content — recognizing that oral-alone prednisone is specifically AVOIDED (not simply a weaker alternative to IV) for acute optic neuritis, given its association with increased recurrence risk in the ONTT, is essential prescribing knowledge distinguishing appropriate steroid protocol selection from what might seem like an equivalent, simply lower-intensity oral alternative to IV treatment.",
+    ],
+  },
+  "onpharm-steroid-caution-naion": {
+    name: "Corticosteroid Caution in NAION — Lack of Proven Benefit",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology/neuro-ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "Unlike optic neuritis (this topic's sibling objective, where IV corticosteroids have established benefit), corticosteroids have NOT shown proven benefit for non-arteritic anterior ischemic optic neuropathy (NAION, already covered) — a critically important treatment distinction between two conditions that can both present with acute optic neuropathy and disc edema." },
+      { h: "Why steroids lack proven benefit in NAION", t: "NAION's underlying mechanism (already covered) is presumed microvascular ischemic infarction of the optic nerve head, fundamentally different from optic neuritis's primarily inflammatory/demyelinating mechanism (already covered) — since NAION is not primarily an inflammatory process, the anti-inflammatory mechanism of corticosteroids (already covered extensively across this platform) does not address its underlying ischemic pathophysiology, and clinical evidence has not established a clear benefit for corticosteroid treatment in NAION." },
+      { h: "The critical distinguishing clinical question", t: "This treatment distinction reinforces why correctly distinguishing NAION from optic neuritis BEFORE deciding on treatment matters clinically (this topic's sibling indications objective) — reflexively treating any acute optic neuropathy with corticosteroids without considering which specific condition is present risks both undertreating a patient who would benefit from the ONTT-validated IV steroid protocol (if optic neuritis) and unnecessarily exposing a NAION patient to corticosteroid side effects without established benefit." },
+    ],
+    memorizeIt: [
+      "Corticosteroids have NOT shown proven benefit for NAION (already covered) — unlike optic neuritis (this topic's sibling objective).",
+      "NAION's mechanism (presumed microvascular ischemic infarction, already covered) is fundamentally different from optic neuritis's inflammatory/demyelinating mechanism — explains the differential steroid responsiveness.",
+      "Correctly distinguishing NAION from optic neuritis is essential BEFORE treatment decisions, given this differential steroid benefit.",
+    ],
+    applyIt: [
+      "This gives you the critical treatment-differentiating counterpart to your existing NAION and optic neuritis content — recognizing that these two conditions, despite superficially similar presentations (acute optic neuropathy, disc edema), have starkly different evidence-based responses to corticosteroid therapy reinforces why the demographic and clinical differential already covered (this topic's sibling indications objective) directly determines the appropriate treatment pathway, not simply a uniform 'steroids for optic nerve swelling' approach.",
+    ],
+  },
+  "onpharm-neuritis-naion-differential": {
+    name: "Age & Risk Factor Differential Guiding Steroid Treatment Decisions",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology/neuro-ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "Correctly distinguishing optic neuritis from NAION based on demographic and clinical features directly determines the appropriate treatment pathway, consolidating your existing optic neuritis/demyelination and NAION content with this topic's sibling pharmacology objectives into one practical clinical decision framework." },
+      { h: "Optic neuritis profile — favors IV steroid protocol", t: "A YOUNGER patient (typically 20s-40s), with PAINFUL vision loss (classically worse with eye movement), particularly with known MS risk factors or other neurologic symptoms (already covered under demyelination/MS content), should prompt MRI evaluation and consideration of the ONTT-validated IV methylprednisolone protocol (this topic's sibling objective) — and this presentation should specifically prompt AVOIDING oral corticosteroid monotherapy given its established increased recurrence risk (also this topic's sibling objective)." },
+      { h: "NAION profile — corticosteroids not established beneficial", t: "An OLDER patient (typically 50s and above), with PAINLESS vision loss and vasculopathic risk factors (diabetes, hypertension, hyperlipidemia — already covered under existing NAION content), should prompt NAION consideration, where corticosteroid treatment lacks established benefit (this topic's sibling objective) — management instead focuses on vascular risk factor modification to protect the fellow eye (already implicit in existing NAION content)." },
+      { h: "Why getting this differential right matters pharmacologically", t: "This age/pain/risk-factor differential has DIRECT pharmacologic treatment consequences — a young patient with painful vision loss and MS risk factors misdiagnosed and managed as NAION would miss the window for beneficial IV steroid therapy (this topic's sibling objective), while an older vasculopathic patient with painless vision loss inappropriately given oral-alone corticosteroids would be exposed to systemic steroid side effects without established benefit and, if the diagnosis were actually optic neuritis, would face the ONTT-established increased recurrence risk from oral monotherapy." },
+    ],
+    memorizeIt: [
+      "Optic neuritis profile: YOUNGER (20s-40s), PAINFUL vision loss (worse with eye movement), MS risk factors → MRI + consider ONTT IV steroid protocol; AVOID oral-alone prednisone.",
+      "NAION profile: OLDER (50s+), PAINLESS vision loss, vasculopathic risk factors (diabetes/HTN/hyperlipidemia) → corticosteroids NOT established beneficial; focus on vascular risk factor modification.",
+      "Getting this differential right has DIRECT pharmacologic consequences — affects whether IV steroid protocol is appropriately offered or corticosteroid exposure is appropriately avoided.",
+    ],
+    applyIt: [
+      "This consolidates your existing optic neuritis, NAION, and this topic's sibling steroid-protocol objectives into one integrated clinical decision framework — a 32-year-old woman with painful vision loss and a prior episode of numbness (already relevant to existing MS/demyelination content) should prompt the ONTT IV steroid pathway, while a 68-year-old diabetic man with sudden painless vision loss and disc edema should prompt NAION management without corticosteroids, illustrating how the demographic/clinical differential directly and immediately shapes the appropriate pharmacologic response.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -15376,6 +15695,24 @@ const FLASHCARDS = [
   { id: "fc-1324", objectiveId: "retinapharm-intraop-dyes", front: "What retinal structure do ICG/brilliant blue G stain intraoperatively during vitrectomy, and for what procedures?", back: "The internal limiting membrane (ILM), for macular hole repair or epiretinal membrane removal." },
   { id: "fc-1325", objectiveId: "retinapharm-areds2", front: "Which patient population benefits from AREDS2 supplementation, and what does it NOT do?", back: "Intermediate AMD, or advanced AMD in one eye; does NOT prevent AMD onset and does NOT treat active wet AMD (that requires anti-VEGF)." },
   { id: "fc-1326", objectiveId: "retinapharm-antivegf-risks", front: "What theoretical systemic risk is associated with long-term anti-VEGF therapy, and in what patient population is it a particular consideration?", back: "Systemic thromboembolic events (stroke, MI), from small systemic drug absorption — particular consideration in patients with recent stroke/MI history." },
+  { id: "fc-1327", objectiveId: "orbitalnerves-sensory", front: "List V1's three orbital branches.", back: "Lacrimal, frontal, and nasociliary nerves." },
+  { id: "fc-1328", objectiveId: "orbitalnerves-sensory", front: "What dual function do the long ciliary nerves serve?", back: "Corneal/iris sensation AND carrying sympathetic fibers to the iris dilator muscle." },
+  { id: "fc-1329", objectiveId: "orbitalnerves-motor", front: "Which CN III division carries the parasympathetic pupillary fibers, and what muscles does it innervate?", back: "The inferior division — medial rectus, inferior rectus, inferior oblique, plus parasympathetic pupillary/ciliary fibers." },
+  { id: "fc-1330", objectiveId: "orbitalnerves-motor", front: "What clinical pattern does an isolated CN III superior division lesion produce?", back: "Ptosis and limited elevation, with the pupil typically spared." },
+  { id: "fc-1331", objectiveId: "opticnervegross-segments", front: "Which optic nerve segment is particularly vulnerable to traumatic optic neuropathy from canal fracture, and why?", back: "The intracanalicular segment — tightly fixed within unyielding bone with minimal room for swelling." },
+  { id: "fc-1332", objectiveId: "opticnervegross-sheath", front: "What anatomic continuity is the precise mechanism behind papilledema?", back: "The perioptic subarachnoid space is continuous with the intracranial subarachnoid space, so elevated ICP transmits CSF pressure directly to the optic nerve head." },
+  { id: "fc-1333", objectiveId: "opticnervegross-sheath", front: "Why is papilledema typically bilateral?", back: "Both optic nerves share continuity with the same single intracranial CSF space." },
+  { id: "fc-1334", objectiveId: "vispathgross-course", front: "A lesion in Meyer's loop (temporal lobe) produces what visual field defect, and what mnemonic describes it?", back: "Contralateral superior quadrantanopia — 'pie in the sky.'" },
+  { id: "fc-1335", objectiveId: "vispathgross-course", front: "A parietal lobe optic radiation lesion produces what visual field defect, and what mnemonic describes it?", back: "Contralateral inferior quadrantanopia — 'pie on the floor.'" },
+  { id: "fc-1336", objectiveId: "opticnervedev-formation", front: "What glial cell type provides the initial scaffold for optic nerve axonal growth, consistent with its CNS classification?", back: "Astrocytes (not Schwann cells)." },
+  { id: "fc-1337", objectiveId: "opticnervedev-formation", front: "Where does normal optic nerve myelination stop, and why does this matter functionally?", back: "The lamina cribrosa — myelin anterior to this would opacify the nerve fiber layer and block light transmission to photoreceptors." },
+  { id: "fc-1338", objectiveId: "opticnervedev-anomalies", front: "What systemic workup is required for an infant with optic nerve hypoplasia and absent septum pellucidum?", back: "Endocrine evaluation for hypopituitarism (septo-optic dysplasia/de Morsier syndrome) and brain MRI." },
+  { id: "fc-1339", objectiveId: "onpharmgen-neuroprotection", front: "Why does optic neuropathy management generally focus on the underlying cause rather than reversing established axonal damage?", back: "Mature CNS axons (the optic nerve is a CNS structure) have very limited regenerative capacity — no proven therapy regrows damaged retinal ganglion cell axons." },
+  { id: "fc-1340", objectiveId: "onpharm-mydriasis-diagnostic", front: "Why is tropicamide alone generally preferred over a full cycloplegic combination for routine optic nerve exam dilation?", back: "Only pupil dilation (not accommodation paralysis) is needed for disc visualization, and shorter duration minimizes post-exam functional disruption." },
+  { id: "fc-1341", objectiveId: "onpharm-miotic-rapd-interference", front: "Why can chronic miotic therapy make RAPD testing less reliable?", back: "A constricted pupil has less range of motion and smaller area, making the paradoxical dilation finding harder to detect." },
+  { id: "fc-1342", objectiveId: "onpharm-iv-steroid-neuritis", front: "What counterintuitive ONTT finding led to avoiding oral-alone prednisone for acute optic neuritis?", back: "Oral prednisone used alone was associated with an INCREASED rate of recurrent optic neuritis episodes." },
+  { id: "fc-1343", objectiveId: "onpharm-steroid-caution-naion", front: "Why do corticosteroids lack proven benefit in NAION, unlike optic neuritis?", back: "NAION's mechanism is presumed microvascular ischemic infarction, not primarily inflammatory, so corticosteroids' anti-inflammatory mechanism doesn't address the underlying pathophysiology." },
+  { id: "fc-1344", objectiveId: "onpharm-neuritis-naion-differential", front: "Contrast the classic demographic/pain profile of optic neuritis vs. NAION.", back: "Optic neuritis: younger, painful (worse with eye movement), MS risk factors. NAION: older, painless, vasculopathic risk factors." },
 ];
 
 const QUESTIONS = [
@@ -20443,6 +20780,40 @@ const QUESTIONS = [
       b: "Correct — AREDS2 supplementation is indicated to reduce progression risk in intermediate AMD or advanced AMD in one eye (protecting the fellow eye), but it does not treat active neovascular AMD directly; that requires anti-VEGF therapy targeting the VEGF-driven choroidal neovascularization.",
       c: "Incorrect — AREDS2 does not reverse existing neovascularization; its role is progression-risk reduction, not active disease treatment.",
       d: "Incorrect — AREDS2 reduces progression risk but does not guarantee prevention of AMD in the fellow eye.",
+    },
+  },
+  {
+    id: "q-299", objectiveId: "opticnervegross-sheath", type: "Applied concept", difficulty: "Medium",
+    stem: "A patient with idiopathic intracranial hypertension (elevated intracranial pressure) develops bilateral optic disc swelling. What anatomic feature of the optic nerve explains both why disc swelling occurs and why it is bilateral?",
+    choices: [
+      { id: "a", text: "The optic nerve has no relevant anatomic connection to the intracranial space" },
+      { id: "b", text: "The perioptic subarachnoid space is continuous with the intracranial subarachnoid space, so elevated ICP transmits CSF pressure to both optic nerve heads via this shared space" },
+      { id: "c", text: "Disc swelling in this condition is coincidental and unrelated to intracranial pressure" },
+      { id: "d", text: "Only one optic nerve is ever affected by elevated intracranial pressure" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — the optic nerve sheath's continuity with intracranial meninges and CSF space is precisely the relevant anatomic connection explaining this presentation.",
+      b: "Correct — the optic nerve sheath's subarachnoid space is directly continuous with the intracranial subarachnoid space, so elevated intracranial pressure transmits along this shared CSF-filled space to both optic nerve heads, causing bilateral disc swelling (papilledema) via axoplasmic flow stasis.",
+      c: "Incorrect — papilledema is, by definition, disc swelling specifically caused by elevated intracranial pressure via this exact mechanism.",
+      d: "Incorrect — papilledema is characteristically bilateral, precisely because both optic nerves share continuity with the same single intracranial CSF space.",
+    },
+  },
+  {
+    id: "q-300", objectiveId: "onpharm-neuritis-naion-differential", type: "Clinical differentiation", difficulty: "Hard",
+    stem: "A 29-year-old woman presents with painful vision loss worse on eye movement and a prior episode of unexplained limb numbness. A 66-year-old man with diabetes and hypertension presents separately with painless sudden vision loss and disc edema. How should these two presentations be managed differently with respect to corticosteroids?",
+    choices: [
+      { id: "a", text: "Both patients should receive identical oral-alone prednisone therapy" },
+      { id: "b", text: "The younger woman's presentation (optic neuritis) should prompt MRI and consideration of IV methylprednisolone per the ONTT protocol, avoiding oral-alone prednisone; the older man's presentation (NAION) should avoid corticosteroids given the lack of established benefit" },
+      { id: "c", text: "Neither patient should ever receive corticosteroids for optic nerve disease" },
+      { id: "d", text: "Both patients should receive identical IV methylprednisolone regardless of the underlying diagnosis" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — oral-alone prednisone is specifically avoided for acute optic neuritis given its association with increased recurrence risk in the ONTT.",
+      b: "Correct — the younger woman's painful vision loss with MS risk factors is classic for optic neuritis, warranting MRI evaluation and the ONTT-validated IV methylprednisolone protocol (avoiding oral-alone therapy); the older man's painless vision loss with vasculopathic risk factors is classic for NAION, where corticosteroids lack established benefit given the ischemic (not primarily inflammatory) mechanism.",
+      c: "Incorrect — IV corticosteroids have an established, evidence-based role in accelerating visual recovery in optic neuritis specifically.",
+      d: "Incorrect — treating both identically ignores the fundamentally different underlying mechanisms (inflammatory/demyelinating vs. ischemic) and the differential evidence for corticosteroid benefit between these two conditions.",
     },
   },
 ];
