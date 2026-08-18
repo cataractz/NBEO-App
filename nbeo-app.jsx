@@ -888,6 +888,46 @@ const CORNEAPHARMINDICATIONS_OBJECTIVES = [
   { id: "corneapharm-steroid-infection-contra", name: "Topical Steroid Contraindication in Unconfirmed Infectious Keratitis", built: true },
 ];
 
+const LENSDEV_TOPIC_ID = "t-10-1-0"; // Lens/Cataract/IOL(10) > Anatomy(Developmental)(1) > Lens, zonules(0)
+// Ties directly into existing Lens Physiology (Crystallin Proteins,
+// Presbyopia mechanism) and Congenital Cataract pathology content.
+const LENSDEV_OBJECTIVES = [
+  { id: "lensdev-vesicle", name: "Lens Vesicle Formation & Fiber Differentiation", built: true },
+  { id: "lensdev-anomalies", name: "Congenital Lens Anomalies (Lenticonus, Ectopia Lentis Differential)", built: true },
+];
+
+const LENSPHARMGEN_TOPIC_ID = "t-10-4-0"; // Lens/Cataract/IOL(10) > Pharmacology(4) > General principles(0)
+const LENSPHARMGEN_OBJECTIVES = [
+  { id: "lenspharmgen-perioperative", name: "Perioperative Cataract Surgery Medication Sequence", built: true },
+  { id: "lenspharmgen-mydriasis", name: "Intraoperative Mydriasis Maintenance — NSAID & Epinephrine Roles", built: true },
+];
+
+const LENSPHARMANTIINFLAMM_TOPIC_ID = "t-10-4-1"; // Lens/Cataract/IOL(10) > Pharmacology(4) > Anti-inflammatory agents(1)
+const LENSPHARMANTIINFLAMM_OBJECTIVES = [
+  { id: "lenspharm-steroid-taper", name: "Post-Cataract-Surgery Corticosteroid Taper", built: true },
+  { id: "lenspharm-nsaid-cme", name: "NSAIDs for Cystoid Macular Edema (Irvine-Gass) Prophylaxis", built: true },
+];
+
+const LENSPHARMANTIINFECT_TOPIC_ID = "t-10-4-2"; // Lens/Cataract/IOL(10) > Pharmacology(4) > Anti-infective agents(2)
+const LENSPHARMANTIINFECT_OBJECTIVES = [
+  { id: "lenspharm-endophthalmitis-prophylaxis", name: "Perioperative Antibiotic & Antiseptic Prophylaxis for Endophthalmitis", built: true },
+];
+
+const LENSPHARMLUBRICANT_TOPIC_ID = "t-10-4-3"; // Lens/Cataract/IOL(10) > Pharmacology(4) > Lubricants and tear substitutes(3)
+const LENSPHARMLUBRICANT_OBJECTIVES = [
+  { id: "lenspharm-perioperative-lubrication", name: "Perioperative Ocular Surface Lubrication & Biometry Accuracy", built: true },
+];
+
+const LENSPHARMDYES_TOPIC_ID = "t-10-4-4"; // Lens/Cataract/IOL(10) > Pharmacology(4) > Dyes(4)
+const LENSPHARMDYES_OBJECTIVES = [
+  { id: "lenspharm-trypan-blue", name: "Trypan Blue Capsule Staining for Cataract Surgery", built: true },
+];
+
+const LENSPHARMINDICATIONS_TOPIC_ID = "t-10-4-5"; // Lens/Cataract/IOL(10) > Pharmacology(4) > Indications/contraindications/side effects/drug interactions(5)
+const LENSPHARMINDICATIONS_OBJECTIVES = [
+  { id: "lenspharm-nsaid-steroid-combination", name: "NSAID + Steroid Combination Rationale & Combined Risks", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -1891,6 +1931,10 @@ const TOPIC_OBJECTIVES = {
   [CORNEAPHARMVASOCON_TOPIC_ID]: CORNEAPHARMVASOCON_OBJECTIVES, [CORNEAPHARMIMMUNEMOD_TOPIC_ID]: CORNEAPHARMIMMUNEMOD_OBJECTIVES,
   [CORNEAPHARMANTIINFECT_TOPIC_ID]: CORNEAPHARMANTIINFECT_OBJECTIVES, [CORNEAPHARMNUTRITION_TOPIC_ID]: CORNEAPHARMNUTRITION_OBJECTIVES,
   [CORNEAPHARMBIOLOGICS_TOPIC_ID]: CORNEAPHARMBIOLOGICS_OBJECTIVES, [CORNEAPHARMINDICATIONS_TOPIC_ID]: CORNEAPHARMINDICATIONS_OBJECTIVES,
+  [LENSDEV_TOPIC_ID]: LENSDEV_OBJECTIVES, [LENSPHARMGEN_TOPIC_ID]: LENSPHARMGEN_OBJECTIVES,
+  [LENSPHARMANTIINFLAMM_TOPIC_ID]: LENSPHARMANTIINFLAMM_OBJECTIVES, [LENSPHARMANTIINFECT_TOPIC_ID]: LENSPHARMANTIINFECT_OBJECTIVES,
+  [LENSPHARMLUBRICANT_TOPIC_ID]: LENSPHARMLUBRICANT_OBJECTIVES, [LENSPHARMDYES_TOPIC_ID]: LENSPHARMDYES_OBJECTIVES,
+  [LENSPHARMINDICATIONS_TOPIC_ID]: LENSPHARMINDICATIONS_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -2077,6 +2121,13 @@ const CONTENT_TOPICS = [
   { topicId: CORNEAPHARMNUTRITION_TOPIC_ID, name: "Ocular Nutritional Supplements", objectives: CORNEAPHARMNUTRITION_OBJECTIVES },
   { topicId: CORNEAPHARMBIOLOGICS_TOPIC_ID, name: "Ocular Surface Biologics", objectives: CORNEAPHARMBIOLOGICS_OBJECTIVES },
   { topicId: CORNEAPHARMINDICATIONS_TOPIC_ID, name: "Cornea/Conjunctiva Pharmacology — Indications & Contraindications", objectives: CORNEAPHARMINDICATIONS_OBJECTIVES },
+  { topicId: LENSDEV_TOPIC_ID, name: "Lens & Zonule Developmental Anatomy", objectives: LENSDEV_OBJECTIVES },
+  { topicId: LENSPHARMGEN_TOPIC_ID, name: "Lens/Cataract Pharmacology — General Principles", objectives: LENSPHARMGEN_OBJECTIVES },
+  { topicId: LENSPHARMANTIINFLAMM_TOPIC_ID, name: "Lens/Cataract Anti-Inflammatory Agents", objectives: LENSPHARMANTIINFLAMM_OBJECTIVES },
+  { topicId: LENSPHARMANTIINFECT_TOPIC_ID, name: "Lens/Cataract Anti-Infective Prophylaxis", objectives: LENSPHARMANTIINFECT_OBJECTIVES },
+  { topicId: LENSPHARMLUBRICANT_TOPIC_ID, name: "Lens/Cataract Perioperative Lubrication", objectives: LENSPHARMLUBRICANT_OBJECTIVES },
+  { topicId: LENSPHARMDYES_TOPIC_ID, name: "Lens/Cataract Surgical Dyes", objectives: LENSPHARMDYES_OBJECTIVES },
+  { topicId: LENSPHARMINDICATIONS_TOPIC_ID, name: "Lens/Cataract Pharmacology — Indications & Contraindications", objectives: LENSPHARMINDICATIONS_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -12364,6 +12415,205 @@ const STUDY_PAGES = {
       "This consolidates your existing Fungal Keratitis and HSV Keratitis content's corticosteroid pitfalls into this platform's single highest-yield anterior segment prescribing safety principle — any red, painful eye with an epithelial defect or corneal infiltrate should be treated as presumptively infectious and appropriately worked up BEFORE a topical steroid is considered, since the consequences of steroid use in an undiagnosed infection (already covered as catastrophic in the fungal case) far outweigh the consequences of a brief diagnostic delay in steroid initiation for a genuinely non-infectious process.",
     ],
   },
+  "lensdev-vesicle": {
+    name: "Lens Vesicle Formation & Fiber Differentiation",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The crystalline lens develops from a specific surface ectodermal invagination sequence, and its distinction between primary (prenatal-only) and secondary (lifelong) lens fibers directly grounds your existing Lens Transparency & Crystallin Proteins and Presbyopia mechanism content in embryologic origin." },
+      { h: "Lens placode and vesicle formation", t: "Around the 4th week of gestation, surface ectoderm overlying the developing optic vesicle thickens to form the lens placode, induced by signals from the underlying optic vesicle — this placode invaginates and pinches off from the surface ectoderm by approximately the 5th week, forming a free-floating, hollow lens vesicle within the optic cup." },
+      { h: "Primary lens fibers — formed once, never replaced", t: "Cells of the POSTERIOR lens vesicle wall elongate anteriorly, progressively filling and obliterating the vesicle's hollow lumen — these become the PRIMARY lens fibers, forming the central lens nucleus, and critically, these are formed only during this embryonic period and are never replaced or regenerated afterward." },
+      { h: "Secondary lens fibers — continue throughout life", t: "In contrast, SECONDARY lens fibers are continuously added at the lens equator (the 'bow' region) by the anterior lens epithelium throughout the ENTIRE lifespan, not just prenatally — this lifelong fiber addition is the exact developmental process already established under Lens Transparency & Crystallin Proteins and Presbyopia's physiologic basis content as the mechanism behind progressive lens growth, increasing lens stiffness, and eventual presbyopia, since older fiber layers become progressively compressed toward the center as new fibers are continuously added at the periphery." },
+    ],
+    memorizeIt: [
+      "Lens placode (~week 4) → invaginates → lens vesicle (~week 5), pinches off from surface ectoderm.",
+      "PRIMARY lens fibers: posterior vesicle wall cells elongate, fill the lumen, form the lens nucleus — formed ONLY prenatally, NEVER replaced.",
+      "SECONDARY lens fibers: continuously added at the lens equator by anterior lens epithelium — THROUGHOUT LIFE, not just prenatally.",
+      "This lifelong secondary fiber addition is the exact mechanism already established under Presbyopia's physiologic basis content — explains progressive lens growth/stiffening.",
+    ],
+    applyIt: [
+      "This gives you the embryologic foundation directly underlying your existing Lens Transparency & Crystallin Proteins and Presbyopia: The Physiologic Basis for Lens Stiffening content — understanding that lens fiber addition is a lifelong developmental process (not one that stops at birth) is exactly why the lens continues to grow and stiffen throughout adulthood, the root mechanistic cause of presbyopia already established as shared with nuclear sclerotic cataract formation.",
+    ],
+  },
+  "lensdev-anomalies": {
+    name: "Congenital Lens Anomalies (Lenticonus, Ectopia Lentis Differential)",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pediatric ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond congenital cataract itself (already covered under Lens & Cataract pathology content), two distinct structural lens anomalies — lenticonus and ectopia lentis — carry genuinely important systemic disease associations worth distinguishing from one another." },
+      { h: "Lenticonus and Alport syndrome", t: "Lenticonus is a conical or spherical protrusion of the lens surface (most classically posterior lenticonus, a bulging of the posterior lens capsule and cortex) — posterior lenticonus is classically associated with Alport syndrome, a hereditary condition (typically X-linked) combining progressive hereditary nephritis (kidney disease, often progressing to renal failure) with sensorineural hearing loss and this characteristic lens finding, making lens examination a genuine diagnostic clue toward an underlying systemic disease in an affected patient." },
+      { h: "Ectopia lentis — Marfan vs. homocystinuria differential", t: "Ectopia lentis (lens displacement/subluxation) has a genuinely high-yield differential based on the DIRECTION of displacement: Marfan syndrome (already covered under Genetic Principles content) classically causes SUPEROTEMPORAL lens displacement from zonular weakness, while homocystinuria (a distinct metabolic/genetic disorder, also causing a marfanoid body habitus but a biochemically and clinically distinct condition) classically causes INFERONASAL lens displacement — the OPPOSITE direction, a genuinely important distinguishing exam fact since both conditions can otherwise present with a similar tall, long-limbed body habitus." },
+      { h: "Additional distinguishing features", t: "Beyond displacement direction, homocystinuria carries additional distinguishing systemic features not seen in Marfan syndrome, including intellectual disability in some patients and a significantly elevated risk of thromboembolic events (stroke, pulmonary embolism) — a genuinely important systemic safety difference between these two conditions that can otherwise mimic each other on ocular and skeletal exam alone." },
+    ],
+    memorizeIt: [
+      "Lenticonus (especially posterior): conical/spherical lens surface protrusion — classically associated with Alport syndrome (hereditary nephritis + sensorineural hearing loss).",
+      "Ectopia lentis direction is the KEY differential: Marfan syndrome = SUPEROTEMPORAL displacement (already covered, zonular weakness).",
+      "Homocystinuria = INFERONASAL displacement — the OPPOSITE direction from Marfan, despite a similar marfanoid body habitus.",
+      "Homocystinuria also features intellectual disability (in some patients) and significantly elevated thromboembolic risk — distinguishing systemic features from Marfan.",
+    ],
+    applyIt: [
+      "This gives you a genuinely high-yield differential diagnosis extending your existing Genetic Principles/Marfan Syndrome content — a tall, long-limbed patient with lens subluxation requires noting the SPECIFIC DIRECTION of displacement, since superotemporal points toward Marfan syndrome while inferonasal points toward homocystinuria, a distinction with major systemic management implications given homocystinuria's additional thromboembolism and intellectual disability risk not shared by Marfan syndrome.",
+    ],
+  },
+  "lenspharmgen-perioperative": {
+    name: "Perioperative Cataract Surgery Medication Sequence",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Cataract surgery involves a specific, sequenced perioperative medication regimen spanning pre-operative, intra-operative, and post-operative phases, integrating several drug classes already covered under this topic's sibling objectives and elsewhere on this platform." },
+      { h: "Pre-operative phase", t: "Pre-operatively, mydriatic/cycloplegic drops (already covered under Accommodation/Vergence Pharmacology's Mydriatics & Cycloplegics content) dilate the pupil for surgical access, often combined with a topical NSAID (this topic's sibling anti-inflammatory objective) started several days before surgery to help prevent intraoperative miosis and reduce post-operative CME risk, and frequently a prophylactic topical antibiotic course." },
+      { h: "Intra-operative and post-operative phases", t: "Intra-operatively, additional measures maintain pupil dilation and provide antibiotic prophylaxis (this topic's sibling objectives); post-operatively, a tapering corticosteroid course combined with continued NSAID use (this topic's sibling anti-inflammatory objective) controls inflammation and CME risk over several weeks as the eye heals." },
+    ],
+    memorizeIt: [
+      "Pre-op: mydriatic/cycloplegic (already covered) + topical NSAID (started days before surgery) + often prophylactic topical antibiotic.",
+      "Intra-op: additional mydriasis-maintenance measures + antibiotic prophylaxis (this topic's sibling objectives).",
+      "Post-op: tapering corticosteroid + continued NSAID over several weeks.",
+      "This full sequence integrates multiple drug classes, each addressing a distinct part of the surgical inflammatory/infectious risk profile.",
+    ],
+    applyIt: [
+      "This gives you the overall organizing sequence for your existing IOL Power Calculation and Cataract Surgery content's perioperative medication management — understanding this phase-based structure (pre-op preparation, intra-op support, post-op healing/monitoring) helps organize the more detailed individual drug class mechanisms covered under this topic's sibling objectives into one coherent clinical workflow.",
+    ],
+  },
+  "lenspharmgen-mydriasis": {
+    name: "Intraoperative Mydriasis Maintenance — NSAID & Epinephrine Roles",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Maintaining adequate pupil dilation THROUGHOUT cataract surgery is a genuine surgical safety concern beyond simply achieving initial dilation, since surgical tissue manipulation itself can trigger intraoperative miosis via a specific, pharmacologically-addressable mechanism." },
+      { h: "The intraoperative miosis problem", t: "Surgical manipulation of ocular tissue during cataract surgery triggers local prostaglandin release (a tissue trauma response), which can cause progressive pupil constriction (miosis) DURING the case even after adequate pre-operative dilation with mydriatic/cycloplegic drops (already covered) — inadequate intraoperative pupil size increases surgical difficulty and complication risk." },
+      { h: "NSAID prophylaxis against surgically-induced miosis", t: "Pre-operative topical NSAID use (already covered mechanistically as COX inhibition under Cornea Pharmacology content) directly addresses this problem by blocking the prostaglandin-mediated miosis pathway BEFORE surgical trauma can trigger it — this is a SECOND, distinct rationale for perioperative NSAID use beyond general inflammation/CME prophylaxis (this topic's sibling objective)." },
+      { h: "Intracameral epinephrine/phenylephrine", t: "Intracameral (injected directly into the anterior chamber) epinephrine or phenylephrine, added to the surgical irrigation solution, provides additional direct pharmacologic pupil support during the case via alpha-adrenergic mydriatic effect, particularly useful as an additional measure in eyes prone to intraoperative floppy iris syndrome or insufficient pre-operative dilation." },
+    ],
+    memorizeIt: [
+      "Surgical tissue manipulation triggers local prostaglandin release → intraoperative miosis, even after adequate pre-op dilation.",
+      "Pre-operative topical NSAID (COX inhibition, already covered) blocks this prostaglandin-mediated miosis pathway — a second distinct rationale for perioperative NSAID use beyond CME prevention.",
+      "Intracameral epinephrine/phenylephrine (added to irrigation solution): direct alpha-adrenergic mydriatic support during surgery.",
+    ],
+    applyIt: [
+      "This extends your existing Cornea Pharmacology NSAID mechanism content with a second, distinct surgical rationale — topical NSAIDs used before cataract surgery serve dual purposes (preventing surgically-induced miosis via prostaglandin blockade AND reducing post-operative CME risk, this topic's sibling objective), explaining why NSAID therapy is started PRE-operatively rather than only after surgery when inflammation has already begun.",
+    ],
+  },
+  "lenspharm-steroid-taper": {
+    name: "Post-Cataract-Surgery Corticosteroid Taper",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Post-cataract-surgery corticosteroid therapy follows a deliberate TAPERING schedule rather than a fixed dose, directly applying your existing Topical Corticosteroids potency/risk content to the specific post-surgical context." },
+      { h: "Typical taper pattern", t: "A typical regimen starts with high-potency topical prednisolone acetate (already covered) at high frequency (e.g., four times daily) immediately after surgery, when inflammation is greatest, then gradually reduces dosing frequency over approximately 3-4 weeks as post-surgical inflammation naturally resolves, rather than stopping abruptly or maintaining a constant dose throughout." },
+      { h: "Rationale for tapering rather than abrupt discontinuation", t: "Tapering (rather than abrupt cessation) reduces the risk of rebound inflammation that can occur if a strongly anti-inflammatory medication is stopped suddenly while some residual inflammatory stimulus remains, and the gradual reduction in cumulative steroid exposure over the taper period also allows for monitoring and early detection of steroid-response IOP elevation (already covered), which becomes more likely with higher cumulative steroid exposure over time." },
+    ],
+    memorizeIt: [
+      "Typical post-cataract-surgery steroid regimen: prednisolone acetate (already covered) starting at high frequency (e.g., QID), tapered over ~3-4 weeks.",
+      "Tapering rationale: avoids rebound inflammation from abrupt cessation, and allows monitoring for steroid-response IOP elevation as cumulative exposure increases.",
+      "NOT a fixed dose or abrupt stop — a deliberate, gradual frequency reduction schedule.",
+    ],
+    applyIt: [
+      "This directly extends your existing Topical Corticosteroids (Potency & Infectious Keratitis Risk) and Glaucoma steroid-response IOP content to the post-surgical setting — a cataract surgery patient on a steroid taper who develops elevated IOP during the taper period should have steroid-response IOP elevation (already covered) considered, particularly since cumulative steroid exposure increases over the taper duration even as individual dose frequency is being reduced.",
+    ],
+  },
+  "lenspharm-nsaid-cme": {
+    name: "NSAIDs for Cystoid Macular Edema (Irvine-Gass) Prophylaxis",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Cystoid macular edema (CME, also called Irvine-Gass syndrome when it occurs after cataract surgery) is a specific post-surgical complication that topical NSAIDs are particularly effective at preventing, extending your existing NSAID mechanism content (COX inhibition) to a retinal complication of anterior segment surgery." },
+      { h: "Mechanism of post-surgical CME", t: "Post-surgical inflammation triggers prostaglandin release that can increase perifoveal retinal capillary permeability, allowing fluid to accumulate within the perifoveal retina in a characteristic cystoid (multi-cystic) pattern — Irvine-Gass syndrome — causing painless central vision blurring typically presenting several weeks after otherwise uncomplicated cataract surgery." },
+      { h: "NSAID prophylaxis rationale", t: "Because the underlying mechanism is prostaglandin-mediated (like the intraoperative miosis already covered under this topic's sibling general-principles objective), topical NSAIDs (COX inhibition, already covered) are particularly well-suited to CME prevention, and are commonly continued for several weeks post-operatively specifically for this purpose, sometimes even in patients also receiving a full corticosteroid taper (this topic's sibling objective), since the two drug classes act on complementary parts of the inflammatory cascade." },
+    ],
+    memorizeIt: [
+      "Cystoid macular edema (CME) after cataract surgery = Irvine-Gass syndrome — painless central vision blurring, typically weeks after otherwise uncomplicated surgery.",
+      "Mechanism: post-surgical prostaglandin release increases perifoveal capillary permeability → cystoid fluid accumulation.",
+      "Topical NSAIDs (COX inhibition, already covered) are particularly effective CME prophylaxis, given the prostaglandin-mediated mechanism.",
+      "Often continued for weeks post-operatively specifically for CME prevention, sometimes alongside a full steroid taper (this topic's sibling objective).",
+    ],
+    applyIt: [
+      "This gives you a specific, named clinical entity (Irvine-Gass syndrome) directly extending your existing IOL Power Calculation/Cataract Surgery and Vitreous/Retina content — a cataract surgery patient with new painless central blurring several weeks post-operatively should raise suspicion for CME, and understanding the prostaglandin-mediated mechanism explains both why it occurred and why NSAID prophylaxis is a standard part of the perioperative regimen already covered under this topic's sibling general-principles objective.",
+    ],
+  },
+  "lenspharm-endophthalmitis-prophylaxis": {
+    name: "Perioperative Antibiotic & Antiseptic Prophylaxis for Endophthalmitis",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Endophthalmitis (intraocular infection following surgery) is a rare but potentially blinding cataract surgery complication, and modern prophylaxis combines two genuinely distinct strategies — antiseptic surface preparation and antibiotic administration." },
+      { h: "Povidone-iodine antisepsis — distinct from antibiotic prophylaxis", t: "Povidone-iodine applied to the ocular surface immediately before surgery is an essential, strongly evidence-based prophylactic step that works via a broad-spectrum ANTISEPTIC (not antibiotic) mechanism, reducing ocular surface microbial bioburden before the eye is surgically entered — genuinely distinct from and complementary to (not a substitute for) antibiotic prophylaxis, since antiseptics and antibiotics work through entirely different mechanisms and address different points in the infection-prevention timeline." },
+      { h: "Intracameral antibiotic injection", t: "Intracameral antibiotic injection (e.g., moxifloxacin or cefuroxime, already covered as fluoroquinolone/other antibiotic classes under Cornea Anti-Infective content) directly into the anterior chamber at the END of surgery has become increasingly standard practice, with strong evidence supporting its effectiveness in reducing endophthalmitis risk — distinct from and additional to topical perioperative antibiotic drops, since intracameral injection achieves direct, immediate high local drug concentration exactly where infection would need to be prevented." },
+    ],
+    memorizeIt: [
+      "Povidone-iodine ocular surface prep: broad-spectrum ANTISEPTIC (not antibiotic) mechanism — reduces surface bioburden before surgical entry.",
+      "Antiseptic and antibiotic prophylaxis are distinct, complementary strategies — neither is a substitute for the other.",
+      "Intracameral antibiotic injection (moxifloxacin/cefuroxime) at the END of surgery: increasingly standard, strong evidence for reduced endophthalmitis risk.",
+      "Intracameral injection achieves direct, immediate high local drug concentration distinct from topical perioperative drops.",
+    ],
+    applyIt: [
+      "This gives you the two-pronged modern endophthalmitis prevention strategy directly extending your existing Cornea Anti-Infective Agents content — recognizing that povidone-iodine antisepsis and intracameral antibiotic injection work via entirely different mechanisms (antiseptic bioburden reduction vs. targeted antibiotic action) explains why both are used together as complementary, non-redundant prophylactic steps in modern cataract surgery protocols.",
+    ],
+  },
+  "lenspharm-perioperative-lubrication": {
+    name: "Perioperative Ocular Surface Lubrication & Biometry Accuracy",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Ocular surface lubrication plays a genuinely important, often underappreciated dual role in cataract surgery — affecting pre-operative surgical measurement accuracy AND requiring management of surgically-induced dry eye afterward." },
+      { h: "Pre-operative — biometry accuracy", t: "An unstable, poor-quality tear film (from untreated dry eye, already covered under Tear Film Physiology content) directly affects the accuracy of pre-operative keratometry and biometry measurements (already covered under IOL Power Calculation content), since these measurements depend on a smooth, regular corneal optical surface — treating dry eye BEFORE these measurements are taken can meaningfully improve IOL power calculation accuracy and reduce post-operative refractive surprise." },
+      { h: "Post-operative — surgically-induced dry eye", t: "Cataract surgery frequently exacerbates or unmasks dry eye disease post-operatively, from a combination of factors: cumulative preservative exposure from multiple perioperative drop classes (already covered under BAK toxicity content), and corneal nerve disruption from the surgical incision itself, which can transiently reduce corneal sensation (already covered under Corneal Innervation content) and blunt the reflex tearing response — making post-operative lubrication a standard, expected part of the recovery regimen rather than an optional add-on." },
+    ],
+    memorizeIt: [
+      "Untreated dry eye pre-operatively can reduce keratometry/biometry measurement accuracy (already covered under IOL Power Calculation) — treating dry eye first can improve refractive outcome accuracy.",
+      "Cataract surgery frequently causes/worsens post-op dry eye from cumulative drop preservative exposure (already covered under BAK toxicity) AND surgical corneal nerve disruption reducing sensation/reflex tearing.",
+      "Post-operative lubrication is a standard, expected part of recovery, not merely optional comfort measure.",
+    ],
+    applyIt: [
+      "This gives you a genuinely practical clinical point extending your existing IOL Power Calculation content — an unexpected post-operative refractive surprise may in part reflect pre-operative dry-eye-related biometry measurement inaccuracy rather than a true surgical or IOL calculation error, making pre-operative ocular surface optimization a real contributor to achieving the intended refractive target already covered under that content.",
+    ],
+  },
+  "lenspharm-trypan-blue": {
+    name: "Trypan Blue Capsule Staining for Cataract Surgery",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Trypan blue is a diagnostic/surgical-aid dye used specifically during cataract surgery to improve visualization of the anterior lens capsule, genuinely distinct from the ocular surface diagnostic dyes (fluorescein, rose bengal, lissamine green) already covered under Cornea Pharmacology content." },
+      { h: "Mechanism and surgical use", t: "Trypan blue selectively stains the anterior lens capsule (rather than the corneal/conjunctival epithelium targeted by the dyes already covered), improving intraoperative visualization during CAPSULORHEXIS — the critical surgical step of creating a smooth, circular opening in the anterior lens capsule to access and remove the underlying cataractous lens material." },
+      { h: "Particular value in mature/white cataracts", t: "Trypan blue capsule staining is particularly valuable in mature or 'white' (densely opacified) cataracts, where the absent or severely diminished red reflex (already relevant to existing red reflex/retinoscopy content) makes the anterior capsule otherwise very difficult to visualize against the surgical background — staining the capsule directly with trypan blue allows the surgeon to see and control the capsulorhexis tear precisely despite this loss of normal visual contrast, meaningfully reducing the risk of an uncontrolled radial capsular tear extending posteriorly during this critical surgical step." },
+    ],
+    memorizeIt: [
+      "Trypan blue: selectively stains the ANTERIOR LENS CAPSULE, distinct from ocular surface epithelial dyes (fluorescein, rose bengal, lissamine green, already covered).",
+      "Used to improve visualization during capsulorhexis (creating the circular opening in the anterior capsule).",
+      "Particularly valuable in mature/white cataracts with an absent red reflex, where the capsule is otherwise very hard to see.",
+      "Reduces risk of an uncontrolled capsular tear extending posteriorly during this critical surgical step.",
+    ],
+    applyIt: [
+      "This gives you a genuinely distinct surgical-aid dye application extending your existing Cornea Pharmacology diagnostic dye content into the intraoperative cataract surgery context — while fluorescein/rose bengal/lissamine green (already covered) diagnose ocular SURFACE pathology in clinic, trypan blue serves a purely intraoperative surgical-visualization purpose targeting an entirely different tissue (the lens capsule), particularly valuable in exactly the mature cataract cases already relevant to existing Congenital/Mature Cataract content where the red reflex is most compromised.",
+    ],
+  },
+  "lenspharm-nsaid-steroid-combination": {
+    name: "NSAID + Steroid Combination Rationale & Combined Risks",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Post-cataract-surgery, NSAIDs and corticosteroids (this topic's sibling anti-inflammatory objectives) are frequently used together rather than as alternatives, since they act on genuinely complementary, non-redundant parts of the post-surgical inflammatory cascade." },
+      { h: "Complementary, non-redundant mechanisms", t: "Corticosteroids broadly suppress the overall post-surgical inflammatory response (already covered under the steroid taper objective), while NSAIDs specifically and more potently target the prostaglandin-mediated pathway responsible for cystoid macular edema risk and intraoperative miosis (both already covered under this topic's sibling objectives) — this genuine mechanistic complementarity, rather than redundancy, is the standard rationale for combined use in routine cataract surgery post-operative regimens." },
+      { h: "Combined risk consideration", t: "Using both drug classes together does mean the patient is exposed to BOTH risk profiles simultaneously: steroid-response IOP elevation (already covered) from the corticosteroid component, and corneal melt risk (already covered under Cornea Pharmacology NSAID content) from the NSAID component, particularly relevant in a patient with an already compromised ocular surface — meaning combined therapy, while standard and generally safe, still requires monitoring for both complications, not just one, throughout the post-operative taper period." },
+    ],
+    memorizeIt: [
+      "NSAID + steroid combination post-cataract-surgery is standard, not redundant — steroids broadly suppress inflammation; NSAIDs specifically target the prostaglandin-mediated CME/miosis pathway.",
+      "Combined use exposes the patient to BOTH risk profiles: steroid-response IOP elevation (steroid) AND corneal melt risk (NSAID, especially with compromised ocular surface).",
+      "Monitoring during the post-op taper period should screen for BOTH complications, not just one.",
+    ],
+    applyIt: [
+      "This consolidates your existing Post-Cataract-Surgery Corticosteroid Taper and NSAID/CME Prophylaxis content (this topic's sibling objectives) into the combined-therapy safety principle — a cataract surgery patient on both a steroid taper and NSAID who develops either elevated IOP or worsening epithelial/corneal findings during recovery requires distinguishing which drug class is responsible, since the appropriate management differs (adjusting the steroid taper vs. discontinuing the NSAID) despite both being standard, evidence-based components of the same combined regimen.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -14031,6 +14281,18 @@ const FLASHCARDS = [
   { id: "fc-1263", objectiveId: "corneapharm-nutrition", front: "What is the proposed anti-inflammatory mechanism of omega-3 fatty acid supplementation for dry eye?", back: "Shifts eicosanoid production away from pro-inflammatory arachidonic-acid-derived mediators toward less inflammatory omega-3-derived alternatives." },
   { id: "fc-1264", objectiveId: "corneapharm-biologics", front: "What bioactive components does autologous serum contain that conventional artificial tears lack?", back: "Growth factors, vitamins, and immunoglobulins naturally present in tears." },
   { id: "fc-1265", objectiveId: "corneapharm-steroid-infection-contra", front: "What is the essential safety step before prescribing any topical corticosteroid for a red, painful eye?", back: "Confirm the diagnosis is genuinely non-infectious, or ensure concurrent antimicrobial coverage is already established." },
+  { id: "fc-1266", objectiveId: "lensdev-vesicle", front: "What is the key difference between primary and secondary lens fibers?", back: "Primary fibers form only prenatally and are never replaced; secondary fibers are continuously added at the lens equator throughout life." },
+  { id: "fc-1267", objectiveId: "lensdev-vesicle", front: "What induces formation of the lens placode from surface ectoderm?", back: "Signals from the underlying optic vesicle." },
+  { id: "fc-1268", objectiveId: "lensdev-anomalies", front: "What systemic syndrome is posterior lenticonus classically associated with?", back: "Alport syndrome (hereditary nephritis + sensorineural hearing loss)." },
+  { id: "fc-1269", objectiveId: "lensdev-anomalies", front: "Compare the direction of lens displacement in Marfan syndrome vs. homocystinuria.", back: "Marfan: superotemporal. Homocystinuria: inferonasal — the opposite direction." },
+  { id: "fc-1270", objectiveId: "lenspharmgen-perioperative", front: "What three phases structure the perioperative cataract surgery medication sequence?", back: "Pre-operative (mydriatic/cycloplegic + NSAID + antibiotic), intra-operative (mydriasis maintenance + antibiotic), post-operative (steroid taper + NSAID)." },
+  { id: "fc-1271", objectiveId: "lenspharmgen-mydriasis", front: "Why can pupil size decrease during cataract surgery despite adequate pre-op dilation?", back: "Surgical tissue manipulation triggers local prostaglandin release, causing intraoperative miosis." },
+  { id: "fc-1272", objectiveId: "lenspharm-steroid-taper", front: "Why is the post-cataract-surgery steroid regimen tapered rather than stopped abruptly?", back: "Abrupt cessation risks rebound inflammation; tapering also allows monitoring for steroid-response IOP elevation." },
+  { id: "fc-1273", objectiveId: "lenspharm-nsaid-cme", front: "What is Irvine-Gass syndrome?", back: "Cystoid macular edema (CME) occurring after cataract surgery, from prostaglandin-mediated increased perifoveal capillary permeability." },
+  { id: "fc-1274", objectiveId: "lenspharm-endophthalmitis-prophylaxis", front: "How do povidone-iodine antisepsis and intracameral antibiotic injection differ in mechanism for endophthalmitis prevention?", back: "Povidone-iodine is a broad-spectrum antiseptic reducing surface bioburden before surgery; intracameral antibiotic is targeted antibiotic action injected at the end of surgery." },
+  { id: "fc-1275", objectiveId: "lenspharm-perioperative-lubrication", front: "How can untreated dry eye affect cataract surgery outcomes?", back: "An unstable tear film reduces keratometry/biometry measurement accuracy, potentially causing IOL power calculation error and post-op refractive surprise." },
+  { id: "fc-1276", objectiveId: "lenspharm-trypan-blue", front: "What structure does trypan blue stain during cataract surgery, and when is it especially valuable?", back: "The anterior lens capsule, during capsulorhexis; especially valuable in mature/white cataracts with an absent red reflex." },
+  { id: "fc-1277", objectiveId: "lenspharm-nsaid-steroid-combination", front: "Why are NSAIDs and steroids used together (not as alternatives) after cataract surgery?", back: "They act on complementary, non-redundant parts of the inflammatory cascade — steroids broadly suppress inflammation, NSAIDs specifically target the prostaglandin-mediated CME/miosis pathway." },
 ];
 
 const QUESTIONS = [
@@ -18928,6 +19190,40 @@ const QUESTIONS = [
       b: "Correct — chronic vasoconstrictor overuse causes conjunctivitis medicamentosa, where vessels dilate more than baseline as the drug wears off, driving a self-perpetuating cycle; the correct management is to discontinue the vasoconstrictor despite an expected temporary worsening period.",
       c: "Incorrect — replacing with a fresh bottle of the same vasoconstrictor would simply continue the rebound cycle.",
       d: "Incorrect — this progressive worsening pattern is a genuine adverse effect requiring intervention (discontinuation), not a benign expected pattern.",
+    },
+  },
+  {
+    id: "q-289", objectiveId: "lensdev-anomalies", type: "Clinical differentiation", difficulty: "Hard",
+    stem: "A tall, long-limbed teenager is found to have bilateral lens subluxation. Careful exam shows the lenses are displaced inferonasally, and the patient also has mild intellectual disability and a history of a prior deep vein thrombosis. Which condition is most likely, and how does the displacement direction help confirm it?",
+    choices: [
+      { id: "a", text: "Marfan syndrome, since ectopia lentis always displaces superotemporally" },
+      { id: "b", text: "Homocystinuria — inferonasal displacement (opposite of Marfan's superotemporal pattern), along with intellectual disability and elevated thromboembolic risk, distinguishes it from Marfan syndrome despite the similar body habitus" },
+      { id: "c", text: "Both conditions are equally likely regardless of displacement direction" },
+      { id: "d", text: "Congenital glaucoma, since buphthalmos can displace the lens" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — superotemporal displacement is the Marfan pattern; this patient's inferonasal displacement points away from Marfan syndrome.",
+      b: "Correct — homocystinuria classically causes INFERONASAL lens displacement (opposite of Marfan's superotemporal pattern), and its additional systemic features — intellectual disability and significantly elevated thromboembolic risk — are not typical of Marfan syndrome despite the similar marfanoid body habitus, making this presentation classic for homocystinuria.",
+      c: "Incorrect — displacement direction is a genuinely high-yield distinguishing feature between these two conditions, not an irrelevant detail.",
+      d: "Incorrect — congenital glaucoma's buphthalmos is not a classic cause of ectopia lentis, and this presentation (body habitus, displacement direction, systemic features) does not fit that diagnosis.",
+    },
+  },
+  {
+    id: "q-290", objectiveId: "lenspharm-endophthalmitis-prophylaxis", type: "Applied concept", difficulty: "Medium",
+    stem: "Why is povidone-iodine ocular surface antisepsis considered complementary to, rather than a substitute for, intracameral antibiotic prophylaxis in cataract surgery?",
+    choices: [
+      { id: "a", text: "Both work through the identical antibiotic mechanism, so using both is simply redundant" },
+      { id: "b", text: "Povidone-iodine is a broad-spectrum antiseptic reducing surface bioburden before surgical entry, while intracameral antibiotic provides targeted antimicrobial action inside the eye at the end of surgery — genuinely different mechanisms addressing different points in the timeline" },
+      { id: "c", text: "Povidone-iodine replaces the need for any antibiotic prophylaxis entirely" },
+      { id: "d", text: "Intracameral antibiotics are only used when povidone-iodine is unavailable" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — povidone-iodine is an antiseptic, not an antibiotic; the two work through genuinely different mechanisms, not an identical one.",
+      b: "Correct — povidone-iodine's antiseptic action reduces ocular surface bioburden BEFORE the eye is surgically entered, while intracameral antibiotic injection provides targeted, high local antimicrobial concentration INSIDE the eye at the END of surgery — complementary strategies addressing different points in the infection-prevention timeline, which is why both are used together in modern protocols.",
+      c: "Incorrect — povidone-iodine antisepsis does not eliminate the additional benefit of intracameral antibiotic prophylaxis; both are recommended together.",
+      d: "Incorrect — both are standard components of modern prophylaxis protocols, not alternatives used only in the other's absence.",
     },
   },
 ];
