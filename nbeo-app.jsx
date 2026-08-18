@@ -984,6 +984,50 @@ const CBDEV_OBJECTIVES = [
   { id: "cbdev-formation", name: "Ciliary Body Development from the Optic Cup Rim", built: true },
 ];
 
+const UVEAPHARMGEN_TOPIC_ID = "t-11-4-0"; // Episclera/Sclera/Anterior Uvea(11) > Pharmacology(4) > General principles(0)
+const UVEAPHARMGEN_OBJECTIVES = [
+  { id: "uveapharmgen-barrier", name: "The Blood-Aqueous Barrier & Drug Penetration Routes", built: true },
+];
+
+const UVEAPHARMMYDRIATIC_TOPIC_ID = "t-11-4-1"; // Episclera/Sclera/Anterior Uvea(11) > Pharmacology(4) > Mydriatics and cycloplegics(1)
+// Distinct clinical use from the general mechanism already covered under
+// Accommodation/Vergence Pharmacology.
+const UVEAPHARMMYDRIATIC_OBJECTIVES = [
+  { id: "uveapharm-cycloplegia-uveitis", name: "Cycloplegia for Uveitis — Pain Relief & Synechiae Prevention", built: true },
+];
+
+const UVEAPHARMMIOTIC_TOPIC_ID = "t-11-4-2"; // Episclera/Sclera/Anterior Uvea(11) > Pharmacology(4) > Miotics(2)
+const UVEAPHARMMIOTIC_OBJECTIVES = [
+  { id: "uveapharm-miotic-caution", name: "Miotic Relative Contraindication in Active Anterior Uveitis", built: true },
+];
+
+const UVEAPHARMANTIINFLAMM_TOPIC_ID = "t-11-4-3"; // Episclera/Sclera/Anterior Uvea(11) > Pharmacology(4) > Anti-inflammatory agents(3)
+const UVEAPHARMANTIINFLAMM_OBJECTIVES = [
+  { id: "uveapharm-steroid-routes", name: "Corticosteroid Delivery Routes for Uveitis Severity Staging", built: true },
+  { id: "uveapharm-immunosuppressive", name: "Systemic Immunosuppressive & Biologic Therapy for Chronic Uveitis", built: true },
+];
+
+const UVEAPHARMLUBRICANT_TOPIC_ID = "t-11-4-4"; // Episclera/Sclera/Anterior Uvea(11) > Pharmacology(4) > Lubricants and tear substitutes(4)
+const UVEAPHARMLUBRICANT_OBJECTIVES = [
+  { id: "uveapharm-lubricant-adjunct", name: "Lubrication as Adjunctive Comfort Therapy in Anterior Uveitis", built: true },
+];
+
+const UVEAPHARMDYES_TOPIC_ID = "t-11-4-5"; // Episclera/Sclera/Anterior Uvea(11) > Pharmacology(4) > Dyes(5)
+const UVEAPHARMDYES_OBJECTIVES = [
+  { id: "uveapharm-iris-angiography", name: "Iris Fluorescein Angiography for Vascular Assessment", built: true },
+];
+
+const UVEAPHARMVASOCON_TOPIC_ID = "t-11-4-6"; // Episclera/Sclera/Anterior Uvea(11) > Pharmacology(4) > Vasoconstrictors(6)
+// Ties directly into existing Episcleritis/Scleritis pathology content.
+const UVEAPHARMVASOCON_OBJECTIVES = [
+  { id: "uveapharm-phenylephrine-test", name: "Phenylephrine Blanching Test — Episcleritis vs. Scleritis", built: true },
+];
+
+const UVEAPHARMINDICATIONS_TOPIC_ID = "t-11-4-7"; // Episclera/Sclera/Anterior Uvea(11) > Pharmacology(4) > Indications/contraindications/side effects/drug interactions(7)
+const UVEAPHARMINDICATIONS_OBJECTIVES = [
+  { id: "uveapharm-mydriasis-angle-contra", name: "Mydriasis Contraindication Risk in Occludable/Narrow Angles", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -1996,6 +2040,10 @@ const TOPIC_OBJECTIVES = {
   [SCLERADEV_TOPIC_ID]: SCLERADEV_OBJECTIVES, [ACDEV_TOPIC_ID]: ACDEV_OBJECTIVES,
   [IRISDEV_TOPIC_ID]: IRISDEV_OBJECTIVES, [PCDEV_TOPIC_ID]: PCDEV_OBJECTIVES,
   [CBDEV_TOPIC_ID]: CBDEV_OBJECTIVES,
+  [UVEAPHARMGEN_TOPIC_ID]: UVEAPHARMGEN_OBJECTIVES, [UVEAPHARMMYDRIATIC_TOPIC_ID]: UVEAPHARMMYDRIATIC_OBJECTIVES,
+  [UVEAPHARMMIOTIC_TOPIC_ID]: UVEAPHARMMIOTIC_OBJECTIVES, [UVEAPHARMANTIINFLAMM_TOPIC_ID]: UVEAPHARMANTIINFLAMM_OBJECTIVES,
+  [UVEAPHARMLUBRICANT_TOPIC_ID]: UVEAPHARMLUBRICANT_OBJECTIVES, [UVEAPHARMDYES_TOPIC_ID]: UVEAPHARMDYES_OBJECTIVES,
+  [UVEAPHARMVASOCON_TOPIC_ID]: UVEAPHARMVASOCON_OBJECTIVES, [UVEAPHARMINDICATIONS_TOPIC_ID]: UVEAPHARMINDICATIONS_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -2198,6 +2246,14 @@ const CONTENT_TOPICS = [
   { topicId: IRISDEV_TOPIC_ID, name: "Iris/Pupil Developmental Anatomy", objectives: IRISDEV_OBJECTIVES },
   { topicId: PCDEV_TOPIC_ID, name: "Posterior Chamber Developmental Anatomy", objectives: PCDEV_OBJECTIVES },
   { topicId: CBDEV_TOPIC_ID, name: "Ciliary Body Developmental Anatomy", objectives: CBDEV_OBJECTIVES },
+  { topicId: UVEAPHARMGEN_TOPIC_ID, name: "Anterior Uvea Pharmacology — General Principles", objectives: UVEAPHARMGEN_OBJECTIVES },
+  { topicId: UVEAPHARMMYDRIATIC_TOPIC_ID, name: "Cycloplegia for Uveitis", objectives: UVEAPHARMMYDRIATIC_OBJECTIVES },
+  { topicId: UVEAPHARMMIOTIC_TOPIC_ID, name: "Miotics in Anterior Uveitis", objectives: UVEAPHARMMIOTIC_OBJECTIVES },
+  { topicId: UVEAPHARMANTIINFLAMM_TOPIC_ID, name: "Anterior Uvea Anti-Inflammatory & Immunosuppressive Therapy", objectives: UVEAPHARMANTIINFLAMM_OBJECTIVES },
+  { topicId: UVEAPHARMLUBRICANT_TOPIC_ID, name: "Anterior Uvea Lubrication Therapy", objectives: UVEAPHARMLUBRICANT_OBJECTIVES },
+  { topicId: UVEAPHARMDYES_TOPIC_ID, name: "Iris Vascular Imaging Dyes", objectives: UVEAPHARMDYES_OBJECTIVES },
+  { topicId: UVEAPHARMVASOCON_TOPIC_ID, name: "Anterior Uvea Diagnostic Vasoconstrictor Testing", objectives: UVEAPHARMVASOCON_OBJECTIVES },
+  { topicId: UVEAPHARMINDICATIONS_TOPIC_ID, name: "Anterior Uvea Pharmacology — Indications & Contraindications", objectives: UVEAPHARMINDICATIONS_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -12981,6 +13037,181 @@ const STUDY_PAGES = {
       "This gives you the embryologic explanation for the double-layered ciliary epithelium already functionally relevant to your existing Aqueous Humor Production & Composition content — understanding that this two-layer structure (pigmented outer, non-pigmented inner) is a direct developmental continuation of the retina/RPE relationship explains why the ciliary epithelium is sometimes conceptually described as 'non-visual retina,' sharing its fundamental epithelial transport/secretory machinery with the true retinal pigment epithelium already covered under Photoreceptor & RPE Physiology content.",
     ],
   },
+  "uveapharmgen-barrier": {
+    name: "The Blood-Aqueous Barrier & Drug Penetration Routes",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "The blood-aqueous barrier, already covered under Iris Pigmentation & the Blood-Aqueous Barrier content, has direct pharmacologic implications for how well drugs reach the anterior uvea, and understanding it explains why route selection matters clinically for uveitis treatment." },
+      { h: "The barrier and its clinical implication", t: "The blood-aqueous barrier (formed by tight junctions in the non-pigmented ciliary epithelium and iris/retinal vasculature, already covered) normally restricts free passage of large or hydrophilic molecules from the bloodstream into the aqueous humor — meaning systemic (oral/IV) drug administration must overcome this barrier to reach therapeutic anterior segment concentrations, generally requiring higher systemic doses than would be needed for a tissue without this barrier." },
+      { h: "Barrier breakdown during active inflammation", t: "During active uveitis, the blood-aqueous barrier itself breaks down (already implicit in existing Anterior Uveitis content's flare finding — protein leakage into the aqueous humor from disrupted vascular permeability) — this breakdown paradoxically INCREASES drug penetration from topical and systemic routes during active inflammation compared to the intact-barrier state, meaning a topical medication may achieve better anterior segment penetration during an active flare than it would in a quiet, uninflamed eye." },
+    ],
+    memorizeIt: [
+      "Blood-aqueous barrier (already covered): tight junctions in non-pigmented ciliary epithelium/iris-retinal vasculature restrict drug passage into the aqueous.",
+      "Systemic drugs must overcome this barrier — generally requiring higher systemic doses for therapeutic anterior segment levels.",
+      "Active uveitis breaks down the blood-aqueous barrier (same mechanism as the flare finding, already covered) — paradoxically INCREASES drug penetration during active inflammation.",
+    ],
+    applyIt: [
+      "This gives you the pharmacokinetic explanation directly extending your existing Iris Pigmentation & the Blood-Aqueous Barrier content — recognizing that barrier breakdown during active flare increases topical drug penetration explains why topical therapy alone can be surprisingly effective for anterior uveitis despite the intact barrier's normally restrictive properties, while chronic/quiescent inflammation with a more intact barrier may require escalation to periocular or systemic routes (this topic's sibling objectives) to achieve adequate anterior uvea drug levels.",
+    ],
+  },
+  "uveapharm-cycloplegia-uveitis": {
+    name: "Cycloplegia for Uveitis — Pain Relief & Synechiae Prevention",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Cycloplegic agents serve a genuinely distinct clinical purpose in anterior uveitis management from their more familiar role in refraction already covered under Mydriatics & Cycloplegics — Mechanisms & Duration of Action content, addressing both pain and a serious structural complication." },
+      { h: "Pain relief mechanism", t: "In active anterior uveitis, ciliary muscle and iris sphincter spasm contribute significantly to the characteristic deep ocular pain and photophobia — cycloplegic agents (already covered mechanistically as antimuscarinic blockade of the parasympathetically-innervated ciliary muscle and sphincter, already relevant to existing Pupillary Light & Near Reflexes content) relieve this muscle spasm, providing genuine symptomatic pain relief distinct from their refractive/diagnostic use." },
+      { h: "Synechiae prevention — the critical structural rationale", t: "Beyond pain relief, cycloplegic-induced pupil dilation keeps the iris moving and away from the anterior lens surface, directly preventing posterior synechiae (iris-to-lens adhesions, already covered under Pupillary Block & Iris Bombé content) from forming during the inflammatory episode — since a persistently constricted, inflamed pupil is at high risk of adhering to the lens, and once formed, synechiae can predispose to the pupillary block/iris bombé/acute angle-closure cascade already covered, making cycloplegic use during active uveitis a genuinely important PREVENTIVE measure, not merely a comfort measure." },
+    ],
+    memorizeIt: [
+      "Cycloplegics in uveitis serve TWO purposes: (1) pain relief from ciliary muscle/sphincter spasm relief, (2) PREVENTION of posterior synechiae by keeping the pupil moving/dilated.",
+      "Posterior synechiae (already covered) can predispose to pupillary block → iris bombé → acute angle closure (already covered) — making synechiae prevention a genuine structural safety measure.",
+      "This is a distinct clinical use from cycloplegia's refractive/diagnostic role (already covered under Mydriatics & Cycloplegics).",
+    ],
+    applyIt: [
+      "This gives you the critical preventive rationale directly connecting your existing Pupillary Block Mechanism & Iris Bombé content to standard uveitis management — prescribing a cycloplegic agent for a patient with active anterior uveitis is not just symptomatic comfort therapy but a genuine measure to prevent the posterior synechiae that could otherwise progress to the dangerous pupillary block/angle-closure cascade already established under that content.",
+    ],
+  },
+  "uveapharm-miotic-caution": {
+    name: "Miotic Relative Contraindication in Active Anterior Uveitis",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Miotic agents (already covered mechanistically under Miotics — Direct & Indirect Cholinergic Agonists content, typically used for glaucoma IOP-lowering) are relatively contraindicated during active anterior uveitis, directly opposing this topic's sibling objective's cycloplegic recommendation for the same clinical scenario." },
+      { h: "Why miotics are problematic in active uveitis", t: "Miotics pharmacologically constrict the pupil (the opposite effect from cycloplegics, this topic's sibling objective) — in the setting of active anterior uveitis, this sustained pupillary constriction dramatically increases the risk of posterior synechiae formation (already covered), since a small, immobile, constricted pupil in prolonged contact with the anterior lens surface during ongoing inflammation is precisely the situation that promotes iris-to-lens adhesion." },
+      { h: "The clinical conflict when uveitis coexists with glaucoma", t: "This creates a genuine clinical tension when a patient has BOTH active anterior uveitis AND glaucoma requiring IOP control, since the miotic class typically used for glaucoma (already covered) is relatively contraindicated during the active uveitic flare — in this scenario, alternative IOP-lowering approaches (avoiding miotics) are generally preferred until the active inflammation is controlled, illustrating a genuine cross-disciplinary prescribing conflict requiring individualized management." },
+    ],
+    memorizeIt: [
+      "Miotics constrict the pupil — directly OPPOSING the cycloplegic approach (this topic's sibling objective) recommended for active anterior uveitis.",
+      "Sustained pupillary constriction during active uveitis increases posterior synechiae risk (already covered).",
+      "Genuine clinical conflict: a patient with BOTH active uveitis AND glaucoma requiring IOP control should generally avoid miotics during the active uveitic flare, using alternative IOP-lowering approaches instead.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important prescribing conflict directly extending your existing Miotics and Pupillary Block/Iris Bombé content — recognizing that miotics and active anterior uveitis are relatively incompatible (opposite of the cycloplegic approach this topic's sibling objective recommends) is essential for a patient presenting with concurrent uveitis and glaucoma, where the standard miotic approach to IOP control must be reconsidered until the uveitis is controlled.",
+    ],
+  },
+  "uveapharm-steroid-routes": {
+    name: "Corticosteroid Delivery Routes for Uveitis Severity Staging",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Uveitis corticosteroid therapy escalates through distinct delivery routes based on severity and anatomic location, extending your existing Topical Corticosteroids — Potency & Infectious Keratitis Risk content into a severity-staged treatment framework specific to uveitis." },
+      { h: "Topical route — anterior uveitis", t: "Topical corticosteroids (e.g., prednisolone acetate, already covered) are generally sufficient for isolated ANTERIOR uveitis, since topical drops can achieve adequate anterior chamber drug concentration, particularly aided by blood-aqueous barrier breakdown during active inflammation (this topic's sibling general-principles objective)." },
+      { h: "Periocular (sub-Tenon's/intraocular) injection", t: "For more severe anterior uveitis not responding to topical therapy, or for INTERMEDIATE uveitis (affecting the vitreous/pars plana, already relevant to existing Posterior Uveitis/Panuveitis content), periocular injection (e.g., sub-Tenon's triamcinolone) or direct intravitreal injection provides higher local drug concentration at a location topical drops cannot adequately reach." },
+      { h: "Systemic corticosteroids and escalation to immunosuppression", t: "SEVERE, bilateral, or POSTERIOR uveitis/panuveitis (already covered) typically requires systemic (oral or IV) corticosteroid therapy to achieve adequate treatment of posterior segment and bilateral disease, and CHRONIC or steroid-refractory/steroid-dependent uveitis requiring long-term control often necessitates escalation to steroid-sparing systemic immunosuppressive or biologic therapy (this topic's sibling objective), given the unacceptable long-term toxicity of chronic high-dose systemic corticosteroids." },
+    ],
+    memorizeIt: [
+      "Topical steroid: sufficient for isolated ANTERIOR uveitis (aided by blood-aqueous barrier breakdown during active inflammation, already covered).",
+      "Periocular/intravitreal injection: for severe anterior uveitis or intermediate uveitis (vitreous/pars plana involvement, already relevant to Posterior Uveitis content).",
+      "Systemic corticosteroids: for severe, bilateral, or posterior uveitis/panuveitis (already covered).",
+      "Chronic/steroid-refractory disease → escalate to steroid-sparing systemic immunosuppressive/biologic therapy (this topic's sibling objective), given long-term systemic steroid toxicity.",
+    ],
+    applyIt: [
+      "This gives you the severity-staged treatment framework directly extending your existing Posterior Uveitis/Panuveitis and Uveitis Associated with Systemic Disease content — a patient with JIA-associated chronic anterior uveitis (already covered) who becomes steroid-dependent despite topical therapy is exactly the clinical scenario prompting escalation to systemic immunosuppressive/biologic therapy (this topic's sibling objective), illustrating this route-escalation framework in a concrete, already-covered clinical context.",
+    ],
+  },
+  "uveapharm-immunosuppressive": {
+    name: "Systemic Immunosuppressive & Biologic Therapy for Chronic Uveitis",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Chronic, severe, or steroid-refractory/steroid-dependent uveitis often requires escalation to steroid-sparing systemic immunosuppressive or biologic therapy, extending your existing Uveitis Associated with Systemic Disease (JIA, Sarcoidosis) and immunology content into targeted anti-inflammatory pharmacology." },
+      { h: "Conventional immunosuppressives", t: "Methotrexate (an antimetabolite, already relevant to existing Cell Cycle/antimetabolite chemotherapy concepts) is a commonly used first-line steroid-sparing agent for chronic non-infectious uveitis, particularly effective for JIA-associated uveitis (already covered) — working by broadly suppressing lymphocyte proliferation and reducing the systemic inflammatory burden driving the uveitic process." },
+      { h: "Biologic (anti-TNF) therapy", t: "For uveitis refractory to conventional immunosuppression, biologic agents — particularly TNF-alpha inhibitors (e.g., adalimumab) — directly target tumor necrosis factor-alpha, a key pro-inflammatory cytokine (already relevant to existing Cytokine Signaling content) driving chronic uveitic inflammation, and are specifically FDA-approved for non-infectious uveitis given strong clinical trial evidence, representing a genuinely targeted molecular approach distinct from the broader immunosuppression of methotrexate or systemic corticosteroids." },
+      { h: "Rationale for steroid-sparing approach", t: "The overarching rationale for escalating to these steroid-sparing agents is avoiding the cumulative toxicity of chronic high-dose systemic corticosteroid use (already implicit in this topic's sibling steroid-routes objective) — since chronic uveitis often requires YEARS of treatment, minimizing long-term systemic corticosteroid exposure while still achieving adequate inflammatory control is the central therapeutic goal driving this escalation pathway." },
+    ],
+    memorizeIt: [
+      "Methotrexate: antimetabolite, common first-line steroid-sparing agent for chronic non-infectious uveitis, particularly effective for JIA-associated uveitis (already covered).",
+      "TNF-alpha inhibitors (e.g., adalimumab): biologic therapy for refractory uveitis, FDA-approved for non-infectious uveitis — targets a key pro-inflammatory cytokine (already relevant to Cytokine Signaling content).",
+      "Steroid-sparing rationale: avoids cumulative toxicity of chronic high-dose systemic corticosteroids, since chronic uveitis often requires years of treatment.",
+    ],
+    applyIt: [
+      "This gives you the modern targeted-therapy escalation pathway directly extending your existing Uveitis Associated with Systemic Disease (JIA, Sarcoidosis) content — a child with JIA-associated chronic anterior uveitis who fails topical steroids and requires escalating systemic therapy would typically progress from methotrexate to a TNF-alpha inhibitor like adalimumab, illustrating the practical treatment escalation pathway for exactly the systemic-disease-associated uveitis population already covered.",
+    ],
+  },
+  "uveapharm-lubricant-adjunct": {
+    name: "Lubrication as Adjunctive Comfort Therapy in Anterior Uveitis",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Artificial tear lubrication, while not addressing the underlying inflammatory process, serves a genuine adjunctive comfort role in anterior uveitis management, extending your existing Artificial Tears & Ocular Lubricant Formulation Principles content to this specific clinical context." },
+      { h: "Rationale for adjunctive use", t: "Active anterior uveitis is frequently accompanied by significant photophobia, foreign body sensation, and reflex tearing abnormalities, and the frequent use of multiple other topical medications (cycloplegics, steroids — both this topic's sibling objectives) during a uveitis flare compounds ocular surface irritation and preservative exposure (already covered under BAK toxicity content) — making supplemental lubrication a genuinely useful adjunct to improve overall comfort during the treatment course." },
+      { h: "Preservative-free preference given multi-drop regimens", t: "Given that active uveitis treatment frequently involves multiple concurrent topical medications (cycloplegic + steroid, at minimum), preservative-free lubricant formulations are particularly preferable in this context, directly applying the same cumulative-BAK-exposure principle already established under existing pharmacology content to a patient already receiving several other preserved topical drops simultaneously." },
+    ],
+    memorizeIt: [
+      "Artificial tears in active uveitis: adjunctive comfort therapy, does NOT address the underlying inflammatory process itself.",
+      "Uveitis treatment often involves MULTIPLE concurrent topical drops (cycloplegic + steroid) — compounds ocular surface irritation/preservative exposure.",
+      "Preservative-free lubricant formulations are particularly preferable given this multi-drop regimen, applying the same cumulative BAK-exposure principle already covered.",
+    ],
+    applyIt: [
+      "This extends your existing Artificial Tears & Ocular Lubricant Formulation Principles content to a patient already receiving multiple other preserved topical medications during an active uveitis flare — recommending preservative-free lubrication specifically in this context avoids adding further cumulative preservative burden on top of the cycloplegic and steroid drops (this topic's sibling objectives) already being used.",
+    ],
+  },
+  "uveapharm-iris-angiography": {
+    name: "Iris Fluorescein Angiography for Vascular Assessment",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular imaging/pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Iris fluorescein angiography uses intravenously injected fluorescein dye to directly visualize iris vascular perfusion and permeability, a genuinely distinct diagnostic application from the topical ocular surface dyes already covered under Cornea Pharmacology content, extending your existing Iris Vascular Supply & Rubeosis Iridis content into a specific imaging technique." },
+      { h: "Technique and what it reveals", t: "Unlike topical fluorescein (already covered, used for ocular surface epithelial defect staining), iris fluorescein angiography involves INTRAVENOUS dye injection with sequential photography of the iris vasculature, allowing direct visualization of the normal major and minor arterial circles (already covered) and, critically, detection of abnormal vascular leakage or the earliest new vessel growth of rubeosis iridis (already covered) — sometimes before the abnormal vessels become clinically visible on routine slit lamp exam alone." },
+      { h: "Clinical value", t: "This early detection capability makes iris fluorescein angiography valuable in patients at high risk for rubeosis iridis (already covered as a complication of severe retinal ischemia from proliferative diabetic retinopathy or CRVO) — identifying early leakage or subclinical new vessel formation before overt rubeosis is visible can prompt earlier intervention (treating the underlying retinal ischemia) before progression to neovascular glaucoma (already covered)." },
+    ],
+    memorizeIt: [
+      "Iris fluorescein angiography: INTRAVENOUS dye injection + sequential photography — distinct from topical fluorescein (ocular surface staining, already covered).",
+      "Visualizes iris vascular perfusion, and can detect leakage/early new vessel formation BEFORE overt rubeosis iridis is clinically visible (already covered).",
+      "Clinically valuable in patients at high risk for rubeosis iridis (severe diabetic retinopathy/CRVO, already covered) — enables earlier intervention before neovascular glaucoma develops.",
+    ],
+    applyIt: [
+      "This gives you an early-detection imaging tool directly extending your existing Iris Vascular Supply & Rubeosis Iridis content — a patient with severe proliferative diabetic retinopathy at high rubeosis risk could theoretically undergo iris fluorescein angiography to detect subclinical vascular leakage before visible new vessels appear on slit lamp exam, allowing earlier treatment of the underlying retinal ischemia before the neovascular glaucoma cascade already covered has a chance to progress.",
+    ],
+  },
+  "uveapharm-phenylephrine-test": {
+    name: "Phenylephrine Blanching Test — Episcleritis vs. Scleritis",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical phenylephrine, an alpha-adrenergic vasoconstrictor (already covered mechanistically under Ocular Vasoconstrictors content), has a genuinely important DIAGNOSTIC application distinguishing episcleritis from scleritis, extending your existing Scleritis and Episcleritis pathology content with the specific pharmacologic test already referenced there." },
+      { h: "The vascular basis for the test", t: "As already established under existing Scleral Structure & the Episclera content, ocular surface vasculature is arranged in three tiers by depth: conjunctival (superficial), episcleral (intermediate), and scleral (deep) — topical phenylephrine, applied to the ocular surface, reaches and constricts the SUPERFICIAL conjunctival and episcleral vessels but does NOT penetrate deeply enough to reach the deep scleral vessels." },
+      { h: "Clinical application of the test", t: "In episcleritis (inflammation of the superficial episcleral vessels), topical phenylephrine causes visible BLANCHING (whitening) of the injected vessels, since these superficial vessels are within the drug's reach — while in scleritis (inflammation involving the deep scleral vascular plexus), the same phenylephrine application does NOT blanch the injection, since the deep scleral vessels are unaffected by the topically-applied vasoconstrictor — this differential blanching response is a simple, practical bedside test to distinguish these two conditions (already covered as separate pathology topics), which can otherwise appear similar on cursory exam despite very different severity and management implications." },
+    ],
+    memorizeIt: [
+      "Ocular surface vasculature, superficial to deep: conjunctival → episcleral → scleral (already covered under Scleral Structure content).",
+      "Topical phenylephrine reaches/constricts SUPERFICIAL conjunctival + episcleral vessels but NOT deep scleral vessels.",
+      "Episcleritis (superficial vessel inflammation): phenylephrine causes visible BLANCHING.",
+      "Scleritis (deep vessel inflammation): phenylephrine does NOT cause blanching — a simple, practical bedside test distinguishing these two conditions (already covered).",
+    ],
+    applyIt: [
+      "This gives you the specific pharmacologic test already referenced under your existing Scleral Structure & the Episclera content, formally connecting it to this platform's Scleritis and Episcleritis pathology topics — a red eye that BLANCHES with topical phenylephrine is more consistent with the far more benign episcleritis, while persistent redness DESPITE phenylephrine application should raise concern for scleritis, a condition with significant systemic disease associations and vision-threatening potential requiring more urgent, aggressive management.",
+    ],
+  },
+  "uveapharm-mydriasis-angle-contra": {
+    name: "Mydriasis Contraindication Risk in Occludable/Narrow Angles",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Both cycloplegic/mydriatic dilation (this topic's sibling objective) and the pupillary dilation from cycloplegic use in uveitis carry a genuine, important contraindication risk in patients with a narrow or occludable anterior chamber angle, directly connecting to your existing Anterior Chamber Angle and Pupillary Block content." },
+      { h: "The mechanism of dilation-induced angle closure", t: "In an eye with an already narrow or occludable angle (assessed via gonioscopy, already covered under Anterior Chamber Angle gross anatomy content), pharmacologic pupil dilation causes the peripheral iris to bunch up and thicken in the periphery — in a susceptible eye, this can mechanically push the peripheral iris into contact with the trabecular meshwork, precipitating acute angle-closure glaucoma, genuinely distinct from (though converging on the same final pathway as) the pupillary block/iris bombé mechanism already covered under Posterior Chamber content." },
+      { h: "Clinical screening implication", t: "This risk means that before dilating ANY patient — whether for routine fundus examination or for cycloplegic uveitis treatment (this topic's sibling objective) — assessing angle depth/occludability (via gonioscopy or estimation techniques) is a genuinely important safety screening step, since a patient with a narrow angle who is dilated without this awareness is at risk for iatrogenic acute angle-closure glaucoma, a preventable complication with proper pre-dilation screening." },
+    ],
+    memorizeIt: [
+      "Pharmacologic pupil dilation in a narrow/occludable angle can cause peripheral iris bunching, mechanically pushing the iris into the trabecular meshwork → acute angle-closure glaucoma.",
+      "This is a genuinely distinct mechanism from (but converges with) the pupillary block/iris bombé pathway already covered.",
+      "Angle depth/occludability assessment (gonioscopy, already covered) is an important safety screening step BEFORE dilating any patient, whether for routine exam or uveitis cycloplegic treatment.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important pre-dilation safety principle directly extending your existing Anterior Chamber Angle and Pupillary Block/Iris Bombé content — before prescribing cycloplegic therapy for uveitis (this topic's sibling objective) or performing routine dilated fundus exam, screening for a narrow or occludable angle is an essential step to avoid precipitating iatrogenic acute angle-closure glaucoma, a genuine and preventable risk of pharmacologic dilation in a susceptible eye.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -14680,6 +14911,15 @@ const FLASHCARDS = [
   { id: "fc-1295", objectiveId: "irisdev-anomalies", front: "What is the classic location and mechanism of iris coloboma?", back: "Inferonasal, from failure of the embryonic (optic) fissure to close properly." },
   { id: "fc-1296", objectiveId: "pcdev-hyaloid", front: "What is persistent fetal vasculature (PFV), and how does it typically differ from retinoblastoma in presentation?", back: "Failed hyaloid vascular system regression causing leukocoria; PFV is typically unilateral with a microphthalmic eye and no intraocular mass, unlike retinoblastoma." },
   { id: "fc-1297", objectiveId: "cbdev-formation", front: "What is the embryologic basis for the ciliary body's double-layered (pigmented + non-pigmented) epithelium?", back: "It derives from the same anterior optic cup neuroectoderm as the retina/RPE, forming an outer pigmented and inner non-pigmented layer — the structural basis for aqueous secretion." },
+  { id: "fc-1298", objectiveId: "uveapharmgen-barrier", front: "How does active uveitis paradoxically affect topical drug penetration into the anterior segment?", back: "It breaks down the blood-aqueous barrier, INCREASING topical drug penetration compared to the intact-barrier quiescent state." },
+  { id: "fc-1299", objectiveId: "uveapharm-cycloplegia-uveitis", front: "What are the two purposes of cycloplegic therapy in active anterior uveitis?", back: "Pain relief from ciliary muscle/sphincter spasm, and prevention of posterior synechiae by keeping the pupil moving/dilated." },
+  { id: "fc-1300", objectiveId: "uveapharm-miotic-caution", front: "Why are miotics relatively contraindicated during active anterior uveitis?", back: "Sustained pupillary constriction increases the risk of posterior synechiae formation — the opposite of the cycloplegic approach." },
+  { id: "fc-1301", objectiveId: "uveapharm-steroid-routes", front: "What uveitis anatomic pattern typically requires systemic (rather than topical) corticosteroid therapy?", back: "Severe, bilateral, or posterior uveitis/panuveitis." },
+  { id: "fc-1302", objectiveId: "uveapharm-immunosuppressive", front: "What biologic drug class is FDA-approved for refractory non-infectious uveitis, and what does it target?", back: "TNF-alpha inhibitors (e.g., adalimumab) — target tumor necrosis factor-alpha, a key pro-inflammatory cytokine." },
+  { id: "fc-1303", objectiveId: "uveapharm-lubricant-adjunct", front: "Why are preservative-free lubricants particularly preferred during active uveitis treatment?", back: "Uveitis treatment often involves multiple concurrent preserved drops (cycloplegic + steroid), compounding cumulative BAK exposure risk." },
+  { id: "fc-1304", objectiveId: "uveapharm-iris-angiography", front: "How does iris fluorescein angiography differ from topical fluorescein staining?", back: "It uses intravenous dye injection with sequential photography to visualize iris vasculature, rather than topical dye staining ocular surface epithelial defects." },
+  { id: "fc-1305", objectiveId: "uveapharm-phenylephrine-test", front: "What is the phenylephrine blanching test result pattern that distinguishes episcleritis from scleritis?", back: "Episcleritis blanches with topical phenylephrine (superficial vessels); scleritis does NOT blanch (deep scleral vessels unaffected)." },
+  { id: "fc-1306", objectiveId: "uveapharm-mydriasis-angle-contra", front: "What safety screening step should precede dilating any patient, and why?", back: "Assessing angle depth/occludability (gonioscopy) — dilation in a narrow/occludable angle can precipitate acute angle-closure glaucoma." },
 ];
 
 const QUESTIONS = [
@@ -19662,6 +19902,40 @@ const QUESTIONS = [
       b: "Correct — aniridia (near-total iris absence) is strongly associated with WAGR syndrome and requires urgent genetic testing and renal ultrasound given the Wilms tumor risk; persistent pupillary membrane (iris strands crossing the pupil, attached at the collarette) is typically a benign, incidental finding from incomplete pupillary membrane regression requiring only observation.",
       c: "Incorrect — these two findings carry very different levels of urgency; treating them identically would over-investigate the benign finding or, more dangerously, under-appreciate distinctions in workup approach.",
       d: "Incorrect — persistent pupillary membrane strands are remnants of a normal developmental structure's incomplete regression, not neovascularization, and are typically benign.",
+    },
+  },
+  {
+    id: "q-294", objectiveId: "uveapharm-phenylephrine-test", type: "Clinical differentiation", difficulty: "Medium",
+    stem: "A patient presents with a red, tender eye. Topical phenylephrine is applied, and the redness fails to blanch. What does this finding suggest, and why?",
+    choices: [
+      { id: "a", text: "Episcleritis, since phenylephrine always blanches inflamed vessels" },
+      { id: "b", text: "Scleritis, since topical phenylephrine reaches only the superficial conjunctival/episcleral vessels and cannot blanch the deep scleral vascular plexus involved in scleritis" },
+      { id: "c", text: "A normal, uninflamed eye" },
+      { id: "d", text: "Bacterial conjunctivitis, since phenylephrine has no relationship to vessel depth" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — episcleritis (superficial vessel involvement) WOULD blanch with phenylephrine; failure to blanch points away from episcleritis.",
+      b: "Correct — topical phenylephrine reaches and constricts only the superficial conjunctival and episcleral vessels, not the deep scleral vascular plexus; persistent redness despite phenylephrine application suggests scleritis, involving the deeper, unreachable vessels — a condition with significant systemic associations and vision-threatening potential requiring more urgent management.",
+      c: "Incorrect — a tender, red eye is not a normal finding regardless of the phenylephrine test result.",
+      d: "Incorrect — this vascular-depth-based blanching test is specifically used to distinguish episcleritis from scleritis, not to diagnose conjunctivitis.",
+    },
+  },
+  {
+    id: "q-295", objectiveId: "uveapharm-mydriasis-angle-contra", type: "Applied concept", difficulty: "Medium",
+    stem: "Before prescribing cycloplegic therapy for a patient with active anterior uveitis, what safety assessment should be performed, and why?",
+    choices: [
+      { id: "a", text: "None — cycloplegics are always safe regardless of angle anatomy" },
+      { id: "b", text: "Angle depth/occludability assessment (gonioscopy), since pharmacologic dilation in a narrow or occludable angle can precipitate acute angle-closure glaucoma" },
+      { id: "c", text: "Visual acuity testing only" },
+      { id: "d", text: "Color vision testing, since cycloplegics can affect color perception" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — pharmacologic dilation carries a genuine angle-closure risk in a susceptible eye, making pre-dilation angle assessment an important safety step.",
+      b: "Correct — pupillary dilation can cause the peripheral iris to bunch up and mechanically occlude a narrow or occludable angle, precipitating acute angle-closure glaucoma; assessing angle depth/occludability via gonioscopy before dilating is an essential safety screening step.",
+      c: "Incorrect — visual acuity testing does not assess angle closure risk.",
+      d: "Incorrect — color vision testing is unrelated to angle-closure risk from pharmacologic dilation.",
     },
   },
 ];
