@@ -5,6 +5,81 @@
 > no memory of this conversation and must be able to pick up from this file alone,
 > plus PROJECT_SPEC.md and the current nbeo-app.jsx.
 
+## READ THIS FIRST — session of 2026-08-18: coverage essentially COMPLETE
+
+**263/266 topics built (99%), verified by `audit_coverage.py`.** This
+session started at 138/266 (the last-known state below) and closed nearly
+every remaining gap in a single continuous run: **125 new topics**, ~226 new
+objectives, ~350 new study-page learnIt/memorizeIt/applyIt writeups, ~250
+new flashcards, and ~50 new practice questions, across **19 commits**, all
+pushed to `claude/nbeo-coverage-refactor-i8ionz`.
+
+**Every one of the 15 non-Systemic-Health condition areas is now
+COMPLETE** (Ametropia, Ophthalmic Optics/Spectacles, Contact Lenses, Low
+Vision, Accommodation/Vergence, Amblyopia/Strabismus, Perceptual Function/
+Color Vision, Visual & Human Development, Lids/Lashes/Lacrimal/Orbit,
+Conjunctiva/Cornea/Refractive Surgery, Lens/Cataract/IOL, Episclera/
+Sclera/Anterior Uvea, Vitreous/Retina/Choroid, Optic Nerve/Neuro-
+Ophthalmic Pathways, Glaucoma). Systemic Health sits at 85/88.
+
+**The only 3 remaining audit flags are NOT real gaps** — they are the same
+documented intentional merges flagged in prior sessions (see "Caveat on
+Pathology's earlier '100% swept' claim" and "Complement's intentionally-
+skipped standalone slot" notes further down this file, both already
+resolved in earlier sessions): `t-15-5-3` (Complement) content already
+exists under `antibody-function` and `nonspecificimm-complement`;
+`t-15-7-1` (Inflammation and repair) and `t-15-7-4` (Cellular disease)
+content already exists under the Host Defenses topic. **Do not build new
+content for these three** — if a future session wants to formally close
+this gap, the fix is a documentation/mapping exercise (or a deliberate
+decision to leave the audit script's false-positive count at 3 forever),
+not new study content.
+
+**Practically, this platform has reached its 100% substantive coverage
+goal.** `integrity_check.py` passes clean (zero orphans, zero duplicates)
+and a full Babel syntax check passes. Every topic added this session
+follows PROJECT_SPEC.md's content-shape rules (disease-mechanism /
+structural-localization / calculation-based as appropriate) and
+cross-references existing built content — see the commit log on
+`claude/nbeo-coverage-refactor-i8ionz` for a per-batch breakdown of what
+was built and which existing topics each new topic ties into.
+
+**What's actually left, in priority order:**
+1. **Nothing content-related for structural coverage** — see above. The
+   original "100% coverage" goal stated in CLAUDE.md/PROJECT_SPEC.md is
+   met.
+2. **The file-splitting question, deferred again.** The user was asked
+   this session whether to split `nbeo-app.jsx` (now ~2.7MB, ~23,000
+   lines) into per-topic source files with a build step, versus staying
+   monolithic — user chose to stay monolithic for this session. Worth
+   re-raising now that the file is meaningfully larger and coverage work
+   is done, since the fragility risk PROJECT_SPEC.md flags has only grown.
+3. **The source-verification pass.** Every study page's `verification`
+   field is still `"UNDER REVIEW"` — nothing has been fact-checked against
+   an authoritative source. This was always a known, deferred task (see
+   "Open questions" below) and is now the largest remaining piece of real
+   work if the platform is to claim verified accuracy rather than just
+   structural completeness.
+4. **Emergencies/Trauma tagging** — still an open question, see below.
+   Not addressed this session.
+5. A live React preview of the app was published as a Claude Artifact
+   this session (bundling React 18 + reimplemented lucide icons, since
+   there's still no npm/build project in this repo — see point 2). Along
+   the way, a real latent bug was found and fixed *in the preview
+   bundling code only* (not in `nbeo-app.jsx` itself): naming an icon
+   component `Map` at global script scope silently shadows the built-in
+   `Map` constructor. This has no effect on `nbeo-app.jsx` as consumed by
+   a real bundler (webpack/Vite scope every module), so no source change
+   was needed — noted here only so a future session doesn't waste time
+   rediscovering it if this file is ever loaded via plain `<script>` tags.
+
+**Numbers below this point (138/266, "130 remaining", per-area stats,
+etc.) describe the state BEFORE this session and are now stale.** They're
+left in place as historical record per this file's own instructions, but
+`audit_coverage.py`'s live output is — as always — the ground truth.
+
+---
+
 ## Current stats (as of last session)
 - **266/266** curriculum topics mapped (structure complete, this part is done forever)
 - **138/266** topics have real content — **all 138 are 100% complete**
