@@ -2248,6 +2248,37 @@ const CLINDICATIONS_OBJECTIVES = [
   { id: "clindications-systemic-interactions", name: "Systemic Medications Affecting Contact Lens Tolerance", built: true },
 ];
 
+const COMPLEMENT_TOPIC_ID = "t-15-5-3"; // Systemic Health(15) > Immunology(5) > Complement chemistry, function, pathways(3)
+// Distinct from the already-built antibody-function (classical pathway
+// activation) and nonspecificimm-complement (three-pathway overview)
+// content — this covers complement REGULATION and its direct disease
+// relevance, closing the final Systemic Health Immunology slot.
+const COMPLEMENT_OBJECTIVES = [
+  { id: "complement-regulatory-proteins", name: "Complement Regulatory Proteins & Loss of Regulation", built: true },
+  { id: "complement-cfh-amd", name: "Complement Factor H & Age-Related Macular Degeneration", built: true },
+];
+
+const REPAIR_TOPIC_ID = "t-15-7-1"; // Systemic Health(15) > Pathology(7) > Inflammation and repair(1)
+// Distinct from the already-built host-inflammation objective (acute vs.
+// chronic inflammation mechanism) — this covers the TISSUE REPAIR/WOUND
+// HEALING process specifically, closing this Pathology slot with genuinely
+// new content rather than re-deriving the inflammation mechanism.
+const REPAIR_OBJECTIVES = [
+  { id: "repair-wound-healing-phases", name: "Phases of Wound Healing & Primary vs. Secondary Intention", built: true },
+  { id: "repair-healing-complications", name: "Wound Healing Complications (Keloid, Dehiscence, Chronic Wounds)", built: true },
+];
+
+const CELLDISEASE_TOPIC_ID = "t-15-7-4"; // Systemic Health(15) > Pathology(7) > Cellular disease(4)
+// Distinct from the already-built host-cell-injury objective (necrosis vs.
+// apoptosis) — this covers REVERSIBLE CELLULAR ADAPTATION (hypertrophy,
+// hyperplasia, atrophy, metaplasia, dysplasia), the adaptive spectrum that
+// precedes irreversible injury, closing this Pathology slot with genuinely
+// new content and a direct tie to existing Neoplasia content.
+const CELLDISEASE_OBJECTIVES = [
+  { id: "celldisease-adaptation-types", name: "Cellular Adaptation — Hypertrophy, Hyperplasia, Atrophy, Metaplasia", built: true },
+  { id: "celldisease-dysplasia-neoplasia", name: "Dysplasia as a Precursor Lesion on the Path to Neoplasia", built: true },
+];
+
 const TOPIC_OBJECTIVES = {
   [ENDO_TOPIC_ID]: ENDO_OBJECTIVES, [NERVOUS_TOPIC_ID]: NERVOUS_OBJECTIVES,
   [INTEG_TOPIC_ID]: INTEG_OBJECTIVES, [GLAUCOMA_TOPIC_ID]: GLAUCOMA_OBJECTIVES,
@@ -2329,6 +2360,8 @@ const TOPIC_OBJECTIVES = {
   [LENSPHYSCHAR_TOPIC_ID]: LENSPHYSCHAR_OBJECTIVES, [FRAMEMAT_TOPIC_ID]: FRAMEMAT_OBJECTIVES,
   [ABSORPTIVE_TOPIC_ID]: ABSORPTIVE_OBJECTIVES, [OPTTOLERANCE_TOPIC_ID]: OPTTOLERANCE_OBJECTIVES,
   [CLINDICATIONS_TOPIC_ID]: CLINDICATIONS_OBJECTIVES,
+  [COMPLEMENT_TOPIC_ID]: COMPLEMENT_OBJECTIVES, [REPAIR_TOPIC_ID]: REPAIR_OBJECTIVES,
+  [CELLDISEASE_TOPIC_ID]: CELLDISEASE_OBJECTIVES,
   [ACQUIREDPERC_TOPIC_ID]: ACQUIREDPERC_OBJECTIVES, [TEMPORALPERC_TOPIC_ID]: TEMPORALPERC_OBJECTIVES,
   [ENTOPTIC_TOPIC_ID]: ENTOPTIC_OBJECTIVES, [PSYCHOPHYSMETHODS_TOPIC_ID]: PSYCHOPHYSMETHODS_OBJECTIVES,
   [PSYCHOPHYSSCALING_TOPIC_ID]: PSYCHOPHYSSCALING_OBJECTIVES, [SIGNALDETECT_TOPIC_ID]: SIGNALDETECT_OBJECTIVES,
@@ -2540,6 +2573,9 @@ const CONTENT_TOPICS = [
   { topicId: ABSORPTIVE_TOPIC_ID, name: "Absorptive Lenses — Transmittance & Photochromics", objectives: ABSORPTIVE_OBJECTIVES },
   { topicId: OPTTOLERANCE_TOPIC_ID, name: "Optical Tolerances & Regulatory Standards", objectives: OPTTOLERANCE_OBJECTIVES },
   { topicId: CLINDICATIONS_TOPIC_ID, name: "Contact Lens Solution Adverse Reactions & Interactions", objectives: CLINDICATIONS_OBJECTIVES },
+  { topicId: COMPLEMENT_TOPIC_ID, name: "Complement System Regulation", objectives: COMPLEMENT_OBJECTIVES },
+  { topicId: REPAIR_TOPIC_ID, name: "Tissue Repair & Wound Healing", objectives: REPAIR_OBJECTIVES },
+  { topicId: CELLDISEASE_TOPIC_ID, name: "Cellular Adaptation", objectives: CELLDISEASE_OBJECTIVES },
   { topicId: ACQUIREDPERC_TOPIC_ID, name: "Perceptual Anomalies from Acquired Neurological Impairment", objectives: ACQUIREDPERC_OBJECTIVES },
   { topicId: TEMPORALPERC_TOPIC_ID, name: "Temporal Perception", objectives: TEMPORALPERC_OBJECTIVES },
   { topicId: ENTOPTIC_TOPIC_ID, name: "Entopic Phenomena", objectives: ENTOPTIC_OBJECTIVES },
@@ -11697,6 +11733,128 @@ const STUDY_PAGES = {
       "This extends your existing Tear Film & Lacrimal Physiology and Contact Lens Complications content by adding the systemic-medication branch of the differential diagnosis for new-onset lens intolerance — a patient recently started on an anticholinergic antidepressant or oral isotretinoin who develops new contact lens discomfort is demonstrating a medication-induced tear film change, not necessarily a lens-fit or solution problem, changing the appropriate clinical next step from a refit to a medication history review and dry-eye management already covered elsewhere.",
     ],
   },
+  "complement-regulatory-proteins": {
+    name: "Complement Regulatory Proteins & Loss of Regulation",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard immunology references"],
+    learnIt: [
+      { h: "Overview", t: "The complement system's three activation pathways (already covered under Complement System — Three Activation Pathways content) and antibody-triggered classical pathway activation (already covered under Antibody Function & Complement Activation content) both converge on the SAME potent, potentially tissue-damaging effector cascade — meaning complement activity must be tightly REGULATED, and specific regulatory proteins prevent this normally-protective system from damaging the body's own healthy cells." },
+      { h: "Key regulatory proteins", t: "Complement regulatory proteins — including Factor H, Factor I, and membrane-bound proteins like CD55 (decay-accelerating factor) and CD59 (protecting host cells from the membrane attack complex, already implicit in existing complement pathway content) — act at multiple points in the cascade to limit complement activation on healthy host tissue, distinguishing 'self' cells (protected) from pathogens or damaged tissue (appropriately targeted for complement-mediated destruction)." },
+      { h: "Consequences of regulatory failure", t: "When complement regulation fails — whether from genetic regulatory protein deficiency or acquired dysfunction — the result is excessive, poorly-targeted complement activation causing collateral damage to healthy host tissue, a mechanism directly relevant to this topic's sibling objective on complement dysregulation in age-related macular degeneration, and analogous in principle to autoimmune tissue damage already covered under Immune Tolerance & Mechanisms of Autoimmune Breakdown content, just via a different (complement-mediated rather than antibody/T-cell-mediated) effector pathway." },
+    ],
+    memorizeIt: [
+      "Complement regulatory proteins (Factor H, Factor I, CD55, CD59) limit complement activation on healthy host ('self') tissue, distinguishing it from pathogens/damaged tissue.",
+      "CD59: specifically protects host cells from the membrane attack complex.",
+      "Regulatory failure → excessive, poorly-targeted complement activation → collateral damage to healthy host tissue.",
+      "This closes the loop on the complement pathway content already covered (classical/alternative/lectin activation, already covered) by explaining how the system is kept in check.",
+    ],
+    applyIt: [
+      "This gives you the regulatory half of the complement story directly completing your existing Complement System — Three Activation Pathways and Antibody Function & Complement Activation content — understanding that complement activity is normally held in check by these specific regulatory proteins sets up this topic's sibling objective, where a genetic polymorphism in one of these exact regulatory proteins (Complement Factor H) is a major, well-established risk factor for a disease already extensively covered on this platform.",
+    ],
+  },
+  "complement-cfh-amd": {
+    name: "Complement Factor H & Age-Related Macular Degeneration",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard immunology/retina references"],
+    learnIt: [
+      { h: "Overview", t: "A specific genetic polymorphism in Complement Factor H (this topic's sibling regulatory-protein objective) is one of the most well-established genetic risk factors for age-related macular degeneration (already covered extensively under Age-Related Macular Degeneration content), directly connecting complement immunology to this platform's existing retinal disease content." },
+      { h: "The CFH polymorphism and AMD risk", t: "A common polymorphism in the Complement Factor H gene (the Y402H variant) impairs Factor H's normal regulatory function, reducing its ability to appropriately dampen complement activation — patients carrying this variant have a substantially increased lifetime risk of developing AMD, providing strong genetic evidence that dysregulated LOCAL complement activation (rather than purely age-related 'wear and tear') is a genuine driver of AMD pathophysiology, extending the drusen/RPE dysfunction mechanism already covered under existing AMD content." },
+      { h: "Mechanistic connection to drusen and RPE damage", t: "Complement components and complement regulatory proteins are found within drusen (the extracellular deposits between the RPE and Bruch's membrane, already covered under AMD content) — impaired Factor H regulation is theorized to allow excessive local complement activation at the level of the RPE/choriocapillaris interface (already covered under Choroidal Layers content), contributing to the chronic, low-grade inflammatory damage implicated in both dry AMD's drusen/geographic atrophy progression and, indirectly, the inflammatory milieu associated with wet AMD's choroidal neovascularization risk." },
+      { h: "Clinical and research relevance", t: "This genetic link is the scientific rationale behind ongoing research into complement-inhibiting therapies for AMD (a distinct therapeutic strategy from the anti-VEGF therapy already covered, targeting the complement/inflammatory contribution to AMD progression rather than the neovascular/VEGF component specifically) — genuinely illustrating how understanding a disease's underlying immunologic mechanism directly shapes emerging treatment strategies beyond the AREDS2 antioxidant supplementation already covered." },
+    ],
+    memorizeIt: [
+      "Complement Factor H (Y402H polymorphism): one of the most well-established GENETIC risk factors for AMD (already covered) — impairs Factor H's normal complement-regulatory function.",
+      "Complement components/regulatory proteins are found WITHIN drusen (already covered under AMD content) — supports a complement-driven mechanism for AMD, not just aging alone.",
+      "Impaired regulation → excessive local complement activation at the RPE/choriocapillaris interface (already covered) → chronic inflammatory damage.",
+      "This genetic link is the rationale for emerging complement-inhibiting AMD therapies, a distinct strategy from anti-VEGF (already covered) and AREDS2 (already covered).",
+    ],
+    applyIt: [
+      "This gives you a genuine mechanistic and genetic link directly extending your existing Age-Related Macular Degeneration, Choroidal Layers, and Anti-VEGF Therapy content — a family history of AMD makes biological sense in light of the CFH polymorphism's well-established heritability, and understanding this complement-driven mechanism explains why modern AMD research targets complement inhibition as a therapeutic strategy genuinely distinct from (and potentially complementary to) the anti-VEGF and antioxidant approaches already covered on this platform.",
+    ],
+  },
+  "repair-wound-healing-phases": {
+    name: "Phases of Wound Healing & Primary vs. Secondary Intention",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pathology references"],
+    learnIt: [
+      { h: "Overview", t: "Tissue repair (wound healing) follows a sequential, overlapping four-phase process, genuinely distinct from the acute vs. chronic inflammation MECHANISM already covered under Acute vs. Chronic Inflammation Mechanisms content — inflammation is one PHASE within the broader healing process, not the entire process itself." },
+      { h: "The four phases", t: "Wound healing proceeds through: (1) HEMOSTASIS (immediate clot formation, minutes); (2) INFLAMMATION (neutrophil then macrophage infiltration clearing debris/pathogens, the same acute inflammatory mechanism already covered, days); (3) PROLIFERATION (fibroblast collagen deposition, angiogenesis, and epithelialization, days to weeks); and (4) REMODELING/MATURATION (collagen cross-linking and reorganization increasing tensile strength, which can continue for months to over a year) — a genuinely important point being that a healed wound never fully regains 100% of original tissue tensile strength." },
+      { h: "Primary vs. secondary intention", t: "Wounds with clean, closely-apposed edges (e.g., a surgical incision) heal by PRIMARY INTENTION — minimal tissue loss, fast healing, minimal scarring; wounds with significant tissue loss or separated edges (e.g., an infected or large open wound) heal by SECONDARY INTENTION — requiring the wound to fill in via granulation tissue formation from the base up, slower healing, and typically more prominent scarring, since a larger volume of new connective tissue must be generated." },
+    ],
+    memorizeIt: [
+      "Four healing phases: HEMOSTASIS (minutes) → INFLAMMATION (days, already covered mechanistically) → PROLIFERATION (fibroblasts/angiogenesis/epithelialization, days-weeks) → REMODELING (collagen reorganization, months-year+).",
+      "A healed wound never regains 100% of original tissue tensile strength.",
+      "PRIMARY intention: clean, apposed edges (surgical incision) — fast, minimal scarring. SECONDARY intention: tissue loss/separated edges — granulation tissue fill-in, slower, more scarring.",
+    ],
+    applyIt: [
+      "This gives you the broader healing-process framework that your existing Acute vs. Chronic Inflammation Mechanisms content's inflammatory phase fits within — recognizing that a surgical corneal incision (already relevant to existing Cataract Surgery content) is designed and closed specifically to heal by primary intention (minimizing scarring and preserving optical clarity), while an open, unrepaired corneal ulcer (already covered) heals by the slower, more scar-prone secondary intention pathway, directly explaining why corneal scarring risk differs so much between a clean surgical wound and an infectious ulcer.",
+    ],
+  },
+  "repair-healing-complications": {
+    name: "Wound Healing Complications (Keloid, Dehiscence, Chronic Wounds)",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pathology references"],
+    learnIt: [
+      { h: "Overview", t: "The normal wound healing sequence (this topic's sibling objective) can go wrong in several distinct, genuinely testable ways — excessive scar formation, mechanical failure, or failure to progress through the normal phases at all." },
+      { h: "Excessive scarring — hypertrophic scar vs. keloid", t: "A hypertrophic scar is excess collagen deposition CONFINED to the original wound boundary, while a KELOID is excess collagen deposition that extends BEYOND the original wound margins into surrounding normal tissue — a genuinely important distinguishing feature, since keloids are more difficult to treat and have a significant recurrence rate after excision, and show a notable predilection for darker skin pigmentation and specific body sites (ears, chest, shoulders)." },
+      { h: "Wound dehiscence", t: "Wound dehiscence is mechanical reopening/separation of a healing (typically surgical) wound, usually from a combination of inadequate tensile strength during the still-early remodeling phase (this topic's sibling objective) and excessive mechanical stress on the wound — a genuine surgical complication requiring recognition, particularly relevant given the remodeling phase's prolonged (months to a year+) timeline already established." },
+      { h: "Chronic (non-healing) wounds", t: "Chronic wounds fail to progress through the normal healing phases in an orderly fashion, often becoming STUCK in a prolonged inflammatory phase — common contributing factors include poor tissue perfusion (already relevant to existing Diabetes Mellitus microvascular disease and Atherosclerosis content), infection, and repeated mechanical trauma, explaining why diabetic patients (already covered as having impaired wound healing) are at particular risk for chronic, non-healing wounds." },
+    ],
+    memorizeIt: [
+      "Hypertrophic scar: excess collagen CONFINED to original wound boundary. Keloid: excess collagen extends BEYOND original margins — harder to treat, higher recurrence, predilection for darker skin/certain sites.",
+      "Wound dehiscence: mechanical reopening of a healing wound — related to still-incomplete tensile strength during the prolonged remodeling phase (already covered).",
+      "Chronic (non-healing) wounds: stuck in a prolonged inflammatory phase — poor perfusion (already relevant to Diabetes/Atherosclerosis content), infection, repeated trauma are common causes.",
+    ],
+    applyIt: [
+      "This extends your existing Diabetes Mellitus and Atherosclerosis content by explaining the mechanistic basis for diabetic patients' well-known impaired wound healing — poor microvascular perfusion (already covered) directly impairs the proliferation phase's oxygen/nutrient delivery requirements for fibroblast and angiogenic activity (this topic's sibling objective), explaining why diabetic patients are disproportionately prone to chronic, non-healing wounds getting stuck in a prolonged inflammatory phase.",
+    ],
+  },
+  "celldisease-adaptation-types": {
+    name: "Cellular Adaptation — Hypertrophy, Hyperplasia, Atrophy, Metaplasia",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pathology references"],
+    learnIt: [
+      { h: "Overview", t: "Cells respond to changing physiologic demands or chronic stress through REVERSIBLE adaptive changes — genuinely distinct from the irreversible cell injury/death (necrosis vs. apoptosis) mechanisms already covered under Cell Injury & Death content — representing a spectrum of adaptation that occurs BEFORE any injury threshold is crossed." },
+      { h: "Hypertrophy and hyperplasia — increased size/number", t: "Hypertrophy is an INCREASE IN CELL SIZE (not number) in response to increased functional demand, classically seen in cardiac muscle responding to chronic hypertension (already relevant to existing Hypertension and Cardiac Output content) — occurring in cells with limited/no regenerative capacity (like cardiac myocytes); hyperplasia is an INCREASE IN CELL NUMBER via proliferation, occurring in tissues capable of mitotic division, classically seen in the endometrium under estrogen stimulation." },
+      { h: "Atrophy — decreased size/number", t: "Atrophy is a DECREASE in cell size and/or number in response to reduced functional demand, decreased blood supply, or denervation — classically seen in disuse muscle atrophy (immobilization) or in denervated muscle after nerve injury, a reversible adaptation up to a point, beyond which cell loss becomes irreversible." },
+      { h: "Metaplasia — the reversible cell-TYPE change", t: "Metaplasia is a REVERSIBLE change from one differentiated adult cell type to ANOTHER differentiated adult cell type, typically representing an adaptive response to chronic irritation — the cell type change makes the tissue better suited to withstand the specific chronic stress, but at the cost of losing the original cell type's specialized function, already implicitly relevant to existing chronic ocular surface irritation content (e.g., chronic dry eye's conjunctival changes)." },
+    ],
+    memorizeIt: [
+      "Hypertrophy: increased CELL SIZE (not number) — e.g., cardiac muscle in chronic hypertension (already covered). Hyperplasia: increased CELL NUMBER — e.g., estrogen-driven endometrial proliferation.",
+      "Atrophy: decreased cell size/number — from reduced demand, decreased blood supply, or denervation.",
+      "Metaplasia: reversible change from one differentiated cell type to ANOTHER differentiated cell type — adaptive response to chronic irritation, at the cost of losing original specialized function.",
+      "All FOUR are REVERSIBLE adaptations, genuinely distinct from irreversible cell injury/death (already covered under Cell Injury & Death content).",
+    ],
+    applyIt: [
+      "This gives you the reversible-adaptation framework that precedes and is genuinely distinct from your existing Cell Injury & Death content — cardiac hypertrophy from chronic hypertension (already covered under Hypertension content) is the heart's adaptive response to increased afterload, and understanding this as a reversible ADAPTATION (not yet injury) explains why blood pressure control can still improve cardiac function at this stage, before the adaptation is overwhelmed and progresses to the irreversible myocyte injury/death already covered.",
+    ],
+  },
+  "celldisease-dysplasia-neoplasia": {
+    name: "Dysplasia as a Precursor Lesion on the Path to Neoplasia",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pathology references"],
+    learnIt: [
+      { h: "Overview", t: "Dysplasia is a DISORDERED pattern of cellular growth and maturation — genuinely distinct from the reversible adaptations covered under this topic's sibling objective, since dysplasia represents abnormal, disorganized cellular architecture that, unlike simple metaplasia, carries genuine malignant potential." },
+      { h: "Dysplasia vs. metaplasia — a critical distinction", t: "While metaplasia (this topic's sibling objective) is an orderly, reversible substitution of one normal, well-organized cell type for another, DYSPLASIA is characterized by loss of normal cellular size/shape/organization uniformity, increased mitotic activity, and disordered tissue architecture — dysplasia can arise within a background of chronic metaplastic change (chronic irritation → metaplasia → and, if the irritation persists, progression to dysplasia), representing a genuine step-wise progression rather than two unrelated processes." },
+      { h: "Dysplasia as a precursor to neoplasia", t: "Unlike the fully reversible adaptations covered under this topic's sibling objective, dysplasia is considered a PRE-NEOPLASTIC lesion — mild-to-moderate dysplasia may still be reversible if the underlying chronic stimulus is removed, but severe dysplasia carries substantial risk of progression to carcinoma in situ and then invasive malignancy (already covered under Neoplasia — Benign vs. Malignant Tumor Biology and Oncogenes & Tumor Suppressor Genes content), reflecting accumulating genetic/epigenetic damage in the dysplastic cell population." },
+      { h: "Clinical relevance — surveillance and early intervention", t: "This progression sequence (chronic irritation → metaplasia → dysplasia → carcinoma in situ → invasive carcinoma) is the biological basis for clinical surveillance and biopsy of dysplastic lesions — identifying and treating dysplasia BEFORE progression to invasive malignancy is a genuinely high-value clinical intervention point, directly relevant to conditions already covered under this platform's Neoplasia content where early detection significantly improves outcomes." },
+    ],
+    memorizeIt: [
+      "Dysplasia: disordered cellular growth/maturation, loss of normal architecture — genuinely distinct from metaplasia's orderly cell-type substitution (this topic's sibling objective).",
+      "Progression sequence: chronic irritation → metaplasia (reversible) → dysplasia (may be reversible if mild, but pre-neoplastic) → carcinoma in situ → invasive carcinoma (already covered under Neoplasia content).",
+      "Severe dysplasia carries substantial risk of progression to malignancy — reflects accumulating genetic/epigenetic damage.",
+      "Clinical surveillance/biopsy of dysplastic lesions allows intervention BEFORE invasive malignancy develops — a high-value early-detection point.",
+    ],
+    applyIt: [
+      "This gives you the critical middle step connecting your existing Cellular Adaptation content (this topic's sibling objective) to your existing Neoplasia — Benign vs. Malignant Tumor Biology and Oncogenes & Tumor Suppressor Genes content — recognizing dysplasia as a genuine pre-neoplastic lesion (not simply another reversible adaptation like metaplasia) explains why chronic irritation states are worth monitoring over time, and why a biopsy showing dysplasia (rather than simple metaplasia) changes the clinical urgency from observation to active surveillance or intervention.",
+    ],
+  },
   "acquiredperc-agnosia": {
     name: "Visual Agnosia — Apperceptive vs. Associative",
     priority: "SHOULD",
@@ -16866,6 +17024,16 @@ const FLASHCARDS = [
   { id: "fc-1390", objectiveId: "syspharmindications-cyp450", front: "What is the clinical risk of combining a CYP450 inhibitor with warfarin?", back: "Slowed warfarin metabolism causes drug accumulation, increasing bleeding/toxicity risk given warfarin's narrow therapeutic index." },
   { id: "fc-1391", objectiveId: "syspharmpregnancy-teratogen", front: "Why is the first trimester (weeks 3-8) the period of greatest teratogenic risk?", back: "This is when organogenesis occurs — exposure during this window carries the highest risk of major structural anomalies." },
   { id: "fc-1392", objectiveId: "syspharmpregnancy-breastfeeding", front: "List four drug properties that favor transfer into breast milk.", back: "High lipophilicity, low protein binding, low molecular weight, and basic pH (ion trapping in the more acidic milk)." },
+  { id: "fc-1393", objectiveId: "complement-regulatory-proteins", front: "Name two complement regulatory proteins and what each protects.", back: "CD59 protects host cells from the membrane attack complex; Factor H/Factor I limit complement activation on healthy tissue." },
+  { id: "fc-1394", objectiveId: "complement-cfh-amd", front: "What genetic polymorphism is one of the most well-established risk factors for AMD?", back: "The Complement Factor H Y402H variant, which impairs its normal complement-regulatory function." },
+  { id: "fc-1395", objectiveId: "complement-cfh-amd", front: "What is found within drusen that supports a complement-driven mechanism for AMD?", back: "Complement components and complement regulatory proteins." },
+  { id: "fc-1396", objectiveId: "repair-wound-healing-phases", front: "List the four phases of wound healing in order.", back: "Hemostasis → Inflammation → Proliferation → Remodeling/Maturation." },
+  { id: "fc-1397", objectiveId: "repair-wound-healing-phases", front: "Contrast healing by primary vs. secondary intention.", back: "Primary: clean, apposed edges, fast, minimal scarring. Secondary: tissue loss/separated edges, granulation tissue fill-in, slower, more scarring." },
+  { id: "fc-1398", objectiveId: "repair-healing-complications", front: "Distinguish a hypertrophic scar from a keloid.", back: "Hypertrophic scar: excess collagen confined to the original wound boundary. Keloid: excess collagen extends beyond the original margins." },
+  { id: "fc-1399", objectiveId: "celldisease-adaptation-types", front: "Distinguish hypertrophy from hyperplasia.", back: "Hypertrophy: increased cell SIZE (not number). Hyperplasia: increased cell NUMBER via proliferation." },
+  { id: "fc-1400", objectiveId: "celldisease-adaptation-types", front: "What is metaplasia, and what is its cost?", back: "A reversible change from one differentiated cell type to another, adaptive to chronic irritation — at the cost of losing the original cell type's specialized function." },
+  { id: "fc-1401", objectiveId: "celldisease-dysplasia-neoplasia", front: "How does dysplasia differ from metaplasia?", back: "Metaplasia is an orderly, reversible cell-type substitution; dysplasia is disordered cellular growth/architecture with genuine malignant potential." },
+  { id: "fc-1402", objectiveId: "celldisease-dysplasia-neoplasia", front: "State the full progression sequence from chronic irritation to invasive cancer.", back: "Chronic irritation → metaplasia → dysplasia → carcinoma in situ → invasive carcinoma." },
 ];
 
 const QUESTIONS = [
@@ -22086,6 +22254,57 @@ const QUESTIONS = [
       b: "Correct — CYP450 inhibition slows the metabolism of co-administered drugs sharing the same pathway, including warfarin; given warfarin's narrow therapeutic index, this can cause clinically significant drug accumulation and increased bleeding risk, requiring closer INR monitoring and possible dose adjustment.",
       c: "Incorrect — several antibiotic classes are well-documented CYP450 inhibitors with clinically significant interaction potential.",
       d: "Incorrect — this question concerns the antibiotic's effect on warfarin metabolism, not the reverse; warfarin does not characteristically reduce this antibiotic's effect.",
+    },
+  },
+  {
+    id: "q-308", objectiveId: "complement-cfh-amd", type: "Applied concept", difficulty: "Hard",
+    stem: "A patient with a strong family history of AMD asks why the disease seems to run in their family. What genetic mechanism provides the best-established explanation?",
+    choices: [
+      { id: "a", text: "AMD has no known genetic component; it is purely age-related" },
+      { id: "b", text: "A common polymorphism in Complement Factor H impairs its normal regulatory function, allowing excessive local complement activation implicated in AMD pathophysiology" },
+      { id: "c", text: "AMD is caused entirely by a single dominant gene with 100% penetrance" },
+      { id: "d", text: "Family history of AMD reflects shared diet alone, with no genetic contribution" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — AMD has a well-established genetic component, with Complement Factor H polymorphisms being one of the most significant identified risk factors.",
+      b: "Correct — the Complement Factor H Y402H polymorphism impairs the protein's normal role in regulating complement activation, allowing excessive local complement activity implicated in drusen formation and RPE damage, providing a genuine, well-established genetic explanation for AMD's heritability.",
+      c: "Incorrect — AMD is a complex, multifactorial disease influenced by multiple genetic variants (including but not limited to CFH) plus environmental factors, not a single dominant gene.",
+      d: "Incorrect — while environmental factors like diet and smoking contribute to AMD risk, the CFH polymorphism represents a genuine, well-established genetic contribution independent of shared diet.",
+    },
+  },
+  {
+    id: "q-309", objectiveId: "repair-healing-complications", type: "Clinical application", difficulty: "Medium",
+    stem: "A patient with poorly controlled diabetes has a lower extremity wound that has failed to heal for several months despite standard wound care. What is the most likely underlying contributing mechanism?",
+    choices: [
+      { id: "a", text: "The wound has progressed too far into the remodeling phase" },
+      { id: "b", text: "Poor microvascular perfusion impairs the proliferation phase's oxygen/nutrient delivery requirements, leaving the wound stuck in a prolonged inflammatory phase" },
+      { id: "c", text: "The wound is healing by primary intention, which is inherently slower" },
+      { id: "d", text: "Diabetes has no established relationship to wound healing impairment" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — a chronic non-healing wound has failed to progress far enough through the normal phases, not progressed too far; it is stuck earlier in the sequence.",
+      b: "Correct — diabetic microvascular disease impairs tissue perfusion, which is essential for the proliferation phase's fibroblast activity and angiogenesis; without adequate perfusion, the wound becomes stuck in a prolonged inflammatory phase rather than progressing normally, a classic mechanism behind diabetic chronic wounds.",
+      c: "Incorrect — primary intention describes clean, apposed wounds and is the FASTER healing pathway, not a description of this chronic, poorly-healing wound.",
+      d: "Incorrect — diabetes has a well-established, mechanistically explained relationship to impaired wound healing via microvascular perfusion deficits.",
+    },
+  },
+  {
+    id: "q-310", objectiveId: "celldisease-dysplasia-neoplasia", type: "Clinical differentiation", difficulty: "Hard",
+    stem: "A biopsy of a chronically irritated tissue shows disordered cellular architecture, increased mitotic activity, and loss of normal size/shape uniformity — but no invasion beyond the basement membrane. How does this finding differ from simple metaplasia, and what is the clinical implication?",
+    choices: [
+      { id: "a", text: "This is simply metaplasia and requires no further follow-up" },
+      { id: "b", text: "This is dysplasia, a pre-neoplastic lesion with genuine malignant potential requiring surveillance, distinct from metaplasia's orderly, fully reversible cell-type substitution" },
+      { id: "c", text: "This finding indicates invasive carcinoma is already present" },
+      { id: "d", text: "Dysplasia and metaplasia are interchangeable terms describing the same process" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — the described findings (disordered architecture, increased mitotic activity, loss of uniformity) are characteristic of dysplasia, not simple metaplasia, and warrant follow-up.",
+      b: "Correct — dysplasia is disordered, abnormal cellular growth genuinely distinct from metaplasia's orderly substitution of one normal cell type for another; unlike metaplasia, dysplasia is a pre-neoplastic lesion carrying malignant potential, particularly if severe, warranting clinical surveillance or intervention before potential progression to carcinoma in situ and invasive malignancy.",
+      c: "Incorrect — no invasion beyond the basement membrane means this is not yet invasive carcinoma; it is a pre-neoplastic (dysplastic) lesion.",
+      d: "Incorrect — dysplasia and metaplasia are genuinely distinct processes with different implications: metaplasia is orderly and fully reversible, while dysplasia is disordered and carries malignant potential.",
     },
   },
 ];
