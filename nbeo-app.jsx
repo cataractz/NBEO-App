@@ -801,6 +801,20 @@ const LIDPHARMINDICATIONS_OBJECTIVES = [
   { id: "lidpharmind-botox-contra", name: "Botulinum Toxin Contraindications & Drug Interactions", built: true },
 ];
 
+const CONJDEV_TOPIC_ID = "t-9-1-0"; // Conjunctiva/Cornea/Refractive Surgery(9) > Anatomy(Developmental)(1) > Conjunctiva(0)
+const CONJDEV_OBJECTIVES = [
+  { id: "conjdev-embryology", name: "Conjunctival Embryologic Origin & the Fornices", built: true },
+  { id: "conjdev-symblepharon", name: "Symblepharon — Congenital & Acquired Conjunctival Adhesions", built: true },
+];
+
+const CORNEADEV_TOPIC_ID = "t-9-1-1"; // Conjunctiva/Cornea/Refractive Surgery(9) > Anatomy(Developmental)(1) > Cornea(1)
+// Ties directly into existing Corneal Physiology (endothelial pump,
+// transparency) content.
+const CORNEADEV_OBJECTIVES = [
+  { id: "corneadev-neural-crest", name: "Corneal Development from Neural Crest — Waves of Migration", built: true },
+  { id: "corneadev-anomalies", name: "Congenital Corneal Anomalies (Peters Anomaly, Sclerocornea, Megalocornea)", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -1796,6 +1810,7 @@ const TOPIC_OBJECTIVES = {
   [LIDPHARMGEN_TOPIC_ID]: LIDPHARMGEN_OBJECTIVES, [LIDPHARMANTIINFECT_TOPIC_ID]: LIDPHARMANTIINFECT_OBJECTIVES,
   [LIDPHARMANTIINFLAMM_TOPIC_ID]: LIDPHARMANTIINFLAMM_OBJECTIVES, [LIDPHARMCOSMETIC_TOPIC_ID]: LIDPHARMCOSMETIC_OBJECTIVES,
   [LIDPHARMINDICATIONS_TOPIC_ID]: LIDPHARMINDICATIONS_OBJECTIVES,
+  [CONJDEV_TOPIC_ID]: CONJDEV_OBJECTIVES, [CORNEADEV_TOPIC_ID]: CORNEADEV_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -1966,6 +1981,8 @@ const CONTENT_TOPICS = [
   { topicId: LIDPHARMANTIINFLAMM_TOPIC_ID, name: "Periocular Anti-Inflammatory Pharmacology", objectives: LIDPHARMANTIINFLAMM_OBJECTIVES },
   { topicId: LIDPHARMCOSMETIC_TOPIC_ID, name: "Periocular Aesthetic/Cosmetic Pharmacology", objectives: LIDPHARMCOSMETIC_OBJECTIVES },
   { topicId: LIDPHARMINDICATIONS_TOPIC_ID, name: "Periocular Pharmacology — Indications & Contraindications", objectives: LIDPHARMINDICATIONS_OBJECTIVES },
+  { topicId: CONJDEV_TOPIC_ID, name: "Conjunctival Developmental Anatomy", objectives: CONJDEV_OBJECTIVES },
+  { topicId: CORNEADEV_TOPIC_ID, name: "Corneal Developmental Anatomy", objectives: CORNEADEV_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -11856,6 +11873,88 @@ const STUDY_PAGES = {
       "This gives you a genuinely high-yield safety screening point directly connecting your existing Myasthenia Gravis content to botulinum toxin's mechanism (this topic's sibling objective) — since both conditions target NMJ transmission at different points (postsynaptic receptor in MG vs. presynaptic ACh release blocked by botulinum toxin), their combination is dangerously additive rather than simply unrelated, making a myasthenia gravis history an essential screening question before any botulinum toxin administration, cosmetic or therapeutic.",
     ],
   },
+  "conjdev-embryology": {
+    name: "Conjunctival Embryologic Origin & the Fornices",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The conjunctiva develops from the same surface ectoderm as the eyelid skin and corneal epithelium (already covered under Eyelid Formation & Fusion Timeline and Corneal Gross Anatomy), and its regional structure directly reflects the eyelid fusion/reopening process already established." },
+      { h: "Shared ectodermal origin", t: "Conjunctival, corneal, and eyelid skin epithelium all derive from the same continuous sheet of surface ectoderm, explaining why these three epithelial surfaces are histologically continuous with one another at their respective junctions (the limbus between cornea and bulbar conjunctiva, and the mucocutaneous junction at the lid margin) — a developmental basis for why disease processes can sometimes extend across these adjoining epithelial surfaces." },
+      { h: "Formation of the fornices during lid separation", t: "As the fused eyelids separate during the 5th-6th month of gestation (already covered), the conjunctival sac's characteristic architecture — palpebral conjunctiva lining the inner lid surface, bulbar conjunctiva covering the sclera, and the conjunctival fornices (the recessed folds connecting palpebral to bulbar conjunctiva superiorly and inferiorly, already covered under Conjunctival Regions & Histologic Structure) — is established, creating the redundant tissue architecture that allows for full ocular rotation without conjunctival tethering." },
+    ],
+    memorizeIt: [
+      "Conjunctiva, cornea, and eyelid skin all derive from the SAME continuous surface ectoderm — explains their histologic continuity at the limbus and lid margin.",
+      "Conjunctival sac architecture (palpebral, bulbar, fornices) is established as the fused eyelids separate during the 5th-6th month gestation (already covered under Eyelid Formation).",
+      "The fornices' redundant folded architecture allows full ocular rotation without conjunctival tethering.",
+    ],
+    applyIt: [
+      "This gives you the embryologic basis for your existing Conjunctival Regions & Histologic Structure content — understanding that the conjunctiva, cornea, and lid skin share a single continuous ectodermal origin explains why certain disease processes (already covered) can extend across these adjoining surfaces, setting up this topic's sibling objective on symblepharon, where abnormal adhesion re-forms between the palpebral and bulbar conjunctival surfaces that normally remain separate after birth.",
+    ],
+  },
+  "conjdev-symblepharon": {
+    name: "Symblepharon — Congenital & Acquired Conjunctival Adhesions",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology/pathology references"],
+    learnIt: [
+      { h: "Overview", t: "Symblepharon is an adhesion between the palpebral and bulbar conjunctiva that should normally remain separated (this topic's sibling objective) after the fornices form — it can be either a rare congenital finding or, far more commonly, an acquired complication of severe conjunctival injury." },
+      { h: "Congenital symblepharon", t: "Rare congenital symblepharon results from incomplete separation of the palpebral and bulbar conjunctival surfaces during the normal fornix-forming developmental process (this topic's sibling objective), and can occur in isolation or as part of certain craniofacial syndromes." },
+      { h: "Acquired symblepharon — the far more common presentation", t: "Acquired symblepharon is far more clinically significant and common, resulting from severe conjunctival inflammation or injury that damages both apposing conjunctival surfaces simultaneously, allowing them to heal fused together — classic causes include chemical burns (especially alkali burns), Stevens-Johnson syndrome/toxic epidermal necrolysis, and ocular cicatricial pemphigoid (a chronic autoimmune blistering/scarring conjunctival disease) — each of these severely damages the conjunctival surface bilaterally at apposing fold locations, allowing adhesion formation during healing." },
+      { h: "Clinical consequences", t: "Symblepharon restricts normal ocular rotation (since the fornix's redundant folded architecture, this topic's sibling objective, is lost) and can produce exposure keratopathy, corneal surface irregularity, and in severe cases functional blindness from the combination of restricted motility and corneal surface disease — making prevention (e.g., aggressive fornix sweeping with a glass rod during acute chemical burn management) a genuinely important acute-injury management principle." },
+    ],
+    memorizeIt: [
+      "Symblepharon = adhesion between palpebral and bulbar conjunctiva that should normally remain separated.",
+      "Congenital symblepharon: rare, from incomplete fornix separation during development.",
+      "Acquired symblepharon (far more common): chemical burns (especially alkali), Stevens-Johnson syndrome/TEN, ocular cicatricial pemphigoid — all damage apposing conjunctival surfaces, allowing fusion during healing.",
+      "Consequences: restricted ocular motility, exposure keratopathy, corneal surface disease — prevention via fornix sweeping is a key acute chemical burn management step.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important acute-management principle extending your existing knowledge of severe ocular surface injury — recognizing that acute alkali chemical burns risk symblepharon formation from bilateral conjunctival surface damage is exactly why aggressive fornix sweeping with a glass rod (physically separating the healing conjunctival surfaces during the acute injury period) is a standard emergency management step, directly preventing the restrictive motility and exposure keratopathy consequences established here.",
+    ],
+  },
+  "corneadev-neural-crest": {
+    name: "Corneal Development from Neural Crest — Waves of Migration",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The cornea develops through sequential waves of neural crest cell migration beneath the surface ectoderm, and understanding this layered developmental sequence directly grounds your existing Corneal Gross Anatomy and Corneal Physiology (endothelial pump) content in its embryologic origin." },
+      { h: "Surface ectoderm — corneal epithelium", t: "The corneal EPITHELIUM derives from surface ectoderm (the same tissue already covered as the shared origin of conjunctiva and lid skin under this topic's sibling objective), forming the outermost corneal layer first." },
+      { h: "First neural crest wave — endothelium", t: "The FIRST wave of neural crest cell migration beneath the surface ectoderm forms the corneal ENDOTHELIUM, a single layer of cells that subsequently secretes Descemet's membrane — this endothelial layer is already established under Corneal Physiology as responsible for the active pump function maintaining corneal deturgescence (relative dehydration) and transparency." },
+      { h: "Second neural crest wave — stroma and keratocytes", t: "A SECOND wave of neural crest cell migration occurs later, populating the space between epithelium and endothelium to form the corneal STROMA's keratocytes, which then organize the regularly-spaced collagen lamellae responsible for corneal transparency (already covered under Corneal Transparency Mechanisms) — this precisely regular collagen arrangement, established during this developmental wave, is the structural basis already contrasted with the sclera's irregular collagen arrangement." },
+    ],
+    memorizeIt: [
+      "Corneal epithelium: surface ectoderm (same origin as conjunctiva/lid skin, already covered).",
+      "First neural crest wave: forms corneal ENDOTHELIUM (single layer, secretes Descemet's membrane) — already established as the site of the active pump function under Corneal Physiology.",
+      "Second neural crest wave: forms corneal STROMA keratocytes, organizing the regular collagen lamellae responsible for transparency (already covered).",
+      "The cornea's layered structure (epithelium/endothelium from different tissue sources, stroma from a separate, later wave) directly reflects this developmental sequence.",
+    ],
+    applyIt: [
+      "This gives you the embryologic foundation directly underlying your existing Corneal Physiology (Endothelial Pump Function & Cell Density, Corneal Transparency Mechanisms) content — understanding that the endothelium and stromal keratocytes arise from distinct, sequential neural crest migration waves helps explain why corneal endothelial cells (already covered as non-regenerating in adults) and stromal keratocytes behave as functionally and developmentally distinct cell populations with different regenerative capacities.",
+    ],
+  },
+  "corneadev-anomalies": {
+    name: "Congenital Corneal Anomalies (Peters Anomaly, Sclerocornea, Megalocornea)",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pediatric ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "Several distinct congenital corneal anomalies result from disruption of the normal neural crest migration sequence (this topic's sibling objective), producing genuinely different clinical pictures worth distinguishing from one another and from congenital glaucoma." },
+      { h: "Peters anomaly", t: "Peters anomaly is a central corneal opacity with adhesions between the posterior cornea and the iris and/or lens (iridocorneal or lenticulocorneal adhesions), resulting from incomplete separation of the lens vesicle from the surface ectoderm and disrupted neural crest migration during corneal development — often associated with other anterior segment anomalies and can be part of Peters-plus syndrome." },
+      { h: "Sclerocornea", t: "Sclerocornea is a condition in which the peripheral (and sometimes entire) cornea is opaque and vascularized, resembling sclera rather than normal clear cornea — reflecting a failure of the peripheral cornea to differentiate properly from the adjacent scleral mesenchyme during development." },
+      { h: "Megalocornea vs. microcornea — the key distinguishing point from congenital glaucoma", t: "Megalocornea (corneal diameter >13mm, often X-linked) can visually resemble the buphthalmos (enlarged globe/cornea) already covered under congenital glaucoma content — but the CRITICAL distinguishing feature is that megalocornea has NORMAL intraocular pressure and a normal, healthy cornea otherwise, unlike congenital glaucoma's elevated IOP and corneal edema/Haab's striae, making IOP measurement the essential test to distinguish these two very different-prognosis conditions presenting with a similarly large-appearing cornea. Microcornea (diameter <10mm) is the converse anomaly, often associated with other ocular anomalies including microphthalmia." },
+    ],
+    memorizeIt: [
+      "Peters anomaly: central corneal opacity + iridocorneal/lenticulocorneal adhesions, from incomplete lens vesicle separation and disrupted neural crest migration.",
+      "Sclerocornea: peripheral (or total) cornea opaque and vascularized, resembling sclera — failure of proper peripheral corneal differentiation.",
+      "Megalocornea (>13mm, often X-linked) vs. congenital glaucoma buphthalmos: KEY distinguishing feature is NORMAL IOP in megalocornea vs. ELEVATED IOP in congenital glaucoma — IOP measurement is essential to distinguish them.",
+      "Microcornea (<10mm): often associated with other ocular anomalies including microphthalmia.",
+    ],
+    applyIt: [
+      "This gives you a genuinely high-yield distinguishing clinical point directly extending your existing congenital glaucoma content — an infant presenting with a large-appearing cornea requires IOP measurement to distinguish benign megalocornea (normal IOP, normal corneal clarity) from congenital glaucoma's buphthalmos (elevated IOP, corneal edema/Haab's striae), since these look superficially similar but carry vastly different urgency and management implications.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -13499,6 +13598,13 @@ const FLASHCARDS = [
   { id: "fc-1239", objectiveId: "lidpharmind-doxycycline-contra", front: "Why is doxycycline contraindicated in pregnancy and in children under ~8 years old?", back: "It binds developing fetal/childhood bone and teeth, inhibiting bone growth and causing permanent tooth discoloration." },
   { id: "fc-1240", objectiveId: "lidpharmind-botox-contra", front: "Why is botulinum toxin contraindicated (or requires extreme caution) in myasthenia gravis?", back: "MG already impairs NMJ transmission (postsynaptic ACh receptor autoantibodies); adding botulinum's presynaptic ACh blockade can precipitate severe, potentially life-threatening generalized weakness." },
   { id: "fc-1241", objectiveId: "lidpharmind-botox-contra", front: "What class of antibiotics can potentiate botulinum toxin's neuromuscular blocking effect?", back: "Aminoglycosides (e.g., gentamicin, tobramycin)." },
+  { id: "fc-1242", objectiveId: "conjdev-embryology", front: "What embryonic tissue gives rise to conjunctiva, cornea, and eyelid skin, and what does this explain?", back: "The same continuous surface ectoderm — explains their histologic continuity at the limbus and lid margin." },
+  { id: "fc-1243", objectiveId: "conjdev-symblepharon", front: "Name three classic causes of acquired symblepharon.", back: "Chemical burns (especially alkali), Stevens-Johnson syndrome/TEN, and ocular cicatricial pemphigoid." },
+  { id: "fc-1244", objectiveId: "conjdev-symblepharon", front: "What acute management step helps prevent symblepharon after a chemical burn?", back: "Aggressive fornix sweeping with a glass rod, physically separating the healing conjunctival surfaces." },
+  { id: "fc-1245", objectiveId: "corneadev-neural-crest", front: "Which corneal layer forms from the FIRST wave of neural crest migration, and what does it secrete?", back: "The endothelium, which secretes Descemet's membrane." },
+  { id: "fc-1246", objectiveId: "corneadev-neural-crest", front: "Which corneal layer forms from the SECOND wave of neural crest migration?", back: "The stroma (keratocytes), which organize the regular collagen lamellae responsible for transparency." },
+  { id: "fc-1247", objectiveId: "corneadev-anomalies", front: "What is the key test to distinguish megalocornea from congenital glaucoma buphthalmos, and why?", back: "IOP measurement — megalocornea has NORMAL IOP, while congenital glaucoma has ELEVATED IOP." },
+  { id: "fc-1248", objectiveId: "corneadev-anomalies", front: "What is Peters anomaly?", back: "Central corneal opacity with iridocorneal or lenticulocorneal adhesions, from incomplete lens vesicle separation and disrupted neural crest migration." },
 ];
 
 const QUESTIONS = [
@@ -18328,6 +18434,23 @@ const QUESTIONS = [
       b: "Correct — myasthenia gravis (already covered) involves postsynaptic ACh receptor autoantibodies impairing neuromuscular transmission; adding botulinum toxin's presynaptic ACh release blockade compounds this impairment and can precipitate severe, potentially life-threatening generalized weakness including respiratory muscles.",
       c: "Incorrect — concurrent aminoglycoside use would further POTENTIATE the risk, not make botulinum toxin safer; this is not a valid approach.",
       d: "Incorrect — botulinum toxin worsens rather than treats myasthenia gravis, since it impairs NMJ transmission at a different point in the same pathway already compromised in MG.",
+    },
+  },
+  {
+    id: "q-285", objectiveId: "corneadev-anomalies", type: "Clinical differentiation", difficulty: "Hard",
+    stem: "An infant is noted to have a corneal diameter of 14mm bilaterally. Which single test is most important to distinguish benign megalocornea from congenital glaucoma buphthalmos?",
+    choices: [
+      { id: "a", text: "Visual acuity testing" },
+      { id: "b", text: "Intraocular pressure measurement" },
+      { id: "c", text: "Color vision testing" },
+      { id: "d", text: "Corneal topography" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — visual acuity is difficult to reliably assess in an infant and is not the key distinguishing test between these two conditions.",
+      b: "Correct — megalocornea has NORMAL intraocular pressure and a normal, clear cornea, while congenital glaucoma buphthalmos has ELEVATED intraocular pressure with corneal edema/Haab's striae; IOP measurement is the essential test distinguishing these superficially similar-appearing but very differently urgent conditions.",
+      c: "Incorrect — color vision testing has no role in distinguishing these two structural/pressure-related conditions.",
+      d: "Incorrect — while corneal curvature/clarity assessment is relevant, IOP measurement is the specific, essential distinguishing test given congenital glaucoma's defining elevated pressure.",
     },
   },
 ];
