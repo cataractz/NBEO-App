@@ -815,6 +815,79 @@ const CORNEADEV_OBJECTIVES = [
   { id: "corneadev-anomalies", name: "Congenital Corneal Anomalies (Peters Anomaly, Sclerocornea, Megalocornea)", built: true },
 ];
 
+const CORNEAPHARMGEN_TOPIC_ID = "t-9-4-0"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > General principles(0)
+const CORNEAPHARMGEN_OBJECTIVES = [
+  { id: "corneapharmgen-classes", name: "Topical Ocular Medication Classes for Conjunctiva/Cornea Disease — Overview", built: true },
+  { id: "corneapharmgen-bak-cornea", name: "BAK Preservative Toxicity to the Corneal Epithelium", built: true },
+];
+
+const CORNEAPHARMANES_TOPIC_ID = "t-9-4-1"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Ocular anesthetics(1)
+const CORNEAPHARMANES_OBJECTIVES = [
+  { id: "corneapharm-anesthetics", name: "Topical Ocular Anesthetics — Mechanism, Use & Abuse Keratopathy", built: true },
+];
+
+const CORNEAPHARMANTIHIST_TOPIC_ID = "t-9-4-2"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Antihistamines(2)
+const CORNEAPHARMANTIHIST_OBJECTIVES = [
+  { id: "corneapharm-antihistamine", name: "Topical Antihistamines for Allergic Conjunctivitis", built: true },
+];
+
+const CORNEAPHARMANTIINFLAMM_TOPIC_ID = "t-9-4-3"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Anti-inflammatory agents(3)
+const CORNEAPHARMANTIINFLAMM_OBJECTIVES = [
+  { id: "corneapharm-nsaid", name: "Topical NSAIDs — Mechanism & Corneal Melt Risk", built: true },
+  { id: "corneapharm-steroid", name: "Topical Corticosteroids — Potency & Infectious Keratitis Risk", built: true },
+];
+
+const CORNEAPHARMLUBRICANT_TOPIC_ID = "t-9-4-4"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Lubricants and tear substitutes(4)
+const CORNEAPHARMLUBRICANT_OBJECTIVES = [
+  { id: "corneapharm-lubricants", name: "Artificial Tears & Ocular Lubricant Formulation Principles", built: true },
+];
+
+const CORNEAPHARMDYES_TOPIC_ID = "t-9-4-5"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Dyes(5)
+const CORNEAPHARMDYES_OBJECTIVES = [
+  { id: "corneapharm-dyes", name: "Diagnostic Ocular Dyes — Fluorescein, Rose Bengal & Lissamine Green", built: true },
+];
+
+const CORNEAPHARMHYPEROSM_TOPIC_ID = "t-9-4-6"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Hyperosmotic agents(6)
+const CORNEAPHARMHYPEROSM_OBJECTIVES = [
+  { id: "corneapharm-hyperosmotic", name: "Topical Hyperosmotic Agents for Corneal Edema", built: true },
+];
+
+const CORNEAPHARMMCSTAB_TOPIC_ID = "t-9-4-7"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Mast cell stabilizers(7)
+const CORNEAPHARMMCSTAB_OBJECTIVES = [
+  { id: "corneapharm-mcstabilizer", name: "Mast Cell Stabilizers — Mechanism & Delayed Onset", built: true },
+];
+
+const CORNEAPHARMVASOCON_TOPIC_ID = "t-9-4-8"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Vasoconstrictors(8)
+const CORNEAPHARMVASOCON_OBJECTIVES = [
+  { id: "corneapharm-vasoconstrictor", name: "Topical Ocular Vasoconstrictors & Rebound Hyperemia", built: true },
+];
+
+const CORNEAPHARMIMMUNEMOD_TOPIC_ID = "t-9-4-9"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Immune modulators(9)
+// Ties directly into existing Adaptive Immunity (T-cell) content.
+const CORNEAPHARMIMMUNEMOD_OBJECTIVES = [
+  { id: "corneapharm-immunemod", name: "Topical Immunomodulators — Cyclosporine & Lifitegrast for Dry Eye", built: true },
+];
+
+const CORNEAPHARMANTIINFECT_TOPIC_ID = "t-9-4-10"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Anti-infective agents(10)
+const CORNEAPHARMANTIINFECT_OBJECTIVES = [
+  { id: "corneapharm-antiinfective", name: "Topical Antibiotics for Bacterial Keratitis — Empiric Selection", built: true },
+];
+
+const CORNEAPHARMNUTRITION_TOPIC_ID = "t-9-4-11"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Nutritional supplements(11)
+const CORNEAPHARMNUTRITION_OBJECTIVES = [
+  { id: "corneapharm-nutrition", name: "Omega-3 Fatty Acid Supplementation for Dry Eye", built: true },
+];
+
+const CORNEAPHARMBIOLOGICS_TOPIC_ID = "t-9-4-12"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Biologics(12)
+const CORNEAPHARMBIOLOGICS_OBJECTIVES = [
+  { id: "corneapharm-biologics", name: "Autologous Serum Tears for Severe Ocular Surface Disease", built: true },
+];
+
+const CORNEAPHARMINDICATIONS_TOPIC_ID = "t-9-4-13"; // Conjunctiva/Cornea/Refractive Surgery(9) > Pharmacology(4) > Indications/contraindications/side effects/drug interactions(13)
+const CORNEAPHARMINDICATIONS_OBJECTIVES = [
+  { id: "corneapharm-steroid-infection-contra", name: "Topical Steroid Contraindication in Unconfirmed Infectious Keratitis", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -1811,6 +1884,13 @@ const TOPIC_OBJECTIVES = {
   [LIDPHARMANTIINFLAMM_TOPIC_ID]: LIDPHARMANTIINFLAMM_OBJECTIVES, [LIDPHARMCOSMETIC_TOPIC_ID]: LIDPHARMCOSMETIC_OBJECTIVES,
   [LIDPHARMINDICATIONS_TOPIC_ID]: LIDPHARMINDICATIONS_OBJECTIVES,
   [CONJDEV_TOPIC_ID]: CONJDEV_OBJECTIVES, [CORNEADEV_TOPIC_ID]: CORNEADEV_OBJECTIVES,
+  [CORNEAPHARMGEN_TOPIC_ID]: CORNEAPHARMGEN_OBJECTIVES, [CORNEAPHARMANES_TOPIC_ID]: CORNEAPHARMANES_OBJECTIVES,
+  [CORNEAPHARMANTIHIST_TOPIC_ID]: CORNEAPHARMANTIHIST_OBJECTIVES, [CORNEAPHARMANTIINFLAMM_TOPIC_ID]: CORNEAPHARMANTIINFLAMM_OBJECTIVES,
+  [CORNEAPHARMLUBRICANT_TOPIC_ID]: CORNEAPHARMLUBRICANT_OBJECTIVES, [CORNEAPHARMDYES_TOPIC_ID]: CORNEAPHARMDYES_OBJECTIVES,
+  [CORNEAPHARMHYPEROSM_TOPIC_ID]: CORNEAPHARMHYPEROSM_OBJECTIVES, [CORNEAPHARMMCSTAB_TOPIC_ID]: CORNEAPHARMMCSTAB_OBJECTIVES,
+  [CORNEAPHARMVASOCON_TOPIC_ID]: CORNEAPHARMVASOCON_OBJECTIVES, [CORNEAPHARMIMMUNEMOD_TOPIC_ID]: CORNEAPHARMIMMUNEMOD_OBJECTIVES,
+  [CORNEAPHARMANTIINFECT_TOPIC_ID]: CORNEAPHARMANTIINFECT_OBJECTIVES, [CORNEAPHARMNUTRITION_TOPIC_ID]: CORNEAPHARMNUTRITION_OBJECTIVES,
+  [CORNEAPHARMBIOLOGICS_TOPIC_ID]: CORNEAPHARMBIOLOGICS_OBJECTIVES, [CORNEAPHARMINDICATIONS_TOPIC_ID]: CORNEAPHARMINDICATIONS_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -1983,6 +2063,20 @@ const CONTENT_TOPICS = [
   { topicId: LIDPHARMINDICATIONS_TOPIC_ID, name: "Periocular Pharmacology — Indications & Contraindications", objectives: LIDPHARMINDICATIONS_OBJECTIVES },
   { topicId: CONJDEV_TOPIC_ID, name: "Conjunctival Developmental Anatomy", objectives: CONJDEV_OBJECTIVES },
   { topicId: CORNEADEV_TOPIC_ID, name: "Corneal Developmental Anatomy", objectives: CORNEADEV_OBJECTIVES },
+  { topicId: CORNEAPHARMGEN_TOPIC_ID, name: "Cornea/Conjunctiva Pharmacology — General Principles", objectives: CORNEAPHARMGEN_OBJECTIVES },
+  { topicId: CORNEAPHARMANES_TOPIC_ID, name: "Ocular Anesthetics", objectives: CORNEAPHARMANES_OBJECTIVES },
+  { topicId: CORNEAPHARMANTIHIST_TOPIC_ID, name: "Ocular Antihistamines", objectives: CORNEAPHARMANTIHIST_OBJECTIVES },
+  { topicId: CORNEAPHARMANTIINFLAMM_TOPIC_ID, name: "Cornea/Conjunctiva Anti-Inflammatory Agents", objectives: CORNEAPHARMANTIINFLAMM_OBJECTIVES },
+  { topicId: CORNEAPHARMLUBRICANT_TOPIC_ID, name: "Lubricants & Tear Substitutes", objectives: CORNEAPHARMLUBRICANT_OBJECTIVES },
+  { topicId: CORNEAPHARMDYES_TOPIC_ID, name: "Diagnostic Ocular Dyes", objectives: CORNEAPHARMDYES_OBJECTIVES },
+  { topicId: CORNEAPHARMHYPEROSM_TOPIC_ID, name: "Hyperosmotic Agents", objectives: CORNEAPHARMHYPEROSM_OBJECTIVES },
+  { topicId: CORNEAPHARMMCSTAB_TOPIC_ID, name: "Mast Cell Stabilizers", objectives: CORNEAPHARMMCSTAB_OBJECTIVES },
+  { topicId: CORNEAPHARMVASOCON_TOPIC_ID, name: "Ocular Vasoconstrictors", objectives: CORNEAPHARMVASOCON_OBJECTIVES },
+  { topicId: CORNEAPHARMIMMUNEMOD_TOPIC_ID, name: "Ocular Immune Modulators", objectives: CORNEAPHARMIMMUNEMOD_OBJECTIVES },
+  { topicId: CORNEAPHARMANTIINFECT_TOPIC_ID, name: "Cornea/Conjunctiva Anti-Infective Agents", objectives: CORNEAPHARMANTIINFECT_OBJECTIVES },
+  { topicId: CORNEAPHARMNUTRITION_TOPIC_ID, name: "Ocular Nutritional Supplements", objectives: CORNEAPHARMNUTRITION_OBJECTIVES },
+  { topicId: CORNEAPHARMBIOLOGICS_TOPIC_ID, name: "Ocular Surface Biologics", objectives: CORNEAPHARMBIOLOGICS_OBJECTIVES },
+  { topicId: CORNEAPHARMINDICATIONS_TOPIC_ID, name: "Cornea/Conjunctiva Pharmacology — Indications & Contraindications", objectives: CORNEAPHARMINDICATIONS_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -11955,6 +12049,321 @@ const STUDY_PAGES = {
       "This gives you a genuinely high-yield distinguishing clinical point directly extending your existing congenital glaucoma content — an infant presenting with a large-appearing cornea requires IOP measurement to distinguish benign megalocornea (normal IOP, normal corneal clarity) from congenital glaucoma's buphthalmos (elevated IOP, corneal edema/Haab's striae), since these look superficially similar but carry vastly different urgency and management implications.",
     ],
   },
+  "corneapharmgen-classes": {
+    name: "Topical Ocular Medication Classes for Conjunctiva/Cornea Disease — Overview",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Conjunctival and corneal disease draws on a genuinely broad range of topical pharmacologic classes — anesthetics, antihistamines, anti-inflammatories, lubricants, dyes, hyperosmotics, mast cell stabilizers, vasoconstrictors, immunomodulators, anti-infectives, and biologics (each covered under this topic's sibling objectives) — reflecting the ocular surface's exposure to a uniquely wide range of insults: infection, allergy, dryness, and mechanical/chemical injury." },
+      { h: "Organizing principle", t: "A useful organizing framework is to separate DIAGNOSTIC agents (dyes, this topic's sibling objective, used to visualize pathology rather than treat it) from THERAPEUTIC agents, and within therapeutics, to separate agents targeting the underlying disease PROCESS (anti-infectives for infection, anti-inflammatories/immunomodulators for inflammatory disease, mast cell stabilizers/antihistamines for allergy) from agents providing SYMPTOMATIC relief or supportive therapy (lubricants, hyperosmotics, vasoconstrictors) — this framework helps organize the many specific drug classes covered across this topic's sibling objectives." },
+    ],
+    memorizeIt: [
+      "Cornea/conjunctiva pharmacology spans diagnostic (dyes) and therapeutic (anti-infective, anti-inflammatory, immunomodulator, antihistamine/mast cell stabilizer, symptomatic/supportive) classes.",
+      "Organizing framework: diagnostic vs. therapeutic; within therapeutic, disease-process-targeting vs. symptomatic/supportive.",
+      "This breadth reflects the ocular surface's exposure to infection, allergy, dryness, and mechanical/chemical injury.",
+    ],
+    applyIt: [
+      "This gives you an organizing framework for the full range of cornea/conjunctiva pharmacology covered across this topic's sibling objectives — recognizing whether a given clinical scenario calls for a disease-process-targeting agent (e.g., an anti-infective for confirmed bacterial keratitis) versus symptomatic/supportive therapy (e.g., lubricants for dry eye) is the foundational clinical reasoning step before selecting a specific drug class.",
+    ],
+  },
+  "corneapharmgen-bak-cornea": {
+    name: "BAK Preservative Toxicity to the Corneal Epithelium",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Benzalkonium chloride (BAK), already covered under Contact Lens Solution Adverse Reactions as a preservative avoided in soft lens care, has a distinct but related toxicity concern when used chronically in topical ocular medications applied directly to the corneal surface — particularly relevant to patients on long-term multi-drop regimens." },
+      { h: "Mechanism of corneal epithelial toxicity", t: "BAK is a detergent-like preservative that disrupts cell membrane lipids, and with CHRONIC, frequent topical use (classically seen in glaucoma patients on multiple BAK-preserved drops daily, long-term), it can produce cumulative corneal and conjunctival epithelial toxicity — punctate epithelial erosions, disrupted tear film stability, and worsened ocular surface disease symptoms, distinct from its acute soft-contact-lens-binding toxicity mechanism already covered." },
+      { h: "Clinical implication for chronic multi-drop regimens", t: "Patients on multiple long-term BAK-preserved topical medications (e.g., glaucoma patients on 2-3+ different drop classes daily) are at cumulative risk for BAK-related ocular surface disease, which can itself worsen comfort, adherence, and paradoxically complicate the underlying condition being treated — genuinely relevant when a chronic drop patient develops new ocular surface irritation, since switching to preservative-free formulations (where available) is a reasonable diagnostic/therapeutic step." },
+    ],
+    memorizeIt: [
+      "BAK toxicity to the CORNEAL epithelium (chronic, frequent topical drop use) is a distinct but related concern from BAK's soft-contact-lens-binding toxicity (already covered).",
+      "Mechanism: detergent-like disruption of cell membrane lipids → punctate epithelial erosions, tear film instability, worsened ocular surface disease.",
+      "Highest risk: patients on multiple long-term BAK-preserved drops (e.g., glaucoma patients on 2-3+ drop classes daily).",
+      "New ocular surface irritation in a chronic multi-drop patient should prompt consideration of preservative-free formulation switch.",
+    ],
+    applyIt: [
+      "This extends your existing Contact Lens Solution Adverse Reactions content's BAK mechanism to a genuinely important chronic-disease-management context — a glaucoma patient (once that Pharmacology section is built) on multiple BAK-preserved drops who develops progressively worsening ocular surface symptoms may be experiencing cumulative preservative toxicity rather than disease progression, an important diagnostic distinction affecting management.",
+    ],
+  },
+  "corneapharm-anesthetics": {
+    name: "Topical Ocular Anesthetics — Mechanism, Use & Abuse Keratopathy",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical ocular anesthetics (proparacaine, tetracaine) provide rapid, short-acting corneal anesthesia for examination and minor procedures, but carry a genuinely dangerous risk if used chronically — a critical prescribing/counseling point." },
+      { h: "Mechanism", t: "Proparacaine and tetracaine block voltage-gated sodium channels (already covered under Action Potential Generation & Propagation) in corneal sensory nerve endings, preventing action potential conduction and producing rapid-onset, short-duration topical anesthesia — used for tonometry (already covered), foreign body removal, and other brief anterior segment procedures." },
+      { h: "Never for home/chronic use", t: "Topical anesthetics are NEVER appropriately prescribed for a patient's home or chronic use, because they impair corneal epithelial healing and, with repeated use, are directly TOXIC to the corneal epithelium — a patient self-administering topical anesthetic repeatedly for pain relief (anesthetic abuse) can develop a severe, vision-threatening condition: anesthetic (toxic) keratopathy, presenting as a persistent, poorly-healing epithelial defect or sterile corneal ulceration/melt, which paradoxically WORSENS the underlying pain and can progress to perforation if unrecognized." },
+      { h: "Clinical recognition", t: "Anesthetic abuse keratopathy should be suspected in a patient with a persistent, ring-shaped or geographic corneal epithelial defect that seems disproportionately painful and unresponsive to standard treatment, especially with a history of eye pain managed by self-administered drops obtained through improper means — recognizing this pattern is essential since continued anesthetic use (rather than stopping it) is exactly what perpetuates the problem." },
+    ],
+    memorizeIt: [
+      "Proparacaine/tetracaine: block voltage-gated sodium channels in corneal sensory nerves (already covered under Action Potential Generation) — rapid onset, short duration.",
+      "NEVER appropriately prescribed for home/chronic use — impairs epithelial healing and is directly toxic to the epithelium with repeated use.",
+      "Anesthetic abuse keratopathy: persistent/poorly-healing epithelial defect or sterile ulceration/melt from chronic self-administered anesthetic use — can progress to perforation.",
+      "Paradox: continued anesthetic use to manage the pain it's causing perpetuates and worsens the underlying toxic keratopathy.",
+    ],
+    applyIt: [
+      "This gives you a genuinely dangerous prescribing pitfall to recognize — a patient presenting with a severely painful, poorly-healing corneal epithelial defect who has been obtaining and self-administering topical anesthetic drops (sometimes from multiple providers or non-medical sources) has anesthetic abuse keratopathy, and the correct management is to STOP the anesthetic (with appropriate pain control alternatives and close follow-up) rather than continuing it, since the anesthetic itself is the cause of the non-healing defect, not just a symptomatic treatment for it.",
+    ],
+  },
+  "corneapharm-antihistamine": {
+    name: "Topical Antihistamines for Allergic Conjunctivitis",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical ocular antihistamines block the H1 histamine receptor, directly targeting the mediator responsible for the itching, redness, and edema of allergic conjunctivitis, a Type I (IgE-mediated) hypersensitivity reaction already covered under Hypersensitivity Reactions Types I-IV." },
+      { h: "Mechanism and clinical use", t: "By blocking H1 receptors on conjunctival blood vessels and sensory nerve endings, topical antihistamines rapidly relieve the itching and vasodilation caused by histamine released from mast cell degranulation (already covered) during an active allergic reaction — providing fast-acting symptomatic relief, but with a relatively short duration of action requiring more frequent dosing than a mast cell stabilizer (this topic's sibling objective)." },
+      { h: "Dual-action combination agents", t: "Several modern topical agents (e.g., olopatadine) combine BOTH H1 antihistamine activity AND mast cell stabilizing activity in a single molecule, providing both rapid symptomatic relief (from the antihistamine component) and longer-term prevention of further mast cell degranulation (from the stabilizer component) — combining the fast-onset advantage of antihistamines with the preventive advantage of mast cell stabilizers covered under this topic's sibling objective." },
+    ],
+    memorizeIt: [
+      "Topical antihistamines block H1 receptors, targeting histamine released during Type I hypersensitivity mast cell degranulation (already covered).",
+      "Provide rapid but relatively short-duration relief of itching/redness — requires more frequent dosing than mast cell stabilizers alone.",
+      "Dual-action agents (e.g., olopatadine) combine H1 antihistamine + mast cell stabilizer activity in one molecule — fast relief + longer prevention.",
+    ],
+    applyIt: [
+      "This directly extends your existing Hypersensitivity Reactions Types I-IV content with the specific pharmacologic target (H1 receptor) for allergic conjunctivitis's Type I mechanism, and sets up the complementary mast cell stabilizer mechanism (this topic's sibling objective) — understanding both explains why dual-action agents have become the preferred first-line choice for most allergic conjunctivitis patients, combining both mechanisms' advantages.",
+    ],
+  },
+  "corneapharm-nsaid": {
+    name: "Topical NSAIDs — Mechanism & Corneal Melt Risk",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical NSAIDs provide anti-inflammatory and analgesic effect for ocular surface and post-operative inflammation via cyclooxygenase (COX) inhibition, but carry a genuinely serious, if uncommon, risk of corneal melt with excessive or inappropriate use." },
+      { h: "Mechanism", t: "Topical NSAIDs inhibit cyclooxygenase (COX), blocking prostaglandin synthesis and thereby reducing inflammation, pain, and miosis — commonly used for post-operative inflammation/pain control (e.g., after cataract surgery, already covered) and for pain relief after corneal abrasion or refractive surgery." },
+      { h: "Corneal melt risk", t: "With excessive, prolonged, or inappropriate use — particularly in patients with an already compromised corneal epithelium or underlying ocular surface disease (e.g., severe dry eye, neurotrophic cornea) — topical NSAIDs can trigger corneal melt (keratolysis), a severe complication involving upregulation of matrix metalloproteinases (MMPs) that break down corneal stromal collagen, potentially progressing to corneal thinning and perforation." },
+      { h: "Clinical implication", t: "This risk means topical NSAIDs should be used at the lowest effective dose for the shortest necessary duration, with particular caution in patients with pre-existing ocular surface disease, and any patient on topical NSAID therapy who develops worsening pain, epithelial defect, or corneal thinning should have the NSAID discontinued and be evaluated for melt." },
+    ],
+    memorizeIt: [
+      "Topical NSAIDs: COX inhibition → reduced prostaglandin synthesis → anti-inflammatory/analgesic effect; used for post-op and corneal abrasion pain.",
+      "Corneal melt (keratolysis): rare but serious risk with excessive/prolonged use, especially in compromised ocular surface — MMP-mediated stromal collagen breakdown.",
+      "Can progress to corneal thinning and perforation if unrecognized.",
+      "Use lowest effective dose/shortest duration; discontinue and evaluate for melt if worsening pain/epithelial defect develops during NSAID use.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important safety consideration paralleling the systemic NSAID risks already implicit elsewhere on this platform — recognizing that topical NSAIDs are not risk-free 'just eye drops' but carry a specific, serious corneal melt risk via MMP-mediated collagen breakdown is essential for appropriate prescribing duration and for recognizing a developing complication before it progresses to perforation.",
+    ],
+  },
+  "corneapharm-steroid": {
+    name: "Topical Corticosteroids — Potency & Infectious Keratitis Risk",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical corticosteroids are powerful anti-inflammatory agents used across cornea/conjunctiva disease, but vary meaningfully in potency and ocular penetration, and carry a critical, already-partially-established contraindication in unconfirmed infectious keratitis." },
+      { h: "Potency and penetration variants", t: "Prednisolone acetate is a high-potency, well-penetrating topical steroid used for significant intraocular/anterior segment inflammation (e.g., post-operative or uveitic inflammation, already covered), while fluorometholone has lower corneal penetration and a correspondingly lower risk of steroid-response IOP elevation (already covered under Glaucoma content) — making it a preferred choice for more superficial ocular surface inflammation where deep penetration isn't required, trading some anti-inflammatory potency for a better IOP safety profile." },
+      { h: "The critical infectious keratitis contraindication", t: "Topical corticosteroids broadly suppress the local immune response, and using them in UNCONFIRMED or active infectious keratitis — before the causative organism is identified and appropriate antimicrobial therapy established — risks dramatically worsening the infection, already explicitly established under existing Fungal Keratitis content, where corticosteroids can catastrophically worsen an undiagnosed fungal infection, and relevant to HSV stromal keratitis management (already covered), where steroids are used cautiously and only with concurrent antiviral coverage." },
+    ],
+    memorizeIt: [
+      "Prednisolone acetate: high potency, deep penetration — significant intraocular/anterior segment inflammation.",
+      "Fluorometholone: lower penetration, lower steroid-response IOP risk (already covered) — preferred for superficial ocular surface inflammation.",
+      "Topical steroids are CONTRAINDICATED in unconfirmed/active infectious keratitis before the organism is identified and antimicrobial therapy established (already covered under Fungal Keratitis content's corticosteroid pitfall).",
+      "In HSV stromal keratitis (already covered), steroids are used cautiously and ONLY with concurrent antiviral coverage.",
+    ],
+    applyIt: [
+      "This directly extends your existing Fungal Keratitis and HSV Keratitis content's corticosteroid management pitfalls into a formal pharmacologic principle — before prescribing ANY topical steroid for a red, painful eye, ruling out active infectious keratitis (or ensuring appropriate concurrent antimicrobial coverage) is an essential safety step, since steroid use in an undiagnosed infection is one of the most dangerous and consequential prescribing errors in anterior segment disease.",
+    ],
+  },
+  "corneapharm-lubricants": {
+    name: "Artificial Tears & Ocular Lubricant Formulation Principles",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Artificial tears and ocular lubricants are the mainstay first-line therapy for dry eye and ocular surface disease (already covered under Tear Film & Lacrimal Physiology), and their formulation involves specific viscosity-modifying agents and preservative considerations." },
+      { h: "Viscosity agents", t: "Common viscosity-increasing agents include carboxymethylcellulose and hyaluronic acid, which increase the tear substitute's residence time on the ocular surface — higher-viscosity formulations (gels/ointments) provide longer-lasting lubrication but cause more transient blurring, generally reserved for nighttime use or more severe dry eye, while lower-viscosity drops suit frequent daytime use." },
+      { h: "Preservative-free preference for frequent use", t: "For patients requiring frequent (more than 4-6 times daily) artificial tear use, preservative-free single-use formulations are preferred over preserved multi-dose bottles, directly extending the BAK toxicity principle already covered under this topic's sibling general-principles objective — frequent exposure to a preserved formulation risks cumulative preservative-related ocular surface toxicity that can paradoxically worsen the very dry eye symptoms being treated." },
+    ],
+    memorizeIt: [
+      "Viscosity agents: carboxymethylcellulose, hyaluronic acid — increase ocular surface residence time.",
+      "Higher viscosity (gel/ointment) = longer-lasting but more blurring — favor nighttime/severe dry eye use.",
+      "Preservative-free formulations preferred for frequent (>4-6x/day) use, to avoid cumulative BAK-related toxicity (already covered).",
+    ],
+    applyIt: [
+      "This directly extends your existing BAK Preservative Toxicity content (this topic's sibling objective) with a practical prescribing guideline — a dry eye patient needing frequent artificial tear use throughout the day should be transitioned to preservative-free formulations specifically to avoid the same cumulative epithelial toxicity mechanism already established, which would otherwise counterproductively worsen their underlying ocular surface disease.",
+    ],
+  },
+  "corneapharm-dyes": {
+    name: "Diagnostic Ocular Dyes — Fluorescein, Rose Bengal & Lissamine Green",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Three diagnostic dyes — fluorescein, rose bengal, and lissamine green — stain the ocular surface via genuinely distinct mechanisms, and understanding these mechanisms explains why they highlight different types of ocular surface pathology, directly relevant to interpreting findings already implicit under existing Dry Eye and Corneal Abrasion content." },
+      { h: "Fluorescein — epithelial defects", t: "Fluorescein dye pools in areas where the corneal or conjunctival epithelium's normal tight junction barrier is disrupted or absent (e.g., corneal abrasion, epithelial defect, or the punctate erosions of dry eye/BAK toxicity already covered) — fluoresces under cobalt blue light, making it the standard tool for identifying frank epithelial loss." },
+      { h: "Rose bengal and lissamine green — devitalized cells and mucus", t: "Rose bengal and lissamine green, by contrast, stain DEVITALIZED (dead or degenerating) epithelial cells and mucus strands that LACK adequate tear film mucin protection, WITHOUT requiring a frank epithelial defect — making them particularly useful for detecting dry eye/keratoconjunctivitis sicca changes (already covered under Sjögren's/Dry Eye content) even when fluorescein staining is minimal or absent." },
+      { h: "Lissamine green preferred over rose bengal clinically", t: "While both stain the same tissue targets by a similar mechanism, lissamine green is generally preferred in modern clinical practice over rose bengal because rose bengal causes significant stinging/irritation on instillation (and has some theoretical epithelial toxicity of its own with repeated use), while lissamine green achieves comparable diagnostic staining with substantially better patient comfort." },
+    ],
+    memorizeIt: [
+      "Fluorescein: stains areas of EPITHELIAL DEFECT (disrupted tight junctions) — cobalt blue light — standard for abrasions/ulcers.",
+      "Rose bengal & lissamine green: stain DEVITALIZED cells + mucus lacking tear film mucin protection, WITHOUT requiring a frank defect — useful for dry eye even with minimal fluorescein staining.",
+      "Lissamine green is preferred over rose bengal clinically — comparable staining, but far less stinging/irritation on instillation.",
+    ],
+    applyIt: [
+      "This gives you the precise staining mechanism distinction directly relevant to interpreting your existing Dry Eye/Sjögren's content — a dry eye patient with significant lissamine green staining of devitalized conjunctival cells but minimal fluorescein staining is demonstrating early/mild ocular surface disease without frank epithelial breakdown, a genuinely useful distinction from a patient with fluorescein-positive punctate epithelial erosions reflecting more advanced epithelial compromise.",
+    ],
+  },
+  "corneapharm-hyperosmotic": {
+    name: "Topical Hyperosmotic Agents for Corneal Edema",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical hyperosmotic agents provide symptomatic relief for corneal edema by directly applying an osmotic principle to draw fluid out of the swollen cornea, extending your existing Corneal Transparency Mechanisms and Endothelial Pump Function content." },
+      { h: "Mechanism", t: "Sodium chloride 5% (hypertonic saline), available as both drops and ointment, creates an osmotic gradient across the corneal epithelium that draws excess fluid OUT of the edematous stroma and into the tear film, temporarily reducing corneal swelling and improving visual clarity — a direct pharmacologic exploitation of the same osmotic principles already relevant to understanding normal corneal deturgescence (relative dehydration) maintained physiologically by the endothelial pump (already covered)." },
+      { h: "Clinical use", t: "Hyperosmotic agents are used symptomatically in conditions where the endothelial pump mechanism has failed and cannot be pharmacologically restored — such as Fuchs endothelial dystrophy or bullous keratopathy (already relevant to existing Endothelial Pump Function content on reduced cell density) — providing temporary relief of edema-related blurred vision and bullae discomfort, though definitive treatment for endothelial failure ultimately requires corneal transplantation (already covered under Tissue Transplantation content) rather than ongoing hyperosmotic therapy alone." },
+    ],
+    memorizeIt: [
+      "Sodium chloride 5% (hypertonic saline, drops/ointment): creates an osmotic gradient drawing fluid OUT of the edematous corneal stroma into the tear film.",
+      "Directly exploits the same osmotic principles underlying normal corneal deturgescence, physiologically maintained by the endothelial pump (already covered).",
+      "Used symptomatically in Fuchs dystrophy/bullous keratopathy (endothelial pump failure, already covered) — temporary relief only.",
+      "Definitive treatment for endothelial failure requires corneal transplantation, not ongoing hyperosmotic therapy alone.",
+    ],
+    applyIt: [
+      "This gives you a direct pharmacologic application of your existing Corneal Physiology (Endothelial Pump Function & Cell Density) content — recognizing that hyperosmotic therapy is purely symptomatic (temporarily and externally forcing the same fluid-removal effect the endothelial pump normally provides physiologically) rather than curative explains why patients with progressive endothelial cell loss ultimately require transplantation despite ongoing hyperosmotic drop use.",
+    ],
+  },
+  "corneapharm-mcstabilizer": {
+    name: "Mast Cell Stabilizers — Mechanism & Delayed Onset",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Mast cell stabilizers prevent the mast cell degranulation event itself (already covered under Type I Hypersensitivity) rather than blocking histamine's downstream effects (the antihistamine mechanism, this topic's sibling objective), producing a genuinely different clinical use pattern." },
+      { h: "Mechanism", t: "Mast cell stabilizers (e.g., cromolyn sodium, nedocromil) block calcium influx into mast cells, preventing the degranulation event that releases histamine and other inflammatory mediators in the first place — a PREVENTIVE mechanism acting upstream of the antihistamine's downstream receptor-blocking approach (this topic's sibling objective)." },
+      { h: "Delayed onset — a key clinical distinction", t: "Because mast cell stabilizers prevent degranulation rather than treating already-released histamine's effects, they have a characteristically DELAYED onset of action — often requiring days to weeks of regular use before reaching full clinical effect — meaning they are ineffective for rapid relief of an acute allergic flare and must instead be started prophylactically, ideally before the anticipated allergy season or known allergen exposure begins, in direct contrast to the rapid-onset antihistamines (this topic's sibling objective) more suited to acute symptom relief." },
+    ],
+    memorizeIt: [
+      "Mast cell stabilizers (cromolyn sodium, nedocromil): block calcium influx into mast cells, PREVENTING degranulation — upstream of antihistamine's mechanism.",
+      "Characteristically DELAYED onset (days to weeks) — must be started prophylactically BEFORE allergen exposure, not for acute flare relief.",
+      "Contrast: mast cell stabilizers = preventive/prophylactic; antihistamines (this topic's sibling objective) = rapid acute relief.",
+    ],
+    applyIt: [
+      "This gives you the essential clinical-timing counterpart to your existing Topical Antihistamines content (this topic's sibling objective) — a patient with known seasonal allergic conjunctivitis should be counseled to START a mast cell stabilizer several weeks BEFORE their typical allergy season begins for it to be effective, while an antihistamine (or a dual-action agent already covered) remains the appropriate choice for rapid relief once symptoms have already started.",
+    ],
+  },
+  "corneapharm-vasoconstrictor": {
+    name: "Topical Ocular Vasoconstrictors & Rebound Hyperemia",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical ocular vasoconstrictors (decongestants) reduce conjunctival redness via direct alpha-adrenergic vasoconstriction, but carry a genuinely important risk of rebound hyperemia with chronic use — a patient-counseling point analogous to nasal decongestant rebound congestion." },
+      { h: "Mechanism", t: "Agents such as naphazoline and tetrahydrozoline are alpha-adrenergic agonists that directly constrict conjunctival blood vessels, rapidly reducing the visible redness of mild conjunctival injection (e.g., from minor irritation or allergy) — providing purely cosmetic/symptomatic relief without addressing any underlying inflammatory or infectious cause." },
+      { h: "Rebound hyperemia (conjunctivitis medicamentosa)", t: "With frequent or prolonged use, these vasoconstrictors can cause rebound hyperemia (conjunctivitis medicamentosa) — as the drug effect wears off, the conjunctival vessels dilate MORE than their original baseline state, prompting the patient to re-apply the drops even more frequently, creating a self-perpetuating cycle of worsening redness requiring progressively more frequent use to control, analogous to the well-known rebound congestion phenomenon with overused nasal decongestant sprays." },
+    ],
+    memorizeIt: [
+      "Vasoconstrictors (naphazoline, tetrahydrozoline): alpha-adrenergic agonists, directly constrict conjunctival vessels — purely cosmetic/symptomatic redness relief.",
+      "Rebound hyperemia (conjunctivitis medicamentosa): chronic/frequent use causes vessels to dilate MORE than baseline as the drug wears off, driving a self-perpetuating cycle of worsening redness and more frequent use.",
+      "Analogous to nasal decongestant spray rebound congestion — a useful patient-counseling analogy.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important patient-counseling point for any patient using over-the-counter 'redness relief' drops — a patient reporting progressively worsening redness despite (or because of) increasingly frequent vasoconstrictor drop use is demonstrating conjunctivitis medicamentosa, and management requires DISCONTINUING the vasoconstrictor (with an expected temporary worsening before resolution) rather than treating with yet more of the same drop.",
+    ],
+  },
+  "corneapharm-immunemod": {
+    name: "Topical Immunomodulators — Cyclosporine & Lifitegrast for Dry Eye",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical cyclosporine and lifitegrast target the T-cell-mediated inflammatory component of chronic dry eye disease directly, a genuinely distinct therapeutic approach from simple lubrication (this topic's sibling objective), extending your existing Adaptive (Specific) Immunity T-cell content into an ophthalmic pharmacology application." },
+      { h: "Cyclosporine mechanism", t: "Topical cyclosporine is a calcineurin inhibitor that blocks IL-2 transcription in activated T-cells (directly extending your existing T-Cell Subsets & Cell-Mediated Immunity content on T-cell activation), suppressing the T-cell-mediated ocular surface inflammation that perpetuates chronic dry eye — since chronic dry eye involves not just inadequate tear production but an active inflammatory component (already implicit in existing Sjögren's/Dry Eye content), addressing this T-cell-driven inflammation directly, rather than only replacing lost tear volume, is the therapeutic rationale." },
+      { h: "Lifitegrast mechanism", t: "Lifitegrast is an LFA-1 (lymphocyte function-associated antigen-1) antagonist that blocks the interaction between LFA-1 on T-cells and ICAM-1 on target cells, a specific adhesion interaction required for T-cell activation and migration into inflamed tissue — a genuinely different molecular target from cyclosporine's calcineurin inhibition, but converging on the same overall goal of reducing T-cell-mediated ocular surface inflammation." },
+      { h: "Clinical use pattern", t: "Both agents require weeks of regular use before reaching full clinical effect (similar in timing pattern to mast cell stabilizers already covered, though via an entirely different mechanism), and are generally reserved for chronic, inflammatory-component dry eye not adequately controlled by artificial tears alone, rather than being first-line therapy for mild, uncomplicated dry eye." },
+    ],
+    memorizeIt: [
+      "Cyclosporine: calcineurin inhibitor, blocks IL-2 transcription in activated T-cells (extends existing T-Cell Subsets content) — suppresses T-cell-mediated ocular surface inflammation.",
+      "Lifitegrast: LFA-1 antagonist, blocks LFA-1/ICAM-1 interaction required for T-cell activation/migration — different molecular target, same overall anti-inflammatory goal.",
+      "Both require WEEKS of regular use for full effect — not for acute symptom relief.",
+      "Reserved for chronic, inflammatory-component dry eye inadequately controlled by artificial tears alone — not first-line for mild dry eye.",
+    ],
+    applyIt: [
+      "This gives you a genuine ophthalmic pharmacology application of your existing T-Cell Subsets & Cell-Mediated Immunity content — understanding that chronic dry eye has an active T-cell-mediated inflammatory component (not just inadequate tear volume) explains why some patients require escalation from artificial tears (this topic's sibling objective) to a targeted immunomodulator, and the shared delayed-onset timing with mast cell stabilizers (already covered) reinforces the general principle that agents targeting an underlying inflammatory/immune process, rather than providing direct symptomatic relief, typically take weeks to show benefit.",
+    ],
+  },
+  "corneapharm-antiinfective": {
+    name: "Topical Antibiotics for Bacterial Keratitis — Empiric Selection",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical antibiotic selection for bacterial keratitis follows a severity-based escalation, directly extending your existing Bacteriology content (Gram stain classification, antibiotic mechanisms) into empiric ophthalmic prescribing." },
+      { h: "Fluoroquinolones — first-line empiric therapy", t: "Fourth-generation fluoroquinolones (e.g., moxifloxacin, gatifloxacin) are standard first-line empiric therapy for most bacterial keratitis, chosen for their broad gram-positive AND gram-negative coverage (already covered under Bacteriology content) and excellent corneal penetration — appropriate for most community-acquired, non-severe presumed bacterial corneal ulcers before culture results return." },
+      { h: "Fortified antibiotics for severe/vision-threatening ulcers", t: "For severe, vision-threatening, or sight-central corneal ulcers (particularly with risk factors like contact lens wear, already relevant to existing Contact Lens-Related Microbial Keratitis content), compounded 'fortified' antibiotics — typically fortified vancomycin (targeting gram-positive organisms, including resistant strains) combined with fortified tobramycin or ceftazidime (targeting gram-negative organisms, particularly Pseudomonas, already relevant to Contact Lens-Related Microbial Keratitis) — provide higher, more aggressive local drug concentrations than standard commercial formulations, dosed very frequently (sometimes hourly) in the acute severe phase." },
+    ],
+    memorizeIt: [
+      "Fourth-generation fluoroquinolones (moxifloxacin, gatifloxacin): first-line empiric therapy for most bacterial keratitis — broad gram+/- coverage, excellent corneal penetration.",
+      "Fortified antibiotics (vancomycin + tobramycin/ceftazidime): reserved for severe/vision-threatening ulcers — higher local concentration than standard commercial drops, very frequent dosing.",
+      "Fortified vancomycin covers gram-positive (incl. resistant strains); fortified tobramycin/ceftazidime covers gram-negative, particularly Pseudomonas (already relevant to Contact Lens-Related Microbial Keratitis).",
+    ],
+    applyIt: [
+      "This gives you the specific empiric prescribing framework directly extending your existing Bacteriology and Contact Lens-Related Microbial Keratitis content — a contact-lens-wearer presenting with a small, non-central, non-severe corneal infiltrate can typically be managed with a fluoroquinolone alone, while a large, central, vision-threatening ulcer with the same Pseudomonas risk factor warrants escalation to fortified antibiotic therapy given the higher stakes and need for maximal local drug concentration.",
+    ],
+  },
+  "corneapharm-nutrition": {
+    name: "Omega-3 Fatty Acid Supplementation for Dry Eye",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology/nutrition references"],
+    learnIt: [
+      { h: "Overview", t: "Oral omega-3 fatty acid supplementation (fish oil) is a commonly recommended adjunctive therapy for dry eye and meibomian gland dysfunction, extending your existing Meibomian Gland Function & Lipid Secretion and Fatty Acid Oxidation content into a nutritional-therapeutic application." },
+      { h: "Proposed mechanism", t: "Omega-3 fatty acids are theorized to reduce ocular surface inflammation by shifting the balance of eicosanoid (inflammatory mediator) production away from more pro-inflammatory arachidonic-acid-derived mediators toward less inflammatory omega-3-derived alternatives, and may also favorably modify meibomian gland lipid secretion composition (already covered under Meibomian Gland Function), improving tear film lipid layer quality." },
+      { h: "Clinical evidence caveat", t: "While commonly recommended as a low-risk adjunctive therapy, clinical trial evidence for omega-3 supplementation's benefit in dry eye has been genuinely mixed across studies, and it should be understood as an adjunct to (not a replacement for) established first-line therapies like artificial tears (already covered) and, where indicated, targeted anti-inflammatory or immunomodulatory therapy (already covered under this topic's sibling objectives)." },
+    ],
+    memorizeIt: [
+      "Omega-3 fatty acid (fish oil) supplementation: adjunctive therapy for dry eye/MGD, theorized to shift eicosanoid production toward less pro-inflammatory mediators.",
+      "May favorably modify meibomian gland lipid secretion composition (already covered under Meibomian Gland Function).",
+      "Clinical trial evidence is genuinely mixed — an adjunct to, not a replacement for, artificial tears and targeted therapy.",
+    ],
+    applyIt: [
+      "This extends your existing Meibomian Gland Function & Lipid Secretion content with a nutritional-therapeutic angle — recommending omega-3 supplementation as part of a broader MGD/dry eye treatment plan is reasonable low-risk adjunctive counseling, but should be framed honestly given the mixed evidence base, alongside (not instead of) the mechanistically well-established lid hygiene and pharmacologic approaches already covered.",
+    ],
+  },
+  "corneapharm-biologics": {
+    name: "Autologous Serum Tears for Severe Ocular Surface Disease",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Autologous serum tears represent a genuinely distinct 'biologic' therapeutic category from the small-molecule drugs covered under this topic's other objectives — using the patient's own blood-derived serum, diluted to an eye-drop formulation, to replicate natural tear composition far more closely than any manufactured artificial tear can." },
+      { h: "Composition and rationale", t: "Autologous serum, drawn from the patient's own blood and processed/diluted (typically 20-50%) with sterile saline, naturally contains growth factors (epidermal growth factor, among others), vitamins, immunoglobulins, and other bioactive components present in normal human tears but absent from conventional artificial tear formulations — providing a genuinely more biologically complete substitute for patients with severe ocular surface disease." },
+      { h: "Clinical indications", t: "Autologous serum tears are reserved for SEVERE, refractory ocular surface disease not adequately responding to conventional therapy — including severe dry eye/Sjögren's syndrome (already covered), persistent epithelial defects, and neurotrophic keratopathy (reduced corneal sensation impairing healing, relevant to existing Corneal Sensation/CN V content) — since the growth-factor-rich composition can promote epithelial healing beyond what simple lubrication achieves." },
+    ],
+    memorizeIt: [
+      "Autologous serum tears: patient's own diluted blood serum, used as an eye drop — a 'biologic,' not a small-molecule drug.",
+      "Contains growth factors, vitamins, immunoglobulins naturally present in tears but absent from conventional artificial tears.",
+      "Reserved for SEVERE, refractory ocular surface disease: severe Sjögren's dry eye, persistent epithelial defects, neurotrophic keratopathy.",
+      "Growth-factor content can promote epithelial healing beyond what simple lubrication provides.",
+    ],
+    applyIt: [
+      "This gives you the escalation endpoint of your existing dry eye/ocular surface disease treatment content — a patient with severe Sjögren's-related dry eye (already covered) who fails artificial tears, lubricants, and immunomodulators (this topic's sibling objectives) represents an appropriate candidate for autologous serum tears, illustrating a genuine step-wise escalation framework across this platform's cornea/conjunctiva pharmacology content from simple lubrication to targeted immunomodulation to biologic replacement therapy.",
+    ],
+  },
+  "corneapharm-steroid-infection-contra": {
+    name: "Topical Steroid Contraindication in Unconfirmed Infectious Keratitis",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "The single most important prescribing safety principle across this section's pharmacology content is the topical steroid contraindication in unconfirmed or active infectious keratitis, already established under this topic's sibling objective and directly connecting to your existing Fungal Keratitis and HSV Keratitis content — consolidated here as this section's formal indications/contraindications topic." },
+      { h: "Why this is the highest-stakes prescribing error", t: "Topical corticosteroids broadly suppress local immune defenses; prescribed to a red, painful eye WITHOUT first ruling out (or appropriately covering) an active infectious process, they can allow an infection — particularly fungal (already explicitly covered as a catastrophic-worsening scenario under Fungal Keratitis content) or, less catastrophically but still importantly, herpetic or bacterial keratitis — to progress dramatically, sometimes to corneal perforation, before the true diagnosis is recognized." },
+      { h: "The essential pre-prescribing safety step", t: "Before prescribing any topical corticosteroid for anterior segment inflammation, the essential safety step is to confirm the diagnosis is genuinely non-infectious (or, where infection is confirmed and steroid use is appropriate as in HSV stromal keratitis already covered, to ensure concurrent antimicrobial coverage is already established) — a red, painful eye with an epithelial defect or infiltrate should generally be treated as presumptively infectious until proven otherwise, given the severity of the alternative error." },
+    ],
+    memorizeIt: [
+      "Topical corticosteroids are broadly immunosuppressive — contraindicated in UNCONFIRMED or active infectious keratitis before the organism is identified/covered.",
+      "Fungal keratitis (already covered): corticosteroids can catastrophically worsen undiagnosed fungal infection.",
+      "HSV stromal keratitis (already covered): steroids used cautiously, ONLY with concurrent antiviral coverage.",
+      "Essential safety step: rule out (or appropriately cover) infection BEFORE prescribing any topical steroid for a red, painful eye.",
+    ],
+    applyIt: [
+      "This consolidates your existing Fungal Keratitis and HSV Keratitis content's corticosteroid pitfalls into this platform's single highest-yield anterior segment prescribing safety principle — any red, painful eye with an epithelial defect or corneal infiltrate should be treated as presumptively infectious and appropriately worked up BEFORE a topical steroid is considered, since the consequences of steroid use in an undiagnosed infection (already covered as catastrophic in the fungal case) far outweigh the consequences of a brief diagnostic delay in steroid initiation for a genuinely non-infectious process.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -13605,6 +14014,23 @@ const FLASHCARDS = [
   { id: "fc-1246", objectiveId: "corneadev-neural-crest", front: "Which corneal layer forms from the SECOND wave of neural crest migration?", back: "The stroma (keratocytes), which organize the regular collagen lamellae responsible for transparency." },
   { id: "fc-1247", objectiveId: "corneadev-anomalies", front: "What is the key test to distinguish megalocornea from congenital glaucoma buphthalmos, and why?", back: "IOP measurement — megalocornea has NORMAL IOP, while congenital glaucoma has ELEVATED IOP." },
   { id: "fc-1248", objectiveId: "corneadev-anomalies", front: "What is Peters anomaly?", back: "Central corneal opacity with iridocorneal or lenticulocorneal adhesions, from incomplete lens vesicle separation and disrupted neural crest migration." },
+  { id: "fc-1249", objectiveId: "corneapharmgen-classes", front: "What organizing framework separates cornea/conjunctiva drug classes into diagnostic vs. therapeutic categories?", back: "Diagnostic agents (dyes) visualize pathology; therapeutic agents either target the disease process (anti-infective, anti-inflammatory, immunomodulator) or provide symptomatic/supportive relief (lubricants, hyperosmotics, vasoconstrictors)." },
+  { id: "fc-1250", objectiveId: "corneapharmgen-bak-cornea", front: "What patient population is at highest risk for cumulative BAK-related corneal epithelial toxicity?", back: "Patients on multiple long-term BAK-preserved topical drops (e.g., glaucoma patients on 2-3+ drop classes daily)." },
+  { id: "fc-1251", objectiveId: "corneapharm-anesthetics", front: "Why should topical ocular anesthetics never be prescribed for home/chronic use?", back: "They impair corneal epithelial healing and are directly toxic to the epithelium with repeated use, causing anesthetic abuse keratopathy." },
+  { id: "fc-1252", objectiveId: "corneapharm-anesthetics", front: "What is the correct management of anesthetic abuse keratopathy?", back: "STOP the anesthetic (with pain control alternatives and close follow-up) — continuing it perpetuates the toxic, non-healing epithelial defect." },
+  { id: "fc-1253", objectiveId: "corneapharm-antihistamine", front: "What two mechanisms does a dual-action agent like olopatadine combine?", back: "H1 antihistamine activity (rapid relief) plus mast cell stabilizing activity (longer-term prevention)." },
+  { id: "fc-1254", objectiveId: "corneapharm-nsaid", front: "What serious complication can result from excessive/prolonged topical NSAID use, and by what mechanism?", back: "Corneal melt (keratolysis) — MMP-mediated breakdown of stromal collagen, especially in a compromised ocular surface." },
+  { id: "fc-1255", objectiveId: "corneapharm-steroid", front: "Which topical steroid has lower corneal penetration and a correspondingly lower steroid-response IOP risk?", back: "Fluorometholone (vs. high-potency, deep-penetrating prednisolone acetate)." },
+  { id: "fc-1256", objectiveId: "corneapharm-lubricants", front: "Why are preservative-free artificial tears preferred for patients using drops more than 4-6 times daily?", back: "To avoid cumulative BAK-related preservative toxicity to the ocular surface." },
+  { id: "fc-1257", objectiveId: "corneapharm-dyes", front: "What do rose bengal and lissamine green stain, and why is lissamine green preferred clinically?", back: "Devitalized cells and mucus lacking tear film mucin protection; lissamine green causes far less stinging than rose bengal." },
+  { id: "fc-1258", objectiveId: "corneapharm-hyperosmotic", front: "How does 5% hypertonic saline reduce corneal edema in Fuchs dystrophy/bullous keratopathy?", back: "Creates an osmotic gradient drawing excess fluid out of the edematous stroma into the tear film — symptomatic only, not curative." },
+  { id: "fc-1259", objectiveId: "corneapharm-mcstabilizer", front: "Why must mast cell stabilizers be started prophylactically before allergy season rather than during an acute flare?", back: "They have a delayed onset of action (days to weeks), since they prevent degranulation rather than treating already-released histamine's effects." },
+  { id: "fc-1260", objectiveId: "corneapharm-vasoconstrictor", front: "What is conjunctivitis medicamentosa, and how is it managed?", back: "Rebound hyperemia from chronic vasoconstrictor overuse; managed by discontinuing the vasoconstrictor despite expected temporary worsening." },
+  { id: "fc-1261", objectiveId: "corneapharm-immunemod", front: "What is lifitegrast's molecular mechanism?", back: "LFA-1 antagonist — blocks the LFA-1/ICAM-1 interaction required for T-cell activation and migration into inflamed tissue." },
+  { id: "fc-1262", objectiveId: "corneapharm-antiinfective", front: "What combination of fortified antibiotics is used for severe, vision-threatening bacterial corneal ulcers?", back: "Fortified vancomycin (gram-positive) plus fortified tobramycin or ceftazidime (gram-negative, especially Pseudomonas)." },
+  { id: "fc-1263", objectiveId: "corneapharm-nutrition", front: "What is the proposed anti-inflammatory mechanism of omega-3 fatty acid supplementation for dry eye?", back: "Shifts eicosanoid production away from pro-inflammatory arachidonic-acid-derived mediators toward less inflammatory omega-3-derived alternatives." },
+  { id: "fc-1264", objectiveId: "corneapharm-biologics", front: "What bioactive components does autologous serum contain that conventional artificial tears lack?", back: "Growth factors, vitamins, and immunoglobulins naturally present in tears." },
+  { id: "fc-1265", objectiveId: "corneapharm-steroid-infection-contra", front: "What is the essential safety step before prescribing any topical corticosteroid for a red, painful eye?", back: "Confirm the diagnosis is genuinely non-infectious, or ensure concurrent antimicrobial coverage is already established." },
 ];
 
 const QUESTIONS = [
@@ -18451,6 +18877,57 @@ const QUESTIONS = [
       b: "Correct — megalocornea has NORMAL intraocular pressure and a normal, clear cornea, while congenital glaucoma buphthalmos has ELEVATED intraocular pressure with corneal edema/Haab's striae; IOP measurement is the essential test distinguishing these superficially similar-appearing but very differently urgent conditions.",
       c: "Incorrect — color vision testing has no role in distinguishing these two structural/pressure-related conditions.",
       d: "Incorrect — while corneal curvature/clarity assessment is relevant, IOP measurement is the specific, essential distinguishing test given congenital glaucoma's defining elevated pressure.",
+    },
+  },
+  {
+    id: "q-286", objectiveId: "corneapharm-anesthetics", type: "Clinical application", difficulty: "Hard",
+    stem: "A patient presents with a severely painful eye and a persistent, poorly-healing geographic corneal epithelial defect. History reveals the patient has been self-administering topical anesthetic drops obtained from multiple sources for weeks. What is the appropriate management?",
+    choices: [
+      { id: "a", text: "Prescribe a stronger topical anesthetic for better pain control" },
+      { id: "b", text: "Discontinue the anesthetic entirely, provide alternative pain control, and arrange close follow-up" },
+      { id: "c", text: "Continue the current anesthetic regimen but add a topical antibiotic" },
+      { id: "d", text: "Increase the frequency of anesthetic use until the defect heals" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — a stronger anesthetic would worsen the toxic keratopathy, not improve it; anesthetics are the cause of the non-healing defect.",
+      b: "Correct — chronic topical anesthetic use is directly toxic to the corneal epithelium and impairs healing, producing anesthetic (toxic) keratopathy; the anesthetic must be stopped, with alternative pain control and close follow-up, since continued use perpetuates the problem.",
+      c: "Incorrect — continuing the anesthetic, even with an added antibiotic, does not address the underlying cause of the non-healing defect.",
+      d: "Incorrect — increasing anesthetic frequency would worsen the toxic keratopathy, the opposite of the needed intervention.",
+    },
+  },
+  {
+    id: "q-287", objectiveId: "corneapharm-steroid-infection-contra", type: "Clinical application", difficulty: "Hard",
+    stem: "A patient presents with a red, painful eye and a corneal infiltrate of unclear etiology — no culture results are available yet. What is the most appropriate approach to topical corticosteroid use at this point?",
+    choices: [
+      { id: "a", text: "Start a high-potency topical steroid immediately to reduce inflammation" },
+      { id: "b", text: "Withhold topical corticosteroids until infection is ruled out or appropriate antimicrobial coverage is established, since steroids can dramatically worsen an undiagnosed infection" },
+      { id: "c", text: "Start a low-potency steroid, since potency doesn't affect infection risk" },
+      { id: "d", text: "Steroids are always safe regardless of the underlying cause of corneal infiltrate" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — starting a steroid before ruling out infection risks catastrophically worsening an undiagnosed infectious process, as already established for fungal keratitis specifically.",
+      b: "Correct — topical corticosteroids broadly suppress local immune defenses; an unconfirmed corneal infiltrate should be treated as presumptively infectious until proven otherwise, and steroids withheld (or only used with concurrent antimicrobial coverage, as in confirmed HSV stromal keratitis) until the diagnosis is clarified.",
+      c: "Incorrect — even lower-potency steroids still suppress local immune defenses and carry the same category of risk in an unconfirmed infection, just to a somewhat lesser degree.",
+      d: "Incorrect — steroids are specifically dangerous in the setting of unconfirmed or active infection, as established under existing Fungal Keratitis content.",
+    },
+  },
+  {
+    id: "q-288", objectiveId: "corneapharm-vasoconstrictor", type: "Applied concept", difficulty: "Medium",
+    stem: "A patient reports that their over-the-counter 'redness relief' eye drops seem to work less and less well, requiring more frequent use as their eyes appear increasingly red between doses. What is the most likely explanation and appropriate management?",
+    choices: [
+      { id: "a", text: "The patient has developed a new bacterial infection requiring antibiotics" },
+      { id: "b", text: "Conjunctivitis medicamentosa (rebound hyperemia) from chronic vasoconstrictor overuse; management is to discontinue the drops" },
+      { id: "c", text: "The drops have simply expired and need to be replaced with a fresh bottle of the same product" },
+      { id: "d", text: "This is an expected, harmless pattern requiring no change in use" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — this progressive worsening pattern tied directly to vasoconstrictor use is classic for rebound hyperemia, not a new infection.",
+      b: "Correct — chronic vasoconstrictor overuse causes conjunctivitis medicamentosa, where vessels dilate more than baseline as the drug wears off, driving a self-perpetuating cycle; the correct management is to discontinue the vasoconstrictor despite an expected temporary worsening period.",
+      c: "Incorrect — replacing with a fresh bottle of the same vasoconstrictor would simply continue the rebound cycle.",
+      d: "Incorrect — this progressive worsening pattern is a genuine adverse effect requiring intervention (discontinuation), not a benign expected pattern.",
     },
   },
 ];
