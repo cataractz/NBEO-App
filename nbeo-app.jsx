@@ -1065,6 +1065,40 @@ const RETINADEV_OBJECTIVES = [
   { id: "retinadev-anomalies", name: "Congenital Retinal Anomalies (X-Linked Retinoschisis, Chorioretinal Coloboma)", built: true },
 ];
 
+const RETINAPHARMGEN_TOPIC_ID = "t-12-4-0"; // Vitreous/Retina/Choroid(12) > Pharmacology(4) > General principles(0)
+const RETINAPHARMGEN_OBJECTIVES = [
+  { id: "retinapharmgen-routes", name: "Drug Delivery Routes to the Posterior Segment — Intravitreal vs. Systemic", built: true },
+  { id: "retinapharmgen-antivegf", name: "Anti-VEGF Therapy — Mechanism & Clinical Applications", built: true },
+];
+
+const RETINAPHARMANTIINFLAMM_TOPIC_ID = "t-12-4-1"; // Vitreous/Retina/Choroid(12) > Pharmacology(4) > Anti-inflammatory agents(1)
+const RETINAPHARMANTIINFLAMM_OBJECTIVES = [
+  { id: "retinapharm-intravitreal-steroid", name: "Intravitreal Corticosteroid Implants for Macular Edema", built: true },
+  { id: "retinapharm-steroid-risks", name: "Intravitreal Steroid Risks — Cataract & Steroid-Response Glaucoma", built: true },
+];
+
+const RETINAPHARMANTIINFECT_TOPIC_ID = "t-12-4-2"; // Vitreous/Retina/Choroid(12) > Pharmacology(4) > Anti-infective agents(2)
+const RETINAPHARMANTIINFECT_OBJECTIVES = [
+  { id: "retinapharm-intravitreal-antibiotics", name: "Intravitreal Antibiotics for Endophthalmitis Treatment", built: true },
+];
+
+const RETINAPHARMDYES_TOPIC_ID = "t-12-4-3"; // Vitreous/Retina/Choroid(12) > Pharmacology(4) > Dyes(3)
+const RETINAPHARMDYES_OBJECTIVES = [
+  { id: "retinapharm-icg-angiography", name: "Indocyanine Green (ICG) Angiography for Choroidal Imaging", built: true },
+  { id: "retinapharm-intraop-dyes", name: "Intraoperative Vital Dyes for Membrane Peeling", built: true },
+];
+
+const RETINAPHARMNUTRITION_TOPIC_ID = "t-12-4-4"; // Vitreous/Retina/Choroid(12) > Pharmacology(4) > Nutritional supplements(4)
+// Ties directly into existing Free Radicals & Antioxidant Defense content.
+const RETINAPHARMNUTRITION_OBJECTIVES = [
+  { id: "retinapharm-areds2", name: "AREDS2 Formulation for AMD Progression Reduction", built: true },
+];
+
+const RETINAPHARMINDICATIONS_TOPIC_ID = "t-12-4-5"; // Vitreous/Retina/Choroid(12) > Pharmacology(4) > Indications/contraindications/side effects/drug interactions(5)
+const RETINAPHARMINDICATIONS_OBJECTIVES = [
+  { id: "retinapharm-antivegf-risks", name: "Anti-VEGF Therapy Risks — Endophthalmitis & Systemic Thromboembolic Considerations", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -2084,6 +2118,9 @@ const TOPIC_OBJECTIVES = {
   [CHOROIDGROSS_TOPIC_ID]: CHOROIDGROSS_OBJECTIVES, [VITREOUSGROSS_TOPIC_ID]: VITREOUSGROSS_OBJECTIVES,
   [RETINAGROSS_TOPIC_ID]: RETINAGROSS_OBJECTIVES, [CHOROIDDEV_TOPIC_ID]: CHOROIDDEV_OBJECTIVES,
   [VITREOUSDEV_TOPIC_ID]: VITREOUSDEV_OBJECTIVES, [RETINADEV_TOPIC_ID]: RETINADEV_OBJECTIVES,
+  [RETINAPHARMGEN_TOPIC_ID]: RETINAPHARMGEN_OBJECTIVES, [RETINAPHARMANTIINFLAMM_TOPIC_ID]: RETINAPHARMANTIINFLAMM_OBJECTIVES,
+  [RETINAPHARMANTIINFECT_TOPIC_ID]: RETINAPHARMANTIINFECT_OBJECTIVES, [RETINAPHARMDYES_TOPIC_ID]: RETINAPHARMDYES_OBJECTIVES,
+  [RETINAPHARMNUTRITION_TOPIC_ID]: RETINAPHARMNUTRITION_OBJECTIVES, [RETINAPHARMINDICATIONS_TOPIC_ID]: RETINAPHARMINDICATIONS_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -2300,6 +2337,12 @@ const CONTENT_TOPICS = [
   { topicId: CHOROIDDEV_TOPIC_ID, name: "Choroidal Developmental Anatomy", objectives: CHOROIDDEV_OBJECTIVES },
   { topicId: VITREOUSDEV_TOPIC_ID, name: "Vitreous Developmental Anatomy", objectives: VITREOUSDEV_OBJECTIVES },
   { topicId: RETINADEV_TOPIC_ID, name: "Retinal Developmental Anatomy", objectives: RETINADEV_OBJECTIVES },
+  { topicId: RETINAPHARMGEN_TOPIC_ID, name: "Retina/Vitreous Pharmacology — General Principles", objectives: RETINAPHARMGEN_OBJECTIVES },
+  { topicId: RETINAPHARMANTIINFLAMM_TOPIC_ID, name: "Retina/Vitreous Anti-Inflammatory Agents", objectives: RETINAPHARMANTIINFLAMM_OBJECTIVES },
+  { topicId: RETINAPHARMANTIINFECT_TOPIC_ID, name: "Retina/Vitreous Anti-Infective Agents", objectives: RETINAPHARMANTIINFECT_OBJECTIVES },
+  { topicId: RETINAPHARMDYES_TOPIC_ID, name: "Retina/Vitreous Diagnostic & Surgical Dyes", objectives: RETINAPHARMDYES_OBJECTIVES },
+  { topicId: RETINAPHARMNUTRITION_TOPIC_ID, name: "Retina/Vitreous Nutritional Supplements", objectives: RETINAPHARMNUTRITION_OBJECTIVES },
+  { topicId: RETINAPHARMINDICATIONS_TOPIC_ID, name: "Retina/Vitreous Pharmacology — Indications & Contraindications", objectives: RETINAPHARMINDICATIONS_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -13432,6 +13475,179 @@ const STUDY_PAGES = {
       "This gives you a genuinely important structural distinction extending your existing Retinal Detachment and (this session's) iris coloboma content — recognizing that X-linked retinoschisis splits at a completely different retinal layer (nerve fiber layer) than retinal detachment (RPE/photoreceptor interface) explains why these two conditions, despite both causing visual field/acuity symptoms, have different clinical appearances and prognoses, while chorioretinal coloboma's shared embryologic mechanism with iris coloboma explains why finding one should prompt careful examination for the other along the same fissure closure line.",
     ],
   },
+  "retinapharmgen-routes": {
+    name: "Drug Delivery Routes to the Posterior Segment — Intravitreal vs. Systemic",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Delivering effective drug concentrations to the retina, choroid, and vitreous is fundamentally more challenging than anterior segment drug delivery, extending your existing Cornea Pharmacology topical delivery content to explain why posterior segment disease often requires an entirely different delivery strategy." },
+      { h: "Why topical drops are inadequate for posterior segment disease", t: "Topical eye drops, effective for anterior segment structures (already covered extensively under Cornea/Lens/Anterior Uvea Pharmacology content), achieve negligible therapeutic concentration at the retina and choroid, since the diffusion distance from the ocular surface to the posterior segment — through the full thickness of the vitreous or around/through the entire anterior segment — is simply too great for adequate drug penetration." },
+      { h: "Intravitreal injection — the primary posterior segment route", t: "Intravitreal injection — direct injection of medication into the vitreous cavity — has become the primary route for many modern retinal therapies (anti-VEGF agents, this topic's sibling objective; corticosteroid implants, this topic's other sibling objective), bypassing the diffusion barrier entirely by placing the drug directly adjacent to its target tissue, though at the cost of requiring a repeated invasive procedure (with its own small but real risks, this topic's sibling indications objective) rather than a simple topical drop." },
+      { h: "Systemic routes", t: "Systemic (oral/IV) administration can reach the posterior segment for certain conditions (e.g., systemic corticosteroids or immunosuppressants for posterior uveitis, already covered under Anterior Uvea Pharmacology content), but requires overcoming the blood-retinal barrier — analogous to the blood-aqueous barrier already covered — generally necessitating higher systemic doses with correspondingly greater systemic side-effect exposure than a locally-targeted intravitreal approach." },
+    ],
+    memorizeIt: [
+      "Topical drops achieve negligible therapeutic concentration at the retina/choroid — diffusion distance is too great (unlike anterior segment structures, already covered).",
+      "Intravitreal injection: primary modern route for posterior segment therapy — bypasses the diffusion barrier by direct placement, at the cost of an invasive repeated procedure.",
+      "Systemic routes must overcome the blood-retinal barrier (analogous to the blood-aqueous barrier, already covered) — higher doses, more systemic side effects than local intravitreal delivery.",
+    ],
+    applyIt: [
+      "This gives you the fundamental delivery-strategy contrast between anterior and posterior segment pharmacology already implicit across your existing Cornea, Lens, and Anterior Uvea Pharmacology content — explaining why retinal disease treatment (already covered: AMD, diabetic retinopathy, CRVO) so often requires office-based intravitreal injection procedures rather than the topical drops sufficient for most anterior segment conditions.",
+    ],
+  },
+  "retinapharmgen-antivegf": {
+    name: "Anti-VEGF Therapy — Mechanism & Clinical Applications",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Anti-VEGF (vascular endothelial growth factor) therapy directly targets the same angiogenic signaling pathway already established under your existing Rubeosis Iridis content, here treated at its retinal source rather than downstream on the iris — representing one of the most transformative modern ophthalmic drug classes." },
+      { h: "Mechanism", t: "Anti-VEGF agents (bevacizumab, ranibizumab, aflibercept) are antibodies or antibody fragments that bind and neutralize VEGF, the pro-angiogenic signaling protein already established as the driver of pathologic retinal/iris neovascularization (already covered under Rubeosis Iridis content) and of the increased vascular permeability that causes macular edema — administered via intravitreal injection (this topic's sibling general-principles objective) directly into the vitreous cavity adjacent to the retina." },
+      { h: "Clinical applications", t: "Anti-VEGF therapy is first-line treatment for neovascular ('wet') AMD (already covered, blocking choroidal neovascularization originating from the choriocapillaris already covered under Choroidal Layers content), diabetic macular edema, and macular edema from CRVO/BRVO (already covered) — in each case directly addressing the VEGF-driven abnormal vascular permeability or neovascularization responsible for vision loss in that specific disease." },
+    ],
+    memorizeIt: [
+      "Anti-VEGF agents (bevacizumab, ranibizumab, aflibercept): bind/neutralize VEGF, the same angiogenic signal already established as driving rubeosis iridis (already covered) — here targeted directly at the retina/choroid.",
+      "Administered via intravitreal injection (this topic's sibling objective).",
+      "First-line for: neovascular (wet) AMD, diabetic macular edema, CRVO/BRVO-related macular edema (all already covered).",
+    ],
+    applyIt: [
+      "This gives you the precise molecular mechanism directly connecting your existing Rubeosis Iridis, Age-Related Macular Degeneration, and Central Retinal Vein Occlusion content into one unified VEGF-signaling framework — recognizing that the SAME VEGF pathway drives wet AMD's choroidal neovascularization, diabetic macular edema's vascular leakage, and rubeosis iridis's iris neovascularization explains why anti-VEGF therapy, developed initially for retinal disease, was a logical and effective extension to treating rubeosis iridis and preventing neovascular glaucoma (already covered).",
+    ],
+  },
+  "retinapharm-intravitreal-steroid": {
+    name: "Intravitreal Corticosteroid Implants for Macular Edema",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Sustained-release intravitreal corticosteroid implants provide an alternative or adjunct to anti-VEGF therapy (this topic's sibling objective) for macular edema, extending your existing Topical Corticosteroids potency/route content into a genuinely distinct, long-acting posterior segment delivery format." },
+      { h: "Mechanism and formulations", t: "Dexamethasone and fluocinolone acetonide sustained-release intravitreal implants slowly release corticosteroid directly within the vitreous cavity over weeks to months (fluocinolone implants can last significantly longer than dexamethasone), providing prolonged local anti-inflammatory effect without requiring the repeated monthly injections typical of anti-VEGF therapy (this topic's sibling objective) — broadly suppressing the inflammatory contribution to macular edema, complementing rather than duplicating anti-VEGF's specifically VEGF-targeted mechanism." },
+      { h: "Clinical indications", t: "Intravitreal steroid implants are used for diabetic macular edema and CRVO/BRVO-related macular edema not adequately responding to anti-VEGF therapy alone (already covered), and for non-infectious posterior uveitis (already covered under Anterior Uvea Pharmacology content's steroid-route staging, here representing the intravitreal escalation point for posterior/panuveitis)." },
+    ],
+    memorizeIt: [
+      "Dexamethasone and fluocinolone acetonide: sustained-release intravitreal implants, slowly release steroid over weeks to months (fluocinolone longer-lasting).",
+      "Used for macular edema (diabetic, CRVO/BRVO) not adequately responding to anti-VEGF alone, and for non-infectious posterior uveitis (already covered).",
+      "Broadly anti-inflammatory mechanism, complementing (not duplicating) anti-VEGF's specifically VEGF-targeted mechanism (this topic's sibling objective).",
+    ],
+    applyIt: [
+      "This extends your existing Corticosteroid Delivery Routes for Uveitis Severity Staging content (Anterior Uvea Pharmacology) with the intravitreal escalation option for posterior/panuveitis — a patient with posterior uveitis-related macular edema inadequately controlled by systemic corticosteroids (already covered) is a candidate for intravitreal steroid implant therapy, providing sustained local anti-inflammatory effect directly at the site of disease.",
+    ],
+  },
+  "retinapharm-steroid-risks": {
+    name: "Intravitreal Steroid Risks — Cataract & Steroid-Response Glaucoma",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Intravitreal corticosteroid implants (this topic's sibling objective) carry predictable, high-incidence local complications directly connecting to your existing Lens Physiology/Cataract and Glaucoma steroid-response IOP content — a genuinely important counseling point distinguishing this delivery route's risk profile." },
+      { h: "Cataract acceleration — a near-universal consequence", t: "Sustained intravitreal corticosteroid exposure accelerates cataract formation (already covered under Lens & Cataract content) — this is not a rare idiosyncratic side effect but a near-universal, expected consequence of prolonged local steroid exposure in a phakic (non-cataract-surgery) eye, meaning most phakic patients receiving long-term intravitreal steroid implant therapy will eventually require cataract surgery (already covered) as a direct, predictable consequence of their retinal treatment." },
+      { h: "Steroid-response glaucoma — a similarly high-incidence risk", t: "Similarly, steroid-response IOP elevation (already covered under Glaucoma content) occurs at a substantially HIGHER incidence with sustained intravitreal steroid implants than with topical steroid drops, given the implant's prolonged, continuous local drug delivery directly within the eye — fluocinolone implants in particular carry a high reported incidence of significant IOP elevation, sometimes requiring glaucoma surgery, making baseline glaucoma status and ongoing IOP monitoring essential considerations before and during this therapy." },
+    ],
+    memorizeIt: [
+      "Intravitreal steroid implants (already covered) accelerate cataract formation — a near-universal, expected consequence in phakic eyes with prolonged use, not a rare side effect.",
+      "Steroid-response IOP elevation (already covered under Glaucoma content) occurs at HIGHER incidence with intravitreal implants than topical drops — fluocinolone implants carry a particularly high reported incidence.",
+      "Baseline glaucoma status and ongoing IOP monitoring are essential before/during intravitreal steroid implant therapy.",
+    ],
+    applyIt: [
+      "This gives you the genuinely important risk-profile counseling point extending your existing Lens & Cataract and Glaucoma steroid-response content into this specific high-exposure delivery route — a phakic patient starting long-term fluocinolone implant therapy for chronic macular edema should be counseled that cataract surgery and/or glaucoma management are likely eventual consequences of this treatment, not merely theoretical risks, directly connecting two already-covered disease processes to this specific therapeutic context.",
+    ],
+  },
+  "retinapharm-intravitreal-antibiotics": {
+    name: "Intravitreal Antibiotics for Endophthalmitis Treatment",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "While Lens Pharmacology content already covered ANTIBIOTIC PROPHYLAXIS to prevent endophthalmitis, established endophthalmitis (once it has occurred) requires a genuinely different, more aggressive TREATMENT approach — direct intravitreal antibiotic injection — representing a true ophthalmic emergency." },
+      { h: "Why intravitreal (not topical/systemic) treatment", t: "Once endophthalmitis is established, topical and systemic antibiotics (already covered under Cornea Pharmacology content for external ocular infection) cannot achieve adequate therapeutic concentration within the vitreous cavity (the same posterior segment penetration barrier already covered under this topic's sibling general-principles objective) — requiring direct intravitreal injection of antibiotics (typically vancomycin for gram-positive coverage plus ceftazidime for gram-negative coverage, extending the same antibiotic classes already covered under Cornea Pharmacology's fortified antibiotic content) directly into the vitreous cavity for adequate local concentration." },
+      { h: "The tap-and-inject emergency protocol", t: "Suspected endophthalmitis requires an urgent 'tap and inject' procedure — often performed the SAME DAY as presentation — where a vitreous sample is obtained for culture (the 'tap') immediately followed by intravitreal antibiotic injection (the 'inject') empirically, without waiting for culture results, given the time-sensitive, vision-threatening nature of this infection — a genuine ophthalmic emergency paralleling the urgency already established for other sight-threatening infections on this platform." },
+    ],
+    memorizeIt: [
+      "Established endophthalmitis TREATMENT requires intravitreal antibiotic injection — topical/systemic routes cannot achieve adequate vitreous cavity concentration (same barrier as this topic's sibling general-principles objective).",
+      "Typical intravitreal antibiotics: vancomycin (gram-positive) + ceftazidime (gram-negative) — extends existing fortified antibiotic classes already covered under Cornea Pharmacology.",
+      "'Tap and inject': vitreous sample for culture + empiric intravitreal antibiotic injection, performed URGENTLY (often same-day) without waiting for culture results.",
+    ],
+    applyIt: [
+      "This gives you the genuine emergency treatment protocol directly extending your existing Cornea Anti-Infective Agents and Lens/Cataract Endophthalmitis Prophylaxis content — distinguishing PREVENTION (povidone-iodine antisepsis + intracameral antibiotic at the time of surgery, already covered) from TREATMENT of established endophthalmitis (urgent tap-and-inject with intravitreal antibiotics) clarifies that these are two entirely different clinical scenarios requiring different interventions, both aimed at the same devastating potential outcome.",
+    ],
+  },
+  "retinapharm-icg-angiography": {
+    name: "Indocyanine Green (ICG) Angiography for Choroidal Imaging",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular imaging/pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Indocyanine green (ICG) angiography uses intravenous dye injection to specifically image the CHOROIDAL vasculature, complementing rather than duplicating fluorescein angiography's retinal vascular imaging, and extending your existing Choroidal Layers content into a diagnostic imaging application." },
+      { h: "Why ICG images the choroid better than fluorescein", t: "ICG dye binds extensively to plasma proteins and fluoresces in the near-infrared spectrum (rather than visible light, as with fluorescein) — this near-infrared emission penetrates through the RPE and overlying blood/pigment more effectively than fluorescein's visible-spectrum emission, allowing ICG to image the CHOROIDAL vasculature (already covered under Choroidal Layers content) specifically, a vascular layer that fluorescein angiography (which primarily highlights retinal vessels and leakage at the RPE level) cannot adequately visualize." },
+      { h: "Clinical applications", t: "ICG angiography is particularly valuable for imaging choroidal neovascularization patterns (already relevant to existing wet AMD content) and for diagnosing polypoidal choroidal vasculopathy, a distinct choroidal vascular abnormality that can mimic typical neovascular AMD but has a characteristic ICG angiographic appearance (aneurysmal, polyp-like dilations) requiring this specific choroidal imaging modality for accurate diagnosis." },
+    ],
+    memorizeIt: [
+      "ICG angiography: intravenous dye, near-infrared fluorescence — better choroidal vessel penetration than fluorescein (visible spectrum).",
+      "Complements fluorescein angiography (retinal vessels) by specifically imaging the CHOROIDAL vasculature (already covered).",
+      "Clinical use: choroidal neovascularization patterns, and diagnosing polypoidal choroidal vasculopathy (a distinct choroidal condition that can mimic wet AMD).",
+    ],
+    applyIt: [
+      "This gives you a genuinely distinct imaging modality extending your existing Choroidal Layers and Age-Related Macular Degeneration content — recognizing that ICG angiography specifically targets the choroidal vasculature (rather than the retinal vessels fluorescein angiography highlights) explains why this technique is chosen when polypoidal choroidal vasculopathy is suspected as a wet-AMD mimic, since accurately distinguishing these two conditions has direct treatment implications.",
+    ],
+  },
+  "retinapharm-intraop-dyes": {
+    name: "Intraoperative Vital Dyes for Membrane Peeling",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "ICG (this topic's sibling objective) and brilliant blue G serve a genuinely distinct, purely intraoperative surgical-visualization role during vitrectomy — staining the internal limiting membrane (ILM, already covered under Retinal Gross Anatomy content) to improve surgical visualization, directly paralleling trypan blue's already-covered role in cataract surgery capsule staining." },
+      { h: "Mechanism and surgical use", t: "The internal limiting membrane (already covered as the innermost retinal boundary layer) is a thin, essentially transparent structure that is very difficult to visualize directly during vitrectomy surgery — ICG or brilliant blue G dye, applied intraoperatively, selectively stains the ILM, making it visible enough for the surgeon to precisely grasp and peel it during procedures like macular hole repair or epiretinal membrane removal, where complete, controlled ILM peeling is often a critical surgical step." },
+      { h: "Parallel to trypan blue in cataract surgery", t: "This intraoperative surgical-visualization application is directly analogous to trypan blue's already-covered role staining the anterior lens capsule during cataract surgery capsulorhexis — in both cases, a vital dye is used purely to make an otherwise nearly-invisible but surgically critical tissue plane visible enough for precise, controlled surgical manipulation, reducing the risk of an uncontrolled tear or incomplete removal of the target tissue." },
+    ],
+    memorizeIt: [
+      "ICG and brilliant blue G: intraoperative vital dyes that selectively stain the internal limiting membrane (ILM, already covered) during vitrectomy.",
+      "Improves visualization for controlled ILM peeling during macular hole repair or epiretinal membrane removal.",
+      "Directly analogous to trypan blue's role staining the anterior lens capsule during cataract surgery capsulorhexis (already covered) — same purpose, different target tissue.",
+    ],
+    applyIt: [
+      "This gives you a genuinely satisfying parallel extending your existing Trypan Blue Capsule Staining content (Lens/Cataract Pharmacology) to a distinct posterior segment surgical context — both applications share the identical underlying principle (staining an otherwise nearly-invisible surgically critical membrane to enable precise, controlled peeling), just applied to different tissue targets (lens capsule vs. internal limiting membrane) in different surgical procedures.",
+    ],
+  },
+  "retinapharm-areds2": {
+    name: "AREDS2 Formulation for AMD Progression Reduction",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology/nutrition references"],
+    learnIt: [
+      { h: "Overview", t: "The AREDS2 vitamin/mineral formulation reduces progression risk from intermediate to advanced age-related macular degeneration, directly extending your existing Free Radicals & Antioxidant Defense and Age-Related Macular Degeneration content into a specific, evidence-based nutritional intervention." },
+      { h: "AREDS2 formulation and its rationale", t: "The AREDS2 formulation contains vitamin C, vitamin E, zinc, copper, and lutein/zeaxanthin (replacing beta-carotene from the original AREDS formulation, removed due to an observed increased lung cancer risk specifically in smokers) — this antioxidant-focused composition directly applies the free radical/oxidative stress rationale already covered under Free Radicals & Antioxidant Defense content, since oxidative damage to the RPE and photoreceptors (already covered) is implicated in AMD's underlying pathophysiology." },
+      { h: "Specific indication — who benefits", t: "AREDS2 supplementation is specifically indicated for patients with INTERMEDIATE AMD, or advanced AMD in ONE eye only (to help protect the fellow eye) — it reduces progression risk to advanced AMD in this specific population, but does NOT prevent AMD onset in patients without existing disease, and does NOT treat active neovascular ('wet') AMD directly, which instead requires anti-VEGF therapy (this topic's sibling objective) — a genuinely important distinction between AREDS2's progression-risk-reduction role and anti-VEGF's active-treatment role." },
+    ],
+    memorizeIt: [
+      "AREDS2 formulation: vitamin C, vitamin E, zinc, copper, lutein/zeaxanthin (replaced beta-carotene, which increased lung cancer risk in smokers).",
+      "Rationale: antioxidant defense against oxidative RPE/photoreceptor damage (already covered under Free Radicals & Antioxidant Defense) implicated in AMD pathophysiology.",
+      "Indicated for: INTERMEDIATE AMD, or advanced AMD in ONE eye (protects the fellow eye) — reduces progression risk.",
+      "Does NOT prevent AMD onset, and does NOT treat active neovascular (wet) AMD directly — that requires anti-VEGF therapy (this topic's sibling objective).",
+    ],
+    applyIt: [
+      "This gives you the specific clinical application directly extending your existing Free Radicals & Antioxidant Defense and Age-Related Macular Degeneration content — recommending AREDS2 supplementation is appropriate for a patient with intermediate AMD to reduce their progression risk, but understanding it is NOT a treatment for active wet AMD (which requires anti-VEGF injection, this topic's sibling objective) prevents a genuinely important clinical misunderstanding about these two very different interventions' roles in AMD management.",
+    ],
+  },
+  "retinapharm-antivegf-risks": {
+    name: "Anti-VEGF Therapy Risks — Endophthalmitis & Systemic Thromboembolic Considerations",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Anti-VEGF therapy (this topic's sibling objective), despite its transformative efficacy, carries both a local procedural risk and a theoretical systemic risk consideration worth understanding before repeated long-term intravitreal injection therapy." },
+      { h: "Endophthalmitis risk from the injection procedure itself", t: "Because anti-VEGF therapy requires repeated intravitreal injections (often monthly or every few months over years, already covered), each individual injection carries a small but real endophthalmitis risk (already covered under Lens Pharmacology content) from introducing a needle into the eye — proper sterile technique, including povidone-iodine antisepsis (already covered under Lens/Cataract Pharmacology content), is essential at each injection to minimize this cumulative risk over a long treatment course." },
+      { h: "Systemic thromboembolic considerations", t: "Because VEGF has broader physiologic roles in systemic vascular biology beyond the eye, and a small amount of intravitreally-injected anti-VEGF drug is systemically absorbed, there is a theoretical concern for increased systemic thromboembolic events (stroke, myocardial infarction) with long-term anti-VEGF therapy — while large clinical studies have not shown a definitively strong signal for most patients, this remains a genuine consideration in patients with a recent stroke or MI history, where the risk-benefit discussion should account for this theoretical systemic vascular consideration alongside the clear ocular benefit." },
+    ],
+    memorizeIt: [
+      "Each intravitreal anti-VEGF injection carries a small but real endophthalmitis risk (already covered) — proper sterile technique (povidone-iodine, already covered) is essential at every injection given the repeated, long-term nature of treatment.",
+      "Theoretical systemic thromboembolic risk (stroke, MI) from small systemic absorption of anti-VEGF drug, given VEGF's broader systemic vascular role.",
+      "Genuine consideration in patients with recent stroke/MI history — risk-benefit discussion should account for this alongside clear ocular benefit.",
+    ],
+    applyIt: [
+      "This gives you the safety-counseling framework directly extending your existing Anti-VEGF Therapy mechanism content and Lens/Cataract Endophthalmitis Prophylaxis content — a patient starting long-term anti-VEGF therapy for wet AMD (already covered) should be counseled on both the small per-injection endophthalmitis risk (mitigated by proper sterile technique at each visit) and, particularly if they have a recent cardiovascular event history, the theoretical systemic thromboembolic consideration that factors into an individualized risk-benefit discussion.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -15151,6 +15367,15 @@ const FLASHCARDS = [
   { id: "fc-1315", objectiveId: "retinadev-optic-cup", front: "What embryonic structure gives rise to the RPE and neurosensory retina, and how?", back: "The double-walled optic cup — outer layer becomes RPE, inner layer becomes neurosensory retina." },
   { id: "fc-1316", objectiveId: "retinadev-optic-cup", front: "Why does retinal detachment separate specifically at the RPE/photoreceptor interface?", back: "This is the potential space between the optic cup's original two embryonic layers — RD reopens this developmental cleavage plane." },
   { id: "fc-1317", objectiveId: "retinadev-anomalies", front: "What gene/protein is mutated in X-linked juvenile retinoschisis, and what is the classic foveal exam finding?", back: "RS1 gene/retinoschisin protein; classic 'spoke-wheel' foveal schisis pattern." },
+  { id: "fc-1318", objectiveId: "retinapharmgen-routes", front: "Why can't topical eye drops achieve therapeutic drug concentrations at the retina/choroid?", back: "The diffusion distance from the ocular surface to the posterior segment is too great for adequate penetration." },
+  { id: "fc-1319", objectiveId: "retinapharmgen-antivegf", front: "Name the three anti-VEGF agents and their common mechanism.", back: "Bevacizumab, ranibizumab, aflibercept — bind and neutralize VEGF, the pro-angiogenic/permeability signal." },
+  { id: "fc-1320", objectiveId: "retinapharm-intravitreal-steroid", front: "What two intravitreal steroid implants are used for macular edema, and which lasts longer?", back: "Dexamethasone and fluocinolone acetonide implants; fluocinolone lasts significantly longer." },
+  { id: "fc-1321", objectiveId: "retinapharm-steroid-risks", front: "What two complications are near-universal/high-incidence with long-term intravitreal steroid implant use?", back: "Cataract acceleration (phakic eyes) and steroid-response IOP elevation/glaucoma." },
+  { id: "fc-1322", objectiveId: "retinapharm-intravitreal-antibiotics", front: "What does the 'tap and inject' protocol for suspected endophthalmitis involve?", back: "Vitreous sample for culture (tap) immediately followed by empiric intravitreal antibiotic injection (inject), without waiting for culture results." },
+  { id: "fc-1323", objectiveId: "retinapharm-icg-angiography", front: "Why does ICG angiography image the choroid better than fluorescein angiography?", back: "ICG binds plasma proteins and fluoresces in near-infrared, penetrating through the RPE/pigment more effectively than fluorescein's visible-spectrum emission." },
+  { id: "fc-1324", objectiveId: "retinapharm-intraop-dyes", front: "What retinal structure do ICG/brilliant blue G stain intraoperatively during vitrectomy, and for what procedures?", back: "The internal limiting membrane (ILM), for macular hole repair or epiretinal membrane removal." },
+  { id: "fc-1325", objectiveId: "retinapharm-areds2", front: "Which patient population benefits from AREDS2 supplementation, and what does it NOT do?", back: "Intermediate AMD, or advanced AMD in one eye; does NOT prevent AMD onset and does NOT treat active wet AMD (that requires anti-VEGF)." },
+  { id: "fc-1326", objectiveId: "retinapharm-antivegf-risks", front: "What theoretical systemic risk is associated with long-term anti-VEGF therapy, and in what patient population is it a particular consideration?", back: "Systemic thromboembolic events (stroke, MI), from small systemic drug absorption — particular consideration in patients with recent stroke/MI history." },
 ];
 
 const QUESTIONS = [
@@ -20184,6 +20409,40 @@ const QUESTIONS = [
       b: "Correct — the optic cup is double-walled, with the outer layer becoming the RPE and the inner layer becoming the neurosensory retina; the potential space between them, normally obliterated by adhesive/pump mechanisms, is precisely the plane along which retinal detachment separates, since it represents the eye's fundamental, developmentally pre-existing structural seam.",
       c: "Incorrect — separation at the nerve fiber layer describes X-linked retinoschisis (already covered), a distinct condition from rhegmatogenous retinal detachment.",
       d: "Incorrect — while a retinal tear is the initiating event, the specific SEPARATION PLANE that then propagates is anatomically determined by this embryonic cleavage plane, not randomly determined by tear location alone.",
+    },
+  },
+  {
+    id: "q-297", objectiveId: "retinapharm-steroid-risks", type: "Applied concept", difficulty: "Medium",
+    stem: "A phakic patient begins long-term fluocinolone acetonide intravitreal implant therapy for chronic diabetic macular edema. What two complications should the patient be counseled are likely, not merely theoretical, over time?",
+    choices: [
+      { id: "a", text: "Retinal detachment and optic neuritis" },
+      { id: "b", text: "Cataract acceleration and steroid-response IOP elevation/glaucoma" },
+      { id: "c", text: "Corneal melt and anesthetic keratopathy" },
+      { id: "d", text: "No significant risks are associated with intravitreal steroid implants" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — retinal detachment and optic neuritis are not the characteristic, near-universal complications of intravitreal steroid implant therapy.",
+      b: "Correct — sustained intravitreal corticosteroid exposure causes near-universal cataract acceleration in phakic eyes, and steroid-response IOP elevation/glaucoma occurs at notably higher incidence with implants (especially fluocinolone) than with topical steroid drops — both are predictable, expected consequences requiring proactive counseling and monitoring.",
+      c: "Incorrect — corneal melt and anesthetic keratopathy are risks of topical NSAID and anesthetic use (already covered under Cornea Pharmacology), not intravitreal steroid implants.",
+      d: "Incorrect — intravitreal steroid implants carry well-established, high-incidence local risks that require specific patient counseling.",
+    },
+  },
+  {
+    id: "q-298", objectiveId: "retinapharm-areds2", type: "Applied concept", difficulty: "Medium",
+    stem: "A patient with active neovascular (wet) AMD in one eye asks whether starting AREDS2 supplementation will treat their current wet AMD. What is the correct response?",
+    choices: [
+      { id: "a", text: "Yes, AREDS2 is the first-line treatment for active wet AMD" },
+      { id: "b", text: "No — AREDS2 reduces progression risk from intermediate to advanced AMD but does not treat active neovascular AMD, which requires anti-VEGF therapy" },
+      { id: "c", text: "AREDS2 will reverse the existing choroidal neovascularization" },
+      { id: "d", text: "AREDS2 prevents AMD from ever developing in the fellow eye with certainty" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — AREDS2 is not a treatment for active wet AMD; anti-VEGF therapy (already covered) is the first-line treatment for active neovascular disease.",
+      b: "Correct — AREDS2 supplementation is indicated to reduce progression risk in intermediate AMD or advanced AMD in one eye (protecting the fellow eye), but it does not treat active neovascular AMD directly; that requires anti-VEGF therapy targeting the VEGF-driven choroidal neovascularization.",
+      c: "Incorrect — AREDS2 does not reverse existing neovascularization; its role is progression-risk reduction, not active disease treatment.",
+      d: "Incorrect — AREDS2 reduces progression risk but does not guarantee prevention of AMD in the fellow eye.",
     },
   },
 ];
