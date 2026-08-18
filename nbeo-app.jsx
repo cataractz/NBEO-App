@@ -955,6 +955,35 @@ const CBGROSS_OBJECTIVES = [
   { id: "cbgross-muscle", name: "Ciliary Muscle Fiber Orientations & Function", built: true },
 ];
 
+const SCLERADEV_TOPIC_ID = "t-11-1-0"; // Episclera/Sclera/Anterior Uvea(11) > Anatomy(Developmental)(1) > Sclera(0)
+const SCLERADEV_OBJECTIVES = [
+  { id: "scleradev-origin", name: "Scleral Development from Neural Crest & Mesoderm", built: true },
+];
+
+const ACDEV_TOPIC_ID = "t-11-1-1"; // Episclera/Sclera/Anterior Uvea(11) > Anatomy(Developmental)(1) > Anterior chamber and angle(1)
+// Ties directly into existing congenital glaucoma/buphthalmos content.
+const ACDEV_OBJECTIVES = [
+  { id: "acdev-cleavage", name: "Anterior Chamber Angle Development & Cleavage", built: true },
+  { id: "acdev-arsspectrum", name: "Axenfeld-Rieger Spectrum — Angle/Iris Developmental Anomalies", built: true },
+];
+
+const IRISDEV_TOPIC_ID = "t-11-1-2"; // Episclera/Sclera/Anterior Uvea(11) > Anatomy(Developmental)(1) > Iris/Pupil(2)
+const IRISDEV_OBJECTIVES = [
+  { id: "irisdev-formation", name: "Iris Formation & the Pupillary Membrane", built: true },
+  { id: "irisdev-anomalies", name: "Congenital Iris Anomalies (Aniridia, Coloboma, Persistent Pupillary Membrane)", built: true },
+];
+
+const PCDEV_TOPIC_ID = "t-11-1-3"; // Episclera/Sclera/Anterior Uvea(11) > Anatomy(Developmental)(1) > Posterior chamber(3)
+const PCDEV_OBJECTIVES = [
+  { id: "pcdev-hyaloid", name: "Hyaloid Vascular System Regression & Persistent Fetal Vasculature", built: true },
+];
+
+const CBDEV_TOPIC_ID = "t-11-1-4"; // Episclera/Sclera/Anterior Uvea(11) > Anatomy(Developmental)(1) > Ciliary body(4)
+// Ties directly into existing Aqueous Humor Production content.
+const CBDEV_OBJECTIVES = [
+  { id: "cbdev-formation", name: "Ciliary Body Development from the Optic Cup Rim", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -1964,6 +1993,9 @@ const TOPIC_OBJECTIVES = {
   [LENSPHARMINDICATIONS_TOPIC_ID]: LENSPHARMINDICATIONS_OBJECTIVES,
   [ACGROSS_TOPIC_ID]: ACGROSS_OBJECTIVES, [IRISGROSS_TOPIC_ID]: IRISGROSS_OBJECTIVES,
   [PCGROSS_TOPIC_ID]: PCGROSS_OBJECTIVES, [CBGROSS_TOPIC_ID]: CBGROSS_OBJECTIVES,
+  [SCLERADEV_TOPIC_ID]: SCLERADEV_OBJECTIVES, [ACDEV_TOPIC_ID]: ACDEV_OBJECTIVES,
+  [IRISDEV_TOPIC_ID]: IRISDEV_OBJECTIVES, [PCDEV_TOPIC_ID]: PCDEV_OBJECTIVES,
+  [CBDEV_TOPIC_ID]: CBDEV_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -2161,6 +2193,11 @@ const CONTENT_TOPICS = [
   { topicId: IRISGROSS_TOPIC_ID, name: "Iris Gross Anatomy", objectives: IRISGROSS_OBJECTIVES },
   { topicId: PCGROSS_TOPIC_ID, name: "Posterior Chamber Gross Anatomy", objectives: PCGROSS_OBJECTIVES },
   { topicId: CBGROSS_TOPIC_ID, name: "Ciliary Body Gross Anatomy", objectives: CBGROSS_OBJECTIVES },
+  { topicId: SCLERADEV_TOPIC_ID, name: "Scleral Developmental Anatomy", objectives: SCLERADEV_OBJECTIVES },
+  { topicId: ACDEV_TOPIC_ID, name: "Anterior Chamber & Angle Developmental Anatomy", objectives: ACDEV_OBJECTIVES },
+  { topicId: IRISDEV_TOPIC_ID, name: "Iris/Pupil Developmental Anatomy", objectives: IRISDEV_OBJECTIVES },
+  { topicId: PCDEV_TOPIC_ID, name: "Posterior Chamber Developmental Anatomy", objectives: PCDEV_OBJECTIVES },
+  { topicId: CBDEV_TOPIC_ID, name: "Ciliary Body Developmental Anatomy", objectives: CBDEV_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -12806,6 +12843,144 @@ const STUDY_PAGES = {
       "This extends your existing Accommodation Mechanism (Helmholtz Theory) and Miotics (Direct & Indirect Cholinergic Agonists) content with the outflow-facilitating role of the LONGITUDINAL ciliary muscle fibers — explaining that cholinergic glaucoma medications lower IOP through TWO distinct anatomic mechanisms (pupillary miosis pulling the peripheral iris away from the angle, AND longitudinal ciliary muscle contraction mechanically widening the trabecular meshwork), not just the pupillary effect alone.",
     ],
   },
+  "scleradev-origin": {
+    name: "Scleral Development from Neural Crest & Mesoderm",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The sclera develops from periocular mesenchyme with a genuinely distinctive DUAL embryologic origin, contrasting with the cornea's exclusively neural-crest-derived stroma already covered under Corneal Development from Neural Crest content." },
+      { h: "Predominant neural crest contribution", t: "Most of the sclera, like the corneal stroma and endothelium (already covered), derives from cranial neural crest-derived periocular mesenchyme, which condenses and differentiates around the developing optic cup to form the sclera's dense, irregularly-arranged collagen fibrils (already covered under Scleral Structure content as the structural basis for scleral opacity, contrasting with the cornea's regular collagen arrangement)." },
+      { h: "Mesodermal contribution at the posterior pole", t: "Unlike the cornea's exclusively neural-crest-derived stroma, a genuinely distinct contribution from MESODERM occurs at the posterior sclera, particularly around the optic nerve insertion — this dual (neural crest + mesoderm) origin is a distinguishing embryologic fact from the cornea's single-source stroma, though the functional/structural difference between these two contributing tissues within the mature sclera is not clinically distinguishable." },
+    ],
+    memorizeIt: [
+      "Sclera develops predominantly from cranial NEURAL CREST-derived periocular mesenchyme (like the corneal stroma, already covered).",
+      "Genuinely distinct from cornea: sclera also receives a MESODERMAL contribution, particularly at the posterior pole/optic nerve insertion region.",
+      "This dual origin (neural crest + mesoderm) contrasts with the cornea's exclusively neural-crest-derived stroma.",
+    ],
+    applyIt: [
+      "This gives you the embryologic contrast point directly extending your existing Corneal Development from Neural Crest and Scleral Structure & the Episclera content — while both the cornea and sclera arise substantially from neural crest mesenchyme, the sclera's additional mesodermal contribution at the posterior pole is a genuinely distinguishing developmental fact between these two adjacent, collagen-based ocular coat structures.",
+    ],
+  },
+  "acdev-cleavage": {
+    name: "Anterior Chamber Angle Development & Cleavage",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The anterior chamber angle develops through a process termed 'anterior chamber cleavage,' and incomplete cleavage is the developmental basis for primary congenital glaucoma, directly extending your existing Aqueous Outflow Pathways and congenital glaucoma/buphthalmos content." },
+      { h: "The cleavage process", t: "Neural crest-derived mesenchyme initially fills the space that will become the anterior chamber angle; through a progressive developmental process termed cleavage, this mesenchymal tissue differentiates into and remodels to form the mature angle structures (trabecular meshwork, Schwalbe's line, scleral spur — already covered under Anterior Chamber Angle gross anatomy content), while the angle recess itself progressively opens up as residual, undifferentiated mesenchymal tissue resolves." },
+      { h: "Incomplete cleavage — the congenital glaucoma mechanism", t: "When this cleavage process is incomplete, residual undifferentiated mesenchymal tissue remains within the angle, mechanically obstructing normal aqueous outflow through the not-yet-properly-formed trabecular meshwork — this incomplete cleavage is the developmental basis for PRIMARY CONGENITAL GLAUCOMA, already implicit in existing buphthalmos/congenital glaucoma content, explaining the anatomic mechanism behind the elevated IOP in that condition from a developmental (rather than acquired) origin." },
+    ],
+    memorizeIt: [
+      "Anterior chamber angle forms via 'cleavage' — neural crest mesenchyme differentiates into angle structures while the angle recess progressively opens.",
+      "INCOMPLETE cleavage leaves residual mesenchymal tissue obstructing the angle — the developmental basis for PRIMARY CONGENITAL GLAUCOMA (already covered as buphthalmos).",
+      "This explains congenital glaucoma's elevated IOP mechanism as developmental angle malformation, distinct from acquired trabecular meshwork dysfunction in adult glaucoma.",
+    ],
+    applyIt: [
+      "This gives you the precise embryologic mechanism underlying your existing congenital glaucoma/buphthalmos content — understanding that primary congenital glaucoma results from a specific failure of normal angle cleavage (residual obstructive mesenchyme) rather than the acquired trabecular meshwork dysfunction of adult primary open-angle glaucoma explains why congenital glaucoma often requires a different primary surgical approach (angle surgery directly addressing the malformed structures) rather than starting with medical therapy alone.",
+    ],
+  },
+  "acdev-arsspectrum": {
+    name: "Axenfeld-Rieger Spectrum — Angle/Iris Developmental Anomalies",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pediatric ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "Axenfeld-Rieger spectrum describes a range of related anterior segment developmental anomalies from disrupted anterior chamber cleavage (this topic's sibling objective), carrying both a high glaucoma risk and characteristic systemic associations." },
+      { h: "Key ocular findings", t: "The hallmark ocular finding is a prominent, anteriorly-displaced Schwalbe's line visible on slit lamp exam without gonioscopy — termed posterior embryotoxon (already relevant to existing Anterior Chamber Angle gross anatomy content on Schwalbe's line's normal position) — often accompanied by iris strands adhering to and pulling on this displaced structure, and variable iris stromal hypoplasia (thinning) or pupil abnormalities (corectopia, an off-center pupil)." },
+      { h: "Glaucoma risk and systemic associations", t: "Axenfeld-Rieger spectrum carries an approximately 50% lifetime risk of glaucoma (from the same underlying angle developmental anomaly already covered under this topic's sibling objective), making lifelong IOP monitoring essential even when initially normal — and is associated with characteristic systemic (non-ocular) findings including dental anomalies (microdontia, missing teeth) and redundant periumbilical skin, reflecting the shared neural-crest-derived mesenchymal origin of these craniofacial and periumbilical structures." },
+    ],
+    memorizeIt: [
+      "Axenfeld-Rieger spectrum: posterior embryotoxon (prominent, anteriorly-displaced Schwalbe's line, visible without gonioscopy) + iris strand adhesions + iris stromal hypoplasia/corectopia.",
+      "~50% lifetime glaucoma risk — from the same disrupted angle cleavage mechanism (this topic's sibling objective) — requires lifelong IOP monitoring.",
+      "Systemic associations: dental anomalies (microdontia), redundant periumbilical skin — reflect shared neural-crest mesenchymal origin.",
+    ],
+    applyIt: [
+      "This gives you a genuinely high-yield anterior segment dysgenesis syndrome directly extending your existing Anterior Chamber Angle Development & Cleavage content — recognizing posterior embryotoxon on slit lamp exam (a prominent Schwalbe's line, visible without gonioscopy) should prompt screening for the full Axenfeld-Rieger spectrum, including dental/periumbilical exam and, critically, LIFELONG glaucoma monitoring given the ~50% risk even in an eye with initially normal IOP.",
+    ],
+  },
+  "irisdev-formation": {
+    name: "Iris Formation & the Pupillary Membrane",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The iris forms from a combination of neuroectoderm (from the optic cup rim) and neural crest mesenchyme, and its pupil is transiently covered by a vascular membrane during development that must normally regress before birth — the developmental basis for this topic's sibling objective's persistent pupillary membrane anomaly." },
+      { h: "Dual tissue origin", t: "The iris's posterior pigmented epithelium and its two muscles (sphincter and dilator pupillae, already covered under Iris Layers content) derive from the anterior rim of the optic cup — NEUROECTODERM, the same embryonic tissue that forms the retina and its pigment epithelium, explaining the developmental continuity already noted under existing Iris Layers content — while the iris STROMA derives from neural crest mesenchyme, the same tissue source as the corneal and scleral stroma (already covered)." },
+      { h: "The pupillary membrane", t: "During development, a transient vascular membrane (the pupillary membrane, part of the anterior tunica vasculosa lentis blood supply system to the developing lens) covers the pupillary space — this membrane normally undergoes progressive atrophy and regression before birth, opening the pupil and allowing normal vision to develop; incomplete regression leaves residual iris strands crossing the pupil, covered under this topic's sibling objective as persistent pupillary membrane." },
+    ],
+    memorizeIt: [
+      "Iris posterior pigmented epithelium + sphincter/dilator muscles: from NEUROECTODERM (optic cup rim) — same tissue as retina/RPE.",
+      "Iris STROMA: from neural crest mesenchyme — same source as corneal/scleral stroma (already covered).",
+      "Pupillary membrane: transient vascular membrane covering the pupil during development, normally regresses before birth to open the pupil.",
+      "Incomplete regression → persistent pupillary membrane (this topic's sibling objective).",
+    ],
+    applyIt: [
+      "This gives you the embryologic foundation directly setting up this topic's sibling objective on congenital iris anomalies — understanding that the iris muscles are neuroectoderm-derived (like the retina) while the stroma is neural-crest-derived explains the iris's structurally composite nature, and the normal pupillary membrane regression process explains why its INCOMPLETE regression (persistent pupillary membrane) is a common, usually benign finding rather than a sign of a more serious anomaly.",
+    ],
+  },
+  "irisdev-anomalies": {
+    name: "Congenital Iris Anomalies (Aniridia, Coloboma, Persistent Pupillary Membrane)",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pediatric ophthalmology/genetics references"],
+    learnIt: [
+      { h: "Overview", t: "Three distinct congenital iris anomalies — aniridia, iris coloboma, and persistent pupillary membrane — range from a genuinely urgent systemic screening trigger to a common benign finding, making the distinction between them clinically important." },
+      { h: "Aniridia — a systemic screening emergency", t: "Aniridia is near-total congenital absence of the iris, resulting from PAX6 gene mutations (a master regulatory gene in eye development) — critically, aniridia is strongly associated with WAGR syndrome (Wilms tumor, Aniridia, Genitourinary anomalies, intellectual disability/Retardation), meaning an infant diagnosed with aniridia REQUIRES prompt genetic testing and renal ultrasound screening for Wilms tumor, since early detection dramatically improves that cancer's prognosis — a genuinely urgent systemic implication of what might otherwise seem like an isolated ocular finding." },
+      { h: "Iris coloboma", t: "Iris coloboma is a keyhole-shaped iris defect, classically INFERONASAL in location, resulting from failure of the embryonic (optic) fissure to close properly during development — a distinct mechanism from eyelid coloboma (already covered under Congenital Eyelid Anomalies content), reflecting failure of a different embryonic structure (the optic fissure, rather than the eyelid folds) to close; may occur in isolation or as part of a broader coloboma spectrum affecting other ocular structures along the same fissure closure line (e.g., choroidal or optic nerve coloboma)." },
+      { h: "Persistent pupillary membrane — usually benign", t: "Persistent pupillary membrane (this topic's sibling objective's incompletely-regressed pupillary membrane) presents as thin strands of iris tissue crossing the pupil, usually attached at the iris collarette and sometimes to the anterior lens capsule — most cases are incidental, benign findings not requiring treatment, though dense or extensive persistent pupillary membrane can occasionally be visually significant (amblyogenic) if it substantially obstructs the visual axis, warranting monitoring." },
+    ],
+    memorizeIt: [
+      "Aniridia: near-total iris absence, PAX6 mutation — REQUIRES screening for WAGR syndrome (Wilms tumor, Genitourinary anomalies, intellectual disability) via genetic testing + renal ultrasound.",
+      "Iris coloboma: keyhole-shaped defect, classically INFERONASAL, from failed embryonic (optic) fissure closure — distinct mechanism from eyelid coloboma (already covered).",
+      "Persistent pupillary membrane: iris strands crossing the pupil from incomplete pupillary membrane regression — usually benign/incidental; dense cases can rarely be amblyogenic.",
+      "Aniridia is the one of these three anomalies with an urgent, life-threatening systemic screening implication (Wilms tumor).",
+    ],
+    applyIt: [
+      "This gives you a genuinely critical clinical triage point — an infant presenting with aniridia requires URGENT referral for genetic testing and renal ultrasound screening given the Wilms tumor risk under WAGR syndrome, a starkly different urgency level from the same infant presenting with an isolated persistent pupillary membrane (typically reassurance and observation) or isolated iris coloboma (ocular monitoring, possible association with other coloboma-spectrum findings), making accurate identification of WHICH iris anomaly is present a genuinely high-stakes distinction.",
+    ],
+  },
+  "pcdev-hyaloid": {
+    name: "Hyaloid Vascular System Regression & Persistent Fetal Vasculature",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The hyaloid vascular system is a transient fetal blood supply to the developing lens and vitreous that must fully regress before birth, and its failure to regress — persistent fetal vasculature (PFV) — is a genuinely important congenital cause of leukocoria (white pupillary reflex) requiring distinction from retinoblastoma." },
+      { h: "Normal hyaloid system and regression", t: "During development, the hyaloid artery (a branch of the primitive ophthalmic artery) courses through the vitreous cavity from the optic disc to the posterior lens surface, supplying the growing lens via a surrounding vascular network (the tunica vasculosa lentis, including the pupillary membrane already covered under this topic's sibling objective) — this entire hyaloid system normally undergoes progressive, complete regression during the third trimester, clearing the vitreous cavity and posterior lens surface before birth." },
+      { h: "Persistent fetal vasculature (PFV)", t: "When this regression fails (partially or completely), the residual fibrovascular hyaloid remnant — persistent fetal vasculature (formerly called persistent hyperplastic primary vitreous, PHPV) — can cause a retrolental fibrovascular membrane, an elongated ciliary process, and a leukocoria (white pupillary reflex) presentation in a NEWBORN, typically unilateral and associated with a small (microphthalmic) eye — a genuinely important entry in the differential diagnosis of infantile leukocoria alongside retinoblastoma (already relevant to existing Neoplasia/red reflex screening content), distinguished by PFV's typical unilaterality, microphthalmia, and absence of an intraocular mass on imaging." },
+    ],
+    memorizeIt: [
+      "Hyaloid artery: transient fetal vessel from optic disc to posterior lens, supplying the lens via the tunica vasculosa lentis (includes the pupillary membrane, already covered).",
+      "Normally undergoes COMPLETE regression during the third trimester, clearing the vitreous/posterior lens before birth.",
+      "Persistent fetal vasculature (PFV, formerly PHPV): failed regression → retrolental fibrovascular membrane, leukocoria, typically unilateral + microphthalmic eye.",
+      "Key differential for infantile leukocoria: PFV (unilateral, microphthalmic, no mass) vs. retinoblastoma (can be bilateral, normal-sized eye, intraocular mass on imaging).",
+    ],
+    applyIt: [
+      "This gives you a genuinely important entry in the leukocoria differential diagnosis, directly relevant to red reflex screening and existing Neoplasia content — an infant with unilateral leukocoria and a smaller-than-normal (microphthalmic) eye is more consistent with persistent fetal vasculature than retinoblastoma, though definitive distinction requires imaging to rule out an intraocular mass, since missing a true retinoblastoma has life-threatening consequences that make thorough evaluation essential regardless of the initial clinical impression.",
+    ],
+  },
+  "cbdev-formation": {
+    name: "Ciliary Body Development from the Optic Cup Rim",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The ciliary body develops from the same anterior optic cup neuroectoderm that gives rise to the iris (this topic's sibling objectives) and the retina itself, and this shared origin directly explains the double-layered epithelial structure already relevant to existing Aqueous Humor Production content." },
+      { h: "Neuroectodermal origin — the double epithelial layer", t: "The ciliary body's epithelium derives from the same anterior optic cup neuroectoderm as the iris posterior pigmented epithelium and the retina, forming a double-layered structure — an outer PIGMENTED layer (continuous with the retinal pigment epithelium) and an inner NON-PIGMENTED layer (continuous with the neurosensory retina, though non-visual here) — this double-layered epithelial arrangement is precisely the structural basis already relevant to Aqueous Humor Production content's secretory mechanism, since aqueous humor is actively secreted across this specific two-layer epithelial arrangement." },
+      { h: "Neural crest contribution — muscle and stroma", t: "The ciliary muscle (already covered under Ciliary Muscle Fiber Orientations content) and ciliary body stroma derive from neural crest mesenchyme, the same tissue source already established for the iris stroma, corneal stroma, and sclera — meaning the ciliary body, like the iris, has a genuinely composite developmental origin: neuroectoderm for its epithelium, neural crest for its muscle/stroma." },
+    ],
+    memorizeIt: [
+      "Ciliary body epithelium: from anterior optic cup NEUROECTODERM (same origin as retina/iris posterior epithelium) — forms the double-layered (pigmented + non-pigmented) epithelial structure.",
+      "This double epithelial layer is the structural basis for aqueous humor secretion (already covered under Aqueous Humor Production).",
+      "Ciliary muscle + stroma: from NEURAL CREST mesenchyme (same source as iris/corneal/scleral stroma).",
+      "Composite origin: neuroectoderm (epithelium) + neural crest (muscle/stroma) — parallels the iris's dual origin (this topic's sibling objective).",
+    ],
+    applyIt: [
+      "This gives you the embryologic explanation for the double-layered ciliary epithelium already functionally relevant to your existing Aqueous Humor Production & Composition content — understanding that this two-layer structure (pigmented outer, non-pigmented inner) is a direct developmental continuation of the retina/RPE relationship explains why the ciliary epithelium is sometimes conceptually described as 'non-visual retina,' sharing its fundamental epithelial transport/secretory machinery with the true retinal pigment epithelium already covered under Photoreceptor & RPE Physiology content.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -14496,6 +14671,15 @@ const FLASHCARDS = [
   { id: "fc-1286", objectiveId: "pcgross-pupillaryblock", front: "What prior condition predisposes to absolute pupillary block via posterior synechiae?", back: "Prior anterior uveitis, causing iris-to-lens adhesions." },
   { id: "fc-1287", objectiveId: "cbgross-regions", front: "Why is the pars plana chosen as the standard surgical entry site for vitrectomy?", back: "It is relatively avascular and does not overlie the retina or lens, allowing safe instrument insertion." },
   { id: "fc-1288", objectiveId: "cbgross-muscle", front: "Through what mechanism do longitudinal ciliary muscle fibers (Brücke's muscle) lower IOP?", back: "Contraction pulls on the scleral spur and trabecular meshwork, mechanically widening trabecular meshwork spaces and aiding aqueous outflow." },
+  { id: "fc-1289", objectiveId: "scleradev-origin", front: "What embryonic tissue contributes to the sclera in addition to neural crest, unlike the cornea?", back: "Mesoderm, particularly at the posterior pole/optic nerve insertion region." },
+  { id: "fc-1290", objectiveId: "acdev-cleavage", front: "What developmental process forms the anterior chamber angle, and what results from its failure?", back: "Anterior chamber cleavage; incomplete cleavage leaves residual mesenchyme obstructing the angle, causing primary congenital glaucoma." },
+  { id: "fc-1291", objectiveId: "acdev-arsspectrum", front: "What is posterior embryotoxon, and what syndrome is it a hallmark of?", back: "A prominent, anteriorly-displaced Schwalbe's line visible without gonioscopy — hallmark of Axenfeld-Rieger spectrum." },
+  { id: "fc-1292", objectiveId: "acdev-arsspectrum", front: "What is the lifetime glaucoma risk in Axenfeld-Rieger spectrum, and what systemic findings are associated?", back: "~50% glaucoma risk; associated with dental anomalies (microdontia) and redundant periumbilical skin." },
+  { id: "fc-1293", objectiveId: "irisdev-formation", front: "What embryonic tissue forms the iris muscles vs. the iris stroma?", back: "Muscles (sphincter/dilator) + posterior pigmented epithelium: neuroectoderm (optic cup rim). Stroma: neural crest mesenchyme." },
+  { id: "fc-1294", objectiveId: "irisdev-anomalies", front: "What systemic screening is urgently required in an infant diagnosed with aniridia, and why?", back: "Genetic testing and renal ultrasound for WAGR syndrome (Wilms tumor risk) — early detection dramatically improves cancer prognosis." },
+  { id: "fc-1295", objectiveId: "irisdev-anomalies", front: "What is the classic location and mechanism of iris coloboma?", back: "Inferonasal, from failure of the embryonic (optic) fissure to close properly." },
+  { id: "fc-1296", objectiveId: "pcdev-hyaloid", front: "What is persistent fetal vasculature (PFV), and how does it typically differ from retinoblastoma in presentation?", back: "Failed hyaloid vascular system regression causing leukocoria; PFV is typically unilateral with a microphthalmic eye and no intraocular mass, unlike retinoblastoma." },
+  { id: "fc-1297", objectiveId: "cbdev-formation", front: "What is the embryologic basis for the ciliary body's double-layered (pigmented + non-pigmented) epithelium?", back: "It derives from the same anterior optic cup neuroectoderm as the retina/RPE, forming an outer pigmented and inner non-pigmented layer — the structural basis for aqueous secretion." },
 ];
 
 const QUESTIONS = [
@@ -19461,6 +19645,23 @@ const QUESTIONS = [
       b: "Correct — posterior synechiae cause absolute pupillary block, trapping aqueous in the posterior chamber; the resulting pressure differential bows the peripheral iris forward (iris bombé), pushing it against the angle structures and mechanically closing the angle, precipitating acute angle-closure glaucoma.",
       c: "Incorrect — the mechanism is outflow obstruction via mechanical angle closure, not increased aqueous production.",
       d: "Incorrect — posterior synechiae are a genuine, well-established risk factor for pupillary block and subsequent angle closure.",
+    },
+  },
+  {
+    id: "q-293", objectiveId: "irisdev-anomalies", type: "Clinical differentiation", difficulty: "Hard",
+    stem: "Two infants present with leukocoria-adjacent iris findings. Infant A has near-total absence of the iris bilaterally. Infant B has thin strands of tissue crossing the pupil, attached at the iris collarette, found incidentally. What is the most appropriate next step for each?",
+    choices: [
+      { id: "a", text: "Both findings are benign and require no further evaluation" },
+      { id: "b", text: "Infant A (aniridia) requires urgent genetic testing and renal ultrasound for WAGR syndrome/Wilms tumor screening; Infant B (persistent pupillary membrane) typically requires only observation" },
+      { id: "c", text: "Both infants require identical urgent oncologic workup" },
+      { id: "d", text: "Infant B's finding is more urgent since strands crossing the pupil suggest active neovascularization" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — aniridia carries a genuine, urgent systemic risk (WAGR syndrome/Wilms tumor) that must not be overlooked.",
+      b: "Correct — aniridia (near-total iris absence) is strongly associated with WAGR syndrome and requires urgent genetic testing and renal ultrasound given the Wilms tumor risk; persistent pupillary membrane (iris strands crossing the pupil, attached at the collarette) is typically a benign, incidental finding from incomplete pupillary membrane regression requiring only observation.",
+      c: "Incorrect — these two findings carry very different levels of urgency; treating them identically would over-investigate the benign finding or, more dangerously, under-appreciate distinctions in workup approach.",
+      d: "Incorrect — persistent pupillary membrane strands are remnants of a normal developmental structure's incomplete regression, not neovascularization, and are typically benign.",
     },
   },
 ];
