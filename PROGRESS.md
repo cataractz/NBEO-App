@@ -5,6 +5,68 @@
 > no memory of this conversation and must be able to pick up from this file alone,
 > plus PROJECT_SPEC.md and the current nbeo-app.jsx.
 
+## READ THIS FIRST — session of 2026-08-18 (part 2): Blueprint objective dropdowns
+
+The user asked for the NBEO Blueprint page's topic bullets (e.g. under
+"Ametropia" → "Optics (Geometrical)" → "Refraction at single spherical/plane
+surfaces") to be expandable, showing the actual text of each numbered
+objective instead of just the `N obj.` count. They first attached a PDF
+that turned out to be just the 1-page summary blueprint table (area names +
+item-count ranges) — same info already in `CURRICULUM`, no objective text.
+After being told this, they attached the correct document: the real
+**"Part I ABS Exam Content Outline – Discipline-Based" PDF (44 pages)**,
+which lists every topic's lettered heading (A., B., C., …) with its
+numbered knowledge objectives (1., 2., 3., …) underneath, plus deeper
+lettered/roman-numeral sub-detail in places (a., i., ii., …).
+
+What was done:
+- Extracted the PDF's text with `pypdfium2` (pdfplumber/pdftotext were
+  broken in this environment — a `cryptography`/rust `_cffi_backend` import
+  panic and missing `poppler-utils` respectively — `pypdfium2`'s own text
+  extraction worked cleanly).
+- Wrote a parser (`parse_outline.py`, kept only in the session scratchpad,
+  not the repo) that walks the extracted text and recognizes three line
+  types: `Discipline (Sub): Area` section headers, `X. Topic name` lettered
+  topic headers, and `N. Objective text` numbered objectives. Everything
+  else (lettered/roman sub-bullets, wrapped continuation lines) folds into
+  whichever objective/topic is currently open, joined with `; ` for a new
+  sub-bullet marker or a plain space for line-wrap continuation — this
+  matches the file's own documented rule that `o:` only counts the
+  numbered (1,2,3…) level, not the deeper lettered/roman detail beneath it.
+- Parsed 60 sections / 266 topics / 996 numbered objectives — the *exact*
+  same 60/266 as the existing `CURRICULUM` array. Cross-checked every
+  topic by `(area, discipline)` pairing (not raw document order — the PDF
+  is discipline-grouped top-to-bottom, `CURRICULUM` is area-grouped, so a
+  positional check across the whole file gives false mismatches; grouping
+  by the `(area, discipline)` key first is required). Result: 266/266
+  topics matched, all `o` counts matched exactly except topics whose `o: 1`
+  has no numbered breakdown in the source (expected — see below).
+- Regenerated the `CURRICULUM` array with a new `objs: [...]` field added
+  to every topic (array of objective-text strings; `[]` when the topic's
+  single objective has no numbered breakdown in the source). Verified via
+  a Node script that every existing `area`/`major`/`range`/`d`/`n`/`o`
+  value is byte-identical to before — only `objs` was added, nothing else
+  changed.
+- Updated the `Blueprint` component: topic bullets with `objs.length > 0`
+  are now clickable (chevron replaces the static dot), toggling a nested
+  numbered list of the real objective text; topics with no breakdown stay
+  static, matching the source (the bullet name already *is* their one
+  objective).
+- Rebuilt and Playwright-tested `nbeo-app-preview.html` against the change
+  (screenshot-verified expand/collapse in both the Ametropia and Systemic
+  Health areas, including the 4-level-deep "Tissue types" topic under
+  Anatomy (Histology)); zero console errors.
+- Validated with `integrity_check.py` (unaffected — still 592/592/1402/310/266,
+  zero orphans/duplicates) and `audit_coverage.py` (still 266/266).
+- Updated `PROJECT_SPEC.md`'s "Known open questions" — the note about no
+  official source document ever being uploaded is now resolved and
+  replaced with what was done, and the `CURRICULUM` shape description now
+  documents the `objs` field.
+
+**If a future session adds a new topic to `CURRICULUM` by hand, it must
+include an `objs` array (real objective text, or `[]` if genuinely none)**
+— the Blueprint UI assumes every topic has this key.
+
 ## READ THIS FIRST — session of 2026-08-18: 266/266 (100%) COMPLETE
 
 **`audit_coverage.py` reports 266/266 topics built, 0 remaining.** This

@@ -40,226 +40,422 @@ const CURRICULUM = [
   // ============ MAJOR CATEGORY A ============
   { area: "Ametropia", major: AREA_A, range: [29, 39], sections: [
     { d: "Optics (Geometrical)", topics: [
-      { n: "Refraction at single spherical/plane surfaces", o: 7 }, { n: "Thin lenses", o: 6 },
-      { n: "Thick lenses", o: 4 }, { n: "Aberrations", o: 6 }, { n: "Stops, pupils, and ports", o: 3 },
-      { n: "Spherocylindrical lenses", o: 4 }, { n: "Thin prisms", o: 5 }, { n: "Ophthalmic and optical instruments", o: 1 },
+      { n: "Refraction at single spherical/plane surfaces", o: 7, objs: ["Curvature and sagitta", "Refractive index and rectilinear propagation", "Vergence and dioptric power", "Object-image relationships, including apparent depth", "Ray tracing, nodal point, and nodal ray", "Lateral (translinear) and angular magnification", "Snell’s law of refraction"] },
+      { n: "Thin lenses", o: 6, objs: ["Vergence: dioptric and effective power", "Object-image relationships", "Lateral (translinear) and angular magnification", "Thin lens systems", "Prismatic effect (Prentice’s rule and prism effectivity)", "Ray tracing, optical center, and optic axis"] },
+      { n: "Thick lenses", o: 4, objs: ["Cardinal points", "Vertex power and equivalent power", "Lateral (translinear) and angular magnification", "Reduced systems"] },
+      { n: "Aberrations", o: 6, objs: ["Spherical", "Coma", "Oblique astigmatism", "Curvature of field", "Distortion", "Chromatic (longitudinal and lateral)"] },
+      { n: "Stops, pupils, and ports", o: 3, objs: ["Entrance and exit pupils (size and location)", "Depth of focus, depth of field, hyperfocal distance", "Field of view and half illumination"] },
+      { n: "Spherocylindrical lenses", o: 4, objs: ["Location of foci, image planes, principal meridians, and circle of least confusion", "Obliquely crossed spherocylindrical lenses", "Transposition", "Prismatic effect"] },
+      { n: "Thin prisms", o: 5, objs: ["Unit of measurement (prism diopter)", "Prism deviation", "Combination of thin prisms", "Resolution of oblique prisms into horizontal and vertical components", "Total internal reflection"] },
+      { n: "Ophthalmic and optical instruments", o: 1, objs: [] },
     ]},
     { d: "Optics (Physical)", topics: [
-      { n: "Wave optics", o: 7 }, { n: "Interaction of light and matter", o: 5 },
+      { n: "Wave optics", o: 7, objs: ["Characteristics of wave motion", "Classifications of the electromagnetic spectrum", "Total and partial coherence", "Diffraction (single slit, circular aperture, limits of resolution, zone plates)", "Interference (double slit, multiple slits, thin film, anti-reflective coatings, holography)", "Scattering (Rayleigh vs. Tyndall)", "Dispersion"] },
+      { n: "Interaction of light and matter", o: 5, objs: ["Atomic energy levels, absorption, and emission line spectra", "Continuous spectra (black body radiator and gray body radiator characteristics)", "Fluorescence (photons, energy levels)", "Lasers (theory of operation, speckle pattern)", "Spectral transmission"] },
     ]},
     { d: "Optics (Physiological)", topics: [
-      { n: "Refractive states (emmetropia, myopia, hyperopia, astigmatism, presbyopia, anisometropia)", o: 3 },
-      { n: "Anomalies of refraction (aphakia, pseudophakia, aniseikonia)", o: 3 },
-      { n: "Schematic eye models", o: 6 }, { n: "Dioptrics of the eye", o: 5 },
-      { n: "Image quality", o: 6 }, { n: "Radiation and the eye", o: 6 },
+      { n: "Refractive states (emmetropia, myopia, hyperopia, astigmatism, presbyopia, anisometropia)", o: 3, objs: ["Epidemiology, history, and symptoms inventory", "Observation and recognition of clinical signs, and techniques and skills including determination of: a. Interpupillary distance; b. Visual acuity; c. Corneal curvature and thickness; d. Objective static and dynamic refractive status, including automatic refractive devices; e. Standard subjective refraction procedures, including astigmatic dials, crossed cylinders, stenopaic slit, fogging methods, bichrome and accommodation balance (equalization) techniques; f. Binocular subjective refraction procedures, including Turville infinity balance and vectographic (Polaroid) techniques; g. Cycloplegic subjective and objective techniques; h. Amplitude of accommodation; i. Trial lenses; j. PRA/NRA; k. Add powers; l. Refractive correction applications (e.g., LASIK)", "Management of refractive states: a. Optical; b. Surgical; c. Pharmacological; d. Myopia control"] },
+      { n: "Anomalies of refraction (aphakia, pseudophakia, aniseikonia)", o: 3, objs: ["Epidemiology, history, and symptom inventory", "Observation and recognition of clinical signs and phenomena associated with aphakia and pseudophakia: a. Magnification; b. Field of view; c. Spatial distortion; d. Convergence demands; e. Sensitivity to glare; f. Techniques and skills for determining, evaluating, and/or verifying: i. Types and characteristics of intraocular lenses and aphakic spectacle and contact lenses; ii. Intraocular lens power; iii. Special refraction techniques; iv. Aphakic lens prescriptions", "Observation and recognition of clinical signs, and techniques and skills associated with aniseikonia including: a. Detection of aniseikonia; b. Measurement of aniseikonia"] },
+      { n: "Schematic eye models", o: 6, objs: ["Dioptric components", "Cardinal points, entrance and exit pupils", "Ametropia: far point, near point, correction", "Accommodation: amplitude and effectivity", "Astigmatism, including correction", "Retinal image size, spectacle magnification, and relative spectacle magnification"] },
+      { n: "Dioptrics of the eye", o: 5, objs: ["Characteristics of components (curvature, thickness, separation, refractive indices, and axil length)", "Reference angles and axes", "Catoptric (Purkinje) images", "Retinal image size", "Optical function of the pupil"] },
+      { n: "Image quality", o: 6, objs: ["Aberrations (surgically induced, spherical, chromatic, coma, curvature, oblique astigmatism, distortion, wavefront sensing aberrometry)", "Diffraction", "Stray light", "Point and line spread functions", "Resolving power", "Modulation transfer function (Fourier optics)"] },
+      { n: "Radiation and the eye", o: 6, objs: ["Radiometry (radiant intensity, radiance, and irradiance)", "Photometry (luminosity function, luminous intensity, luminance, and illuminance, Lambertian surfaces- cosine laws)", "Spectral transmission of the ocular media", "Retinal illuminance", "Effects of incoherent radiation (e.g., infrared, visible, ultraviolet) on tissue: a. Mechanisms of damage; b. Wavelength, energy levels, thresholds for reactions; c. Ophthalmic applications (e.g., intense pulsed light therapy (IPL), corneal cross-linking); d. Protective measures", "Effects of coherent radiation (lasers) on tissue: a. Mechanisms of damage; b. Wavelength, energy levels, thresholds for reactions; c. Ophthalmic applications (argon, excimer, YAG, SLT, helium neon, holmium); d. Protective measures"] },
     ]},
   ]},
   { area: "Ophthalmic Optics / Spectacles", major: AREA_A, range: [17, 25], sections: [
-    { d: "Optics (Geometrical)", topics: [ { n: "Ophthalmic and optical instruments", o: 1 } ] },
-    { d: "Optics (Physical)", topics: [ { n: "Polarization", o: 5 } ] },
+    { d: "Optics (Geometrical)", topics: [
+      { n: "Ophthalmic and optical instruments", o: 1, objs: [] },
+    ]},
+    { d: "Optics (Physical)", topics: [
+      { n: "Polarization", o: 5, objs: ["Linearly polarized light", "Circular and elliptical polarization", "Polarization by reflection (glare reduction, Brewster’s law)", "Effects of scattering on polarization", "Transmission through successive polarizers (stress analysis, Malus’ law)"] },
+    ]},
     { d: "Optics (Ophthalmic)", topics: [
-      { n: "Physical characteristics of ophthalmic lenses", o: 5 }, { n: "Reflection", o: 7 },
-      { n: "Optical characteristics of ophthalmic lenses", o: 9 }, { n: "Ophthalmic prisms and prismatic effects", o: 4 },
-      { n: "Multifocal lenses", o: 8 }, { n: "Frame materials (physical/biological compatibility)", o: 1 },
-      { n: "Fittings, adjustment, specification, nomenclature of frames", o: 1 },
-      { n: "High-powered lens considerations (aspheric, high-index)", o: 1 },
-      { n: "Absorptive lenses", o: 4 }, { n: "Impact resistance", o: 5 },
-      { n: "Optical tolerances & physical requirements (FDA, ANSI Z80/Z87, OSHA)", o: 1 },
+      { n: "Physical characteristics of ophthalmic lenses", o: 5, objs: ["Geometry of lens surfaces (spherical, cylindrical, toric, aspheric)", "Base curves (form of lenses)", "Lens thickness (center, edge, gradients, iso-thickness curves)", "Specification of lens size and shape", "Materials (refractive index, dispersion, hardness, specific gravity)"] },
+      { n: "Reflection", o: 7, objs: ["Planar and spherical reflection", "Proportion of light reflected from a surface (Fresnel’s law)", "Focal power, focal length, and curvature", "Object-image relationships", "Magnification", "Lens/mirrors systems", "Ray tracing"] },
+      { n: "Optical characteristics of ophthalmic lenses", o: 9, objs: ["Locations of the relationships between the optic axis, optical center, geometric center, and major reference points", "Principles of corrected curve lens design", "Verification of lens prescriptions (lensometer, lens gauge, and hand neutralization)", "Writing and transposing lens prescriptions", "Effect of lens tilt (spheres and spherocylinders about a principal meridian)", "Effective power (for near and for changes in vertex distances)", "Spectacle lens processing", "Spectacle magnification; a. Shape and power factors; b. Iseikonic lens design", "Methods of remedying reflections and ghost images"] },
+      { n: "Ophthalmic prisms and prismatic effects", o: 4, objs: ["Thickness difference across a prism", "Prismatic effects in the periphery of a lens (spheres, spherocylinders)", "Decentration (prism from decentration, decentering to obtain prism, interpupillary distance)", "Correction of vertical prism effect: a. Slab off (front, back, top, bottom, reverse); b. Dissimilar segments; c. Prism segments; d. Multiple corrections; e. Contact lenses; f. Fresnel prisms; g. Fresnel Adds"] },
+      { n: "Multifocal lenses", o: 8, objs: ["Types (fused, 1-piece, progressive additions, and blended lenses)", "Methods of producing Add powers", "Segment center location", "Differential displacement (jump)", "Total displacement, horizontal and vertical imbalance", "Placement of distance and multifocal optical center", "Optical and physical characteristics of segments (design and calculations, progressive Adds, aberrations, surface characteristics)", "Specifying multifocal height, size, shape, and location of segment"] },
+      { n: "Frame materials (physical/biological compatibility)", o: 1, objs: [] },
+      { n: "Fittings, adjustment, specification, nomenclature of frames", o: 1, objs: [] },
+      { n: "High-powered lens considerations (aspheric, high-index)", o: 1, objs: [] },
+      { n: "Absorptive lenses", o: 4, objs: ["Specification of lens tints and absorptive coatings (including spectral transmission curves)", "Characteristics of photochromic lenses", "Relationship between lens thickness and spectral transmission", "Special occupational requirements"] },
+      { n: "Impact resistance", o: 5, objs: ["Degrees of resistance of ophthalmic lens materials", "Methods of rendering materials impact resistant", "Methods of verifying impact resistance", "Performance of materials upon, and after, impact", "Specifications of occupational safety lenses"] },
+      { n: "Optical tolerances & physical requirements (FDA, ANSI Z80/Z87, OSHA)", o: 1, objs: [] },
     ]},
   ]},
   { area: "Contact Lenses", major: AREA_A, range: [8, 14], sections: [
-    { d: "Optics (Geometrical)", topics: [ { n: "Ophthalmic and optical instruments", o: 1 } ] },
-    { d: "Optics (Ophthalmic)", topics: [ { n: "Optical characteristics of contact lenses", o: 9 } ] },
+    { d: "Optics (Geometrical)", topics: [
+      { n: "Ophthalmic and optical instruments", o: 1, objs: [] },
+    ]},
+    { d: "Optics (Ophthalmic)", topics: [
+      { n: "Optical characteristics of contact lenses", o: 9, objs: ["Surface characteristics of the lens and the cornea", "Specification of the lens (power, base curve, thickness, and edge characteristics)", "Effective power considerations of the contact lenses", "Tear-lens optical considerations", "Prismatic effects", "Fabrication, inspection, and verification", "Lens types and materials", "Optical filters (photochromic lenses)", "Optics of contact lenses: curves, zones, widths, and tear lens effects; sagittal depth; center edge thickness; flexure; asphericity and toric designs"] },
+    ]},
     { d: "Optics (Physiological)", topics: [
-      { n: "Basic theories/methods of fitting, CL selection and designs", o: 1 },
-      { n: "Patient selection and post-fitting complications", o: 1 },
+      { n: "Basic theories/methods of fitting, CL selection and designs", o: 1, objs: [] },
+      { n: "Patient selection and post-fitting complications", o: 1, objs: [] },
     ]},
     { d: "Pharmacology", topics: [
-      { n: "Preparations used with contact lenses", o: 2 },
-      { n: "Indications / contraindications / side effects / drug interactions", o: 1 },
+      { n: "Preparations used with contact lenses", o: 2, objs: ["Preserved and non-preserved solutions", "Drug delivery systems"] },
+      { n: "Indications / contraindications / side effects / drug interactions", o: 1, objs: [] },
     ]},
   ]},
   { area: "Low Vision", major: AREA_A, range: [5, 9], sections: [
     { d: "Optics (Ophthalmic and Physiological)", topics: [
-      { n: "Epidemiology (causes of visual impairment, classification)", o: 2 },
-      { n: "Examination and testing", o: 7 }, { n: "Management and rehabilitation", o: 3 },
+      { n: "Epidemiology (causes of visual impairment, classification)", o: 2, objs: ["Causes of visual impairment", "Classification"] },
+      { n: "Examination and testing", o: 7, objs: ["Visual acuity", "Special refraction techniques", "Visual fields", "Reading skills", "Effects of illumination", "Magnification determination", "In-office evaluation with low vision devices"] },
+      { n: "Management and rehabilitation", o: 3, objs: ["Optical management: a. Magnification, field of view, and working distance; b. Simple magnifiers; c. Telescopes; d. Loupes; e. Microscopes", "Electronic (digital) management: a. Magnification, field of view, and working distance", "Orientation and mobility"] },
     ]},
   ]},
   { area: "Accommodation / Vergence / Oculomotor Function", major: AREA_A, range: [10, 18], sections: [
     { d: "Optics (Physiological)", topics: [
-      { n: "Eye movements", o: 7 }, { n: "Anomalies and eye movements", o: 2 },
-      { n: "Accommodation and accommodative vergence", o: 3 }, { n: "Pupils", o: 5 },
+      { n: "Eye movements", o: 7, objs: ["Purpose of roles for vision", "Dynamics and kinematics", "Specification of direction of gaze and ocular orientation (torsion)", "Reflex movements, including compensatory movements (e.g., vestibulo-ocular reflex, optokinetic nystagmus)", "Small movements associated with steady fixation", "Versional movements (pursuits and saccades)", "Vergence movements (tonic, accommodative, including models of accommodative/vergence interaction, fusional and proximal)"] },
+      { n: "Anomalies and eye movements", o: 2, objs: ["Epidemiology, history, and symptom inventory", "Observation and recognition of clinical signs, and techniques and skills to test: a. Comitance; b. Deviations and measurements thereof; c. Diplopia; d. Motor fusion; e. Paralytic syndromes; f. Fixation disparity; g. Nystagmus"] },
+      { n: "Accommodation and accommodative vergence", o: 3, objs: ["Epidemiology, history, and symptom inventory", "Observation and recognition of clinical signs, and techniques and skills to test: a. Amplitude range, facility of accommodation; b. Analysis of accommodation and vergence relationships; c. Vision therapy procedures, demands, and challenges", "Biomechanics of accommodative reflexes"] },
+      { n: "Pupils", o: 5, objs: ["Purposes and roles for vision", "Dynamics of muscle action", "Biomechanics of pupillary reflexes", "Interrelationships between pupillary changes, accommodation, and convergence (the near reflex)", "Factors affecting pupil size"] },
     ]},
-    { d: "Pharmacology", topics: [ { n: "Autonomic and/or neuromuscular junction drugs", o: 8 } ] },
+    { d: "Pharmacology", topics: [
+      { n: "Autonomic and/or neuromuscular junction drugs", o: 8, objs: ["Drugs affecting neurohumoral transmission: autonomic and somatic motor nervous systems", "Adrenergic agonists", "Adrenergic antagonists", "Cholinergic agonists", "Cholinergic antagonists", "Cholinesterase inhibitors", "Ganglionic agonists and antagonists", "Neuromuscular transmission agonists and antagonists"] },
+    ]},
   ]},
   { area: "Amblyopia / Strabismus", major: AREA_A, range: [9, 17], sections: [
-    { d: "Optics (Physiological)", topics: [ { n: "Sensory anomalies of binocular vision / strabismus", o: 2 } ] },
+    { d: "Optics (Physiological)", topics: [
+      { n: "Sensory anomalies of binocular vision / strabismus", o: 2, objs: ["Epidemiology, history, and symptom inventory", "Observation and recognition of clinical signs, and techniques and skills to test: a. Monocular fixation patterns; b. Amblyopia; c. Sensory fusion and stereopsis; d. Anomalous correspondence; e. Suppression"] },
+    ]},
   ]},
   { area: "Perceptual Function / Color Vision", major: AREA_A, range: [10, 18], sections: [
     { d: "Optics (Physiological)", topics: [
-      { n: "Anomalies secondary to acquired neurological impairment", o: 2 }, { n: "Space perception", o: 4 },
-      { n: "Form perception", o: 4 }, { n: "Light perception", o: 4 }, { n: "Motion perception", o: 3 },
-      { n: "Temporal perception", o: 6 }, { n: "Entopic phenomena", o: 4 }, { n: "Color perception", o: 11 },
-      { n: "Basic psychophysical methods and theory", o: 2 }, { n: "Psychophysical scaling methods and theory", o: 1 },
-      { n: "Signal detection methods and theory", o: 1 },
+      { n: "Anomalies secondary to acquired neurological impairment", o: 2, objs: ["Adaptations to clinical techniques and tests to allow the assessment of visual abilities of patients with acquired systemic conditions (CVA, multiple sclerosis, etc.) and traumatic brain injury (TBI), which results in neurological impairment and subsequent vision perceptual dysfunction: a. Noncomitancy; b. Field loss and neglect; c. Loss of accommodation; d. Loss of fusion; e. Vision perception-motor deficiencies", "Modification of optometric management for the patient with acquired neurological impairment"] },
+      { n: "Space perception", o: 4, objs: ["Direction and depth discrimination (monocular and binocular cues, oculocentric and egocentric localization)", "Characteristics of sensory function (binocular interactions including summation, binocular suppression, and rivalry; corresponding points including horopter criteria)", "Disturbances of perceived direction and distance (aniseikonia and amblyopia)", "Sensory-motor interactions (fixation disparity, past pointing, visually guided behavior, body posture and perceived orientation, and self-motion)"] },
+      { n: "Form perception", o: 4, objs: ["Static visual acuity (including test configurations, various acuity tasks, and factors influencing acuity including blur, intensity, and contrast); specification of visual acuity", "Spatial contrast sensitivity function (including factors influencing the function)", "Illusions, constancies, and figure-ground relations", "Simultaneous contrast and spatial interactions (Mach bands)"] },
+      { n: "Light perception", o: 4, objs: ["Detection characteristics at the absolute light threshold (including spectral, spatial, and temporal aspects)", "Brightness difference thresholds at various adaptation levels (Weber’s and DeVries-Rose laws); specification of contrast", "Dark and light adaptation processes and theories", "Spatial and temporal summation characteristics (Ricco’s, Piper’s, and Bloch’s laws)"] },
+      { n: "Motion perception", o: 3, objs: ["Factors involved in the detection of real and apparent motion, detection of displacements", "Motion after-effects", "Dynamic visual acuity, visual performances with a moving object, and visual performances with a moving observer"] },
+      { n: "Temporal perception", o: 6, objs: ["Critical flicker fusion frequency, including factor influencing test object (size, location, and adaptation level)", "Subfusional flicker phenomena (Bartley brightness enhancement)", "Successive contrast and masking", "Temporal contrast sensitivity function", "Stabilized retinal images and monocular suppression (Troxler effect)", "Saccadic suppression"] },
+      { n: "Entopic phenomena", o: 4, objs: ["Characteristics and origin of various phenomena (involving the cornea, lens, and vitreous)", "Vascular and circulatory phenomena (Purkinje tree, capillary circulation)", "Phenomena associated with central vision (Maxwell spot, Haidinger brushes)", "Phenomena associated with retinal distention or other forms of retinal activity (Moore lightning streaks, blue arcs of the retina, phosphenes)"] },
+      { n: "Color perception", o: 11, objs: ["Chromatic discrimination (hue and saturation) for normal and defective color vision", "Color mixture and appearance", "Color contrast, constancy, and adaptation", "Color specification and colorimetry (CIE)", "Spectral sensitivity of normal and defective color vision", "Mechanisms of color deficiencies", "Inherited anomalies of color vision: a. Classification; b. Inheritance patterns; c. Color vision tests (e.g., pseudoisochromatic tests, arrangement tests, anomaloscope)", "Acquired anomalies of color vision: a. Classification; b. Etiology; c. Color vision tests", "Conditions for color vision testing", "Societal implication of color vision anomalies: a. School; b. Vocational requirements; c. Patient interest", "Patient management strategies: a. Counseling; b. Special aids"] },
+      { n: "Basic psychophysical methods and theory", o: 2, objs: ["Measurement of absolute and difference thresholds", "Threshold determination (e.g., limits, adjustments, constant stimuli, forced choice, yes/no)"] },
+      { n: "Psychophysical scaling methods and theory", o: 1, objs: [] },
+      { n: "Signal detection methods and theory", o: 1, objs: [] },
     ]},
   ]},
   { area: "Visual and Human Development", major: AREA_A, range: [6, 10], sections: [
     { d: "Optics (Physiological)", topics: [
-      { n: "Vision development in the infant/child", o: 11 }, { n: "Effects of early environmental restrictions", o: 7 },
-      { n: "Changes in vision with aging", o: 13 }, { n: "Vision perceptual-motor skills", o: 1 },
-      { n: "Anomalies of child development", o: 4 },
+      { n: "Vision development in the infant/child", o: 11, objs: ["Spatial vision", "Refractive error", "Color vision", "Spectral transmission of the ocular media", "Accommodation and convergence", "Light sensitivity", "Binocular vision and stereopsis", "Form reproduction and perception", "Temporal vision", "Visual fields", "Motion perception"] },
+      { n: "Effects of early environmental restrictions", o: 7, objs: ["Plasticity of the system", "Animal models", "Light and pattern deprivation", "Monocular and binocular deprivation", "Refractive error", "Strabismus", "Cataract"] },
+      { n: "Changes in vision with aging", o: 13, objs: ["Spatial vision", "Refractive error", "Color vision", "Spectral transmission of the ocular media", "Accommodation and convergence", "Light sensitivity", "Glare (disability and discomfort)", "Dark adaptation, glare recovery", "Visual fields", "Temporal vision", "Oculomotor system", "Motion perception", "Visual attention"] },
+      { n: "Vision perceptual-motor skills", o: 1, objs: [] },
+      { n: "Anomalies of child development", o: 4, objs: ["Epidemiology: history and signs/symptoms manifest by patients in the age ranges noted below in (2)", "Clinical techniques and tests to assess the development of an infant (birth to 18 months), toddler (18-36 months), preschooler (3-5 years), and school-age child", "Vision problems which may be associated with deviations from normal patterns of development", "Tests used by optometrists to determine a child’s level of visual-perceptual development, such as: a. Visual attention and discrimination; b. Visual-motor integration; c. Intersensory integration; d. Bilateral integration and laterality"] },
     ]},
   ]},
 
   // ============ MAJOR CATEGORY B ============
   { area: "Lids / Lashes / Lacrimal System / Ocular Adnexa / Orbit", major: AREA_B, range: [20, 28], sections: [
     { d: "Anatomy (Gross)", topics: [
-      { n: "Eyelid", o: 6 }, { n: "Eyebrow", o: 1 }, { n: "Lacrimal system", o: 6 },
-      { n: "Orbit", o: 4 }, { n: "Extraocular muscles", o: 5 }, { n: "Blood supply", o: 3 },
+      { n: "Eyelid", o: 6, objs: ["Anatomic boundaries", "Layers", "Muscles (actions)", "Glands (secretions, functions)", "Blood supply and drainage, lymphatic drainage", "Innervation"] },
+      { n: "Eyebrow", o: 1, objs: [] },
+      { n: "Lacrimal system", o: 6, objs: ["Lacrimal gland (structure, innervation, blood supply)", "Accessory lacrimal glands (location, function)", "Distribution of tears (role of eyelids)", "Drainage of tears; nasolacrimal duct (cellular lining); lacrimal papillae (location); lacrimal puncta; canaliculi (relationship to Horner muscle); lacrimal sac (relationship to medial palpebral ligament, Horner muscle, orbicularis oculi; septum orbitale)", "Lacrimal fossa (bony structure)", "Nasolacrimal canal (bony composition, relationship to maxillary sinus)"] },
+      { n: "Orbit", o: 4, objs: ["Contents (extraocular muscles, nerves, blood vessels, fat compartments, fascia)", "Anatomical relationships among orbital structures", "Bones of the orbit", "Foramina and openings of the orbit (location, contents)"] },
+      { n: "Extraocular muscles", o: 5, objs: ["Names", "Origins", "Insertions", "Innervations, blood supply", "Relationship to other orbital structures"] },
+      { n: "Blood supply", o: 3, objs: ["Branches of internal and external carotid arteries related to the orbit, eyelid, and upper face", "Branches of the internal and external jugular veins", "Dural sinuses"] },
     ]},
     { d: "Anatomy (Developmental)", topics: [
-      { n: "Orbit", o: 2 }, { n: "Extraocular muscles", o: 4 }, { n: "Eyelid", o: 5 }, { n: "Lacrimal apparatus", o: 3 },
+      { n: "Orbit", o: 2, objs: ["Development of bones of orbit (closure of sutures)", "Abnormalities (faulty development of facial bones)"] },
+      { n: "Extraocular muscles", o: 4, objs: ["Condensation of mesenchyme (bilateral condensation)", "Motor innervation development", "Insertion of extraocular primordia into anterior sclera", "Late development"] },
+      { n: "Eyelid", o: 5, objs: ["Tissue origin", "Lid folds", "Fusion of eyelid", "Ectodermal derivatives (skin, glands, conjunctiva)", "Mesodermal derivatives (tarsus, orbital septum, orbicularis oculi, aponeurosis of levator, smooth muscle)"] },
+      { n: "Lacrimal apparatus", o: 3, objs: ["Tissue origin of lacrimal glands (main, accessory)", "Tissue origin of lacrimal and nasal passages", "Abnormalities"] },
     ]},
     { d: "Physiology", topics: [
-      { n: "Eyelids", o: 5 }, { n: "Tears and lacrimal apparatus", o: 6 }, { n: "Extraocular muscles", o: 6 },
+      { n: "Eyelids", o: 5, objs: ["Normal closure of eyelids (forced, spontaneous)", "Blink reflexes (spontaneous, menace, auditory, touch, dazzle)", "Role of eyelids in production, distribution, and drainage of tears", "Protective functions of eyelids", "Purposes and roles for vision"] },
+      { n: "Tears and lacrimal apparatus", o: 6, objs: ["Functions of tears", "Production of tears; a. Sources; b. Neural control", "Composition of tears; a. Electrolytes; b. Low molecular weight organics (glucose, amino acids); c. High molecular weight organics (proteins, lipids, glycoproteins); d. Cells; e. Physiological variations (e.g., aging, opening vs. closed eyes, contact lens wear) in tear constituents", "Tear film distribution, structure, and stability", "Elimination of tears: a. Nasolacrimal drainage apparatus; b. Evaporation and absorption", "Physico-chemical properties of tears: a. Osmotic pressure; b. pH and buffering; c. Temperature and viscosity"] },
+      { n: "Extraocular muscles", o: 6, objs: ["Vestibular control mechanisms", "Supranuclear control of eye movements", "Agonist-antagonist relationships", "Primary, secondary, and tertiary actions", "Fields of action", "Conduction and contraction"] },
     ]},
-    { d: "Pathology", topics: [ { n: "Orbit, adnexa, lacrimal system", o: 4 } ] },
+    { d: "Pathology", topics: [
+      { n: "Orbit, adnexa, lacrimal system", o: 4, objs: ["Epidemiology, history, and symptom inventory", "Observation, inspection, recognition of signs, and techniques and skills", "Diagnostic testing (applications and interpretations)", "Pathophysiology and diagnosis"] },
+    ]},
     { d: "Pharmacology", topics: [
-      { n: "General principles", o: 4 }, { n: "Anti-infective agents", o: 1 }, { n: "Anti-inflammatory agents", o: 2 },
-      { n: "Aesthetic/cosmetic agents", o: 1 }, { n: "Indications/contraindications/side effects/drug interactions", o: 1 },
+      { n: "General principles", o: 4, objs: ["Factors affecting drug bioavailability", "Routes of administration", "Mechanisms of action", "Preservatives"] },
+      { n: "Anti-infective agents", o: 1, objs: [] },
+      { n: "Anti-inflammatory agents", o: 2, objs: ["Steroids", "Non-steroidals"] },
+      { n: "Aesthetic/cosmetic agents", o: 1, objs: [] },
+      { n: "Indications/contraindications/side effects/drug interactions", o: 1, objs: [] },
     ]},
   ]},
   { area: "Conjunctiva / Cornea / Refractive Surgery", major: AREA_B, range: [34, 50], sections: [
-    { d: "Anatomy (Gross)", topics: [ { n: "Cornea", o: 10 }, { n: "Conjunctiva", o: 7 } ] },
-    { d: "Anatomy (Developmental)", topics: [ { n: "Conjunctiva", o: 1 }, { n: "Cornea", o: 5 } ] },
-    { d: "Physiology", topics: [ { n: "Cornea", o: 10 } ] },
-    { d: "Pathology", topics: [ { n: "Cornea / External disease", o: 6 } ] },
+    { d: "Anatomy (Gross)", topics: [
+      { n: "Cornea", o: 10, objs: ["Normal dimensions including diameter, radii of curvature (anterior and posterior) and thickness (central and peripheral)", "Epithelium (histology and ultrastructure)", "Basal lamina (relationship to epithelium)", "Anterior limiting lamina (Bowman layer): relationship to stroma, basal lamina, and epithelium", "Stroma (composition, ultrastructure)", "Posterior limiting lamina (Descemet membrane): relationship to stroma and endothelium", "Endothelium (composition, ultrastructure)", "Limbus", "Innervation", "Regeneration"] },
+      { n: "Conjunctiva", o: 7, objs: ["Location", "Composition (layers, cell types, glands, Palisades of Vogt)", "Relationship to tarsal plate, extraocular muscles, sclera, fascia, bulbi (Tenon capsule), cornea", "Blood supply and venous drainage, lymphatic drainage", "Innervation", "Plica semilunaris (composition)", "Caruncle (composition)"] },
+    ]},
+    { d: "Anatomy (Developmental)", topics: [
+      { n: "Conjunctiva", o: 1, objs: ["Ectodermal specialization forming conjunctiva and glands"] },
+      { n: "Cornea", o: 5, objs: ["Inductive mechanisms", "Ectodermal components (epithelium, primary stroma)", "Mesenchymal components (waves)", "Corneal nerve development (origin)", "Factors affecting corneal size, curvature, transparency"] },
+    ]},
+    { d: "Physiology", topics: [
+      { n: "Cornea", o: 10, objs: ["Physical characteristics (water content, protein content, cells, resistance to trauma)", "Permeability characteristics of various layers", "Metabolic characteristics of various layers", "Theories of corneal transparency", "Factors influencing corneal thickness/hydration (osmolarity of tears, integrity of epithelium and endothelium, epithelial and endothelial pumps)", "Physiological parameters necessary to maintain corneal integrity (oxygen level, glucose level, pH, etc.)", "Epithelial regeneration (normal and response to trauma)", "Physiological characteristics of corneal nerves", "Aging changes of the cornea", "Corneal hysteresis"] },
+    ]},
+    { d: "Pathology", topics: [
+      { n: "Cornea / External disease", o: 6, objs: ["Epidemiology, genetics, history, and symptom inventory", "Observation, inspection, recognition of signs, and techniques and skills", "Diagnostic and genetic testing (applications and interpretations)", "Pathophysiology and diagnosis", "Contact lens selection and post-fitting complications", "Corneal surgery and procedures: a. Refractive (e.g., LASIK, PRK, SMILE, intracorneal ring segments); b. Non-refractive (e.g., penetrating keratoplasty, DMEK, DSAEK, cross-linking, superficial keratectomy)"] },
+    ]},
     { d: "Pharmacology", topics: [
-      { n: "General principles", o: 4 }, { n: "Ocular anesthetics", o: 1 }, { n: "Antihistamines", o: 1 },
-      { n: "Anti-inflammatory agents", o: 2 }, { n: "Lubricants and tear substitutes", o: 1 }, { n: "Dyes", o: 1 },
-      { n: "Hyperosmotic agents", o: 1 }, { n: "Mast cell stabilizers", o: 1 }, { n: "Vasoconstrictors", o: 1 },
-      { n: "Immune modulators", o: 1 }, { n: "Anti-infective agents", o: 1 }, { n: "Nutritional supplements", o: 1 },
-      { n: "Biologics", o: 1 }, { n: "Indications/contraindications/side effects/drug interactions", o: 1 },
+      { n: "General principles", o: 4, objs: ["Factors affecting drug bioavailability", "Routes of administration", "Mechanisms of action", "Preservatives"] },
+      { n: "Ocular anesthetics", o: 1, objs: [] },
+      { n: "Antihistamines", o: 1, objs: [] },
+      { n: "Anti-inflammatory agents", o: 2, objs: ["Steroids", "Non-steroidals"] },
+      { n: "Lubricants and tear substitutes", o: 1, objs: [] },
+      { n: "Dyes", o: 1, objs: ["Topical diagnostic agents"] },
+      { n: "Hyperosmotic agents", o: 1, objs: [] },
+      { n: "Mast cell stabilizers", o: 1, objs: [] },
+      { n: "Vasoconstrictors", o: 1, objs: [] },
+      { n: "Immune modulators", o: 1, objs: [] },
+      { n: "Anti-infective agents", o: 1, objs: [] },
+      { n: "Nutritional supplements", o: 1, objs: [] },
+      { n: "Biologics", o: 1, objs: [] },
+      { n: "Indications/contraindications/side effects/drug interactions", o: 1, objs: [] },
     ]},
   ]},
   { area: "Lens / Cataract / IOL / Pre- and Post-Operative Care", major: AREA_B, range: [7, 13], sections: [
-    { d: "Anatomy (Gross)", topics: [ { n: "Lens, zonule", o: 6 } ] },
-    { d: "Anatomy (Developmental)", topics: [ { n: "Lens, zonules", o: 8 } ] },
-    { d: "Physiology", topics: [ { n: "Lens", o: 9 } ] },
-    { d: "Pathology", topics: [ { n: "Lens / Cataract", o: 6 } ] },
+    { d: "Anatomy (Gross)", topics: [
+      { n: "Lens, zonule", o: 6, objs: ["Zonule", "Location of lens", "Epithelium (capsule, ultrastructure)", "Cortex (composition of lens fibers, ultrastructure)", "Nuclei (various names and locations)", "Sutures (location)"] },
+    ]},
+    { d: "Anatomy (Developmental)", topics: [
+      { n: "Lens, zonules", o: 8, objs: ["Zonules development", "Tissue origin", "Tissue induction and interaction (effect on development of vitreous, iris, cornea, retina)", "Mechanism of lens fiber orientation", "Stages of lens development (lens placode, lens pit, lens vesicles)", "Stages of lens fiber development", "Development nuclei (embryonic, fetal, infantile)", "Zones of development of lens epithelium"] },
+    ]},
+    { d: "Physiology", topics: [
+      { n: "Lens", o: 9, objs: ["Functions of lens", "Composition of lens", "Difference in composition between lens and aqueous", "Metabolism of lens (various pathways essential to the lens)", "Types of lens proteins", "Factors which regulate size and solubility of lens proteins (vitamin C, glutathione)", "Theories of lens transparency", "Mitotic activity of lens epithelium", "Aging changes in composition of the lens"] },
+    ]},
+    { d: "Pathology", topics: [
+      { n: "Lens / Cataract", o: 6, objs: ["Epidemiology, history, and symptom inventory", "Observation, inspection, recognition of signs, and techniques and skills", "Diagnostic testing (applications and interpretations)", "Pathophysiology and diagnosis: a. Cataract as a manifestation of ocular and systemic disease", "Cataract and clear lens extraction surgery: a. Indications; b. Pre-operative measures; c. Intraocular lens selection; d. Procedure; e. Complications", "YAG capsulotomy: a. Indications; b. Procedure; c. Complications"] },
+    ]},
     { d: "Pharmacology", topics: [
-      { n: "General principles", o: 4 }, { n: "Anti-inflammatory agents", o: 2 }, { n: "Anti-infective agents", o: 1 },
-      { n: "Lubricants and tear substitutes", o: 1 }, { n: "Dyes", o: 2 },
-      { n: "Indications/contraindications/side effects/drug interactions", o: 1 },
+      { n: "General principles", o: 4, objs: ["Factors affecting drug bioavailability", "Routes of administration", "Mechanisms of action", "Preservatives"] },
+      { n: "Anti-inflammatory agents", o: 2, objs: ["Steroids", "Non-steroidals"] },
+      { n: "Anti-infective agents", o: 1, objs: [] },
+      { n: "Lubricants and tear substitutes", o: 1, objs: [] },
+      { n: "Dyes", o: 2, objs: ["Topical diagnostic agents", "Intraoperative agents"] },
+      { n: "Indications/contraindications/side effects/drug interactions", o: 1, objs: [] },
     ]},
   ]},
   { area: "Episclera / Sclera / Anterior Uvea", major: AREA_B, range: [16, 24], sections: [
     { d: "Anatomy (Gross)", topics: [
-      { n: "Sclera", o: 8 }, { n: "Anterior chamber and angle", o: 8 }, { n: "Iris", o: 12 },
-      { n: "Posterior chamber", o: 2 }, { n: "Ciliary body", o: 11 },
+      { n: "Sclera", o: 8, objs: ["Size", "Radius of curvature", "Thickness", "Color", "Relationship to conjunctiva, Tenon capsule, suprachoroidal space", "Emissaria (contents, location)", "Composition", "Lamina cribrosa (structure)"] },
+      { n: "Anterior chamber and angle", o: 8, objs: ["Shape and volume", "Boundaries", "Diameter and depth", "Trabecular meshwork (components, ultrastructure)", "Juxtacanalicular tissue (components, ultrastructure)", "Schlemm canal (location, size, ultrastructure of wall, afferent and efferent connections)", "Scleral spur (composition, location)", "Schwalbe line (composition, location)"] },
+      { n: "Iris", o: 12, objs: ["Gross landmarks, zones", "Diameter", "Coloration (factors controlling)", "Anterior border (composition, ultrastructure)", "Stroma (composition)", "Sphincter muscle (type, composition, innervation)", "Anterior epithelium (ultrastructure)", "Dilator muscle (type, composition, innervation)", "Posterior epithelium (relationship to lens, anterior, epithelium, pupil margin)", "Blood supply, venous drainage", "Innervation", "Size and location of pupil"] },
+      { n: "Posterior chamber", o: 2, objs: ["Size and volume", "Boundaries"] },
+      { n: "Ciliary body", o: 11, objs: ["Gross morphology", "Dimensions", "Relationships to sclera, anterior chamber, iris, posterior chamber, lens, and retina", "Pars plana (location, components)", "Pars plicata (location, components)", "Stroma (components)", "Ciliary muscle (components, relations, actions, innervation)", "Pigmented epithelium (basal lamina, ultrastructure)", "Non-pigmented epithelium (basal lamina, ultrastructure, relationship to pigmented epithelium)", "Blood supply and venous drainage", "Innervation"] },
     ]},
     { d: "Anatomy (Developmental)", topics: [
-      { n: "Sclera", o: 3 }, { n: "Anterior chamber and angle", o: 5 }, { n: "Iris/Pupil", o: 6 },
-      { n: "Posterior chamber", o: 1 }, { n: "Ciliary body", o: 3 },
+      { n: "Sclera", o: 3, objs: ["Inductive mechanisms", "Tissue origin", "Comparison with cornea"] },
+      { n: "Anterior chamber and angle", o: 5, objs: ["Creation of anatomical space", "Factors that promote growth of anterior chamber", "Creation of angle (atrophy theory, cleavage theory, reorganization theory, rarefaction theory)", "Differentiation of Schlemm canal, scleral spur, trabecular meshwork", "Endothelial membrane"] },
+      { n: "Iris/Pupil", o: 6, objs: ["Development of iris stroma (anterior leaf, posterior leaf)", "Development of pars iridica retinae (epithelial layer)", "Development of dilator and sphincter muscles", "Pupillary membrane (atrophy)", "Cilio-iridic circulation", "Development of iris pigmentation"] },
+      { n: "Posterior chamber", o: 1, objs: [] },
+      { n: "Ciliary body", o: 3, objs: ["Tissue origin (mesoderm, neural crest)", "Development of pars ciliaris retinae (epithelial layers)", "Development of ciliary processes, ciliary muscles, ciliary vessels"] },
     ]},
-    { d: "Physiology", topics: [ { n: "Uvea", o: 4 } ] },
-    { d: "Pathology", topics: [ { n: "Uvea, Sclera/Episclera", o: 4 } ] },
+    { d: "Physiology", topics: [
+      { n: "Uvea", o: 4, objs: ["Functions of ciliary body", "Functions of iris", "Functions of choroid", "Uveal blood flow: choroid, ciliary body, iris (unique characteristics of each, functions of each)"] },
+    ]},
+    { d: "Pathology", topics: [
+      { n: "Uvea, Sclera/Episclera", o: 4, objs: ["Epidemiology, history, and symptom inventory", "Observation, inspection, recognition of signs, and techniques and skills", "Diagnostic testing (applications and interpretations)", "Pathophysiology and diagnosis"] },
+    ]},
     { d: "Pharmacology", topics: [
-      { n: "General principles", o: 4 }, { n: "Mydriatics and cycloplegics", o: 1 }, { n: "Miotics", o: 1 },
-      { n: "Anti-inflammatory agents", o: 2 }, { n: "Lubricants and tear substitutes", o: 1 }, { n: "Dyes", o: 2 },
-      { n: "Vasoconstrictors", o: 1 }, { n: "Indications/contraindications/side effects/drug interactions", o: 1 },
+      { n: "General principles", o: 4, objs: ["Factors affecting drug bioavailability", "Routes of administration", "Mechanisms of action", "Preservatives"] },
+      { n: "Mydriatics and cycloplegics", o: 1, objs: [] },
+      { n: "Miotics", o: 1, objs: [] },
+      { n: "Anti-inflammatory agents", o: 2, objs: ["Steroids", "Non-steroidals"] },
+      { n: "Lubricants and tear substitutes", o: 1, objs: [] },
+      { n: "Dyes", o: 2, objs: ["Topical diagnostic agents", "Intravenous agents"] },
+      { n: "Vasoconstrictors", o: 1, objs: [] },
+      { n: "Indications/contraindications/side effects/drug interactions", o: 1, objs: [] },
     ]},
   ]},
   { area: "Vitreous / Retina / Choroid", major: AREA_B, range: [17, 25], sections: [
-    { d: "Anatomy (Gross)", topics: [ { n: "Choroid", o: 9 }, { n: "Vitreous", o: 8 }, { n: "Retina", o: 7 } ] },
-    { d: "Anatomy (Developmental)", topics: [ { n: "Choroid", o: 3 }, { n: "Vitreous", o: 3 }, { n: "Retina", o: 7 } ] },
-    { d: "Physiology", topics: [ { n: "Vitreous", o: 5 }, { n: "Retina", o: 11 } ] },
-    { d: "Pathology", topics: [ { n: "Retina / Vitreous", o: 4 } ] },
+    { d: "Anatomy (Gross)", topics: [
+      { n: "Choroid", o: 9, objs: ["Extent", "Thickness", "Relationship to lamina fusca of sclera", "Choriocapillaris (ultrastructure, type of capillaries)", "Stroma", "Blood supply", "Venous drainage", "Innervation", "Bruch membrane (location, composition)"] },
+      { n: "Vitreous", o: 8, objs: ["Volume", "Shape", "Attachments to retina and lens (ultrastructure)", "Patellar fossa (location)", "Anterior hyaloid (location)", "Posterior hyaloid (location)", "Cortex (composition)", "Hyaloid canal (location, origin)"] },
+      { n: "Retina", o: 7, objs: ["Layers (components of each ultrastructure)", "Relationship between retinal pigment epithelium and Bruch membrane", "Relationship between retinal pigment epithelium and photoreceptor outer segments", "Synaptic connections within retina", "Glial cells (name, location, function)", "Blood supply", "Anatomical areas (location, size, composition) of area centralis, parafovea, fovea, foveola, macula lutea, ora serrata (ultrastructure)"] },
+    ]},
+    { d: "Anatomy (Developmental)", topics: [
+      { n: "Choroid", o: 3, objs: ["Tissue origin (paraxial mesoderm, neural crest cells)", "Development of choroidal vasculature (3 stages)", "Development of Bruch membrane"] },
+      { n: "Vitreous", o: 3, objs: ["Primary vitreous (hyaloid canal, tissue origin, tissue characteristics)", "Secondary vitreous (tissue origin, tissue characteristics)", "Tertiary vitreous (tissue origin, tissue characteristics, hyaloid vasculature remnants)"] },
+      { n: "Retina", o: 7, objs: ["Development of optic cup", "Analogies between development of retina and central nervous system", "Fetal fissure (formation, function, fusion, failure to fuse)", "Retinal differentiation (stages I, II, III, proliferation, migration, differentiation)", "Macular differentiation", "Retinal circulation development (hyaloid system, central retinal artery/vein, hyaloid vasculature remnants)", "Postnatal events"] },
+    ]},
+    { d: "Physiology", topics: [
+      { n: "Vitreous", o: 5, objs: ["Functions", "Compositions", "Metabolism", "Aging changes in composition", "Physical characteristics (volume, water content, transparency)"] },
+      { n: "Retina", o: 11, objs: ["Composition of disc outer segments", "Formation of disc outer segments (disc renewal, disc shedding)", "Composition of visual pigments", "Formation of visual pigments", "Stages of visual cycle", "Photoreceptor electrophysiology (membrane potentials, dark current role of sodium, calcium, etc.)", "Retinal neurotransmitters", "Function of bipolar, horizontal, amacrine and ganglion cells (receptive fields)", "Retinal neural mechanisms of color vision (spatial, temporal, and chromatic)", "Physiological relationship in the choroid and the retina, including retinal metabolism", "Retinal blood flow (unique characteristics, dual supply, functions)"] },
+    ]},
+    { d: "Pathology", topics: [
+      { n: "Retina / Vitreous", o: 4, objs: ["Epidemiology, genetics, history, and symptom inventory", "Observation, inspection, recognition of signs, and techniques and skills", "Diagnostic and genetic testing (applications and interpretations)", "Pathophysiology and diagnosis"] },
+    ]},
     { d: "Pharmacology", topics: [
-      { n: "General principles", o: 4 }, { n: "Anti-inflammatory agents", o: 2 }, { n: "Anti-infective agents", o: 1 },
-      { n: "Dyes", o: 2 }, { n: "Nutritional supplements", o: 1 },
-      { n: "Indications/contraindications/side effects/drug interactions", o: 1 },
+      { n: "General principles", o: 4, objs: ["Factors affecting drug bioavailability", "Routes of administration", "Mechanisms of action", "Preservatives"] },
+      { n: "Anti-inflammatory agents", o: 2, objs: ["Steroids", "Non-steroidals"] },
+      { n: "Anti-infective agents", o: 1, objs: [] },
+      { n: "Dyes", o: 2, objs: ["Topical diagnostic agents", "Intravenous agents"] },
+      { n: "Nutritional supplements", o: 1, objs: [] },
+      { n: "Indications/contraindications/side effects/drug interactions", o: 1, objs: [] },
     ]},
   ]},
   { area: "Optic Nerve / Neuro-Ophthalmic Pathways", major: AREA_B, range: [14, 22], sections: [
     { d: "Anatomy (Gross)", topics: [
-      { n: "Ocular and orbital nerves", o: 3 }, { n: "Optic nerve", o: 6 }, { n: "Visual pathway", o: 5 },
+      { n: "Ocular and orbital nerves", o: 3, objs: ["Cranial nerves I, III, IV, V, VI, VII (intracranial and extracranial course, branches, functions, tissue innervated)", "Parasympathetic nerves (course, branches, tissue innervated)", "Sympathetic nerves (course, branches, tissue innervated)"] },
+      { n: "Optic nerve", o: 6, objs: ["Surface features", "Prelaminar portion (composition, blood supply)", "Laminar portion (composition, blood supply)", "Retrolaminar portion (composition, blood supply)", "Central retinal artery and vein (location)", "Optic disc/cup"] },
+      { n: "Visual pathway", o: 5, objs: ["Localization of retinal fibers along visual pathway: optic nerve, chiasm, optic tract, lateral geniculate body, optic radiations, visual cortex", "Layers of lateral geniculate body (afferents, efferents)", "Layers and areas of visual cortex", "Blood supply", "Anatomy related to visual pathology"] },
     ]},
-    { d: "Anatomy (Developmental)", topics: [ { n: "Optic nerve and visual pathway", o: 4 } ] },
+    { d: "Anatomy (Developmental)", topics: [
+      { n: "Optic nerve and visual pathway", o: 4, objs: ["Developmental stages of lower visual pathway, before lateral geniculate body (differences crossed and uncrossed fibers)", "Myelination of the visual pathway (lower visual pathways vs. upper visual pathway)", "Relationship between development of upper visual pathway and central vision", "Physiological cupping"] },
+    ]},
     { d: "Physiology", topics: [
-      { n: "Neurophysiology", o: 9 }, { n: "Visual pathway", o: 8 }, { n: "Pupillary pathways", o: 3 },
+      { n: "Neurophysiology", o: 9, objs: ["Integration of nerve signals (e.g., synaptic processes, reflexes, feedback, adaptation, and habituation)", "Sensory coding (e.g., receptive field concept)", "Somatosensory system", "Auditory system", "Vestibular system", "Motor pathways", "Autonomic nervous systems", "Significance of evoked potentials, CT and PET scanning, and MRI", "Plasticity"] },
+      { n: "Visual pathway", o: 8, objs: ["Function of lateral geniculate body", "Receptive fields of cells in lateral geniculate body (relationship to color vision, binocularity, space perception, etc.)", "Function of visual cortex", "Receptive field properties (single cell properties)", "Functional organization", "Physiology of binocular vision", "Mechanism of feature detection", "Gross electrical potentials; a. EOG; b. ERG; c. VEP (VER)"] },
+      { n: "Pupillary pathways", o: 3, objs: ["Sympathetic pathways to iris", "Parasympathetic pathway to iris", "Functional relationships between pupillary pathways and central nervous system"] },
     ]},
-    { d: "Pathology", topics: [ { n: "Neuro-Ophthalmic disorders", o: 4 } ] },
+    { d: "Pathology", topics: [
+      { n: "Neuro-Ophthalmic disorders", o: 4, objs: ["Epidemiology, history, and symptom inventory", "Observation, inspection, recognition of signs, and techniques and skills", "Diagnostic testing (applications and interpretations)", "Pathophysiology and diagnosis"] },
+    ]},
     { d: "Pharmacology", topics: [
-      { n: "General principles", o: 4 }, { n: "Mydriatics and cycloplegics", o: 1 }, { n: "Miotics", o: 1 },
-      { n: "Anti-inflammatory agents", o: 2 }, { n: "Indications/contraindications/side effects/drug interactions", o: 1 },
+      { n: "General principles", o: 4, objs: ["Factors affecting drug bioavailability", "Routes of administration", "Mechanisms of action", "Preservatives"] },
+      { n: "Mydriatics and cycloplegics", o: 1, objs: [] },
+      { n: "Miotics", o: 1, objs: [] },
+      { n: "Anti-inflammatory agents", o: 2, objs: ["Steroids", "Non-steroidals"] },
+      { n: "Indications/contraindications/side effects/drug interactions", o: 1, objs: [] },
     ]},
   ]},
   { area: "Glaucoma", major: AREA_B, range: [13, 21], sections: [
     { d: "Anatomy (Gross)", topics: [
-      { n: "Anterior chamber and angle", o: 1 }, { n: "Ciliary body", o: 1 }, { n: "Choroid", o: 1 },
-      { n: "Vitreous", o: 1 }, { n: "Retina", o: 1 }, { n: "Optic nerve", o: 1 }, { n: "Cornea", o: 1 }, { n: "Lens", o: 1 },
+      { n: "Anterior chamber and angle", o: 1, objs: [] },
+      { n: "Ciliary body", o: 1, objs: [] },
+      { n: "Choroid", o: 1, objs: [] },
+      { n: "Vitreous", o: 1, objs: [] },
+      { n: "Retina", o: 1, objs: [] },
+      { n: "Optic nerve", o: 1, objs: [] },
+      { n: "Cornea", o: 1, objs: [] },
+      { n: "Lens", o: 1, objs: [] },
     ]},
     { d: "Anatomy (Developmental)", topics: [
-      { n: "Anterior chamber and angle", o: 5 }, { n: "Iris/Pupil", o: 6 }, { n: "Ciliary body", o: 3 },
-      { n: "Retina", o: 7 }, { n: "Optic nerve and visual pathway", o: 4 },
+      { n: "Anterior chamber and angle", o: 5, objs: ["Creation of anatomical space", "Factors that promote growth of anterior chamber", "Creation of angle (atrophy theory, cleavage theory, reorganization theory, rarefaction theory)", "Differentiation of Schlemm canal, scleral spur, trabecular meshwork", "Endothelial membrane"] },
+      { n: "Iris/Pupil", o: 6, objs: ["Development of iris stroma (anterior leaf, posterior leaf)", "Development of pars iridica retinae (epithelial layer)", "Development of dilator and sphincter muscles", "Pupillary membrane (atrophy)", "Cilio-iridic circulation", "Development of iris pigmentation"] },
+      { n: "Ciliary body", o: 3, objs: ["Tissue origin (mesoderm, neural crest)", "Development of pars ciliaris retinae (epithelial layers)", "Development of ciliary processes, ciliary muscles, ciliary vessels"] },
+      { n: "Retina", o: 7, objs: ["Development of optic cup", "Analogies between development of retina and central nervous system", "Fetal fissure (formation, function, fusion, failure to fuse)", "Retinal differentiation (stages I, II, III, proliferation, migration, differentiation)", "Macular differentiation", "Retinal circulation development (hyaloid system, central retinal artery/vein, hyaloid vasculature remnants)", "Postnatal events"] },
+      { n: "Optic nerve and visual pathway", o: 4, objs: ["Developmental stages of lower visual pathway, before lateral geniculate body (differences between crossed and uncrossed fibers)", "Myelination of the visual pathway (lower visual pathway vs. upper visual pathway)", "Relationship between development of upper visual pathway and central vision", "Physiological cupping"] },
     ]},
-    { d: "Physiology", topics: [ { n: "Intraocular pressure", o: 6 }, { n: "Aqueous", o: 6 } ] },
-    { d: "Pathology", topics: [ { n: "Glaucoma", o: 5 } ] },
+    { d: "Physiology", topics: [
+      { n: "Intraocular pressure", o: 6, objs: ["Methods of measurement", "Normative values", "Factors controlling aqueous production and outflow", "Nervous system regulation of IOP", "Factors influencing IOP (body position, corneal thickness, blood pressure)", "Corneal hysteresis"] },
+      { n: "Aqueous", o: 6, objs: ["Functions of aqueous", "Volume, osmolarity, viscosity", "Formation (ultrafiltration, active transport)", "Factors influencing rate of flow", "Composition", "Blood aqueous barriers (location, ultrastructure, function)"] },
+    ]},
+    { d: "Pathology", topics: [
+      { n: "Glaucoma", o: 5, objs: ["Epidemiology, history, and symptom inventory", "Observation, inspection, recognition of signs, and techniques and skills", "Diagnostic testing (applications and interpretations)", "Pathophysiology and diagnosis", "Glaucoma surgery: a. Indications; b. Mechanisms; c. Co-management"] },
+    ]},
     { d: "Pharmacology", topics: [
-      { n: "General principles", o: 4 }, { n: "Antiglaucoma agents", o: 1 }, { n: "Hyperosmotic agents", o: 1 },
-      { n: "Mydriatics and cycloplegics", o: 1 }, { n: "Indications/contraindications/side effects/drug interactions", o: 1 },
+      { n: "General principles", o: 4, objs: ["Factors affecting drug bioavailability", "Routes of administration", "Mechanisms of action", "Preservatives"] },
+      { n: "Antiglaucoma agents", o: 1, objs: [] },
+      { n: "Hyperosmotic agents", o: 1, objs: [] },
+      { n: "Mydriatics and cycloplegics", o: 1, objs: [] },
+      { n: "Indications/contraindications/side effects/drug interactions", o: 1, objs: [] },
     ]},
   ]},
   { area: "Systemic Health", major: AREA_B, range: [55, 75], sections: [
     { d: "Anatomy (Gross)", topics: [
-      { n: "Head and neck", o: 11 }, { n: "Thorax", o: 4 }, { n: "Abdomen/Pelvis", o: 4 }, { n: "Systemic circulation of blood and lymph", o: 1 },
+      { n: "Head and neck", o: 11, objs: ["Skull (e.g., bones, sutures, fossae, foramina)", "Superficial and deep arteries, veins, and lymphatics", "Muscles of facial expression and mastication", "Muscles of the neck", "Peripheral nerve distributions", "Cervical triangles and their contents, root of neck, thyroid and parathyroid glands", "Salivary glands", "Nose", "Paranasal sinuses and their relations to the orbit and orbital contents", "Ear (e.g., outer ear, middle ear, walls, muscles, inner ear)", "Dural venous sinuses; meninges; cerebrospinal fluid"] },
+      { n: "Thorax", o: 4, objs: ["Lungs (e.g., lobes)", "Pulmonary circulation", "Heart (e.g., surfaces)", "Superior mediastinum (e.g., trachea, esophagus)"] },
+      { n: "Abdomen/Pelvis", o: 4, objs: ["Liver (e.g., concept of portal system)", "Accessory digestive organs (e.g., gallbladder, pancreas)", "Other internal organs (e.g., spleen, kidney)", "Gastrointestinal system (e.g., stomach)"] },
+      { n: "Systemic circulation of blood and lymph", o: 1, objs: [] },
     ]},
     { d: "Anatomy (Neuroanatomy)", topics: [
-      { n: "Spinal cord", o: 3 }, { n: "Autonomic nervous system", o: 3 }, { n: "Medulla", o: 10 }, { n: "Pons", o: 6 },
-      { n: "Midbrain", o: 5 }, { n: "Diencephalon", o: 4 }, { n: "Cerebrum", o: 3 }, { n: "Cerebellum", o: 1 }, { n: "Blood supply", o: 2 },
+      { n: "Spinal cord", o: 3, objs: ["Gray matter (e.g., nuclei, local reflex arcs)", "White matter (e.g., ascending pathways, descending pathways)", "Spinal nerves and sensory ganglia"] },
+      { n: "Autonomic nervous system", o: 3, objs: ["Parasympathetic (course, branches, functions, tissue innervated)", "Sympathetic (course, branches, functions, tissue innervated)", "Neurotransmitters (e.g., types, locations)"] },
+      { n: "Medulla", o: 10, objs: ["Level of motor decussation", "Level of sensory decussation", "Level of inferior olives", "Level of open medulla", "Dorsal and ventral cochlear nuclei", "Vestibular nuclei", "Glossopharyngeal nerve", "Vagus nerve", "Spinal accessory nerve", "Hypoglossal nerve"] },
+      { n: "Pons", o: 6, objs: ["Low or caudal pons", "Abducens nerve", "Mid pons", "Trigeminal nerve", "Facial nerve", "Vestibulocochlear nerve"] },
+      { n: "Midbrain", o: 5, objs: ["Level of inferior colliculus", "Trochlear nerve", "Level of superior colliculus", "Oculomotor nerve", "Level of pretectum (e.g., light reflex)"] },
+      { n: "Diencephalon", o: 4, objs: ["Dorsal thalamus", "Hypothalamus", "Epithalamus", "Subthalamus"] },
+      { n: "Cerebrum", o: 3, objs: ["Gray matter (e.g., cytoarchitecture (layers), Brodmann cortical areas)", "White matter (e.g., projections, internal capsule, optic radiations, commissural fibers, associational fibers)", "Functions"] },
+      { n: "Cerebellum", o: 1, objs: [] },
+      { n: "Blood supply", o: 2, objs: ["Surface arteries", "Circle of Willis and its branches"] },
     ]},
     { d: "Anatomy (Histology)", topics: [
-      { n: "Generalized cell", o: 5 }, { n: "Tissue types", o: 4 }, { n: "Organ systems", o: 7 }, { n: "Neurohistology", o: 4 },
+      { n: "Generalized cell", o: 5, objs: ["Molecular components, unit membrane", "Organelles (e.g., plasma membrane, endoplasmic reticulum)", "Inclusions (e.g., pigments)", "Nucleus", "Cytoskeleton (e.g., microtubules)"] },
+      { n: "Tissue types", o: 4, objs: ["Epithelium; a. Lining epithelium; i. Simple, stratified, pseudostratified; ii. Squamous, cuboid, columnar; iii. Surface specializations (e.g., microvilli); iv. Cell junctions (e.g., zonula occludens); v. Basal lamina; b. Secretory epithelium; i. Unicellular vs. multicellular; ii. Exocrine, endocrine, paracrine, autocrine; iii. Secretory unit, mode of secretion; iv. Connective tissue element", "Connective tissue; a. Connective tissue proper; i. Types: dense, loose, elastic, reticular; ii. Cells; iii. Fibers (e.g., collagen); iv. Matrix; b. Specialized connective tissues; i. Blood; a. Plasma; b. Cells; c. Platelets; ii. Bone; iii. Cartilage and synovial joints; iv. Fat: multilocular, unilocular", "Muscle; a. Smooth; b. Striated; c. Cardiac; d. Receptors (e.g., muscle spindles)", "Nervous tissue; a. Neuron; b. Ganglia; c. Neural coverings (e.g., myelin, perineurium); d. Neuroglia; e. Synapse; f. Terminals"] },
+      { n: "Organ systems", o: 7, objs: ["Integumentary system; a. Skin (e.g., layers, cell types, hair); b. Cutaneous glands: sebaceous, sweat; c. Receptors; i. Free nerve endings; ii. Encapsulated nerve endings (e.g., Pacinian corpuscles)", "Cardiovascular system; a. Heart; i. Tissue layers; ii. Valves; iii. Conduction system; b. General histology of blood vessels; i. Capillaries; ii. Arteries; iii. Arterioles; iv. Veins", "Lymphatic system; a. Lymph vessels; b. Lymph nodes; c. Spleen; d. Thymus; e. Tonsils; f. Lymphatic tissue associated with mucous membrane", "Respiratory system; a. Nose; b. Paranasal air sinuses; c. Nasopharynx; d. Larynx; e. Trachea; f. Lungs; g. Blood vessels associated with the respiratory system", "Digestive system; a. Oral cavity; b. Esophagus; c. Stomach; d. Small intestine; e. Large intestine; f. Salivary glands; g. Pancreas; h. Liver, gallbladder; i. Blood vessels associated with the digestive system", "Urinary system; a. Kidney; b. Ureter, bladder, urethra; c. Blood vessels associated with the urinary system", "Endocrine system; a. Thyroid; b. Islets of Langerhans; c. Pituitary; d. Adrenal gland; e. Gonads"] },
+      { n: "Neurohistology", o: 4, objs: ["Neural plate, neural fold, neural groove, neural tube, neural vesicles", "Derivatives of neural crest (e.g., ganglia, adrenal medulla)", "Layers of neural tube (e.g., ependymal, mantle, marginal)", "Degeneration and regeneration in the nervous system"] },
     ]},
     { d: "Biochemistry", topics: [
-      { n: "Cellular biochemistry", o: 5 }, { n: "Proteins", o: 2 }, { n: "Bioenergetics and energy storage", o: 8 },
-      { n: "Carbohydrate biochemistry", o: 7 }, { n: "Lipid biochemistry", o: 5 }, { n: "Molecular biology", o: 13 }, { n: "Nutrition", o: 5 },
+      { n: "Cellular biochemistry", o: 5, objs: ["Compartmentalization", "Cell organelles", "Intracellular/extracellular", "Cell communication", "Bonds and molecular interactions"] },
+      { n: "Proteins", o: 2, objs: ["Structure and types; a. Alpha amino acids, peptide bond; b. Primary, secondary, tertiary, and quaternary structure; c. Multimers; d. Globular/fibrous; e. Enzymes; f. Antibodies; g. Connective-tissue/collagen; h. Hemoglobins", "Mechanism of enzyme action; a. Biocatalysis; b. Activation energy; c. Michaelis-Menten model (e.g., Michaels-Menten equation, Lineweaver-Burk plot); d. Allosteric interaction/positive and negative feedback modulation; e. Reversible covalent modification/enzyme cascades; f. Proteolytic activation; g. Stimulation and inhibition by control/regulatory proteins"] },
+      { n: "Bioenergetics and energy storage", o: 8, objs: ["Free energy/entropy/enthalpy/equilibrium", "Endergonic, exergonic, and coupled reactions", "Oxidation-reduction", "pH and Henderson-Hasselbalch equation, biological buffers", "ATP and other nucleotide phosphates", "NADH and FADH", "NADPH", "Acetyl CoA"] },
+      { n: "Carbohydrate biochemistry", o: 7, objs: ["Structure and function; a. Monosaccharides, oligosaccharides, polysaccharides; b. Glycosaminoglycans; c. Proteoglycans; d. Glycoproteins", "Glycolysis/glucose metabolism", "TCA cycle", "Pentose phosphate pathway", "Gluconeogenesis", "Glycogen synthesis, storage, and breakdown/utilization", "Electron transport system and oxidative phosphorylation; a. Mitochondrial structure/function/DNA; b. Electron transport/pH coupling"] },
+      { n: "Lipid biochemistry", o: 5, objs: ["Structure and function; a. Fatty acids/eicosanoids; b. Triacylglycerols; c. Phosphoglycerides; d. Sphingolipids; e. Sterol derivatives; f. Isoprenoids", "Digestion, absorption, and transport of lipids (e.g., types of lipoproteins)", "Fatty acid metabolism (e.g., beta-oxidation, ketone bodies, gluconeogenesis)", "Cholesterol and steroid metabolism", "Membrane biochemistry; a. Unit membrane/lipid bilayer; b. Fluid mosaic model; c. Membrane proteins and lipids/structure and function"] },
+      { n: "Molecular biology", o: 13, objs: ["DNA structure and function; a. Deoxynucleotides and synthesis; b. Base pairing/double helix; c. Genetic code/introns, exons; d. Chromosome structure", "RNA Structure and function; a. Ribonucleotides and synthesis; b. Messenger RNA synthesis and function; c. Ribosomal RNA synthesis and function; d. Transfer RNA synthesis and function", "DNA replication", "Protein synthesis; a. Ribosome function; b. Initiation, elongation, and termination; c. Post-translational medication/protein sorting", "Gene expression and regulation", "Mutations and repair", "Oncogenes/proto-oncogenes/tumor suppressor genes", "Tools of recombinant DNA technology (e.g., polymerase chain reaction, chromosome analysis, Southern blot)", "Molecular therapy (e.g., gene therapy, anti-sense therapy)", "Cell cycle", "Genomics", "Proteomics", "Apoptosis"] },
+      { n: "Nutrition", o: 5, objs: ["Digestion of proteins, carbohydrates, and lipids", "Essential amino acids", "Vitamins; a. Classification; b. Functions", "Minerals", "Oxygen toxicity/antioxidants/control of free radicals, peroxide, and superoxides"] },
     ]},
     { d: "Physiology", topics: [
-      { n: "Cellular functions", o: 5 }, { n: "Respiration", o: 6 }, { n: "Gastrointestinal activity", o: 4 }, { n: "Muscle", o: 5 },
-      { n: "Body fluids", o: 3 }, { n: "Renal system and body fluids", o: 7 }, { n: "Circulatory system", o: 10 },
-      { n: "Endocrine system", o: 10 }, { n: "Reproductive system", o: 2 }, { n: "Electrophysiology and the nerve cell", o: 7 },
+      { n: "Cellular functions", o: 5, objs: ["Cytoplasm and cytoskeleton (e.g., microtubules, microfilaments)", "Functions of organelles (e.g., endoplasmic reticulum)", "Intracellular and extracellular environment", "Membrane potential and transport mechanisms", "Membrane receptors and postreceptor events"] },
+      { n: "Respiration", o: 6, objs: ["Mechanics of breathing", "Gas exchange in the lungs", "Diffusion of oxygen and carbon dioxide", "Oxygen transport and hypoxia, carbon dioxide transport", "Regulation of respiratory rate", "Acid-base balance"] },
+      { n: "Gastrointestinal activity", o: 4, objs: ["Absorption", "Motility", "Nervous and hormonal regulation", "Associated structures (e.g., liver, pancreas, salivary glands)"] },
+      { n: "Muscle", o: 5, objs: ["Neuromuscular junctions", "Conduction and contraction", "Types of contraction (e.g., isometric, isotonic)", "Reflex arc (e.g., muscle spindles, Golgi tendon organ)", "Smooth muscle"] },
+      { n: "Body fluids", o: 3, objs: ["Composition of body fluids", "Control systems of the body (e.g., exchange of water and electrolytes between body compartments)", "Regulation of volume and osmolarity of extracellular fluid"] },
+      { n: "Renal system and body fluids", o: 7, objs: ["Nephron, tubular reabsorption, and secretion", "Regulation of glomerular filtration", "Functional characteristics of renal blood vessels", "Renal regulatory mechanisms", "Renal control of blood pressure and water balance", "Renal control of plasma sodium and potassium levels", "Regulation of acid-base balance"] },
+      { n: "Circulatory system", o: 10, objs: ["Mechanical events of cardiac cycle", "Electrical activity of the heart (e.g., pacemaker potentials, action potentials, and spread of the activity)", "Significance of EKG", "Hemodynamics (e.g., pressure and resistance relationships)", "Regulation of blood flow and pressure (e.g., autonomic)", "Lymph formation and function", "Blood and its functions (e.g., hemostasis)", "Hemodynamic patterns (resistance, transmural pressure, flow rate, critical closing pressures)", "Autoregulation", "Autonomic nervous system control"] },
+      { n: "Endocrine system", o: 10, objs: ["Hormones (e.g., synthesis, mechanism of action)", "Hypothalamic control of pituitary gland", "Pituitary control of endocrine glands", "Functions and regulations of adrenal cortex (e.g., glucocorticoids, mineral corticoids)", "Functions and regulation of adrenal medulla (e.g., epinephrine)", "Functions and regulation of thyroid gland (e.g., TSH, T3, T4)", "Functions and regulations of pancreatic insulin and glucagon", "Regulation of blood sugar levels", "Functions and regulation of vitamin D, parathyroid hormone, and calcitonin", "Functions and regulation of endorphin, enkephalin and growth hormone blood levels"] },
+      { n: "Reproductive system", o: 2, objs: ["Functions and regulation of reproductive hormones", "Pregnancy, birth, and lactation"] },
+      { n: "Electrophysiology and the nerve cell", o: 7, objs: ["Basis of resting potential (e.g., ionic balance, transport mechanisms)", "Basis of action potential (e.g., ionic balance)", "Action potential conduction", "Synapses, classification, transmission, neurotransmitters", "Membrane physiology, receptors, membrane channels", "Inhibitory and excitatory postsynaptic potentials (including concepts of spatial and temporal summation)", "Strength-duration curve"] },
     ]},
     { d: "Immunology", topics: [
-      { n: "Antigens, chemistry and origin", o: 1 }, { n: "Antibodies", o: 4 }, { n: "Antigen-antibody interactions", o: 1 },
-      { n: "Complement chemistry, function, pathways", o: 1 }, { n: "Cytokines, origin and function", o: 1 },
-      { n: "Nonspecific immunity", o: 5 }, { n: "Specific immunity", o: 5 }, { n: "Tissue transplantation / graft rejection", o: 1 },
-      { n: "Autoimmunity", o: 1 }, { n: "Tumor immunology", o: 1 },
+      { n: "Antigens, chemistry and origin", o: 1, objs: [] },
+      { n: "Antibodies", o: 4, objs: ["Chemical structure", "Classification", "Immunological functions", "Genetics/clonal selection"] },
+      { n: "Antigen-antibody interactions", o: 1, objs: [] },
+      { n: "Complement chemistry, function, pathways", o: 1, objs: [] },
+      { n: "Cytokines, origin and function", o: 1, objs: [] },
+      { n: "Nonspecific immunity", o: 5, objs: ["Anatomical barriers", "Phagocytic cell types and inflammation", "Role of complement and antibody", "Interferon, lysozyme", "Natural killer cells"] },
+      { n: "Specific immunity", o: 5, objs: ["Cell types, markers, and function", "Cell-cell interactions in the immune response", "Humoral immunity", "Cellular immunity", "Primary and secondary immune responses"] },
+      { n: "Tissue transplantation / graft rejection", o: 1, objs: [] },
+      { n: "Autoimmunity", o: 1, objs: [] },
+      { n: "Tumor immunology", o: 1, objs: [] },
     ]},
     { d: "Microbiology", topics: [
-      { n: "Bacteriology", o: 9 }, { n: "Virology", o: 7 }, { n: "Mycology", o: 3 }, { n: "Parasitology", o: 2 },
+      { n: "Bacteriology", o: 9, objs: ["Eukaryotic vs. prokaryotic cells", "Bacterial cell structures and cell wall morphology; a. Biochemical composition; b. Gram (+) vs. Gram (-) characteristics; c. Function in pathogenesis", "Physiological processes of bacterial growth; a. Life cycle; b. Anaerobic vs. aerobic; c. Spore formation", "Genetic mechanisms of bacteria", "Normal body flora", "Disease states, transmission, pathogenic mechanisms, symptoms, diagnosis, and immunity of infections by: a. Gram (+) and Gram (-) cocci and rods; b. Spirochetes; c. Actinomycetes; d. Mycobacteria; e. Chlamydia; f. Rickettsia; g. Mycoplasma", "Laboratory isolation, culture, and identification of bacteria", "Procedures for antibiotic susceptibility testing", "Quality control/sterilization and disinfection"] },
+      { n: "Virology", o: 7, objs: ["Virus particle chemistry and morphology", "Classification scheme for viruses; a. DNA vs. RNA types; b. Double-stranded vs. single-stranded; c. Envelopes", "Genetic mechanisms of viruses", "Viral replication in host cells; a. DNA and RNA viruses, with or without envelopes", "Disease states, transmission, pathogenic mechanisms, symptoms, diagnosis, and immunity of infections by viruses", "Laboratory isolation, culture, and identification of viruses", "Virus-like structures (e.g., prions)"] },
+      { n: "Mycology", o: 3, objs: ["Biology of fungi; a. Yeast and mold morphology; b. Asexual and sexual reproduction/structures", "Disease states, transmission, pathogenic mechanisms, symptoms, diagnosis, and immunity of infections by: a. Superficial mycoses; b. Cutaneous mycoses; c. Subcutaneous mycoses; d. Systemic mycoses; e. Opportunistic yeasts and molds", "Laboratory isolation, culture, and identification of fungi"] },
+      { n: "Parasitology", o: 2, objs: ["Disease states, life cycles, transmission, pathogenic mechanisms, symptoms, diagnosis, and immunity of infections by protozoans, trematodes, cestodes, nematodes and arthropods", "Laboratory identification of parasites"] },
     ]},
     { d: "Pathology", topics: [
-      { n: "General health", o: 10 }, { n: "Inflammation and repair", o: 6 }, { n: "Immunologic system", o: 4 },
-      { n: "Host defenses and responses to infection", o: 3 }, { n: "Cellular disease", o: 3 }, { n: "Musculoskeletal system", o: 4 },
-      { n: "Integumentary system", o: 7 }, { n: "Head and neck", o: 6 }, { n: "Genetic principles and disorders", o: 4 },
-      { n: "Neoplasia", o: 6 }, { n: "Hematopoietic and lymphoid system", o: 4 }, { n: "Respiratory system", o: 6 },
-      { n: "Gastrointestinal system", o: 4 }, { n: "Cardiovascular system", o: 5 }, { n: "Endocrine/Metabolic system", o: 4 },
-      { n: "Nervous system and neuromuscular diseases", o: 4 }, { n: "Renal and urogenital system", o: 4 },
-      { n: "Reproductive system", o: 6 }, { n: "Nutrition", o: 4 }, { n: "Liver and biliary tract", o: 5 },
-      { n: "Mental illness and behavioral disorders", o: 5 }, { n: "Congenital/Hereditary conditions", o: 5 },
-      { n: "Anomalies of child development", o: 1 }, { n: "Anomalies of the aging adult", o: 1 },
+      { n: "General health", o: 10, objs: ["Epidemiology", "Detailed history with regards to differential diagnosis of fatigue, weight loss, fever, headache, dizziness, and malaise", "Presentations involving abnormal body habitus and demeanor", "Physical developmental norms and standards for all ages", "Common systemic side effects of medications", "Principles of basic cardiac life support", "Preventive medicine", "Medical laboratory tests for screening", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Inflammation and repair", o: 6, objs: ["Vascular and cellular changes in acute inflammation", "Causes of histological changes in chronic inflammation", "Causes and features of granulomatous inflammation", "Resolution of acute and chronic inflammation", "Events and local factors affecting wound healing and repair", "Systemic factors affecting the rate of wound healing"] },
+      { n: "Immunologic system", o: 4, objs: ["Epidemiology", "Symptoms and signs of immunologic conditions; a. Hypersensitivity disorders (Type I, II, III, IV); b. Autoimmune diseases (e.g., systemic lupus erythematosus, sarcoidosis, reactive arthritis); c. Immunodeficiency diseases (e.g., AIDS)", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Host defenses and responses to infection", o: 3, objs: ["PMN, macrophage and eosinophil function", "Chemotaxis, phagocytosis, and bacterial activity of these cells", "Role of antibody in phagocytosis and destruction of microorganisms"] },
+      { n: "Cellular disease", o: 3, objs: ["Cell injury (reversible and irreversible)", "Morphological and functional changes associated with cell aging, injury, or death (by necrosis or apoptosis)", "Cell cycle"] },
+      { n: "Musculoskeletal system", o: 4, objs: ["Epidemiology", "Symptoms and signs of the various arthritic syndromes (e.g., JRA, RA, ankylosing spondylitis)", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Integumentary system", o: 7, objs: ["Epidemiology", "Skin manifestation of systemic disorders", "Skin lesions in the phakomatoses", "Common dermatoses, including allergic manifestations", "Benign, premalignant, and malignant skin lesions", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Head and neck", o: 6, objs: ["Epidemiology", "Symptoms and signs of diseases of the nasopharynx, sinuses, salivary glands, lymph nodes, carotid and temporal arteries, skin, and temporomandibular joint", "Auscultation of carotid arteries, skull and orbits for bruits and venous hum", "Potential significance of dysarthria, dysphagia, dysphonia, and hoarseness", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Genetic principles and disorders", o: 4, objs: ["Chromosomal disorders (e.g., Down Syndrome)", "Monogenic disorders; a. Autosomal dominant; b. Autosomal recessive; c. X-linked", "Multifactor disorders", "Mitochondrial disorders"] },
+      { n: "Neoplasia", o: 6, objs: ["Histogenesis of neoplasms", "Classification of neoplasms", "Causes of neoplasms", "Differences between benign and malignant tumors", "Effects of tumor on host, oncogenes, agents", "Genetics of neoplasia"] },
+      { n: "Hematopoietic and lymphoid system", o: 4, objs: ["Epidemiology", "Symptoms and signs of common blood disorders; a. Non-neoplastic disorders of blood cells; b. Neoplastic disorders of blood cells; c. Non-neoplastic disorders of lymph nodes; d. Neoplastic disorders of lymph nodes", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Respiratory system", o: 6, objs: ["Epidemiology", "Symptoms and signs of respiratory disorders; a. Chronic obstructive pulmonary disease (COPD), emphysema, asthma, etc.; b. Infectious diseases of the lung; c. Neoplastic diseases of the lung; d. Interstitial diseases, including pneumoconiosis", "Significance of common respiratory symptoms (e.g., cough, hemoptysis, wheezing, shortness of breath)", "Symptoms and signs of anaphylaxis", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Gastrointestinal system", o: 4, objs: ["Epidemiology", "Symptoms and signs of common gastrointestinal disorders; a. Diseases of the esophagus (e.g., reflux, motility, disorders); b. Disorders of the stomach (e.g., gastritis, ulcers); c. Disorders of the intestines and colon (e.g., enteritis, colitis); d. Neoplastic disorders of the gastrointestinal tract; e. Diseases of the liver, biliary tract, and pancreas", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Cardiovascular system", o: 5, objs: ["Epidemiology", "Risk factors for atherosclerotic heart disease", "Symptoms and signs of cardiovascular disease; a. Congestion, edema; b. Hemorrhage, shock; c. Thromboembolism; d. Systemic hypertension; e. Atherosclerosis; f. Aneurysms; g. Vasculitis; h. Coronary artery disease; i. Hypertensive heart disease; j. Bacterial infections and their nonsuppurative sequelae (e.g., rheumatic fever, glomerulonephritis, infective endocarditis); k. Cardiomyopathies; l. Congestive heart failure", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Endocrine/Metabolic system", o: 4, objs: ["Epidemiology", "Symptoms and signs of endocrine disorders; a. Diabetes; b. Hyperthyroidism (e.g., Graves disease); c. Hypothyroidism; d. Goiters; e. Hyperparathyroidism; f. Hypoparathyroidism; g. Hyperpituitarism; h. Hypopituitarism; i. Hypercortisolism (e.g., Cushing disease); j. Hypocortisolism (e.g., Addison disease); k. Disorders of adrenal medulla (e.g., pheochromocytoma)", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Nervous system and neuromuscular diseases", o: 4, objs: ["Epidemiology", "Symptoms and signs associated with non-ocular neurological conditions; a. Cerebrovascular diseases; b. Headaches; c. Infectious diseases of the central nervous system; d. Nervous system neoplasms; e. Muscular atrophy, muscular dystrophy; f. Demyelinating diseases; g. Leukodystrophies, gangliosidoses; h. Neurodegenerative diseases (e.g., Alzheimer disease, Parkinson disease); i. Trauma, closed head injuries; j. Autoimmune disorders (e.g., myasthenia gravis)", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Renal and urogenital system", o: 4, objs: ["Epidemiology", "Symptoms and signs of urogenital and renal disorders; a. Acute renal failure; b. Chronic renal failure; c. Glomerulonephritis; d. Pyelonephritis; e. Nephrotic syndrome; f. Diabetic nephropathy; g. Neoplasms of the urinary tract; h. Sexually transmitted diseases; i. Cystitis", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Reproductive system", o: 6, objs: ["Epidemiology", "Pregnancy; a. Normal physiological changes; b. Pathological changes", "Complications of pregnancy (e.g., pre-eclampsia, eclampsia)", "Implication of breast feeding", "Diagnostic testing and imaging", "Diseases/disorders; a. Neoplasms (including breast cancer); b. Disorders of the menstrual cycle; c. Disorders of the prostate; d. Erectile dysfunction"] },
+      { n: "Nutrition", o: 4, objs: ["Epidemiology", "Symptoms and signs of nutritional abnormalities; a. Malabsorption; b. Alcoholism; c. Vitamin deficiencies and toxicities; d. Trace minerals; e. Eating disorders", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Liver and biliary tract", o: 5, objs: ["Epidemiology", "Symptoms and signs of liver disorders (e.g., cirrhosis, hepatitis, liver failure)", "Biliary tract disorders", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Mental illness and behavioral disorders", o: 5, objs: ["Epidemiology", "Symptoms and signs of mental illness (e.g., depression, suicide, anxiety, schizophrenia, bipolar disorder)", "Symptoms and signs of behavioral disorders (e.g., substance abuse; child, spouse, and elder abuse)", "Psychological tests", "Pathophysiology and diagnosis"] },
+      { n: "Congenital/Hereditary conditions", o: 5, objs: ["Epidemiology", "Symptoms and signs of common genetic disorders (e.g., Down syndrome, cystic fibrosis, congenital anomalies)", "Symptoms and signs of common congenital disorders (e.g., fetal alcohol syndrome, rubella, syphilis, toxoplasmosis)", "Diagnostic testing and imaging", "Pathophysiology and diagnosis"] },
+      { n: "Anomalies of child development", o: 1, objs: ["Clinical characteristics of children who deviate from expected patterns of development and epidemiology of developmental disorders"] },
+      { n: "Anomalies of the aging adult", o: 1, objs: ["Clinical characteristics of changes in perceptual functions (non-visual) associated with aging; a. Hearing; b. Coordination; c. Cognition; d. Psycho-social status"] },
     ]},
     { d: "Pharmacology", topics: [
-      { n: "General principles", o: 4 }, { n: "Autonomic and/or neuromuscular junction drugs", o: 8 },
-      { n: "Autacoid agonists and antagonists", o: 1 }, { n: "Drugs affecting the respiratory system", o: 3 },
-      { n: "Gastrointestinal agents", o: 1 }, { n: "Chemotherapeutic agents", o: 3 }, { n: "Immunopharmacological agents", o: 1 },
-      { n: "Anti-inflammatory agents", o: 2 }, { n: "Major drugs acting on the CNS", o: 10 }, { n: "General and local anesthetics", o: 1 },
-      { n: "Major drugs acting on the endocrine system", o: 4 }, { n: "Major cardiovascular drugs", o: 6 },
-      { n: "Major drugs acting on the kidneys", o: 2 }, { n: "Nutritional supplements", o: 1 },
-      { n: "Indications/contraindications/side effects/drug interactions", o: 1 }, { n: "Drug use/metabolism in pregnancy and breastfeeding", o: 1 },
+      { n: "General principles", o: 4, objs: ["Pharmacodynamics; a. Concept of receptors; b. Dose-response relationships; c. Routes of drug administration", "Pharmacokinetics; a. Absorption, distribution, metabolism, and excretion of drugs; b. Quantitative aspects; c. Influencing factors (e.g., age, gender, pathology, genetics, diet)", "Mechanisms of action", "Preservatives"] },
+      { n: "Autonomic and/or neuromuscular junction drugs", o: 8, objs: ["Drugs affecting neurohumoral transmission: autonomic and somatic motor nervous systems", "Adrenergic agonists", "Adrenergic antagonists", "Cholinergic agonists", "Cholinergic antagonists", "Cholinesterase inhibitors", "Ganglionic agonists and antagonists", "Neuromuscular transmission agonists and antagonists"] },
+      { n: "Autacoid agonists and antagonists", o: 1, objs: [] },
+      { n: "Drugs affecting the respiratory system", o: 3, objs: ["Bronchodilators", "Mast cell stabilizers", "Mucolytics"] },
+      { n: "Gastrointestinal agents", o: 1, objs: [] },
+      { n: "Chemotherapeutic agents", o: 3, objs: ["Antimicrobial agents; a. Antiseptics and disinfectants; b. Antibacterial; c. Antifungal; d. Antiparasitic", "Antiviral agents", "Antineoplastic agents"] },
+      { n: "Immunopharmacological agents", o: 1, objs: [] },
+      { n: "Anti-inflammatory agents", o: 2, objs: ["Steroids", "Non-steroidals"] },
+      { n: "Major drugs acting on the CNS", o: 10, objs: ["Neurotransmitters", "Opioid and non-opioid analgesics", "Sedative hypnotics", "Anxiolytics", "Antipsychotics", "Antiparkinsonians", "Antidepressants", "Anticonvulsants", "Skeletal muscle relaxants", "Hallucinogens and drugs of abuse"] },
+      { n: "General and local anesthetics", o: 1, objs: [] },
+      { n: "Major drugs acting on the endocrine system", o: 4, objs: ["Adenohypophyseal hormones", "Thyroid and antithyroid drugs", "Insulin and synthetic antidiabetics", "Estrogens, progestins and androgens"] },
+      { n: "Major cardiovascular drugs", o: 6, objs: ["Antihypertensives", "Agents used to treat CHF (e.g., inotropic agents, vasodilators)", "Antiarrhythmics", "Antianginal agents", "Anticoagulants and thrombolytics", "Antihyperlipidemic agents"] },
+      { n: "Major drugs acting on the kidneys", o: 2, objs: ["Diuretics", "Uricosuric agents"] },
+      { n: "Nutritional supplements", o: 1, objs: [] },
+      { n: "Indications/contraindications/side effects/drug interactions", o: 1, objs: [] },
+      { n: "Drug use/metabolism in pregnancy and breastfeeding", o: 1, objs: [] },
     ]},
   ]},
 ];
@@ -22468,6 +22664,7 @@ const td = { padding: "9px 14px" };
 function Blueprint({ coverage }) {
   const [query, setQuery] = useState("");
   const [openAreas, setOpenAreas] = useState({});
+  const [openTopics, setOpenTopics] = useState({});
 
   const filtered = useMemo(() => {
     if (!query.trim()) return CURRICULUM;
@@ -22480,6 +22677,7 @@ function Blueprint({ coverage }) {
   }, [query]);
 
   const toggle = (area) => setOpenAreas(p => ({ ...p, [area]: !p[area] }));
+  const toggleTopic = (key) => setOpenTopics(p => ({ ...p, [key]: !p[key] }));
 
   return (
     <div>
@@ -22523,13 +22721,37 @@ function Blueprint({ coverage }) {
                     <div key={si} style={{ marginTop: 10 }}>
                       <div style={{ fontSize: 11.5, fontWeight: 600, letterSpacing: 0.5, color: "var(--amber)", textTransform: "uppercase", marginBottom: 4 }}>{s.d}</div>
                       <ul style={{ margin: 0, padding: 0, listStyle: "none" }}>
-                        {s.topics.map((t, ti) => (
-                          <li key={ti} style={{ display: "flex", alignItems: "center", gap: 8, padding: "5px 0", borderTop: "1px solid #f0f0ee", fontSize: 13.5 }}>
-                            <Circle size={7} style={{ color: "var(--steel)", flexShrink: 0 }} fill="var(--steel)" />
-                            <span style={{ flex: 1 }}>{t.n}</span>
-                            <span className="mono" style={{ fontSize: 11, color: "var(--steel)" }}>{t.o} obj.</span>
-                          </li>
-                        ))}
+                        {s.topics.map((t, ti) => {
+                          const hasObjs = t.objs && t.objs.length > 0;
+                          const topicKey = `${a.area}|${s.d}|${t.n}`;
+                          const topicOpen = !!openTopics[topicKey];
+                          return (
+                            <li key={ti} style={{ borderTop: "1px solid #f0f0ee" }}>
+                              <div
+                                onClick={hasObjs ? () => toggleTopic(topicKey) : undefined}
+                                style={{ display: "flex", alignItems: "center", gap: 8, padding: "5px 0", fontSize: 13.5, cursor: hasObjs ? "pointer" : "default" }}
+                              >
+                                {hasObjs ? (
+                                  topicOpen ? <ChevronDown size={13} style={{ color: "var(--teal)", flexShrink: 0 }} /> : <ChevronRight size={13} style={{ color: "var(--steel)", flexShrink: 0 }} />
+                                ) : (
+                                  <Circle size={7} style={{ color: "var(--steel)", flexShrink: 0, marginLeft: 2, marginRight: 1 }} fill="var(--steel)" />
+                                )}
+                                <span style={{ flex: 1, fontWeight: hasObjs && topicOpen ? 600 : 400 }}>{t.n}</span>
+                                <span className="mono" style={{ fontSize: 11, color: "var(--steel)" }}>{t.o} obj.</span>
+                              </div>
+                              {hasObjs && topicOpen && (
+                                <ul style={{ margin: "0 0 8px", padding: "2px 0 2px 21px", listStyle: "none", display: "flex", flexDirection: "column", gap: 5 }}>
+                                  {t.objs.map((o, oi) => (
+                                    <li key={oi} style={{ display: "flex", gap: 8, fontSize: 12.5, lineHeight: 1.5, color: "var(--ink)" }}>
+                                      <span className="mono" style={{ color: "var(--teal)", flexShrink: 0 }}>{oi + 1}.</span>
+                                      <span>{o}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
                   ))}

@@ -39,13 +39,23 @@ Uvea, Retina, Optic Nerve, Glaucoma) — roughly 90+ topics concentrated there.
 
 The file is organized as a sequence of these blocks, in this order:
 
-1. **`CONTENT_TOPICS_TREE`** (or similar name near the top) — the full
-   official curriculum outline, as an array of
-   `{ area: "...", major: AREA_A|AREA_B, range: [min,max], sections: [{ d: "discipline name", topics: [{ n: "topic name", o: objectiveCount }] }] }`.
+1. **`CURRICULUM`** (near the top) — the full official curriculum outline,
+   as an array of
+   `{ area: "...", major: AREA_A|AREA_B, range: [min,max], sections: [{ d: "discipline name", topics: [{ n: "topic name", o: objectiveCount, objs: ["objective text", ...] }] }] }`.
    **This array is the ground truth for what topics *should* exist.** Do not
    edit topic names/structure here casually — it mirrors the official NBEO
    outline. If you ever add area/section/topic entries here, immediately
    re-run the audit script.
+   `objs` holds the actual text of each numbered knowledge objective under
+   that topic, verbatim (or lightly joined) from the official "Part I ABS
+   Exam Content Outline – Discipline-Based" PDF the user uploaded — see the
+   "Known open questions" entry below for how it was parsed and
+   cross-checked. `objs.length` should always equal `o` except for topics
+   whose single implicit objective has no numbered breakdown in the source
+   (`o: 1`, `objs: []`) — the Blueprint page treats those as
+   non-expandable. If you add a new topic to `CURRICULUM` by hand, add its
+   `objs` array too (or leave it `[]` and flag it) rather than leaving the
+   field off — the Blueprint UI assumes every topic has an `objs` key.
 
 2. **Per-topic constant blocks**, each looking like:
    ```js
@@ -207,10 +217,19 @@ corruption the way we did in the chat-based sandbox.
   covered elsewhere under a different topic id. When the audit flags a
   subtopic as missing, do a quick content search before assuming it's a
   true gap (see PROGRESS.md's notes on this pattern for examples).
-- Original source: **no official NBEO content-outline document has ever
-  been uploaded to this project.** The `CONTENT_TOPICS_TREE` was built from
-  the user's own knowledge in earlier sessions. If the user has the actual
-  official NBEO Part I content matrix/blueprint, upload it — it would let
-  you verify the tree's topic names, structure, and relative weighting
-  (the `o:` objective-count numbers) against the authoritative source,
-  which has never been directly checked.
+- **RESOLVED (2026-08-18): the official source document has been uploaded
+  and merged.** The user provided the real "Part I ABS Exam Content
+  Outline – Discipline-Based" PDF (44 pages). Every topic in `CURRICULUM`
+  was cross-checked against it by (area, discipline) pairing — all 60
+  sections and 266 topics matched positionally, with only cosmetic name
+  differences (punctuation/wording) and zero real count mismatches. Each
+  topic in `CURRICULUM` now carries an `objs: [...]` array with the actual
+  text of its numbered knowledge objectives as printed in the outline
+  (deeper lettered/roman-numeral sub-bullets are folded into the parent
+  numbered objective's string, since those aren't separately counted in
+  the outline's own `o:` numbering). The Blueprint page's topic bullets
+  are now expandable — clicking a bullet with `objs.length > 0` reveals
+  the real objective list; bullets with a single implicit objective (no
+  numbered breakdown in the source, `o: 1`) stay as plain non-interactive
+  rows. See PROGRESS.md for parsing/verification details if this needs
+  redoing after a future CURRICULUM edit.
