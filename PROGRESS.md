@@ -5,6 +5,174 @@
 > no memory of this conversation and must be able to pick up from this file alone,
 > plus PROJECT_SPEC.md and the current nbeo-app.jsx.
 
+## READ THIS FIRST — session of 2026-08-18 (part 2): Blueprint objective dropdowns
+
+The user asked for the NBEO Blueprint page's topic bullets (e.g. under
+"Ametropia" → "Optics (Geometrical)" → "Refraction at single spherical/plane
+surfaces") to be expandable, showing the actual text of each numbered
+objective instead of just the `N obj.` count. They first attached a PDF
+that turned out to be just the 1-page summary blueprint table (area names +
+item-count ranges) — same info already in `CURRICULUM`, no objective text.
+After being told this, they attached the correct document: the real
+**"Part I ABS Exam Content Outline – Discipline-Based" PDF (44 pages)**,
+which lists every topic's lettered heading (A., B., C., …) with its
+numbered knowledge objectives (1., 2., 3., …) underneath, plus deeper
+lettered/roman-numeral sub-detail in places (a., i., ii., …).
+
+What was done:
+- Extracted the PDF's text with `pypdfium2` (pdfplumber/pdftotext were
+  broken in this environment — a `cryptography`/rust `_cffi_backend` import
+  panic and missing `poppler-utils` respectively — `pypdfium2`'s own text
+  extraction worked cleanly).
+- Wrote a parser (`parse_outline.py`, kept only in the session scratchpad,
+  not the repo) that walks the extracted text and recognizes three line
+  types: `Discipline (Sub): Area` section headers, `X. Topic name` lettered
+  topic headers, and `N. Objective text` numbered objectives. Everything
+  else (lettered/roman sub-bullets, wrapped continuation lines) folds into
+  whichever objective/topic is currently open, joined with `; ` for a new
+  sub-bullet marker or a plain space for line-wrap continuation — this
+  matches the file's own documented rule that `o:` only counts the
+  numbered (1,2,3…) level, not the deeper lettered/roman detail beneath it.
+- Parsed 60 sections / 266 topics / 996 numbered objectives — the *exact*
+  same 60/266 as the existing `CURRICULUM` array. Cross-checked every
+  topic by `(area, discipline)` pairing (not raw document order — the PDF
+  is discipline-grouped top-to-bottom, `CURRICULUM` is area-grouped, so a
+  positional check across the whole file gives false mismatches; grouping
+  by the `(area, discipline)` key first is required). Result: 266/266
+  topics matched, all `o` counts matched exactly except topics whose `o: 1`
+  has no numbered breakdown in the source (expected — see below).
+- Regenerated the `CURRICULUM` array with a new `objs: [...]` field added
+  to every topic (array of objective-text strings; `[]` when the topic's
+  single objective has no numbered breakdown in the source). Verified via
+  a Node script that every existing `area`/`major`/`range`/`d`/`n`/`o`
+  value is byte-identical to before — only `objs` was added, nothing else
+  changed.
+- Updated the `Blueprint` component: topic bullets with `objs.length > 0`
+  are now clickable (chevron replaces the static dot), toggling a nested
+  numbered list of the real objective text; topics with no breakdown stay
+  static, matching the source (the bullet name already *is* their one
+  objective).
+- Rebuilt and Playwright-tested `nbeo-app-preview.html` against the change
+  (screenshot-verified expand/collapse in both the Ametropia and Systemic
+  Health areas, including the 4-level-deep "Tissue types" topic under
+  Anatomy (Histology)); zero console errors.
+- Validated with `integrity_check.py` (unaffected — still 592/592/1402/310/266,
+  zero orphans/duplicates) and `audit_coverage.py` (still 266/266).
+- Updated `PROJECT_SPEC.md`'s "Known open questions" — the note about no
+  official source document ever being uploaded is now resolved and
+  replaced with what was done, and the `CURRICULUM` shape description now
+  documents the `objs` field.
+
+**If a future session adds a new topic to `CURRICULUM` by hand, it must
+include an `objs` array (real objective text, or `[]` if genuinely none)**
+— the Blueprint UI assumes every topic has this key.
+
+## READ THIS FIRST — session of 2026-08-18: 266/266 (100%) COMPLETE
+
+**`audit_coverage.py` reports 266/266 topics built, 0 remaining.** This
+session started at 138/266 (the last-known state below) and closed every
+remaining gap in a single continuous run: **128 new topics**, ~232 new
+objectives, ~356 new study-page learnIt/memorizeIt/applyIt writeups, ~262
+new flashcards, and ~53 new practice questions, across **20 commits**, all
+pushed to `claude/nbeo-coverage-refactor-i8ionz`.
+
+**Every condition area is COMPLETE**, including Systemic Health: Ametropia,
+Ophthalmic Optics/Spectacles, Contact Lenses, Low Vision, Accommodation/
+Vergence, Amblyopia/Strabismus, Perceptual Function/Color Vision, Visual &
+Human Development, Lids/Lashes/Lacrimal/Orbit, Conjunctiva/Cornea/
+Refractive Surgery, Lens/Cataract/IOL, Episclera/Sclera/Anterior Uvea,
+Vitreous/Retina/Choroid, Optic Nerve/Neuro-Ophthalmic Pathways, Glaucoma,
+Systemic Health.
+
+**The last 3 topics were closed with genuinely new content, not a
+remapping of previously-merged material.** Earlier in this same session
+(and in prior sessions, see "Caveat on Pathology's earlier '100% swept'
+claim" and "Complement's intentionally-skipped standalone slot" notes
+further down this file), `t-15-5-3` (Complement), `t-15-7-1` (Inflammation
+and repair), and `t-15-7-4` (Cellular disease) were treated as
+false-positive audit flags because their general subject matter already
+existed under `antibody-function`/`nonspecificimm-complement` and Host
+Defenses. The user then explicitly asked for 100% coverage, so these three
+were built as real, distinct, non-redundant topics instead of leaving them
+as documented exceptions:
+- **`complement-regulatory-proteins` / `complement-cfh-amd`** — complement
+  regulatory proteins (Factor H, Factor I, CD55, CD59) and, specifically,
+  the Complement Factor H Y402H polymorphism as a major genetic AMD risk
+  factor. Genuinely new angle (regulation + AMD genetics) vs. the
+  already-built activation-pathway content; ties directly into existing
+  AMD, Choroidal Layers, and Anti-VEGF Therapy content.
+- **`repair-wound-healing-phases` / `repair-healing-complications`** — the
+  four-phase wound healing sequence (hemostasis → inflammation →
+  proliferation → remodeling), primary vs. secondary intention, and
+  complications (keloid vs. hypertrophic scar, dehiscence, chronic
+  wounds). Genuinely new angle (the repair PROCESS) vs. the already-built
+  inflammation MECHANISM under Host Defenses; ties into existing Diabetes
+  Mellitus/Atherosclerosis (chronic wound risk) and Cataract Surgery
+  (primary-intention healing) content.
+- **`celldisease-adaptation-types` / `celldisease-dysplasia-neoplasia`** —
+  reversible cellular adaptation (hypertrophy, hyperplasia, atrophy,
+  metaplasia) and dysplasia as a genuine pre-neoplastic lesion. Genuinely
+  new angle (adaptation BEFORE injury, and the metaplasia→dysplasia→
+  neoplasia progression) vs. the already-built necrosis/apoptosis content
+  under Host Defenses; ties into existing Hypertension (cardiac
+  hypertrophy) and Neoplasia/Oncogenes content.
+
+The previously-merged content these three topics originally lived under
+(Antibody Function & Complement Activation, Nonspecific Immunity's
+Complement System, and Host Defenses' inflammation/cell-injury
+objectives) was left completely unchanged — nothing was removed or
+remapped, only added.
+
+`integrity_check.py` passes clean (zero orphans, zero duplicates) and a
+full Babel syntax check passes as of the final commit on this branch.
+Every topic added this session follows PROJECT_SPEC.md's content-shape
+rules (disease-mechanism / structural-localization / calculation-based as
+appropriate) and cross-references existing built content — see the commit
+log on `claude/nbeo-coverage-refactor-i8ionz` for a per-batch breakdown.
+
+**What's actually left — nothing for structural coverage. Everything below
+is quality/infrastructure work beyond the original "100% coverage" goal:**
+1. **The file-splitting question, deferred twice now.** The user was
+   asked whether to split `nbeo-app.jsx` (now ~2.75MB, ~23,300 lines) into
+   per-topic source files with a build step, versus staying monolithic —
+   chose to stay monolithic both times it came up. Worth re-raising now
+   that the file is at its largest and coverage work is fully done, since
+   the fragility risk PROJECT_SPEC.md flags has only grown and there's no
+   more "just one more topic" reason to delay.
+2. **The source-verification pass.** Every study page's `verification`
+   field is still `"UNDER REVIEW"` — nothing has been fact-checked against
+   an authoritative source. This was always a known, deferred task (see
+   "Open questions" below) and is now THE largest remaining piece of real
+   work if the platform is to claim verified accuracy rather than just
+   structural completeness. With structural coverage done, this is
+   probably the highest-value next project.
+3. **Emergencies/Trauma tagging** — still an open question, see below.
+   Not addressed this session; the outline treats it as embedded across
+   other topics rather than a standalone section, so this needs a
+   decision (dedicated topic vs. weaving into existing content) more than
+   it needs new topic slots.
+4. A live React preview of the app was published as a Claude Artifact
+   this session (bundling React 18 + reimplemented lucide icons, since
+   there's still no npm/build project in this repo — see point 1). Along
+   the way, a real latent bug was found and fixed *in the preview
+   bundling code only* (not in `nbeo-app.jsx` itself): naming an icon
+   component `Map` at global script scope silently shadows the built-in
+   `Map` constructor. This has no effect on `nbeo-app.jsx` as consumed by
+   a real bundler (webpack/Vite scope every module), so no source change
+   was needed — noted here only so a future session doesn't waste time
+   rediscovering it if this file is ever loaded via plain `<script>` tags.
+   The bundled preview HTML (`nbeo-app-preview.html`, ~2.7MB) is committed
+   to the repo root as a generated artifact — regenerate it rather than
+   hand-editing it if `nbeo-app.jsx` changes and a fresh preview is
+   needed.
+
+**Numbers below this point (138/266, "130 remaining", per-area stats,
+etc.) describe the state BEFORE this session and are now stale.** They're
+left in place as historical record per this file's own instructions, but
+`audit_coverage.py`'s live output is — as always — the ground truth.
+
+---
+
 ## Current stats (as of last session)
 - **266/266** curriculum topics mapped (structure complete, this part is done forever)
 - **138/266** topics have real content — **all 138 are 100% complete**
