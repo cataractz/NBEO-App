@@ -1152,6 +1152,76 @@ const ONPHARMINDICATIONS_OBJECTIVES = [
   { id: "onpharm-neuritis-naion-differential", name: "Age & Risk Factor Differential Guiding Steroid Treatment Decisions", built: true },
 ];
 
+const GLAUANATAC_TOPIC_ID = "t-14-0-0"; // Glaucoma(14) > Anatomy(Gross)(0) > Anterior chamber and angle(0)
+// Glaucoma's anatomy section covers the SAME structures already built in
+// full elsewhere (Episclera/Sclera/Anterior Uvea, Cornea, Lens, Vitreous/
+// Retina/Choroid, Optic Nerve areas) — each topic here gives the
+// GLAUCOMA-SPECIFIC clinical significance rather than re-deriving the base
+// anatomy, cross-referencing the already-built dedicated anatomy content.
+const GLAUANATAC_OBJECTIVES = [
+  { id: "glauanat-ac-relevance", name: "Anterior Chamber Angle — The Central Structure in Glaucoma Classification", built: true },
+];
+
+const GLAUANATCB_TOPIC_ID = "t-14-0-1"; // Glaucoma(14) > Anatomy(Gross)(0) > Ciliary body(1)
+const GLAUANATCB_OBJECTIVES = [
+  { id: "glauanat-cb-relevance", name: "Ciliary Body — Aqueous Production Site & Cyclodestructive Treatment Target", built: true },
+];
+
+const GLAUANATCHOR_TOPIC_ID = "t-14-0-2"; // Glaucoma(14) > Anatomy(Gross)(0) > Choroid(2)
+const GLAUANATCHOR_OBJECTIVES = [
+  { id: "glauanat-choroid-relevance", name: "Suprachoroidal Space — Uveoscleral Outflow & Post-Surgical Choroidal Effusion", built: true },
+];
+
+const GLAUANATVIT_TOPIC_ID = "t-14-0-3"; // Glaucoma(14) > Anatomy(Gross)(0) > Vitreous(3)
+const GLAUANATVIT_OBJECTIVES = [
+  { id: "glauanat-vitreous-relevance", name: "Vitreous Prolapse & Pupillary Block in Aphakic/Pseudophakic Glaucoma", built: true },
+];
+
+const GLAUANATRET_TOPIC_ID = "t-14-0-4"; // Glaucoma(14) > Anatomy(Gross)(0) > Retina(4)
+const GLAUANATRET_OBJECTIVES = [
+  { id: "glauanat-retina-relevance", name: "Ganglion Cell Layer — the Site of Glaucomatous Damage & OCT Monitoring", built: true },
+];
+
+const GLAUANATON_TOPIC_ID = "t-14-0-5"; // Glaucoma(14) > Anatomy(Gross)(0) > Optic nerve(5)
+const GLAUANATON_OBJECTIVES = [
+  { id: "glauanat-on-relevance", name: "Optic Disc Cupping & the ISNT Rule — the Glaucomatous Structural Signature", built: true },
+];
+
+const GLAUANATCORNEA_TOPIC_ID = "t-14-0-6"; // Glaucoma(14) > Anatomy(Gross)(0) > Cornea(6)
+const GLAUANATCORNEA_OBJECTIVES = [
+  { id: "glauanat-cornea-relevance", name: "Central Corneal Thickness — Tonometry Accuracy & Independent Glaucoma Risk Factor", built: true },
+];
+
+const GLAUANATLENS_TOPIC_ID = "t-14-0-7"; // Glaucoma(14) > Anatomy(Gross)(0) > Lens(7)
+const GLAUANATLENS_OBJECTIVES = [
+  { id: "glauanat-lens-relevance", name: "Lens-Related Secondary Glaucoma — Phacomorphic vs. Phacolytic Mechanisms", built: true },
+];
+
+const GLAUDEVAC_TOPIC_ID = "t-14-1-0"; // Glaucoma(14) > Anatomy(Developmental)(1) > Anterior chamber and angle(0)
+const GLAUDEVAC_OBJECTIVES = [
+  { id: "glaudev-ac-pcg", name: "Primary Congenital Glaucoma — Clinical Triad & Surgical Urgency", built: true },
+];
+
+const GLAUDEVIRIS_TOPIC_ID = "t-14-1-1"; // Glaucoma(14) > Anatomy(Developmental)(1) > Iris/Pupil(1)
+const GLAUDEVIRIS_OBJECTIVES = [
+  { id: "glaudev-iris-pigmentary", name: "Pigment Dispersion Syndrome & Pigmentary Glaucoma", built: true },
+];
+
+const GLAUDEVCB_TOPIC_ID = "t-14-1-2"; // Glaucoma(14) > Anatomy(Developmental)(1) > Ciliary body(2)
+const GLAUDEVCB_OBJECTIVES = [
+  { id: "glaudev-cb-plateau-iris", name: "Plateau Iris Configuration — A Ciliary-Body-Driven Angle-Closure Mechanism", built: true },
+];
+
+const GLAUDEVRET_TOPIC_ID = "t-14-1-3"; // Glaucoma(14) > Anatomy(Developmental)(1) > Retina(3)
+const GLAUDEVRET_OBJECTIVES = [
+  { id: "glaudev-retina-nfl", name: "Fixed Retinal Ganglion Cell Count & Glaucomatous Reserve Capacity", built: true },
+];
+
+const GLAUDEVON_TOPIC_ID = "t-14-1-4"; // Glaucoma(14) > Anatomy(Developmental)(1) > Optic nerve and visual pathway(4)
+const GLAUDEVON_OBJECTIVES = [
+  { id: "glaudev-on-lamina", name: "Lamina Cribrosa Architecture & Regional Susceptibility to Glaucomatous Damage", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -2179,6 +2249,14 @@ const TOPIC_OBJECTIVES = {
   [ONPHARMGEN_TOPIC_ID]: ONPHARMGEN_OBJECTIVES, [ONPHARMMYDRIATIC_TOPIC_ID]: ONPHARMMYDRIATIC_OBJECTIVES,
   [ONPHARMMIOTIC_TOPIC_ID]: ONPHARMMIOTIC_OBJECTIVES, [ONPHARMANTIINFLAMM_TOPIC_ID]: ONPHARMANTIINFLAMM_OBJECTIVES,
   [ONPHARMINDICATIONS_TOPIC_ID]: ONPHARMINDICATIONS_OBJECTIVES,
+  [GLAUANATAC_TOPIC_ID]: GLAUANATAC_OBJECTIVES,
+  [GLAUANATCB_TOPIC_ID]: GLAUANATCB_OBJECTIVES,
+  [GLAUANATCHOR_TOPIC_ID]: GLAUANATCHOR_OBJECTIVES, [GLAUANATVIT_TOPIC_ID]: GLAUANATVIT_OBJECTIVES,
+  [GLAUANATRET_TOPIC_ID]: GLAUANATRET_OBJECTIVES, [GLAUANATON_TOPIC_ID]: GLAUANATON_OBJECTIVES,
+  [GLAUANATCORNEA_TOPIC_ID]: GLAUANATCORNEA_OBJECTIVES, [GLAUANATLENS_TOPIC_ID]: GLAUANATLENS_OBJECTIVES,
+  [GLAUDEVAC_TOPIC_ID]: GLAUDEVAC_OBJECTIVES, [GLAUDEVIRIS_TOPIC_ID]: GLAUDEVIRIS_OBJECTIVES,
+  [GLAUDEVCB_TOPIC_ID]: GLAUDEVCB_OBJECTIVES, [GLAUDEVRET_TOPIC_ID]: GLAUDEVRET_OBJECTIVES,
+  [GLAUDEVON_TOPIC_ID]: GLAUDEVON_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -2410,6 +2488,19 @@ const CONTENT_TOPICS = [
   { topicId: ONPHARMMIOTIC_TOPIC_ID, name: "Miotics & Optic Nerve Exam Interference", objectives: ONPHARMMIOTIC_OBJECTIVES },
   { topicId: ONPHARMANTIINFLAMM_TOPIC_ID, name: "Optic Nerve Anti-Inflammatory Therapy", objectives: ONPHARMANTIINFLAMM_OBJECTIVES },
   { topicId: ONPHARMINDICATIONS_TOPIC_ID, name: "Optic Nerve Pharmacology — Indications & Contraindications", objectives: ONPHARMINDICATIONS_OBJECTIVES },
+  { topicId: GLAUANATAC_TOPIC_ID, name: "Glaucoma — Anterior Chamber & Angle Relevance", objectives: GLAUANATAC_OBJECTIVES },
+  { topicId: GLAUANATCB_TOPIC_ID, name: "Glaucoma — Ciliary Body Relevance", objectives: GLAUANATCB_OBJECTIVES },
+  { topicId: GLAUANATCHOR_TOPIC_ID, name: "Glaucoma — Choroid Relevance", objectives: GLAUANATCHOR_OBJECTIVES },
+  { topicId: GLAUANATVIT_TOPIC_ID, name: "Glaucoma — Vitreous Relevance", objectives: GLAUANATVIT_OBJECTIVES },
+  { topicId: GLAUANATRET_TOPIC_ID, name: "Glaucoma — Retinal Relevance", objectives: GLAUANATRET_OBJECTIVES },
+  { topicId: GLAUANATON_TOPIC_ID, name: "Glaucoma — Optic Nerve Relevance", objectives: GLAUANATON_OBJECTIVES },
+  { topicId: GLAUANATCORNEA_TOPIC_ID, name: "Glaucoma — Corneal Relevance", objectives: GLAUANATCORNEA_OBJECTIVES },
+  { topicId: GLAUANATLENS_TOPIC_ID, name: "Glaucoma — Lens Relevance", objectives: GLAUANATLENS_OBJECTIVES },
+  { topicId: GLAUDEVAC_TOPIC_ID, name: "Primary Congenital Glaucoma", objectives: GLAUDEVAC_OBJECTIVES },
+  { topicId: GLAUDEVIRIS_TOPIC_ID, name: "Pigmentary Glaucoma", objectives: GLAUDEVIRIS_OBJECTIVES },
+  { topicId: GLAUDEVCB_TOPIC_ID, name: "Plateau Iris Syndrome", objectives: GLAUDEVCB_OBJECTIVES },
+  { topicId: GLAUDEVRET_TOPIC_ID, name: "Glaucoma — Retinal Ganglion Cell Reserve", objectives: GLAUDEVRET_OBJECTIVES },
+  { topicId: GLAUDEVON_TOPIC_ID, name: "Glaucoma — Lamina Cribrosa Susceptibility", objectives: GLAUDEVON_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -13967,6 +14058,253 @@ const STUDY_PAGES = {
       "This consolidates your existing optic neuritis, NAION, and this topic's sibling steroid-protocol objectives into one integrated clinical decision framework — a 32-year-old woman with painful vision loss and a prior episode of numbness (already relevant to existing MS/demyelination content) should prompt the ONTT IV steroid pathway, while a 68-year-old diabetic man with sudden painless vision loss and disc edema should prompt NAION management without corticosteroids, illustrating how the demographic/clinical differential directly and immediately shapes the appropriate pharmacologic response.",
     ],
   },
+  "glauanat-ac-relevance": {
+    name: "Anterior Chamber Angle — The Central Structure in Glaucoma Classification",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "The anterior chamber angle's full structural anatomy (Schwalbe's line, trabecular meshwork, scleral spur, ciliary body band) is already covered under Anterior Chamber Boundaries & Gonioscopic Angle Landmarks content — its GLAUCOMA-SPECIFIC significance is that angle WIDTH is the single most important anatomic determinant of glaucoma classification and treatment approach." },
+      { h: "Angle status as the primary classification axis", t: "Whether the angle is OPEN (allowing aqueous access to the trabecular meshwork) or NARROW/OCCLUDABLE/CLOSED (obstructing this access, already covered under Pupillary Block & Iris Bombé content) fundamentally divides glaucoma into open-angle vs. angle-closure types — two categories with genuinely different underlying mechanisms, presentations (chronic/asymptomatic vs. potentially acute/emergent), and treatment approaches (medical therapy first vs. often requiring urgent laser iridotomy)." },
+      { h: "Why gonioscopy is mandatory", t: "Because angle status cannot be reliably determined by external exam or IOP alone, gonioscopic examination (already covered under Anterior Chamber Angle content) is a MANDATORY component of any glaucoma workup — an elevated IOP with an undetermined angle status could reflect either category, and treating one type of glaucoma with an approach suited to the other type could be ineffective or, in the case of undiagnosed angle closure, dangerous." },
+    ],
+    memorizeIt: [
+      "Angle WIDTH (open vs. narrow/occludable/closed) is the primary anatomic axis dividing glaucoma into open-angle vs. angle-closure types.",
+      "These two categories have different mechanisms, presentations, and treatment approaches — gonioscopy (already covered) is MANDATORY to determine which applies.",
+      "Elevated IOP alone does not indicate angle status — gonioscopy is required before finalizing glaucoma classification and treatment plan.",
+    ],
+    applyIt: [
+      "This reinforces your existing Anterior Chamber Angle and Pupillary Block content by framing WHY this anatomy is clinically indispensable — a patient with elevated IOP who has never had gonioscopy performed has an incomplete workup, since the fundamental treatment pathway (open-angle medical management vs. angle-closure laser iridotomy) cannot be determined without directly visualizing angle status.",
+    ],
+  },
+  "glauanat-cb-relevance": {
+    name: "Ciliary Body — Aqueous Production Site & Cyclodestructive Treatment Target",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "The ciliary body's full structural anatomy (pars plicata/pars plana, ciliary muscle fiber orientations) is already covered under Ciliary Body Gross Anatomy content — its glaucoma-specific significance spans both being the pharmacologic TARGET of aqueous-suppressant medications and, in refractory cases, a direct surgical destruction target." },
+      { h: "Pharmacologic target — aqueous suppression", t: "As the SOURCE of aqueous humor secretion (already covered under Aqueous Humor Production content), the ciliary body's pars plicata is the direct pharmacologic target of aqueous-suppressant glaucoma medications (beta-blockers, alpha agonists, carbonic anhydrase inhibitors, this area's Pharmacology sibling objectives), which reduce IOP by decreasing the RATE of aqueous production at this exact tissue." },
+      { h: "Surgical target — cyclodestructive procedures", t: "In severe, refractory glaucoma not adequately controlled by medications or standard surgery, cyclodestructive procedures (cyclophotocoagulation, using laser energy to directly destroy ciliary processes) reduce IOP by physically reducing the ciliary body's aqueous-secreting capacity — a more definitive but less easily reversible intervention than pharmacologic suppression, reserved for advanced/refractory disease given the risk of over-treatment causing hypotony (excessively low IOP)." },
+    ],
+    memorizeIt: [
+      "Ciliary body pars plicata (already covered) = source of aqueous secretion — direct pharmacologic target of aqueous-suppressant medications (beta-blockers, alpha agonists, CAIs).",
+      "Cyclodestructive procedures (cyclophotocoagulation): directly destroy ciliary processes, physically reducing aqueous secretion — reserved for severe/refractory glaucoma given hypotony risk.",
+      "Represents the treatment-escalation spectrum: pharmacologic suppression (reversible) → cyclodestruction (more definitive, less reversible).",
+    ],
+    applyIt: [
+      "This gives you the direct anatomic-therapeutic link between your existing Aqueous Humor Production content and this area's Pharmacology objectives — understanding that every aqueous-suppressant glaucoma medication acts on this same ciliary body secretory tissue explains why cyclodestructive procedures represent a logical, if more aggressive, extension of the same therapeutic principle (reducing aqueous production) when medication alone proves insufficient.",
+    ],
+  },
+  "glauanat-choroid-relevance": {
+    name: "Suprachoroidal Space — Uveoscleral Outflow & Post-Surgical Choroidal Effusion",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "The choroid's full structural anatomy (Haller's/Sattler's/choriocapillaris layers) is already covered under Choroidal Gross Anatomy content — its glaucoma-specific significance centers on the potential suprachoroidal space, relevant to both a normal outflow pathway and a surgical complication." },
+      { h: "Uveoscleral (unconventional) outflow pathway", t: "The potential suprachoroidal space (between choroid and sclera) is where aqueous humor exits via the uveoscleral (unconventional) outflow pathway, already covered under Aqueous Outflow Pathways content, as a genuinely distinct route from the conventional trabecular meshwork/Schlemm's canal pathway (already covered) — this is the pathway specifically enhanced by prostaglandin analog glaucoma medications (already covered under bimatoprost content, and this area's Pharmacology objectives)." },
+      { h: "Choroidal effusion — a post-surgical complication", t: "Following glaucoma surgery that dramatically lowers IOP (e.g., trabeculectomy), the resulting very low IOP can cause fluid to accumulate within the suprachoroidal space itself — choroidal effusion — a recognized post-operative complication distinct from the normal outflow function of this same anatomic space, requiring monitoring and sometimes intervention if severe." },
+    ],
+    memorizeIt: [
+      "Suprachoroidal space = site of uveoscleral (unconventional) outflow pathway (already covered) — distinct from conventional trabecular/Schlemm's canal outflow.",
+      "Prostaglandin analog glaucoma medications (already covered) specifically enhance THIS pathway.",
+      "Post-surgical hypotony can cause choroidal effusion — fluid accumulation in this same suprachoroidal space — a recognized complication after IOP-lowering glaucoma surgery.",
+    ],
+    applyIt: [
+      "This connects your existing Aqueous Outflow Pathways content directly to this area's Antiglaucoma Agents pharmacology objective — understanding that prostaglandin analogs work specifically through the suprachoroidal/uveoscleral route (rather than the trabecular route targeted by other drug classes) explains why these two drug classes have complementary, non-redundant mechanisms and are frequently combined in patients requiring more than one medication.",
+    ],
+  },
+  "glauanat-vitreous-relevance": {
+    name: "Vitreous Prolapse & Pupillary Block in Aphakic/Pseudophakic Glaucoma",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "The vitreous's full structural anatomy (base/attachment sites, composition) is already covered under Vitreous Gross Anatomy content — its glaucoma-specific significance is a variant pupillary block mechanism occurring specifically in aphakic (lens removed, no IOL) or complicated pseudophakic eyes." },
+      { h: "Vitreous-based pupillary block", t: "In an eye without an intact natural lens (aphakic) or with a complicated posterior capsule (some pseudophakic cases, already relevant to existing Cataract Surgery content), the anterior vitreous face can prolapse forward through the pupil into the anterior chamber, and this displaced vitreous — rather than the iris-to-lens contact already covered under standard Pupillary Block content — can itself obstruct aqueous flow from the posterior to anterior chamber, producing the same iris bombé/angle-closure cascade (already covered) through this different anatomic trigger." },
+      { h: "Clinical implication", t: "This vitreous-based mechanism means that a patient who has undergone complicated cataract surgery with vitreous loss or disruption remains at risk for pupillary block glaucoma even without their natural lens present — a genuinely important extension of the pupillary block concept beyond the phakic/iris-lens scenario already covered, relevant to post-surgical glaucoma risk assessment." },
+    ],
+    memorizeIt: [
+      "In aphakic/complicated pseudophakic eyes, the anterior VITREOUS FACE (not the iris-lens interface) can prolapse into the pupil and cause pupillary block.",
+      "Produces the same iris bombé/angle-closure cascade (already covered) through this different anatomic trigger.",
+      "Relevant post-surgical risk: complicated cataract surgery with vitreous disruption remains a pupillary block risk even without the natural lens present.",
+    ],
+    applyIt: [
+      "This extends your existing Pupillary Block Mechanism & Iris Bombé content with a genuinely important surgical variant — a post-cataract-surgery patient (already covered) with a complicated, vitreous-disrupted surgical course who develops acute angle-closure symptoms should raise suspicion for vitreous-based pupillary block, a mechanism requiring the same urgent recognition as the standard iris-lens pupillary block already covered, even though the natural lens is no longer present to serve as the classic trigger.",
+    ],
+  },
+  "glauanat-retina-relevance": {
+    name: "Ganglion Cell Layer — the Site of Glaucomatous Damage & OCT Monitoring",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "The retina's full structural anatomy (ten layers, landmarks) is already covered under Retinal Gross Anatomy content — its glaucoma-specific significance is that glaucoma is fundamentally a disease of RETINAL GANGLION CELL death, making this specific layer the direct site of glaucomatous damage and the target of modern structural monitoring." },
+      { h: "Ganglion cell layer as the site of damage", t: "Glaucoma is, at its core, a progressive optic neuropathy characterized by retinal ganglion cell death (their cell bodies in the ganglion cell layer, already covered under Retinal Gross Anatomy, and their axons forming the nerve fiber layer, also already covered) — elevated IOP and other risk factors ultimately cause damage at this specific cellular level, whose cumulative loss produces the visual field defects already covered under Glaucoma pathology content." },
+      { h: "Structure often precedes function — the basis for OCT monitoring", t: "A genuinely important diagnostic principle in glaucoma is that STRUCTURAL loss (measurable retinal nerve fiber layer/ganglion cell complex thinning via optical coherence tomography, OCT) can be detected BEFORE functional loss becomes apparent on standard visual field testing (already covered under Visual Field Defect Localization content) — meaning OCT structural monitoring can identify early glaucomatous damage and progression before a patient would notice or a visual field test would reliably detect it, making structural and functional testing genuinely complementary rather than redundant monitoring tools." },
+    ],
+    memorizeIt: [
+      "Glaucoma = progressive retinal ganglion cell death — ganglion cell layer (cell bodies) + nerve fiber layer (axons), both already covered under Retinal Gross Anatomy.",
+      "STRUCTURAL loss (OCT-measured RNFL/ganglion cell complex thinning) can PRECEDE detectable FUNCTIONAL loss (visual field defects, already covered).",
+      "OCT structural monitoring and visual field functional testing are complementary, not redundant — each can catch damage the other might miss at different disease stages.",
+    ],
+    applyIt: [
+      "This gives you the cellular-level target underlying essentially all of your existing Glaucoma content — understanding that structural OCT changes can precede functional visual field defects explains why modern glaucoma monitoring combines both testing modalities, and why a patient can have progressive OCT-documented nerve fiber layer thinning while their visual field remains subjectively and even objectively normal, representing genuinely earlier-stage detectable disease.",
+    ],
+  },
+  "glauanat-on-relevance": {
+    name: "Optic Disc Cupping & the ISNT Rule — the Glaucomatous Structural Signature",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "The optic nerve's full structural anatomy (segments, sheath) is already covered under Optic Nerve Gross Anatomy content — its glaucoma-specific significance is the characteristic pattern of optic disc cupping that serves as glaucoma's defining clinical structural signature." },
+      { h: "Cup-to-disc ratio and neuroretinal rim loss", t: "Glaucomatous optic disc cupping reflects progressive loss of neuroretinal rim tissue (the ganglion cell axons, this area's sibling Retina objective) as they converge to exit through the optic disc — clinically quantified as an increasing cup-to-disc ratio, though the ABSOLUTE ratio matters less than documented CHANGE over time or significant ASYMMETRY between a patient's two eyes, since disc size itself varies normally between individuals." },
+      { h: "The ISNT rule", t: "In a NORMAL optic disc, neuroretinal rim tissue thickness follows a predictable pattern — Inferior > Superior > Nasal > Temporal (the 'ISNT rule') — and violation of this normal pattern (e.g., focal thinning or notching at the inferior or superior pole specifically, rather than a uniform rim distribution) is a genuinely important red flag for early glaucomatous damage, since glaucoma characteristically damages the inferior and superior neuroretinal rim preferentially before the nasal and temporal regions." },
+    ],
+    memorizeIt: [
+      "Glaucomatous cupping = progressive neuroretinal rim loss (ganglion cell axons, this area's sibling Retina objective) — cup-to-disc ratio increases.",
+      "CHANGE over time and inter-eye ASYMMETRY matter more than absolute cup-to-disc ratio, since disc size varies normally between individuals.",
+      "ISNT rule (normal rim thickness pattern): Inferior > Superior > Nasal > Temporal — violation (especially inferior/superior thinning/notching) is a red flag for early glaucoma.",
+    ],
+    applyIt: [
+      "This gives you the clinical exam framework directly extending your existing Glaucoma pathology content — recognizing focal inferior or superior neuroretinal rim thinning (violating the ISNT rule) on fundus exam, even with a not-yet-dramatically-elevated cup-to-disc ratio, is a genuinely important early sign of glaucomatous damage, consistent with this area's sibling Lamina Cribrosa objective explaining WHY these specific poles are preferentially vulnerable.",
+    ],
+  },
+  "glauanat-cornea-relevance": {
+    name: "Central Corneal Thickness — Tonometry Accuracy & Independent Glaucoma Risk Factor",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "The cornea's full structural anatomy is already covered extensively under Corneal Gross Anatomy and Corneal Biomechanics & Measurement Accuracy content — its glaucoma-specific significance, already partly established there, is central corneal thickness's (CCT) dual role affecting both IOP measurement accuracy and independent glaucoma risk." },
+      { h: "CCT and tonometry measurement error", t: "As already covered under Corneal Biomechanics & Measurement Accuracy content, applanation tonometry accuracy depends on corneal biomechanical properties — a THIN cornea causes IOP UNDERESTIMATION (true IOP is higher than measured), while a THICK cornea causes IOP OVERESTIMATION (true IOP is lower than measured), meaning CCT measurement (pachymetry) is an essential part of accurately interpreting any tonometry reading." },
+      { h: "CCT as an independent glaucoma risk factor", t: "Beyond this measurement artifact, thin CCT has been established as an INDEPENDENT risk factor for glaucoma progression (from the Ocular Hypertension Treatment Study, OHTS) — meaning thin CCT increases glaucoma risk beyond simply causing IOP underestimation, through a mechanism not fully understood but possibly related to differences in optic nerve head biomechanical susceptibility to IOP-related stress, extending this area's sibling Lamina Cribrosa objective's biomechanical vulnerability theme." },
+    ],
+    memorizeIt: [
+      "Thin cornea → tonometry UNDERESTIMATES true IOP. Thick cornea → tonometry OVERESTIMATES true IOP (already covered under Corneal Biomechanics content).",
+      "Pachymetry (CCT measurement) is essential for accurately interpreting any tonometry reading.",
+      "Thin CCT is also an INDEPENDENT glaucoma risk factor (OHTS) — beyond just the measurement artifact, possibly reflecting broader optic nerve head biomechanical susceptibility.",
+    ],
+    applyIt: [
+      "This reinforces and extends your existing Corneal Biomechanics & Measurement Accuracy content — a patient with a measured IOP of 22 mmHg and a thin cornea may have a true IOP significantly higher than the measured value AND carries independently elevated glaucoma risk from the thin CCT itself, meaning both the measurement correction and the independent risk factor should factor into overall glaucoma risk assessment and treatment threshold decisions.",
+    ],
+  },
+  "glauanat-lens-relevance": {
+    name: "Lens-Related Secondary Glaucoma — Phacomorphic vs. Phacolytic Mechanisms",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "The lens's full structural anatomy is already covered under Lens & Zonule Gross Anatomy content — its glaucoma-specific significance includes two genuinely distinct secondary glaucoma mechanisms, phacomorphic and phacolytic, each with a different underlying process from the standard pupillary block already covered." },
+      { h: "Phacomorphic glaucoma — mechanical angle closure", t: "Phacomorphic glaucoma results from an enlarging, intumescent (swollen) cataractous lens that mechanically pushes the iris forward from sheer increased lens size/thickness, crowding and closing the angle — a genuinely distinct trigger from typical pupillary block (already covered), since the mechanism here is direct mechanical crowding from lens size rather than iris-lens adhesion or contact obstructing posterior-to-anterior chamber flow." },
+      { h: "Phacolytic glaucoma — an open-angle, inflammatory mechanism", t: "Phacolytic glaucoma is mechanistically entirely different — a HYPERMATURE cataract develops microscopic defects in its capsule through which lens protein leaks into the anterior chamber, triggering a macrophage-mediated inflammatory response that obstructs the trabecular meshwork (already covered) — this is genuinely an OPEN-ANGLE mechanism (the angle itself remains structurally open, but functionally obstructed by inflammatory debris), distinct from phacomorphic glaucoma's angle-CLOSURE mechanism, despite both being lens-related." },
+    ],
+    memorizeIt: [
+      "Phacomorphic glaucoma: enlarging/intumescent cataractous lens mechanically crowds and closes the angle — an ANGLE-CLOSURE mechanism, distinct from standard pupillary block (already covered).",
+      "Phacolytic glaucoma: hypermature cataract leaks lens protein through capsule defects → macrophage-mediated trabecular meshwork obstruction — an OPEN-ANGLE mechanism.",
+      "Both are lens-related but mechanistically opposite in angle status: phacomorphic = angle closes; phacolytic = angle stays open but is functionally obstructed.",
+    ],
+    applyIt: [
+      "This gives you two genuinely distinct lens-related secondary glaucoma mechanisms extending your existing Cataract and Pupillary Block content — a patient with a dense, hypermature cataract presenting with acutely elevated IOP requires gonioscopy (already covered) to distinguish phacomorphic (closed angle, from lens crowding) from phacolytic (open angle, from inflammatory debris) glaucoma, since both this area's sibling Anterior Chamber Angle objective's classification principle and the appropriate treatment approach (angle-closure management vs. anti-inflammatory therapy plus expedited cataract surgery) differ meaningfully between these two lens-related mechanisms.",
+    ],
+  },
+  "glaudev-ac-pcg": {
+    name: "Primary Congenital Glaucoma — Clinical Triad & Surgical Urgency",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pediatric glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "Primary congenital glaucoma's developmental mechanism (incomplete anterior chamber angle cleavage) is already covered under Anterior Chamber Angle Development & Cleavage content — its clinical presentation follows a genuinely classic, high-yield triad requiring prompt recognition." },
+      { h: "The classic clinical triad", t: "Primary congenital glaucoma classically presents with EPIPHORA (excessive tearing), PHOTOPHOBIA (light sensitivity), and BLEPHAROSPASM (involuntary eyelid squeezing) — often summarized as the triad driving parents to seek care — accompanied by corneal enlargement and clouding (including Haab's striae, breaks in Descemet's membrane from corneal stretching, already referenced under existing megalocornea-differential content)." },
+      { h: "Surgical urgency and the angle surgery advantage", t: "Unlike adult glaucoma (typically managed medically first, already covered under this area's Pharmacology content), primary congenital glaucoma is managed with PROMPT SURGICAL intervention — typically goniotomy or trabeculotomy, angle surgery that directly addresses the incompletely-cleaved, obstructive mesenchymal tissue already covered under Anterior Chamber Angle Development content — since the immature, still-developing angle anatomy is particularly amenable to this direct surgical correction, unlike the more chronic trabecular meshwork dysfunction of adult open-angle glaucoma." },
+    ],
+    memorizeIt: [
+      "Classic triad: epiphora (tearing), photophobia, blepharospasm — plus corneal enlargement/clouding (Haab's striae).",
+      "Managed with PROMPT SURGERY (goniotomy/trabeculotomy) as first-line, unlike adult glaucoma's typical medical-first approach.",
+      "Angle surgery directly addresses the incompletely-cleaved mesenchymal tissue (already covered under Anterior Chamber Angle Development/Cleavage content) — the immature angle is particularly amenable to this direct correction.",
+    ],
+    applyIt: [
+      "This gives you the clinical presentation and management approach directly completing your existing Anterior Chamber Angle Development & Cleavage content's embryologic mechanism — recognizing the epiphora/photophobia/blepharospasm triad in an infant should prompt urgent ophthalmologic referral for IOP measurement and likely angle surgery, a genuinely different first-line approach from the medication-first strategy appropriate for adult glaucoma (this area's Pharmacology content).",
+    ],
+  },
+  "glaudev-iris-pigmentary": {
+    name: "Pigment Dispersion Syndrome & Pigmentary Glaucoma",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "Pigmentary glaucoma results from a specific structural iris configuration causing mechanical pigment release, directly extending your existing Iris Pigmentation & the Blood-Aqueous Barrier and Iris Layers content into a genuine secondary glaucoma mechanism." },
+      { h: "The mechanical mechanism", t: "In pigment dispersion syndrome, the iris adopts a posteriorly-bowed, concave configuration that brings the posterior iris pigment epithelium (already covered under Iris Layers content) into abnormal contact with the anterior lens zonules — normal blinking and eye movement causes mechanical rubbing at this contact point, releasing pigment granules from the iris posterior pigment epithelium into the aqueous humor." },
+      { h: "Pigment deposition and trabecular meshwork obstruction", t: "This liberated pigment circulates through the aqueous and deposits throughout the anterior segment — classically forming a Krukenberg spindle (a vertical, spindle-shaped band of pigment deposited on the central corneal ENDOTHELIUM, already covered under Corneal Physiology content, from aqueous convection currents) and mid-peripheral iris transillumination defects (visible when the iris is back-lit) — and critically, pigment deposition WITHIN the trabecular meshwork (already covered) can progressively obstruct conventional aqueous outflow, causing pigmentary glaucoma in a subset of affected patients." },
+    ],
+    memorizeIt: [
+      "Pigment dispersion syndrome: posteriorly-bowed (concave) iris configuration causes mechanical rubbing against lens zonules, releasing pigment from the iris posterior pigment epithelium (already covered).",
+      "Classic signs: Krukenberg spindle (vertical pigment band on corneal endothelium, already covered) + mid-peripheral iris transillumination defects.",
+      "Pigmentary glaucoma: pigment deposition within the trabecular meshwork (already covered) progressively obstructs conventional outflow.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important secondary open-angle glaucoma mechanism directly extending your existing Iris Pigmentation & the Blood-Aqueous Barrier and Corneal Physiology (endothelium) content — finding a Krukenberg spindle on slit lamp exam should prompt gonioscopy and IOP assessment for pigmentary glaucoma, since this single finding links the specific structural iris-zonule contact mechanism to its downstream trabecular meshwork consequence.",
+    ],
+  },
+  "glaudev-cb-plateau-iris": {
+    name: "Plateau Iris Configuration — A Ciliary-Body-Driven Angle-Closure Mechanism",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "Plateau iris configuration is a genuinely distinct angle-closure mechanism from pupillary block (already covered), directly extending your existing Ciliary Body Gross Anatomy content with a ciliary-body-driven cause of angle closure and an important treatment implication." },
+      { h: "The mechanism — ciliary body position, not pupillary block", t: "In plateau iris configuration, anteriorly-positioned or unusually large ciliary processes (already covered under Ciliary Body Regions content) directly push the peripheral iris forward against the anterior chamber angle — critically, this occurs DESPITE a normal-depth central anterior chamber and a relatively FLAT iris plane, genuinely distinct from pupillary block's iris bombé (convex, bowed-forward iris configuration, already covered) — the angle crowding here comes from the ciliary body's position, not from posterior-to-anterior chamber pressure differential." },
+      { h: "Why laser iridotomy alone is insufficient", t: "Because plateau iris configuration's angle crowding is ciliary-body-driven rather than pupillary-block-driven, laser peripheral iridotomy (already implicit as the standard pupillary block treatment) — which relieves the pressure differential across the iris — does NOT fully resolve the angle crowding in pure plateau iris configuration, since the underlying ciliary body position is unaffected by iridotomy — a genuinely important treatment-selection distinction requiring recognition that not all angle closure responds to the same intervention." },
+    ],
+    memorizeIt: [
+      "Plateau iris: anteriorly-positioned/large ciliary processes (already covered) push the peripheral iris against the angle — DESPITE normal central AC depth and a FLAT iris (distinct from pupillary block's convex iris bombé, already covered).",
+      "Mechanism is CILIARY-BODY-DRIVEN, not pupillary-block-driven.",
+      "Laser iridotomy (standard pupillary block treatment) does NOT fully resolve plateau iris configuration, since it doesn't address ciliary body position.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important treatment-selection distinction directly extending your existing Pupillary Block Mechanism & Iris Bombé content — a patient with persistent angle crowding and a flat iris configuration AFTER laser iridotomy has been performed should raise suspicion for plateau iris configuration rather than assuming the iridotomy failed or was inadequate, since this represents a fundamentally different, ciliary-body-driven mechanism requiring a different treatment approach (e.g., laser peripheral iridoplasty, which directly addresses peripheral iris/ciliary body configuration).",
+    ],
+  },
+  "glaudev-retina-nfl": {
+    name: "Fixed Retinal Ganglion Cell Count & Glaucomatous Reserve Capacity",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma/neuroscience references"],
+    learnIt: [
+      { h: "Overview", t: "Retinal ganglion cell number is established during development and does not increase or regenerate afterward, extending your existing Optic Nerve Development and this area's sibling Ganglion Cell Layer objective with a genuine 'reserve capacity' concept relevant to both developmental and acquired optic nerve disease." },
+      { h: "A fixed, non-renewable population", t: "Retinal ganglion cell axons (already covered as forming the nerve fiber layer under Optic Nerve Development content) are established in number during development and, like other mature CNS neurons (already covered under Neuroprotection content), are NOT replaced if lost — meaning a person's total lifetime retinal ganglion cell count is essentially fixed from early life onward, whether reduced by a developmental factor (e.g., optic nerve hypoplasia, already covered) or subsequently lost to acquired disease (glaucoma, ischemic optic neuropathy, already covered)." },
+      { h: "Reserve capacity and clinical detection threshold", t: "This shared, finite cellular pool creates a genuine 'reserve capacity' concept: a patient born with a lower baseline ganglion cell count (from a developmental factor) has LESS reserve before reaching the threshold of clinically detectable visual field loss from subsequent glaucomatous damage, compared to a patient with a normal baseline count — meaning two patients with identical rates of glaucomatous ganglion cell loss could show different clinical timelines to detectable field loss, depending on their starting reserve." },
+    ],
+    memorizeIt: [
+      "Retinal ganglion cell number is fixed by early development — NOT replaced or regenerated if lost (consistent with mature CNS neuron behavior, already covered).",
+      "Developmental factors (e.g., optic nerve hypoplasia, already covered) and acquired disease (glaucoma) both draw from this SAME fixed cellular pool.",
+      "'Reserve capacity' concept: lower baseline ganglion cell count = less reserve before glaucomatous loss reaches the threshold of clinically detectable visual field loss.",
+    ],
+    applyIt: [
+      "This gives you a genuinely interesting unifying concept connecting your existing Optic Nerve Hypoplasia and Neuroprotection Limits content to glaucoma risk assessment — a patient with a history of optic nerve hypoplasia or other developmental ganglion cell reduction who later develops glaucoma may show detectable visual field loss earlier in their glaucomatous disease course than a patient with a normal baseline ganglion cell count experiencing the identical rate of IOP-related damage, since they started with less cellular reserve.",
+    ],
+  },
+  "glaudev-on-lamina": {
+    name: "Lamina Cribrosa Architecture & Regional Susceptibility to Glaucomatous Damage",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "The lamina cribrosa's regional architecture directly explains WHY glaucomatous damage preferentially affects the superior and inferior neuroretinal rim first, completing the mechanistic picture behind this area's sibling ISNT rule objective and your existing Myelination content's lamina cribrosa reference." },
+      { h: "The lamina cribrosa structure", t: "The lamina cribrosa is a sieve-like connective tissue structure within the optic nerve head, through which all retinal ganglion cell axons (already covered) must pass as they exit the eye through the sclera — already implicitly relevant to existing Myelination & the Optic Nerve's CNS Classification content, since normal myelination stops precisely at this structure." },
+      { h: "Regional pore architecture and mechanical vulnerability", t: "The lamina cribrosa's pore size and connective tissue density vary REGIONALLY — pores tend to be LARGER and the connective tissue beam support relatively SPARSER at the superior and inferior poles compared to the nasal and temporal regions — meaning axons passing through the superior/inferior lamina have comparatively less structural support and are more mechanically vulnerable to IOP-related stress, directly explaining why glaucomatous damage characteristically affects the superior and inferior neuroretinal rim preferentially, the precise anatomic basis for the ISNT rule pattern already covered under this area's sibling Optic Disc Cupping objective." },
+    ],
+    memorizeIt: [
+      "Lamina cribrosa: sieve-like connective tissue structure in the optic nerve head — all ganglion cell axons pass through it exiting the eye; myelination stops here (already covered).",
+      "Pore size is LARGER and connective tissue support SPARSER at the SUPERIOR and INFERIOR poles vs. nasal/temporal.",
+      "This regional structural vulnerability is the anatomic basis for glaucoma's preferential superior/inferior neuroretinal rim damage — explains the ISNT rule pattern (this area's sibling objective).",
+    ],
+    applyIt: [
+      "This gives you the precise structural mechanism completing your existing Optic Disc Cupping & the ISNT Rule content — understanding that the lamina cribrosa's regional pore architecture (larger, less-supported pores superiorly/inferiorly) is WHY glaucoma preferentially damages these specific neuroretinal rim regions first, rather than this being an arbitrary clinical observation, giving genuine mechanistic grounding to the ISNT rule's diagnostic value.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -15713,6 +16051,19 @@ const FLASHCARDS = [
   { id: "fc-1342", objectiveId: "onpharm-iv-steroid-neuritis", front: "What counterintuitive ONTT finding led to avoiding oral-alone prednisone for acute optic neuritis?", back: "Oral prednisone used alone was associated with an INCREASED rate of recurrent optic neuritis episodes." },
   { id: "fc-1343", objectiveId: "onpharm-steroid-caution-naion", front: "Why do corticosteroids lack proven benefit in NAION, unlike optic neuritis?", back: "NAION's mechanism is presumed microvascular ischemic infarction, not primarily inflammatory, so corticosteroids' anti-inflammatory mechanism doesn't address the underlying pathophysiology." },
   { id: "fc-1344", objectiveId: "onpharm-neuritis-naion-differential", front: "Contrast the classic demographic/pain profile of optic neuritis vs. NAION.", back: "Optic neuritis: younger, painful (worse with eye movement), MS risk factors. NAION: older, painless, vasculopathic risk factors." },
+  { id: "fc-1345", objectiveId: "glauanat-ac-relevance", front: "Why is gonioscopy mandatory for any glaucoma workup?", back: "Angle status (open vs. narrow/closed) is the primary axis dividing glaucoma into open-angle vs. angle-closure types, and cannot be determined by IOP or external exam alone." },
+  { id: "fc-1346", objectiveId: "glauanat-cb-relevance", front: "What procedure directly destroys ciliary processes to reduce aqueous production in refractory glaucoma?", back: "Cyclophotocoagulation (a cyclodestructive procedure)." },
+  { id: "fc-1347", objectiveId: "glauanat-choroid-relevance", front: "Which glaucoma drug class specifically enhances uveoscleral (suprachoroidal) outflow?", back: "Prostaglandin analogs." },
+  { id: "fc-1348", objectiveId: "glauanat-vitreous-relevance", front: "What structure can cause pupillary block in an aphakic eye, in place of the iris-lens interface?", back: "The prolapsed anterior vitreous face." },
+  { id: "fc-1349", objectiveId: "glauanat-retina-relevance", front: "What diagnostic principle explains why OCT can detect glaucoma before visual field testing does?", back: "Structural (ganglion cell/nerve fiber layer) loss can precede detectable functional (visual field) loss." },
+  { id: "fc-1350", objectiveId: "glauanat-on-relevance", front: "State the ISNT rule for normal neuroretinal rim thickness.", back: "Inferior > Superior > Nasal > Temporal." },
+  { id: "fc-1351", objectiveId: "glauanat-cornea-relevance", front: "Besides causing IOP measurement error, what independent role does thin central corneal thickness play in glaucoma?", back: "It is an independent risk factor for glaucoma progression (per OHTS), beyond just the tonometry measurement artifact." },
+  { id: "fc-1352", objectiveId: "glauanat-lens-relevance", front: "Contrast phacomorphic and phacolytic glaucoma by angle status.", back: "Phacomorphic: angle-closure (lens mechanically crowds the angle). Phacolytic: open-angle (leaked lens protein obstructs the trabecular meshwork via inflammation)." },
+  { id: "fc-1353", objectiveId: "glaudev-ac-pcg", front: "State the classic clinical triad of primary congenital glaucoma.", back: "Epiphora, photophobia, blepharospasm." },
+  { id: "fc-1354", objectiveId: "glaudev-iris-pigmentary", front: "What corneal finding is classic for pigment dispersion syndrome?", back: "Krukenberg spindle — vertical pigment band on the corneal endothelium." },
+  { id: "fc-1355", objectiveId: "glaudev-cb-plateau-iris", front: "Why doesn't laser iridotomy fully resolve plateau iris configuration?", back: "The angle crowding is driven by anteriorly-positioned ciliary body/processes, not by the pupillary pressure differential that iridotomy relieves." },
+  { id: "fc-1356", objectiveId: "glaudev-retina-nfl", front: "What is the 'reserve capacity' concept in glaucoma risk?", back: "A lower baseline ganglion cell count (e.g., from a developmental factor) means less reserve before glaucomatous loss reaches the threshold of detectable field loss." },
+  { id: "fc-1357", objectiveId: "glaudev-on-lamina", front: "Why does the lamina cribrosa's regional architecture explain the ISNT rule pattern?", back: "Pores are larger and connective tissue support sparser at the superior/inferior poles, making axons there more mechanically vulnerable to IOP-related stress." },
 ];
 
 const QUESTIONS = [
@@ -20814,6 +21165,40 @@ const QUESTIONS = [
       b: "Correct — the younger woman's painful vision loss with MS risk factors is classic for optic neuritis, warranting MRI evaluation and the ONTT-validated IV methylprednisolone protocol (avoiding oral-alone therapy); the older man's painless vision loss with vasculopathic risk factors is classic for NAION, where corticosteroids lack established benefit given the ischemic (not primarily inflammatory) mechanism.",
       c: "Incorrect — IV corticosteroids have an established, evidence-based role in accelerating visual recovery in optic neuritis specifically.",
       d: "Incorrect — treating both identically ignores the fundamentally different underlying mechanisms (inflammatory/demyelinating vs. ischemic) and the differential evidence for corticosteroid benefit between these two conditions.",
+    },
+  },
+  {
+    id: "q-301", objectiveId: "glauanat-lens-relevance", type: "Clinical differentiation", difficulty: "Hard",
+    stem: "A patient with a dense, hypermature cataract presents with acutely elevated IOP. Gonioscopy reveals an OPEN angle with cellular debris visible in the anterior chamber. What is the most likely mechanism, and how does it differ from phacomorphic glaucoma?",
+    choices: [
+      { id: "a", text: "Phacomorphic glaucoma, since any cataract-related glaucoma closes the angle" },
+      { id: "b", text: "Phacolytic glaucoma — lens protein leaking through capsule defects triggers macrophage-mediated trabecular meshwork obstruction, an open-angle mechanism distinct from phacomorphic glaucoma's angle-closure crowding" },
+      { id: "c", text: "Pupillary block, which always presents with an open angle" },
+      { id: "d", text: "There is no meaningful mechanistic difference between phacomorphic and phacolytic glaucoma" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — the open angle on gonioscopy specifically argues against phacomorphic glaucoma, which is an angle-closure mechanism from mechanical lens crowding.",
+      b: "Correct — an open angle with cellular debris in a hypermature cataract is classic for phacolytic glaucoma, where leaked lens protein through capsule defects triggers a macrophage-mediated inflammatory trabecular meshwork obstruction — genuinely distinct from phacomorphic glaucoma's angle-closure mechanism from mechanical lens crowding.",
+      c: "Incorrect — pupillary block characteristically causes angle CLOSURE (iris bombé), not an open angle.",
+      d: "Incorrect — these are mechanistically opposite in angle status (phacomorphic closes the angle; phacolytic keeps it open but functionally obstructed), a genuinely important distinction affecting management.",
+    },
+  },
+  {
+    id: "q-302", objectiveId: "glaudev-cb-plateau-iris", type: "Clinical application", difficulty: "Hard",
+    stem: "A patient undergoes laser peripheral iridotomy for a narrow angle, but follow-up gonioscopy shows persistent angle crowding with a flat iris plane and normal central anterior chamber depth. What does this most likely represent, and what does it imply about the underlying mechanism?",
+    choices: [
+      { id: "a", text: "A failed or inadequate iridotomy requiring simple repeat iridotomy" },
+      { id: "b", text: "Plateau iris configuration — angle crowding driven by anteriorly-positioned ciliary body/processes rather than pupillary block, which iridotomy does not address" },
+      { id: "c", text: "Normal expected post-iridotomy findings requiring no further action" },
+      { id: "d", text: "Phacomorphic glaucoma from lens swelling" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — a flat iris with normal central AC depth after a technically adequate iridotomy suggests a mechanism other than simple pupillary block, not merely an inadequate procedure.",
+      b: "Correct — persistent angle crowding despite a flat iris and normal central chamber depth after iridotomy is classic for plateau iris configuration, where anteriorly-positioned ciliary processes push the peripheral iris against the angle independent of the pupillary pressure differential that iridotomy relieves.",
+      c: "Incorrect — persistent angle crowding after iridotomy is a clinically significant finding requiring further evaluation and likely additional treatment (e.g., iridoplasty), not an expected benign finding.",
+      d: "Incorrect — this presentation does not involve lens-related findings; plateau iris is a distinct, ciliary-body-driven mechanism.",
     },
   },
 ];
