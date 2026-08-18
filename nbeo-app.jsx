@@ -1483,6 +1483,57 @@ const SCLERAGROSS_OBJECTIVES = [
   { id: "scleragross-structure-episclera", name: "Scleral Structure & the Episclera", built: true },
 ];
 
+const LENSMETER_TOPIC_ID = "t-1-0-0"; // Ophthalmic Optics/Spectacles(1) > Optics(Geometrical)(0) > Ophthalmic and optical instruments(0)
+// Distinct topic slot from Ametropia's Instruments topic (direct ophthalmoscope) —
+// this one covers the lensmeter/focimeter, the core dispensing-optics instrument.
+// Directly applies the vergence equation already covered under Refraction at
+// Single Spherical Surfaces to a concrete clinical instrument.
+const LENSMETER_OBJECTIVES = [
+  { id: "lensmeter-focimeter-principle", name: "The Lensmeter (Focimeter) — Optical Principles", built: true },
+  { id: "lensmeter-reading-technique", name: "Reading Sphere, Cylinder, Axis & Prism on the Lensmeter", built: true },
+];
+
+const SPECPOLAR_TOPIC_ID = "t-1-1-0"; // Ophthalmic Optics/Spectacles(1) > Optics(Physical)(1) > Polarization(0)
+// Distinct topic slot from Ametropia's Wave Optics polarization content (Malus's
+// law) — this one applies that mechanism specifically to sunglass dispensing.
+const SPECPOLAR_OBJECTIVES = [
+  { id: "specpolar-glare-filtering", name: "Polarizing Sunglass Lenses — Selective Filtering of Reflected Glare", built: true },
+  { id: "specpolar-clinical-limitations", name: "Clinical Considerations & Limitations of Polarized Lenses", built: true },
+];
+
+const LENSPHYSCHAR_TOPIC_ID = "t-1-2-0"; // Ophthalmic Optics/Spectacles(1) > Optics(Ophthalmic)(2) > Physical characteristics of ophthalmic lenses(0)
+// Distinct from the already-built Optical Characteristics topic (oblique
+// astigmatism, reflection) — this covers PHYSICAL/material properties: index,
+// Abbe number, density, and coating durability trade-offs.
+const LENSPHYSCHAR_OBJECTIVES = [
+  { id: "lensphyschar-material-tradeoffs", name: "Index of Refraction, Abbe Number & Density Trade-offs", built: true },
+  { id: "lensphyschar-durability", name: "Scratch Resistance, Chemical Resistance & Hard Coatings", built: true },
+];
+
+const FRAMEMAT_TOPIC_ID = "t-1-2-5"; // Ophthalmic Optics/Spectacles(1) > Optics(Ophthalmic)(2) > Frame materials (physical/biological compatibility)(5)
+const FRAMEMAT_OBJECTIVES = [
+  { id: "framemat-metal-frames", name: "Metal Frame Materials & Nickel Allergy", built: true },
+  { id: "framemat-plastic-frames", name: "Plastic (Zyl) & Nylon Frame Materials", built: true },
+];
+
+const ABSORPTIVE_TOPIC_ID = "t-1-2-8"; // Ophthalmic Optics/Spectacles(1) > Optics(Ophthalmic)(2) > Absorptive lenses(8)
+// Distinct angle from the already-built Spectacle Fitting topic's Absorptive/
+// Photochromic Lens Considerations objective — this covers transmittance
+// standards and photochromic reaction chemistry specifically.
+const ABSORPTIVE_OBJECTIVES = [
+  { id: "absorptive-transmittance-standards", name: "Visible Light Transmittance & Sunglass Lens Categories", built: true },
+  { id: "absorptive-photochromic-mechanism", name: "Photochromic Lens Chemistry & Activation/Fade Kinetics", built: true },
+];
+
+const OPTTOLERANCE_TOPIC_ID = "t-1-2-10"; // Ophthalmic Optics/Spectacles(1) > Optics(Ophthalmic)(2) > Optical tolerances & physical requirements (FDA, ANSI Z80/Z87, OSHA)(10)
+// Distinct from the already-built Impact Resistance topic (ANSI Z87, impact
+// safety) — this covers ANSI Z80.1 PRESCRIPTION ACCURACY tolerances, a
+// genuinely different standard testable as a distinguishing pair.
+const OPTTOLERANCE_OBJECTIVES = [
+  { id: "opttolerance-ansi-z80", name: "ANSI Z80.1 Prescription Power & Axis Tolerances", built: true },
+  { id: "opttolerance-regulatory-roles", name: "FDA, ANSI, & OSHA — Distinct Regulatory Roles", built: true },
+];
+
 const TOPIC_OBJECTIVES = {
   [ENDO_TOPIC_ID]: ENDO_OBJECTIVES, [NERVOUS_TOPIC_ID]: NERVOUS_OBJECTIVES,
   [INTEG_TOPIC_ID]: INTEG_OBJECTIVES, [GLAUCOMA_TOPIC_ID]: GLAUCOMA_OBJECTIVES,
@@ -1559,6 +1610,9 @@ const TOPIC_OBJECTIVES = {
   [SPECREFLECTION_TOPIC_ID]: SPECREFLECTION_OBJECTIVES,
   [CORNEAGROSS_TOPIC_ID]: CORNEAGROSS_OBJECTIVES, [CONJGROSS_TOPIC_ID]: CONJGROSS_OBJECTIVES,
   [LENSGROSS_TOPIC_ID]: LENSGROSS_OBJECTIVES, [SCLERAGROSS_TOPIC_ID]: SCLERAGROSS_OBJECTIVES,
+  [LENSMETER_TOPIC_ID]: LENSMETER_OBJECTIVES, [SPECPOLAR_TOPIC_ID]: SPECPOLAR_OBJECTIVES,
+  [LENSPHYSCHAR_TOPIC_ID]: LENSPHYSCHAR_OBJECTIVES, [FRAMEMAT_TOPIC_ID]: FRAMEMAT_OBJECTIVES,
+  [ABSORPTIVE_TOPIC_ID]: ABSORPTIVE_OBJECTIVES, [OPTTOLERANCE_TOPIC_ID]: OPTTOLERANCE_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -1699,6 +1753,12 @@ const CONTENT_TOPICS = [
   { topicId: CONJGROSS_TOPIC_ID, name: "Conjunctival Gross Anatomy", objectives: CONJGROSS_OBJECTIVES },
   { topicId: LENSGROSS_TOPIC_ID, name: "Lens & Zonule Gross Anatomy", objectives: LENSGROSS_OBJECTIVES },
   { topicId: SCLERAGROSS_TOPIC_ID, name: "Scleral Gross Anatomy", objectives: SCLERAGROSS_OBJECTIVES },
+  { topicId: LENSMETER_TOPIC_ID, name: "The Lensmeter & Optical Dispensing Instruments", objectives: LENSMETER_OBJECTIVES },
+  { topicId: SPECPOLAR_TOPIC_ID, name: "Polarization in Sunglass Lenses", objectives: SPECPOLAR_OBJECTIVES },
+  { topicId: LENSPHYSCHAR_TOPIC_ID, name: "Physical Characteristics of Ophthalmic Lenses", objectives: LENSPHYSCHAR_OBJECTIVES },
+  { topicId: FRAMEMAT_TOPIC_ID, name: "Frame Materials & Biological Compatibility", objectives: FRAMEMAT_OBJECTIVES },
+  { topicId: ABSORPTIVE_TOPIC_ID, name: "Absorptive Lenses — Transmittance & Photochromics", objectives: ABSORPTIVE_OBJECTIVES },
+  { topicId: OPTTOLERANCE_TOPIC_ID, name: "Optical Tolerances & Regulatory Standards", objectives: OPTTOLERANCE_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -10447,6 +10507,257 @@ const STUDY_PAGES = {
       "This gives you a genuinely important dispensing-counseling principle completing your existing sun lens content (Absorptive/Photochromic Lenses, Polarization, Radiation & the Eye): a patient should never assume a tinted or mirrored lens automatically provides adequate UV protection, since tint, mirror coating, polarization, and UV-blocking are each independently engineered and specified lens properties — explicitly confirming UV protection specification (rather than assuming it from a lens's visible appearance or tint darkness) is essential, especially for patients at elevated UV-related ocular risk already covered under your Pterygium and Cataract content.",
     ],
   },
+  "lensmeter-focimeter-principle": {
+    name: "The Lensmeter (Focimeter) — Optical Principles",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic dispensing/optics references"],
+    learnIt: [
+      { h: "Overview", t: "The lensmeter (focimeter) is the core instrument for measuring the sphere, cylinder, axis, add power, and prism of a finished spectacle lens — it is a direct clinical application of the vergence equation (V = U + P) already covered under Refraction at Single Spherical/Plane Surfaces, using a known target vergence to solve for the unknown lens power." },
+      { h: "Basic optical layout", t: "A standard (manual) lensmeter projects a target (typically a mire pattern) through a movable internal standard lens and the unknown spectacle lens under test, viewed through an eyepiece telescope; the examiner adjusts the internal target's position until the mires come into sharp focus, at which point the internal system's known compensating power directly reads out as the back vertex power of the lens under test." },
+      { h: "Manual vs. automated (lensometers)", t: "Automated (digital/auto) lensmeters use a photodetector array and a rotating or scanning target to electronically determine best focus and cylinder axis, removing examiner judgment from the endpoint — faster and more reproducible for high-volume dispensing, but the manual instrument's underlying vergence-based principle is identical and remains the conceptual foundation tested on the boards." },
+      { h: "Why back vertex power specifically", t: "The lensmeter measures BACK vertex power (the vergence leaving the back surface of the lens) because this is the clinically relevant value — it is the power that directly determines the vergence entering the eye, which is why back vertex power (rather than front vertex or nominal power) is the standard reported on a finished spectacle Rx, directly connecting to your existing Thick Lenses content on back vs. front vertex power." },
+    ],
+    memorizeIt: [
+      "Lensmeter measures spectacle lens power by applying the vergence equation (V = U + P) with a known target vergence, solving for the lens's power.",
+      "Reports BACK VERTEX POWER — the clinically relevant vergence leaving the lens, directly connecting to existing Back/Front Vertex Power content.",
+      "Manual lensmeter: examiner judges mire focus. Automated lensmeter: photodetector array judges focus electronically — same underlying principle, different endpoint determination.",
+      "Also measures cylinder power/axis (via astigmatic mire pattern) and prism (via mire displacement from the reticle center).",
+    ],
+    applyIt: [
+      "This instrument is the practical tool that verifies every spectacle-optics calculation already covered on this platform — confirming a lens matches the intended sphere/cylinder/axis from your Spherocylindrical Lenses content, and confirming the back vertex power used in your Thick Lenses and high-plus Aphakia correction content is accurate before dispensing to the patient.",
+    ],
+  },
+  "lensmeter-reading-technique": {
+    name: "Reading Sphere, Cylinder, Axis & Prism on the Lensmeter",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic dispensing/optics references"],
+    learnIt: [
+      { h: "Overview", t: "Correctly reading a lensmeter requires a systematic sequence — neutralizing sphere first, then identifying the cylinder axis and power, then checking for induced or intentional prism — and applies directly to verifying prescriptions already covered under your Spherocylindrical Lenses and Ophthalmic Prisms content." },
+      { h: "Sphere and cylinder power/axis", t: "The examiner first brings one set of mire lines into focus (the sphere power, or one principal meridian), then rotates/refocuses to bring the perpendicular set into focus (giving the cylinder power as the dioptric difference between the two meridians, and the cylinder axis from the mire orientation) — this directly mirrors the transposition logic (plus-cylinder vs. minus-cylinder notation) already covered under Sphere/Cylinder Notation & Transposition." },
+      { h: "Reading prism", t: "Prism is read by noting how far the lens's optical center is displaced from the lensmeter's reticle center (crosshairs) when the mires are centered — this directly applies Prentice's Rule (already covered under Ophthalmic Prisms), since a decentered optical center induces prism proportional to the decentration distance and lens power (Δ = hF)." },
+      { h: "Multifocal add power", t: "For multifocal lenses, the examiner measures the distance portion power first, then measures through the near segment and subtracts the distance power to isolate the add power — clinically verifying the add power ordered, directly connecting to existing Multifocal Lens Design and Image Jump/Displacement content." },
+    ],
+    memorizeIt: [
+      "Sequence: neutralize one meridian (sphere), then the perpendicular meridian (gives cylinder power via the difference, and axis via mire orientation).",
+      "Prism = optical center decentration from the reticle center, following Prentice's Rule (Δ = hF) — already covered under Ophthalmic Prisms.",
+      "Add power = (near segment reading) − (distance portion reading), isolating the multifocal add.",
+      "This is the practical verification step for every spectacle Rx dispensed, catching lab fabrication errors before the patient receives the glasses.",
+    ],
+    applyIt: [
+      "This gives you the practical dispensing-verification skill that directly applies Prentice's Rule and multifocal add-power concepts already covered elsewhere on this platform — an unwanted prism finding on lensmeter verification (unequal or excessive decentration) is exactly the mechanism behind the Image Jump/Displacement problems already covered under Multifocal Lens Design.",
+    ],
+  },
+  "specpolar-glare-filtering": {
+    name: "Polarizing Sunglass Lenses — Selective Filtering of Reflected Glare",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic optics/dispensing references"],
+    learnIt: [
+      { h: "Overview", t: "Polarizing sunglass lenses apply Malus's law (already covered under Wave Optics) to a specific, high-value clinical dispensing scenario: selectively blocking horizontally-polarized reflected glare from surfaces like water, wet pavement, and car hoods, which ordinary tinted (non-polarizing) lenses cannot do." },
+      { h: "Why reflected glare is polarized", t: "When unpolarized sunlight reflects off a horizontal surface at a shallow angle, the reflected light becomes predominantly polarized in the horizontal plane (a physical consequence of the reflection/refraction geometry at the interface) — this is why glare off water or roads is so much more visually disabling than diffuse ambient light of similar intensity." },
+      { h: "How the vertical-axis filter blocks it", t: "Polarized sunglass lenses contain a filter with its transmission axis oriented VERTICALLY, so the predominantly horizontally-polarized reflected glare is selectively attenuated per Malus's law (I = I₀cos²θ, already covered) — while vertically-polarized and unpolarized ambient light passes through largely unattenuated, dramatically improving contrast and comfort specifically for reflected-glare conditions." },
+    ],
+    memorizeIt: [
+      "Reflected glare off horizontal surfaces (water, wet road) becomes predominantly horizontally polarized.",
+      "Polarized sunglass lenses use a vertical-axis filter to selectively block this horizontally-polarized glare, per Malus's law (already covered under Wave Optics).",
+      "This selective glare-blocking is the key advantage over ordinary (non-polarizing) tinted lenses, which attenuate all light equally regardless of polarization.",
+      "Clinical value is highest for outdoor/water/driving glare; polarization itself does not add UV protection or overall transmittance reduction (independent lens properties, already covered under Reflection & Coatings).",
+    ],
+    applyIt: [
+      "This gives you the complete physical mechanism (Malus's law, already covered under Wave Optics) behind a specific, everyday clinical dispensing recommendation, and directly complements your existing Absorptive Lenses content — tint reduces overall transmittance uniformly, while polarization selectively targets reflected glare, and patients often benefit from understanding these are two independent, combinable lens properties.",
+    ],
+  },
+  "specpolar-clinical-limitations": {
+    name: "Clinical Considerations & Limitations of Polarized Lenses",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic optics/dispensing references"],
+    learnIt: [
+      { h: "Overview", t: "Despite their glare-reduction benefits, polarized lenses carry specific, testable dispensing limitations that a practitioner must counsel patients on before recommending them." },
+      { h: "LCD/digital screen visibility", t: "Many LCD screens (car dashboards, ATMs, some phone/GPS displays) emit light that is itself already polarized as part of the display technology — when this polarized screen light interacts with a polarized lens whose axis happens to be oriented near-perpendicular to the screen's emission axis, the display can appear dark, dim, or show rainbow banding/patterning, a genuine functional problem for patients who need to read digital displays while wearing the glasses." },
+      { h: "Aviation and certain occupational contraindications", t: "Pilots are generally advised against polarized lenses because polarization can mask or distort the appearance of certain glare-based visual cues used to detect hazards (e.g., ice on a runway, or glare patterns from other aircraft/instrument reflections that pilots learn to use as depth/hazard cues), and can interfere with reading polarized cockpit displays — this is a genuine occupational-counseling point distinct from the general public recommendation." },
+      { h: "Not a substitute for other lens properties", t: "As established under Reflection & Coatings, polarization does not itself provide UV protection, and does not reduce overall transmittance the way a tint does — a clear or lightly-tinted polarized lens still requires a separately specified UV-blocking treatment." },
+    ],
+    memorizeIt: [
+      "Polarized lenses can make LCD/digital screens appear dark or patterned, since many displays emit polarized light — a genuine functional limitation for screen-reading tasks.",
+      "Pilots are generally advised against polarized lenses (masks glare-based hazard cues, interferes with polarized cockpit displays) — an occupational-counseling exception to the general recommendation.",
+      "Polarization ≠ UV protection and ≠ overall transmittance reduction — these remain independently specified lens properties (already established under Reflection & Coatings).",
+      "Counsel patients on these limitations before recommending polarized lenses, especially pilots and heavy digital-display users.",
+    ],
+    applyIt: [
+      "This extends your existing Mirror Coatings & UV-Reflective Treatments content's core counseling principle — that sunglass lens properties are independently specified, not automatically bundled — to polarization specifically, and adds a genuinely testable occupational contraindication (aviation) that distinguishes polarized lens counseling from simple tinted lens counseling.",
+    ],
+  },
+  "lensphyschar-material-tradeoffs": {
+    name: "Index of Refraction, Abbe Number & Density Trade-offs",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic optics/lens materials references"],
+    learnIt: [
+      { h: "Overview", t: "Every ophthalmic lens material choice involves an inescapable physical trade-off between index of refraction, Abbe number (chromatic dispersion), and density (weight) — no material maximizes all three simultaneously, and understanding this trade-off is essential for appropriate material selection, directly extending your existing High-Index Materials and Chromatic Aberration content." },
+      { h: "Index of refraction vs. thickness", t: "Higher-index materials (e.g., 1.67 or 1.74 high-index plastic vs. 1.498 standard CR-39) bend light more per unit thickness, allowing thinner, flatter lenses for a given power — already established as the key benefit for high-plus (aphakic-range) and high-minus prescriptions under High-Powered Lens Considerations." },
+      { h: "The Abbe number trade-off", t: "As established under Chromatic Aberration & the Achromatic Doublet, higher-index materials generally have LOWER Abbe numbers (more chromatic dispersion), meaning thinner high-index lenses often show more noticeable chromatic aberration (color fringing) at the lens periphery than thicker, lower-index materials — a genuine patient-counseling trade-off between cosmetic thinness and optical color-fringing performance." },
+      { h: "Density and weight", t: "Higher-index glass materials tend to be denser (heavier) despite being thinner, while higher-index plastics are generally engineered to remain lighter than glass — polycarbonate and Trivex specifically combine a moderate index with notably low density and very high impact resistance (already covered under Impact Resistance), making them preferred for safety-critical and pediatric dispensing despite a less favorable Abbe number than CR-39." },
+    ],
+    memorizeIt: [
+      "Higher index of refraction → thinner lens for a given power (key benefit for high-plus/high-minus prescriptions, already covered under High-Powered Lens Considerations).",
+      "Higher index generally trades off against LOWER Abbe number → more chromatic dispersion/color fringing (already covered under Chromatic Aberration).",
+      "Density/weight varies independently — polycarbonate/Trivex combine moderate index, low density, and high impact resistance, explaining their occupational/pediatric preference.",
+      "No single material is optimal on all three axes (index, Abbe number, density) simultaneously — material selection is always a clinical trade-off based on the individual patient's priorities.",
+    ],
+    applyIt: [
+      "This organizes your existing High-Powered Lens Considerations, Chromatic Aberration, and Impact Resistance content into one unified material-selection framework — explaining precisely why a high-index lens recommended for cosmetic thinness in a high-minus myope may show more noticeable chromatic fringing than a lower-index alternative, a genuine counseling trade-off to discuss with the patient.",
+    ],
+  },
+  "lensphyschar-durability": {
+    name: "Scratch Resistance, Chemical Resistance & Hard Coatings",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic optics/lens materials references"],
+    learnIt: [
+      { h: "Overview", t: "Plastic ophthalmic lens materials are inherently far more scratch-prone than glass, making a scratch-resistant hard coating a near-universal addition to modern plastic and polycarbonate lenses — a distinct physical property from the anti-reflective coating already covered under Reflection & Coatings." },
+      { h: "Hard coat mechanism", t: "A hard coat is typically a thin, cured silicone- or acrylic-based polymer layer applied to the lens surface that is substantially harder than the underlying plastic substrate, providing meaningfully improved scratch resistance — though no plastic lens coating achieves the intrinsic scratch resistance of glass, and hard coats reduce rather than eliminate scratch risk." },
+      { h: "Chemical resistance considerations", t: "Certain lens coatings and materials (particularly some AR coatings and polycarbonate) can be damaged by specific chemical exposures — for example, some cleaning solvents, certain sunscreens, and chlorinated pool water can degrade coating adhesion over time — a practical dispensing-counseling point about proper lens cleaning technique (lens-safe cleaner and microfiber cloth, avoiding harsh solvents) to protect the coating investment." },
+      { h: "Coating stack layering", t: "A modern finished lens is typically a layered stack: substrate material → hard (scratch-resistant) coat → anti-reflective coating (already covered) → hydrophobic/oleophobic top coat (repels water/fingerprint oils, easing cleaning) — each layer serves an independent physical function, reinforcing the broader principle already established under Reflection & Coatings that lens properties are independently engineered, not a single bundled feature." },
+    ],
+    memorizeIt: [
+      "Plastic lenses are inherently more scratch-prone than glass — hard coating is a near-universal addition to modern plastic/polycarbonate lenses.",
+      "Hard coat = cured polymer layer providing improved (not absolute) scratch resistance — distinct from AR coating (already covered under Reflection & Coatings).",
+      "Certain solvents/chemicals can degrade coating adhesion over time — proper cleaning technique (lens-safe cleaner, microfiber cloth) protects the coating investment.",
+      "Modern lens = layered coating stack (substrate → hard coat → AR coating → hydrophobic top coat), each layer independently engineered.",
+    ],
+    applyIt: [
+      "This extends the independently-engineered-properties principle already established under Mirror Coatings & UV-Reflective Treatments to the full modern coating stack, and gives a genuine practical counseling point (proper lens cleaning technique) that protects the AR coating and hard coat investment already covered elsewhere on this platform.",
+    ],
+  },
+  "framemat-metal-frames": {
+    name: "Metal Frame Materials & Nickel Allergy",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic dispensing references"],
+    learnIt: [
+      { h: "Overview", t: "Metal spectacle frame materials range from traditional nickel-containing alloys to modern hypoallergenic titanium, and understanding this range matters clinically because nickel is a common contact allergen — directly connecting to your existing Type IV Hypersensitivity (delayed, cell-mediated) content." },
+      { h: "Monel and nickel allergy", t: "Monel (a nickel-copper alloy) has traditionally been a common, cost-effective, malleable frame metal — but its nickel content can trigger allergic contact dermatitis (a Type IV, T-cell-mediated hypersensitivity reaction, already covered) at the point of skin contact (nose pads, temple tips), presenting as localized erythema, itching, or dermatitis where the frame touches the skin." },
+      { h: "Titanium and beta-titanium (memory metal)", t: "Titanium and beta-titanium alloys are lightweight, highly corrosion-resistant, and generally hypoallergenic (nickel-free or minimal-nickel), making them the preferred choice for patients with known nickel sensitivity; beta-titanium ('memory metal,' e.g., Flexon-type frames) has the added benefit of flexing and returning to its original shape, improving durability against bending damage." },
+      { h: "Stainless steel", t: "Stainless steel frames offer a middle ground — generally lower nickel-release than monel (depending on the specific alloy grade), reasonably lightweight and corrosion-resistant, though not as fully hypoallergenic as pure titanium for the most nickel-sensitive patients." },
+    ],
+    memorizeIt: [
+      "Monel (nickel-copper alloy): traditional, cost-effective, but nickel content risks allergic contact dermatitis (Type IV hypersensitivity, already covered) at skin contact points.",
+      "Titanium/beta-titanium: lightweight, corrosion-resistant, generally hypoallergenic — preferred for nickel-sensitive patients.",
+      "Beta-titanium ('memory metal'): flexes and returns to original shape, improving bend-damage durability.",
+      "Stainless steel: intermediate nickel-release profile, reasonable durability, but not as hypoallergenic as titanium for the most sensitive patients.",
+    ],
+    applyIt: [
+      "This gives you a genuine mechanistic link between frame material selection and your existing Type IV Hypersensitivity content: a patient presenting with periorbital/nasal dermatitis limited to frame-contact points is demonstrating classic allergic contact dermatitis, and the clinical fix — switching to a titanium or other nickel-free frame — is a direct, practical application of understanding the underlying T-cell-mediated hypersensitivity mechanism already covered.",
+    ],
+  },
+  "framemat-plastic-frames": {
+    name: "Plastic (Zyl) & Nylon Frame Materials",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic dispensing references"],
+    learnIt: [
+      { h: "Overview", t: "Plastic frame materials range from traditional cellulose acetate ('zyl') to modern injection-molded nylon-based polymers, each with distinct physical handling properties relevant to fitting and adjustment, extending your existing Frame Fitting Complications & Adjustment content." },
+      { h: "Cellulose acetate (zyl)", t: "Cellulose acetate is the traditional plastic frame material — available in a wide range of colors/patterns, generally hypoallergenic, and importantly becomes moldable when gently heated (allowing the optician to warm and adjust the frame shape for fit) but returns to a rigid, non-flexing state at room temperature, meaning it does not tolerate significant flexing stress without cracking, unlike memory-metal alternatives." },
+      { h: "Nylon and polyamide blends", t: "Nylon-based (polyamide) frame materials are lightweight, highly flexible, and resistant to breaking under stress without heat — making them the preferred choice for sport/safety frames and for rimless or semi-rimless 'drill-mount' designs, where the lens itself must tolerate drilled screw-mount stress without cracking (extending your existing Impact Resistance content on occupational/pediatric eyewear safety)." },
+      { h: "TR-90 and similar engineering polymers", t: "TR-90 and related engineering thermoplastics offer an intermediate profile — very lightweight, highly flexible/memory-retentive similar to nylon, but with better dimensional stability for precise optical alignment than pure nylon, commonly used in modern sport and rimless frame designs." },
+    ],
+    memorizeIt: [
+      "Cellulose acetate (zyl): traditional, colorful, hypoallergenic, heat-moldable for adjustment, but rigid (crack-prone) at room temperature without heat.",
+      "Nylon/polyamide: lightweight, highly flexible without heat, resistant to breaking — preferred for sport/safety and rimless drill-mount designs.",
+      "TR-90: engineering polymer, lightweight and flexible like nylon with better dimensional stability for precise lens alignment.",
+      "Material choice directly affects adjustment technique (heat required for zyl vs. inherent flex for nylon/TR-90) and durability under stress.",
+    ],
+    applyIt: [
+      "This directly extends your existing Frame Fitting Complications & Adjustment content by explaining WHY adjustment technique differs by material — a zyl frame requires gentle heating before bending to avoid cracking, while a nylon/TR-90 frame can often be adjusted without heat given its inherent flexibility — and connects to Impact Resistance's occupational/pediatric eyewear content by explaining why nylon-based rimless designs are preferred where drilled lens-mount stress must be tolerated.",
+    ],
+  },
+  "absorptive-transmittance-standards": {
+    name: "Visible Light Transmittance & Sunglass Lens Categories",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic optics/dispensing references"],
+    learnIt: [
+      { h: "Overview", t: "Absorptive (tinted) sunglass lenses are specified by their visible light transmittance (VLT) — the percentage of incident visible light that passes through the lens — and appropriate VLT selection depends on the intended use case, extending your existing Absorptive & Photochromic Lens Considerations content with the quantitative transmittance framework behind it." },
+      { h: "Transmittance categories", t: "Lenses are broadly categorized by VLT: light tints (~60-90% VLT) suit low-glare indoor-to-outdoor transition wear; general-purpose sunglasses (~15-30% VLT) suit typical daytime outdoor use; and very dark tints (<10% VLT) suit high-glare environments (snow, water, high-altitude) — darker is not automatically 'better,' since excessively low VLT in low-light conditions (e.g., driving at dusk, or indoors) can dangerously reduce visual acuity and is a genuine counseling point against wearing very dark lenses in inappropriate lighting conditions." },
+      { h: "Gradient and graduated tints", t: "Gradient tints (darker at the top of the lens, lighter toward the bottom) are specifically designed to reduce overhead glare (sky, sun) while preserving lighter transmittance for near tasks viewed through the lower lens (e.g., reading a dashboard or a book) — a practical, use-case-specific tint design distinct from a uniform full-lens tint." },
+      { h: "Relationship to absorption spectrum", t: "Beyond overall VLT percentage, a tint's specific absorption spectrum (which wavelengths it blocks preferentially) determines its color-perception effect, connecting directly to your existing Color Mixture & Opponent-Process Theory content — a strongly colored tint (e.g., deep amber/brown) selectively alters color perception and contrast in ways a neutral gray tint (which reduces all wavelengths roughly proportionally) does not." },
+    ],
+    memorizeIt: [
+      "Visible Light Transmittance (VLT) = % of incident visible light passing through the lens — the core quantitative specification for absorptive lenses.",
+      "Light tints (~60-90% VLT): low-glare/indoor-outdoor. General sunglasses (~15-30% VLT): typical daytime outdoor. Very dark (<10% VLT): high-glare (snow/water/altitude) only.",
+      "Excessively dark tints in low-light conditions (dusk driving, indoors) dangerously reduce visual acuity — darker is not automatically better.",
+      "Gradient tints reduce overhead glare while preserving lighter transmittance for near tasks (dashboard/reading) through the lower lens.",
+    ],
+    applyIt: [
+      "This gives you the quantitative VLT framework underlying your existing Absorptive & Photochromic Lens Considerations content, and the color-perception connection extends your existing Color Mixture & Opponent-Process Theory content by explaining why a strongly colored tint alters perceived color relationships in a way a neutral gray tint of the same overall VLT does not.",
+    ],
+  },
+  "absorptive-photochromic-mechanism": {
+    name: "Photochromic Lens Chemistry & Activation/Fade Kinetics",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic optics/dispensing references"],
+    learnIt: [
+      { h: "Overview", t: "Photochromic lenses darken reversibly in response to UV exposure and lighten again when UV exposure is removed, via specific photochemical compounds embedded in or applied to the lens — this genuinely extends your existing Absorptive & Photochromic Lens Considerations and Radiation & the Eye content with the underlying reaction chemistry." },
+      { h: "The photochromic reaction", t: "Photochromic compounds (historically silver halide crystals in glass lenses; modern plastic lenses typically use organic naphthopyran or oxazine-based molecules) undergo a reversible molecular structural change upon UV photon absorption, shifting from a colorless/clear molecular configuration to an activated, light-absorbing configuration — this activated form absorbs visible light (darkening the lens) until thermal energy drives the molecule back to its clear configuration in the absence of continued UV exposure." },
+      { h: "Why photochromics don't darken well behind a car windshield", t: "Automotive windshield glass blocks the majority of UV wavelengths, and because the photochromic activation reaction is specifically UV-triggered (not simply triggered by visible light brightness), standard photochromic lenses darken poorly or not at all while driving — a genuinely important, frequently-asked patient-counseling point distinct from the tint mechanism covered under fixed absorptive lenses." },
+      { h: "Temperature dependence of fade kinetics", t: "Because the fade-back reaction is thermally driven, photochromic lenses fade back to clear more slowly in cold temperatures and more quickly in warm temperatures — the reverse of what many patients intuitively expect, and a genuine counseling point (e.g., photochromic lenses may stay darker longer than expected when moving indoors on a cold winter day)." },
+    ],
+    memorizeIt: [
+      "Photochromic activation is specifically UV-triggered (reversible molecular structural change), not simply triggered by visible light brightness.",
+      "Modern plastic photochromics use organic naphthopyran/oxazine compounds; older glass lenses used silver halide crystals.",
+      "Standard photochromics darken poorly behind a car windshield, since windshield glass blocks most UV — a key patient-counseling point.",
+      "Fade-back (de-activation) is thermally driven: SLOWER in cold temperatures, FASTER in warm temperatures — counterintuitive but testable.",
+    ],
+    applyIt: [
+      "This gives you the underlying photochemistry completing your existing Absorptive & Photochromic Lens Considerations content, and directly extends your existing Radiation & the Eye (UV Spectrum) content by explaining precisely why the UV-blocking windshield glass that already protects against UVB-related anterior segment damage also, as a side effect, prevents photochromic lenses from darkening while driving.",
+    ],
+  },
+  "opttolerance-ansi-z80": {
+    name: "ANSI Z80.1 Prescription Power & Axis Tolerances",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic optics/regulatory references"],
+    learnIt: [
+      { h: "Overview", t: "ANSI Z80.1 is the American National Standards Institute standard specifying the allowable manufacturing tolerance for finished spectacle lens power, cylinder axis, and prism — genuinely distinct from ANSI Z87 (already covered under Impact Resistance), which governs impact resistance rather than prescription accuracy." },
+      { h: "Power and cylinder tolerances", t: "Z80.1 allows a small permitted deviation between the prescribed and as-fabricated lens power (e.g., on the order of ±0.13D for lower powers, with a larger allowable tolerance as prescribed power increases) and a permitted cylinder power tolerance — this tolerance framework is why a lensmeter verification reading (already covered) that is very close to, but not mathematically exact with, the prescribed power is still considered an acceptable, correctly-fabricated lens." },
+      { h: "Axis tolerance", t: "Cylinder axis tolerance is tightest for low cylinder powers and becomes progressively tighter (smaller allowable degree deviation) as cylinder power increases, since a given axis error produces more clinically significant residual astigmatism at higher cylinder powers — directly connecting to your existing Obliquely Crossed Cylinders content on how axis misalignment affects the resultant cylindrical correction." },
+      { h: "Prism tolerance", t: "Z80.1 also specifies an allowable unwanted (unintended) prism tolerance, connecting directly to your existing Ophthalmic Prisms/Prentice's Rule content — excessive unwanted prism from optical center decentration beyond this tolerance is a genuine, testable dispensing-error concern verified during lensmeter neutralization." },
+    ],
+    memorizeIt: [
+      "ANSI Z80.1 = prescription ACCURACY tolerance standard (power, cylinder, axis, prism) — distinct from ANSI Z87 (IMPACT resistance, already covered under Impact Resistance).",
+      "Power/cylinder tolerance: small permitted deviation from prescribed value, larger allowable tolerance range as prescribed power increases.",
+      "Axis tolerance tightens (smaller allowable degree error) as cylinder power increases, since the same axis error causes more residual astigmatism at higher cylinder power.",
+      "Prism tolerance governs unwanted/unintended prism from decentration — verified via lensmeter neutralization (already covered).",
+    ],
+    applyIt: [
+      "This gives you the regulatory-accuracy framework underlying your existing Lensmeter verification content — explaining precisely why a lensmeter reading that is very close to, but not mathematically identical to, the prescribed power is an acceptable, correctly-dispensed lens rather than a fabrication error, and connects to your existing Obliquely Crossed Cylinders content by explaining why axis tolerance is clinically tighter at higher cylinder powers.",
+    ],
+  },
+  "opttolerance-regulatory-roles": {
+    name: "FDA, ANSI, & OSHA — Distinct Regulatory Roles",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ophthalmic optics/regulatory references"],
+    learnIt: [
+      { h: "Overview", t: "Three distinct regulatory/standards bodies govern different aspects of ophthalmic lens safety and quality, and distinguishing their roles is a genuinely testable board-exam nuance extending your existing Impact Resistance & Optical Standards content." },
+      { h: "FDA — mandatory impact resistance", t: "The U.S. FDA mandates that ALL prescription and non-prescription (plano) eyewear sold in the U.S. must pass a minimum drop-ball impact test as a baseline consumer product safety requirement — already covered under Impact Resistance & Optical Standards — making basic impact resistance a legal manufacturing requirement, not merely a voluntary quality standard." },
+      { h: "ANSI — voluntary consensus standards (Z80.1 and Z87)", t: "ANSI (a private, non-governmental standards organization) publishes voluntary consensus standards adopted industry-wide: Z80.1 (prescription accuracy tolerance, this topic's other objective) and Z87.1 (occupational/safety eyewear impact and coverage requirements, already covered) — 'voluntary' in that ANSI itself has no enforcement power, but compliance is frequently required contractually or by other regulatory bodies (e.g., OSHA) that reference the ANSI standard." },
+      { h: "OSHA — workplace eye protection enforcement", t: "OSHA (a federal regulatory/enforcement agency) mandates appropriate eye protection in specific occupational settings and, rather than writing its own separate technical specification, typically references and enforces compliance with the existing ANSI Z87.1 standard as the technical benchmark — already connecting to your existing Occupational & Pediatric Eyewear Safety Requirements content." },
+    ],
+    memorizeIt: [
+      "FDA: mandates minimum impact resistance (drop-ball test) for ALL eyewear sold in the U.S. — a legal baseline requirement (already covered under Impact Resistance).",
+      "ANSI: private standards body — Z80.1 (prescription tolerance) and Z87.1 (occupational safety eyewear) are voluntary consensus standards, not self-enforced.",
+      "OSHA: federal enforcement agency — mandates workplace eye protection and typically enforces compliance BY REFERENCING the ANSI Z87.1 standard, rather than writing its own separate technical spec.",
+      "Relationship: FDA sets the baseline legal floor; ANSI writes the detailed voluntary technical standards; OSHA enforces ANSI's Z87.1 standard specifically in occupational settings.",
+    ],
+    applyIt: [
+      "This organizes your existing Impact Resistance & Optical Standards and Occupational & Pediatric Eyewear Safety Requirements content into a clear regulatory hierarchy — a genuinely testable distinction is that OSHA does not independently define its own impact standard but instead enforces compliance with the ANSI Z87.1 standard already covered, while the FDA's baseline drop-ball requirement applies even to plano/non-prescription eyewear that ANSI Z87.1 and OSHA workplace rules would not otherwise cover.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -11986,6 +12297,30 @@ const FLASHCARDS = [
   { id: "fc-1135", objectiveId: "scleragross-structure-episclera", front: "Why is the sclera opaque while the cornea is transparent, despite both being collagenous?", back: "Sclera has irregularly arranged, variable-diameter collagen fibrils; cornea has precisely regular fibril spacing." },
   { id: "fc-1136", objectiveId: "scleragross-structure-episclera", front: "Describe the three-tiered ocular surface vascular arrangement from superficial to deep.", back: "Conjunctival vessels (superficial) → episcleral vessels (intermediate) → scleral vessels (deep)." },
   { id: "fc-1137", objectiveId: "scleragross-structure-episclera", front: "Why does phenylephrine blanch episcleritis vessels but not scleritis vessels?", back: "Topical phenylephrine reaches the superficial conjunctival/episcleral vessels but not the deeper scleral vessels." },
+  { id: "fc-1138", objectiveId: "lensmeter-focimeter-principle", front: "What clinical instrument applies the vergence equation to measure a finished spectacle lens's power?", back: "The lensmeter (focimeter)." },
+  { id: "fc-1139", objectiveId: "lensmeter-focimeter-principle", front: "Does a lensmeter measure front vertex power or back vertex power?", back: "Back vertex power — the clinically relevant vergence leaving the lens toward the eye." },
+  { id: "fc-1140", objectiveId: "lensmeter-reading-technique", front: "How is unwanted prism identified on a lensmeter?", back: "By the displacement of the lens's optical center from the lensmeter's reticle (crosshair) center when the mires are centered — applies Prentice's Rule." },
+  { id: "fc-1141", objectiveId: "lensmeter-reading-technique", front: "How is multifocal add power determined on a lensmeter?", back: "Near segment power reading minus distance portion power reading." },
+  { id: "fc-1142", objectiveId: "specpolar-glare-filtering", front: "Why is reflected glare off water or wet roads predominantly polarized?", back: "Reflection at a shallow angle off a horizontal surface preferentially polarizes light in the horizontal plane." },
+  { id: "fc-1143", objectiveId: "specpolar-glare-filtering", front: "What filter axis orientation do polarized sunglass lenses use to block horizontal glare?", back: "A vertical transmission axis, which selectively attenuates horizontally-polarized light per Malus's law." },
+  { id: "fc-1144", objectiveId: "specpolar-clinical-limitations", front: "Why can LCD/digital screens look dark or patterned through polarized sunglasses?", back: "Many displays emit already-polarized light; when its axis is near-perpendicular to the lens's filter axis, transmission is blocked." },
+  { id: "fc-1145", objectiveId: "specpolar-clinical-limitations", front: "Why are pilots generally advised against polarized lenses?", back: "Polarization can mask glare-based hazard cues and interfere with reading polarized cockpit displays." },
+  { id: "fc-1146", objectiveId: "lensphyschar-material-tradeoffs", front: "What Abbe number trade-off typically accompanies a higher lens index of refraction?", back: "Lower Abbe number — more chromatic dispersion/color fringing." },
+  { id: "fc-1147", objectiveId: "lensphyschar-material-tradeoffs", front: "Which two lens materials combine moderate index, low density, and high impact resistance?", back: "Polycarbonate and Trivex." },
+  { id: "fc-1148", objectiveId: "lensphyschar-durability", front: "What is a 'hard coat' on an ophthalmic lens, and what does it protect against?", back: "A cured polymer surface layer that improves (but doesn't eliminate) scratch resistance, since plastic is inherently more scratch-prone than glass." },
+  { id: "fc-1149", objectiveId: "lensphyschar-durability", front: "List the typical layered coating stack on a modern finished spectacle lens, in order.", back: "Substrate material → hard (scratch-resistant) coat → anti-reflective coating → hydrophobic/oleophobic top coat." },
+  { id: "fc-1150", objectiveId: "framemat-metal-frames", front: "What type of hypersensitivity reaction does nickel-containing frame metal (e.g., monel) cause, and what is the presentation?", back: "Type IV (delayed, T-cell-mediated) hypersensitivity — localized erythema/dermatitis at skin contact points (nose pads, temples)." },
+  { id: "fc-1151", objectiveId: "framemat-metal-frames", front: "What frame metal is preferred for a patient with known nickel sensitivity, and why?", back: "Titanium/beta-titanium — lightweight, corrosion-resistant, and generally hypoallergenic (nickel-free or minimal)." },
+  { id: "fc-1152", objectiveId: "framemat-plastic-frames", front: "Why must a cellulose acetate (zyl) frame be heated before adjustment, unlike a nylon frame?", back: "Zyl is rigid and crack-prone at room temperature but becomes moldable when warmed; nylon is inherently flexible without heat." },
+  { id: "fc-1153", objectiveId: "framemat-plastic-frames", front: "Why is nylon/polyamide preferred for rimless 'drill-mount' frame designs?", back: "It resists breaking under the stress of drilled screw-mount attachment without requiring heat to flex." },
+  { id: "fc-1154", objectiveId: "absorptive-transmittance-standards", front: "What does VLT stand for in sunglass lens specification, and what does it measure?", back: "Visible Light Transmittance — the percentage of incident visible light passing through the lens." },
+  { id: "fc-1155", objectiveId: "absorptive-transmittance-standards", front: "Why can wearing a very dark (<10% VLT) tint be dangerous at dusk or indoors?", back: "It can dangerously reduce visual acuity in already-low ambient light — darker is not automatically better." },
+  { id: "fc-1156", objectiveId: "absorptive-photochromic-mechanism", front: "Why do standard photochromic lenses darken poorly behind a car windshield?", back: "Photochromic activation is UV-triggered, not brightness-triggered, and windshield glass blocks most UV wavelengths." },
+  { id: "fc-1157", objectiveId: "absorptive-photochromic-mechanism", front: "Does a photochromic lens fade back to clear faster in warm or cold temperatures?", back: "Faster in warm temperatures — the fade-back reaction is thermally driven (counterintuitive to many patients)." },
+  { id: "fc-1158", objectiveId: "opttolerance-ansi-z80", front: "What does ANSI Z80.1 regulate, and how does it differ from ANSI Z87.1?", back: "Z80.1 = prescription accuracy tolerance (power/cylinder/axis/prism); Z87.1 = impact resistance/occupational safety — a different standard entirely." },
+  { id: "fc-1159", objectiveId: "opttolerance-ansi-z80", front: "How does allowable cylinder axis tolerance change as cylinder power increases?", back: "It tightens (smaller allowable degree error), since a given axis error produces more residual astigmatism at higher cylinder power." },
+  { id: "fc-1160", objectiveId: "opttolerance-regulatory-roles", front: "Which agency mandates minimum impact resistance for ALL eyewear (even plano/non-prescription) sold in the U.S.?", back: "The FDA (drop-ball test), a legal baseline requirement distinct from ANSI's voluntary standards." },
+  { id: "fc-1161", objectiveId: "opttolerance-regulatory-roles", front: "How does OSHA enforce workplace eye protection requirements?", back: "By referencing and enforcing compliance with the existing ANSI Z87.1 standard, rather than writing its own separate technical specification." },
 ];
 
 const QUESTIONS = [
@@ -16407,6 +16742,108 @@ const QUESTIONS = [
       b: "Correct — the zonular fibers are the sole suspensory structure holding the lens in its normal position, extending from the ciliary body to the lens equator; Marfan syndrome's connective tissue defect weakens these fibers, allowing the lens to subluxate, classically in a superotemporal direction.",
       c: "Incorrect — lens epithelial fiber production relates to lens growth and nuclear sclerosis over time, not positional support of the lens.",
       d: "Incorrect — ciliary body detachment is not the mechanism of Marfan-associated lens subluxation; the zonular fibers connecting the ciliary body to the lens are the structure that fails.",
+    },
+  },
+  {
+    id: "q-261", objectiveId: "lensmeter-focimeter-principle", type: "Applied concept", difficulty: "Medium",
+    stem: "A lensmeter measures a spectacle lens's power. Which specific value does it report, and why is that the clinically relevant one?",
+    choices: [
+      { id: "a", text: "Front vertex power, because it is easier to measure" },
+      { id: "b", text: "Back vertex power, because it is the vergence leaving the lens that directly determines the vergence entering the eye" },
+      { id: "c", text: "Nominal (thin-lens) power, ignoring lens thickness entirely" },
+      { id: "d", text: "The average of front and back vertex power" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — front vertex power is not the standard reported value; ease of measurement is not the reason back vertex power is used.",
+      b: "Correct — back vertex power is the vergence leaving the back surface of the lens, which directly determines the vergence entering the eye, making it the clinically relevant value reported on a finished Rx, consistent with existing Thick Lenses content on back vs. front vertex power.",
+      c: "Incorrect — nominal thin-lens power ignoring thickness is not what a lensmeter measures on a real, finite-thickness finished lens.",
+      d: "Incorrect — the lensmeter does not average front and back vertex power; it specifically measures and reports back vertex power.",
+    },
+  },
+  {
+    id: "q-262", objectiveId: "specpolar-glare-filtering", type: "Applied concept", difficulty: "Medium",
+    stem: "Why are polarized sunglass lens filters manufactured with a VERTICAL transmission axis rather than a horizontal one?",
+    choices: [
+      { id: "a", text: "Vertical axis filters block UV light more effectively" },
+      { id: "b", text: "Reflected glare off horizontal surfaces (water, roads) is predominantly horizontally polarized, so a vertical filter axis selectively blocks it per Malus's law" },
+      { id: "c", text: "Vertical axis orientation is simply a manufacturing convention with no optical basis" },
+      { id: "d", text: "It maximizes overall visible light transmittance" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — polarization filter axis orientation is unrelated to UV blocking, which is a separate, independently specified lens property.",
+      b: "Correct — reflection off a horizontal surface at a shallow angle predominantly polarizes light horizontally, so a vertical-axis filter selectively attenuates this glare per Malus's law (I = I₀cos²θ), while passing more of the unpolarized/vertically-polarized ambient light.",
+      c: "Incorrect — the vertical axis choice has a specific optical basis (matching the geometry of horizontally-polarized reflected glare), not an arbitrary convention.",
+      d: "Incorrect — polarization selectively filters based on polarization angle; it does not maximize overall transmittance, which is instead governed by the lens's tint/VLT.",
+    },
+  },
+  {
+    id: "q-263", objectiveId: "lensphyschar-material-tradeoffs", type: "Applied concept", difficulty: "Medium",
+    stem: "A patient with a high myopic prescription wants the thinnest possible lens and chooses a 1.74 high-index material. What optical trade-off should be discussed?",
+    choices: [
+      { id: "a", text: "High-index lenses cannot be made in high minus powers" },
+      { id: "b", text: "Higher-index materials generally have a lower Abbe number, meaning more noticeable chromatic dispersion (color fringing), especially peripherally" },
+      { id: "c", text: "High-index lenses cannot receive an anti-reflective coating" },
+      { id: "d", text: "There is no trade-off; higher index is superior in every respect" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — high-index materials are commonly used specifically for high myopic (high-minus) prescriptions to reduce lens thickness.",
+      b: "Correct — higher-index materials generally trade off against a lower Abbe number (more chromatic dispersion), a genuine cosmetic-thinness-vs.-optical-performance trade-off already established under Chromatic Aberration & the Achromatic Doublet.",
+      c: "Incorrect — AR coatings are commonly and effectively applied to high-index lens materials; this is not a limiting trade-off.",
+      d: "Incorrect — as established, there is a genuine trade-off (lower Abbe number/more chromatic dispersion) that accompanies higher index materials.",
+    },
+  },
+  {
+    id: "q-264", objectiveId: "framemat-metal-frames", type: "Clinical application", difficulty: "Medium",
+    stem: "A patient develops localized erythema and itching at the nose pads and temple contact points of their new monel-frame glasses. What is the underlying mechanism, and what frame material change is appropriate?",
+    choices: [
+      { id: "a", text: "A Type I (IgE-mediated) reaction to the frame color; switch to a different color" },
+      { id: "b", text: "A Type IV (delayed, T-cell-mediated) contact hypersensitivity reaction to the frame's nickel content; switch to titanium or another nickel-free frame" },
+      { id: "c", text: "A bacterial infection from poor frame hygiene; prescribe topical antibiotics and keep the same frame" },
+      { id: "d", text: "A normal, expected reaction to any new frame that will resolve without any change" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — this is not an IgE-mediated (Type I) reaction, and frame color is not the relevant variable; nickel content is.",
+      b: "Correct — this is classic allergic contact dermatitis, a Type IV (delayed, T-cell-mediated) hypersensitivity reaction (already covered) to nickel in the monel alloy at points of skin contact; switching to titanium or another hypoallergenic, nickel-free frame material resolves the underlying cause.",
+      c: "Incorrect — the localized, contact-point-limited presentation is classic for allergic contact dermatitis, not infection; antibiotics would not address the underlying allergic mechanism.",
+      d: "Incorrect — this presentation is not a normal, expected reaction; it indicates a genuine nickel contact allergy requiring a material change.",
+    },
+  },
+  {
+    id: "q-265", objectiveId: "absorptive-photochromic-mechanism", type: "Applied concept", difficulty: "Medium",
+    stem: "A patient complains that their photochromic lenses do not darken while driving, even in bright sunlight. What is the most likely explanation?",
+    choices: [
+      { id: "a", text: "The photochromic reaction is defective and the lenses need replacement" },
+      { id: "b", text: "Photochromic activation is UV-triggered, and automotive windshield glass blocks most UV wavelengths before they reach the lenses" },
+      { id: "c", text: "Photochromic lenses only darken in cold temperatures" },
+      { id: "d", text: "Photochromic lenses require polarization to activate" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — this is expected, normal photochromic behavior behind windshield glass, not a lens defect.",
+      b: "Correct — the photochromic reaction is specifically triggered by UV photon absorption (not visible brightness alone), and since windshield glass blocks the majority of UV wavelengths, standard photochromic lenses darken poorly or not at all while driving — a key, frequently-tested patient-counseling point.",
+      c: "Incorrect — temperature affects the FADE-BACK (de-activation) rate, not whether activation occurs at all; the driving scenario is about UV blockage, not temperature.",
+      d: "Incorrect — photochromic activation and polarization are two entirely independent lens properties; polarization is not required for photochromic darkening.",
+    },
+  },
+  {
+    id: "q-266", objectiveId: "opttolerance-ansi-z80", type: "Applied concept", difficulty: "Medium",
+    stem: "Which ANSI standard governs the allowable manufacturing tolerance for a finished spectacle lens's power, cylinder axis, and prism (as opposed to impact resistance)?",
+    choices: [
+      { id: "a", text: "ANSI Z87.1" },
+      { id: "b", text: "ANSI Z80.1" },
+      { id: "c", text: "OSHA 1910.133" },
+      { id: "d", text: "FDA 21 CFR 801.410" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — Z87.1 governs occupational/safety eyewear impact resistance requirements, already covered under Impact Resistance & Optical Standards, not prescription accuracy.",
+      b: "Correct — ANSI Z80.1 is the standard specifying allowable tolerance between prescribed and as-fabricated lens power, cylinder, axis, and prism.",
+      c: "Incorrect — this OSHA regulation addresses workplace eye/face protection requirements generally, referencing ANSI Z87.1 for impact standards, not prescription tolerance.",
+      d: "Incorrect — this FDA regulation addresses the mandatory impact resistance (drop-ball) testing requirement for eyewear, not prescription accuracy tolerance.",
     },
   },
 ];
