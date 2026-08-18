@@ -482,6 +482,7 @@ function buildTopicIndex() {
 const ALL_TOPICS = buildTopicIndex();
 const TOTAL_OBJECTIVES = ALL_TOPICS.reduce((s, t) => s + t.objCount, 0);
 const AREA_LIST = CURRICULUM.map(a => ({ area: a.area, major: a.major, range: a.range }));
+const TOPIC_INFO_BY_ID = Object.fromEntries(ALL_TOPICS.map(t => [t.id, t]));
 
 /* ============================================================
    PHASE 4 PILOT: fine-grained decomposition + content for
@@ -22838,6 +22839,29 @@ const backBtn = { display: "inline-flex", alignItems: "center", gap: 4, backgrou
 function LearnTab() {
   const [openTopic, setOpenTopic] = useState(null); // topicId
   const [openObj, setOpenObj] = useState(null); // objectiveId
+  const [openAreas, setOpenAreas] = useState({});
+  const toggleArea = (area) => setOpenAreas(p => ({ ...p, [area]: !p[area] }));
+
+  const groupedByArea = useMemo(() => {
+    const byArea = {};
+    CONTENT_TOPICS.forEach(ct => {
+      const info = TOPIC_INFO_BY_ID[ct.topicId];
+      const area = info ? info.area : "Other";
+      const disc = info ? info.discipline : "Other";
+      if (!byArea[area]) byArea[area] = { major: info?.major, discOrder: [], byDisc: {} };
+      const entry = byArea[area];
+      if (!entry.byDisc[disc]) { entry.byDisc[disc] = []; entry.discOrder.push(disc); }
+      entry.byDisc[disc].push(ct);
+    });
+    return CURRICULUM.map(a => a.area).filter(area => byArea[area]).map(area => {
+      const entry = byArea[area];
+      const disciplines = entry.discOrder.map(d => ({ d, topics: entry.byDisc[d] }));
+      const allTopics = disciplines.flatMap(g => g.topics);
+      const builtObj = allTopics.reduce((s, ct) => s + ct.objectives.filter(o => o.built).length, 0);
+      const totalObj = allTopics.reduce((s, ct) => s + ct.objectives.length, 0);
+      return { area, major: entry.major, disciplines, topicCount: allTopics.length, builtObj, totalObj };
+    });
+  }, []);
 
   if (openObj) return <StudyPageDetail objId={openObj} onBack={() => setOpenObj(null)} />;
 
@@ -22877,30 +22901,58 @@ function LearnTab() {
   return (
     <div>
       <div style={{ marginBottom: 18 }}>
-        <div style={{ fontSize: 12, letterSpacing: 2, color: "var(--teal)", fontWeight: 600, marginBottom: 4 }}>SYSTEMIC HEALTH · IN PROGRESS</div>
+        <div style={{ fontSize: 12, letterSpacing: 2, color: "var(--teal)", fontWeight: 600, marginBottom: 4 }}>ALL 16 CONDITION AREAS</div>
         <h1 className="disp" style={{ fontSize: 34, margin: 0, fontWeight: 600 }}>Learn</h1>
         <p style={{ color: "var(--steel)", marginTop: 6, maxWidth: 640, fontSize: 14 }}>
-          Content topics built so far. More topics across Systemic Health and the other 16 condition areas are added as the pipeline continues.
+          Content topics grouped by condition area and discipline, same as the NBEO Blueprint. Click an area to expand it, then a topic to open its objectives.
         </p>
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        {CONTENT_TOPICS.map(ct => {
-          const builtCount = ct.objectives.filter(o => o.built).length;
-          const pct = (builtCount / ct.objectives.length) * 100;
+        {groupedByArea.map(g => {
+          const isOpen = !!openAreas[g.area];
+          const pct = g.totalObj > 0 ? (g.builtObj / g.totalObj) * 100 : 0;
           return (
-            <div key={ct.topicId} onClick={() => setOpenTopic(ct.topicId)} style={{
-              display: "flex", alignItems: "center", gap: 14, padding: "16px 18px", borderRadius: 10,
-              background: "#fff", border: "1px solid var(--steel)", cursor: "pointer",
-            }}>
-              <BookOpen size={20} color="var(--teal)" />
-              <div style={{ flex: 1 }}>
-                <div style={{ fontWeight: 600, fontSize: 15.5 }}>{ct.name}</div>
-                <div style={{ fontSize: 12, color: "var(--steel)" }}>{builtCount} of {ct.objectives.length} objectives built</div>
-              </div>
-              <div style={{ width: 90, height: 6, background: "#eee", borderRadius: 3, overflow: "hidden" }}>
-                <div style={{ width: `${pct}%`, height: "100%", background: "var(--teal)" }} />
-              </div>
-              <span className="mono" style={{ fontSize: 12, fontWeight: 600, color: "var(--teal)", minWidth: 40, textAlign: "right" }}>{pct.toFixed(0)}%</span>
+            <div key={g.area} style={{ background: "#fff", border: "1px solid var(--steel)", borderRadius: 10, overflow: "hidden" }}>
+              <button onClick={() => toggleArea(g.area)} style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "14px 16px", background: "var(--teal-10)", border: "none", cursor: "pointer", textAlign: "left" }}>
+                {isOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+                <div style={{ flex: 1 }}>
+                  <div style={{ fontWeight: 600, fontSize: 15 }}>{g.area}</div>
+                  <div style={{ fontSize: 11.5, color: "var(--steel)" }}>{g.major === AREA_A ? "Refractive/Sensory/Oculomotor" : "Normal Health/Disease/Trauma"} · {g.disciplines.length} {g.disciplines.length === 1 ? "discipline" : "disciplines"}</div>
+                </div>
+                <span className="mono" style={{ fontSize: 11.5, color: "var(--steel)" }}>{g.topicCount} {g.topicCount === 1 ? "topic" : "topics"} · {g.builtObj}/{g.totalObj} obj.</span>
+                <span className="mono" style={{ fontSize: 12, fontWeight: 600, color: pct > 0 ? "var(--teal)" : "var(--steel)", minWidth: 44, textAlign: "right" }}>{pct.toFixed(0)}%</span>
+              </button>
+              {isOpen && (
+                <div style={{ padding: "6px 16px 14px" }}>
+                  {g.disciplines.map(({ d, topics }, di) => (
+                    <div key={di} style={{ marginTop: 10 }}>
+                      <div style={{ fontSize: 11.5, fontWeight: 600, letterSpacing: 0.5, color: "var(--amber)", textTransform: "uppercase", marginBottom: 6 }}>{d}</div>
+                      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                        {topics.map(ct => {
+                          const builtCount = ct.objectives.filter(o => o.built).length;
+                          const tpct = (builtCount / ct.objectives.length) * 100;
+                          return (
+                            <div key={ct.topicId} onClick={() => setOpenTopic(ct.topicId)} style={{
+                              display: "flex", alignItems: "center", gap: 14, padding: "12px 16px", borderRadius: 10,
+                              background: "var(--paper)", border: "1px solid #e6e8e4", cursor: "pointer",
+                            }}>
+                              <BookOpen size={18} color="var(--teal)" />
+                              <div style={{ flex: 1 }}>
+                                <div style={{ fontWeight: 600, fontSize: 14.5 }}>{ct.name}</div>
+                                <div style={{ fontSize: 11.5, color: "var(--steel)" }}>{builtCount} of {ct.objectives.length} objectives built</div>
+                              </div>
+                              <div style={{ width: 80, height: 6, background: "#eee", borderRadius: 3, overflow: "hidden" }}>
+                                <div style={{ width: `${tpct}%`, height: "100%", background: "var(--teal)" }} />
+                              </div>
+                              <span className="mono" style={{ fontSize: 11.5, fontWeight: 600, color: "var(--teal)", minWidth: 36, textAlign: "right" }}>{tpct.toFixed(0)}%</span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           );
         })}
