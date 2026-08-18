@@ -5,66 +5,93 @@
 > no memory of this conversation and must be able to pick up from this file alone,
 > plus PROJECT_SPEC.md and the current nbeo-app.jsx.
 
-## READ THIS FIRST — session of 2026-08-18: coverage essentially COMPLETE
+## READ THIS FIRST — session of 2026-08-18: 266/266 (100%) COMPLETE
 
-**263/266 topics built (99%), verified by `audit_coverage.py`.** This
-session started at 138/266 (the last-known state below) and closed nearly
-every remaining gap in a single continuous run: **125 new topics**, ~226 new
-objectives, ~350 new study-page learnIt/memorizeIt/applyIt writeups, ~250
-new flashcards, and ~50 new practice questions, across **19 commits**, all
+**`audit_coverage.py` reports 266/266 topics built, 0 remaining.** This
+session started at 138/266 (the last-known state below) and closed every
+remaining gap in a single continuous run: **128 new topics**, ~232 new
+objectives, ~356 new study-page learnIt/memorizeIt/applyIt writeups, ~262
+new flashcards, and ~53 new practice questions, across **20 commits**, all
 pushed to `claude/nbeo-coverage-refactor-i8ionz`.
 
-**Every one of the 15 non-Systemic-Health condition areas is now
-COMPLETE** (Ametropia, Ophthalmic Optics/Spectacles, Contact Lenses, Low
-Vision, Accommodation/Vergence, Amblyopia/Strabismus, Perceptual Function/
-Color Vision, Visual & Human Development, Lids/Lashes/Lacrimal/Orbit,
-Conjunctiva/Cornea/Refractive Surgery, Lens/Cataract/IOL, Episclera/
-Sclera/Anterior Uvea, Vitreous/Retina/Choroid, Optic Nerve/Neuro-
-Ophthalmic Pathways, Glaucoma). Systemic Health sits at 85/88.
+**Every condition area is COMPLETE**, including Systemic Health: Ametropia,
+Ophthalmic Optics/Spectacles, Contact Lenses, Low Vision, Accommodation/
+Vergence, Amblyopia/Strabismus, Perceptual Function/Color Vision, Visual &
+Human Development, Lids/Lashes/Lacrimal/Orbit, Conjunctiva/Cornea/
+Refractive Surgery, Lens/Cataract/IOL, Episclera/Sclera/Anterior Uvea,
+Vitreous/Retina/Choroid, Optic Nerve/Neuro-Ophthalmic Pathways, Glaucoma,
+Systemic Health.
 
-**The only 3 remaining audit flags are NOT real gaps** — they are the same
-documented intentional merges flagged in prior sessions (see "Caveat on
-Pathology's earlier '100% swept' claim" and "Complement's intentionally-
-skipped standalone slot" notes further down this file, both already
-resolved in earlier sessions): `t-15-5-3` (Complement) content already
-exists under `antibody-function` and `nonspecificimm-complement`;
-`t-15-7-1` (Inflammation and repair) and `t-15-7-4` (Cellular disease)
-content already exists under the Host Defenses topic. **Do not build new
-content for these three** — if a future session wants to formally close
-this gap, the fix is a documentation/mapping exercise (or a deliberate
-decision to leave the audit script's false-positive count at 3 forever),
-not new study content.
+**The last 3 topics were closed with genuinely new content, not a
+remapping of previously-merged material.** Earlier in this same session
+(and in prior sessions, see "Caveat on Pathology's earlier '100% swept'
+claim" and "Complement's intentionally-skipped standalone slot" notes
+further down this file), `t-15-5-3` (Complement), `t-15-7-1` (Inflammation
+and repair), and `t-15-7-4` (Cellular disease) were treated as
+false-positive audit flags because their general subject matter already
+existed under `antibody-function`/`nonspecificimm-complement` and Host
+Defenses. The user then explicitly asked for 100% coverage, so these three
+were built as real, distinct, non-redundant topics instead of leaving them
+as documented exceptions:
+- **`complement-regulatory-proteins` / `complement-cfh-amd`** — complement
+  regulatory proteins (Factor H, Factor I, CD55, CD59) and, specifically,
+  the Complement Factor H Y402H polymorphism as a major genetic AMD risk
+  factor. Genuinely new angle (regulation + AMD genetics) vs. the
+  already-built activation-pathway content; ties directly into existing
+  AMD, Choroidal Layers, and Anti-VEGF Therapy content.
+- **`repair-wound-healing-phases` / `repair-healing-complications`** — the
+  four-phase wound healing sequence (hemostasis → inflammation →
+  proliferation → remodeling), primary vs. secondary intention, and
+  complications (keloid vs. hypertrophic scar, dehiscence, chronic
+  wounds). Genuinely new angle (the repair PROCESS) vs. the already-built
+  inflammation MECHANISM under Host Defenses; ties into existing Diabetes
+  Mellitus/Atherosclerosis (chronic wound risk) and Cataract Surgery
+  (primary-intention healing) content.
+- **`celldisease-adaptation-types` / `celldisease-dysplasia-neoplasia`** —
+  reversible cellular adaptation (hypertrophy, hyperplasia, atrophy,
+  metaplasia) and dysplasia as a genuine pre-neoplastic lesion. Genuinely
+  new angle (adaptation BEFORE injury, and the metaplasia→dysplasia→
+  neoplasia progression) vs. the already-built necrosis/apoptosis content
+  under Host Defenses; ties into existing Hypertension (cardiac
+  hypertrophy) and Neoplasia/Oncogenes content.
 
-**Practically, this platform has reached its 100% substantive coverage
-goal.** `integrity_check.py` passes clean (zero orphans, zero duplicates)
-and a full Babel syntax check passes. Every topic added this session
-follows PROJECT_SPEC.md's content-shape rules (disease-mechanism /
-structural-localization / calculation-based as appropriate) and
-cross-references existing built content — see the commit log on
-`claude/nbeo-coverage-refactor-i8ionz` for a per-batch breakdown of what
-was built and which existing topics each new topic ties into.
+The previously-merged content these three topics originally lived under
+(Antibody Function & Complement Activation, Nonspecific Immunity's
+Complement System, and Host Defenses' inflammation/cell-injury
+objectives) was left completely unchanged — nothing was removed or
+remapped, only added.
 
-**What's actually left, in priority order:**
-1. **Nothing content-related for structural coverage** — see above. The
-   original "100% coverage" goal stated in CLAUDE.md/PROJECT_SPEC.md is
-   met.
-2. **The file-splitting question, deferred again.** The user was asked
-   this session whether to split `nbeo-app.jsx` (now ~2.7MB, ~23,000
-   lines) into per-topic source files with a build step, versus staying
-   monolithic — user chose to stay monolithic for this session. Worth
-   re-raising now that the file is meaningfully larger and coverage work
-   is done, since the fragility risk PROJECT_SPEC.md flags has only grown.
-3. **The source-verification pass.** Every study page's `verification`
+`integrity_check.py` passes clean (zero orphans, zero duplicates) and a
+full Babel syntax check passes as of the final commit on this branch.
+Every topic added this session follows PROJECT_SPEC.md's content-shape
+rules (disease-mechanism / structural-localization / calculation-based as
+appropriate) and cross-references existing built content — see the commit
+log on `claude/nbeo-coverage-refactor-i8ionz` for a per-batch breakdown.
+
+**What's actually left — nothing for structural coverage. Everything below
+is quality/infrastructure work beyond the original "100% coverage" goal:**
+1. **The file-splitting question, deferred twice now.** The user was
+   asked whether to split `nbeo-app.jsx` (now ~2.75MB, ~23,300 lines) into
+   per-topic source files with a build step, versus staying monolithic —
+   chose to stay monolithic both times it came up. Worth re-raising now
+   that the file is at its largest and coverage work is fully done, since
+   the fragility risk PROJECT_SPEC.md flags has only grown and there's no
+   more "just one more topic" reason to delay.
+2. **The source-verification pass.** Every study page's `verification`
    field is still `"UNDER REVIEW"` — nothing has been fact-checked against
    an authoritative source. This was always a known, deferred task (see
-   "Open questions" below) and is now the largest remaining piece of real
+   "Open questions" below) and is now THE largest remaining piece of real
    work if the platform is to claim verified accuracy rather than just
-   structural completeness.
-4. **Emergencies/Trauma tagging** — still an open question, see below.
-   Not addressed this session.
-5. A live React preview of the app was published as a Claude Artifact
+   structural completeness. With structural coverage done, this is
+   probably the highest-value next project.
+3. **Emergencies/Trauma tagging** — still an open question, see below.
+   Not addressed this session; the outline treats it as embedded across
+   other topics rather than a standalone section, so this needs a
+   decision (dedicated topic vs. weaving into existing content) more than
+   it needs new topic slots.
+4. A live React preview of the app was published as a Claude Artifact
    this session (bundling React 18 + reimplemented lucide icons, since
-   there's still no npm/build project in this repo — see point 2). Along
+   there's still no npm/build project in this repo — see point 1). Along
    the way, a real latent bug was found and fixed *in the preview
    bundling code only* (not in `nbeo-app.jsx` itself): naming an icon
    component `Map` at global script scope silently shadows the built-in
@@ -72,6 +99,10 @@ was built and which existing topics each new topic ties into.
    a real bundler (webpack/Vite scope every module), so no source change
    was needed — noted here only so a future session doesn't waste time
    rediscovering it if this file is ever loaded via plain `<script>` tags.
+   The bundled preview HTML (`nbeo-app-preview.html`, ~2.7MB) is committed
+   to the repo root as a generated artifact — regenerate it rather than
+   hand-editing it if `nbeo-app.jsx` changes and a fresh preview is
+   needed.
 
 **Numbers below this point (138/266, "130 remaining", per-area stats,
 etc.) describe the state BEFORE this session and are now stale.** They're
