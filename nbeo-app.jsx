@@ -1028,6 +1028,43 @@ const UVEAPHARMINDICATIONS_OBJECTIVES = [
   { id: "uveapharm-mydriasis-angle-contra", name: "Mydriasis Contraindication Risk in Occludable/Narrow Angles", built: true },
 ];
 
+const CHOROIDGROSS_TOPIC_ID = "t-12-0-0"; // Vitreous/Retina/Choroid(12) > Anatomy(Gross)(0) > Choroid(0)
+// Ties directly into existing Photoreceptor & RPE Physiology and AMD content.
+const CHOROIDGROSS_OBJECTIVES = [
+  { id: "choroidgross-layers", name: "Choroidal Layers — Haller's, Sattler's & Choriocapillaris", built: true },
+  { id: "choroidgross-function", name: "Choroidal Function — Outer Retinal Nutrition & Thermoregulation", built: true },
+];
+
+const VITREOUSGROSS_TOPIC_ID = "t-12-0-1"; // Vitreous/Retina/Choroid(12) > Anatomy(Gross)(0) > Vitreous(1)
+// Ties directly into existing Retinal Detachment/PVD content.
+const VITREOUSGROSS_OBJECTIVES = [
+  { id: "vitreousgross-attachments", name: "Vitreous Base & Attachment Sites", built: true },
+];
+
+const RETINAGROSS_TOPIC_ID = "t-12-0-2"; // Vitreous/Retina/Choroid(12) > Anatomy(Gross)(0) > Retina(2)
+const RETINAGROSS_OBJECTIVES = [
+  { id: "retinagross-layers", name: "The Ten Retinal Layers", built: true },
+  { id: "retinagross-landmarks", name: "Retinal Landmarks — Macula, Fovea, Optic Disc & Ora Serrata", built: true },
+];
+
+const CHOROIDDEV_TOPIC_ID = "t-12-1-0"; // Vitreous/Retina/Choroid(12) > Anatomy(Developmental)(1) > Choroid(0)
+const CHOROIDDEV_OBJECTIVES = [
+  { id: "choroiddev-origin", name: "Choroidal Development from Neural Crest Mesenchyme", built: true },
+];
+
+const VITREOUSDEV_TOPIC_ID = "t-12-1-1"; // Vitreous/Retina/Choroid(12) > Anatomy(Developmental)(1) > Vitreous(1)
+// Ties directly into existing Hyaloid System/Persistent Fetal Vasculature content.
+const VITREOUSDEV_OBJECTIVES = [
+  { id: "vitreousdev-primary-secondary", name: "Primary vs. Secondary Vitreous Formation & Cloquet's Canal", built: true },
+];
+
+const RETINADEV_TOPIC_ID = "t-12-1-2"; // Vitreous/Retina/Choroid(12) > Anatomy(Developmental)(1) > Retina(2)
+// Ties directly into existing Retinal Detachment content.
+const RETINADEV_OBJECTIVES = [
+  { id: "retinadev-optic-cup", name: "Retinal Development from the Optic Cup — Two Layers", built: true },
+  { id: "retinadev-anomalies", name: "Congenital Retinal Anomalies (X-Linked Retinoschisis, Chorioretinal Coloboma)", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -2044,6 +2081,9 @@ const TOPIC_OBJECTIVES = {
   [UVEAPHARMMIOTIC_TOPIC_ID]: UVEAPHARMMIOTIC_OBJECTIVES, [UVEAPHARMANTIINFLAMM_TOPIC_ID]: UVEAPHARMANTIINFLAMM_OBJECTIVES,
   [UVEAPHARMLUBRICANT_TOPIC_ID]: UVEAPHARMLUBRICANT_OBJECTIVES, [UVEAPHARMDYES_TOPIC_ID]: UVEAPHARMDYES_OBJECTIVES,
   [UVEAPHARMVASOCON_TOPIC_ID]: UVEAPHARMVASOCON_OBJECTIVES, [UVEAPHARMINDICATIONS_TOPIC_ID]: UVEAPHARMINDICATIONS_OBJECTIVES,
+  [CHOROIDGROSS_TOPIC_ID]: CHOROIDGROSS_OBJECTIVES, [VITREOUSGROSS_TOPIC_ID]: VITREOUSGROSS_OBJECTIVES,
+  [RETINAGROSS_TOPIC_ID]: RETINAGROSS_OBJECTIVES, [CHOROIDDEV_TOPIC_ID]: CHOROIDDEV_OBJECTIVES,
+  [VITREOUSDEV_TOPIC_ID]: VITREOUSDEV_OBJECTIVES, [RETINADEV_TOPIC_ID]: RETINADEV_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -2254,6 +2294,12 @@ const CONTENT_TOPICS = [
   { topicId: UVEAPHARMDYES_TOPIC_ID, name: "Iris Vascular Imaging Dyes", objectives: UVEAPHARMDYES_OBJECTIVES },
   { topicId: UVEAPHARMVASOCON_TOPIC_ID, name: "Anterior Uvea Diagnostic Vasoconstrictor Testing", objectives: UVEAPHARMVASOCON_OBJECTIVES },
   { topicId: UVEAPHARMINDICATIONS_TOPIC_ID, name: "Anterior Uvea Pharmacology — Indications & Contraindications", objectives: UVEAPHARMINDICATIONS_OBJECTIVES },
+  { topicId: CHOROIDGROSS_TOPIC_ID, name: "Choroidal Gross Anatomy", objectives: CHOROIDGROSS_OBJECTIVES },
+  { topicId: VITREOUSGROSS_TOPIC_ID, name: "Vitreous Gross Anatomy", objectives: VITREOUSGROSS_OBJECTIVES },
+  { topicId: RETINAGROSS_TOPIC_ID, name: "Retinal Gross Anatomy", objectives: RETINAGROSS_OBJECTIVES },
+  { topicId: CHOROIDDEV_TOPIC_ID, name: "Choroidal Developmental Anatomy", objectives: CHOROIDDEV_OBJECTIVES },
+  { topicId: VITREOUSDEV_TOPIC_ID, name: "Vitreous Developmental Anatomy", objectives: VITREOUSDEV_OBJECTIVES },
+  { topicId: RETINADEV_TOPIC_ID, name: "Retinal Developmental Anatomy", objectives: RETINADEV_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -13212,6 +13258,180 @@ const STUDY_PAGES = {
       "This gives you a genuinely important pre-dilation safety principle directly extending your existing Anterior Chamber Angle and Pupillary Block/Iris Bombé content — before prescribing cycloplegic therapy for uveitis (this topic's sibling objective) or performing routine dilated fundus exam, screening for a narrow or occludable angle is an essential step to avoid precipitating iatrogenic acute angle-closure glaucoma, a genuine and preventable risk of pharmacologic dilation in a susceptible eye.",
     ],
   },
+  "choroidgross-layers": {
+    name: "Choroidal Layers — Haller's, Sattler's & Choriocapillaris",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The choroid is organized into three vascular layers arranged by vessel caliber, and this layered structure directly grounds your existing AMD and Photoreceptor & RPE Physiology content in specific anatomic detail." },
+      { h: "Three layers, outer to inner", t: "From outermost (nearest sclera) to innermost (nearest retina): Haller's layer (largest-caliber vessels), Sattler's layer (medium-caliber vessels), and the choriocapillaris (innermost, a dense network of fenestrated capillaries lying directly against Bruch's membrane, already covered under Visual Cycle & RPE Function content) — this progressive decrease in vessel caliber from outer to inner choroid optimizes the final capillary bed for close, efficient exchange with the overlying RPE and outer retina." },
+      { h: "Clinical relevance to AMD", t: "The choriocapillaris and its relationship to Bruch's membrane and the RPE (already covered) is the anatomic site of pathology in age-related macular degeneration (already covered) — choriocapillaris flow reduction and thickening/dysfunction of the adjacent Bruch's membrane are implicated in both dry AMD's drusen formation and wet AMD's choroidal neovascularization, since new vessels in wet AMD characteristically arise from this choriocapillaris layer, breaking through a compromised Bruch's membrane." },
+    ],
+    memorizeIt: [
+      "Choroidal layers, outer to inner: Haller's (large vessels) → Sattler's (medium vessels) → choriocapillaris (fenestrated capillaries, against Bruch's membrane).",
+      "Choriocapillaris directly abuts Bruch's membrane/RPE (already covered) — the critical exchange interface for outer retinal nutrition.",
+      "Choriocapillaris is the anatomic origin site of choroidal neovascularization in wet AMD (already covered), breaking through a compromised Bruch's membrane.",
+    ],
+    applyIt: [
+      "This gives you the precise vascular anatomy underlying your existing Age-Related Macular Degeneration content — understanding that choroidal neovascularization in wet AMD specifically originates from the choriocapillaris breaking through Bruch's membrane explains the anatomic target of anti-VEGF therapy (this topic's sibling Pharmacology objective), which works by blocking the angiogenic signal driving this exact choriocapillaris-to-subretinal-space vessel growth.",
+    ],
+  },
+  "choroidgross-function": {
+    name: "Choroidal Function — Outer Retinal Nutrition & Thermoregulation",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy/physiology references"],
+    learnIt: [
+      { h: "Overview", t: "The choroid's high blood flow serves several genuinely distinct functions beyond simple tissue nutrition, extending your existing Photoreceptor & RPE Physiology content with the vascular support system for the outer retina." },
+      { h: "Outer retinal nutrition — why the outer retina needs a separate blood supply", t: "The outer retina (photoreceptors and RPE, already covered) is AVASCULAR — it has no blood vessels of its own — and depends entirely on diffusion of oxygen and nutrients from the underlying choriocapillaris (this topic's sibling objective) across Bruch's membrane and the RPE, in contrast to the INNER retina, which is supplied directly by the central retinal artery (already covered) — this dual blood supply arrangement (choroidal for outer retina, retinal vasculature for inner retina) is why choroidal vascular disease and retinal vascular disease (e.g., CRAO/CRVO, already covered) can produce very different patterns of retinal damage." },
+      { h: "Thermoregulation", t: "The choroid's remarkably high blood flow rate (proportionally among the highest of any tissue in the body) also serves a thermoregulatory function, dissipating heat generated by the RPE's intense absorption of light energy (particularly via melanin, already covered) — preventing damaging heat accumulation in the macula, which receives the most concentrated, highest-intensity incident light." },
+    ],
+    memorizeIt: [
+      "Outer retina (photoreceptors + RPE, already covered) is AVASCULAR — depends entirely on diffusion from the choriocapillaris across Bruch's membrane.",
+      "Inner retina is supplied directly by the central retinal artery (already covered) — a genuinely distinct, separate blood supply from the outer retina.",
+      "Choroid's very high blood flow also serves THERMOREGULATION — dissipates heat from RPE melanin's light absorption, protecting the macula from heat damage.",
+    ],
+    applyIt: [
+      "This gives you the dual blood supply framework directly extending your existing Central Retinal Artery Occlusion and Photoreceptor & RPE Physiology content — explaining why CRAO (inner retinal vascular occlusion, already covered) produces inner retinal ischemia and characteristic findings while sparing the outer retina/choroid-dependent photoreceptors, a genuinely important distinction from a choroidal vascular problem, which would instead primarily threaten the photoreceptors and RPE.",
+    ],
+  },
+  "vitreousgross-attachments": {
+    name: "Vitreous Base & Attachment Sites",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The vitreous has several specific attachment sites to surrounding ocular structures, and the STRENGTH of these attachments directly explains the retinal tear mechanism already established under your existing Posterior Vitreous Detachment Mechanics and Retinal Detachment content." },
+      { h: "The vitreous base — the strongest attachment", t: "The vitreous base is a circumferential zone straddling the ora serrata (already covered under Retinal Landmarks content, this topic's sibling objective) — extending slightly anterior and posterior to it — where vitreous collagen fibers are firmly anchored into the retina and pars plana, making this the SINGLE STRONGEST vitreoretinal attachment site in the entire eye, one that does NOT separate even during normal posterior vitreous detachment (PVD, already covered)." },
+      { h: "Other attachment sites — weaker, and where PVD-related tears occur", t: "Other, comparatively WEAKER vitreous attachment sites include the optic disc margin (its separation during PVD produces the classic Weiss ring floater, already implicit in existing PVD content), the macula, and the retinal blood vessels — because these attachments are weaker than the vitreous base, they are the sites that DO separate during a normal, uncomplicated PVD; however, if traction forces at these separating sites are excessive or a vessel/retina is unusually adherent, this is where retinal tears (already covered as the mechanism preceding rhegmatogenous retinal detachment) characteristically occur." },
+    ],
+    memorizeIt: [
+      "Vitreous base: circumferential zone straddling the ora serrata — the SINGLE STRONGEST vitreoretinal attachment; does NOT separate during normal PVD.",
+      "Weaker attachment sites (DO separate during PVD, already covered): optic disc margin (→ Weiss ring floater), macula, retinal vessels.",
+      "Retinal tears (already covered as the RD precursor) characteristically occur at these WEAKER attachment sites during PVD when traction is excessive.",
+    ],
+    applyIt: [
+      "This gives you the precise anatomic basis for your existing Posterior Vitreous Detachment Mechanics and Retinal Detachment content — understanding that the vitreous base's exceptional attachment strength (versus the weaker optic disc/macula/vessel attachments) explains exactly why retinal tears occur at these specific weaker sites during PVD rather than at the vitreous base itself, and why a new Weiss ring floater (from disc margin separation, already covered) is a clinically meaningful sign prompting dilated exam to look for an associated retinal tear at one of these vulnerable attachment sites.",
+    ],
+  },
+  "retinagross-layers": {
+    name: "The Ten Retinal Layers",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The retina's ten histologic layers, organized from outer (choroid-facing) to inner (vitreous-facing), directly ground your existing Phototransduction Cascade and Visual Pathway Physiology content in specific structural detail." },
+      { h: "The ten layers, outer to inner", t: "From outermost to innermost: (1) retinal pigment epithelium (RPE, already covered), (2) photoreceptor outer segments, (3) photoreceptor inner segments, (4) external limiting membrane, (5) outer nuclear layer (photoreceptor cell bodies), (6) outer plexiform layer (photoreceptor-to-bipolar cell synapses), (7) inner nuclear layer (bipolar, horizontal, amacrine cell bodies), (8) inner plexiform layer (bipolar-to-ganglion cell synapses), (9) ganglion cell layer (ganglion cell bodies), and (10) nerve fiber layer (ganglion cell AXONS, already covered as converging to form the optic nerve under Visual Pathway Physiology) plus the internal limiting membrane as the innermost boundary." },
+      { h: "Clinical relevance of layer-specific pathology", t: "Understanding these specific layers explains why certain conditions affect the retina at a precise structural level — X-linked retinoschisis (this topic's sibling developmental objective) classically splits the retina at the nerve fiber layer, distinct from rhegmatogenous retinal detachment's separation plane between the RPE and photoreceptor outer segments (already covered), a genuinely important distinguishing structural detail between these two conditions that can both cause visual field/acuity symptoms." },
+    ],
+    memorizeIt: [
+      "Ten retinal layers, OUTER to INNER: RPE → photoreceptor outer segments → inner segments → external limiting membrane → outer nuclear layer → outer plexiform layer → inner nuclear layer → inner plexiform layer → ganglion cell layer → nerve fiber layer (+ internal limiting membrane).",
+      "Nerve fiber layer = ganglion cell AXONS, converging to form the optic nerve (already covered under Visual Pathway Physiology).",
+      "Retinal detachment (already covered): separation plane between RPE and photoreceptor outer segments. X-linked retinoschisis: splits at the nerve fiber layer — a distinct structural plane.",
+    ],
+    applyIt: [
+      "This gives you the precise layer-by-layer structure directly underlying your existing Phototransduction Cascade and Retinal Detachment content — knowing that RD's separation plane is between the RPE and photoreceptor outer segments (rather than anywhere else in these ten layers) explains why RD characteristically causes profound vision loss (separating photoreceptors from their essential RPE-dependent visual cycle support, already covered) in the detached area, distinct from the different structural plane and typically better-preserved function seen in X-linked retinoschisis (this topic's sibling developmental objective).",
+    ],
+  },
+  "retinagross-landmarks": {
+    name: "Retinal Landmarks — Macula, Fovea, Optic Disc & Ora Serrata",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Several named retinal landmarks have specific structural and clinical significance, connecting your existing Visual Acuity, Visual Pathway, and Ciliary Body content into a unified topographic map of the retina." },
+      { h: "Macula and fovea", t: "The macula is the central retinal region specialized for high-acuity vision, containing at its center the fovea, and within the fovea, the foveola — the very center, containing ONLY cone photoreceptors (no rods, already relevant to existing Rod-Cone Differences content) and representing the foveal avascular zone (FAZ), where retinal blood vessels are notably ABSENT to avoid degrading the optical path to this highest-acuity region, making this small area entirely dependent on choroidal diffusion (already covered under Choroidal Function content) for its nutrition." },
+      { h: "Optic disc", t: "The optic disc is where retinal nerve fiber layer axons (already covered) converge and exit the eye to form the optic nerve — since this region contains no photoreceptors, it corresponds to the physiologic blind spot in the visual field, already relevant to existing Visual Field Defect Localization content." },
+      { h: "Ora serrata", t: "The ora serrata marks the peripheral termination of the retina, the scalloped junction where the neurosensory retina ends and transitions into the non-photoreceptor-bearing pars plana of the ciliary body (already covered under Ciliary Body Regions content) — also the posterior boundary of the vitreous base's attachment zone (this topic's sibling objective)." },
+    ],
+    memorizeIt: [
+      "Foveola (center of fovea, center of macula): cone-ONLY, foveal avascular zone (FAZ) — no rods, no blood vessels, entirely choroid-dependent for nutrition.",
+      "Optic disc: nerve fiber layer convergence point, exits as the optic nerve — no photoreceptors here = physiologic blind spot (already covered).",
+      "Ora serrata: peripheral retinal termination, transitions to pars plana (already covered) — also the vitreous base's posterior boundary (this topic's sibling objective).",
+    ],
+    applyIt: [
+      "This gives you a unified topographic retinal map directly connecting your existing Visual Field Defect Localization (optic disc/blind spot), Rod-Cone Differences (foveola cone-only composition), and Ciliary Body Regions (ora serrata/pars plana continuity) content into one coherent structural framework — understanding the foveal avascular zone's complete choroidal dependence also explains why choroidal vascular compromise (already covered under Choroidal Function) so severely threatens central acuity specifically.",
+    ],
+  },
+  "choroiddev-origin": {
+    name: "Choroidal Development from Neural Crest Mesenchyme",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The choroid develops from periocular mesenchyme surrounding the optic cup, sharing its predominant neural crest origin with the sclera, corneal stroma, and iris/ciliary body stroma already covered this session, continuing this platform's established theme of neural-crest-derived ocular connective/vascular tissues." },
+      { h: "Neural crest origin and vascular differentiation", t: "Neural crest-derived mesenchyme surrounding the optic cup differentiates into the choroid's stromal and vascular elements, with the vasculature itself forming through angiogenesis within this mesenchymal tissue, ultimately organizing into the three-layered structure (Haller's, Sattler's, choriocapillaris, already covered) — this shares the same fundamental neural crest mesenchymal origin already established for the sclera (Scleral Development content) immediately external to it." },
+      { h: "Continuity with the sclera and ciliary body", t: "Since the choroid, sclera, and ciliary body stroma (already covered) all arise from a shared neural crest mesenchymal population surrounding the developing eye, they form a structurally continuous, developmentally related tissue plane — the choroid is essentially continuous with the ciliary body stroma anteriorly (already covered under Ciliary Body Development) and bounded externally by the sclera, reflecting this common embryologic origin." },
+    ],
+    memorizeIt: [
+      "Choroid develops from NEURAL CREST-derived periocular mesenchyme — same origin as sclera, corneal stroma, and iris/ciliary body stroma (already covered).",
+      "Choroidal vasculature forms via angiogenesis within this mesenchymal tissue, organizing into the three-layered structure (already covered).",
+      "Choroid, sclera, and ciliary body stroma are developmentally continuous, sharing a common neural crest mesenchymal origin.",
+    ],
+    applyIt: [
+      "This extends the neural-crest-mesenchyme theme already established across your existing Scleral Development, Ciliary Body Development, and Corneal Development content — recognizing that the choroid, sclera, and ciliary body stroma are all developmentally continuous, common-origin tissues helps explain why inflammatory or structural disease can sometimes span these adjoining structures (e.g., posterior scleritis extending to involve the adjacent choroid).",
+    ],
+  },
+  "vitreousdev-primary-secondary": {
+    name: "Primary vs. Secondary Vitreous Formation & Cloquet's Canal",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The vitreous forms in two sequential, structurally distinct stages — primary and secondary vitreous — and this sequence directly explains both the hyaloid vascular system already covered under Persistent Fetal Vasculature content and a normal anatomic remnant, Cloquet's canal." },
+      { h: "Primary vitreous", t: "The PRIMARY vitreous forms early in development and contains the hyaloid vascular system (already covered under Hyaloid Vascular System Regression & Persistent Fetal Vasculature content) — this primary vitreous is vascular and relatively small in volume compared to what follows." },
+      { h: "Secondary vitreous", t: "The SECONDARY vitreous forms later, produced by the retina itself, and is avascular, composed of collagen and hyaluronic acid (already covered under Vitreous Composition & Structure content) — the secondary vitreous progressively surrounds and grows to vastly outsize the primary vitreous, compressing it centrally into a narrow channel." },
+      { h: "Cloquet's canal — the residual channel", t: "As the hyaloid vascular system (contained within the primary vitreous) regresses (already covered under this topic's sibling Persistent Fetal Vasculature content), it leaves behind Cloquet's canal — a normal, clinically insignificant, narrow, S-shaped or straight optically clearer channel running from the optic disc to the posterior lens surface, marking the former path of the hyaloid artery within the otherwise gel-like secondary vitreous that comprises essentially the entire adult vitreous volume." },
+    ],
+    memorizeIt: [
+      "Primary vitreous: forms early, VASCULAR, contains the hyaloid vascular system (already covered).",
+      "Secondary vitreous: forms later from the retina, AVASCULAR (collagen + hyaluronic acid, already covered), compresses primary vitreous centrally.",
+      "Cloquet's canal: residual channel from optic disc to posterior lens, marking the regressed hyaloid artery's former path — a normal, clinically insignificant finding within the adult (secondary) vitreous.",
+    ],
+    applyIt: [
+      "This gives you the complete developmental sequence directly connecting your existing Hyaloid Vascular System Regression/Persistent Fetal Vasculature and Vitreous Composition & Structure content — understanding that Cloquet's canal is simply the normal anatomic remnant of the primary vitreous's regressed hyaloid vasculature (rather than a pathologic finding) helps distinguish this benign, incidental structure from the pathologic fibrovascular remnant of persistent fetal vasculature (already covered) that occurs when hyaloid regression FAILS rather than completing normally.",
+    ],
+  },
+  "retinadev-optic-cup": {
+    name: "Retinal Development from the Optic Cup — Two Layers",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The retina develops from the double-walled optic cup, and the potential space between its two constituent layers is precisely the anatomic plane that separates in retinal detachment — giving your existing Retinal Detachment content a genuine embryologic explanation for its characteristic separation plane." },
+      { h: "Optic cup invagination and its two layers", t: "The optic vesicle invaginates to form the double-walled optic cup — the OUTER layer of the optic cup becomes the retinal pigment epithelium (RPE, a single layer, already covered), while the INNER layer becomes the neurosensory retina, subsequently differentiating into the full ten-layer structure already covered under Retinal Gross Anatomy content." },
+      { h: "The potential space — why retinal detachment occurs along this exact plane", t: "Between these two optic cup-derived layers (the outer RPE layer and the inner neurosensory retina layer) exists a POTENTIAL SPACE — normally obliterated by tight apposition and active adhesive/pump mechanisms (already covered under Corneal/RPE transport-analogous physiology) — but this potential space is precisely the embryonic cleavage plane along which rhegmatogenous retinal detachment (already covered) separates when fluid gains access through a retinal tear, meaning RD is fundamentally a reopening of this original embryonic developmental boundary, not an arbitrary tissue plane." },
+    ],
+    memorizeIt: [
+      "Optic cup is DOUBLE-WALLED: outer layer → RPE (single layer, already covered); inner layer → neurosensory retina (differentiates into the 10 layers, already covered).",
+      "A POTENTIAL SPACE exists between these two optic-cup-derived layers, normally obliterated by adhesive/pump mechanisms.",
+      "Retinal detachment (already covered) separates ALONG THIS EXACT embryonic cleavage plane — RD is a reopening of the original optic cup's two-layer boundary, not an arbitrary tissue separation.",
+    ],
+    applyIt: [
+      "This gives you a genuinely satisfying embryologic explanation for your existing Retinal Detachment content — understanding that RD's separation plane is the SAME potential space that existed between the optic cup's two original embryonic layers explains why this specific plane (RPE/neurosensory retina interface, rather than any other retinal layer) is the one that separates in RD, since it represents the retina's fundamental, developmentally pre-existing structural seam.",
+    ],
+  },
+  "retinadev-anomalies": {
+    name: "Congenital Retinal Anomalies (X-Linked Retinoschisis, Chorioretinal Coloboma)",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pediatric ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "X-linked juvenile retinoschisis and chorioretinal coloboma are two genuinely distinct congenital retinal anomalies, each with a characteristic structural plane or mechanism worth distinguishing from retinal detachment (already covered) and from the iris coloboma already covered this session." },
+      { h: "X-linked juvenile retinoschisis", t: "X-linked juvenile retinoschisis is a splitting (schisis) of the retina classically at the NERVE FIBER LAYER (already covered under Retinal Gross Anatomy content) — genuinely distinct from retinal detachment's separation plane between the RPE and photoreceptor outer segments (already covered under this topic's sibling optic-cup objective) — caused by mutations in the RS1 gene affecting retinoschisin, a protein important for retinal cellular adhesion; presents in young males (X-linked) with characteristic 'spoke-wheel' foveal schisis pattern and often peripheral retinoschisis." },
+      { h: "Chorioretinal coloboma", t: "Chorioretinal coloboma is a defect in the retina and underlying choroid, classically located INFERONASALLY, resulting from failure of the embryonic (optic) fissure to close properly during development — the SAME underlying mechanism already covered this session for iris coloboma, since both reflect failure of the same fissure closure process at different points along its length; chorioretinal and iris coloboma can occur together (reflecting a single, more extensive fissure closure failure) or independently, and chorioretinal coloboma carries a risk of associated retinal detachment given the abnormal, thinned tissue at the coloboma margin." },
+    ],
+    memorizeIt: [
+      "X-linked juvenile retinoschisis: splits the retina at the NERVE FIBER LAYER (RS1/retinoschisin gene mutation) — distinct plane from RD's RPE/photoreceptor separation (already covered).",
+      "Presents in young MALES (X-linked) with characteristic 'spoke-wheel' foveal schisis pattern.",
+      "Chorioretinal coloboma: INFERONASAL retina/choroid defect, from failed embryonic (optic) fissure closure — SAME mechanism as iris coloboma (already covered this session).",
+      "Chorioretinal and iris coloboma can occur together (same fissure) or independently; chorioretinal coloboma carries associated retinal detachment risk.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important structural distinction extending your existing Retinal Detachment and (this session's) iris coloboma content — recognizing that X-linked retinoschisis splits at a completely different retinal layer (nerve fiber layer) than retinal detachment (RPE/photoreceptor interface) explains why these two conditions, despite both causing visual field/acuity symptoms, have different clinical appearances and prognoses, while chorioretinal coloboma's shared embryologic mechanism with iris coloboma explains why finding one should prompt careful examination for the other along the same fissure closure line.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -14920,6 +15140,17 @@ const FLASHCARDS = [
   { id: "fc-1304", objectiveId: "uveapharm-iris-angiography", front: "How does iris fluorescein angiography differ from topical fluorescein staining?", back: "It uses intravenous dye injection with sequential photography to visualize iris vasculature, rather than topical dye staining ocular surface epithelial defects." },
   { id: "fc-1305", objectiveId: "uveapharm-phenylephrine-test", front: "What is the phenylephrine blanching test result pattern that distinguishes episcleritis from scleritis?", back: "Episcleritis blanches with topical phenylephrine (superficial vessels); scleritis does NOT blanch (deep scleral vessels unaffected)." },
   { id: "fc-1306", objectiveId: "uveapharm-mydriasis-angle-contra", front: "What safety screening step should precede dilating any patient, and why?", back: "Assessing angle depth/occludability (gonioscopy) — dilation in a narrow/occludable angle can precipitate acute angle-closure glaucoma." },
+  { id: "fc-1307", objectiveId: "choroidgross-layers", front: "List the three choroidal layers from outer to inner.", back: "Haller's layer (large vessels) → Sattler's layer (medium vessels) → choriocapillaris (fenestrated capillaries, against Bruch's membrane)." },
+  { id: "fc-1308", objectiveId: "choroidgross-function", front: "Why is the outer retina entirely dependent on the choroid, rather than retinal vessels, for its blood supply?", back: "The outer retina (photoreceptors + RPE) is avascular and depends on diffusion from the choriocapillaris across Bruch's membrane." },
+  { id: "fc-1309", objectiveId: "vitreousgross-attachments", front: "Which vitreous attachment site is the strongest, and does it separate during normal PVD?", back: "The vitreous base (straddling the ora serrata) — it does NOT separate during normal PVD." },
+  { id: "fc-1310", objectiveId: "vitreousgross-attachments", front: "What floater sign results from vitreous separation at the optic disc margin during PVD?", back: "A Weiss ring." },
+  { id: "fc-1311", objectiveId: "retinagross-layers", front: "At what specific retinal layer does X-linked retinoschisis classically split, as opposed to retinal detachment's separation plane?", back: "Retinoschisis: nerve fiber layer. Retinal detachment: between the RPE and photoreceptor outer segments." },
+  { id: "fc-1312", objectiveId: "retinagross-landmarks", front: "What is the foveal avascular zone, and why does it lack blood vessels?", back: "The blood-vessel-free zone at the center of the fovea (foveola) — avoids degrading the optical path to the highest-acuity region; relies entirely on choroidal diffusion." },
+  { id: "fc-1313", objectiveId: "choroiddev-origin", front: "What embryonic tissue gives rise to the choroid, and what other ocular structures share this origin?", back: "Neural crest-derived periocular mesenchyme — same origin as sclera, corneal stroma, and iris/ciliary body stroma." },
+  { id: "fc-1314", objectiveId: "vitreousdev-primary-secondary", front: "What is Cloquet's canal, and is it pathologic?", back: "A normal, clinically insignificant residual channel from the regressed hyaloid artery, running from the optic disc to the posterior lens — not pathologic." },
+  { id: "fc-1315", objectiveId: "retinadev-optic-cup", front: "What embryonic structure gives rise to the RPE and neurosensory retina, and how?", back: "The double-walled optic cup — outer layer becomes RPE, inner layer becomes neurosensory retina." },
+  { id: "fc-1316", objectiveId: "retinadev-optic-cup", front: "Why does retinal detachment separate specifically at the RPE/photoreceptor interface?", back: "This is the potential space between the optic cup's original two embryonic layers — RD reopens this developmental cleavage plane." },
+  { id: "fc-1317", objectiveId: "retinadev-anomalies", front: "What gene/protein is mutated in X-linked juvenile retinoschisis, and what is the classic foveal exam finding?", back: "RS1 gene/retinoschisin protein; classic 'spoke-wheel' foveal schisis pattern." },
 ];
 
 const QUESTIONS = [
@@ -19936,6 +20167,23 @@ const QUESTIONS = [
       b: "Correct — pupillary dilation can cause the peripheral iris to bunch up and mechanically occlude a narrow or occludable angle, precipitating acute angle-closure glaucoma; assessing angle depth/occludability via gonioscopy before dilating is an essential safety screening step.",
       c: "Incorrect — visual acuity testing does not assess angle closure risk.",
       d: "Incorrect — color vision testing is unrelated to angle-closure risk from pharmacologic dilation.",
+    },
+  },
+  {
+    id: "q-296", objectiveId: "retinadev-optic-cup", type: "Applied concept", difficulty: "Hard",
+    stem: "Why does a rhegmatogenous retinal detachment characteristically separate the retina at the interface between the RPE and photoreceptor outer segments, rather than at some other retinal layer?",
+    choices: [
+      { id: "a", text: "This is an arbitrary tissue plane with no particular structural significance" },
+      { id: "b", text: "This interface is the potential space between the optic cup's two original embryonic layers (outer layer → RPE, inner layer → neurosensory retina), representing the retina's fundamental developmental cleavage plane" },
+      { id: "c", text: "Retinal detachment always occurs at the nerve fiber layer" },
+      { id: "d", text: "The separation plane is randomly determined by the location of the initiating retinal tear" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — this interface has specific embryologic significance as the boundary between the optic cup's two original layers.",
+      b: "Correct — the optic cup is double-walled, with the outer layer becoming the RPE and the inner layer becoming the neurosensory retina; the potential space between them, normally obliterated by adhesive/pump mechanisms, is precisely the plane along which retinal detachment separates, since it represents the eye's fundamental, developmentally pre-existing structural seam.",
+      c: "Incorrect — separation at the nerve fiber layer describes X-linked retinoschisis (already covered), a distinct condition from rhegmatogenous retinal detachment.",
+      d: "Incorrect — while a retinal tear is the initiating event, the specific SEPARATION PLANE that then propagates is anatomically determined by this embryonic cleavage plane, not randomly determined by tear location alone.",
     },
   },
 ];
