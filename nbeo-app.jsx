@@ -1249,6 +1249,102 @@ const GLAUPHARMINDICATIONS_OBJECTIVES = [
   { id: "glaupharm-sulfa-allergy", name: "Sulfonamide Cross-Reactivity in Carbonic Anhydrase Inhibitors", built: true },
 ];
 
+const SYSPHARMGEN_TOPIC_ID = "t-15-8-0"; // Systemic Health(15) > Pharmacology(8) > General principles(0)
+const SYSPHARMGEN_OBJECTIVES = [
+  { id: "syspharmgen-adme", name: "Pharmacokinetics — Absorption, Distribution, Metabolism, Excretion (ADME)", built: true },
+  { id: "syspharmgen-pd", name: "Pharmacodynamics — Dose-Response & Therapeutic Index", built: true },
+];
+
+const SYSPHARMANS_TOPIC_ID = "t-15-8-1"; // Systemic Health(15) > Pharmacology(8) > Autonomic and/or neuromuscular junction drugs(1)
+// Ties directly into existing Miotics, Cycloplegics, Myasthenia Gravis,
+// and Cardiovascular Physiology content.
+const SYSPHARMANS_OBJECTIVES = [
+  { id: "syspharmans-cholinergic", name: "Cholinergic Pharmacology — Muscarinic & Nicotinic Agonists/Antagonists", built: true },
+  { id: "syspharmans-adrenergic", name: "Adrenergic Pharmacology — Alpha & Beta Receptor Agonists/Antagonists", built: true },
+];
+
+const SYSPHARMAUTACOID_TOPIC_ID = "t-15-8-2"; // Systemic Health(15) > Pharmacology(8) > Autacoid agonists and antagonists(2)
+const SYSPHARMAUTACOID_OBJECTIVES = [
+  { id: "syspharmautacoid-histamine-serotonin", name: "Histamine & Serotonin — Autacoid Signaling & Antagonist Drug Classes", built: true },
+];
+
+const SYSPHARMRESP_TOPIC_ID = "t-15-8-3"; // Systemic Health(15) > Pharmacology(8) > Drugs affecting the respiratory system(3)
+const SYSPHARMRESP_OBJECTIVES = [
+  { id: "syspharmresp-bronchodilators", name: "Bronchodilators — Beta-2 Agonists & Anticholinergics for Asthma/COPD", built: true },
+  { id: "syspharmresp-steroids", name: "Inhaled Corticosteroids & Leukotriene Modifiers", built: true },
+];
+
+const SYSPHARMGI_TOPIC_ID = "t-15-8-4"; // Systemic Health(15) > Pharmacology(8) > Gastrointestinal agents(4)
+const SYSPHARMGI_OBJECTIVES = [
+  { id: "syspharmgi-acid-suppression", name: "Acid Suppression — Proton Pump Inhibitors vs. H2 Blockers", built: true },
+  { id: "syspharmgi-antiemetics", name: "Antiemetics & Laxatives — Mechanism Overview", built: true },
+];
+
+const SYSPHARMCHEMO_TOPIC_ID = "t-15-8-5"; // Systemic Health(15) > Pharmacology(8) > Chemotherapeutic agents(5)
+// Ties directly into existing Cell Cycle & Its Regulation content.
+const SYSPHARMCHEMO_OBJECTIVES = [
+  { id: "syspharmchemo-cellcycle", name: "Cell-Cycle-Specific vs. Non-Specific Chemotherapy Classes", built: true },
+];
+
+const SYSPHARMIMMUNO_TOPIC_ID = "t-15-8-6"; // Systemic Health(15) > Pharmacology(8) > Immunopharmacological agents(6)
+// Ties directly into existing Cyclosporine/Lifitegrast and Tissue
+// Transplantation content.
+const SYSPHARMIMMUNO_OBJECTIVES = [
+  { id: "syspharmimmuno-calcineurin-biologics", name: "Calcineurin Inhibitors & Biologic Immunosuppressants — Systemic Overview", built: true },
+];
+
+const SYSPHARMANTIINFLAMM_TOPIC_ID = "t-15-8-7"; // Systemic Health(15) > Pharmacology(8) > Anti-inflammatory agents(7)
+const SYSPHARMANTIINFLAMM_OBJECTIVES = [
+  { id: "syspharmantiinflamm-cox", name: "Systemic NSAIDs — COX-1 vs. COX-2 Selectivity", built: true },
+];
+
+const SYSPHARMCNS_TOPIC_ID = "t-15-8-8"; // Systemic Health(15) > Pharmacology(8) > Major drugs acting on the CNS(8)
+const SYSPHARMCNS_OBJECTIVES = [
+  { id: "syspharmcns-antidep-antipsych", name: "Antidepressants & Antipsychotics — Major Classes & Ocular Side Effects", built: true },
+  { id: "syspharmcns-anticonvulsant", name: "Anticonvulsants — Mechanism Overview", built: true },
+];
+
+const SYSPHARMANESTHETIC_TOPIC_ID = "t-15-8-9"; // Systemic Health(15) > Pharmacology(8) > General and local anesthetics(9)
+// Ties directly into existing Topical Ocular Anesthetics content.
+const SYSPHARMANESTHETIC_OBJECTIVES = [
+  { id: "syspharmanesthetic-local", name: "Local Anesthetics — Sodium Channel Blockade Mechanism", built: true },
+  { id: "syspharmanesthetic-general", name: "General Anesthesia — Balanced Anesthesia Concept", built: true },
+];
+
+const SYSPHARMENDOCRINE_TOPIC_ID = "t-15-8-10"; // Systemic Health(15) > Pharmacology(8) > Major drugs acting on the endocrine system(10)
+const SYSPHARMENDOCRINE_OBJECTIVES = [
+  { id: "syspharmendo-diabetes", name: "Diabetes Pharmacology — Insulin & Oral Hypoglycemics", built: true },
+  { id: "syspharmendo-thyroid-steroid", name: "Thyroid & Systemic Corticosteroid Pharmacology", built: true },
+];
+
+const SYSPHARMCARDIO_TOPIC_ID = "t-15-8-11"; // Systemic Health(15) > Pharmacology(8) > Major cardiovascular drugs(11)
+const SYSPHARMCARDIO_OBJECTIVES = [
+  { id: "syspharmcardio-antihypertensive", name: "Antihypertensive Drug Classes — ACE Inhibitors, ARBs, CCBs, Diuretics", built: true },
+  { id: "syspharmcardio-anticoag", name: "Antiarrhythmics & Anticoagulants — Mechanism Overview", built: true },
+];
+
+const SYSPHARMRENAL_TOPIC_ID = "t-15-8-12"; // Systemic Health(15) > Pharmacology(8) > Major drugs acting on the kidneys(12)
+const SYSPHARMRENAL_OBJECTIVES = [
+  { id: "syspharmrenal-diuretics", name: "Diuretic Classes by Renal Tubular Site of Action", built: true },
+];
+
+const SYSPHARMNUTRITION_TOPIC_ID = "t-15-8-13"; // Systemic Health(15) > Pharmacology(8) > Nutritional supplements(13)
+const SYSPHARMNUTRITION_OBJECTIVES = [
+  { id: "syspharmnutrition-deficiency", name: "Vitamin Deficiency Replacement Therapy — B12, Vitamin D, Iron", built: true },
+];
+
+const SYSPHARMINDICATIONS_TOPIC_ID = "t-15-8-14"; // Systemic Health(15) > Pharmacology(8) > Indications/contraindications/side effects/drug interactions(14)
+const SYSPHARMINDICATIONS_OBJECTIVES = [
+  { id: "syspharmindications-cyp450", name: "CYP450-Mediated Drug Interactions — Inducers & Inhibitors", built: true },
+];
+
+const SYSPHARMPREGNANCY_TOPIC_ID = "t-15-8-15"; // Systemic Health(15) > Pharmacology(8) > Drug use/metabolism in pregnancy and breastfeeding(15)
+// Ties directly into existing Doxycycline Pregnancy Contraindication content.
+const SYSPHARMPREGNANCY_OBJECTIVES = [
+  { id: "syspharmpregnancy-teratogen", name: "Teratogenic Risk & Pregnancy Drug Safety Categories", built: true },
+  { id: "syspharmpregnancy-breastfeeding", name: "Drug Transfer into Breast Milk — Principles", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -2287,6 +2383,14 @@ const TOPIC_OBJECTIVES = {
   [GLAUPHARMGEN_TOPIC_ID]: GLAUPHARMGEN_OBJECTIVES, [GLAUPHARMAGENTS_TOPIC_ID]: GLAUPHARMAGENTS_OBJECTIVES,
   [GLAUPHARMHYPEROSM_TOPIC_ID]: GLAUPHARMHYPEROSM_OBJECTIVES, [GLAUPHARMMYDRIATIC_TOPIC_ID]: GLAUPHARMMYDRIATIC_OBJECTIVES,
   [GLAUPHARMINDICATIONS_TOPIC_ID]: GLAUPHARMINDICATIONS_OBJECTIVES,
+  [SYSPHARMGEN_TOPIC_ID]: SYSPHARMGEN_OBJECTIVES, [SYSPHARMANS_TOPIC_ID]: SYSPHARMANS_OBJECTIVES,
+  [SYSPHARMAUTACOID_TOPIC_ID]: SYSPHARMAUTACOID_OBJECTIVES, [SYSPHARMRESP_TOPIC_ID]: SYSPHARMRESP_OBJECTIVES,
+  [SYSPHARMGI_TOPIC_ID]: SYSPHARMGI_OBJECTIVES, [SYSPHARMCHEMO_TOPIC_ID]: SYSPHARMCHEMO_OBJECTIVES,
+  [SYSPHARMIMMUNO_TOPIC_ID]: SYSPHARMIMMUNO_OBJECTIVES, [SYSPHARMANTIINFLAMM_TOPIC_ID]: SYSPHARMANTIINFLAMM_OBJECTIVES,
+  [SYSPHARMCNS_TOPIC_ID]: SYSPHARMCNS_OBJECTIVES, [SYSPHARMANESTHETIC_TOPIC_ID]: SYSPHARMANESTHETIC_OBJECTIVES,
+  [SYSPHARMENDOCRINE_TOPIC_ID]: SYSPHARMENDOCRINE_OBJECTIVES, [SYSPHARMCARDIO_TOPIC_ID]: SYSPHARMCARDIO_OBJECTIVES,
+  [SYSPHARMRENAL_TOPIC_ID]: SYSPHARMRENAL_OBJECTIVES, [SYSPHARMNUTRITION_TOPIC_ID]: SYSPHARMNUTRITION_OBJECTIVES,
+  [SYSPHARMINDICATIONS_TOPIC_ID]: SYSPHARMINDICATIONS_OBJECTIVES, [SYSPHARMPREGNANCY_TOPIC_ID]: SYSPHARMPREGNANCY_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -2536,6 +2640,22 @@ const CONTENT_TOPICS = [
   { topicId: GLAUPHARMHYPEROSM_TOPIC_ID, name: "Glaucoma — Hyperosmotic Agents", objectives: GLAUPHARMHYPEROSM_OBJECTIVES },
   { topicId: GLAUPHARMMYDRIATIC_TOPIC_ID, name: "Glaucoma — Mydriatic/Cycloplegic Contraindications", objectives: GLAUPHARMMYDRIATIC_OBJECTIVES },
   { topicId: GLAUPHARMINDICATIONS_TOPIC_ID, name: "Glaucoma Pharmacology — Indications & Contraindications", objectives: GLAUPHARMINDICATIONS_OBJECTIVES },
+  { topicId: SYSPHARMGEN_TOPIC_ID, name: "Systemic Pharmacology — General Principles", objectives: SYSPHARMGEN_OBJECTIVES },
+  { topicId: SYSPHARMANS_TOPIC_ID, name: "Autonomic & Neuromuscular Junction Drugs", objectives: SYSPHARMANS_OBJECTIVES },
+  { topicId: SYSPHARMAUTACOID_TOPIC_ID, name: "Autacoid Agonists & Antagonists", objectives: SYSPHARMAUTACOID_OBJECTIVES },
+  { topicId: SYSPHARMRESP_TOPIC_ID, name: "Respiratory System Drugs", objectives: SYSPHARMRESP_OBJECTIVES },
+  { topicId: SYSPHARMGI_TOPIC_ID, name: "Gastrointestinal Agents", objectives: SYSPHARMGI_OBJECTIVES },
+  { topicId: SYSPHARMCHEMO_TOPIC_ID, name: "Chemotherapeutic Agents", objectives: SYSPHARMCHEMO_OBJECTIVES },
+  { topicId: SYSPHARMIMMUNO_TOPIC_ID, name: "Immunopharmacological Agents", objectives: SYSPHARMIMMUNO_OBJECTIVES },
+  { topicId: SYSPHARMANTIINFLAMM_TOPIC_ID, name: "Systemic Anti-Inflammatory Agents", objectives: SYSPHARMANTIINFLAMM_OBJECTIVES },
+  { topicId: SYSPHARMCNS_TOPIC_ID, name: "Major CNS Drugs", objectives: SYSPHARMCNS_OBJECTIVES },
+  { topicId: SYSPHARMANESTHETIC_TOPIC_ID, name: "General & Local Anesthetics", objectives: SYSPHARMANESTHETIC_OBJECTIVES },
+  { topicId: SYSPHARMENDOCRINE_TOPIC_ID, name: "Major Endocrine Drugs", objectives: SYSPHARMENDOCRINE_OBJECTIVES },
+  { topicId: SYSPHARMCARDIO_TOPIC_ID, name: "Major Cardiovascular Drugs", objectives: SYSPHARMCARDIO_OBJECTIVES },
+  { topicId: SYSPHARMRENAL_TOPIC_ID, name: "Major Renal Drugs", objectives: SYSPHARMRENAL_OBJECTIVES },
+  { topicId: SYSPHARMNUTRITION_TOPIC_ID, name: "Systemic Nutritional Supplements", objectives: SYSPHARMNUTRITION_OBJECTIVES },
+  { topicId: SYSPHARMINDICATIONS_TOPIC_ID, name: "Systemic Pharmacology — Indications & Contraindications", objectives: SYSPHARMINDICATIONS_OBJECTIVES },
+  { topicId: SYSPHARMPREGNANCY_TOPIC_ID, name: "Drug Use in Pregnancy & Breastfeeding", objectives: SYSPHARMPREGNANCY_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -14474,6 +14594,484 @@ const STUDY_PAGES = {
       "This gives you a genuinely practical, testable prescribing safety consideration directly extending your existing antiglaucoma drug class content — before prescribing a CAI (topical or oral) for a glaucoma patient, screening for sulfa drug allergy history is an important safety step, with a documented severe reaction prompting preference for an alternative mechanism (beta-blocker, prostaglandin analog, alpha agonist, or miotic, this area's sibling objectives) when clinically reasonable.",
     ],
   },
+  "syspharmgen-adme": {
+    name: "Pharmacokinetics — Absorption, Distribution, Metabolism, Excretion (ADME)",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "The four ADME processes govern how any systemic drug enters, moves through, transforms within, and ultimately leaves the body — a foundational framework already implicitly applied throughout this platform's ocular pharmacology content, here made explicit for systemic drugs." },
+      { h: "Absorption and distribution", t: "Absorption depends on administration route — oral drugs undergo first-pass hepatic metabolism before reaching systemic circulation (reducing bioavailability), while IV administration bypasses this entirely, achieving 100% bioavailability immediately — genuinely analogous to the nasolacrimal systemic absorption route already covered for topical ocular drugs, which similarly bypasses first-pass metabolism. Distribution depends on factors like plasma protein binding and lipophilicity, determining how much drug reaches target tissues versus remaining in circulation." },
+      { h: "Metabolism and excretion", t: "Metabolism occurs primarily in the LIVER via cytochrome P450 (CYP450) enzymes (this area's sibling Indications objective), typically converting lipophilic drugs into more water-soluble metabolites through Phase I (oxidation) and Phase II (conjugation) reactions; excretion occurs primarily via the KIDNEYS (already covered under Renal Physiology content), meaning both hepatic and renal function significantly affect drug clearance and appropriate dosing." },
+    ],
+    memorizeIt: [
+      "ADME: Absorption, Distribution, Metabolism, Excretion — the four processes governing systemic drug fate.",
+      "Oral drugs undergo first-pass HEPATIC metabolism before reaching systemic circulation; IV bypasses this entirely.",
+      "Metabolism: primarily hepatic, CYP450 enzymes (Phase I oxidation, Phase II conjugation). Excretion: primarily renal (already covered under Renal Physiology).",
+      "Both hepatic and renal function affect drug clearance and dosing — relevant to polypharmacy in aging patients (already covered).",
+    ],
+    applyIt: [
+      "This gives you the systemic pharmacokinetic framework directly paralleling your existing Systemic Absorption of Topical Medications content — recognizing that oral administration's first-pass hepatic metabolism reduces bioavailability while topical ocular drops draining nasolacrimally bypass this same process explains why topical beta-blockers (already covered under Antiglaucoma Agents content) can achieve unexpectedly significant systemic effects despite their small administered dose.",
+    ],
+  },
+  "syspharmgen-pd": {
+    name: "Pharmacodynamics — Dose-Response & Therapeutic Index",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Pharmacodynamics describes what a drug does to the body (as opposed to pharmacokinetics' focus on what the body does to the drug, this topic's sibling objective) — the dose-response relationship and therapeutic index concepts underlie safe prescribing across all drug classes already covered on this platform." },
+      { h: "Potency vs. efficacy", t: "POTENCY refers to how much drug is needed to produce a given effect (a more potent drug requires a lower dose), while EFFICACY refers to the maximum effect a drug can produce regardless of dose — these are genuinely distinct concepts, since a less potent drug can still have equal or greater maximum efficacy than a more potent one." },
+      { h: "Therapeutic index", t: "The therapeutic index is the ratio between a drug's toxic dose and its effective dose — a NARROW therapeutic index (e.g., warfarin, already relevant to this area's sibling Anticoagulants objective) means the toxic and effective doses are close together, requiring careful monitoring and dose titration, while a WIDE therapeutic index drug has a larger safety margin, generally requiring less intensive monitoring." },
+    ],
+    memorizeIt: [
+      "Potency: dose needed for a given effect. Efficacy: maximum achievable effect. These are distinct — a less potent drug can have equal/greater efficacy.",
+      "Therapeutic index = ratio of toxic dose to effective dose.",
+      "NARROW therapeutic index (e.g., warfarin, this area's sibling Anticoagulants objective) requires careful monitoring; WIDE therapeutic index allows a larger safety margin.",
+    ],
+    applyIt: [
+      "This gives you the conceptual framework for understanding WHY certain drugs already covered on this platform require intensive monitoring (warfarin's narrow therapeutic index, this area's sibling objective) while others (many topical ocular medications) have wider safety margins permitting more routine use, directly informing the clinical vigilance appropriate for each specific drug class.",
+    ],
+  },
+  "syspharmans-cholinergic": {
+    name: "Cholinergic Pharmacology — Muscarinic & Nicotinic Agonists/Antagonists",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Cholinergic pharmacology centers on two distinct acetylcholine receptor types — muscarinic and nicotinic — already implicitly relevant to numerous ocular and systemic topics covered throughout this platform, here unified into one receptor-based framework." },
+      { h: "Muscarinic receptors", t: "Muscarinic receptors mediate parasympathetic effects at smooth muscle and glands — muscarinic AGONISTS (pilocarpine, already covered under Miotics content) cause pupillary constriction and increased aqueous outflow, while muscarinic ANTAGONISTS (atropine and other cycloplegics, already covered under Mydriatics & Cycloplegics content) block these effects, causing pupillary dilation and cycloplegia." },
+      { h: "Nicotinic receptors", t: "Nicotinic receptors are found at the neuromuscular junction (already covered under Neuromuscular Junction Transmission content) and at autonomic ganglia — nicotinic receptor dysfunction at the NMJ (via postsynaptic receptor autoantibodies) is the mechanism of myasthenia gravis (already covered), while acetylcholinesterase inhibitors (already covered as indirect-acting miotics and as myasthenia gravis treatment) increase acetylcholine availability at BOTH muscarinic and nicotinic synapses by preventing its breakdown." },
+    ],
+    memorizeIt: [
+      "Muscarinic agonists (pilocarpine, already covered): miosis + increased outflow. Muscarinic antagonists (atropine/cycloplegics, already covered): mydriasis + cycloplegia.",
+      "Nicotinic receptors: NMJ (already covered) + autonomic ganglia — myasthenia gravis (already covered) is a nicotinic/postsynaptic NMJ receptor disorder.",
+      "Acetylcholinesterase inhibitors increase ACh at BOTH muscarinic and nicotinic synapses (already covered as indirect miotics and MG treatment).",
+    ],
+    applyIt: [
+      "This unifies your existing Miotics, Mydriatics & Cycloplegics, and Myasthenia Gravis content into one receptor-based framework — recognizing that pilocarpine (muscarinic agonist) and pyridostigmine (acetylcholinesterase inhibitor used for MG) both ultimately increase cholinergic signaling, just via different mechanisms (direct receptor activation vs. preventing ACh breakdown), explains their shared class of cholinergic-enhancing therapeutic effects despite treating entirely different conditions.",
+    ],
+  },
+  "syspharmans-adrenergic": {
+    name: "Adrenergic Pharmacology — Alpha & Beta Receptor Agonists/Antagonists",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Adrenergic pharmacology's four major receptor subtypes — alpha-1, alpha-2, beta-1, beta-2 — are already implicitly scattered across this platform's ocular and cardiovascular content, here unified into one receptor-based framework." },
+      { h: "Alpha receptors", t: "Alpha-1 receptors mediate vasoconstriction and pupillary dilation (phenylephrine, already covered under both Mydriatics content and the Phenylephrine Blanching Test); alpha-2 receptors mediate presynaptic negative feedback and, in the eye, reduced aqueous production (brimonidine, already covered under Antiglaucoma Agents' general principles content)." },
+      { h: "Beta receptors", t: "Beta-1 receptors are primarily cardiac (increased heart rate/contractility, already relevant to existing Cardiac Conduction content); beta-2 receptors mediate bronchodilation (already relevant to this area's sibling Respiratory Drugs objective) and, in the ciliary body, aqueous production (topical beta-blockers like timolol, already covered under Antiglaucoma Agents content, block this beta-2-mediated secretion)." },
+    ],
+    memorizeIt: [
+      "Alpha-1: vasoconstriction + pupillary dilation (phenylephrine, already covered). Alpha-2: presynaptic feedback + reduced aqueous production (brimonidine, already covered).",
+      "Beta-1: cardiac rate/contractility (already covered under Cardiac Conduction). Beta-2: bronchodilation + ciliary body aqueous production (timolol blocks this, already covered).",
+      "This four-receptor framework unifies ocular glaucoma pharmacology with systemic cardiovascular/respiratory pharmacology.",
+    ],
+    applyIt: [
+      "This gives you the unifying receptor framework directly connecting your existing Antiglaucoma Agents (beta-blocker contraindications) and Cardiac Conduction content — understanding that timolol's beta-2 blockade in the ciliary body is the SAME receptor subtype mediating bronchodilation explains precisely why topical timolol is contraindicated in asthma/COPD (already covered), since blocking beta-2 receptors anywhere in the body opposes bronchodilation.",
+    ],
+  },
+  "syspharmautacoid-histamine-serotonin": {
+    name: "Histamine & Serotonin — Autacoid Signaling & Antagonist Drug Classes",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Autacoids are locally-acting signaling molecules (histamine, serotonin, prostaglandins already covered, bradykinin) distinct from classic hormones or neurotransmitters — histamine and serotonin pharmacology extends your existing Topical Antihistamines content into the broader systemic receptor framework." },
+      { h: "Histamine receptors", t: "H1 receptor antagonists (already covered under Topical Antihistamines content for allergic conjunctivitis) treat allergic/Type I hypersensitivity symptoms (already covered) systemically as well (oral antihistamines for allergic rhinitis); H2 receptor antagonists block histamine-mediated gastric acid secretion (this area's sibling GI Agents objective), a genuinely distinct receptor subtype and clinical application from H1 blockade." },
+      { h: "Serotonin (5-HT) receptors", t: "5-HT receptor agonists (triptans, used for migraine, via 5-HT1 receptor-mediated cranial vasoconstriction) and antagonists (ondansetron, a 5-HT3 antagonist, this area's sibling Antiemetics objective) represent genuinely distinct clinical applications of serotonin receptor pharmacology, illustrating how the same signaling molecule can be therapeutically targeted through different receptor subtypes for entirely different clinical purposes." },
+    ],
+    memorizeIt: [
+      "Autacoids: locally-acting signaling molecules (histamine, serotonin, prostaglandins, bradykinin) — distinct from classic hormones/neurotransmitters.",
+      "H1 antagonists: allergic symptoms (already covered under Topical Antihistamines). H2 antagonists: gastric acid secretion (this area's sibling GI objective) — distinct receptor subtypes.",
+      "5-HT1 agonists (triptans): migraine treatment. 5-HT3 antagonists (ondansetron, this area's sibling Antiemetics objective): nausea/vomiting.",
+    ],
+    applyIt: [
+      "This extends your existing Topical Antihistamines for Allergic Conjunctivitis content into the broader systemic autacoid framework — recognizing that H1 and H2 receptors are genuinely distinct histamine receptor subtypes with different tissue distributions and clinical applications (allergy vs. gastric acid) reinforces why an H1-blocking oral antihistamine would not be expected to treat GERD, and vice versa.",
+    ],
+  },
+  "syspharmresp-bronchodilators": {
+    name: "Bronchodilators — Beta-2 Agonists & Anticholinergics for Asthma/COPD",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Bronchodilator pharmacology directly extends your existing Respiratory System content (asthma, COPD, already covered) and the beta-2 receptor framework already covered under this area's sibling Adrenergic Pharmacology objective." },
+      { h: "Beta-2 agonists", t: "Short-acting beta-2 agonists (albuterol, 'rescue' inhalers) provide rapid bronchodilation for acute symptom relief, while long-acting beta-2 agonists (salmeterol) provide sustained bronchodilation for chronic maintenance therapy — both act on the SAME beta-2 receptor already covered under this area's sibling Adrenergic Pharmacology objective, here activated (rather than blocked, as by timolol) to produce bronchodilation, the opposite clinical goal from timolol's contraindication in these same conditions (already covered)." },
+      { h: "Anticholinergics", t: "Anticholinergic bronchodilators (ipratropium, tiotropium) block muscarinic receptors (already covered under this area's sibling Cholinergic Pharmacology objective) in bronchial smooth muscle, reducing parasympathetically-mediated bronchoconstriction — particularly useful in COPD (already covered), often combined with beta-2 agonists for complementary bronchodilation mechanisms." },
+    ],
+    memorizeIt: [
+      "Short-acting beta-2 agonists (albuterol): rapid rescue bronchodilation. Long-acting (salmeterol): chronic maintenance.",
+      "Beta-2 agonists ACTIVATE the same receptor timolol BLOCKS (already covered) — explains why timolol is contraindicated in asthma/COPD.",
+      "Anticholinergics (ipratropium, tiotropium): block muscarinic receptors (already covered) in bronchial smooth muscle — often combined with beta-2 agonists.",
+    ],
+    applyIt: [
+      "This directly completes your existing Antiglaucoma Agents beta-blocker contraindication content — understanding that bronchodilator therapy works by ACTIVATING beta-2 receptors while topical timolol BLOCKS this same receptor explains with full mechanistic precision why an asthmatic patient on albuterol would experience direct pharmacologic antagonism from concurrent topical timolol use, beyond simply 'both affect the lungs.'",
+    ],
+  },
+  "syspharmresp-steroids": {
+    name: "Inhaled Corticosteroids & Leukotriene Modifiers",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Inhaled corticosteroids are first-line CONTROLLER therapy for persistent asthma, genuinely distinct in purpose from the rescue bronchodilators already covered under this area's sibling objective, extending the corticosteroid anti-inflammatory mechanism already covered extensively across this platform to the respiratory system." },
+      { h: "Inhaled corticosteroids as controller therapy", t: "Unlike bronchodilators (this area's sibling objective, which relax already-constricted airways for immediate relief), inhaled corticosteroids reduce the underlying chronic airway INFLAMMATION driving asthma (already covered as the broad anti-inflammatory corticosteroid mechanism relevant across this platform), taken regularly as maintenance therapy rather than for acute symptom relief — directly analogous to the distinction between acute rescue and chronic controller therapy already implicit in glaucoma's acute (hyperosmotic, already covered) vs. chronic (daily antiglaucoma agents, already covered) treatment paradigms." },
+      { h: "Leukotriene modifiers", t: "Leukotriene receptor antagonists (montelukast) block leukotriene-mediated bronchoconstriction and inflammation, providing an alternative or add-on controller therapy option, particularly useful in patients with additional allergic rhinitis symptoms given leukotrienes' broader role in allergic inflammatory pathways." },
+    ],
+    memorizeIt: [
+      "Inhaled corticosteroids: CONTROLLER therapy, reduce chronic airway inflammation — regular maintenance use, not acute rescue.",
+      "Distinct purpose from bronchodilators (this area's sibling objective, acute relief) — parallels acute vs. chronic treatment paradigms seen elsewhere (e.g., glaucoma, already covered).",
+      "Leukotriene modifiers (montelukast): alternative/add-on controller therapy, block leukotriene-mediated bronchoconstriction/inflammation.",
+    ],
+    applyIt: [
+      "This gives you the controller-vs-rescue therapy distinction directly paralleling treatment paradigms already established elsewhere on this platform — recognizing that inhaled corticosteroids address the underlying inflammatory disease process (like systemic immunosuppressive therapy for chronic uveitis, already covered) while bronchodilators provide symptomatic relief (like cycloplegics for uveitis pain, already covered) reinforces the general clinical principle of treating underlying disease process versus symptoms as two distinct, often complementary therapeutic goals.",
+    ],
+  },
+  "syspharmgi-acid-suppression": {
+    name: "Acid Suppression — Proton Pump Inhibitors vs. H2 Blockers",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Proton pump inhibitors (PPIs) and H2 blockers both suppress gastric acid secretion but through genuinely distinct mechanisms and with different relative potency, already partly implicit under existing Gastric Acid Secretion & Regulation physiology content." },
+      { h: "PPI mechanism — the most potent acid suppression", t: "PPIs (omeprazole) IRREVERSIBLY inhibit the H+/K+-ATPase ('proton pump') on gastric parietal cells — the final common pathway of acid secretion regardless of which upstream signal (already covered as the ACh/gastrin/histamine three-pathway framework under Gastric Acid Secretion content) triggered it — making PPIs the most potent acid suppressants available, since they block acid production at its final, unified step rather than any single upstream trigger." },
+      { h: "H2 blocker mechanism — one of three upstream pathways", t: "H2 blockers (this area's sibling Autacoid objective) block only the HISTAMINE-mediated pathway (one of the three upstream pathways already covered) to acid secretion — genuinely less potent than PPIs since the ACh and gastrin pathways remain unblocked and can still stimulate acid secretion via the same final H+/K+-ATPase pump, explaining PPIs' generally greater acid-suppressing efficacy already implicit in existing Gastric Acid Secretion content." },
+    ],
+    memorizeIt: [
+      "PPIs (omeprazole): IRREVERSIBLY inhibit the H+/K+-ATPase proton pump — the FINAL common pathway of acid secretion, blocking ALL three upstream triggers (ACh/gastrin/histamine, already covered).",
+      "H2 blockers: block only the HISTAMINE pathway (one of three) — genuinely less potent than PPIs, since ACh/gastrin pathways remain active.",
+      "This explains PPIs' greater acid-suppressing efficacy — they act downstream of all three signals, not just one.",
+    ],
+    applyIt: [
+      "This gives you the precise mechanistic explanation for a relative-potency fact already implicit in your existing Gastric Acid Secretion & Regulation content — PPIs' superior acid suppression compared to H2 blockers is directly explained by PPIs acting at the FINAL common pathway (the proton pump itself) rather than blocking just one of the three upstream stimulatory signals already covered, a genuinely satisfying mechanistic completion of that physiology content.",
+    ],
+  },
+  "syspharmgi-antiemetics": {
+    name: "Antiemetics & Laxatives — Mechanism Overview",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Antiemetics and laxatives represent genuinely distinct GI symptom-management drug categories, with antiemetics directly extending this area's sibling Autacoid objective's serotonin receptor framework." },
+      { h: "Antiemetics", t: "Ondansetron (a 5-HT3 receptor antagonist, already covered under this area's sibling Histamine & Serotonin objective) blocks serotonin's action in the chemoreceptor trigger zone and GI tract, commonly used for chemotherapy-induced and post-operative nausea; promethazine (an antihistamine with additional anticholinergic properties) provides broader antiemetic coverage but with more sedating and anticholinergic side effects." },
+      { h: "Laxatives", t: "Osmotic laxatives (polyethylene glycol, magnesium-based) draw water into the bowel lumen via an osmotic mechanism — directly analogous to the osmotic principle already covered under both Topical Hyperosmotic Agents (corneal edema) and Systemic Hyperosmotic Agents (acute angle-closure glaucoma) content, just applied to the GI lumen; stimulant laxatives (senna, bisacodyl) directly stimulate colonic motility; bulk-forming laxatives (fiber-based) increase stool bulk to promote peristalsis." },
+    ],
+    memorizeIt: [
+      "Ondansetron: 5-HT3 antagonist (already covered under Autacoid content) — chemotherapy/post-op nausea. Promethazine: antihistamine + anticholinergic — broader but more sedating.",
+      "Osmotic laxatives: draw water into the bowel via osmosis — same osmotic principle already covered under Hyperosmotic Agents content, applied to the GI lumen.",
+      "Stimulant laxatives: direct colonic motility stimulation. Bulk-forming: increase stool bulk.",
+    ],
+    applyIt: [
+      "This extends your existing Systemic Hyperosmotic Agents for Acute Angle-Closure Glaucoma content by showing the same osmotic gradient principle (drawing fluid across a membrane or into a lumen) applies to osmotic laxatives in the GI tract — a genuinely satisfying example of one core pharmacologic mechanism (osmosis) being therapeutically applied across completely different organ systems already covered on this platform.",
+    ],
+  },
+  "syspharmchemo-cellcycle": {
+    name: "Cell-Cycle-Specific vs. Non-Specific Chemotherapy Classes",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Chemotherapeutic drug classes are organized by their relationship to the cell cycle, directly extending your existing Cell Cycle & Its Regulation content into a genuine therapeutic application of that checkpoint-based framework." },
+      { h: "Cell-cycle-NONSPECIFIC agents", t: "Alkylating agents and platinum-based drugs directly damage DNA (cross-linking DNA strands) regardless of which cell cycle phase (already covered) a cell is in — effective against both actively dividing and relatively quiescent cells, though still preferentially affecting rapidly-dividing tissue (already relevant to existing Cell Cycle checkpoint content) given its higher DNA replication activity and reduced repair time." },
+      { h: "Cell-cycle-SPECIFIC agents", t: "Antimetabolites (methotrexate, already covered under Systemic Immunosuppressive & Biologic Therapy for Chronic Uveitis content, here in its oncologic dosing context) act specifically during S-phase (DNA synthesis, already covered under Cell Cycle content) by interfering with nucleotide synthesis; mitotic inhibitors (vincristine, taxanes) act specifically during M-phase (mitosis, already covered) by disrupting microtubule function required for chromosome segregation — both classes require the cell to be in their specific target phase to exert effect, explaining their particular effectiveness against rapidly-cycling tumor cells." },
+    ],
+    memorizeIt: [
+      "Cell-cycle-NONSPECIFIC: alkylating agents/platinum — direct DNA damage regardless of cycle phase (already covered).",
+      "Cell-cycle-SPECIFIC: antimetabolites (methotrexate, already covered as a uveitis immunosuppressant) act in S-phase; mitotic inhibitors (vincristine, taxanes) act in M-phase — both already covered as cell cycle phases.",
+      "Cell-cycle-specific agents are particularly effective against rapidly-cycling tumor cells, which spend more time in their target phase.",
+    ],
+    applyIt: [
+      "This gives you a genuine therapeutic application of your existing Cell Cycle & Its Regulation content — recognizing that methotrexate (already covered as a uveitis treatment) is the SAME drug class used at different, higher doses as S-phase-specific chemotherapy explains why methotrexate's low-dose immunosuppressive uveitis regimen (already covered) carries far less severe side effects than its oncologic dosing, since the therapeutic goal and dose intensity differ substantially despite sharing the identical antimetabolite mechanism.",
+    ],
+  },
+  "syspharmimmuno-calcineurin-biologics": {
+    name: "Calcineurin Inhibitors & Biologic Immunosuppressants — Systemic Overview",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Systemic calcineurin inhibitors and biologic immunosuppressants share their core mechanisms with the topical/ocular applications already covered under Anterior Uvea Pharmacology content, here in their broader systemic therapeutic context." },
+      { h: "Calcineurin inhibitors", t: "Systemic cyclosporine and tacrolimus (the same calcineurin-inhibiting, IL-2-transcription-blocking mechanism already covered under Topical Immunomodulators — Cyclosporine & Lifitegrast content) are mainstay agents for preventing solid organ TRANSPLANT REJECTION (already covered under Tissue Transplantation & Graft Rejection content) and for treating severe systemic autoimmune disease, working by broadly suppressing T-cell-mediated immune activation." },
+      { h: "Biologic immunosuppressants", t: "Systemic TNF-alpha inhibitors (adalimumab, already covered under Systemic Immunosuppressive & Biologic Therapy for Chronic Uveitis content) and other biologic agents targeting specific cytokines or immune cell surface markers represent a more TARGETED immunosuppressive approach than broad calcineurin inhibition, used across a range of systemic autoimmune conditions (rheumatoid arthritis, inflammatory bowel disease) beyond the uveitis application already covered." },
+    ],
+    memorizeIt: [
+      "Systemic cyclosporine/tacrolimus: same calcineurin-inhibiting mechanism already covered for topical uveitis treatment — used for transplant rejection prevention (already covered) and systemic autoimmune disease.",
+      "Systemic TNF-alpha inhibitors (adalimumab, already covered for uveitis): targeted biologic immunosuppression, used across multiple systemic autoimmune conditions.",
+      "Both drug classes' core mechanisms are already established under Anterior Uvea Pharmacology content — here applied systemically.",
+    ],
+    applyIt: [
+      "This directly extends your existing Topical Immunomodulators and Tissue Transplantation & Graft Rejection content — recognizing that the SAME calcineurin-inhibiting mechanism treats both topical dry eye/uveitis AND prevents systemic solid organ transplant rejection explains why a transplant recipient on systemic cyclosporine and a chronic dry eye patient on topical cyclosporine share an underlying pharmacologic principle, just applied at vastly different doses and delivery routes for different clinical goals.",
+    ],
+  },
+  "syspharmantiinflamm-cox": {
+    name: "Systemic NSAIDs — COX-1 vs. COX-2 Selectivity",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Systemic NSAID selectivity for COX-1 versus COX-2 isoforms determines a genuine efficacy-versus-side-effect trade-off, extending your existing Topical NSAIDs — Mechanism & Corneal Melt Risk content into the systemic COX-isoform framework." },
+      { h: "COX-1 — constitutive, protective functions", t: "COX-1 is CONSTITUTIVELY expressed and mediates protective physiologic functions, including gastric mucosal protection and platelet thromboxane production (supporting normal clotting) — non-selective NSAIDs (ibuprofen, naproxen) inhibit BOTH COX-1 and COX-2, explaining their well-known GI ulceration/bleeding risk (from COX-1 inhibition removing gastric protection) alongside their anti-inflammatory benefit." },
+      { h: "COX-2 — inducible, inflammatory functions", t: "COX-2 is primarily INDUCED at sites of inflammation (already covered mechanistically under Topical NSAIDs content as the prostaglandin-synthesis pathway) — selective COX-2 inhibitors (celecoxib) were developed to reduce the GI ulceration risk by sparing COX-1's protective gastric function, though this selectivity trade-off comes with an increased CARDIOVASCULAR risk (thrombotic events), since COX-2 inhibition without corresponding COX-1/thromboxane inhibition can shift the platelet aggregation balance." },
+    ],
+    memorizeIt: [
+      "COX-1: constitutive — gastric mucosal protection, platelet thromboxane production. COX-2: inducible — inflammation (already covered under Topical NSAIDs content).",
+      "Non-selective NSAIDs (ibuprofen, naproxen): block BOTH — GI ulceration/bleeding risk from COX-1 inhibition.",
+      "Selective COX-2 inhibitors (celecoxib): reduced GI risk (spares COX-1) but INCREASED cardiovascular thrombotic risk — a genuine efficacy/safety trade-off.",
+    ],
+    applyIt: [
+      "This gives you the systemic COX-isoform framework directly extending your existing Topical NSAIDs — Mechanism & Corneal Melt Risk content — just as topical NSAIDs carry a genuine, non-trivial risk (corneal melt, already covered) beyond simple anti-inflammatory benefit, systemic NSAIDs carry their own genuine trade-offs (GI bleeding for non-selective agents, cardiovascular risk for COX-2-selective agents), reinforcing the broader principle that NSAIDs across all applications are not risk-free medications requiring thoughtful selection based on individual patient risk factors.",
+    ],
+  },
+  "syspharmcns-antidep-antipsych": {
+    name: "Antidepressants & Antipsychotics — Major Classes & Ocular Side Effects",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Major antidepressant and antipsychotic drug classes carry genuine ocular side effects directly extending your existing Systemic Medications Affecting Contact Lens Tolerance content beyond the anticholinergic dry-eye mechanism already covered there." },
+      { h: "Antidepressant classes and anticholinergic effects", t: "Tricyclic antidepressants (amitriptyline) have significant ANTICHOLINERGIC activity (already covered under Systemic Medications Affecting Contact Lens Tolerance content as a cause of reduced tear production) and can also precipitate angle closure in susceptible narrow-angle patients via their mydriatic anticholinergic effect (already covered under Mydriasis Contraindication content); SSRIs (fluoxetine) have a more favorable side-effect profile with substantially less anticholinergic activity, explaining their preference as first-line therapy over older tricyclics." },
+      { h: "Antipsychotics", t: "Antipsychotics work primarily through DOPAMINE receptor blockade (typical/first-generation agents) or combined dopamine-serotonin blockade (atypical/second-generation agents) — certain agents carry a risk of pigmentary retinopathy or corneal/lens deposits with long-term use, a genuinely important ocular monitoring consideration for patients on chronic antipsychotic therapy." },
+    ],
+    memorizeIt: [
+      "Tricyclic antidepressants: significant ANTICHOLINERGIC activity — reduced tear production (already covered) AND can precipitate angle closure in narrow-angle patients (already covered).",
+      "SSRIs: substantially less anticholinergic activity than tricyclics — explains preference as first-line therapy.",
+      "Antipsychotics: dopamine (± serotonin) receptor blockade — some agents carry pigmentary retinopathy/corneal-lens deposit risk with long-term use.",
+    ],
+    applyIt: [
+      "This directly extends your existing Systemic Medications Affecting Contact Lens Tolerance and Mydriasis Contraindication Risk content — a patient on a tricyclic antidepressant with new contact lens intolerance AND a narrow angle on prior gonioscopy (already covered) has TWO distinct anticholinergic-mediated risks from the same medication class, reinforcing why a thorough medication history matters for both dry eye and angle-closure risk assessment.",
+    ],
+  },
+  "syspharmcns-anticonvulsant": {
+    name: "Anticonvulsants — Mechanism Overview",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Anticonvulsant drugs reduce neuronal excitability through several distinct mechanisms, extending your existing Action Potential Generation & Propagation content into a therapeutic application of basic neuronal electrophysiology." },
+      { h: "Sodium channel blockers", t: "Several anticonvulsants (phenytoin, carbamazepine) block voltage-gated sodium channels (already covered under Action Potential Generation content and as the mechanism of local anesthetics, this area's sibling objective) preferentially in rapidly-firing neurons, reducing the excessive neuronal firing characteristic of seizure activity — the same channel class already covered as the target of both action potential propagation and local anesthetic blockade, here exploited therapeutically to REDUCE pathologic excitability rather than eliminate sensation entirely." },
+      { h: "GABA-ergic drugs", t: "Other anticonvulsants (benzodiazepines, barbiturates) enhance GABA (the primary inhibitory CNS neurotransmitter) receptor activity, increasing chloride influx and neuronal hyperpolarization, making neurons less likely to fire — a genuinely different mechanism from sodium channel blockade, illustrating that seizure control can be achieved either by directly limiting excitatory sodium-channel-driven firing or by enhancing inhibitory GABA-ergic tone." },
+    ],
+    memorizeIt: [
+      "Sodium channel blockers (phenytoin, carbamazepine): block voltage-gated Na+ channels (already covered under Action Potential Generation) preferentially in rapidly-firing neurons.",
+      "GABA-ergic drugs (benzodiazepines, barbiturates): enhance GABA receptor activity, increasing chloride influx/hyperpolarization.",
+      "Two distinct anticonvulsant strategies: reduce excitatory firing (sodium channel blockade) vs. enhance inhibitory tone (GABA enhancement).",
+    ],
+    applyIt: [
+      "This gives you a genuine therapeutic application of your existing Action Potential Generation & Propagation content — recognizing that sodium-channel-blocking anticonvulsants share their core molecular target with local anesthetics (this area's sibling objective) explains why both drug classes can cause overlapping side effects (e.g., CNS depression, cardiac conduction effects) at toxic doses, since both act on the same fundamental channel class throughout the body, not just in their intended target tissue.",
+    ],
+  },
+  "syspharmanesthetic-local": {
+    name: "Local Anesthetics — Sodium Channel Blockade Mechanism",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Systemic local anesthetics (lidocaine and related agents) share the IDENTICAL sodium channel blockade mechanism already covered under Topical Ocular Anesthetics content, here applied via injection for regional/local anesthesia rather than topical corneal application." },
+      { h: "Shared mechanism with topical ocular anesthetics", t: "Like proparacaine and tetracaine (already covered under Topical Ocular Anesthetics content), systemic local anesthetics block voltage-gated sodium channels (already covered under Action Potential Generation content and this area's sibling Anticonvulsants objective) in sensory nerve fibers, preventing action potential propagation and producing localized anesthesia — the identical molecular mechanism, just delivered via injection into tissue near a target nerve rather than topically onto the cornea." },
+      { h: "Ester vs. amide classification", t: "Local anesthetics are classified as ESTERS (procaine, tetracaine — already covered as a topical ocular anesthetic) or AMIDES (lidocaine, bupivacaine) based on their chemical linkage — a clinically relevant distinction since esters are metabolized by plasma cholinesterases (and carry a higher allergic reaction risk from their PABA metabolite) while amides are metabolized hepatically, generally considered safer with a lower allergy risk, explaining why amide agents like lidocaine are more commonly used for systemic/injected local anesthesia." },
+    ],
+    memorizeIt: [
+      "Systemic local anesthetics (lidocaine) share the IDENTICAL sodium channel blockade mechanism as topical ocular anesthetics (proparacaine/tetracaine, already covered).",
+      "ESTERS (procaine, tetracaine — already covered): metabolized by plasma cholinesterases, higher allergy risk (PABA metabolite).",
+      "AMIDES (lidocaine, bupivacaine): metabolized hepatically, lower allergy risk — more commonly used for injected local anesthesia.",
+    ],
+    applyIt: [
+      "This gives you the systemic pharmacology completing your existing Topical Ocular Anesthetics — Mechanism, Use & Abuse Keratopathy content — recognizing that tetracaine is an ESTER-type anesthetic (like the topical ocular anesthetics already covered) while lidocaine is an AMIDE explains a genuine clinical distinction in allergy risk profile between these drug subclasses, relevant to a patient reporting a prior 'anesthetic allergy' whose specific agent and class should be clarified before selecting an alternative.",
+    ],
+  },
+  "syspharmanesthetic-general": {
+    name: "General Anesthesia — Balanced Anesthesia Concept",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Modern general anesthesia uses a 'balanced anesthesia' approach — combining multiple drug classes, each targeting a specific component of the anesthetic state — rather than relying on a single agent to achieve unconsciousness, analgesia, and muscle relaxation simultaneously." },
+      { h: "Components of balanced anesthesia", t: "A typical general anesthesia protocol combines: an IV induction agent (rapid onset unconsciousness), an inhalational agent (anesthesia maintenance), an opioid analgesic (pain control), and a neuromuscular blocking agent (muscle relaxation, working at the neuromuscular junction already covered under Muscle Physiology content — a pharmacologic parallel to, though mechanistically distinct from, the myasthenia gravis and botulinum toxin NMJ effects already covered) — using multiple lower-dose agents targeting distinct components reduces the toxicity risk of relying on a single high-dose agent to achieve all anesthetic goals simultaneously." },
+      { h: "Relevance to ophthalmic surgery", t: "This balanced anesthesia framework is directly relevant to ophthalmic surgical anesthesia already implicit across this platform's Cataract Surgery and vitreoretinal surgical content, where general anesthesia (for certain patients/procedures) or, more commonly, local/regional anesthesia combined with sedation (a different balanced approach) is selected based on the specific procedure and patient factors." },
+    ],
+    memorizeIt: [
+      "Balanced anesthesia: combines IV induction agent + inhalational maintenance + opioid analgesic + neuromuscular blocker — each targeting a distinct anesthetic component.",
+      "Neuromuscular blocking agents act at the NMJ (already covered under Muscle Physiology) — mechanistically distinct from but conceptually parallel to myasthenia gravis/botulinum toxin NMJ effects (already covered).",
+      "Using multiple lower-dose agents reduces toxicity risk compared to a single high-dose agent achieving all goals.",
+    ],
+    applyIt: [
+      "This gives you the systemic anesthesia framework relevant to your existing Cataract Surgery and vitreoretinal surgical content — most ophthalmic surgery (already covered) uses local/regional anesthesia with sedation rather than full general anesthesia specifically because the balanced-anesthesia principle of matching anesthetic intensity to actual procedural need applies here too, avoiding unnecessary general anesthesia risk for procedures not requiring full unconsciousness or muscle relaxation.",
+    ],
+  },
+  "syspharmendo-diabetes": {
+    name: "Diabetes Pharmacology — Insulin & Oral Hypoglycemics",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Diabetes pharmacology directly extends your existing Diabetes Mellitus and Insulin/Glucagon & Glucose Homeostasis content into specific therapeutic drug classes, genuinely relevant given diabetic retinopathy's prominence elsewhere on this platform." },
+      { h: "Insulin therapy", t: "Insulin (required for type 1 diabetes, already covered, and often needed in advanced type 2 diabetes) is available in rapid-acting, short-acting, intermediate-acting, and long-acting formulations, allowing regimens tailored to mimic normal physiologic insulin secretion patterns (already covered under Insulin/Glucagon content) — a genuinely important consideration given that both severe hyperglycemia AND iatrogenic hypoglycemia from insulin therapy carry distinct risks." },
+      { h: "Oral hypoglycemics — metformin as first-line", t: "Metformin is first-line therapy for type 2 diabetes, working primarily by REDUCING hepatic glucose output (rather than stimulating insulin secretion) — genuinely distinct from sulfonylureas (glipizide), which stimulate pancreatic insulin secretion and carry a higher hypoglycemia risk as a result; newer classes (SGLT2 inhibitors, GLP-1 agonists) work through additional distinct mechanisms and have shown cardiovascular and renal benefits beyond glucose control alone." },
+    ],
+    memorizeIt: [
+      "Insulin formulations (rapid/short/intermediate/long-acting) allow regimens mimicking normal physiologic secretion (already covered under Insulin/Glucagon content).",
+      "Metformin: first-line T2DM therapy, reduces hepatic glucose output — does NOT stimulate insulin secretion, lower hypoglycemia risk.",
+      "Sulfonylureas (glipizide): stimulate insulin secretion — higher hypoglycemia risk than metformin.",
+    ],
+    applyIt: [
+      "This gives you the specific pharmacologic management directly extending your existing Diabetes Mellitus and Diabetic Retinopathy content — recognizing that tight glycemic control (via appropriate insulin/oral hypoglycemic regimens) is the modifiable factor already established as reducing diabetic retinopathy progression risk connects this pharmacology directly to the ophthalmic disease consequence already covered.",
+    ],
+  },
+  "syspharmendo-thyroid-steroid": {
+    name: "Thyroid & Systemic Corticosteroid Pharmacology",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Thyroid and systemic corticosteroid pharmacology directly extend your existing Thyroid Hormone Synthesis & Regulation and Hypothalamic-Pituitary Axes content, with genuine ocular relevance already established under Thyroid Eye Disease content." },
+      { h: "Thyroid pharmacology", t: "Levothyroxine (synthetic T4) is standard replacement therapy for hypothyroidism, requiring periodic dose adjustment based on TSH monitoring (already covered under Hypothalamic-Pituitary Axes negative feedback content); methimazole (an antithyroid drug blocking thyroid hormone synthesis) treats hyperthyroidism, already relevant to existing Thyroid Eye Disease content, though notably does NOT directly treat the autoimmune orbital inflammation of thyroid eye disease itself, which can persist or even transiently worsen despite achieving normal thyroid hormone levels." },
+      { h: "Systemic corticosteroid HPA axis suppression", t: "Chronic systemic corticosteroid use suppresses the hypothalamic-pituitary-adrenal (HPA) axis (already covered under Hypothalamic-Pituitary Axes content) via negative feedback, meaning ABRUPT discontinuation after prolonged use can precipitate adrenal insufficiency (since the adrenal glands' own cortisol production has been suppressed and cannot immediately resume) — requiring a gradual taper rather than abrupt cessation, a systemic parallel to the tapering principle already covered under Post-Cataract-Surgery Corticosteroid Taper content." },
+    ],
+    memorizeIt: [
+      "Levothyroxine (T4 replacement): dose adjusted via TSH monitoring (already covered under Hypothalamic-Pituitary Axes negative feedback).",
+      "Methimazole (antithyroid): treats hyperthyroidism but does NOT directly treat thyroid eye disease's autoimmune orbital inflammation (already covered) — can persist despite normalized thyroid levels.",
+      "Chronic systemic corticosteroids suppress the HPA axis (already covered) — abrupt discontinuation risks adrenal insufficiency; requires gradual taper.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important clinical pearl directly extending your existing Thyroid Eye Disease content — a patient whose hyperthyroidism is successfully treated with methimazole may still experience ongoing or even worsening orbital inflammation, since normalizing thyroid hormone levels does not directly resolve the autoimmune orbital process, reinforcing that thyroid eye disease's ocular management (already covered) is often managed somewhat independently from systemic thyroid hormone control.",
+    ],
+  },
+  "syspharmcardio-antihypertensive": {
+    name: "Antihypertensive Drug Classes — ACE Inhibitors, ARBs, CCBs, Diuretics",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Major antihypertensive drug classes directly extend your existing Blood Pressure Regulation, Glomerular Filtration & GFR Regulation, and Hypertension content into specific therapeutic mechanisms." },
+      { h: "ACE inhibitors and ARBs", t: "ACE inhibitors and ARBs block the renin-angiotensin-aldosterone system (already covered under Blood Pressure Regulation content), and specifically cause EFFERENT arteriolar dilation in the kidney (already covered under Glomerular Filtration & GFR Regulation content), explaining their particular renoprotective benefit in diabetic nephropathy (already covered) by reducing intraglomerular pressure." },
+      { h: "Calcium channel blockers and diuretics", t: "Calcium channel blockers (amlodipine) reduce vascular smooth muscle contraction by blocking calcium influx, causing vasodilation; diuretics (this area's sibling Renal Drugs objective, already substantially covered under Renal Tubular Function content) reduce blood volume — together with ACE inhibitors/ARBs, these represent the major first-line antihypertensive classes, often combined given their complementary, non-redundant mechanisms." },
+    ],
+    memorizeIt: [
+      "ACE inhibitors/ARBs: block RAAS (already covered), cause EFFERENT arteriolar dilation — renoprotective in diabetic nephropathy (already covered).",
+      "Calcium channel blockers (amlodipine): block calcium influx in vascular smooth muscle → vasodilation.",
+      "Diuretics (this area's sibling Renal Drugs objective): reduce blood volume — different mechanism, often combined with the above classes.",
+    ],
+    applyIt: [
+      "This directly extends your existing Glomerular Filtration & GFR Regulation content's ACE inhibitor renoprotection mechanism into the broader antihypertensive framework — recognizing that ACE inhibitors/ARBs, CCBs, and diuretics work through three genuinely distinct mechanisms (RAAS blockade, direct vasodilation, volume reduction) explains why combination antihypertensive therapy is standard practice for patients not controlled on a single agent, since these mechanisms are complementary rather than redundant.",
+    ],
+  },
+  "syspharmcardio-anticoag": {
+    name: "Antiarrhythmics & Anticoagulants — Mechanism Overview",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Antiarrhythmic and anticoagulant pharmacology directly extend your existing Cardiac Conduction System content and connect to embolic stroke risk already relevant under Amaurosis Fugax content." },
+      { h: "Antiarrhythmics", t: "Antiarrhythmic drugs are broadly classified by their effect on cardiac conduction (already covered under Cardiac Conduction System & the Cardiac Cycle content) — sodium channel blockers (Class I, e.g., flecainide), beta-blockers (Class II, already covered under this area's sibling Adrenergic Pharmacology objective), potassium channel blockers (Class III, e.g., amiodarone), and calcium channel blockers (Class IV) — each modulating a different phase of the cardiac action potential to reduce abnormal rhythm generation or propagation." },
+      { h: "Anticoagulants", t: "Warfarin (a narrow-therapeutic-index drug, already covered under this area's sibling General Principles objective) inhibits vitamin K-dependent clotting factor synthesis, requiring regular INR monitoring; direct oral anticoagulants (DOACs, e.g., apixaban) directly inhibit specific clotting factors (Xa or thrombin) without requiring routine monitoring — both drug classes reduce thromboembolic stroke risk in atrial fibrillation, directly relevant to the embolic stroke risk mechanism already covered under Amaurosis Fugax and Central Retinal Artery Occlusion content." },
+    ],
+    memorizeIt: [
+      "Antiarrhythmic classes (by cardiac conduction phase, already covered): I (Na+ channel), II (beta-blocker, already covered), III (K+ channel, amiodarone), IV (Ca2+ channel).",
+      "Warfarin: inhibits vitamin K-dependent clotting factors — narrow therapeutic index (already covered), requires INR monitoring.",
+      "DOACs (apixaban): direct factor Xa/thrombin inhibitors — no routine monitoring required.",
+      "Both anticoagulant classes reduce atrial fibrillation-related thromboembolic stroke risk — directly relevant to Amaurosis Fugax/CRAO embolic mechanism (already covered).",
+    ],
+    applyIt: [
+      "This gives you the pharmacologic prevention strategy directly extending your existing Amaurosis Fugax and Central Retinal Artery Occlusion content — a patient with atrial fibrillation (a source of cardioembolic material, already relevant to existing embolic stroke/CRAO content) on appropriate anticoagulation has reduced risk of the exact embolic event that could otherwise cause amaurosis fugax or CRAO, directly connecting systemic cardiovascular pharmacology to ophthalmic disease prevention.",
+    ],
+  },
+  "syspharmrenal-diuretics": {
+    name: "Diuretic Classes by Renal Tubular Site of Action",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Diuretic classes are organized by their specific renal tubular site of action, already substantially covered under Renal Tubular Function & Reabsorption content — consolidated here as this platform's dedicated systemic Renal Drugs topic." },
+      { h: "Loop diuretics — the most potent class", t: "Loop diuretics (furosemide) act at the thick ascending loop of Henle (already covered under Renal Tubular Function content), blocking the Na-K-2Cl cotransporter — the MOST POTENT diuretic class, given this transporter's role in the kidney's countercurrent concentrating mechanism, making loop diuretics first-line for acute volume overload states like decompensated CHF (already covered)." },
+      { h: "Thiazide and potassium-sparing diuretics", t: "Thiazide diuretics act at the distal convoluted tubule (already covered), moderately potent, commonly used for chronic hypertension management (this area's sibling Antihypertensive objective); potassium-sparing diuretics (spironolactone, an aldosterone antagonist) act at the collecting duct (already covered), providing mild diuresis while avoiding the potassium wasting seen with loop/thiazide diuretics — and acetazolamide (a carbonic anhydrase inhibitor, already covered extensively as both a systemic and topical glaucoma medication) acts at the proximal tubule, its diuretic mechanism being the SAME carbonic anhydrase inhibition already covered as the aqueous-production-reducing mechanism in glaucoma." },
+    ],
+    memorizeIt: [
+      "Loop diuretics (furosemide): thick ascending loop of Henle, blocks Na-K-2Cl transporter — MOST POTENT class, first-line for acute CHF volume overload (already covered).",
+      "Thiazides: distal convoluted tubule — moderate potency, chronic hypertension management.",
+      "Potassium-sparing (spironolactone): collecting duct, aldosterone antagonist — avoids potassium wasting.",
+      "Acetazolamide (already covered as a glaucoma medication): proximal tubule, carbonic anhydrase inhibition — SAME mechanism whether used systemically as a diuretic or for glaucoma.",
+    ],
+    applyIt: [
+      "This consolidates your existing Renal Tubular Function & Reabsorption and Antiglaucoma Agents content into one unified diuretic framework — recognizing that acetazolamide's diuretic mechanism (proximal tubule carbonic anhydrase inhibition) is identical whether prescribed systemically for edema or as a glaucoma medication (already covered) explains why oral acetazolamide for glaucoma carries genuine systemic diuretic-related side effects (electrolyte disturbance, already covered under CAI content) beyond its ocular IOP-lowering effect.",
+    ],
+  },
+  "syspharmnutrition-deficiency": {
+    name: "Vitamin Deficiency Replacement Therapy — B12, Vitamin D, Iron",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology/nutrition references"],
+    learnIt: [
+      { h: "Overview", t: "Vitamin and mineral deficiency replacement therapy directly extends your existing Water-Soluble Vitamin Coenzyme Functions and Anemia content into specific therapeutic supplementation approaches." },
+      { h: "B12 replacement", t: "B12 deficiency (already covered as causing megaloblastic anemia with neurologic involvement, distinguishing it from folate deficiency) is treated with either oral high-dose B12 or intramuscular injection — injection is preferred specifically in PERNICIOUS ANEMIA (already relevant to existing Anemia content) since this condition involves impaired intestinal B12 ABSORPTION (from intrinsic factor deficiency), meaning oral supplementation would be poorly absorbed regardless of dose, requiring the injection route to bypass this absorption defect." },
+      { h: "Vitamin D and iron replacement", t: "Vitamin D replacement (already relevant to existing Fat-Soluble Vitamin Metabolism content) treats deficiency contributing to bone health; iron replacement (oral ferrous sulfate, or IV iron for severe deficiency/malabsorption) treats iron-deficiency anemia — genuinely distinct from B12/folate-deficiency megaloblastic anemia (already covered) in both underlying mechanism and red blood cell morphology (microcytic vs. macrocytic, already implicit in existing Anemia content)." },
+    ],
+    memorizeIt: [
+      "B12 deficiency: oral high-dose OR IM injection. INJECTION specifically required in pernicious anemia (already covered) given impaired intestinal absorption from intrinsic factor deficiency.",
+      "Vitamin D replacement: bone health (already relevant to Fat-Soluble Vitamin content).",
+      "Iron replacement (oral ferrous sulfate, or IV for severe/malabsorption): treats iron-deficiency anemia — distinct mechanism/morphology from B12/folate megaloblastic anemia (already covered).",
+    ],
+    applyIt: [
+      "This gives you the specific replacement therapy approach directly extending your existing Anemia content — recognizing that pernicious anemia's underlying mechanism (impaired intrinsic-factor-dependent B12 absorption, already covered) specifically necessitates injectable rather than oral B12 replacement is a genuinely important treatment-selection principle, since simply increasing an oral dose would not overcome the absorption defect itself.",
+    ],
+  },
+  "syspharmindications-cyp450": {
+    name: "CYP450-Mediated Drug Interactions — Inducers & Inhibitors",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "CYP450 enzyme induction and inhibition represent a genuine, high-yield drug interaction mechanism directly extending your existing ADME/metabolism content (this area's sibling General Principles objective) with clinically important prescribing safety implications." },
+      { h: "Enzyme inducers — reduced drug efficacy", t: "CYP450 INDUCERS (certain anticonvulsants like carbamazepine, already covered under this area's sibling CNS Drugs objective, and rifampin) increase the enzyme's activity/quantity, ACCELERATING the metabolism of other co-administered drugs metabolized by the same pathway — this can reduce the effective drug level and therapeutic efficacy of a co-administered medication, a genuinely important interaction risk (e.g., reduced efficacy of hormonal contraceptives or warfarin, already covered, when combined with an enzyme-inducing drug)." },
+      { h: "Enzyme inhibitors — increased toxicity risk", t: "CYP450 INHIBITORS (certain antifungals, some antibiotics) block the enzyme's activity, SLOWING the metabolism of co-administered drugs sharing the same pathway — this can cause drug accumulation and increased toxicity risk, particularly dangerous when combined with a narrow-therapeutic-index drug (warfarin, already covered under this area's sibling General Principles objective) where even modest level increases can cause clinically significant toxicity." },
+    ],
+    memorizeIt: [
+      "CYP450 INDUCERS (carbamazepine, rifampin): accelerate metabolism of co-administered drugs → REDUCED efficacy of the other drug.",
+      "CYP450 INHIBITORS (certain antifungals/antibiotics): slow metabolism of co-administered drugs → INCREASED toxicity risk of the other drug.",
+      "Particularly dangerous with narrow-therapeutic-index drugs (warfarin, already covered) — even modest level changes can cause significant clinical effect.",
+    ],
+    applyIt: [
+      "This gives you the mechanistic completion of your existing ADME/Pharmacokinetics content (this area's sibling General Principles objective) — a patient on warfarin (already covered as a narrow-therapeutic-index drug) who starts a CYP450-inhibiting antibiotic is at genuine risk for warfarin toxicity/bleeding from reduced warfarin metabolism, while starting a CYP450-inducing anticonvulsant could paradoxically reduce warfarin's anticoagulant effect, both requiring careful INR monitoring and potential dose adjustment when such interacting medications are introduced.",
+    ],
+  },
+  "syspharmpregnancy-teratogen": {
+    name: "Teratogenic Risk & Pregnancy Drug Safety Categories",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Teratogenic risk assessment directly extends your existing Doxycycline Contraindications — Pregnancy & Childhood content into a broader framework for evaluating and counseling on medication safety during pregnancy." },
+      { h: "Critical periods of organogenesis", t: "The FIRST TRIMESTER (particularly weeks 3-8 of gestation) represents the period of greatest teratogenic vulnerability, since this is when organogenesis (formation of major organ systems) occurs — teratogenic exposure during this window carries the highest risk of major structural anomalies, while exposure later in pregnancy (after organs have largely formed) more typically affects growth or functional maturation rather than causing structural malformation." },
+      { h: "Doxycycline as a concrete example", t: "Doxycycline's teratogenic mechanism (already covered) — binding developing fetal bone and teeth, causing bone growth inhibition and permanent tooth discoloration — illustrates the general teratogenic risk-assessment principle: identifying which fetal tissues are actively developing/mineralizing during the exposure window explains and predicts which specific structural effects can occur, a framework applicable to evaluating any medication's pregnancy safety profile." },
+    ],
+    memorizeIt: [
+      "First trimester (weeks 3-8): period of greatest teratogenic vulnerability — organogenesis, highest risk of major structural anomalies.",
+      "Later pregnancy exposure: more likely affects growth/functional maturation rather than structural malformation.",
+      "Doxycycline (already covered): concrete example — teratogenic effect (bone/tooth binding) directly reflects which fetal tissues are actively mineralizing during exposure.",
+    ],
+    applyIt: [
+      "This gives you the general teratogenic risk-assessment framework directly extending your existing Doxycycline Contraindications — Pregnancy & Childhood content — understanding WHY doxycycline specifically affects bone and teeth (active mineralization during exposure) illustrates the broader principle that a teratogen's specific effects are predictable from which fetal structures are actively developing during the exposure window, a framework applicable when counseling on any other medication's pregnancy safety.",
+    ],
+  },
+  "syspharmpregnancy-breastfeeding": {
+    name: "Drug Transfer into Breast Milk — Principles",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Drug transfer into breast milk depends on specific physicochemical drug properties, extending your existing Doxycycline Contraindications content's teratogenicity framework into a genuinely distinct but related breastfeeding-safety consideration." },
+      { h: "Properties favoring transfer into breast milk", t: "Drugs with HIGH lipophilicity, LOW plasma protein binding, LOW molecular weight, and a basic (rather than acidic) pH relative to plasma tend to transfer more readily into breast milk — since breast milk is slightly more acidic than plasma, basic drugs become ionized and 'trapped' within the milk compartment (ion trapping), concentrating there relative to plasma." },
+      { h: "Clinical counseling framework", t: "Understanding these properties allows a general risk framework for breastfeeding drug safety counseling — a highly protein-bound, water-soluble, large-molecule, acidic drug is generally LESS likely to transfer significantly into breast milk than a lipophilic, minimally-protein-bound, small, basic drug — though individual drug-specific data (rather than these general principles alone) should guide actual clinical counseling given the genuine variability and stakes involved." },
+    ],
+    memorizeIt: [
+      "Properties favoring breast milk transfer: HIGH lipophilicity, LOW protein binding, LOW molecular weight, BASIC pH (ion trapping in slightly acidic milk).",
+      "Properties favoring LOWER transfer: high protein binding, water solubility, large molecular weight, acidic pH.",
+      "General principles guide risk assessment, but individual drug-specific safety data should guide actual clinical counseling given the stakes involved.",
+    ],
+    applyIt: [
+      "This gives you the physicochemical framework for breastfeeding drug safety, genuinely complementary to but distinct from your existing Doxycycline Contraindications — Pregnancy & Childhood content's teratogenicity principles — while pregnancy risk depends on fetal tissue development timing (this area's sibling objective), breastfeeding risk depends on these specific drug transfer properties, meaning a medication could carry different risk profiles across pregnancy versus lactation, each requiring its own specific safety assessment.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -16240,6 +16838,34 @@ const FLASHCARDS = [
   { id: "fc-1362", objectiveId: "glaupharm-hyperosmotic-acute", front: "How do systemic hyperosmotic agents (mannitol/glycerin) lower IOP in acute angle-closure glaucoma?", back: "They draw fluid out of the vitreous cavity, shrinking vitreous volume and pulling the lens-iris diaphragm posteriorly to help relieve angle crowding." },
   { id: "fc-1363", objectiveId: "glaupharm-mydriatic-contraindication", front: "What should be flagged in the chart of a patient with known narrow/occludable angles?", back: "The angle status, so future dilation decisions for any purpose account for this documented risk." },
   { id: "fc-1364", objectiveId: "glaupharm-sulfa-allergy", front: "What drug class shares sulfonamide structure with sulfa antibiotics, requiring allergy screening?", back: "Carbonic anhydrase inhibitors (topical dorzolamide/brinzolamide, oral acetazolamide)." },
+  { id: "fc-1365", objectiveId: "syspharmgen-adme", front: "What does ADME stand for?", back: "Absorption, Distribution, Metabolism, Excretion." },
+  { id: "fc-1366", objectiveId: "syspharmgen-adme", front: "Why does IV administration bypass first-pass metabolism while oral does not?", back: "Oral drugs are absorbed into the portal circulation and pass through the liver before reaching systemic circulation; IV drugs enter systemic circulation directly." },
+  { id: "fc-1367", objectiveId: "syspharmgen-pd", front: "Distinguish potency from efficacy.", back: "Potency = dose needed for a given effect. Efficacy = maximum achievable effect. A less potent drug can still have equal/greater efficacy." },
+  { id: "fc-1368", objectiveId: "syspharmans-cholinergic", front: "What receptor type does myasthenia gravis affect, and where?", back: "Nicotinic receptors at the postsynaptic neuromuscular junction." },
+  { id: "fc-1369", objectiveId: "syspharmans-adrenergic", front: "Which adrenergic receptor does timolol block, and why does this contraindicate it in asthma?", back: "Beta-2 — the same receptor subtype that mediates bronchodilation when activated." },
+  { id: "fc-1370", objectiveId: "syspharmautacoid-histamine-serotonin", front: "What is the key distinguishing feature of autacoids compared to classic hormones/neurotransmitters?", back: "They are locally-acting signaling molecules (histamine, serotonin, prostaglandins, bradykinin)." },
+  { id: "fc-1371", objectiveId: "syspharmresp-bronchodilators", front: "Contrast the mechanism of ipratropium with albuterol.", back: "Ipratropium: blocks muscarinic receptors (anticholinergic). Albuterol: activates beta-2 receptors (adrenergic agonist)." },
+  { id: "fc-1372", objectiveId: "syspharmresp-steroids", front: "What is the key functional difference between inhaled corticosteroids and rescue bronchodilators?", back: "Inhaled corticosteroids are controller therapy reducing chronic inflammation; bronchodilators provide acute symptomatic relief." },
+  { id: "fc-1373", objectiveId: "syspharmgi-acid-suppression", front: "Why are PPIs generally more potent acid suppressants than H2 blockers?", back: "PPIs block the final common pathway (H+/K+-ATPase) regardless of trigger; H2 blockers only block one of three upstream pathways (histamine)." },
+  { id: "fc-1374", objectiveId: "syspharmgi-antiemetics", front: "What mechanism do osmotic laxatives share with systemic hyperosmotic glaucoma agents?", back: "Both use an osmotic gradient to draw fluid into/out of a compartment (bowel lumen vs. vitreous cavity)." },
+  { id: "fc-1375", objectiveId: "syspharmchemo-cellcycle", front: "In what cell cycle phase do antimetabolites (e.g., methotrexate) act, and mitotic inhibitors?", back: "Antimetabolites: S-phase. Mitotic inhibitors: M-phase." },
+  { id: "fc-1376", objectiveId: "syspharmimmuno-calcineurin-biologics", front: "What is the systemic use of calcineurin inhibitors beyond topical dry eye/uveitis treatment?", back: "Preventing solid organ transplant rejection and treating severe systemic autoimmune disease." },
+  { id: "fc-1377", objectiveId: "syspharmantiinflamm-cox", front: "Why do selective COX-2 inhibitors carry increased cardiovascular risk despite reduced GI risk?", back: "Sparing COX-1 preserves gastric protection but shifts the platelet aggregation balance without corresponding thromboxane inhibition." },
+  { id: "fc-1378", objectiveId: "syspharmcns-antidep-antipsych", front: "Why can tricyclic antidepressants worsen both dry eye and angle-closure risk?", back: "Their significant anticholinergic activity reduces tear production and can precipitate angle closure via a mydriatic effect in narrow-angle patients." },
+  { id: "fc-1379", objectiveId: "syspharmcns-anticonvulsant", front: "What two distinct mechanistic strategies do anticonvulsants use to reduce seizure activity?", back: "Blocking voltage-gated sodium channels (reduce excitatory firing) or enhancing GABA receptor activity (increase inhibitory tone)." },
+  { id: "fc-1380", objectiveId: "syspharmanesthetic-local", front: "What determines whether a local anesthetic is classified as an ester or an amide, and why does it matter clinically?", back: "Chemical linkage structure; esters (metabolized by plasma cholinesterases) carry higher allergy risk than amides (metabolized hepatically)." },
+  { id: "fc-1381", objectiveId: "syspharmanesthetic-general", front: "What are the four components of balanced general anesthesia?", back: "IV induction agent, inhalational maintenance agent, opioid analgesic, and neuromuscular blocking agent." },
+  { id: "fc-1382", objectiveId: "syspharmendo-diabetes", front: "What is metformin's primary mechanism, and how does it differ from sulfonylureas?", back: "Metformin reduces hepatic glucose output; sulfonylureas stimulate pancreatic insulin secretion (higher hypoglycemia risk)." },
+  { id: "fc-1383", objectiveId: "syspharmendo-thyroid-steroid", front: "Why can thyroid eye disease persist despite successfully normalizing thyroid hormone levels with methimazole?", back: "Methimazole treats the hyperthyroidism but does not directly treat the autoimmune orbital inflammation driving thyroid eye disease." },
+  { id: "fc-1384", objectiveId: "syspharmendo-thyroid-steroid", front: "Why must chronic systemic corticosteroids be tapered rather than abruptly stopped?", back: "Chronic use suppresses the HPA axis; abrupt discontinuation can precipitate adrenal insufficiency since endogenous cortisol production cannot immediately resume." },
+  { id: "fc-1385", objectiveId: "syspharmcardio-antihypertensive", front: "Why are ACE inhibitors/ARBs specifically renoprotective in diabetic nephropathy?", back: "They cause efferent arteriolar dilation, reducing intraglomerular pressure." },
+  { id: "fc-1386", objectiveId: "syspharmcardio-anticoag", front: "Contrast warfarin and DOACs in mechanism and monitoring requirement.", back: "Warfarin: inhibits vitamin K-dependent clotting factors, requires INR monitoring. DOACs: direct factor Xa/thrombin inhibitors, no routine monitoring." },
+  { id: "fc-1387", objectiveId: "syspharmrenal-diuretics", front: "Which diuretic class is most potent, and at what renal site does it act?", back: "Loop diuretics (furosemide), at the thick ascending loop of Henle." },
+  { id: "fc-1388", objectiveId: "syspharmrenal-diuretics", front: "What diuretic mechanism does acetazolamide share between its systemic and glaucoma uses?", back: "Carbonic anhydrase inhibition — identical mechanism whether acting at the proximal renal tubule (diuresis) or the ciliary body (reduced aqueous production)." },
+  { id: "fc-1389", objectiveId: "syspharmnutrition-deficiency", front: "Why must pernicious anemia be treated with injectable rather than oral B12?", back: "Pernicious anemia involves impaired intestinal B12 absorption from intrinsic factor deficiency, so oral supplementation would be poorly absorbed regardless of dose." },
+  { id: "fc-1390", objectiveId: "syspharmindications-cyp450", front: "What is the clinical risk of combining a CYP450 inhibitor with warfarin?", back: "Slowed warfarin metabolism causes drug accumulation, increasing bleeding/toxicity risk given warfarin's narrow therapeutic index." },
+  { id: "fc-1391", objectiveId: "syspharmpregnancy-teratogen", front: "Why is the first trimester (weeks 3-8) the period of greatest teratogenic risk?", back: "This is when organogenesis occurs — exposure during this window carries the highest risk of major structural anomalies." },
+  { id: "fc-1392", objectiveId: "syspharmpregnancy-breastfeeding", front: "List four drug properties that favor transfer into breast milk.", back: "High lipophilicity, low protein binding, low molecular weight, and basic pH (ion trapping in the more acidic milk)." },
 ];
 
 const QUESTIONS = [
@@ -21409,6 +22035,57 @@ const QUESTIONS = [
       b: "Correct — IV mannitol creates an osmotic gradient drawing fluid out of the vitreous cavity, shrinking vitreous volume and helping relieve pupillary block, rapidly lowering dangerously elevated IOP as an emergency bridge to definitive laser treatment.",
       c: "Incorrect — mannitol's mechanism involves osmotic vitreous volume reduction, not direct trabecular meshwork outflow enhancement like miotics.",
       d: "Incorrect — systemic hyperosmotic therapy produces a genuine, rapid IOP reduction, which is precisely why it is used in this emergency scenario.",
+    },
+  },
+  {
+    id: "q-305", objectiveId: "syspharmgi-acid-suppression", type: "Applied concept", difficulty: "Medium",
+    stem: "Why do proton pump inhibitors generally provide more complete gastric acid suppression than H2 blockers?",
+    choices: [
+      { id: "a", text: "PPIs block only the histamine pathway, which is the sole driver of acid secretion" },
+      { id: "b", text: "PPIs irreversibly inhibit the H+/K+-ATPase, the final common pathway for acid secretion regardless of which upstream signal (ACh, gastrin, or histamine) triggered it, while H2 blockers only block the histamine pathway" },
+      { id: "c", text: "H2 blockers work at a later step than PPIs in the acid secretion pathway" },
+      { id: "d", text: "There is no meaningful difference in acid suppression between the two drug classes" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — histamine is only one of three upstream pathways (along with ACh and gastrin) driving acid secretion, and H2 blockers, not PPIs, target this single pathway.",
+      b: "Correct — PPIs act at the final common pathway (the proton pump itself), blocking acid secretion regardless of which upstream signal triggered it, while H2 blockers only interrupt one of the three upstream stimulatory pathways, leaving the other two able to still stimulate acid secretion.",
+      c: "Incorrect — PPIs act LATER in the pathway (at the final pump) than H2 blockers, not earlier.",
+      d: "Incorrect — this mechanistic difference produces a genuine, clinically significant difference in acid-suppressing potency between the two classes.",
+    },
+  },
+  {
+    id: "q-306", objectiveId: "syspharmendo-thyroid-steroid", type: "Clinical application", difficulty: "Medium",
+    stem: "A patient with Graves' disease achieves normal thyroid hormone levels on methimazole but continues to have progressive proptosis and orbital inflammation. What does this indicate?",
+    choices: [
+      { id: "a", text: "Methimazole is not working and the dose should be increased indefinitely" },
+      { id: "b", text: "Thyroid eye disease's autoimmune orbital inflammation is a separate process from the thyroid hormone abnormality and is not directly treated by methimazole" },
+      { id: "c", text: "This finding means the patient never actually had Graves' disease" },
+      { id: "d", text: "Normalizing thyroid hormone levels always fully resolves thyroid eye disease" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — the thyroid hormone levels are already normalized, indicating methimazole IS working for its intended purpose (thyroid hormone control), not that the dose needs escalation.",
+      b: "Correct — thyroid eye disease's autoimmune orbital inflammation is a distinct process from the thyroid hormone abnormality itself; methimazole treats hyperthyroidism but does not directly treat the orbital autoimmune process, which can persist or even transiently worsen despite normalized thyroid hormone levels.",
+      c: "Incorrect — persistent orbital findings despite thyroid hormone normalization is a recognized, expected pattern in Graves'-associated thyroid eye disease, not evidence against the original diagnosis.",
+      d: "Incorrect — this is precisely the misconception this scenario illustrates; thyroid hormone normalization does not guarantee resolution of the orbital autoimmune inflammation.",
+    },
+  },
+  {
+    id: "q-307", objectiveId: "syspharmindications-cyp450", type: "Applied concept", difficulty: "Hard",
+    stem: "A patient stable on warfarin starts a new antibiotic that is a CYP450 inhibitor. What is the most likely clinical consequence, and why?",
+    choices: [
+      { id: "a", text: "Reduced warfarin effect, requiring a dose increase" },
+      { id: "b", text: "Increased warfarin levels and bleeding risk, since CYP450 inhibition slows warfarin metabolism, requiring closer INR monitoring and possible dose reduction" },
+      { id: "c", text: "No interaction, since antibiotics never affect CYP450 metabolism" },
+      { id: "d", text: "The antibiotic's own effect will be reduced by warfarin" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — a CYP450 inhibitor slows (not accelerates) warfarin metabolism, increasing rather than reducing its effect.",
+      b: "Correct — CYP450 inhibition slows the metabolism of co-administered drugs sharing the same pathway, including warfarin; given warfarin's narrow therapeutic index, this can cause clinically significant drug accumulation and increased bleeding risk, requiring closer INR monitoring and possible dose adjustment.",
+      c: "Incorrect — several antibiotic classes are well-documented CYP450 inhibitors with clinically significant interaction potential.",
+      d: "Incorrect — this question concerns the antibiotic's effect on warfarin metabolism, not the reverse; warfarin does not characteristically reduce this antibiotic's effect.",
     },
   },
 ];
