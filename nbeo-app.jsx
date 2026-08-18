@@ -651,6 +651,50 @@ const MOTIONPERCEP_OBJECTIVES = [
   { id: "motion-aftereffects", name: "Motion Aftereffects & Clinical Relevance", built: true },
 ];
 
+const ACQUIREDPERC_TOPIC_ID = "t-6-0-0"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Anomalies secondary to acquired neurological impairment(0)
+// Ties directly into existing Cerebral Blood Supply/Stroke Syndromes and
+// Cerebrum (visual cortex, FEF) content — higher-order visual perceptual
+// deficits from cortical damage beyond primary visual cortex.
+const ACQUIREDPERC_OBJECTIVES = [
+  { id: "acquiredperc-agnosia", name: "Visual Agnosia — Apperceptive vs. Associative", built: true },
+  { id: "acquiredperc-balint-anton", name: "Balint Syndrome, Anton Syndrome & Simultanagnosia", built: true },
+];
+
+const TEMPORALPERC_TOPIC_ID = "t-6-0-5"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Temporal perception(5)
+// Distinct from Light Perception's spatial/temporal summation (Bloch's law,
+// already covered) — this covers flicker fusion and temporal contrast
+// sensitivity specifically.
+const TEMPORALPERC_OBJECTIVES = [
+  { id: "temporalperc-cff", name: "Critical Flicker Fusion (CFF) Frequency", built: true },
+  { id: "temporalperc-tcsf", name: "Temporal Contrast Sensitivity & Persistence of Vision", built: true },
+];
+
+const ENTOPTIC_TOPIC_ID = "t-6-0-6"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Entopic phenomena(6)
+const ENTOPTIC_OBJECTIVES = [
+  { id: "entoptic-phenomena-types", name: "Entoptic Phenomena — Purkinje Tree, Blue-Field Entoptoscopy & Haidinger's Brush", built: true },
+  { id: "entoptic-clinical-uses", name: "Clinical Uses of Entoptic Phenomena for Macular Function Testing", built: true },
+];
+
+const PSYCHOPHYSMETHODS_TOPIC_ID = "t-6-0-8"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Basic psychophysical methods and theory(8)
+const PSYCHOPHYSMETHODS_OBJECTIVES = [
+  { id: "psychophysmethods-classic", name: "Classic Psychophysical Methods — Limits, Constant Stimuli, Adjustment", built: true },
+  { id: "psychophysmethods-thresholds", name: "Threshold Concepts — Absolute & Difference Thresholds", built: true },
+];
+
+const PSYCHOPHYSSCALING_TOPIC_ID = "t-6-0-9"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Psychophysical scaling methods and theory(9)
+const PSYCHOPHYSSCALING_OBJECTIVES = [
+  { id: "psychophysscaling-methods", name: "Magnitude Estimation & Stevens' Power Law", built: true },
+  { id: "psychophysscaling-clinical", name: "Clinical Application — Rating Scales & Contrast Sensitivity Scaling", built: true },
+];
+
+const SIGNALDETECT_TOPIC_ID = "t-6-0-10"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Signal detection methods and theory(10)
+// Directly extends existing Visual Field Defect Localization content — the
+// psychometric framework behind automated perimetry's reliability indices.
+const SIGNALDETECT_OBJECTIVES = [
+  { id: "sdt-theory", name: "Signal Detection Theory — Sensitivity (d′) vs. Response Criterion", built: true },
+  { id: "sdt-application", name: "Signal Detection Theory Applied to Automated Perimetry", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -1635,6 +1679,9 @@ const TOPIC_OBJECTIVES = {
   [LENSPHYSCHAR_TOPIC_ID]: LENSPHYSCHAR_OBJECTIVES, [FRAMEMAT_TOPIC_ID]: FRAMEMAT_OBJECTIVES,
   [ABSORPTIVE_TOPIC_ID]: ABSORPTIVE_OBJECTIVES, [OPTTOLERANCE_TOPIC_ID]: OPTTOLERANCE_OBJECTIVES,
   [CLINDICATIONS_TOPIC_ID]: CLINDICATIONS_OBJECTIVES,
+  [ACQUIREDPERC_TOPIC_ID]: ACQUIREDPERC_OBJECTIVES, [TEMPORALPERC_TOPIC_ID]: TEMPORALPERC_OBJECTIVES,
+  [ENTOPTIC_TOPIC_ID]: ENTOPTIC_OBJECTIVES, [PSYCHOPHYSMETHODS_TOPIC_ID]: PSYCHOPHYSMETHODS_OBJECTIVES,
+  [PSYCHOPHYSSCALING_TOPIC_ID]: PSYCHOPHYSSCALING_OBJECTIVES, [SIGNALDETECT_TOPIC_ID]: SIGNALDETECT_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -1784,6 +1831,12 @@ const CONTENT_TOPICS = [
   { topicId: ABSORPTIVE_TOPIC_ID, name: "Absorptive Lenses — Transmittance & Photochromics", objectives: ABSORPTIVE_OBJECTIVES },
   { topicId: OPTTOLERANCE_TOPIC_ID, name: "Optical Tolerances & Regulatory Standards", objectives: OPTTOLERANCE_OBJECTIVES },
   { topicId: CLINDICATIONS_TOPIC_ID, name: "Contact Lens Solution Adverse Reactions & Interactions", objectives: CLINDICATIONS_OBJECTIVES },
+  { topicId: ACQUIREDPERC_TOPIC_ID, name: "Perceptual Anomalies from Acquired Neurological Impairment", objectives: ACQUIREDPERC_OBJECTIVES },
+  { topicId: TEMPORALPERC_TOPIC_ID, name: "Temporal Perception", objectives: TEMPORALPERC_OBJECTIVES },
+  { topicId: ENTOPTIC_TOPIC_ID, name: "Entopic Phenomena", objectives: ENTOPTIC_OBJECTIVES },
+  { topicId: PSYCHOPHYSMETHODS_TOPIC_ID, name: "Basic Psychophysical Methods & Theory", objectives: PSYCHOPHYSMETHODS_OBJECTIVES },
+  { topicId: PSYCHOPHYSSCALING_TOPIC_ID, name: "Psychophysical Scaling Methods & Theory", objectives: PSYCHOPHYSSCALING_OBJECTIVES },
+  { topicId: SIGNALDETECT_TOPIC_ID, name: "Signal Detection Methods & Theory", objectives: SIGNALDETECT_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -10825,6 +10878,255 @@ const STUDY_PAGES = {
       "This extends your existing Tear Film & Lacrimal Physiology and Contact Lens Complications content by adding the systemic-medication branch of the differential diagnosis for new-onset lens intolerance — a patient recently started on an anticholinergic antidepressant or oral isotretinoin who develops new contact lens discomfort is demonstrating a medication-induced tear film change, not necessarily a lens-fit or solution problem, changing the appropriate clinical next step from a refit to a medication history review and dry-eye management already covered elsewhere.",
     ],
   },
+  "acquiredperc-agnosia": {
+    name: "Visual Agnosia — Apperceptive vs. Associative",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard neuro-ophthalmology/visual perception references"],
+    learnIt: [
+      { h: "Overview", t: "Visual agnosia is the inability to recognize visually presented objects despite intact elementary vision (acuity, visual fields, color vision) and intact recognition through other senses (e.g., recognizing an object by touch or sound) — a genuinely distinct higher-order deficit from the visual field and acuity loss already covered under Cerebral Blood Supply's stroke syndromes." },
+      { h: "Apperceptive agnosia", t: "In apperceptive agnosia, the brain fails at the earlier stage of assembling basic visual elements (edges, contours) into a coherent whole percept — the patient cannot copy, match, or discriminate simple shapes despite adequate elementary vision, typically from diffuse or bilateral occipital/occipitoparietal damage; this reflects a failure of perceptual construction itself, not just naming." },
+      { h: "Associative agnosia", t: "In associative agnosia, perceptual construction is intact (the patient CAN accurately copy a drawing of an object) but the patient cannot assign meaning to what they perceive — they cannot name the object, state its use, or recognize it as familiar, despite successfully copying its exact form; this typically results from more anterior, ventral temporo-occipital damage along the visual 'what' (object recognition) processing pathway, distinct from the dorsal 'where' pathway already implicated in Balint syndrome." },
+      { h: "Localizing value", t: "The apperceptive-vs-associative distinction has genuine lesion-localizing value: apperceptive agnosia points toward more posterior/bilateral occipital damage, while associative agnosia points toward more anterior temporo-occipital damage — extending the localization framework already established under Cerebral Blood Supply's PCA/MCA/ACA territory content." },
+    ],
+    memorizeIt: [
+      "Visual agnosia = failure to recognize objects visually despite intact elementary vision AND intact recognition via other senses (touch, sound).",
+      "Apperceptive agnosia: cannot even COPY/match shapes — failure of perceptual construction itself; diffuse/bilateral occipital damage.",
+      "Associative agnosia: CAN copy the shape accurately, but cannot name/recognize its meaning — failure of meaning assignment; anterior temporo-occipital ('what' pathway) damage.",
+      "Key bedside test to distinguish them: ask the patient to COPY a drawing of the object — apperceptive agnosia fails this, associative agnosia succeeds but still can't identify the object.",
+    ],
+    applyIt: [
+      "This extends your existing Cerebral Blood Supply & Stroke Syndromes content with a higher-order perceptual deficit category beyond simple visual field loss — a stroke patient with normal visual fields and acuity who nonetheless cannot recognize common objects is demonstrating a 'what' pathway processing deficit, and the copy-drawing bedside test gives you a practical way to localize apperceptive (posterior/bilateral) vs. associative (anterior temporo-occipital) damage.",
+    ],
+  },
+  "acquiredperc-balint-anton": {
+    name: "Balint Syndrome, Anton Syndrome & Simultanagnosia",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard neuro-ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "Balint syndrome and Anton syndrome are two classic, high-yield cortical visual perceptual syndromes from bilateral occipitoparietal and bilateral occipital damage respectively, each with a distinctive clinical triad/presentation extending your existing Cerebrum (Frontal Eye Fields) and Pupillary Pathway content." },
+      { h: "Balint syndrome — the triad", t: "Balint syndrome results from bilateral parieto-occipital damage (classically bilateral watershed/border-zone infarcts) and produces a triad: (1) simultanagnosia — the inability to perceive more than one object or the whole visual scene at once, despite being able to identify individual elements in isolation; (2) optic ataxia — inability to visually guide reaching/pointing toward an object despite adequate motor strength; (3) oculomotor apraxia — inability to voluntarily direct gaze toward a target on command, despite intact reflexive eye movements — this contrasts directly with the VOLUNTARY gaze control already covered under Frontal Eye Fields, since Balint syndrome selectively impairs voluntary, visually-guided gaze while sparing reflexive tracking." },
+      { h: "Anton syndrome", t: "Anton syndrome results from bilateral occipital lobe damage (bilateral PCA territory infarcts, extending existing Stroke Syndromes content) causing cortical blindness combined with anosognosia — the patient denies being blind and often confabulates visual experiences (describing a room or objects that are not actually present), a striking and clinically important dissociation between actual visual function and the patient's own awareness of their deficit." },
+      { h: "Pupils are normal in both syndromes", t: "In both Balint and Anton syndrome, the pupillary light reflex remains NORMAL, since this reflex is mediated by a subcortical pathway (already established under Pupillary Pathway Clinical Testing) that does not depend on cortical visual processing — normal pupils in a seemingly blind patient is therefore a key finding supporting a cortical (rather than retinal or optic nerve) cause of vision loss." },
+    ],
+    memorizeIt: [
+      "Balint syndrome triad (bilateral parieto-occipital damage): simultanagnosia + optic ataxia + oculomotor apraxia.",
+      "Balint's oculomotor apraxia = impaired VOLUNTARY gaze (contrasts with Frontal Eye Fields' voluntary gaze content) with SPARED reflexive eye movements.",
+      "Anton syndrome (bilateral occipital/PCA infarcts): cortical blindness + anosognosia (denial of blindness) + confabulation of visual experiences.",
+      "Pupils are NORMAL in both syndromes — the pupillary light reflex is subcortically mediated (already covered), a key clue pointing to a cortical, not retinal/optic nerve, cause.",
+    ],
+    applyIt: [
+      "This gives you two genuinely high-yield, classic cortical syndromes that directly extend your existing Cerebral Blood Supply & Stroke Syndromes and Pupillary Pathway Clinical Testing content: a patient who appears blind but has entirely normal pupillary light reflexes and denies any visual deficit is demonstrating the exact pupil-sparing-cortical-lesion logic already established, now applied to Anton syndrome specifically as the classic clinical vignette.",
+    ],
+  },
+  "temporalperc-cff": {
+    name: "Critical Flicker Fusion (CFF) Frequency",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard visual psychophysics references"],
+    learnIt: [
+      { h: "Overview", t: "Critical flicker fusion (CFF) frequency is the rate at which an intermittently flickering light stimulus is perceived as steady, continuous illumination rather than discrete flicker — the temporal-resolution analog of the spatial resolution concept already covered under Visual Acuity Measurement & MAR." },
+      { h: "The Ferry-Porter law", t: "The Ferry-Porter law describes CFF's relationship to luminance: CFF increases approximately linearly with the LOGARITHM of stimulus luminance — brighter flickering stimuli require a higher flicker rate before they fuse into perceived steadiness, meaning a light that appears steady at a given flicker rate in dim conditions may appear to visibly flicker at that same rate under brighter conditions." },
+      { h: "Photopic vs. scotopic CFF", t: "Cone (photopic)-mediated CFF is substantially higher (roughly 50-60 Hz under bright, foveal viewing conditions) than rod (scotopic)-mediated CFF (roughly 15-20 Hz under dim, peripheral viewing conditions) — directly connecting to your existing Rod-Cone Differences & Adaptation Mechanisms content on the differing temporal properties of the two photoreceptor systems." },
+      { h: "Clinical relevance", t: "CFF is reduced in optic nerve conduction disease (e.g., optic neuritis/demyelination, already covered under Effects of Demyelination on Conduction, and glaucomatous optic neuropathy) — since CFF fundamentally depends on the temporal fidelity of optic nerve signal conduction, a reduced CFF threshold can serve as a psychophysical marker of subtle optic nerve dysfunction even before standard visual field or acuity deficits are apparent." },
+    ],
+    memorizeIt: [
+      "CFF = the flicker rate at which an intermittent light is perceived as steady rather than flickering — the temporal analog of spatial resolution (visual acuity).",
+      "Ferry-Porter law: CFF increases approximately linearly with the LOG of luminance — brighter stimuli need a faster flicker rate to appear fused/steady.",
+      "Photopic (cone) CFF ~50-60 Hz >> scotopic (rod) CFF ~15-20 Hz — extends existing Rod-Cone Differences content.",
+      "Reduced CFF is a psychophysical marker of optic nerve conduction dysfunction (optic neuritis, glaucoma) — extends existing Demyelination/Conduction content.",
+    ],
+    applyIt: [
+      "This gives you a genuinely testable psychophysical marker directly extending your existing Effects of Demyelination on Conduction content — since CFF depends on temporal fidelity of optic nerve conduction, a patient with a history of optic neuritis (already covered) may show reduced CFF as a subtle, quantifiable sign of residual demyelination-related conduction slowing even after visual acuity has recovered to normal.",
+    ],
+  },
+  "temporalperc-tcsf": {
+    name: "Temporal Contrast Sensitivity & Persistence of Vision",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard visual psychophysics references"],
+    learnIt: [
+      { h: "Overview", t: "The temporal contrast sensitivity function (TCSF) plots visual sensitivity to contrast as a function of temporal frequency (how fast a stimulus's contrast is modulated over time), the direct temporal analog of the spatial contrast sensitivity function already covered under Form Perception." },
+      { h: "TCSF shape", t: "Like the spatial CSF, the TCSF is bandpass-shaped (not simply monotonic) — sensitivity is relatively reduced at very low temporal frequencies (slow changes), peaks at an intermediate temporal frequency, then declines toward CFF (this topic's other objective) at high temporal frequencies, reflecting the visual system's specialization for detecting moderate-speed change over both very slow and very fast stimulus variation." },
+      { h: "Persistence of vision", t: "Persistence of vision (visible/neural persistence) refers to the continued perception of a brief visual stimulus for a short period after its physical removal — the perceptual basis exploited by motion pictures and video displays, where a rapid sequence of static frames is perceived as continuous motion (directly connecting to your existing Real & Apparent Motion Detection content) because each frame's percept persists long enough to visually bridge the gap to the next frame." },
+    ],
+    memorizeIt: [
+      "TCSF = sensitivity to contrast as a function of temporal frequency — the temporal analog of spatial CSF (already covered under Form Perception).",
+      "TCSF is bandpass-shaped: reduced sensitivity at very low AND very high temporal frequencies, peak sensitivity at an intermediate frequency.",
+      "Persistence of vision = brief continued perception of a stimulus after its physical removal — the perceptual basis of motion picture/video illusion.",
+      "Persistence of vision directly explains why a rapid sequence of static frames (already covered under Apparent Motion) is perceived as continuous, smooth motion.",
+    ],
+    applyIt: [
+      "This completes your existing Motion Perception content's mechanistic foundation — persistence of vision is precisely the perceptual bridging mechanism that makes the apparent-motion illusion (already covered under Real & Apparent Motion Detection) work, explaining WHY a sufficiently fast sequence of discrete static images is perceived as smooth continuous motion rather than a series of individual pictures.",
+    ],
+  },
+  "entoptic-phenomena-types": {
+    name: "Entoptic Phenomena — Purkinje Tree, Blue-Field Entoptoscopy & Haidinger's Brush",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard visual psychophysics/ophthalmic optics references"],
+    learnIt: [
+      { h: "Overview", t: "Entoptic phenomena are visual perceptions that arise from structures WITHIN the observer's own eye, rather than from external light stimuli in the visual scene — genuinely distinct from ordinary vision, and clinically useful precisely because they originate from specific ocular structures." },
+      { h: "The Purkinje tree (vascular shadow)", t: "The Purkinje tree is the shadow cast by the observer's own retinal blood vessels onto their own photoreceptors — normally imperceptible because the shadow's position on the retina stays constant during normal eye/light conditions, causing neural adaptation; it becomes visible when a light source is moved rapidly across the sclera (e.g., a penlight shone through the lower lid), shifting the vascular shadow's position and revealing the branching vessel pattern perceptually." },
+      { h: "Blue-field entoptoscopy", t: "When viewing a uniform bright blue field, an observer perceives tiny bright dots moving along curving paths, corresponding to individual white blood cells moving through the perifoveal retinal capillaries — the WBC's larger size and lack of hemoglobin allow more blue light through the capillary at that point compared to the more light-absorbing red-blood-cell-filled segments, making each passing leukocyte perceptible as a brief bright dot; the moving dots' visible paths directly trace the perifoveal capillary network." },
+      { h: "Haidinger's brush", t: "Haidinger's brush is a faint, bowtie or brush-shaped entoptic pattern perceived when viewing a uniform field of polarized blue light, arising from the radially-oriented, birefringent arrangement of macular xanthophyll (lutein/zeaxanthin) pigment — directly connecting to your existing Polarization content (Malus's law, already covered under Wave Optics), since the phenomenon depends specifically on the light's polarization interacting with this radially-structured macular pigment." },
+    ],
+    memorizeIt: [
+      "Entoptic phenomena = perceptions arising from structures WITHIN the observer's own eye, not from external visual stimuli.",
+      "Purkinje tree: shadow of the observer's own retinal vessels, revealed by moving a light source across the sclera (shifts the shadow position, defeating neural adaptation).",
+      "Blue-field entoptoscopy: moving bright dots = individual WBCs traversing perifoveal capillaries (visible against blue light due to WBCs' lower light absorption vs. RBCs).",
+      "Haidinger's brush: bowtie-shaped pattern seen in polarized blue light, from radially-arranged birefringent macular xanthophyll pigment — connects to existing Polarization content.",
+    ],
+    applyIt: [
+      "This gives you a genuinely distinct category of visual phenomena directly extending your existing Wave Optics (Polarization/Malus's law) content — Haidinger's brush is a direct clinical demonstration of polarized light interacting with a specific anatomic structure (radially-arranged macular pigment), the same physical principle already covered for polarized sunglass lenses, just applied intraocularly.",
+    ],
+  },
+  "entoptic-clinical-uses": {
+    name: "Clinical Uses of Entoptic Phenomena for Macular Function Testing",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard visual psychophysics/ophthalmic optics references"],
+    learnIt: [
+      { h: "Overview", t: "Entoptic phenomena have genuine clinical value as a way to assess macular and retinal function BEHIND a significant media opacity — such as a dense cataract or vitreous hemorrhage — that otherwise prevents standard visual acuity testing or direct fundus visualization, extending your existing Cataract Surgery and IOL Power Calculation content on predicting visual potential before surgery." },
+      { h: "Why this works despite media opacity", t: "Because blue-field entoptoscopy depends on light reaching the perifoveal retinal capillaries themselves, and Haidinger's brush depends on light reaching the macular xanthophyll pigment, a POSITIVE (perceived) entoptic phenomenon indicates that at least some light is successfully reaching and being processed by the macula — providing indirect but genuinely useful evidence that macular function is at least partially intact despite an opacity preventing direct visualization or standard acuity measurement." },
+      { h: "Predicting post-cataract-surgery visual potential", t: "A patient with a dense cataract who reports a positive Haidinger's brush or blue-field entoptoscopy response is more likely to achieve good visual acuity after cataract surgery (already covered), since the test demonstrates functioning macular photoreceptors and capillary perfusion independent of the lens opacity blocking the view — a genuinely practical pre-operative counseling and visual-potential-prediction tool distinct from other pre-op tests like potential acuity meters." },
+      { h: "Limitations", t: "A negative or absent entoptic response does not definitively rule out useful post-operative vision (the test can be difficult for some patients to perceive or describe even with normal macular function), so entoptic testing is best used as supportive evidence alongside other methods, not as a stand-alone definitive predictor." },
+    ],
+    memorizeIt: [
+      "Entoptic phenomena testing assesses macular/retinal function DESPITE a media opacity (dense cataract, vitreous hemorrhage) blocking direct visualization.",
+      "A POSITIVE Haidinger's brush or blue-field entoptoscopy response indicates light is reaching and being processed by the macula — supports intact macular function.",
+      "Clinically used to help predict post-cataract-surgery visual potential, extending existing Cataract Surgery content.",
+      "A negative response does NOT definitively rule out good visual potential — used as supportive evidence, not a stand-alone definitive predictor.",
+    ],
+    applyIt: [
+      "This gives you a genuinely practical pre-operative tool extending your existing Cataract Surgery and Congenital Cataract content — when a dense cataract precludes a view of the fundus or accurate acuity testing, a positive entoptic phenomenon response provides supportive evidence that surgery is likely to restore useful vision, an important counseling point distinct from purely structural pre-op assessments.",
+    ],
+  },
+  "psychophysmethods-classic": {
+    name: "Classic Psychophysical Methods — Limits, Constant Stimuli, Adjustment",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard visual psychophysics references"],
+    learnIt: [
+      { h: "Overview", t: "Classic psychophysical methods are the formal experimental procedures used to measure sensory thresholds, and understanding them clarifies the design logic behind clinical tests already covered on this platform, from perimetry to contrast sensitivity testing." },
+      { h: "Method of limits", t: "In the method of limits, stimulus intensity is systematically increased (ascending series) or decreased (descending series) in fixed steps until the observer's response changes (e.g., from 'not seen' to 'seen'), with the threshold estimated as the average crossover point across several ascending/descending runs — fast to administer, but susceptible to habituation (continuing to say 'not seen' out of anticipatory bias) and expectation errors." },
+      { h: "Method of constant stimuli", t: "In the method of constant stimuli, several FIXED stimulus intensity levels spanning the expected threshold range are presented repeatedly in random order, and the threshold is estimated statistically from the proportion of trials detected at each level — more accurate and free from the order-effects that bias the method of limits, though more time-consuming, and conceptually the basis for the randomized, staircase-based stimulus presentation strategy used in modern automated (Humphrey) perimetry, already covered under Visual Field Defect Localization." },
+      { h: "Method of adjustment", t: "In the method of adjustment, the OBSERVER directly and continuously adjusts the stimulus intensity themselves until it is just barely detectable (or just matches a reference) — the fastest of the three classic methods, but the most subjective, since it depends on the observer's own motor adjustment and judgment rather than a fixed, examiner-controlled stimulus sequence." },
+    ],
+    memorizeIt: [
+      "Method of limits: stimulus stepped up/down until response changes; fast but susceptible to habituation/anticipation bias.",
+      "Method of constant stimuli: fixed intensity levels presented repeatedly in random order; more accurate, basis for modern automated perimetry's randomized stimulus strategy.",
+      "Method of adjustment: observer directly adjusts the stimulus themselves until just detectable; fastest but most subjective.",
+      "These three classic methods represent the historical foundation for the threshold-estimation logic embedded in modern clinical psychophysical tests (perimetry, contrast sensitivity).",
+    ],
+    applyIt: [
+      "This gives you the historical methodological foundation directly underlying your existing Visual Field Defect Localization content — modern automated (Humphrey) perimetry's randomized, repeated stimulus presentation at threshold-range intensities is conceptually a refined, computerized descendant of the method of constant stimuli, explaining why perimetry avoids simply stepping stimulus brightness up or down in a predictable sequence.",
+    ],
+  },
+  "psychophysmethods-thresholds": {
+    name: "Threshold Concepts — Absolute & Difference Thresholds",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard visual psychophysics references"],
+    learnIt: [
+      { h: "Overview", t: "Two core threshold concepts underlie essentially all clinical psychophysical vision testing: the absolute threshold and the difference threshold, both of which are inherently statistical (probabilistic) rather than sharp, fixed cutoffs." },
+      { h: "Absolute threshold", t: "The absolute threshold is the minimum stimulus intensity detectable by convention 50% of the time across repeated presentations — NOT a fixed, all-or-nothing cutoff, since trial-to-trial neural and attentional variability means a given observer will sometimes detect and sometimes miss a stimulus right around their threshold; this probabilistic nature is exactly why automated perimetry (already covered) presents each test location multiple times / uses statistical modeling rather than a single presentation." },
+      { h: "Difference threshold (just noticeable difference)", t: "The difference threshold (just noticeable difference, JND) is the minimum detectable change in an already-suprathreshold stimulus needed for an observer to perceive a difference — directly connecting to your existing Weber's Law content (already covered under Light Detection Thresholds), since Weber's Law describes how the JND scales proportionally with baseline stimulus intensity." },
+      { h: "Clinical translation", t: "Both threshold concepts translate directly into clinical vision testing: visual field sensitivity testing measures the ABSOLUTE threshold at each retinal location (the dimmest light detectable there), while contrast sensitivity testing (already covered under Form Perception) measures a DIFFERENCE threshold — the minimum detectable contrast difference between a stimulus and its background." },
+    ],
+    memorizeIt: [
+      "Absolute threshold = minimum stimulus intensity detected 50% of the time — inherently probabilistic, not a fixed all-or-nothing cutoff.",
+      "Difference threshold (JND) = minimum detectable CHANGE in an already-suprathreshold stimulus — connects directly to existing Weber's Law content.",
+      "Visual field (perimetry) testing measures ABSOLUTE threshold at each location; contrast sensitivity testing measures a DIFFERENCE threshold.",
+      "The probabilistic nature of threshold explains why clinical psychophysical tests use repeated/statistical sampling rather than a single presentation.",
+    ],
+    applyIt: [
+      "This gives you the underlying statistical logic for two clinical tests already covered elsewhere on this platform — visual field sensitivity testing (absolute threshold, already covered under Visual Field Defect Localization) and contrast sensitivity testing (difference threshold, already covered under Form Perception) are measuring two conceptually distinct types of threshold, explaining why a patient can have a normal visual field but an abnormal contrast sensitivity function, or vice versa.",
+    ],
+  },
+  "psychophysscaling-methods": {
+    name: "Magnitude Estimation & Stevens' Power Law",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard visual psychophysics references"],
+    learnIt: [
+      { h: "Overview", t: "Psychophysical scaling methods go beyond simply detecting a threshold (this topic's sibling objectives) to quantify how perceived magnitude grows as stimulus intensity increases well ABOVE threshold — directly complementing your existing Weber's Law content, which describes threshold-level discrimination rather than suprathreshold perceived magnitude." },
+      { h: "Magnitude estimation", t: "In magnitude estimation, an observer directly assigns numbers proportional to their perceived sensation intensity (e.g., 'rate how bright this looks on a scale, where a reference stimulus = 10') across a range of suprathreshold stimulus intensities, generating a direct numerical map of perceived magnitude vs. physical stimulus intensity." },
+      { h: "Stevens' power law", t: "Stevens' power law (ψ = kIⁿ, where ψ is perceived magnitude, I is stimulus intensity, and n is a modality-specific exponent) describes the relationship revealed by magnitude estimation data — for brightness, the exponent n is less than 1 (perceived brightness grows more slowly than physical intensity, a compressive relationship), while for some other sensory modalities (e.g., perceived intensity of electric shock) n is greater than 1 (an expansive relationship) — this contrasts with the older Fechner's law (perceived magnitude proportional to the LOGARITHM of stimulus intensity, the classical derivation from Weber's Law already covered), with Stevens' power law generally regarded as fitting a broader range of suprathreshold magnitude-estimation data more accurately." },
+    ],
+    memorizeIt: [
+      "Magnitude estimation: observer directly assigns numbers proportional to perceived sensation intensity for suprathreshold stimuli.",
+      "Stevens' power law: ψ = kIⁿ — perceived magnitude is a POWER function of stimulus intensity, with a modality-specific exponent n.",
+      "For brightness, n < 1 (compressive: perceived magnitude grows more slowly than physical intensity).",
+      "Contrasts with Fechner's (logarithmic) law, the classical derivation from Weber's Law (already covered) — Stevens' power law generally fits suprathreshold magnitude data more accurately.",
+    ],
+    applyIt: [
+      "This extends your existing Light Detection Thresholds & Weber's Law content by adding the suprathreshold (above-threshold) scaling relationship — while Weber's Law and Fechner's law describe threshold-level discrimination and its logarithmic implications, Stevens' power law describes how perceived brightness continues to scale (in a compressive, sub-linear fashion) as light intensity increases well beyond the detection threshold.",
+    ],
+  },
+  "psychophysscaling-clinical": {
+    name: "Clinical Application — Rating Scales & Contrast Sensitivity Scaling",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard visual psychophysics references"],
+    learnIt: [
+      { h: "Overview", t: "Psychophysical scaling principles underlie multiple clinical measurement tools already used across this platform's content, from patient-reported symptom scales to the logarithmic design of standard visual charts." },
+      { h: "Logarithmic clinical scales", t: "Because perceived magnitude scales non-linearly with physical stimulus intensity (as established under Stevens' and Fechner's laws), several standard clinical vision measurements are deliberately constructed on a LOGARITHMIC scale rather than a linear one — the logMAR visual acuity scale (already covered under Visual Acuity Measurement & MAR) and the log-unit steps of standard contrast sensitivity charts (already covered under Contrast Sensitivity Function) both reflect this psychophysical scaling principle, ensuring equal perceptual steps between chart levels rather than equal physical steps." },
+      { h: "Patient-reported symptom scales", t: "Clinical symptom rating scales (e.g., a 0-10 dry eye discomfort scale, or a visual analog scale for pain/photophobia) rely on the same magnitude-estimation logic covered under this topic's sibling objective — patients are asked to map their subjective sensation onto a numerical scale, with the same interpretive caveats about individual scaling differences between patients that apply to any magnitude-estimation psychophysical method." },
+    ],
+    memorizeIt: [
+      "Standard visual charts (logMAR acuity, log-unit contrast sensitivity, already covered) are deliberately built on LOGARITHMIC scales to reflect non-linear psychophysical scaling.",
+      "Logarithmic chart design ensures roughly equal PERCEPTUAL steps between levels, not equal physical steps.",
+      "Clinical patient-reported symptom scales (pain, dryness, photophobia) are a direct clinical application of magnitude-estimation psychophysics.",
+      "Individual differences in how patients map sensation to numbers is an inherent limitation of any magnitude-estimation-based clinical scale.",
+    ],
+    applyIt: [
+      "This explains the underlying design logic of your existing Visual Acuity Measurement & MAR and Contrast Sensitivity Function content — the logMAR chart's geometric (0.1 log unit) step progression between lines is a direct, deliberate application of the psychophysical scaling principle that perceived visual difficulty does not increase linearly with physical letter size, which is exactly why logMAR notation was adopted over the older, unevenly-stepped Snellen fraction system for research and precise clinical measurement.",
+    ],
+  },
+  "sdt-theory": {
+    name: "Signal Detection Theory — Sensitivity (d′) vs. Response Criterion",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard visual psychophysics references"],
+    learnIt: [
+      { h: "Overview", t: "Signal detection theory (SDT) is a more sophisticated framework than simple threshold models (this topic's sibling objectives) — it recognizes that any detection decision separately depends on TWO independent factors: the observer's true sensory sensitivity, and their independent willingness to respond 'yes' (their response criterion or bias)." },
+      { h: "The four outcome categories", t: "SDT classifies every detection trial into one of four outcomes: a HIT (signal present, observer correctly says 'detected'), a MISS (signal present, observer says 'not detected'), a FALSE ALARM (signal absent, observer incorrectly says 'detected'), and a CORRECT REJECTION (signal absent, observer correctly says 'not detected') — and both sensitivity and criterion are calculated from the relative rates of these four outcomes across many trials." },
+      { h: "Sensitivity (d′) vs. criterion", t: "Sensitivity (d′, 'd-prime') reflects the observer's TRUE ability to discriminate signal from background noise, independent of their response tendency; criterion (or response bias) reflects how willing the observer is to say 'yes, detected' regardless of their true sensitivity — a 'liberal' criterion produces more hits AND more false alarms, while a 'conservative' criterion produces fewer of both, meaning two observers with identical true sensitivity (d′) can produce very different raw hit rates simply due to differing response criteria." },
+      { h: "Why this matters over simple threshold models", t: "Simple threshold models (this topic's sibling objective, classic psychophysical methods) cannot distinguish a genuinely poor-sensitivity observer from a merely cautious/conservative-criterion observer using raw detection rates alone — SDT's separation of d′ from criterion solves this problem, which is precisely why it underlies the reliability indices built into modern clinical testing (this topic's other objective, applied to automated perimetry)." },
+    ],
+    memorizeIt: [
+      "Signal detection theory separates detection performance into two INDEPENDENT factors: sensitivity (d′, true discrimination ability) and criterion (response bias/willingness to say 'yes').",
+      "Four outcomes: hit (signal + 'yes'), miss (signal + 'no'), false alarm (no signal + 'yes'), correct rejection (no signal + 'no').",
+      "A 'liberal' criterion → more hits AND more false alarms. A 'conservative' criterion → fewer of both — same underlying sensitivity, different raw detection rate.",
+      "SDT solves the problem that raw detection rate alone cannot distinguish poor true sensitivity from an overly cautious response criterion.",
+    ],
+    applyIt: [
+      "This gives you the theoretical framework directly underlying your existing Visual Field Defect Localization content's reliability metrics — understanding that raw perimetry results conflate true visual sensitivity with the patient's own response criterion is exactly why automated perimeters build in specific catch trials (this topic's other objective) to measure response criterion/bias SEPARATELY from true retinal sensitivity.",
+    ],
+  },
+  "sdt-application": {
+    name: "Signal Detection Theory Applied to Automated Perimetry",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard visual psychophysics/perimetry references"],
+    learnIt: [
+      { h: "Overview", t: "Modern automated (Humphrey) visual field testing explicitly embeds signal detection theory's sensitivity/criterion distinction (this topic's sibling objective) through specific built-in catch trials, directly extending your existing Visual Field Defect Localization content with the psychometric reliability framework behind these commonly-reported indices." },
+      { h: "False-positive catch trials", t: "False-positive catch trials present NO actual stimulus (or a stimulus presentation is skipped) at certain points during the test — if the patient responds anyway ('detected'), this is a false alarm in signal-detection terms, reflecting an overly LIBERAL response criterion ('trigger-happy' responding); a high false-positive rate suggests the patient's stated field sensitivity may be artificially inflated (falsely appearing better than their true retinal sensitivity) and reduces confidence in the overall test's reliability." },
+      { h: "False-negative catch trials", t: "False-negative catch trials present a stimulus MUCH BRIGHTER than the threshold already established at a given point earlier in the same test — if the patient fails to respond ('not detected') to this easily-detectable, already-proven-visible stimulus, this is a miss in signal-detection terms, typically reflecting inattention or fatigue rather than a true sensitivity change; a high false-negative rate similarly reduces confidence in the test's reliability, and can also be artifactually elevated by a genuinely progressing field defect (an important interpretive caveat)." },
+      { h: "Why this reliability framework matters clinically", t: "Recognizing high false-positive or false-negative rates on a printed field report is essential before clinically interpreting the field as showing true, reliable glaucomatous or neurological visual field loss (already covered under Visual Field Defect Localization) — an unreliable field (high catch-trial error rates) should generally prompt patient re-education and re-testing rather than treatment decisions based on an unreliable result." },
+    ],
+    memorizeIt: [
+      "False-positive catch trials: no stimulus presented — patient responding anyway = false alarm = overly LIBERAL criterion ('trigger-happy'), inflates apparent field sensitivity.",
+      "False-negative catch trials: stimulus MUCH BRIGHTER than the already-established threshold at that point — patient missing it = inattention/fatigue (or occasionally a real progressing defect).",
+      "High false-positive/false-negative rates reduce field test reliability and should prompt re-education/re-testing before clinical interpretation.",
+      "This entire reliability framework is a direct clinical application of signal detection theory's sensitivity-vs-criterion separation (this topic's sibling objective).",
+    ],
+    applyIt: [
+      "This directly extends your existing Visual Field Defect Localization content by explaining WHY a printed Humphrey visual field report includes false-positive/false-negative reliability percentages alongside the actual sensitivity data — a field showing an apparent new defect but also a high false-negative rate should prompt reliability concerns and re-testing before concluding the defect represents true disease progression.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -12392,6 +12694,30 @@ const FLASHCARDS = [
   { id: "fc-1163", objectiveId: "clindications-preservative-toxicity", front: "What preservative was a classic cause of Type IV hypersensitivity (follicular conjunctivitis) in long-term contact lens wearers?", back: "Thimerosal (a mercury-based preservative), largely phased out of modern lens care solutions." },
   { id: "fc-1164", objectiveId: "clindications-systemic-interactions", front: "How do systemic anticholinergics and antihistamines reduce contact lens tolerance?", back: "By decreasing lacrimal gland aqueous tear secretion, worsening dry eye." },
   { id: "fc-1165", objectiveId: "clindications-systemic-interactions", front: "How does oral isotretinoin affect contact lens tolerance?", back: "Causes meibomian gland atrophy and reduced lipid tear layer secretion, worsening evaporative dry eye." },
+  { id: "fc-1166", objectiveId: "acquiredperc-agnosia", front: "What is the key bedside test to distinguish apperceptive from associative visual agnosia?", back: "Ask the patient to COPY a drawing of the object — apperceptive agnosia fails; associative agnosia succeeds but the patient still can't identify what it is." },
+  { id: "fc-1167", objectiveId: "acquiredperc-agnosia", front: "Which visual processing pathway's damage is implicated in associative agnosia?", back: "The ventral 'what' (object recognition) pathway, via anterior temporo-occipital damage." },
+  { id: "fc-1168", objectiveId: "acquiredperc-balint-anton", front: "List the Balint syndrome triad.", back: "Simultanagnosia, optic ataxia, and oculomotor apraxia — from bilateral parieto-occipital damage." },
+  { id: "fc-1169", objectiveId: "acquiredperc-balint-anton", front: "What is Anton syndrome, and what pupillary finding is expected?", back: "Cortical blindness with anosognosia (denial of blindness) and confabulation, from bilateral occipital damage; pupils are NORMAL since the light reflex is subcortically mediated." },
+  { id: "fc-1170", objectiveId: "temporalperc-cff", front: "State the Ferry-Porter law.", back: "Critical flicker fusion (CFF) frequency increases approximately linearly with the logarithm of stimulus luminance." },
+  { id: "fc-1171", objectiveId: "temporalperc-cff", front: "Is photopic (cone) or scotopic (rod) CFF higher, and roughly what values?", back: "Photopic ~50-60 Hz; scotopic ~15-20 Hz." },
+  { id: "fc-1172", objectiveId: "temporalperc-tcsf", front: "What perceptual phenomenon explains why a rapid sequence of static film frames appears as continuous motion?", back: "Persistence of vision — brief continued perception of each frame bridges the gap to the next." },
+  { id: "fc-1173", objectiveId: "temporalperc-tcsf", front: "Is the temporal contrast sensitivity function (TCSF) bandpass or low-pass shaped?", back: "Bandpass — reduced sensitivity at both very low and very high temporal frequencies, peak at an intermediate frequency." },
+  { id: "fc-1174", objectiveId: "entoptic-phenomena-types", front: "What causes the moving bright dots seen in blue-field entoptoscopy?", back: "Individual white blood cells traversing the perifoveal retinal capillaries, visible against blue light due to lower light absorption than RBC-filled segments." },
+  { id: "fc-1175", objectiveId: "entoptic-phenomena-types", front: "What ocular structure produces Haidinger's brush, and what light property is required to see it?", back: "The radially-arranged, birefringent macular xanthophyll pigment; requires polarized blue light." },
+  { id: "fc-1176", objectiveId: "entoptic-clinical-uses", front: "What does a positive Haidinger's brush or blue-field entoptoscopy response indicate in a patient with a dense cataract?", back: "That light is reaching and being processed by the macula — supportive evidence of intact macular function and good post-op visual potential." },
+  { id: "fc-1177", objectiveId: "entoptic-clinical-uses", front: "Does a negative entoptic phenomenon response rule out good post-cataract-surgery visual potential?", back: "No — it's supportive evidence, not a stand-alone definitive predictor; some patients with normal macular function still can't perceive/describe it." },
+  { id: "fc-1178", objectiveId: "psychophysmethods-classic", front: "Which classic psychophysical method is the conceptual basis for modern automated perimetry's randomized stimulus strategy?", back: "The method of constant stimuli — fixed intensity levels presented repeatedly in random order." },
+  { id: "fc-1179", objectiveId: "psychophysmethods-classic", front: "Which classic psychophysical method is fastest but most subjective, since the observer adjusts the stimulus themselves?", back: "The method of adjustment." },
+  { id: "fc-1180", objectiveId: "psychophysmethods-thresholds", front: "By convention, what detection rate defines the absolute threshold?", back: "The stimulus intensity detected 50% of the time across repeated presentations." },
+  { id: "fc-1181", objectiveId: "psychophysmethods-thresholds", front: "Does visual field (perimetry) testing measure an absolute threshold or a difference threshold?", back: "Absolute threshold — the dimmest light detectable at each retinal location." },
+  { id: "fc-1182", objectiveId: "psychophysscaling-methods", front: "State Stevens' power law and its variables.", back: "ψ = kIⁿ, where ψ is perceived magnitude, I is stimulus intensity, k is a constant, and n is a modality-specific exponent." },
+  { id: "fc-1183", objectiveId: "psychophysscaling-methods", front: "Is the Stevens' power law exponent for brightness greater than or less than 1, and what does that mean?", back: "Less than 1 — a compressive relationship where perceived brightness grows more slowly than physical intensity." },
+  { id: "fc-1184", objectiveId: "psychophysscaling-clinical", front: "Why are logMAR acuity and contrast sensitivity charts built on a logarithmic rather than linear scale?", back: "To reflect non-linear psychophysical scaling, giving roughly equal perceptual steps between chart levels rather than equal physical steps." },
+  { id: "fc-1185", objectiveId: "psychophysscaling-clinical", front: "What psychophysical principle underlies a 0-10 patient-reported dry eye discomfort scale?", back: "Magnitude estimation — mapping subjective sensation onto a numerical scale." },
+  { id: "fc-1186", objectiveId: "sdt-theory", front: "In signal detection theory, what are the two independent factors separated out of raw detection performance?", back: "Sensitivity (d′, true discrimination ability) and criterion (response bias/willingness to say 'yes')." },
+  { id: "fc-1187", objectiveId: "sdt-theory", front: "In signal detection theory terms, what is it called when a signal is present but the observer says 'not detected'?", back: "A miss." },
+  { id: "fc-1188", objectiveId: "sdt-application", front: "What does a high false-positive rate on a Humphrey visual field test suggest about the patient's response criterion?", back: "An overly liberal ('trigger-happy') criterion, which can artificially inflate apparent field sensitivity." },
+  { id: "fc-1189", objectiveId: "sdt-application", front: "How are false-negative catch trials generated during automated perimetry?", back: "A stimulus much brighter than the already-established threshold at that point is presented; a missed response suggests inattention/fatigue (or occasionally true progression)." },
 ];
 
 const QUESTIONS = [
@@ -16932,6 +17258,108 @@ const QUESTIONS = [
       b: "Correct — BAK is specifically avoided in soft lens care because it binds to and accumulates within hydrogel lens material, then releases slowly onto the ocular surface over lens wear time, producing cumulative toxic keratoconjunctivitis — discontinuing the BAK-preserved drop is the appropriate next step.",
       c: "Incorrect — this presentation reflects toxic accumulation, not an IgE-mediated hypersensitivity reaction to the lens polymer itself.",
       d: "Incorrect — chronic diffuse punctate keratitis with lens intolerance is a genuine finding requiring identification and removal of the causative agent (here, the BAK-preserved drop).",
+    },
+  },
+  {
+    id: "q-268", objectiveId: "acquiredperc-balint-anton", type: "Clinical differentiation", difficulty: "Hard",
+    stem: "A patient following bilateral occipital lobe infarcts insists their vision is completely normal and describes furniture and people in the room that are not actually present. Testing confirms no light perception, but pupillary light reflexes are normal. What is this presentation?",
+    choices: [
+      { id: "a", text: "Balint syndrome, since bilateral occipital damage always produces optic ataxia" },
+      { id: "b", text: "Anton syndrome — cortical blindness with anosognosia and confabulation, with pupils spared because the pupillary light reflex is subcortically mediated" },
+      { id: "c", text: "A functional (non-organic) visual complaint, since the patient denies any deficit" },
+      { id: "d", text: "A retinal cause of vision loss, given the normal pupils" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — this presentation (denial of blindness plus confabulation) is the classic Anton syndrome pattern, not Balint syndrome (which presents with simultanagnosia, optic ataxia, and oculomotor apraxia, not denial of blindness).",
+      b: "Correct — Anton syndrome results from bilateral occipital (PCA territory) damage, producing cortical blindness combined with anosognosia and confabulation; pupils remain normal because the pupillary light reflex is mediated subcortically, independent of cortical visual processing — a key finding pointing to a cortical rather than retinal or optic nerve cause.",
+      c: "Incorrect — while the denial is striking, this is a well-characterized organic cortical syndrome from bilateral occipital infarction, not a functional/non-organic complaint.",
+      d: "Incorrect — normal pupils in the setting of no light perception argue AGAINST a retinal or optic nerve cause (which would typically show an abnormal pupillary response) and instead point toward a cortical cause, since the subcortical pupillary pathway is spared.",
+    },
+  },
+  {
+    id: "q-269", objectiveId: "temporalperc-cff", type: "Applied concept", difficulty: "Medium",
+    stem: "A patient with a history of optic neuritis has recovered to normal Snellen visual acuity but reports that a flickering light source appears steady at a lower flicker rate than it used to. What does this most likely reflect?",
+    choices: [
+      { id: "a", text: "Normal aging, unrelated to the prior optic neuritis" },
+      { id: "b", text: "A reduced critical flicker fusion (CFF) frequency, reflecting residual subclinical optic nerve conduction slowing from prior demyelination" },
+      { id: "c", text: "A new retinal detachment" },
+      { id: "d", text: "Normal Ferry-Porter law behavior with no clinical significance" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — the history of optic neuritis is directly relevant; this is not a nonspecific aging finding.",
+      b: "Correct — CFF depends on temporal fidelity of optic nerve conduction, and reduced CFF can be a subtle psychophysical marker of residual demyelination-related conduction slowing even after visual acuity has normalized, extending existing content on the effects of demyelination on conduction.",
+      c: "Incorrect — a reduced flicker fusion threshold with normal acuity is not a typical retinal detachment presentation.",
+      d: "Incorrect — while consistent with Ferry-Porter law's general framework, a NEW reduction in CFF in a patient with prior optic neuritis is clinically meaningful, not an incidental finding.",
+    },
+  },
+  {
+    id: "q-270", objectiveId: "entoptic-clinical-uses", type: "Clinical application", difficulty: "Medium",
+    stem: "A patient with a dense cataract precluding fundus visualization and accurate acuity testing reports a positive Haidinger's brush response when tested with polarized blue light. What is the clinical significance?",
+    choices: [
+      { id: "a", text: "It confirms the patient will have 20/20 vision after surgery with certainty" },
+      { id: "b", text: "It provides supportive evidence that the macula is at least partially functional, since the phenomenon requires light to reach and interact with macular xanthophyll pigment" },
+      { id: "c", text: "It indicates the cataract is not visually significant and surgery should be deferred" },
+      { id: "d", text: "It has no bearing on visual potential, only on lens clarity" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — a positive entoptic response is supportive evidence, not a guarantee of a specific post-operative acuity outcome.",
+      b: "Correct — since Haidinger's brush depends on light reaching and interacting with the radially-arranged macular xanthophyll pigment, a positive response indicates at least partial macular function despite the media opacity, supporting a favorable visual prognosis after cataract surgery.",
+      c: "Incorrect — the test assesses macular function behind the opacity, not whether the cataract itself is visually significant; a dense cataract causing significant vision loss can still overlie a functioning macula.",
+      d: "Incorrect — this is precisely the value of the test: it gives information about visual (macular) potential independent of the lens opacity.",
+    },
+  },
+  {
+    id: "q-271", objectiveId: "psychophysmethods-thresholds", type: "Applied concept", difficulty: "Medium",
+    stem: "Why does automated visual field testing present each test location's stimulus using a statistical/repeated sampling strategy rather than a single presentation?",
+    choices: [
+      { id: "a", text: "Because absolute threshold is inherently probabilistic — an observer will sometimes detect and sometimes miss a stimulus right around their true threshold" },
+      { id: "b", text: "Because the equipment requires multiple presentations to calibrate its light source" },
+      { id: "c", text: "Because a single presentation would be too fast for the patient to respond" },
+      { id: "d", text: "Because difference thresholds, not absolute thresholds, are being measured" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — the absolute threshold is defined as the intensity detected 50% of the time, reflecting inherent trial-to-trial neural/attentional variability; a single presentation cannot reliably establish this probabilistic threshold, which is why repeated/statistical sampling is used.",
+      b: "Incorrect — this is not an equipment calibration issue; it reflects the underlying probabilistic nature of threshold itself.",
+      c: "Incorrect — response timing is not the reason for repeated sampling; the statistical nature of threshold estimation is.",
+      d: "Incorrect — visual field (perimetry) testing measures absolute threshold (minimum detectable light) at each location, not a difference threshold.",
+    },
+  },
+  {
+    id: "q-272", objectiveId: "psychophysscaling-methods", type: "Applied concept", difficulty: "Medium",
+    stem: "Two lights differ in physical intensity by a factor of 10. According to Stevens' power law with a brightness exponent of approximately 0.33 (n < 1), how does perceived brightness scale compared to physical intensity?",
+    choices: [
+      { id: "a", text: "Perceived brightness increases by exactly the same factor of 10 (linear)" },
+      { id: "b", text: "Perceived brightness increases by less than a factor of 10 — a compressive relationship" },
+      { id: "c", text: "Perceived brightness increases by more than a factor of 10 — an expansive relationship" },
+      { id: "d", text: "Perceived brightness is unrelated to physical intensity" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — a linear relationship would require an exponent of n = 1, not n < 1.",
+      b: "Correct — with a power law exponent less than 1 (as is the case for brightness, n ≈ 0.33), perceived magnitude grows more slowly than physical stimulus intensity, a compressive relationship — a 10-fold increase in physical intensity produces a less-than-10-fold increase in perceived brightness.",
+      c: "Incorrect — an expansive relationship (perceived magnitude growing faster than physical intensity) requires an exponent greater than 1, which describes some other modalities (e.g., electric shock) but not brightness.",
+      d: "Incorrect — Stevens' power law specifically describes a systematic, predictable (if non-linear) relationship between perceived magnitude and physical intensity.",
+    },
+  },
+  {
+    id: "q-273", objectiveId: "sdt-application", type: "Clinical application", difficulty: "Medium",
+    stem: "A patient's Humphrey visual field printout shows a new apparent defect but also a false-negative rate of 35% (well above the typical reliability cutoff). What is the most appropriate interpretation?",
+    choices: [
+      { id: "a", text: "The defect is definitely real and treatment should be adjusted immediately" },
+      { id: "b", text: "The high false-negative rate raises reliability concerns (e.g., inattention/fatigue), and the test should generally be repeated before concluding the apparent defect represents true progression" },
+      { id: "c", text: "False-negative rate has no bearing on how the sensitivity data should be interpreted" },
+      { id: "d", text: "The false-negative rate only affects the false-positive catch trials, not the sensitivity map" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — a high false-negative rate undermines confidence in the reliability of the entire test, including the apparent new defect; treatment decisions should not be based on an unreliable field.",
+      b: "Correct — false-negative catch trials (presenting a stimulus much brighter than an already-established threshold) test for inattention/fatigue; a high false-negative rate (though it can occasionally reflect true progression) generally warrants patient re-education and re-testing before the apparent defect is accepted as reliable evidence of true progression.",
+      c: "Incorrect — false-negative rate is a core reliability index specifically because it directly bears on how much to trust the sensitivity data from that same test.",
+      d: "Incorrect — false-positive and false-negative rates are distinct, independently calculated reliability indices, but a high false-negative rate specifically calls the sensitivity map's reliability into question, not just the false-positive catch trials.",
     },
   },
 ];
