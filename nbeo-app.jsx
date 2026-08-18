@@ -1534,6 +1534,16 @@ const OPTTOLERANCE_OBJECTIVES = [
   { id: "opttolerance-regulatory-roles", name: "FDA, ANSI, & OSHA — Distinct Regulatory Roles", built: true },
 ];
 
+const CLINDICATIONS_TOPIC_ID = "t-2-3-1"; // Contact Lenses(2) > Pharmacology(3) > Indications/contraindications/side effects/drug interactions(1)
+// Distinct topic slot from the already-built CLPHARM topic's general
+// indications objective — this covers specific preservative-toxicity
+// mechanisms and systemic-drug interactions, extending existing Solution
+// Toxicity & Sterile Infiltrates content.
+const CLINDICATIONS_OBJECTIVES = [
+  { id: "clindications-preservative-toxicity", name: "Preservative Toxicity & Solution Component Sensitivities", built: true },
+  { id: "clindications-systemic-interactions", name: "Systemic Medications Affecting Contact Lens Tolerance", built: true },
+];
+
 const TOPIC_OBJECTIVES = {
   [ENDO_TOPIC_ID]: ENDO_OBJECTIVES, [NERVOUS_TOPIC_ID]: NERVOUS_OBJECTIVES,
   [INTEG_TOPIC_ID]: INTEG_OBJECTIVES, [GLAUCOMA_TOPIC_ID]: GLAUCOMA_OBJECTIVES,
@@ -1613,6 +1623,7 @@ const TOPIC_OBJECTIVES = {
   [LENSMETER_TOPIC_ID]: LENSMETER_OBJECTIVES, [SPECPOLAR_TOPIC_ID]: SPECPOLAR_OBJECTIVES,
   [LENSPHYSCHAR_TOPIC_ID]: LENSPHYSCHAR_OBJECTIVES, [FRAMEMAT_TOPIC_ID]: FRAMEMAT_OBJECTIVES,
   [ABSORPTIVE_TOPIC_ID]: ABSORPTIVE_OBJECTIVES, [OPTTOLERANCE_TOPIC_ID]: OPTTOLERANCE_OBJECTIVES,
+  [CLINDICATIONS_TOPIC_ID]: CLINDICATIONS_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -1759,6 +1770,7 @@ const CONTENT_TOPICS = [
   { topicId: FRAMEMAT_TOPIC_ID, name: "Frame Materials & Biological Compatibility", objectives: FRAMEMAT_OBJECTIVES },
   { topicId: ABSORPTIVE_TOPIC_ID, name: "Absorptive Lenses — Transmittance & Photochromics", objectives: ABSORPTIVE_OBJECTIVES },
   { topicId: OPTTOLERANCE_TOPIC_ID, name: "Optical Tolerances & Regulatory Standards", objectives: OPTTOLERANCE_OBJECTIVES },
+  { topicId: CLINDICATIONS_TOPIC_ID, name: "Contact Lens Solution Adverse Reactions & Interactions", objectives: CLINDICATIONS_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -10758,6 +10770,48 @@ const STUDY_PAGES = {
       "This organizes your existing Impact Resistance & Optical Standards and Occupational & Pediatric Eyewear Safety Requirements content into a clear regulatory hierarchy — a genuinely testable distinction is that OSHA does not independently define its own impact standard but instead enforces compliance with the ANSI Z87.1 standard already covered, while the FDA's baseline drop-ball requirement applies even to plano/non-prescription eyewear that ANSI Z87.1 and OSHA workplace rules would not otherwise cover.",
     ],
   },
+  "clindications-preservative-toxicity": {
+    name: "Preservative Toxicity & Solution Component Sensitivities",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard contact lens pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Contact lens care solution preservatives can themselves cause ocular surface toxicity or hypersensitivity distinct from infectious complications, directly extending your existing Solution Toxicity & Sterile Infiltrates content with the specific preservative chemistry involved." },
+      { h: "Benzalkonium chloride (BAK) and soft lens binding", t: "BAK, a highly effective preservative in many ophthalmic drops, is generally AVOIDED in soft contact lens care solutions because it binds to and accumulates within soft (hydrogel) lens material, then releases slowly onto the ocular surface over lens wear time, causing cumulative toxic keratoconjunctivitis — this is why BAK-preserved drops are a specific soft-lens-wear caution already relevant to your Dry Eye artificial tear content." },
+      { h: "Thimerosal hypersensitivity", t: "Thimerosal (a mercury-based preservative used in older-generation lens care solutions) was a well-documented cause of delayed (Type IV) hypersensitivity reactions in a meaningful subset of long-term contact lens wearers, presenting as follicular conjunctivitis and superior limbic changes — largely responsible for its replacement by modern preservative systems in current lens care products." },
+      { h: "Modern preservative systems (polyquad, PHMB)", t: "Modern multipurpose solutions use polymeric preservatives (e.g., polyquaternium-1/polyquad, polyhexamethylene biguanide/PHMB) specifically engineered with large molecular size to reduce corneal penetration and lens-binding toxicity compared to BAK and thimerosal — though a meaningful minority of patients still develop solution-specific sensitivity or sterile infiltrates (already covered) even to these modern preservative systems, making a solution switch a reasonable first step for unexplained chronic lens intolerance." },
+    ],
+    memorizeIt: [
+      "BAK: effective drop preservative, but binds/accumulates in soft lens material → cumulative toxic keratoconjunctivitis — avoided in soft CL care solutions.",
+      "Thimerosal: older mercury-based preservative, classic cause of Type IV hypersensitivity (follicular conjunctivitis) in long-term wearers — largely phased out.",
+      "Modern preservatives (polyquad, PHMB): large-molecule polymeric design reduces corneal penetration/lens-binding toxicity vs. BAK/thimerosal.",
+      "Unexplained chronic lens intolerance or sterile infiltrates (already covered) → consider solution-specific preservative sensitivity; a solution switch is a reasonable diagnostic/therapeutic step.",
+    ],
+    applyIt: [
+      "This gives you the specific preservative chemistry underlying your existing Solution Toxicity & Sterile Infiltrates content — when a patient with chronic, low-grade lens intolerance and diffuse superficial punctate keratitis is not responding to standard measures, considering a switch away from a BAK- or PHMB-preserved solution to a peroxide-based (preservative-free after neutralization) system, already covered under Multipurpose Solutions vs. Hydrogen Peroxide Systems, is a genuinely practical next step.",
+    ],
+  },
+  "clindications-systemic-interactions": {
+    name: "Systemic Medications Affecting Contact Lens Tolerance",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard contact lens pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Several systemic medications reduce contact lens tolerance indirectly, by altering tear film quantity/quality or ocular surface health, rather than through any direct drug-lens interaction — extending your existing Tear Film Structure & Layers and Contact Lens Complications content." },
+      { h: "Anticholinergic and antihistamine effects", t: "Systemic anticholinergics (certain antidepressants, antipsychotics, bladder medications) and oral antihistamines reduce aqueous tear production via decreased lacrimal gland secretion, worsening or unmasking a dry-eye state already covered under Tear Film & Lacrimal Physiology — an important history question when a previously well-tolerated contact lens wearer develops new lens discomfort after starting one of these medication classes." },
+      { h: "Oral isotretinoin and meibomian gland effects", t: "Oral isotretinoin (used for severe acne) causes meibomian gland atrophy and reduced lipid tear layer secretion, worsening evaporative dry eye and contact lens tolerance — a genuinely important history question in a young contact-lens-wearing patient with new-onset lens intolerance, since this population overlaps significantly with isotretinoin's typical patient demographic." },
+      { h: "Oral contraceptives and hormonal effects", t: "Some patients report reduced contact lens tolerance with hormonal contraceptive use, thought to relate to hormonally-mediated changes in tear film composition and corneal thickness/curvature — a less definitively mechanistic but clinically recognized association worth including in a lens-intolerance history." },
+    ],
+    memorizeIt: [
+      "Systemic anticholinergics/antihistamines → reduced aqueous tear production → worsened dry eye and lens tolerance (already covered under Tear Film Physiology).",
+      "Oral isotretinoin → meibomian gland atrophy → reduced lipid tear layer → worsened evaporative dry eye and lens tolerance — key history question in young CL wearers.",
+      "Hormonal contraceptives: clinically recognized (less definitively mechanistic) association with reduced tear film quality/lens tolerance in some patients.",
+      "A thorough systemic medication history is an essential, often-overlooked step when evaluating new-onset contact lens intolerance in a previously successful wearer.",
+    ],
+    applyIt: [
+      "This extends your existing Tear Film & Lacrimal Physiology and Contact Lens Complications content by adding the systemic-medication branch of the differential diagnosis for new-onset lens intolerance — a patient recently started on an anticholinergic antidepressant or oral isotretinoin who develops new contact lens discomfort is demonstrating a medication-induced tear film change, not necessarily a lens-fit or solution problem, changing the appropriate clinical next step from a refit to a medication history review and dry-eye management already covered elsewhere.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -12321,6 +12375,10 @@ const FLASHCARDS = [
   { id: "fc-1159", objectiveId: "opttolerance-ansi-z80", front: "How does allowable cylinder axis tolerance change as cylinder power increases?", back: "It tightens (smaller allowable degree error), since a given axis error produces more residual astigmatism at higher cylinder power." },
   { id: "fc-1160", objectiveId: "opttolerance-regulatory-roles", front: "Which agency mandates minimum impact resistance for ALL eyewear (even plano/non-prescription) sold in the U.S.?", back: "The FDA (drop-ball test), a legal baseline requirement distinct from ANSI's voluntary standards." },
   { id: "fc-1161", objectiveId: "opttolerance-regulatory-roles", front: "How does OSHA enforce workplace eye protection requirements?", back: "By referencing and enforcing compliance with the existing ANSI Z87.1 standard, rather than writing its own separate technical specification." },
+  { id: "fc-1162", objectiveId: "clindications-preservative-toxicity", front: "Why is BAK (benzalkonium chloride) generally avoided in soft contact lens care solutions?", back: "It binds to and accumulates in soft lens material, then releases slowly onto the ocular surface, causing cumulative toxic keratoconjunctivitis." },
+  { id: "fc-1163", objectiveId: "clindications-preservative-toxicity", front: "What preservative was a classic cause of Type IV hypersensitivity (follicular conjunctivitis) in long-term contact lens wearers?", back: "Thimerosal (a mercury-based preservative), largely phased out of modern lens care solutions." },
+  { id: "fc-1164", objectiveId: "clindications-systemic-interactions", front: "How do systemic anticholinergics and antihistamines reduce contact lens tolerance?", back: "By decreasing lacrimal gland aqueous tear secretion, worsening dry eye." },
+  { id: "fc-1165", objectiveId: "clindications-systemic-interactions", front: "How does oral isotretinoin affect contact lens tolerance?", back: "Causes meibomian gland atrophy and reduced lipid tear layer secretion, worsening evaporative dry eye." },
 ];
 
 const QUESTIONS = [
@@ -16844,6 +16902,23 @@ const QUESTIONS = [
       b: "Correct — ANSI Z80.1 is the standard specifying allowable tolerance between prescribed and as-fabricated lens power, cylinder, axis, and prism.",
       c: "Incorrect — this OSHA regulation addresses workplace eye/face protection requirements generally, referencing ANSI Z87.1 for impact standards, not prescription tolerance.",
       d: "Incorrect — this FDA regulation addresses the mandatory impact resistance (drop-ball) testing requirement for eyewear, not prescription accuracy tolerance.",
+    },
+  },
+  {
+    id: "q-267", objectiveId: "clindications-preservative-toxicity", type: "Clinical application", difficulty: "Medium",
+    stem: "A soft contact lens wearer develops chronic diffuse superficial punctate keratitis and mild lens intolerance that has not responded to standard measures. Solution history reveals long-term use of a BAK-preserved rewetting drop with their lenses in place. What is the most likely mechanism?",
+    choices: [
+      { id: "a", text: "A bacterial keratitis requiring topical antibiotics" },
+      { id: "b", text: "BAK has bound to and accumulated in the soft lens material, slowly releasing onto the ocular surface and causing cumulative toxic keratoconjunctivitis" },
+      { id: "c", text: "A Type I (IgE-mediated) allergic reaction to the lens material itself" },
+      { id: "d", text: "Expected, benign lens wear findings requiring no intervention" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — the diffuse, chronic, non-infectious presentation pattern with a clear BAK exposure history is not consistent with bacterial keratitis.",
+      b: "Correct — BAK is specifically avoided in soft lens care because it binds to and accumulates within hydrogel lens material, then releases slowly onto the ocular surface over lens wear time, producing cumulative toxic keratoconjunctivitis — discontinuing the BAK-preserved drop is the appropriate next step.",
+      c: "Incorrect — this presentation reflects toxic accumulation, not an IgE-mediated hypersensitivity reaction to the lens polymer itself.",
+      d: "Incorrect — chronic diffuse punctate keratitis with lens intolerance is a genuine finding requiring identification and removal of the causative agent (here, the BAK-preserved drop).",
     },
   },
 ];
