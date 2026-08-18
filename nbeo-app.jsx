@@ -928,6 +928,33 @@ const LENSPHARMINDICATIONS_OBJECTIVES = [
   { id: "lenspharm-nsaid-steroid-combination", name: "NSAID + Steroid Combination Rationale & Combined Risks", built: true },
 ];
 
+const ACGROSS_TOPIC_ID = "t-11-0-1"; // Episclera/Sclera/Anterior Uvea(11) > Anatomy(Gross)(1) > Anterior chamber and angle(1)
+// Ties directly into existing Aqueous Outflow Pathways and Glaucoma content.
+const ACGROSS_OBJECTIVES = [
+  { id: "acgross-structure", name: "Anterior Chamber Boundaries & Gonioscopic Angle Landmarks", built: true },
+  { id: "acgross-schlemm", name: "Trabecular Meshwork & Schlemm's Canal — Angle Anatomy", built: true },
+];
+
+const IRISGROSS_TOPIC_ID = "t-11-0-2"; // Episclera/Sclera/Anterior Uvea(11) > Anatomy(Gross)(1) > Iris(2)
+const IRISGROSS_OBJECTIVES = [
+  { id: "irisgross-structure", name: "Iris Layers — Stroma, Dilator & Sphincter Muscles", built: true },
+  { id: "irisgross-vascular", name: "Iris Vascular Supply & Rubeosis Iridis", built: true },
+];
+
+const PCGROSS_TOPIC_ID = "t-11-0-3"; // Episclera/Sclera/Anterior Uvea(11) > Anatomy(Gross)(1) > Posterior chamber(3)
+const PCGROSS_OBJECTIVES = [
+  { id: "pcgross-boundaries", name: "Posterior Chamber Boundaries & Aqueous Flow Path", built: true },
+  { id: "pcgross-pupillaryblock", name: "Pupillary Block Mechanism & Iris Bombé", built: true },
+];
+
+const CBGROSS_TOPIC_ID = "t-11-0-4"; // Episclera/Sclera/Anterior Uvea(11) > Anatomy(Gross)(1) > Ciliary body(4)
+// Ties directly into existing Accommodation Mechanism and Aqueous
+// Production content.
+const CBGROSS_OBJECTIVES = [
+  { id: "cbgross-regions", name: "Ciliary Body Regions — Pars Plicata & Pars Plana", built: true },
+  { id: "cbgross-muscle", name: "Ciliary Muscle Fiber Orientations & Function", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -1935,6 +1962,8 @@ const TOPIC_OBJECTIVES = {
   [LENSPHARMANTIINFLAMM_TOPIC_ID]: LENSPHARMANTIINFLAMM_OBJECTIVES, [LENSPHARMANTIINFECT_TOPIC_ID]: LENSPHARMANTIINFECT_OBJECTIVES,
   [LENSPHARMLUBRICANT_TOPIC_ID]: LENSPHARMLUBRICANT_OBJECTIVES, [LENSPHARMDYES_TOPIC_ID]: LENSPHARMDYES_OBJECTIVES,
   [LENSPHARMINDICATIONS_TOPIC_ID]: LENSPHARMINDICATIONS_OBJECTIVES,
+  [ACGROSS_TOPIC_ID]: ACGROSS_OBJECTIVES, [IRISGROSS_TOPIC_ID]: IRISGROSS_OBJECTIVES,
+  [PCGROSS_TOPIC_ID]: PCGROSS_OBJECTIVES, [CBGROSS_TOPIC_ID]: CBGROSS_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -2128,6 +2157,10 @@ const CONTENT_TOPICS = [
   { topicId: LENSPHARMLUBRICANT_TOPIC_ID, name: "Lens/Cataract Perioperative Lubrication", objectives: LENSPHARMLUBRICANT_OBJECTIVES },
   { topicId: LENSPHARMDYES_TOPIC_ID, name: "Lens/Cataract Surgical Dyes", objectives: LENSPHARMDYES_OBJECTIVES },
   { topicId: LENSPHARMINDICATIONS_TOPIC_ID, name: "Lens/Cataract Pharmacology — Indications & Contraindications", objectives: LENSPHARMINDICATIONS_OBJECTIVES },
+  { topicId: ACGROSS_TOPIC_ID, name: "Anterior Chamber & Angle Gross Anatomy", objectives: ACGROSS_OBJECTIVES },
+  { topicId: IRISGROSS_TOPIC_ID, name: "Iris Gross Anatomy", objectives: IRISGROSS_OBJECTIVES },
+  { topicId: PCGROSS_TOPIC_ID, name: "Posterior Chamber Gross Anatomy", objectives: PCGROSS_OBJECTIVES },
+  { topicId: CBGROSS_TOPIC_ID, name: "Ciliary Body Gross Anatomy", objectives: CBGROSS_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -12614,6 +12647,165 @@ const STUDY_PAGES = {
       "This consolidates your existing Post-Cataract-Surgery Corticosteroid Taper and NSAID/CME Prophylaxis content (this topic's sibling objectives) into the combined-therapy safety principle — a cataract surgery patient on both a steroid taper and NSAID who develops either elevated IOP or worsening epithelial/corneal findings during recovery requires distinguishing which drug class is responsible, since the appropriate management differs (adjusting the steroid taper vs. discontinuing the NSAID) despite both being standard, evidence-based components of the same combined regimen.",
     ],
   },
+  "acgross-structure": {
+    name: "Anterior Chamber Boundaries & Gonioscopic Angle Landmarks",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The anterior chamber and its angle contain specific, individually-identifiable gonioscopic landmarks, and knowing them by their anterior-to-posterior sequence directly grounds your existing Aqueous Outflow Pathways and Glaucoma content in clinically examinable anatomy." },
+      { h: "Anterior chamber boundaries", t: "The anterior chamber is bounded anteriorly by the posterior corneal surface and posteriorly by the anterior iris surface, pupil, and the central anterior lens surface (already covered) — filled with aqueous humor (already covered under Aqueous Humor Production & Composition) that flows forward from the posterior chamber (this topic's sibling objective) through the pupil." },
+      { h: "Gonioscopic angle landmarks, anterior to posterior", t: "Where the peripheral cornea meets the iris root, the anterior chamber angle contains, in order from most anterior to most posterior: Schwalbe's line (the peripheral termination of Descemet's membrane, already covered — the most anterior angle landmark), the trabecular meshwork (this topic's sibling objective), the scleral spur (a whitish ridge marking the posterior trabecular meshwork border and ciliary muscle attachment site), and the ciliary body band (the most posterior visible structure, where the iris root inserts) — this specific anterior-to-posterior sequence is the standard gonioscopic examination landmark order used clinically to grade angle structures and assess for angle closure risk." },
+    ],
+    memorizeIt: [
+      "Anterior chamber: bounded by posterior cornea (anterior) and anterior iris/pupil/central lens (posterior).",
+      "Gonioscopic angle landmarks, ANTERIOR to POSTERIOR: Schwalbe's line (Descemet's termination) → trabecular meshwork → scleral spur → ciliary body band.",
+      "Scleral spur: whitish ridge, posterior trabecular meshwork border, ciliary muscle attachment site — a key gonioscopic landmark.",
+    ],
+    applyIt: [
+      "This gives you the specific anatomic sequence directly underlying gonioscopic examination technique, relevant to your existing Glaucoma content — recognizing these landmarks in their correct anterior-to-posterior order (Schwalbe's line, trabecular meshwork, scleral spur, ciliary body band) is the foundational skill for grading angle width and identifying angle closure risk on clinical exam.",
+    ],
+  },
+  "acgross-schlemm": {
+    name: "Trabecular Meshwork & Schlemm's Canal — Angle Anatomy",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The trabecular meshwork and Schlemm's canal together form the conventional aqueous outflow pathway's anatomic substrate, directly grounding your existing Aqueous Outflow Pathways — Trabecular vs. Uveoscleral content in specific structural detail." },
+      { h: "Three trabecular meshwork portions", t: "The trabecular meshwork has three anatomically and functionally distinct portions, in the direction of aqueous flow: the UVEAL meshwork (innermost, largest pore size, least resistance), the CORNEOSCLERAL meshwork (middle layer, progressively smaller pore size), and the JUXTACANALICULAR (cribriform) meshwork (outermost, adjacent to Schlemm's canal's inner wall — this juxtacanalicular layer and the inner wall of Schlemm's canal together provide the GREATEST resistance to aqueous outflow, already relevant to understanding the primary site of pathologic resistance increase in open-angle glaucoma, already covered)." },
+      { h: "Schlemm's canal and collector channels", t: "Aqueous exiting the juxtacanalicular meshwork enters Schlemm's canal, a circumferential channel encircling the angle, which then drains via collector channels into the episcleral venous system (already relevant to existing Episcleral Venous Pressure & IOP Floor content) — completing the conventional (trabecular) outflow pathway already established under Aqueous Outflow Pathways content." },
+    ],
+    memorizeIt: [
+      "Trabecular meshwork, in flow direction: UVEAL (largest pores) → CORNEOSCLERAL → JUXTACANALICULAR (smallest, adjacent to Schlemm's canal).",
+      "Juxtacanalicular meshwork + inner wall of Schlemm's canal = GREATEST outflow resistance site — the likely primary pathologic site in open-angle glaucoma (already covered).",
+      "Schlemm's canal → collector channels → episcleral venous system, completing the conventional outflow pathway (already covered).",
+    ],
+    applyIt: [
+      "This gives you the specific structural detail underlying your existing Aqueous Outflow Pathways and Glaucoma pathophysiology content — understanding that the juxtacanalicular meshwork/inner Schlemm's canal wall junction is the primary resistance site explains why glaucoma medications and surgical procedures (e.g., trabecular bypass devices) that specifically target this junction can effectively lower IOP by addressing the actual anatomic bottleneck in the outflow pathway.",
+    ],
+  },
+  "irisgross-structure": {
+    name: "Iris Layers — Stroma, Dilator & Sphincter Muscles",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The iris's layered structure, including its two smooth muscles with opposing autonomic control, directly grounds your existing Pupillary Light & Near Reflexes and Pharmacologic Pupil Testing content in specific anatomic detail." },
+      { h: "Layers, anterior to posterior", t: "From anterior to posterior, the iris consists of: the anterior border layer (a discontinuous layer of fibroblasts and melanocytes, its density determining iris color already relevant to existing Iris Pigmentation content), the STROMA (containing the sphincter pupillae muscle and blood vessels/nerves), and the posterior pigmented epithelium (two layers, heavily pigmented, continuous with the ciliary body and retinal pigment epithelium developmentally)." },
+      { h: "Sphincter pupillae — parasympathetic", t: "The sphincter pupillae is a circular muscle band near the pupillary margin, within the stroma, innervated by PARASYMPATHETIC fibers (via the short ciliary nerves from the ciliary ganglion, already covered under Parasympathetic Pathway Anatomy) — contraction constricts the pupil (miosis), the effector mechanism already established under Pupillary Light & Near Reflexes content." },
+      { h: "Dilator pupillae — sympathetic", t: "The dilator pupillae is a radially-oriented myoepithelial muscle (a genuinely distinctive fact — it derives from the posterior pigmented epithelium's anterior layer, a muscle of epithelial rather than mesodermal origin) innervated by SYMPATHETIC fibers (via the long ciliary nerves, already covered under Sympathetic Pathway Anatomy/the oculosympathetic chain) — contraction dilates the pupil (mydriasis), the effector mechanism already relevant to existing Horner Syndrome content, where sympathetic pathway disruption impairs this dilator function." },
+    ],
+    memorizeIt: [
+      "Iris layers (anterior→posterior): anterior border layer → stroma (contains sphincter pupillae) → posterior pigmented epithelium (2 layers, contains dilator pupillae's origin).",
+      "Sphincter pupillae: circular, PARASYMPATHETIC (short ciliary nerves, already covered) → miosis.",
+      "Dilator pupillae: radial, myoepithelial (epithelial origin, NOT mesodermal), SYMPATHETIC (long ciliary nerves, already covered) → mydriasis.",
+      "This anatomy directly underlies existing Horner Syndrome (sympathetic/dilator dysfunction) and pharmacologic pupil testing content.",
+    ],
+    applyIt: [
+      "This gives you the precise anatomic and autonomic basis for your existing Horner Syndrome and Pupillary Pathway Clinical Testing content — recognizing that the dilator pupillae is sympathetically innervated explains exactly why Horner syndrome (sympathetic pathway disruption, already covered) impairs pupil dilation specifically, while the parasympathetically-innervated sphincter (and thus pupillary constriction) remains intact, producing the anisocoria that is WORSE in dim light already established under that content.",
+    ],
+  },
+  "irisgross-vascular": {
+    name: "Iris Vascular Supply & Rubeosis Iridis",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The iris receives its blood supply from two named arterial circles, and understanding this normal vascular anatomy sets up recognition of rubeosis iridis (iris neovascularization), a genuinely important clinical sign directly connecting to existing retinal ischemia content." },
+      { h: "Major and minor arterial circles", t: "The MAJOR arterial circle of the iris, formed by the long posterior ciliary arteries and anterior ciliary arteries (already covered under Orbital Arterial Supply content), is located near the iris root/ciliary body junction; branches from the major circle course radially toward the pupil to form the MINOR arterial circle near the pupillary margin — together supplying the iris stroma and its two muscles (this topic's sibling objective)." },
+      { h: "Rubeosis iridis — pathologic neovascularization", t: "Rubeosis iridis is the pathologic growth of abnormal new blood vessels on the iris surface (distinct from and in addition to this normal vascular anatomy), classically triggered by chronic severe retinal ischemia — already relevant to existing Proliferative Diabetic Retinopathy and Central Retinal Vein Occlusion content — via the same VEGF-mediated angiogenic signaling already implicated in those conditions' retinal neovascularization, here manifesting on the iris instead of (or in addition to) the retina." },
+      { h: "Clinical significance — neovascular glaucoma", t: "Rubeosis iridis is a genuine ophthalmic emergency warning sign, since the abnormal new vessels can grow across the anterior chamber angle (already covered under Trabecular Meshwork content) and physically obstruct conventional aqueous outflow, causing neovascular glaucoma — a severe, difficult-to-control form of secondary glaucoma requiring urgent identification and treatment of the underlying ischemic retinal disease driving the VEGF signal, not just IOP-lowering therapy alone." },
+    ],
+    memorizeIt: [
+      "Major arterial circle: near iris root/ciliary body junction, from long posterior + anterior ciliary arteries (already covered). Minor arterial circle: near pupillary margin, from major circle branches.",
+      "Rubeosis iridis = pathologic iris neovascularization, classically from chronic severe retinal ischemia (already covered under Diabetic Retinopathy/CRVO) via VEGF-mediated angiogenesis.",
+      "New vessels can grow across the angle, obstructing outflow → neovascular glaucoma, a severe secondary glaucoma.",
+      "Treatment requires addressing the underlying ischemic retinal disease (VEGF source), not just IOP-lowering alone.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important clinical sign directly extending your existing Proliferative Diabetic Retinopathy and Central Retinal Vein Occlusion content — recognizing rubeosis iridis on slit lamp exam in a patient with known severe diabetic retinopathy or a recent CRVO should immediately raise concern for impending neovascular glaucoma, prompting urgent treatment (e.g., panretinal photocoagulation or anti-VEGF therapy) targeting the underlying retinal ischemia rather than the iris findings alone.",
+    ],
+  },
+  "pcgross-boundaries": {
+    name: "Posterior Chamber Boundaries & Aqueous Flow Path",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The posterior chamber, genuinely distinct from the anterior chamber (this topic's sibling objective), is where aqueous humor is actually secreted, and tracing its precise boundaries clarifies a distinction commonly conflated with the anterior chamber, already relevant to existing Aqueous Humor Production content." },
+      { h: "Boundaries", t: "The posterior chamber is a narrow, triangular space bounded anteriorly by the posterior iris surface, posteriorly by the anterior lens surface and zonular fibers, and peripherally by the ciliary body's pars plicata (this topic's sibling objective) — genuinely distinct from and much smaller than the anterior chamber." },
+      { h: "Aqueous flow path — where secretion actually occurs", t: "Aqueous humor is secreted by the ciliary body's pars plicata (already covered under Aqueous Humor Production & Composition) directly INTO the posterior chamber, not the anterior chamber — it then flows forward through the pupil into the anterior chamber before reaching the trabecular meshwork/angle outflow structures (this topic's sibling objectives) — meaning the posterior chamber, despite being anatomically smaller and less commonly discussed than the anterior chamber, is where aqueous humor dynamics functionally begins." },
+    ],
+    memorizeIt: [
+      "Posterior chamber: bounded by posterior iris (anterior), anterior lens/zonules (posterior), ciliary body pars plicata (peripheral) — distinct from and smaller than the anterior chamber.",
+      "Aqueous humor is SECRETED by the ciliary body pars plicata directly INTO the posterior chamber (already covered under Aqueous Humor Production), not the anterior chamber.",
+      "Aqueous flow: posterior chamber (secretion) → through pupil → anterior chamber → trabecular meshwork/angle outflow (this topic's sibling objectives).",
+    ],
+    applyIt: [
+      "This gives you the precise starting point of your existing Aqueous Humor Production & Composition and Aqueous Outflow Pathways content — clarifying that aqueous secretion begins in the posterior chamber (not the more commonly discussed anterior chamber) sets up this topic's sibling objective on pupillary block, where obstruction of the normal posterior-to-anterior chamber flow path through the pupil causes a dangerous pressure differential between these two spaces.",
+    ],
+  },
+  "pcgross-pupillaryblock": {
+    name: "Pupillary Block Mechanism & Iris Bombé",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy/glaucoma references"],
+    learnIt: [
+      { h: "Overview", t: "Pupillary block is a mechanical obstruction of the normal posterior-to-anterior chamber aqueous flow path (this topic's sibling objective) at the pupil, producing a dangerous pressure differential between the two chambers and a classic angle-closure mechanism." },
+      { h: "Mechanism", t: "When the posterior iris surface makes excessive contact with the anterior lens surface (relative pupillary block, more common with age-related lens growth already covered under Lens Vesicle content, or absolute block from posterior synechiae — iris-to-lens adhesions, often from prior uveitis already covered), aqueous humor secreted into the posterior chamber (this topic's sibling objective) cannot flow freely forward through the pupil into the anterior chamber, causing posterior chamber pressure to build up and exceed anterior chamber pressure." },
+      { h: "Iris bombé", t: "This pressure differential physically bows the peripheral iris FORWARD into a convex configuration — termed 'iris bombé' — pushing the peripheral iris against the trabecular meshwork and angle structures (this topic's sibling objectives), mechanically closing the angle and obstructing conventional aqueous outflow, precipitating acute angle-closure glaucoma, a genuine ophthalmic emergency." },
+    ],
+    memorizeIt: [
+      "Pupillary block: posterior iris-to-lens contact obstructs aqueous flow from posterior chamber to anterior chamber through the pupil.",
+      "Causes: relative block (age-related lens growth) or absolute block (posterior synechiae from prior uveitis, already covered).",
+      "Result: posterior chamber pressure exceeds anterior chamber pressure → iris bombé (peripheral iris bows FORWARD).",
+      "Iris bombé pushes peripheral iris against the angle → mechanical angle closure → acute angle-closure glaucoma (ophthalmic emergency).",
+    ],
+    applyIt: [
+      "This gives you the precise anatomic mechanism for a genuine ophthalmic emergency directly extending your existing posterior/anterior chamber and Aqueous Outflow content — a patient with prior anterior uveitis (already covered) who develops posterior synechiae is at risk for absolute pupillary block and subsequent iris bombé/acute angle closure, explaining why breaking or preventing posterior synechiae with cycloplegic/mydriatic therapy (already covered under Mydriatics & Cycloplegics content) during active uveitis is a genuinely important preventive measure, not just a comfort measure.",
+    ],
+  },
+  "cbgross-regions": {
+    name: "Ciliary Body Regions — Pars Plicata & Pars Plana",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The ciliary body has two anatomically and functionally distinct regions — the pars plicata and pars plana — and this distinction has genuine surgical significance already relevant to your existing Vitreous/Retina surgical content." },
+      { h: "Pars plicata — anterior, secretory", t: "The pars plicata is the anterior, folded portion of the ciliary body, containing approximately 70 ciliary processes — this is the site of aqueous humor secretion (already covered under Aqueous Humor Production & Composition and Posterior Chamber content) and zonular fiber attachment (already covered under EOM/Lens content), making it the functionally active region of the ciliary body." },
+      { h: "Pars plana — posterior, smooth, the surgical entry zone", t: "The pars plana is the posterior, flat, smooth portion of the ciliary body, extending from the pars plicata to the ora serrata (the retina's peripheral termination) — critically, the pars plana is relatively AVASCULAR and does not overlie functional retina or the lens, making it the standard, safe surgical entry zone for PARS PLANA VITRECTOMY (a common posterior segment surgical approach already relevant to existing Retinal Detachment surgical management content), since instruments can be inserted here without damaging the retina or lens." },
+    ],
+    memorizeIt: [
+      "Pars plicata: anterior, ~70 ciliary processes — site of aqueous secretion (already covered) and zonular attachment.",
+      "Pars plana: posterior, flat, smooth, extends to the ora serrata — relatively avascular, does NOT overlie retina or lens.",
+      "Pars plana = standard SAFE surgical entry zone for pars plana vitrectomy — instruments avoid damaging retina/lens.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important surgical-anatomy fact directly extending your existing Retinal Detachment and posterior segment surgical content — understanding why the pars plana specifically (rather than any other ocular entry point) is chosen for vitrectomy access explains the procedure's name and its relative safety, since this is the one region of the ciliary body where a surgical instrument can be inserted without risking direct retinal or lens damage.",
+    ],
+  },
+  "cbgross-muscle": {
+    name: "Ciliary Muscle Fiber Orientations & Function",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The ciliary muscle has three distinct fiber orientations with genuinely different functional roles, and understanding all three (not just the accommodation-relevant circular fibers already covered) extends your existing Accommodation Mechanism and Aqueous Outflow content." },
+      { h: "Longitudinal (meridional) fibers — Brücke's muscle", t: "The longitudinal fibers, also called Brücke's muscle, run from the scleral spur (already covered under Anterior Chamber Angle content) posteriorly toward the choroid — their contraction pulls on the scleral spur and trabecular meshwork, mechanically widening the trabecular meshwork spaces and AIDING conventional aqueous outflow, a genuinely distinct functional role from the accommodation-related circular fibers, and the pharmacologic basis for why cholinergic (miotic) glaucoma medications, already covered, lower IOP partly through this mechanism in addition to pupillary effects." },
+      { h: "Radial fibers", t: "The radial fibers run in an intermediate orientation between the longitudinal and circular fibers, contributing to the overall ciliary muscle contraction that occurs during accommodation, functionally bridging the outflow-facilitating longitudinal fibers and the accommodation-primary circular fibers." },
+      { h: "Circular fibers — Müller's muscle", t: "The circular fibers (Müller's muscle) are oriented like a sphincter around the lens equator — their contraction during accommodation (already covered under The Accommodation Mechanism/Helmholtz Theory content) reduces the diameter of the ciliary muscle ring, releasing zonular tension and allowing the lens to become more spherical/increase in power for near focus." },
+    ],
+    memorizeIt: [
+      "Three ciliary muscle fiber orientations: LONGITUDINAL (Brücke's), RADIAL, CIRCULAR (Müller's).",
+      "Longitudinal (Brücke's): scleral spur to choroid — contraction widens trabecular meshwork spaces, AIDS aqueous outflow (a distinct role from accommodation).",
+      "Circular (Müller's): sphincter-like around lens equator — contraction releases zonular tension for accommodation (already covered under Helmholtz theory).",
+      "Cholinergic (miotic) glaucoma medications (already covered) lower IOP partly via longitudinal fiber contraction aiding outflow, in addition to pupillary miosis.",
+    ],
+    applyIt: [
+      "This extends your existing Accommodation Mechanism (Helmholtz Theory) and Miotics (Direct & Indirect Cholinergic Agonists) content with the outflow-facilitating role of the LONGITUDINAL ciliary muscle fibers — explaining that cholinergic glaucoma medications lower IOP through TWO distinct anatomic mechanisms (pupillary miosis pulling the peripheral iris away from the angle, AND longitudinal ciliary muscle contraction mechanically widening the trabecular meshwork), not just the pupillary effect alone.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -14293,6 +14485,17 @@ const FLASHCARDS = [
   { id: "fc-1275", objectiveId: "lenspharm-perioperative-lubrication", front: "How can untreated dry eye affect cataract surgery outcomes?", back: "An unstable tear film reduces keratometry/biometry measurement accuracy, potentially causing IOL power calculation error and post-op refractive surprise." },
   { id: "fc-1276", objectiveId: "lenspharm-trypan-blue", front: "What structure does trypan blue stain during cataract surgery, and when is it especially valuable?", back: "The anterior lens capsule, during capsulorhexis; especially valuable in mature/white cataracts with an absent red reflex." },
   { id: "fc-1277", objectiveId: "lenspharm-nsaid-steroid-combination", front: "Why are NSAIDs and steroids used together (not as alternatives) after cataract surgery?", back: "They act on complementary, non-redundant parts of the inflammatory cascade — steroids broadly suppress inflammation, NSAIDs specifically target the prostaglandin-mediated CME/miosis pathway." },
+  { id: "fc-1278", objectiveId: "acgross-structure", front: "List the gonioscopic angle landmarks from most anterior to most posterior.", back: "Schwalbe's line → trabecular meshwork → scleral spur → ciliary body band." },
+  { id: "fc-1279", objectiveId: "acgross-schlemm", front: "Which portion of the trabecular meshwork, along with the inner wall of Schlemm's canal, provides the greatest resistance to aqueous outflow?", back: "The juxtacanalicular (cribriform) meshwork." },
+  { id: "fc-1280", objectiveId: "irisgross-structure", front: "What is distinctive about the dilator pupillae's tissue origin compared to most muscles?", back: "It is a myoepithelial muscle, derived from the posterior pigmented epithelium's anterior layer — epithelial, not mesodermal, origin." },
+  { id: "fc-1281", objectiveId: "irisgross-structure", front: "What autonomic innervation controls the sphincter pupillae vs. the dilator pupillae?", back: "Sphincter: parasympathetic (short ciliary nerves) → miosis. Dilator: sympathetic (long ciliary nerves) → mydriasis." },
+  { id: "fc-1282", objectiveId: "irisgross-vascular", front: "What is rubeosis iridis, and what classic conditions trigger it?", back: "Pathologic iris neovascularization, classically triggered by chronic severe retinal ischemia (proliferative diabetic retinopathy, CRVO) via VEGF signaling." },
+  { id: "fc-1283", objectiveId: "irisgross-vascular", front: "What severe secondary glaucoma can rubeosis iridis lead to, and why?", back: "Neovascular glaucoma — new vessels grow across the angle and physically obstruct conventional aqueous outflow." },
+  { id: "fc-1284", objectiveId: "pcgross-boundaries", front: "Where is aqueous humor actually secreted — the anterior or posterior chamber?", back: "The posterior chamber, by the ciliary body's pars plicata, before flowing forward through the pupil into the anterior chamber." },
+  { id: "fc-1285", objectiveId: "pcgross-pupillaryblock", front: "What is iris bombé, and what causes it?", back: "Forward bowing of the peripheral iris from posterior chamber pressure exceeding anterior chamber pressure, due to pupillary block obstructing aqueous flow through the pupil." },
+  { id: "fc-1286", objectiveId: "pcgross-pupillaryblock", front: "What prior condition predisposes to absolute pupillary block via posterior synechiae?", back: "Prior anterior uveitis, causing iris-to-lens adhesions." },
+  { id: "fc-1287", objectiveId: "cbgross-regions", front: "Why is the pars plana chosen as the standard surgical entry site for vitrectomy?", back: "It is relatively avascular and does not overlie the retina or lens, allowing safe instrument insertion." },
+  { id: "fc-1288", objectiveId: "cbgross-muscle", front: "Through what mechanism do longitudinal ciliary muscle fibers (Brücke's muscle) lower IOP?", back: "Contraction pulls on the scleral spur and trabecular meshwork, mechanically widening trabecular meshwork spaces and aiding aqueous outflow." },
 ];
 
 const QUESTIONS = [
@@ -19224,6 +19427,40 @@ const QUESTIONS = [
       b: "Correct — povidone-iodine's antiseptic action reduces ocular surface bioburden BEFORE the eye is surgically entered, while intracameral antibiotic injection provides targeted, high local antimicrobial concentration INSIDE the eye at the END of surgery — complementary strategies addressing different points in the infection-prevention timeline, which is why both are used together in modern protocols.",
       c: "Incorrect — povidone-iodine antisepsis does not eliminate the additional benefit of intracameral antibiotic prophylaxis; both are recommended together.",
       d: "Incorrect — both are standard components of modern prophylaxis protocols, not alternatives used only in the other's absence.",
+    },
+  },
+  {
+    id: "q-291", objectiveId: "irisgross-vascular", type: "Clinical application", difficulty: "Hard",
+    stem: "A patient with a history of central retinal vein occlusion presents 3 months later with new abnormal blood vessels visible on the iris surface and an acutely elevated IOP. What is the diagnosis, and what is the underlying driver that must be addressed?",
+    choices: [
+      { id: "a", text: "Simple age-related iris atrophy; no specific treatment needed" },
+      { id: "b", text: "Neovascular glaucoma from rubeosis iridis, driven by VEGF signaling from retinal ischemia — the underlying ischemic retina must be treated, not just the IOP" },
+      { id: "c", text: "Pigment dispersion syndrome; treat with laser peripheral iridotomy" },
+      { id: "d", text: "A normal, expected finding after CRVO requiring no intervention" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — new abnormal iris vessels are not a benign age-related finding; they represent pathologic neovascularization.",
+      b: "Correct — this presentation is classic for rubeosis iridis progressing to neovascular glaucoma, driven by VEGF signaling from chronic retinal ischemia after CRVO (already covered); the new vessels obstruct the angle, but effective treatment requires addressing the underlying ischemic retina (e.g., panretinal photocoagulation or anti-VEGF therapy), not IOP-lowering therapy alone.",
+      c: "Incorrect — pigment dispersion syndrome involves iris pigment epithelium shedding, not neovascularization, and is unrelated to CRVO.",
+      d: "Incorrect — rubeosis iridis and neovascular glaucoma are serious complications requiring urgent recognition and treatment, not expected benign findings.",
+    },
+  },
+  {
+    id: "q-292", objectiveId: "pcgross-pupillaryblock", type: "Clinical application", difficulty: "Hard",
+    stem: "A patient with a history of anterior uveitis develops posterior synechiae. What downstream mechanism explains why this predisposes to acute angle-closure glaucoma?",
+    choices: [
+      { id: "a", text: "The synechiae directly scar the trabecular meshwork" },
+      { id: "b", text: "Posterior synechiae cause absolute pupillary block, preventing aqueous flow from the posterior to anterior chamber, so posterior chamber pressure exceeds anterior chamber pressure and bows the peripheral iris forward (iris bombé), mechanically closing the angle" },
+      { id: "c", text: "Synechiae increase aqueous production, directly raising IOP" },
+      { id: "d", text: "Synechiae have no relationship to angle closure risk" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — posterior synechiae are iris-to-lens adhesions; they do not directly scar the trabecular meshwork.",
+      b: "Correct — posterior synechiae cause absolute pupillary block, trapping aqueous in the posterior chamber; the resulting pressure differential bows the peripheral iris forward (iris bombé), pushing it against the angle structures and mechanically closing the angle, precipitating acute angle-closure glaucoma.",
+      c: "Incorrect — the mechanism is outflow obstruction via mechanical angle closure, not increased aqueous production.",
+      d: "Incorrect — posterior synechiae are a genuine, well-established risk factor for pupillary block and subsequent angle closure.",
     },
   },
 ];
