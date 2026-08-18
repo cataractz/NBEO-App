@@ -695,6 +695,53 @@ const SIGNALDETECT_OBJECTIVES = [
   { id: "sdt-application", name: "Signal Detection Theory Applied to Automated Perimetry", built: true },
 ];
 
+const LIDGROSS_TOPIC_ID = "t-8-0-0"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Anatomy(Gross)(0) > Eyelid(0)
+// Structural/localization shape. Ties directly into existing Eyelid
+// Protective Functions physiology and Ectropion/Entropion, Chalazion/
+// Hordeolum pathology content already built.
+const LIDGROSS_OBJECTIVES = [
+  { id: "lidgross-layers", name: "Eyelid Layers — Anterior & Posterior Lamella", built: true },
+  { id: "lidgross-tarsal-glands", name: "Tarsal Plate & Glandular Structures (Meibomian, Zeis, Moll)", built: true },
+];
+
+const EYEBROWGROSS_TOPIC_ID = "t-8-0-1"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Anatomy(Gross)(0) > Eyebrow(1)
+const EYEBROWGROSS_OBJECTIVES = [
+  { id: "eyebrowgross-structure", name: "Eyebrow Musculature & Structure", built: true },
+  { id: "eyebrowgross-function", name: "Eyebrow Protective & Compensatory Function", built: true },
+];
+
+const LACSYSGROSS_TOPIC_ID = "t-8-0-2"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Anatomy(Gross)(0) > Lacrimal system(2)
+// Ties directly into existing Tear Film & Lacrimal Physiology and
+// Dacryocystitis/NLDO pathology content.
+const LACSYSGROSS_OBJECTIVES = [
+  { id: "lacsysgross-secretory", name: "Lacrimal Gland — Secretory Anatomy", built: true },
+  { id: "lacsysgross-drainage", name: "Lacrimal Drainage Apparatus — Puncta to Nasolacrimal Duct", built: true },
+];
+
+const ORBITGROSS_TOPIC_ID = "t-8-0-3"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Anatomy(Gross)(0) > Orbit(3)
+// Ties directly into existing Sinusitis & Orbital Complications and
+// Preseptal vs. Orbital Cellulitis pathology content.
+const ORBITGROSS_OBJECTIVES = [
+  { id: "orbitgross-bones", name: "Orbital Bony Walls & Adjacent Sinuses", built: true },
+  { id: "orbitgross-fissures", name: "Orbital Fissures, Foramina & Neurovascular Contents", built: true },
+];
+
+const EOMGROSS_TOPIC_ID = "t-8-0-4"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Anatomy(Gross)(0) > Extraocular muscles(4)
+// Ties directly into existing EOM Physiology (Hering's/Sherrington's Law)
+// and Cranial Nerve Palsy content already built.
+const EOMGROSS_OBJECTIVES = [
+  { id: "eomgross-origins-insertions", name: "EOM Origins, Insertions & the Annulus of Zinn", built: true },
+  { id: "eomgross-spiral-tillaux", name: "Spiral of Tillaux & Muscle Insertion Distances", built: true },
+];
+
+const ORBITBLOOD_TOPIC_ID = "t-8-0-5"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Anatomy(Gross)(0) > Blood supply(5)
+// Ties directly into existing Carotid Arterial Supply and Preseptal vs.
+// Orbital Cellulitis content.
+const ORBITBLOOD_OBJECTIVES = [
+  { id: "orbitblood-arterial", name: "Orbital Arterial Supply — Ophthalmic Artery Branches", built: true },
+  { id: "orbitblood-venous", name: "Orbital Venous Drainage & the Cavernous Sinus", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -1682,6 +1729,9 @@ const TOPIC_OBJECTIVES = {
   [ACQUIREDPERC_TOPIC_ID]: ACQUIREDPERC_OBJECTIVES, [TEMPORALPERC_TOPIC_ID]: TEMPORALPERC_OBJECTIVES,
   [ENTOPTIC_TOPIC_ID]: ENTOPTIC_OBJECTIVES, [PSYCHOPHYSMETHODS_TOPIC_ID]: PSYCHOPHYSMETHODS_OBJECTIVES,
   [PSYCHOPHYSSCALING_TOPIC_ID]: PSYCHOPHYSSCALING_OBJECTIVES, [SIGNALDETECT_TOPIC_ID]: SIGNALDETECT_OBJECTIVES,
+  [LIDGROSS_TOPIC_ID]: LIDGROSS_OBJECTIVES, [EYEBROWGROSS_TOPIC_ID]: EYEBROWGROSS_OBJECTIVES,
+  [LACSYSGROSS_TOPIC_ID]: LACSYSGROSS_OBJECTIVES, [ORBITGROSS_TOPIC_ID]: ORBITGROSS_OBJECTIVES,
+  [EOMGROSS_TOPIC_ID]: EOMGROSS_OBJECTIVES, [ORBITBLOOD_TOPIC_ID]: ORBITBLOOD_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -1837,6 +1887,12 @@ const CONTENT_TOPICS = [
   { topicId: PSYCHOPHYSMETHODS_TOPIC_ID, name: "Basic Psychophysical Methods & Theory", objectives: PSYCHOPHYSMETHODS_OBJECTIVES },
   { topicId: PSYCHOPHYSSCALING_TOPIC_ID, name: "Psychophysical Scaling Methods & Theory", objectives: PSYCHOPHYSSCALING_OBJECTIVES },
   { topicId: SIGNALDETECT_TOPIC_ID, name: "Signal Detection Methods & Theory", objectives: SIGNALDETECT_OBJECTIVES },
+  { topicId: LIDGROSS_TOPIC_ID, name: "Eyelid Gross Anatomy", objectives: LIDGROSS_OBJECTIVES },
+  { topicId: EYEBROWGROSS_TOPIC_ID, name: "Eyebrow Gross Anatomy", objectives: EYEBROWGROSS_OBJECTIVES },
+  { topicId: LACSYSGROSS_TOPIC_ID, name: "Lacrimal System Gross Anatomy", objectives: LACSYSGROSS_OBJECTIVES },
+  { topicId: ORBITGROSS_TOPIC_ID, name: "Orbital Gross Anatomy", objectives: ORBITGROSS_OBJECTIVES },
+  { topicId: EOMGROSS_TOPIC_ID, name: "Extraocular Muscle Gross Anatomy", objectives: EOMGROSS_OBJECTIVES },
+  { topicId: ORBITBLOOD_TOPIC_ID, name: "Orbital Blood Supply", objectives: ORBITBLOOD_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -11127,6 +11183,248 @@ const STUDY_PAGES = {
       "This directly extends your existing Visual Field Defect Localization content by explaining WHY a printed Humphrey visual field report includes false-positive/false-negative reliability percentages alongside the actual sensitivity data — a field showing an apparent new defect but also a high false-negative rate should prompt reliability concerns and re-testing before concluding the defect represents true disease progression.",
     ],
   },
+  "lidgross-layers": {
+    name: "Eyelid Layers — Anterior & Posterior Lamella",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The eyelid is organized into five structural layers, conceptually grouped into an anterior lamella and a posterior lamella separated by the orbital septum/tarsal plate plane — this two-lamella framework is the clinically essential model for understanding both normal lid mechanics and the lid malposition disorders already covered under Ectropion/Entropion." },
+      { h: "The five layers, front to back", t: "From anterior to posterior: (1) skin — the thinnest skin in the body, with minimal subcutaneous fat; (2) orbicularis oculi muscle — the protractor (closing) muscle, already covered under Blink Reflex Mechanics; (3) orbital septum — a fibrous membrane that is the critical anatomic boundary already established under Preseptal vs. Orbital Cellulitis, separating preseptal from orbital (postseptal) space; (4) tarsal plate with the levator aponeurosis/Müller's muscle (retractors, already relevant to Ptosis) attaching to its anterior-superior surface; (5) palpebral conjunctiva — the innermost mucosal layer." },
+      { h: "Anterior vs. posterior lamella — the clinical framework", t: "The ANTERIOR lamella (skin + orbicularis) and POSTERIOR lamella (tarsus + conjunctiva) are separated by the gray line at the lid margin and the orbital septum posteriorly — this division directly explains the mechanism of cicatricial ectropion (anterior lamella shortening/scarring pulls the lid margin AWAY from the globe, already covered) versus cicatricial entropion (posterior lamella scarring/contracture pulls the lid margin TOWARD the globe), giving you the precise anatomic basis for a distinction previously covered only clinically." },
+    ],
+    memorizeIt: [
+      "Five eyelid layers (anterior→posterior): skin → orbicularis oculi → orbital septum → tarsus (+levator aponeurosis/Müller's) → palpebral conjunctiva.",
+      "Anterior lamella = skin + orbicularis. Posterior lamella = tarsus + conjunctiva. Separated by the gray line (lid margin) and orbital septum.",
+      "Cicatricial ECTROPION = anterior lamella shortening/scarring pulls lid margin AWAY from globe.",
+      "Cicatricial ENTROPION = posterior lamella scarring/contracture pulls lid margin TOWARD globe (already covered clinically under Ectropion/Entropion).",
+    ],
+    applyIt: [
+      "This gives you the precise anatomic mechanism underlying your existing Ectropion/Entropion content — recognizing WHICH lamella is scarred/shortened on exam (anterior skin scarring vs. posterior conjunctival scarring, e.g., from chemical burns or Stevens-Johnson syndrome) directly predicts whether the resulting lid malposition will be cicatricial ectropion or cicatricial entropion, a genuinely useful diagnostic and surgical-planning distinction.",
+    ],
+  },
+  "lidgross-tarsal-glands": {
+    name: "Tarsal Plate & Glandular Structures (Meibomian, Zeis, Moll)",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The tarsal plate is a dense fibrous connective tissue structure providing the eyelid's structural rigidity, and it houses the meibomian glands, while two additional distinct glandular structures (Zeis and Moll) are located at the lid margin rather than within the tarsus — this glandular anatomy directly explains the internal-vs-external hordeolum distinction already covered under Chalazion/Hordeolum." },
+      { h: "Tarsal plate and meibomian glands", t: "The tarsal plate (superior tarsus larger than inferior tarsus) is a dense collagenous structure giving the lid its shape and rigidity, containing the vertically-oriented meibomian (tarsal) glands — large sebaceous glands already covered under Meibomian Gland Function & Lipid Secretion, whose ducts open along the posterior lid margin." },
+      { h: "Zeis and Moll glands — lid margin structures", t: "Zeis glands are small sebaceous glands directly associated with eyelash follicles (analogous to sebaceous glands elsewhere on skin), while Moll glands are modified apocrine sweat glands also near the lash follicles — both are located ANTERIORLY at the lid margin, distinct from the posteriorly-located meibomian glands within the tarsus." },
+      { h: "Clinical correlation — internal vs. external hordeolum", t: "This anatomic distinction directly explains the internal-vs-external hordeolum classification already covered: an EXTERNAL hordeolum (stye) is an acute infection of a Zeis or Moll gland at the anterior lid margin, while an INTERNAL hordeolum is an acute infection of a meibomian gland within the tarsus — and a chalazion (already covered) is specifically a CHRONIC, typically sterile, granulomatous inflammation of an obstructed meibomian gland, not an acute infection." },
+    ],
+    memorizeIt: [
+      "Tarsal plate: dense collagenous structure providing lid rigidity; contains the meibomian (tarsal) glands, vertically oriented, ducts open at the posterior lid margin.",
+      "Zeis glands: sebaceous, associated with lash follicles, ANTERIOR lid margin. Moll glands: modified apocrine sweat glands, also anterior/near lash follicles.",
+      "EXTERNAL hordeolum = acute infection of Zeis/Moll gland (anterior). INTERNAL hordeolum = acute infection of meibomian gland (within tarsus).",
+      "Chalazion = CHRONIC, typically sterile granulomatous inflammation of an obstructed meibomian gland — distinct from acute hordeolum infection (already covered).",
+    ],
+    applyIt: [
+      "This gives you the precise glandular anatomy underlying your existing Chalazion/Hordeolum content — a tender, acutely inflamed lesion at the anterior lash-line margin is an external hordeolum (Zeis/Moll), while a similar acute lesion pointing from within the tarsal conjunctival surface is an internal hordeolum (meibomian gland), and a painless, chronic, slowly-enlarging nodule is a chalazion, three genuinely distinguishable entities sharing overlapping terminology that this anatomy makes precise.",
+    ],
+  },
+  "eyebrowgross-structure": {
+    name: "Eyebrow Musculature & Structure",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The eyebrow's position and mobility are governed by a small set of specific facial muscles with opposing actions, directly relevant to interpreting compensatory brow position already referenced under existing Ptosis content." },
+      { h: "Elevator: frontalis", t: "The frontalis muscle (part of the occipitofrontalis, innervated by CN VII/facial nerve — already covered under Head & Neck Anatomy) elevates the eyebrow and produces horizontal forehead wrinkles; it has no bony origin/insertion at the brow itself, instead interdigitating with the orbicularis oculi and corrugator muscles at the brow." },
+      { h: "Depressors: corrugator supercilii, procerus, orbicularis oculi", t: "The corrugator supercilii draws the eyebrows medially and downward (producing vertical glabellar frown lines — a classic cosmetic botulinum toxin target), the procerus draws the medial brow downward (producing horizontal nasal bridge wrinkles), and the superior orbicularis oculi fibers also contribute to brow depression — all three are also CN VII-innervated, like frontalis." },
+    ],
+    memorizeIt: [
+      "Frontalis: elevates the eyebrow, CN VII-innervated, produces horizontal forehead wrinkles.",
+      "Corrugator supercilii: draws brows medially/downward, produces vertical glabellar frown lines.",
+      "Procerus: draws medial brow downward, produces horizontal nasal bridge wrinkles.",
+      "All eyebrow musculature is CN VII (facial nerve)-innervated, consistent with existing Head & Neck Anatomy content on CN VII's motor distribution.",
+    ],
+    applyIt: [
+      "This gives you the muscular basis for a finding already referenced under your existing Ptosis content: chronic frontalis overaction (visible as deep horizontal forehead wrinkles and an elevated brow position) is a compensatory mechanism patients with ptosis unconsciously develop to help lift the eyelid, and recognizing this sign on exam is a genuine clinical clue supporting a ptosis diagnosis even before formally measuring lid position.",
+    ],
+  },
+  "eyebrowgross-function": {
+    name: "Eyebrow Protective & Compensatory Function",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond its expressive/aesthetic role, the eyebrow serves a genuine mechanical protective function for the eye, and its position provides diagnostically useful compensatory information in several conditions already covered elsewhere on this platform." },
+      { h: "Sweat and debris channeling", t: "The eyebrow's arched shape and hair orientation function to channel sweat, rain, and airborne debris LATERALLY away from the eye rather than allowing it to drip directly into the palpebral fissure — a simple but genuine mechanical protective function, analogous in principle to the eyelashes' role in filtering airborne particles." },
+      { h: "Brow position as a compensatory sign", t: "As established under this topic's sibling objective, chronic frontalis overaction elevates brow position as a compensatory mechanism in ptosis — importantly, this means brow position must be manually stabilized (the examiner holding the brow still with a thumb) during formal ptosis measurement (already covered), since an elevated, compensating brow can mask the true severity of lid droop if not controlled for during the exam." },
+    ],
+    memorizeIt: [
+      "Eyebrow shape/hair orientation channels sweat and debris laterally away from the eye — a genuine mechanical protective function.",
+      "Chronic frontalis overaction (elevated brow, deep forehead wrinkles) is a compensatory sign of underlying ptosis.",
+      "The examiner must manually immobilize the brow (thumb pressure) during formal ptosis measurement to prevent brow compensation from masking true lid position — a key exam technique point.",
+    ],
+    applyIt: [
+      "This gives you a genuinely practical examination-technique point extending your existing Ptosis differential content: failing to stabilize the brow during margin-reflex-distance measurement can cause a clinician to underestimate true ptosis severity, since the patient's own compensatory frontalis overaction is actively (if unconsciously) elevating the lid during the very measurement meant to quantify how low it truly sits at rest.",
+    ],
+  },
+  "lacsysgross-secretory": {
+    name: "Lacrimal Gland — Secretory Anatomy",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The lacrimal secretory apparatus consists of the main lacrimal gland (reflex tearing) and smaller accessory glands (basal tearing), a structural division that directly grounds your existing Lacrimal Secretion & Blink-Mediated Distribution physiology content in specific anatomic structures." },
+      { h: "Main lacrimal gland", t: "The main lacrimal gland sits in the lacrimal fossa of the frontal bone, in the superotemporal orbit, and is anatomically divided into an ORBITAL lobe and a smaller PALPEBRAL lobe by the levator aponeurosis passing between them — a surgically important landmark, since the palpebral lobe can be visualized by everting the upper lid, while the orbital lobe cannot be directly examined without orbital exploration." },
+      { h: "Accessory glands of Krause and Wolfring", t: "The accessory lacrimal glands of Krause (located in the conjunctival fornices) and Wolfring (located along the superior tarsal border) are histologically similar to the main lacrimal gland but are responsible for continuous BASAL tear secretion, distinct from the main gland's REFLEX secretion in response to irritation, emotion, or corneal stimulation — directly explaining the physiologic distinction already established under Lacrimal Secretion content between baseline tear production and reflex tearing." },
+    ],
+    memorizeIt: [
+      "Main lacrimal gland: superotemporal orbit, lacrimal fossa of frontal bone; divided into orbital and palpebral lobes by the levator aponeurosis.",
+      "Palpebral lobe is visible on upper lid eversion; orbital lobe is not directly examinable without orbital exploration.",
+      "Accessory glands of Krause (fornices) and Wolfring (superior tarsal border): responsible for continuous BASAL tear secretion.",
+      "Main lacrimal gland: responsible for REFLEX tear secretion (irritation, emotion, corneal stimulation) — distinct anatomic source from basal secretion.",
+    ],
+    applyIt: [
+      "This gives you the precise anatomic source for the basal-vs-reflex tear secretion distinction already established under your existing Lacrimal Secretion & Blink-Mediated Distribution content — a patient with intact accessory gland function (Krause/Wolfring) but main lacrimal gland dysfunction may have adequate basal tearing but a blunted reflex tearing response to irritation, a genuinely useful framework for interpreting certain patterns of dry eye complaint.",
+    ],
+  },
+  "lacsysgross-drainage": {
+    name: "Lacrimal Drainage Apparatus — Puncta to Nasolacrimal Duct",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The lacrimal drainage apparatus is a sequential anatomic pathway from the ocular surface to the nasal cavity, and knowing each segment gives you the precise structural basis for localizing obstruction already relevant to your existing Dacryocystitis/NLDO content." },
+      { h: "The drainage sequence", t: "Tears drain sequentially through: the superior and inferior PUNCTA (small openings at the medial aspect of each lid margin) → superior and inferior CANALICULI (each roughly 8-10mm long, initially vertical then turning horizontal) → these typically join to form a COMMON CANALICULUS before entering the lacrimal sac (though anatomic variation exists) → the LACRIMAL SAC (situated in the lacrimal fossa, formed by the lacrimal and maxillary bones) → the NASOLACRIMAL DUCT (traveling through a bony canal) → opening into the INFERIOR MEATUS of the nasal cavity, beneath the inferior turbinate." },
+      { h: "Localizing obstruction by site", t: "This sequential anatomy directly explains the clinical presentation differences already implied under Dacryocystitis/NLDO: obstruction at the level of the NASOLACRIMAL DUCT (the most common site, particularly congenital NLDO from a persistent membrane at the duct's nasal opening, the valve of Hasner) causes tearing (epiphora) with an intact, non-infected lacrimal sac initially, while obstruction or infection AT the lacrimal sac itself (dacryocystitis) produces the classic medial canthal swelling, erythema, and tenderness with possible reflux of purulent material through the puncta on sac compression." },
+    ],
+    memorizeIt: [
+      "Drainage sequence: puncta → canaliculi → common canaliculus → lacrimal sac (lacrimal fossa) → nasolacrimal duct → inferior meatus (beneath inferior turbinate).",
+      "Valve of Hasner = membrane at the nasolacrimal duct's nasal opening — most common site of congenital NLDO when it fails to open/canalize.",
+      "Obstruction at the nasolacrimal duct level → epiphora with initially non-infected sac.",
+      "Obstruction/infection AT the lacrimal sac (dacryocystitis, already covered) → medial canthal swelling/erythema/tenderness, possible purulent reflux through puncta on sac compression.",
+    ],
+    applyIt: [
+      "This gives you the precise structural roadmap underlying your existing Dacryocystitis/NLDO content — recognizing that congenital NLDO is most commonly a failure of the valve of Hasner to canalize (rather than a more proximal obstruction) explains why gentle lacrimal sac massage (Crigler massage, hydrostatically forcing the membrane open) is a reasonable first-line treatment before probing is considered in a persistently tearing infant.",
+    ],
+  },
+  "orbitgross-bones": {
+    name: "Orbital Bony Walls & Adjacent Sinuses",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The bony orbit is a pyramidal structure formed by seven bones and immediately bordered by three paranasal sinuses — this sinus proximity directly explains the mechanism of your existing Sinusitis & Its Orbital Complications content, and the specific bone thicknesses explain characteristic fracture patterns." },
+      { h: "The seven orbital bones", t: "The orbit is formed by contributions from the frontal, zygomatic, maxillary, ethmoid, lacrimal, palatine, and sphenoid bones — a genuinely high-yield fact for identifying fracture sites and surgical landmarks on imaging." },
+      { h: "Medial wall — the lamina papyracea", t: "The medial orbital wall is formed largely by the ethmoid bone's lamina papyracea ('paper layer') — the thinnest bone in the orbit, directly bordering the ethmoid sinus air cells, already established under Sinusitis & Its Orbital Complications as the primary anatomic reason ethmoid sinusitis so readily spreads into the orbit, since this exceptionally thin bony barrier offers minimal resistance to infectious spread." },
+      { h: "Orbital floor and roof — sinus relationships and fracture risk", t: "The orbital floor is formed largely by the maxillary bone, directly overlying the maxillary sinus — its relative thinness makes it the classic site of 'blowout' fractures from blunt orbital trauma, which can entrap the inferior rectus or inferior oblique muscle (already relevant to existing EOM content) and cause restrictive diplopia; the orbital roof, formed by the frontal bone, separates the orbit from the anterior cranial fossa and frontal sinus, and roof fractures carry the added risk of intracranial involvement." },
+    ],
+    memorizeIt: [
+      "Seven orbital bones: frontal, zygomatic, maxillary, ethmoid, lacrimal, palatine, sphenoid.",
+      "Medial wall = ethmoid bone's lamina papyracea — thinnest orbital bone, borders the ethmoid sinus (already covered under Sinusitis & Orbital Complications' spread mechanism).",
+      "Orbital floor = maxillary bone, overlies maxillary sinus — classic 'blowout' fracture site; can entrap inferior rectus/inferior oblique → restrictive diplopia.",
+      "Orbital roof = frontal bone, separates orbit from anterior cranial fossa/frontal sinus — roof fractures carry intracranial risk.",
+    ],
+    applyIt: [
+      "This gives you the precise bony basis for your existing Sinusitis & Its Orbital Complications content — the lamina papyracea's extreme thinness is the specific anatomic reason ethmoid sinusitis is the most common sinus source of orbital cellulitis, and extends to a new clinical scenario: a patient with restricted upgaze and diplopia after blunt orbital trauma should raise suspicion for an orbital floor blowout fracture with inferior rectus entrapment, a distinct mechanism from the cranial nerve palsies already covered under Head & Neck Anatomy.",
+    ],
+  },
+  "orbitgross-fissures": {
+    name: "Orbital Fissures, Foramina & Neurovascular Contents",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Three key orbital apertures — the optic canal, superior orbital fissure, and inferior orbital fissure — carry specific, distinguishable neurovascular bundles into and out of the orbit, giving precise anatomic grounding to cranial nerve content already covered under Head & Neck Anatomy." },
+      { h: "Optic canal", t: "The optic canal, within the lesser wing of the sphenoid, transmits CN II (optic nerve) and the ophthalmic artery (already covered under Carotid Arterial Supply to the Eye & Brain) — its bony confines mean it is a site where optic nerve compression (e.g., from adjacent sphenoid pathology or traumatic canal fracture) can cause vision loss independent of globe injury." },
+      { h: "Superior orbital fissure", t: "The superior orbital fissure, between the greater and lesser wings of the sphenoid, transmits CN III (oculomotor), CN IV (trochlear), CN VI (abducens), the ophthalmic division of CN V (V1, trigeminal), and the superior ophthalmic vein — meaning a lesion at this single location (superior orbital fissure syndrome) can produce a combined CN III/IV/VI palsy with V1 sensory loss, a genuinely distinct and more extensive presentation than any single isolated cranial nerve palsy already covered." },
+      { h: "Inferior orbital fissure", t: "The inferior orbital fissure, below the superior orbital fissure, transmits the maxillary division of CN V (V2, trigeminal) and the infraorbital vessels — clinically relevant because infraorbital hypoesthesia (V2 distribution — cheek, upper lip, upper teeth) is a classic finding in orbital floor blowout fractures (this topic's sibling objective), since the infraorbital nerve travels along the orbital floor itself." },
+    ],
+    memorizeIt: [
+      "Optic canal: CN II + ophthalmic artery.",
+      "Superior orbital fissure: CN III, IV, VI, V1, superior ophthalmic vein — combined lesion here (superior orbital fissure syndrome) produces multi-nerve palsy + V1 sensory loss.",
+      "Inferior orbital fissure: V2 + infraorbital vessels — infraorbital nerve travels along the orbital floor, explaining V2 hypoesthesia in floor fractures.",
+      "A blowout fracture with cheek/upper lip numbness (V2 distribution) reflects infraorbital nerve involvement along the fractured orbital floor.",
+    ],
+    applyIt: [
+      "This gives you the precise neurovascular content of each orbital aperture, directly extending your existing Head & Neck Anatomy cranial nerve content and orbital floor fracture content (this topic's sibling objective) — a patient with a blowout fracture presenting with BOTH restricted upgaze (inferior rectus entrapment) AND cheek/upper lip numbness (infraorbital/V2 nerve involvement) is demonstrating two distinct injury mechanisms from the same fracture, both explained by structures traveling along or through the orbital floor.",
+    ],
+  },
+  "eomgross-origins-insertions": {
+    name: "EOM Origins, Insertions & the Annulus of Zinn",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The extraocular muscles' anatomic origins directly explain a key exception already implicit in existing EOM Physiology content — the inferior oblique is anatomically distinct from the other five EOMs in its origin, with direct clinical implications." },
+      { h: "The annulus of Zinn and the four recti", t: "The four rectus muscles (superior, inferior, medial, lateral) all arise from the annulus of Zinn (common tendinous ring), a fibrous ring at the orbital apex surrounding the optic canal and part of the superior orbital fissure — meaning their origin is at the very back of the orbit, running forward to insert on the globe anterior to the equator." },
+      { h: "The superior oblique — origin and the trochlea", t: "The superior oblique also arises near the orbital apex (from the sphenoid bone, adjacent to but not strictly part of the annulus of Zinn) but takes a unique course: it runs forward, passes through the TROCHLEA (a fibrocartilaginous pulley on the superomedial orbital rim), and then reflects backward and laterally to insert on the superotemporal globe — this pulley mechanism is why superior oblique's functional pulling direction is determined by the trochlea's position, not by its actual muscle origin." },
+      { h: "The inferior oblique — the anatomic exception", t: "Unlike every other EOM, the inferior oblique originates ANTERIORLY, from the orbital floor near the lacrimal fossa (maxillary bone), NOT from the orbital apex/annulus of Zinn — it then courses posterolaterally beneath the inferior rectus to insert on the posterolateral globe, making it the only EOM without a posterior orbital apex origin, a genuinely distinguishing anatomic fact." },
+    ],
+    memorizeIt: [
+      "Four recti (SR, IR, MR, LR): all originate from the annulus of Zinn at the orbital apex.",
+      "Superior oblique: originates near the orbital apex, but its functional pulling direction is set by the TROCHLEA (a pulley on the superomedial orbital rim), not its origin.",
+      "Inferior oblique: the ONE exception — originates ANTERIORLY from the orbital floor (near the lacrimal fossa), not from the orbital apex/annulus of Zinn.",
+      "This anatomic exception (inferior oblique's anterior origin) explains why it courses beneath the inferior rectus to reach its posterolateral globe insertion.",
+    ],
+    applyIt: [
+      "This extends your existing EOM Physiology (Hering's/Sherrington's Law) content with the structural basis for why the superior oblique's action is described relative to the trochlea rather than its true muscle origin, and gives a genuinely distinguishing anatomic fact (inferior oblique's unique anterior orbital-floor origin) that also explains its anatomic proximity to the lacrimal sac, relevant to surgical approaches in that region.",
+    ],
+  },
+  "eomgross-spiral-tillaux": {
+    name: "Spiral of Tillaux & Muscle Insertion Distances",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The four rectus muscles insert on the globe at progressively increasing distances from the corneal limbus, a pattern known as the spiral of Tillaux — genuinely practical knowledge for strabismus surgery planning and for avoiding globe perforation during periocular procedures." },
+      { h: "The spiral of Tillaux insertion order", t: "In increasing distance from the limbus, the rectus insertion order is: medial rectus (~5.5mm, the closest) → inferior rectus (~6.5mm) → lateral rectus (~6.9mm) → superior rectus (~7.7mm, the farthest) — tracing a gradually widening spiral around the globe." },
+      { h: "Clinical relevance", t: "This spiral pattern matters for strabismus surgery (already relevant to existing Amblyopia/Strabismus content), since recession or resection procedures on a given rectus muscle must account for its specific baseline insertion distance, and for general ocular procedures near the limbus, since knowing that the medial rectus inserts closest to the limbus means medial periocular injections/procedures carry a theoretically higher risk of inadvertent muscle involvement at a given distance from the limbus compared to the same distance elsewhere." },
+    ],
+    memorizeIt: [
+      "Spiral of Tillaux insertion order (limbus outward): Medial Rectus (~5.5mm) < Inferior Rectus (~6.5mm) < Lateral Rectus (~6.9mm) < Superior Rectus (~7.7mm).",
+      "Mnemonic: alphabetical-ish clockwise/counterclockwise spiral, MR closest, SR farthest.",
+      "Clinically relevant for strabismus surgery planning (recession/resection distances) and for anatomic awareness during periocular procedures near the limbus.",
+    ],
+    applyIt: [
+      "This gives you a genuinely practical piece of surgical anatomy directly relevant to your existing Amblyopia/Strabismus content — strabismus surgeons plan recession (weakening) or resection (strengthening) procedures in millimeters relative to each specific muscle's baseline insertion distance from the spiral of Tillaux, meaning the same numeric surgical adjustment means something different in absolute globe position depending on which of the four recti is being operated on.",
+    ],
+  },
+  "orbitblood-arterial": {
+    name: "Orbital Arterial Supply — Ophthalmic Artery Branches",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The ophthalmic artery, already established under Carotid Arterial Supply to the Eye & Brain as the ICA's first major intracranial branch, gives rise to numerous additional orbital branches beyond the central retinal and posterior ciliary arteries previously covered, including a clinically important anastomosis with the external carotid circulation." },
+      { h: "Additional ophthalmic artery branches", t: "Beyond the central retinal and posterior ciliary arteries (already covered), the ophthalmic artery also gives rise to the lacrimal artery (supplying the lacrimal gland), muscular branches (supplying the EOMs), and supraorbital/supratrochlear arteries (supplying the forehead and upper lid, exiting the orbit anteriorly) — together supplying essentially the entire orbital contents from this single arterial source." },
+      { h: "The dangerous medial canthal anastomosis", t: "Terminal branches of the ophthalmic artery (internal carotid system) anastomose with branches of the facial/angular artery (external carotid system) around the medial canthus — a genuinely important clinical fact, since this anastomosis is the anatomic basis for the rare but devastating complication of retinal artery occlusion and vision loss following periocular cosmetic filler injection, where injected filler material can travel retrograde through this connection from the external to the internal carotid (ophthalmic artery) circulation, ultimately embolizing the central retinal artery already covered under CRAO content." },
+    ],
+    memorizeIt: [
+      "Ophthalmic artery branches (beyond central retinal + posterior ciliary, already covered): lacrimal artery, muscular branches, supraorbital/supratrochlear arteries.",
+      "Medial canthal anastomosis: ophthalmic artery (internal carotid system) connects with facial/angular artery (external carotid system) branches.",
+      "This anastomosis is the anatomic basis for rare filler-injection-related blindness — retrograde embolization from external carotid injection site into the ophthalmic/central retinal artery circulation.",
+    ],
+    applyIt: [
+      "This extends your existing Carotid Arterial Supply and Central Retinal Artery Occlusion content with a genuinely important modern clinical safety point: understanding the medial canthal internal-external carotid anastomosis explains the specific, if rare, mechanism by which a cosmetic glabellar or nasal filler injection can cause sudden, severe, painless monocular vision loss via retrograde embolization into the central retinal artery, the same vessel and clinical picture already covered under CRAO.",
+    ],
+  },
+  "orbitblood-venous": {
+    name: "Orbital Venous Drainage & the Cavernous Sinus",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Orbital venous drainage has a genuinely important, distinguishing anatomic feature — the absence of valves — that directly explains a life-threatening complication already implicit in your existing Preseptal vs. Orbital Cellulitis content." },
+      { h: "Superior and inferior ophthalmic veins", t: "The superior and inferior ophthalmic veins drain the orbit, receiving tributaries from the eyelids, extraocular muscles, and globe, and ultimately draining posteriorly into the cavernous sinus (rather than anteriorly toward the facial venous system, though some anterior facial venous communication also exists via the angular vein)." },
+      { h: "Valveless veins — the critical anatomic fact", t: "Unlike most of the body's venous system, the orbital and facial veins in this region are largely VALVELESS, meaning blood flow direction is not fixed and can reverse under certain pressure conditions — this is the critical anatomic fact explaining why infection in the periorbital/facial 'danger triangle' (the region from the corners of the mouth to the bridge of the nose, including the orbit) can spread posteriorly into the cavernous sinus rather than being reliably contained or draining safely away from the brain." },
+      { h: "Cavernous sinus thrombosis — the emergency extension of orbital cellulitis", t: "Cavernous sinus thrombosis is a life-threatening emergency that can arise from posterior spread of orbital or periorbital infection via this valveless venous system, presenting with bilateral orbital signs (since the cavernous sinus is a shared midline structure connected to both orbits), along with cranial nerve III, IV, V1/V2, and VI palsies (since these nerves pass through or adjacent to the cavernous sinus) — directly extending your existing Preseptal vs. Orbital Cellulitis content with its most severe potential progression." },
+    ],
+    memorizeIt: [
+      "Superior/inferior ophthalmic veins drain the orbit into the cavernous sinus.",
+      "Orbital/facial veins in this region are largely VALVELESS — blood flow direction can reverse, allowing posterior spread of infection.",
+      "This valveless anatomy is why periorbital infection (already covered under Preseptal vs. Orbital Cellulitis) can progress to cavernous sinus thrombosis, a life-threatening emergency.",
+      "Cavernous sinus thrombosis: BILATERAL orbital signs + CN III/IV/V1/V2/VI palsies (all pass through/near the cavernous sinus) — a genuinely distinguishing presentation from unilateral orbital cellulitis.",
+    ],
+    applyIt: [
+      "This gives you the anatomic mechanism explaining the most feared potential progression of your existing Preseptal vs. Orbital Cellulitis content — bilateral orbital signs or new cranial nerve palsies (III, IV, V1/V2, VI) in a patient with orbital cellulitis should immediately raise concern for cavernous sinus thrombosis via this valveless venous spread, representing a genuine neuro-ophthalmic and systemic emergency distinct from uncomplicated unilateral orbital cellulitis.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -12718,6 +13016,29 @@ const FLASHCARDS = [
   { id: "fc-1187", objectiveId: "sdt-theory", front: "In signal detection theory terms, what is it called when a signal is present but the observer says 'not detected'?", back: "A miss." },
   { id: "fc-1188", objectiveId: "sdt-application", front: "What does a high false-positive rate on a Humphrey visual field test suggest about the patient's response criterion?", back: "An overly liberal ('trigger-happy') criterion, which can artificially inflate apparent field sensitivity." },
   { id: "fc-1189", objectiveId: "sdt-application", front: "How are false-negative catch trials generated during automated perimetry?", back: "A stimulus much brighter than the already-established threshold at that point is presented; a missed response suggests inattention/fatigue (or occasionally true progression)." },
+  { id: "fc-1190", objectiveId: "lidgross-layers", front: "What structures make up the anterior lamella vs. posterior lamella of the eyelid?", back: "Anterior lamella = skin + orbicularis oculi. Posterior lamella = tarsus + conjunctiva." },
+  { id: "fc-1191", objectiveId: "lidgross-layers", front: "Cicatricial scarring of which lamella causes ectropion, and which causes entropion?", back: "Anterior lamella scarring/shortening → ectropion (lid pulled away from globe). Posterior lamella scarring → entropion (lid pulled toward globe)." },
+  { id: "fc-1192", objectiveId: "lidgross-tarsal-glands", front: "An external hordeolum involves which gland(s)? An internal hordeolum?", back: "External: Zeis or Moll glands (anterior lid margin). Internal: meibomian gland (within the tarsus)." },
+  { id: "fc-1193", objectiveId: "lidgross-tarsal-glands", front: "How does a chalazion differ from a hordeolum in underlying process?", back: "Chalazion = chronic, typically sterile granulomatous inflammation of an obstructed meibomian gland. Hordeolum = acute infection." },
+  { id: "fc-1194", objectiveId: "eyebrowgross-structure", front: "Which muscle elevates the eyebrow, and what is its innervation?", back: "Frontalis, innervated by CN VII (facial nerve)." },
+  { id: "fc-1195", objectiveId: "eyebrowgross-structure", front: "Which muscle produces vertical glabellar frown lines, and is a classic botulinum toxin target?", back: "Corrugator supercilii." },
+  { id: "fc-1196", objectiveId: "eyebrowgross-function", front: "What compensatory sign of ptosis involves the eyebrow, and why must it be controlled for during exam?", back: "Chronic frontalis overaction (elevated brow, deep forehead wrinkles); the examiner must manually stabilize the brow during ptosis measurement or true lid position will be underestimated." },
+  { id: "fc-1197", objectiveId: "lacsysgross-secretory", front: "What structure divides the main lacrimal gland into orbital and palpebral lobes, and which lobe is visible on lid eversion?", back: "The levator aponeurosis divides it; the palpebral lobe is visible on upper lid eversion." },
+  { id: "fc-1198", objectiveId: "lacsysgross-secretory", front: "Which glands are responsible for basal (continuous) tear secretion, as opposed to reflex secretion?", back: "The accessory glands of Krause (fornices) and Wolfring (superior tarsal border)." },
+  { id: "fc-1199", objectiveId: "lacsysgross-drainage", front: "List the lacrimal drainage pathway from puncta to the nose.", back: "Puncta → canaliculi → common canaliculus → lacrimal sac → nasolacrimal duct → inferior meatus (beneath inferior turbinate)." },
+  { id: "fc-1200", objectiveId: "lacsysgross-drainage", front: "What structure, when it fails to canalize, is the most common cause of congenital NLDO?", back: "The valve of Hasner, at the nasolacrimal duct's nasal opening." },
+  { id: "fc-1201", objectiveId: "orbitgross-bones", front: "Which orbital wall is formed by the thinnest bone (lamina papyracea), and what does this explain clinically?", back: "The medial wall (ethmoid bone); explains why ethmoid sinusitis readily spreads into the orbit." },
+  { id: "fc-1202", objectiveId: "orbitgross-bones", front: "Which orbital wall is the classic site of 'blowout' fractures, and what muscle can become entrapped?", back: "The orbital floor (maxillary bone); the inferior rectus (or inferior oblique) can become entrapped, causing restrictive diplopia." },
+  { id: "fc-1203", objectiveId: "orbitgross-fissures", front: "What structures pass through the superior orbital fissure?", back: "CN III, IV, VI, V1 (ophthalmic division of CN V), and the superior ophthalmic vein." },
+  { id: "fc-1204", objectiveId: "orbitgross-fissures", front: "Why does an orbital floor blowout fracture cause cheek and upper lip numbness?", back: "The infraorbital nerve (V2) travels along the orbital floor and can be injured by the fracture." },
+  { id: "fc-1205", objectiveId: "eomgross-origins-insertions", front: "Which extraocular muscle is the ONE exception that does not originate from the annulus of Zinn at the orbital apex?", back: "The inferior oblique — it originates anteriorly from the orbital floor near the lacrimal fossa." },
+  { id: "fc-1206", objectiveId: "eomgross-origins-insertions", front: "What structure determines the superior oblique's functional pulling direction, rather than its true muscle origin?", back: "The trochlea — a fibrocartilaginous pulley on the superomedial orbital rim." },
+  { id: "fc-1207", objectiveId: "eomgross-spiral-tillaux", front: "List the spiral of Tillaux rectus insertion order from closest to farthest from the limbus.", back: "Medial rectus (~5.5mm) < Inferior rectus (~6.5mm) < Lateral rectus (~6.9mm) < Superior rectus (~7.7mm)." },
+  { id: "fc-1208", objectiveId: "eomgross-spiral-tillaux", front: "Why does the spiral of Tillaux matter for strabismus surgery?", back: "Recession/resection distances are planned relative to each specific muscle's own baseline insertion distance, which differs by muscle." },
+  { id: "fc-1209", objectiveId: "orbitblood-arterial", front: "What is the anatomic basis for rare vision loss after cosmetic filler injection near the nose/glabella?", back: "Retrograde embolization through the medial canthal anastomosis between the external carotid (facial/angular artery) and internal carotid (ophthalmic artery) systems, reaching the central retinal artery." },
+  { id: "fc-1210", objectiveId: "orbitblood-arterial", front: "Name three ophthalmic artery branches beyond the central retinal and posterior ciliary arteries.", back: "Lacrimal artery, muscular branches, and supraorbital/supratrochlear arteries." },
+  { id: "fc-1211", objectiveId: "orbitblood-venous", front: "What key anatomic feature of orbital/facial veins allows infection to spread posteriorly to the cavernous sinus?", back: "They are largely valveless, so blood flow direction can reverse." },
+  { id: "fc-1212", objectiveId: "orbitblood-venous", front: "What distinguishes cavernous sinus thrombosis from uncomplicated orbital cellulitis on exam?", back: "Bilateral orbital signs plus cranial nerve III/IV/V1/V2/VI palsies (structures passing through/near the cavernous sinus)." },
 ];
 
 const QUESTIONS = [
@@ -17360,6 +17681,108 @@ const QUESTIONS = [
       b: "Correct — false-negative catch trials (presenting a stimulus much brighter than an already-established threshold) test for inattention/fatigue; a high false-negative rate (though it can occasionally reflect true progression) generally warrants patient re-education and re-testing before the apparent defect is accepted as reliable evidence of true progression.",
       c: "Incorrect — false-negative rate is a core reliability index specifically because it directly bears on how much to trust the sensitivity data from that same test.",
       d: "Incorrect — false-positive and false-negative rates are distinct, independently calculated reliability indices, but a high false-negative rate specifically calls the sensitivity map's reliability into question, not just the false-positive catch trials.",
+    },
+  },
+  {
+    id: "q-274", objectiveId: "lidgross-layers", type: "Clinical differentiation", difficulty: "Medium",
+    stem: "A patient with a history of a severe chemical burn to the eyelid skin develops progressive outward turning of the lower lid margin, exposing the palpebral conjunctiva. Which lamella is most likely scarred, and what is this condition called?",
+    choices: [
+      { id: "a", text: "Posterior lamella (tarsus/conjunctiva) scarring, causing cicatricial entropion" },
+      { id: "b", text: "Anterior lamella (skin/orbicularis) scarring, causing cicatricial ectropion" },
+      { id: "c", text: "Orbital septum scarring, causing preseptal cellulitis" },
+      { id: "d", text: "Tarsal plate scarring, causing chalazion" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — posterior lamella scarring pulls the lid margin TOWARD the globe (entropion), the opposite of the outward-turning presentation described.",
+      b: "Correct — a chemical burn to the eyelid SKIN scars and shortens the anterior lamella, pulling the lid margin away from the globe — cicatricial ectropion, exposing the palpebral conjunctiva as described.",
+      c: "Incorrect — the orbital septum is a fibrous boundary structure, not directly implicated in this cicatricial lid malposition mechanism, and this is not an infectious presentation.",
+      d: "Incorrect — chalazion is a chronic granulomatous meibomian gland process, unrelated to cicatricial scarring from a chemical burn.",
+    },
+  },
+  {
+    id: "q-275", objectiveId: "lacsysgross-drainage", type: "Applied concept", difficulty: "Medium",
+    stem: "An infant presents with persistent tearing and mucoid discharge since birth, without erythema or swelling over the medial canthus. What is the most likely anatomic cause, and what is a reasonable first-line treatment?",
+    choices: [
+      { id: "a", text: "Obstruction at the puncta; treatment is punctal dilation" },
+      { id: "b", text: "Failure of the valve of Hasner to canalize at the nasolacrimal duct's nasal opening; treatment is lacrimal sac (Crigler) massage" },
+      { id: "c", text: "Acute dacryocystitis; treatment is emergency incision and drainage" },
+      { id: "d", text: "Lacrimal gland agenesis; treatment is artificial tears only" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — punctal obstruction is not the most common cause of congenital tearing; the nasolacrimal duct level is far more common.",
+      b: "Correct — congenital NLDO most commonly results from a persistent membrane (failure of the valve of Hasner to open) at the nasolacrimal duct's nasal opening; the absence of medial canthal erythema/swelling argues against active sac infection, and gentle lacrimal sac massage to hydrostatically force the membrane open is a reasonable first-line treatment before probing.",
+      c: "Incorrect — the absence of erythema, swelling, and tenderness over the lacrimal sac argues against acute dacryocystitis, which would show these signs.",
+      d: "Incorrect — lacrimal gland agenesis would cause dryness, not epiphora (excess tearing), and is not the classic cause of this presentation.",
+    },
+  },
+  {
+    id: "q-276", objectiveId: "orbitgross-bones", type: "Clinical application", difficulty: "Medium",
+    stem: "A patient sustains blunt trauma to the orbit and subsequently cannot look upward, with imaging showing a fracture of the thinnest wall of the orbital floor. What muscle is most likely entrapped?",
+    choices: [
+      { id: "a", text: "The superior oblique, entrapped at the trochlea" },
+      { id: "b", text: "The inferior rectus, entrapped within the orbital floor (maxillary bone) fracture" },
+      { id: "c", text: "The medial rectus, entrapped at the lamina papyracea" },
+      { id: "d", text: "The lateral rectus, entrapped at the superior orbital fissure" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — the superior oblique's trochlea is on the superomedial orbital RIM, not the orbital floor, and is not the classic entrapment site in floor fractures.",
+      b: "Correct — the orbital floor, formed by the relatively thin maxillary bone overlying the maxillary sinus, is the classic 'blowout' fracture site, and the inferior rectus (or inferior oblique) can become entrapped there, producing restricted upgaze and diplopia.",
+      c: "Incorrect — the lamina papyracea is the thin MEDIAL wall (ethmoid bone), not the orbital floor described in this fracture.",
+      d: "Incorrect — the lateral rectus is not anatomically related to the orbital floor or typically entrapped by floor fractures.",
+    },
+  },
+  {
+    id: "q-277", objectiveId: "eyebrowgross-function", type: "Applied concept", difficulty: "Medium",
+    stem: "During formal ptosis measurement, why must the examiner manually stabilize the patient's eyebrow with a thumb?",
+    choices: [
+      { id: "a", text: "To prevent blinking, which has no relationship to brow position" },
+      { id: "b", text: "Because chronic frontalis overaction can compensate for and mask true ptosis severity, so an unstabilized brow can cause underestimation of lid droop" },
+      { id: "c", text: "Because brow stabilization improves visual acuity measurement accuracy" },
+      { id: "d", text: "Because eyebrow position has no effect on the measurement and stabilization is unnecessary" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — brow stabilization is unrelated to blink prevention; it addresses compensatory frontalis muscle action.",
+      b: "Correct — chronic frontalis overaction elevates brow position (and, with it, some lid elevation) as an unconscious compensatory mechanism in ptosis; failing to immobilize the brow during measurement allows this compensation to mask the eyelid's true resting position, underestimating ptosis severity.",
+      c: "Incorrect — this exam technique point concerns eyelid position measurement, not visual acuity testing.",
+      d: "Incorrect — as established, brow position directly affects lid position measurement accuracy via frontalis compensation, making stabilization clinically necessary.",
+    },
+  },
+  {
+    id: "q-278", objectiveId: "eomgross-origins-insertions", type: "Applied concept", difficulty: "Medium",
+    stem: "Which extraocular muscle is the sole exception to originating from the annulus of Zinn at the orbital apex, and where does it originate instead?",
+    choices: [
+      { id: "a", text: "Superior oblique; originates from the trochlea" },
+      { id: "b", text: "Inferior oblique; originates anteriorly from the orbital floor near the lacrimal fossa" },
+      { id: "c", text: "Lateral rectus; originates from the greater wing of the sphenoid" },
+      { id: "d", text: "Superior rectus; originates from the frontal bone" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — the superior oblique originates near the orbital apex; the trochlea is a pulley determining its functional pulling direction, not its origin.",
+      b: "Correct — the inferior oblique is the one EOM that does not arise from the orbital apex/annulus of Zinn, instead originating anteriorly from the orbital floor (maxillary bone) near the lacrimal fossa, then coursing posterolaterally to its globe insertion.",
+      c: "Incorrect — the lateral rectus, like the other three recti, originates from the annulus of Zinn at the orbital apex.",
+      d: "Incorrect — the superior rectus also originates from the annulus of Zinn at the orbital apex, not the frontal bone.",
+    },
+  },
+  {
+    id: "q-279", objectiveId: "orbitblood-venous", type: "Clinical application", difficulty: "Hard",
+    stem: "A patient being treated for orbital cellulitis develops new findings in the OTHER (previously unaffected) eye, along with restricted eye movements in both eyes. What complication does this suggest, and what anatomic feature explains it?",
+    choices: [
+      { id: "a", text: "Simple worsening of the original unilateral orbital cellulitis; no new anatomic explanation needed" },
+      { id: "b", text: "Cavernous sinus thrombosis, explained by the valveless orbital venous system allowing posterior spread to this shared midline structure connected to both orbits" },
+      { id: "c", text: "A new, unrelated contralateral preseptal cellulitis" },
+      { id: "d", text: "Normal expected bilateral swelling from any orbital infection" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — bilateral new findings are not explained by simple worsening of a unilateral process; they specifically suggest spread to a shared structure.",
+      b: "Correct — bilateral orbital signs with ophthalmoplegia in a patient with orbital cellulitis strongly suggest cavernous sinus thrombosis, which occurs via posterior spread through the valveless orbital venous system into the cavernous sinus, a shared midline structure connected to both orbits and traversed by CN III, IV, V1/V2, and VI.",
+      c: "Incorrect — this presentation reflects spread of the original infection via the venous system, not an unrelated new infection.",
+      d: "Incorrect — bilateral signs and ophthalmoplegia are NOT expected/benign findings in orbital cellulitis; they signal a serious complication requiring urgent evaluation.",
     },
   },
 ];
