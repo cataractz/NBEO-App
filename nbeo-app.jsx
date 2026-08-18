@@ -769,6 +769,38 @@ const LACDEV_OBJECTIVES = [
   { id: "lacdev-anomalies", name: "Congenital Lacrimal Anomalies & Dacryocystocele", built: true },
 ];
 
+const LIDPHARMGEN_TOPIC_ID = "t-8-4-0"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Pharmacology(4) > General principles(0)
+const LIDPHARMGEN_OBJECTIVES = [
+  { id: "lidpharmgen-routes", name: "Topical Ocular Drug Delivery — Routes & Absorption Barriers", built: true },
+  { id: "lidpharmgen-systemic-absorption", name: "Systemic Absorption of Topical Medications & Punctal Occlusion", built: true },
+];
+
+const LIDPHARMANTIINFECT_TOPIC_ID = "t-8-4-1"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Pharmacology(4) > Anti-infective agents(1)
+// Ties directly into existing Blepharitis, Chalazion/Hordeolum, and
+// Meibomian Gland Function content.
+const LIDPHARMANTIINFECT_OBJECTIVES = [
+  { id: "lidpharmantiinfect-topical", name: "Topical Antibiotic Ointments for Blepharitis & Hordeolum", built: true },
+  { id: "lidpharmantiinfect-doxycycline", name: "Oral Doxycycline for MGD — Sub-Antimicrobial Anti-Inflammatory Mechanism", built: true },
+];
+
+const LIDPHARMANTIINFLAMM_TOPIC_ID = "t-8-4-2"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Pharmacology(4) > Anti-inflammatory agents(2)
+const LIDPHARMANTIINFLAMM_OBJECTIVES = [
+  { id: "lidpharmantiinflamm-steroid", name: "Intralesional Corticosteroid Injection for Chalazion", built: true },
+  { id: "lidpharmantiinflamm-risks", name: "Periocular Corticosteroid Risks — Skin Atrophy & Steroid-Response IOP Elevation", built: true },
+];
+
+const LIDPHARMCOSMETIC_TOPIC_ID = "t-8-4-3"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Pharmacology(4) > Aesthetic/cosmetic agents(3)
+const LIDPHARMCOSMETIC_OBJECTIVES = [
+  { id: "lidpharmcosmetic-botox", name: "Botulinum Toxin — Mechanism & Periocular Applications", built: true },
+  { id: "lidpharmcosmetic-bimatoprost", name: "Bimatoprost for Eyelash Hypotrichosis — Mechanism", built: true },
+];
+
+const LIDPHARMINDICATIONS_TOPIC_ID = "t-8-4-4"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Pharmacology(4) > Indications/contraindications/side effects/drug interactions(4)
+const LIDPHARMINDICATIONS_OBJECTIVES = [
+  { id: "lidpharmind-doxycycline-contra", name: "Doxycycline Contraindications — Pregnancy & Childhood", built: true },
+  { id: "lidpharmind-botox-contra", name: "Botulinum Toxin Contraindications & Drug Interactions", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -1761,6 +1793,9 @@ const TOPIC_OBJECTIVES = {
   [EOMGROSS_TOPIC_ID]: EOMGROSS_OBJECTIVES, [ORBITBLOOD_TOPIC_ID]: ORBITBLOOD_OBJECTIVES,
   [ORBITDEV_TOPIC_ID]: ORBITDEV_OBJECTIVES, [EOMDEV_TOPIC_ID]: EOMDEV_OBJECTIVES,
   [LIDDEV_TOPIC_ID]: LIDDEV_OBJECTIVES, [LACDEV_TOPIC_ID]: LACDEV_OBJECTIVES,
+  [LIDPHARMGEN_TOPIC_ID]: LIDPHARMGEN_OBJECTIVES, [LIDPHARMANTIINFECT_TOPIC_ID]: LIDPHARMANTIINFECT_OBJECTIVES,
+  [LIDPHARMANTIINFLAMM_TOPIC_ID]: LIDPHARMANTIINFLAMM_OBJECTIVES, [LIDPHARMCOSMETIC_TOPIC_ID]: LIDPHARMCOSMETIC_OBJECTIVES,
+  [LIDPHARMINDICATIONS_TOPIC_ID]: LIDPHARMINDICATIONS_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -1926,6 +1961,11 @@ const CONTENT_TOPICS = [
   { topicId: EOMDEV_TOPIC_ID, name: "Extraocular Muscle Developmental Anatomy", objectives: EOMDEV_OBJECTIVES },
   { topicId: LIDDEV_TOPIC_ID, name: "Eyelid Developmental Anatomy", objectives: LIDDEV_OBJECTIVES },
   { topicId: LACDEV_TOPIC_ID, name: "Lacrimal Apparatus Developmental Anatomy", objectives: LACDEV_OBJECTIVES },
+  { topicId: LIDPHARMGEN_TOPIC_ID, name: "Periocular Pharmacology — General Principles", objectives: LIDPHARMGEN_OBJECTIVES },
+  { topicId: LIDPHARMANTIINFECT_TOPIC_ID, name: "Periocular Anti-Infective Pharmacology", objectives: LIDPHARMANTIINFECT_OBJECTIVES },
+  { topicId: LIDPHARMANTIINFLAMM_TOPIC_ID, name: "Periocular Anti-Inflammatory Pharmacology", objectives: LIDPHARMANTIINFLAMM_OBJECTIVES },
+  { topicId: LIDPHARMCOSMETIC_TOPIC_ID, name: "Periocular Aesthetic/Cosmetic Pharmacology", objectives: LIDPHARMCOSMETIC_OBJECTIVES },
+  { topicId: LIDPHARMINDICATIONS_TOPIC_ID, name: "Periocular Pharmacology — Indications & Contraindications", objectives: LIDPHARMINDICATIONS_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -11619,6 +11659,203 @@ const STUDY_PAGES = {
       "This extends your existing Dacryocystitis/NLDO content with a genuinely distinct and occasionally urgent congenital variant — recognizing that a firm bluish mass present AT BIRTH (rather than gradually developing tearing) reflects a dacryocystocele's double (proximal + distal) obstruction mechanism, and that bilateral presentation specifically raises a neonatal airway risk given newborns' obligate nasal breathing, is a genuinely important clinical distinction from the more common and typically benign unilateral congenital NLDO.",
     ],
   },
+  "lidpharmgen-routes": {
+    name: "Topical Ocular Drug Delivery — Routes & Absorption Barriers",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Medications for eyelid and periocular disease can be delivered by several distinct routes — topical ointment applied directly to the lid margin, topical drops, periocular/intralesional injection, or systemic (oral) therapy — and understanding each route's absorption pathway explains both efficacy and side-effect patterns already relevant to existing lid disease content." },
+      { h: "Lid margin ointment application", t: "Ointments applied directly to the lid margin (e.g., for blepharitis, already covered) rely on direct local contact with the glandular openings and lash follicles, providing prolonged local contact time compared to drops, at the cost of some visual blurring immediately after application — a genuine patient-counseling point favoring nighttime dosing for lid margin ointments." },
+      { h: "Ocular surface absorption barriers", t: "Topically applied medications must cross the corneal epithelium (a lipophilic barrier favoring lipid-soluble drugs) and, to a lesser extent, the conjunctiva — the tear film itself (already covered under Tear Film Structure & Layers) both dilutes the applied drug and provides the medium through which drainage into the nasolacrimal system (this topic's sibling objective) occurs, competing with corneal/conjunctival absorption for the applied dose." },
+    ],
+    memorizeIt: [
+      "Lid margin ointment: prolonged local contact for lid disease (blepharitis), causes visual blur — favor nighttime dosing.",
+      "Topical drug absorption crosses the corneal epithelium (lipophilic barrier) and conjunctiva.",
+      "Tear film (already covered) both dilutes applied drug and provides the medium for nasolacrimal drainage, competing with local ocular absorption.",
+    ],
+    applyIt: [
+      "This gives you the pharmacologic delivery framework directly extending your existing Blepharitis and Tear Film Structure & Layers content — understanding that lid margin ointments trade visual blur for prolonged local contact time explains the standard clinical recommendation to apply them at bedtime rather than during waking hours.",
+    ],
+  },
+  "lidpharmgen-systemic-absorption": {
+    name: "Systemic Absorption of Topical Medications & Punctal Occlusion",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "A clinically important and sometimes underappreciated fact is that topically applied ocular medications can achieve meaningful systemic absorption and effect, via a specific anatomic drainage pathway already covered under Lacrimal Drainage Apparatus." },
+      { h: "The nasolacrimal systemic absorption pathway", t: "A substantial fraction of any topically instilled eye drop drains through the puncta and nasolacrimal duct (already covered) into the nasal mucosa, where it is absorbed directly into the systemic circulation — critically, this route BYPASSES first-pass hepatic metabolism (unlike an oral dose of the same drug), meaning topical ocular administration can produce a HIGHER effective systemic drug level than the small applied volume might suggest." },
+      { h: "Punctal occlusion — a practical mitigation technique", t: "Punctal occlusion — applying gentle finger pressure over the puncta (or simply closing the eyes) for 1-2 minutes immediately after instilling a drop — reduces nasolacrimal drainage and therefore reduces both systemic absorption and the associated systemic side-effect risk, while also increasing the drug's local ocular contact time and effect, a genuinely valuable patient-counseling technique especially relevant to any topical medication with known systemic effects (e.g., topical beta-blockers already relevant to Glaucoma content)." },
+    ],
+    memorizeIt: [
+      "Topical eye drops draining via the nasolacrimal system are absorbed through nasal mucosa DIRECTLY into systemic circulation, BYPASSING first-pass hepatic metabolism.",
+      "This means topical ocular drugs can achieve HIGHER effective systemic exposure than the small applied dose alone would suggest.",
+      "Punctal occlusion (finger pressure on puncta, or simply closing eyes, for 1-2 minutes after drop instillation) reduces systemic absorption AND increases local ocular effect.",
+      "Genuinely useful patient-counseling technique for any topical ocular medication with known systemic side effects.",
+    ],
+    applyIt: [
+      "This gives you the pharmacokinetic mechanism directly relevant to counseling patients on ANY topical ocular medication with systemic effects already covered elsewhere on this platform — teaching punctal occlusion technique is a simple, genuinely effective way to both reduce unwanted systemic absorption and improve the medication's local therapeutic effect, a practical clinical skill applicable well beyond lid disease specifically.",
+    ],
+  },
+  "lidpharmantiinfect-topical": {
+    name: "Topical Antibiotic Ointments for Blepharitis & Hordeolum",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical antibiotic ointments are first-line therapy for the bacterial (typically staphylococcal) component of anterior blepharitis and for hordeolum, already covered under existing Blepharitis and Chalazion/Hordeolum content, and understanding the specific agents used clarifies standard treatment selection." },
+      { h: "Erythromycin and bacitracin ointments", t: "Erythromycin ophthalmic ointment (a macrolide, inhibiting bacterial protein synthesis via the 50S ribosomal subunit) and bacitracin ointment (inhibiting bacterial cell wall synthesis) are both standard first-line topical agents for staphylococcal blepharitis and hordeolum, applied directly to the lid margin (this topic's sibling general-principles objective) — chosen for their reliable gram-positive (particularly Staphylococcus) coverage, matching the typical causative organism already established under Blepharitis content." },
+      { h: "Adjunctive lid hygiene", t: "Topical antibiotic ointment is typically used as an adjunct to, not a replacement for, mechanical lid hygiene (warm compresses and lid margin scrubs, already implied under Blepharitis content) — since chronic anterior blepharitis fundamentally involves bacterial biofilm and debris accumulation at the lash line that antibiotic therapy alone does not mechanically clear." },
+    ],
+    memorizeIt: [
+      "Erythromycin ointment: macrolide, inhibits bacterial protein synthesis (50S ribosome) — first-line for staphylococcal blepharitis/hordeolum.",
+      "Bacitracin ointment: inhibits bacterial cell wall synthesis — alternative first-line topical agent, gram-positive coverage.",
+      "Both target Staphylococcus, the typical causative organism in bacterial blepharitis (already covered).",
+      "Topical antibiotic is adjunctive to, not a replacement for, mechanical lid hygiene (warm compresses, lid scrubs).",
+    ],
+    applyIt: [
+      "This gives you the specific pharmacologic agents underlying your existing Blepharitis and Chalazion/Hordeolum content's treatment recommendations — understanding that these topical antibiotics target the same staphylococcal organism already established as the typical cause reinforces why treatment must combine both antimicrobial therapy AND mechanical lid hygiene for durable resolution.",
+    ],
+  },
+  "lidpharmantiinfect-doxycycline": {
+    name: "Oral Doxycycline for MGD — Sub-Antimicrobial Anti-Inflammatory Mechanism",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Oral doxycycline (a tetracycline-class antibiotic) is a mainstay treatment for chronic meibomian gland dysfunction (MGD) and posterior blepharitis, but genuinely important is that its therapeutic effect at the LOW doses typically used is NOT primarily antimicrobial — a distinct pharmacologic mechanism directly extending your existing Meibomian Gland Function & Lipid Secretion content." },
+      { h: "Sub-antimicrobial dosing and mechanism", t: "At the low ('sub-antimicrobial') doses commonly used for chronic MGD, doxycycline's clinical benefit derives primarily from its ANTI-INFLAMMATORY and ANTI-COLLAGENASE (matrix metalloproteinase inhibition) properties, along with a direct effect on modifying meibomian gland lipid secretion composition (reducing bacterial lipase activity that generates irritating free fatty acids from meibum) — genuinely distinct from its antibacterial mechanism of action at standard/higher antimicrobial doses." },
+      { h: "Clinical rationale", t: "This sub-antimicrobial anti-inflammatory mechanism explains why doxycycline is effective for chronic MGD even though MGD is not fundamentally a straightforward bacterial infection — it is instead a chronic inflammatory and glandular dysfunction condition (already covered under Meibomian Gland Function), for which doxycycline's non-antibiotic pharmacologic properties happen to be therapeutically useful." },
+    ],
+    memorizeIt: [
+      "Oral doxycycline for chronic MGD/posterior blepharitis is used at LOW ('sub-antimicrobial') doses.",
+      "Therapeutic mechanism at these doses is primarily ANTI-INFLAMMATORY and ANTI-COLLAGENASE (MMP inhibition), NOT simple antibacterial killing.",
+      "Also modifies meibomian lipid secretion composition, reducing bacterial-lipase-generated irritating free fatty acids.",
+      "This explains doxycycline's benefit in MGD despite MGD being fundamentally a chronic inflammatory/glandular dysfunction condition, not a simple infection.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important pharmacologic nuance extending your existing Meibomian Gland Function & Lipid Secretion content — recognizing that doxycycline's benefit in chronic MGD comes from its anti-inflammatory/anti-collagenase properties (not antibacterial killing) at the low doses used explains why the drug is prescribed as a long-term, low-dose regimen for a chronic condition rather than a short antibiotic course for an acute infection.",
+    ],
+  },
+  "lidpharmantiinflamm-steroid": {
+    name: "Intralesional Corticosteroid Injection for Chalazion",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Intralesional corticosteroid injection (typically triamcinolone) is a standard second-line treatment for a chalazion (already covered under Chalazion/Hordeolum) that has not resolved with conservative warm compress therapy, directly extending that existing content with the specific pharmacologic intervention." },
+      { h: "Mechanism", t: "Triamcinolone, injected directly into the chalazion lesion, suppresses the chronic granulomatous inflammatory response (already established as the underlying process in chalazion, distinct from acute hordeolum infection) via its broad anti-inflammatory corticosteroid mechanism — reducing lesion size and often achieving resolution without surgical incision and curettage." },
+      { h: "Sequencing in the treatment algorithm", t: "The standard treatment sequence for chalazion is: warm compresses/massage first (conservative, addresses the underlying obstructed meibomian gland already covered) → intralesional corticosteroid injection if conservative measures fail after several weeks → surgical incision and curettage reserved for cases refractory to both conservative and steroid injection approaches, or for larger/cosmetically significant lesions." },
+    ],
+    memorizeIt: [
+      "Intralesional triamcinolone: standard second-line treatment for chalazion refractory to warm compresses.",
+      "Mechanism: suppresses the chronic granulomatous inflammatory response (already established as chalazion's underlying process).",
+      "Treatment sequence: warm compresses → intralesional steroid injection → surgical incision/curettage (reserved for refractory/large lesions).",
+    ],
+    applyIt: [
+      "This gives you the specific pharmacologic treatment step extending your existing Chalazion/Hordeolum content's management algorithm — recognizing that intralesional steroid targets the CHRONIC GRANULOMATOUS inflammatory process (not an active infection) reinforces why this treatment is appropriate for chalazion specifically, and would not be the appropriate first pharmacologic approach for an acutely infected hordeolum, which instead requires antibiotic therapy (this topic's sibling anti-infective objective).",
+    ],
+  },
+  "lidpharmantiinflamm-risks": {
+    name: "Periocular Corticosteroid Risks — Skin Atrophy & Steroid-Response IOP Elevation",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Periocular and topical corticosteroid use, while effective (this topic's sibling objective), carries genuine, testable risks that extend your existing Glaucoma content's steroid-response IOP mechanism to the periocular/lid context specifically." },
+      { h: "Local skin atrophy and telangiectasia", t: "Prolonged or repeated periocular corticosteroid application (including intralesional injection, this topic's sibling objective) can cause local skin thinning (atrophy), telangiectasia (visible small blood vessels), and hypopigmentation at the injection/application site — periocular skin is thin and particularly susceptible to these steroid-related changes compared to thicker skin elsewhere on the body." },
+      { h: "Steroid-response IOP elevation — even from periocular use", t: "Even periocular (not directly intraocular) corticosteroid administration can be absorbed in sufficient quantity to trigger steroid-response intraocular pressure elevation in susceptible individuals — the same trabecular meshwork mechanism already established under Aqueous Humor Dynamics and Glaucoma content — meaning IOP monitoring is a genuinely relevant consideration even for corticosteroid treatments applied to the eyelid rather than instilled directly onto the ocular surface." },
+    ],
+    memorizeIt: [
+      "Periocular corticosteroid risks: local skin atrophy, telangiectasia, hypopigmentation (periocular skin is thin, particularly susceptible).",
+      "Even PERIOCULAR (not just intraocular/topical-ocular) steroid can cause steroid-response IOP elevation via the same trabecular meshwork mechanism already covered under Glaucoma content.",
+      "IOP monitoring is a relevant consideration for periocular/intralesional steroid use, not just for steroids applied directly to the ocular surface.",
+    ],
+    applyIt: [
+      "This extends your existing Glaucoma/Aqueous Humor Dynamics steroid-response mechanism content to a periocular context — a patient receiving repeated intralesional triamcinolone injections for recurrent chalazia (this topic's sibling objective) should have IOP monitored over time, since steroid-response IOP elevation is not limited to medications instilled directly onto the cornea/conjunctiva.",
+    ],
+  },
+  "lidpharmcosmetic-botox": {
+    name: "Botulinum Toxin — Mechanism & Periocular Applications",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Botulinum toxin has both cosmetic and therapeutic periocular applications, all deriving from the same underlying neuromuscular junction mechanism already established under Neuromuscular Junction Transmission content." },
+      { h: "Mechanism of action", t: "Botulinum toxin cleaves SNARE proteins required for presynaptic acetylcholine vesicle release at the neuromuscular junction (already covered under Neuromuscular Junction Transmission), producing a temporary, reversible chemical denervation of the injected muscle — genuinely the mechanistic OPPOSITE of Myasthenia Gravis's postsynaptic acetylcholine receptor autoantibody mechanism (already covered), though both ultimately impair neuromuscular transmission at different points in the pathway." },
+      { h: "Cosmetic application", t: "Cosmetically, botulinum toxin is injected into the corrugator supercilii and procerus muscles (already covered under Eyebrow Musculature) to weaken these brow-depressor muscles, reducing glabellar frown lines — a direct pharmacologic application of the muscle anatomy already established." },
+      { h: "Therapeutic periocular applications", t: "Therapeutically, botulinum toxin is used to treat blepharospasm (involuntary orbicularis oculi spasm) and hemifacial spasm by weakening the overactive orbicularis oculi (already covered under Blink Reflex Mechanics), providing symptomatic relief from these involuntary spasm disorders that are otherwise difficult to treat pharmacologically." },
+    ],
+    memorizeIt: [
+      "Botulinum toxin mechanism: cleaves SNARE proteins, blocking presynaptic ACh vesicle release at the NMJ (already covered) — temporary chemical denervation.",
+      "Mechanistically the OPPOSITE end of NMJ transmission from Myasthenia Gravis (postsynaptic ACh receptor autoantibodies, already covered) — different points in the same pathway.",
+      "Cosmetic use: corrugator supercilii/procerus injection (already covered under Eyebrow Musculature) → reduces glabellar frown lines.",
+      "Therapeutic use: blepharospasm/hemifacial spasm — weakens overactive orbicularis oculi (already covered under Blink Reflex Mechanics).",
+    ],
+    applyIt: [
+      "This gives you the precise neuromuscular mechanism directly extending your existing Neuromuscular Junction Transmission and Myasthenia Gravis content — botulinum toxin and myasthenia gravis both impair NMJ transmission but at genuinely opposite points in the pathway (presynaptic ACh release vs. postsynaptic receptor availability), a distinction with direct relevance to this topic's sibling objective on why botulinum toxin is contraindicated in patients who already have MG.",
+    ],
+  },
+  "lidpharmcosmetic-bimatoprost": {
+    name: "Bimatoprost for Eyelash Hypotrichosis — Mechanism",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical bimatoprost, applied to the upper eyelash line, is an FDA-approved cosmetic treatment for eyelash hypotrichosis (inadequate lash growth), using the SAME drug class already covered for an entirely different indication under Glaucoma content." },
+      { h: "Same drug class as glaucoma prostaglandin analogs", t: "Bimatoprost is a prostaglandin F2-alpha analog, the identical drug class already covered as first-line IOP-lowering therapy under Glaucoma/Antiglaucoma Agents content — here applied cosmetically to the lash line rather than to lower intraocular pressure, a genuinely interesting example of the same drug class being repurposed for a completely different therapeutic goal via a different local mechanism." },
+      { h: "Mechanism of eyelash growth stimulation", t: "Applied to the lash line, bimatoprost prolongs the ANAGEN (active growth) phase of the eyelash hair cycle and increases the percentage of hairs in this growth phase at any given time, resulting in lashes that are longer, thicker, and more numerous — a distinct local mechanism from its IOP-lowering effect (already covered as increased uveoscleral aqueous outflow under Aqueous Humor Dynamics content)." },
+      { h: "Shared side effects with glaucoma use", t: "Because it is the same drug and drug class, cosmetic bimatoprost carries the same characteristic periocular side effects already covered under Glaucoma pharmacology — periocular skin hyperpigmentation and, with chronic use, permanent iris darkening (increased melanin synthesis in iris melanocytes, not melanocyte proliferation) — meaning patients should be counseled on these effects even when the medication is used purely for cosmetic lash enhancement rather than glaucoma treatment." },
+    ],
+    memorizeIt: [
+      "Bimatoprost = prostaglandin F2-alpha analog — SAME drug class as first-line glaucoma IOP-lowering therapy (already covered under Antiglaucoma Agents).",
+      "Cosmetic lash mechanism: prolongs the ANAGEN (growth) phase of the eyelash hair cycle → longer, thicker, more numerous lashes.",
+      "Shares the same side effects as glaucoma use: periocular skin hyperpigmentation and permanent iris darkening (increased melanin synthesis, not melanocyte proliferation) with chronic use.",
+      "Patients using bimatoprost purely cosmetically still need counseling on these characteristic prostaglandin-analog side effects.",
+    ],
+    applyIt: [
+      "This gives you a genuinely interesting pharmacologic connection directly extending your existing Antiglaucoma Agents content — the exact same drug and side-effect profile already covered for IOP-lowering therapy applies when the identical medication is repurposed cosmetically for lash growth, meaning a patient using both glaucoma prostaglandin drops AND cosmetic lash bimatoprost is effectively getting an even higher cumulative periocular prostaglandin exposure, worth noting in a thorough medication history.",
+    ],
+  },
+  "lidpharmind-doxycycline-contra": {
+    name: "Doxycycline Contraindications — Pregnancy & Childhood",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Oral doxycycline, already established under this topic's sibling objective as a mainstay MGD/blepharitis treatment, carries specific, absolute contraindications in two patient populations that must be screened for before prescribing." },
+      { h: "Contraindication in pregnancy", t: "Doxycycline (like all tetracycline-class antibiotics) is contraindicated during pregnancy because it crosses the placenta and can bind to developing fetal bone and teeth, inhibiting fetal bone growth and causing permanent tooth discoloration — a teratogenic risk requiring an alternative MGD/blepharitis management approach (e.g., continued warm compresses/lid hygiene, or topical-only therapy) in pregnant patients." },
+      { h: "Contraindication in young children", t: "Doxycycline is similarly contraindicated (or used only with significant caution) in children under approximately 8 years old, for the same underlying mechanism — tetracyclines bind to calcium in developing teeth, causing permanent gray-brown tooth discoloration and enamel hypoplasia if administered during the period of active tooth mineralization." },
+    ],
+    memorizeIt: [
+      "Doxycycline contraindicated in PREGNANCY — crosses placenta, binds developing fetal bone/teeth, inhibits bone growth, causes permanent tooth discoloration.",
+      "Doxycycline contraindicated (or used with significant caution) in children under ~8 years — same mechanism, causes permanent tooth discoloration/enamel hypoplasia during active tooth mineralization.",
+      "Both contraindications share the same underlying mechanism: tetracycline binding to developing calcified tissue (bone/teeth).",
+    ],
+    applyIt: [
+      "This gives you the specific, testable contraindications directly relevant to your existing MGD/doxycycline content (this topic's sibling objective) — before prescribing oral doxycycline for chronic blepharitis/MGD, confirming the patient is not pregnant and is an appropriate age is an essential prescribing safety step, with topical-only management or an alternative approach needed for these excluded populations.",
+    ],
+  },
+  "lidpharmind-botox-contra": {
+    name: "Botulinum Toxin Contraindications & Drug Interactions",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Botulinum toxin, already established under this topic's sibling objective as working via presynaptic NMJ blockade, carries a specific, high-yield contraindication directly connecting to your existing Myasthenia Gravis content, plus an important drug interaction." },
+      { h: "Contraindication in myasthenia gravis and Lambert-Eaton syndrome", t: "Botulinum toxin is contraindicated (or requires extreme caution) in patients with myasthenia gravis (already covered under Nervous System & Neuromuscular Diseases) or Lambert-Eaton myasthenic syndrome, since both conditions ALREADY impair neuromuscular transmission (postsynaptic receptor autoantibodies in MG, presynaptic calcium channel autoantibodies in Lambert-Eaton) — adding botulinum toxin's presynaptic ACh release blockade on top of an already-compromised NMJ can precipitate severe, potentially life-threatening generalized weakness, including respiratory muscle involvement." },
+      { h: "Aminoglycoside drug interaction", t: "Aminoglycoside antibiotics (e.g., gentamicin, tobramycin) independently impair neuromuscular transmission as a known side effect and can POTENTIATE botulinum toxin's neuromuscular blocking effect when used concurrently — a genuinely important drug interaction to screen for, since a patient on systemic aminoglycoside therapy receiving botulinum toxin injection is at increased risk of excessive or prolonged neuromuscular weakness beyond the intended local effect." },
+    ],
+    memorizeIt: [
+      "Botulinum toxin CONTRAINDICATED (or extreme caution) in myasthenia gravis (already covered) and Lambert-Eaton myasthenic syndrome — both already impair NMJ transmission, risking severe/life-threatening added weakness.",
+      "This risk includes potential respiratory muscle involvement — a genuine safety concern, not just local effect.",
+      "Aminoglycoside antibiotics (gentamicin, tobramycin) can POTENTIATE botulinum toxin's neuromuscular blocking effect — screen for concurrent use.",
+    ],
+    applyIt: [
+      "This gives you a genuinely high-yield safety screening point directly connecting your existing Myasthenia Gravis content to botulinum toxin's mechanism (this topic's sibling objective) — since both conditions target NMJ transmission at different points (postsynaptic receptor in MG vs. presynaptic ACh release blocked by botulinum toxin), their combination is dangerously additive rather than simply unrelated, making a myasthenia gravis history an essential screening question before any botulinum toxin administration, cosmetic or therapeutic.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -13249,6 +13486,19 @@ const FLASHCARDS = [
   { id: "fc-1226", objectiveId: "lacdev-formation", front: "Which segment of the nasolacrimal drainage system canalizes last, and what does this explain?", back: "The most distal segment (valve of Hasner) — explains why congenital NLDO from a persistent membrane there is so common." },
   { id: "fc-1227", objectiveId: "lacdev-anomalies", front: "What double-obstruction mechanism causes a congenital dacryocystocele?", back: "Simultaneous obstruction at the valve of Rosenmüller (proximal) AND the valve of Hasner (distal), trapping fluid in the lacrimal sac." },
   { id: "fc-1228", objectiveId: "lacdev-anomalies", front: "Why is a bilateral congenital dacryocystocele more urgent than a unilateral one?", back: "It can cause nasal obstruction significant enough to compromise breathing in newborns, who are obligate nasal breathers." },
+  { id: "fc-1229", objectiveId: "lidpharmgen-routes", front: "Why should lid margin ointments generally be applied at bedtime rather than during the day?", back: "They provide prolonged local contact time but cause visual blurring immediately after application." },
+  { id: "fc-1230", objectiveId: "lidpharmgen-systemic-absorption", front: "Why can topical eye drops achieve higher effective systemic drug levels than the small applied volume suggests?", back: "Nasolacrimal drainage into the nasal mucosa is absorbed directly into systemic circulation, bypassing first-pass hepatic metabolism." },
+  { id: "fc-1231", objectiveId: "lidpharmgen-systemic-absorption", front: "What simple technique reduces systemic absorption of a topical eye drop while increasing its local effect?", back: "Punctal occlusion — finger pressure on the puncta (or closing the eyes) for 1-2 minutes after instillation." },
+  { id: "fc-1232", objectiveId: "lidpharmantiinfect-topical", front: "Name two first-line topical antibiotic ointments for staphylococcal blepharitis/hordeolum and their mechanisms.", back: "Erythromycin (inhibits 50S ribosomal protein synthesis) and bacitracin (inhibits bacterial cell wall synthesis)." },
+  { id: "fc-1233", objectiveId: "lidpharmantiinfect-doxycycline", front: "At the low doses used for chronic MGD, what is doxycycline's primary therapeutic mechanism?", back: "Anti-inflammatory and anti-collagenase (MMP inhibition) effects, plus modifying meibomian lipid secretion — not primarily antibacterial killing." },
+  { id: "fc-1234", objectiveId: "lidpharmantiinflamm-steroid", front: "What is the standard treatment sequence for chalazion?", back: "Warm compresses/massage → intralesional corticosteroid (triamcinolone) injection if unresolved → surgical incision/curettage for refractory or large lesions." },
+  { id: "fc-1235", objectiveId: "lidpharmantiinflamm-risks", front: "Can periocular (not directly intraocular) corticosteroid use raise IOP?", back: "Yes — even periocular steroid can be absorbed sufficiently to trigger steroid-response IOP elevation via the trabecular meshwork mechanism." },
+  { id: "fc-1236", objectiveId: "lidpharmcosmetic-botox", front: "What is botulinum toxin's mechanism of action at the neuromuscular junction?", back: "Cleaves SNARE proteins, blocking presynaptic acetylcholine vesicle release — temporary chemical denervation." },
+  { id: "fc-1237", objectiveId: "lidpharmcosmetic-bimatoprost", front: "What drug class is bimatoprost, and what other major ophthalmic use does this class have?", back: "Prostaglandin F2-alpha analog — same class as first-line glaucoma IOP-lowering therapy." },
+  { id: "fc-1238", objectiveId: "lidpharmcosmetic-bimatoprost", front: "By what mechanism does bimatoprost stimulate eyelash growth?", back: "Prolongs the anagen (active growth) phase of the eyelash hair cycle." },
+  { id: "fc-1239", objectiveId: "lidpharmind-doxycycline-contra", front: "Why is doxycycline contraindicated in pregnancy and in children under ~8 years old?", back: "It binds developing fetal/childhood bone and teeth, inhibiting bone growth and causing permanent tooth discoloration." },
+  { id: "fc-1240", objectiveId: "lidpharmind-botox-contra", front: "Why is botulinum toxin contraindicated (or requires extreme caution) in myasthenia gravis?", back: "MG already impairs NMJ transmission (postsynaptic ACh receptor autoantibodies); adding botulinum's presynaptic ACh blockade can precipitate severe, potentially life-threatening generalized weakness." },
+  { id: "fc-1241", objectiveId: "lidpharmind-botox-contra", front: "What class of antibiotics can potentiate botulinum toxin's neuromuscular blocking effect?", back: "Aminoglycosides (e.g., gentamicin, tobramycin)." },
 ];
 
 const QUESTIONS = [
@@ -18044,6 +18294,40 @@ const QUESTIONS = [
       b: "Correct — a firm, bluish, non-tender medial canthal mass at birth reflects a dacryocystocele from combined proximal (valve of Rosenmüller) and distal (valve of Hasner) obstruction; when bilateral, it carries a genuine risk of compromising nasal breathing in newborns, who are obligate nasal breathers, warranting more urgent evaluation than a typical unilateral case.",
       c: "Incorrect — the non-tender, bluish, congenital presentation is not consistent with acute infectious dacryocystitis, which would show erythema and tenderness.",
       d: "Incorrect — eyelid coloboma is a lid margin defect, not a medial canthal mass, and is an unrelated anomaly.",
+    },
+  },
+  {
+    id: "q-283", objectiveId: "lidpharmgen-systemic-absorption", type: "Applied concept", difficulty: "Medium",
+    stem: "Why can a topical ophthalmic beta-blocker drop produce clinically significant systemic cardiac/pulmonary side effects despite the small volume administered?",
+    choices: [
+      { id: "a", text: "Topical drops always undergo extensive first-pass hepatic metabolism, concentrating the active drug" },
+      { id: "b", text: "Nasolacrimal drainage carries a portion of the dose into the nasal mucosa, where it is absorbed directly into systemic circulation, bypassing first-pass hepatic metabolism" },
+      { id: "c", text: "Topical drops are absorbed exclusively through the sclera into the systemic circulation" },
+      { id: "d", text: "Systemic absorption from topical drops is not clinically significant and side effects are due to a different mechanism" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — nasolacrimal absorption specifically BYPASSES first-pass hepatic metabolism, which is why systemic drug levels can be relatively higher than an equivalent oral dose might produce, not lower.",
+      b: "Correct — a substantial fraction of a topical drop drains through the nasolacrimal system into the nasal mucosa, where it enters systemic circulation directly, avoiding hepatic first-pass metabolism and allowing clinically meaningful systemic drug levels from a small topical dose.",
+      c: "Incorrect — scleral absorption is not the primary route for topically instilled drop systemic absorption; nasolacrimal drainage is.",
+      d: "Incorrect — this systemic absorption is well-documented and clinically significant, which is exactly why punctal occlusion technique (this topic's sibling objective) is a genuinely useful counseling point.",
+    },
+  },
+  {
+    id: "q-284", objectiveId: "lidpharmind-botox-contra", type: "Clinical application", difficulty: "Hard",
+    stem: "A patient with a known history of myasthenia gravis requests cosmetic botulinum toxin injection for glabellar lines. What is the most appropriate approach, and why?",
+    choices: [
+      { id: "a", text: "Proceed as usual — myasthenia gravis has no relevance to botulinum toxin safety" },
+      { id: "b", text: "Use extreme caution or avoid botulinum toxin — MG already impairs postsynaptic NMJ transmission, and adding botulinum's presynaptic ACh release blockade risks severe, potentially life-threatening generalized weakness" },
+      { id: "c", text: "Proceed, but only if the patient is also taking an aminoglycoside antibiotic" },
+      { id: "d", text: "Botulinum toxin is specifically indicated as a treatment for myasthenia gravis" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — myasthenia gravis is a significant contraindication/caution for botulinum toxin, since both conditions impair NMJ transmission, just at different points.",
+      b: "Correct — myasthenia gravis (already covered) involves postsynaptic ACh receptor autoantibodies impairing neuromuscular transmission; adding botulinum toxin's presynaptic ACh release blockade compounds this impairment and can precipitate severe, potentially life-threatening generalized weakness including respiratory muscles.",
+      c: "Incorrect — concurrent aminoglycoside use would further POTENTIATE the risk, not make botulinum toxin safer; this is not a valid approach.",
+      d: "Incorrect — botulinum toxin worsens rather than treats myasthenia gravis, since it impairs NMJ transmission at a different point in the same pathway already compromised in MG.",
     },
   },
 ];
