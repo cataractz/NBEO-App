@@ -1222,6 +1222,33 @@ const GLAUDEVON_OBJECTIVES = [
   { id: "glaudev-on-lamina", name: "Lamina Cribrosa Architecture & Regional Susceptibility to Glaucomatous Damage", built: true },
 ];
 
+const GLAUPHARMGEN_TOPIC_ID = "t-14-4-0"; // Glaucoma(14) > Pharmacology(4) > General principles(0)
+const GLAUPHARMGEN_OBJECTIVES = [
+  { id: "glaupharmgen-mechanism-classes", name: "Antiglaucoma Drug Classes Organized by Mechanism — Outflow vs. Production", built: true },
+  { id: "glaupharmgen-adherence", name: "Glaucoma Medication Adherence & Its Impact on Disease Progression", built: true },
+];
+
+const GLAUPHARMAGENTS_TOPIC_ID = "t-14-4-1"; // Glaucoma(14) > Pharmacology(4) > Antiglaucoma agents(1)
+const GLAUPHARMAGENTS_OBJECTIVES = [
+  { id: "glaupharm-prostaglandin-firstline", name: "Prostaglandin Analogs — First-Line IOP-Lowering Therapy", built: true },
+  { id: "glaupharm-betablocker-cai", name: "Beta-Blockers & Carbonic Anhydrase Inhibitors — Systemic Considerations", built: true },
+];
+
+const GLAUPHARMHYPEROSM_TOPIC_ID = "t-14-4-2"; // Glaucoma(14) > Pharmacology(4) > Hyperosmotic agents(2)
+const GLAUPHARMHYPEROSM_OBJECTIVES = [
+  { id: "glaupharm-hyperosmotic-acute", name: "Systemic Hyperosmotic Agents for Acute Angle-Closure Glaucoma", built: true },
+];
+
+const GLAUPHARMMYDRIATIC_TOPIC_ID = "t-14-4-3"; // Glaucoma(14) > Pharmacology(4) > Mydriatics and cycloplegics(3)
+const GLAUPHARMMYDRIATIC_OBJECTIVES = [
+  { id: "glaupharm-mydriatic-contraindication", name: "Mydriatic/Cycloplegic Contraindication in Known Angle-Closure Glaucoma", built: true },
+];
+
+const GLAUPHARMINDICATIONS_TOPIC_ID = "t-14-4-4"; // Glaucoma(14) > Pharmacology(4) > Indications/contraindications/side effects/drug interactions(4)
+const GLAUPHARMINDICATIONS_OBJECTIVES = [
+  { id: "glaupharm-sulfa-allergy", name: "Sulfonamide Cross-Reactivity in Carbonic Anhydrase Inhibitors", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -2257,6 +2284,9 @@ const TOPIC_OBJECTIVES = {
   [GLAUDEVAC_TOPIC_ID]: GLAUDEVAC_OBJECTIVES, [GLAUDEVIRIS_TOPIC_ID]: GLAUDEVIRIS_OBJECTIVES,
   [GLAUDEVCB_TOPIC_ID]: GLAUDEVCB_OBJECTIVES, [GLAUDEVRET_TOPIC_ID]: GLAUDEVRET_OBJECTIVES,
   [GLAUDEVON_TOPIC_ID]: GLAUDEVON_OBJECTIVES,
+  [GLAUPHARMGEN_TOPIC_ID]: GLAUPHARMGEN_OBJECTIVES, [GLAUPHARMAGENTS_TOPIC_ID]: GLAUPHARMAGENTS_OBJECTIVES,
+  [GLAUPHARMHYPEROSM_TOPIC_ID]: GLAUPHARMHYPEROSM_OBJECTIVES, [GLAUPHARMMYDRIATIC_TOPIC_ID]: GLAUPHARMMYDRIATIC_OBJECTIVES,
+  [GLAUPHARMINDICATIONS_TOPIC_ID]: GLAUPHARMINDICATIONS_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -2501,6 +2531,11 @@ const CONTENT_TOPICS = [
   { topicId: GLAUDEVCB_TOPIC_ID, name: "Plateau Iris Syndrome", objectives: GLAUDEVCB_OBJECTIVES },
   { topicId: GLAUDEVRET_TOPIC_ID, name: "Glaucoma — Retinal Ganglion Cell Reserve", objectives: GLAUDEVRET_OBJECTIVES },
   { topicId: GLAUDEVON_TOPIC_ID, name: "Glaucoma — Lamina Cribrosa Susceptibility", objectives: GLAUDEVON_OBJECTIVES },
+  { topicId: GLAUPHARMGEN_TOPIC_ID, name: "Glaucoma Pharmacology — General Principles", objectives: GLAUPHARMGEN_OBJECTIVES },
+  { topicId: GLAUPHARMAGENTS_TOPIC_ID, name: "Antiglaucoma Agents", objectives: GLAUPHARMAGENTS_OBJECTIVES },
+  { topicId: GLAUPHARMHYPEROSM_TOPIC_ID, name: "Glaucoma — Hyperosmotic Agents", objectives: GLAUPHARMHYPEROSM_OBJECTIVES },
+  { topicId: GLAUPHARMMYDRIATIC_TOPIC_ID, name: "Glaucoma — Mydriatic/Cycloplegic Contraindications", objectives: GLAUPHARMMYDRIATIC_OBJECTIVES },
+  { topicId: GLAUPHARMINDICATIONS_TOPIC_ID, name: "Glaucoma Pharmacology — Indications & Contraindications", objectives: GLAUPHARMINDICATIONS_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -14305,6 +14340,140 @@ const STUDY_PAGES = {
       "This gives you the precise structural mechanism completing your existing Optic Disc Cupping & the ISNT Rule content — understanding that the lamina cribrosa's regional pore architecture (larger, less-supported pores superiorly/inferiorly) is WHY glaucoma preferentially damages these specific neuroretinal rim regions first, rather than this being an arbitrary clinical observation, giving genuine mechanistic grounding to the ISNT rule's diagnostic value.",
     ],
   },
+  "glaupharmgen-mechanism-classes": {
+    name: "Antiglaucoma Drug Classes Organized by Mechanism — Outflow vs. Production",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Every antiglaucoma medication class lowers IOP through one of two fundamental mechanisms — decreasing aqueous PRODUCTION or increasing aqueous OUTFLOW — and organizing drug classes along this axis directly unifies your existing Aqueous Humor Production, Aqueous Outflow Pathways, and this area's Gross Anatomy content into one coherent pharmacologic framework." },
+      { h: "Decreasing aqueous production", t: "Beta-blockers (already relevant to this area's sibling Pharmacology objective), alpha-2 agonists, and carbonic anhydrase inhibitors (this area's sibling objective) all act on the ciliary body's secretory epithelium (already covered under Aqueous Humor Production and this area's Ciliary Body relevance content) to REDUCE the rate of aqueous humor formation." },
+      { h: "Increasing aqueous outflow", t: "Prostaglandin analogs (this area's sibling objective) increase UVEOSCLERAL outflow (already covered under this area's Choroid relevance content and Aqueous Outflow Pathways), while miotics (already covered under Miotics content) increase CONVENTIONAL (trabecular) outflow by contracting the longitudinal ciliary muscle fibers (already covered under Ciliary Muscle Fiber Orientations content) to mechanically widen the trabecular meshwork spaces." },
+    ],
+    memorizeIt: [
+      "DECREASE production: beta-blockers, alpha-2 agonists, carbonic anhydrase inhibitors — act on ciliary body secretory epithelium (already covered).",
+      "INCREASE outflow: prostaglandin analogs (uveoscleral route, already covered) and miotics (conventional/trabecular route via longitudinal ciliary muscle, already covered).",
+      "This two-mechanism framework organizes all antiglaucoma drug classes and explains why combining a production-decreasing agent with an outflow-increasing agent is a rational, non-redundant combination strategy.",
+    ],
+    applyIt: [
+      "This gives you the unifying pharmacologic framework directly connecting your existing Aqueous Humor Production, Aqueous Outflow Pathways, and Ciliary Muscle Fiber Orientations content — recognizing that a patient on both a prostaglandin analog and a beta-blocker is receiving two mechanistically complementary (not redundant) therapies, one increasing outflow and one decreasing production, explaining why this is a common and rational combination when a single agent is insufficient.",
+    ],
+  },
+  "glaupharmgen-adherence": {
+    name: "Glaucoma Medication Adherence & Its Impact on Disease Progression",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Glaucoma medication adherence is a genuine, major real-world determinant of treatment success, distinct from pharmacologic drug efficacy itself, and directly relevant to interpreting apparent 'treatment failure' in clinical practice." },
+      { h: "Why adherence is a particular challenge in glaucoma", t: "Glaucoma is characteristically asymptomatic through most of its course (already implicit in existing Glaucoma pathology and this area's Ganglion Cell Layer/OCT content, since structural damage can precede any noticeable functional change) — patients do not typically 'feel' their IOP or experience symptoms from early-to-moderate glaucomatous damage, meaning they lack the immediate symptomatic feedback that often reinforces medication adherence in other chronic conditions." },
+      { h: "Adherence as a hidden cause of apparent treatment failure", t: "Poor medication adherence is a major, often underrecognized real-world cause of apparent glaucoma 'treatment failure' (continued IOP elevation or disease progression despite a prescribed regimen) that is NOT actually a pharmacologic failure of the medication itself — before escalating therapy or assuming a drug is ineffective, genuinely assessing and addressing adherence (dosing complexity, side effects, cost, technique issues with drop instillation) is an essential clinical step, since escalating to a more complex or invasive regimen would not solve an underlying adherence problem." },
+    ],
+    memorizeIt: [
+      "Glaucoma is characteristically asymptomatic through most of its course — patients lack immediate symptomatic feedback that reinforces adherence.",
+      "Poor adherence is a major, often underrecognized cause of apparent 'treatment failure' — NOT necessarily a true pharmacologic failure of the medication.",
+      "Assessing/addressing adherence (dosing complexity, side effects, cost, instillation technique) is an essential step BEFORE escalating therapy for apparent progression.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important real-world clinical principle extending your existing Glaucoma content — a patient with apparently progressive glaucomatous damage despite a prescribed multi-drop regimen should have adherence explicitly assessed (e.g., through direct questioning about missed doses, or noting an unexpectedly normal IOP at a visit right after a reminder call) before assuming the current medications are pharmacologically inadequate and escalating to surgery or additional agents.",
+    ],
+  },
+  "glaupharm-prostaglandin-firstline": {
+    name: "Prostaglandin Analogs — First-Line IOP-Lowering Therapy",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Prostaglandin analogs (latanoprost, travoprost, bimatoprost — the same drug and drug class already covered under Bimatoprost for Eyelash Hypotrichosis content) are first-line therapy for most glaucoma patients, combining the greatest single-agent IOP-lowering efficacy with genuine convenience advantages." },
+      { h: "Mechanism and efficacy", t: "As already established, prostaglandin analogs increase uveoscleral (unconventional) outflow (already covered under this area's Choroid relevance and Aqueous Outflow Pathways content) — among all glaucoma drug classes, they typically provide the GREATEST IOP reduction from a single agent, making them the preferred first-line choice for most patients starting glaucoma therapy." },
+      { h: "Once-daily dosing — the adherence advantage", t: "A genuine practical advantage is ONCE-DAILY dosing (typically at bedtime), the simplest dosing schedule of any major antiglaucoma drug class — directly supporting the medication adherence principle already covered under this area's General Principles content, since simpler dosing regimens are generally associated with better real-world adherence than multiple-times-daily alternatives." },
+      { h: "Side effects", t: "Side effects mirror those already covered under Bimatoprost for Eyelash Hypotrichosis content — periocular skin hyperpigmentation, eyelash growth (a cosmetically notable but clinically benign effect), and permanent iris darkening with chronic use (increased melanin synthesis in iris melanocytes, not proliferation) — genuinely important counseling points, especially for patients using the medication in only one eye, where asymmetric iris color change could become cosmetically noticeable." },
+    ],
+    memorizeIt: [
+      "Prostaglandin analogs (latanoprost, travoprost, bimatoprost — same class already covered under cosmetic lash content): increase uveoscleral outflow, GREATEST single-agent IOP reduction of any class.",
+      "ONCE-DAILY dosing (bedtime) — simplest regimen of any major class, supports adherence (already covered).",
+      "Side effects (already covered): periocular hyperpigmentation, eyelash growth, permanent iris darkening with chronic use.",
+    ],
+    applyIt: [
+      "This gives you the first-line therapy rationale directly extending your existing Bimatoprost for Eyelash Hypotrichosis content and this area's General Principles adherence objective — understanding that prostaglandin analogs combine maximal single-agent efficacy with the simplest (once-daily) dosing schedule explains why they are typically the first medication tried in newly diagnosed glaucoma, and a patient using the same drug class cosmetically for lash growth should be counseled about the compounded periocular pigmentation risk if also prescribed a prostaglandin analog for glaucoma.",
+    ],
+  },
+  "glaupharm-betablocker-cai": {
+    name: "Beta-Blockers & Carbonic Anhydrase Inhibitors — Systemic Considerations",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical beta-blockers and carbonic anhydrase inhibitors (CAIs) both decrease aqueous production (already covered under this area's General Principles content) but carry genuinely important systemic contraindications and side effects extending your existing systemic absorption and Ciliary Body Secretory Function content." },
+      { h: "Beta-blockers — cardiopulmonary contraindications", t: "Topical beta-blockers (timolol) reduce aqueous production via beta-2 receptor blockade in the ciliary body (already covered under Ciliary Body Secretory Function & Autonomic Control content) — but given nasolacrimal systemic absorption (already covered under systemic absorption content), topical timolol can cause systemic beta-blockade effects including bradycardia and bronchospasm, making it CONTRAINDICATED in patients with asthma/COPD (bronchospasm risk) or significant cardiac conduction disease/heart block (bradycardia risk) — a genuinely important systemic screening question before prescribing." },
+      { h: "Carbonic anhydrase inhibitors — sulfa-related and metabolic considerations", t: "CAIs (topical dorzolamide/brinzolamide, or oral acetazolamide for more potent effect) reduce aqueous production via carbonic anhydrase inhibition in the ciliary epithelium — oral CAIs carry substantially more systemic side effects than topical formulations, including paresthesias (tingling, particularly in fingers/toes), metabolic acidosis, and increased kidney stone risk, plus the sulfonamide cross-reactivity consideration covered under this area's sibling Indications objective." },
+    ],
+    memorizeIt: [
+      "Topical beta-blockers (timolol): beta-2 blockade in ciliary body (already covered) — CONTRAINDICATED in asthma/COPD (bronchospasm) and significant cardiac conduction disease/heart block (bradycardia), given systemic absorption (already covered).",
+      "CAIs: carbonic anhydrase inhibition in ciliary epithelium — oral forms (acetazolamide) have more systemic effects than topical (dorzolamide/brinzolamide): paresthesias, metabolic acidosis, kidney stone risk.",
+      "Always screen for cardiopulmonary disease before topical beta-blockers, and consider sulfa allergy before CAIs (this area's sibling objective).",
+    ],
+    applyIt: [
+      "This gives you the essential systemic safety screening directly extending your existing Systemic Absorption of Topical Medications and Ciliary Body Secretory Function content — a glaucoma patient with a history of asthma or heart block should specifically avoid topical timolol given genuine systemic beta-blockade risk via nasolacrimal absorption, reinforcing that 'just an eye drop' can have clinically significant systemic effects requiring the same contraindication screening as a systemic medication.",
+    ],
+  },
+  "glaupharm-hyperosmotic-acute": {
+    name: "Systemic Hyperosmotic Agents for Acute Angle-Closure Glaucoma",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Systemic hyperosmotic agents (oral glycerin or IV mannitol) provide emergency, temporizing IOP reduction in acute angle-closure glaucoma crisis, genuinely distinct from topical hyperosmotic therapy (already covered under Cornea Pharmacology content for chronic corneal edema)." },
+      { h: "Mechanism — distinct from topical hyperosmotics", t: "Unlike topical 5% hypertonic saline (already covered, which draws fluid out of the edematous CORNEA locally), systemic hyperosmotic agents work by creating an osmotic gradient across the BLOOD-OCULAR barrier, drawing fluid out of the VITREOUS cavity into the bloodstream — this acutely shrinks vitreous volume, which mechanically pulls the lens-iris diaphragm posteriorly, helping relieve pupillary block/angle crowding (already covered) and rapidly lowering IOP." },
+      { h: "Clinical role — temporizing measure before definitive treatment", t: "Systemic hyperosmotic therapy is used as an EMERGENCY, temporizing measure to rapidly reduce dangerously elevated IOP during an acute angle-closure attack, providing a window to stabilize the eye BEFORE definitive treatment (laser peripheral iridotomy, already implicit under existing Pupillary Block content) can be performed — it is not a long-term or chronic glaucoma management strategy, distinguishing it from the chronic daily-use antiglaucoma medications already covered." },
+    ],
+    memorizeIt: [
+      "Systemic hyperosmotics (oral glycerin, IV mannitol): distinct from topical hyperosmotic therapy (already covered) — draw fluid out of the VITREOUS cavity, not the cornea.",
+      "Mechanism: acutely shrinks vitreous volume → pulls lens-iris diaphragm posteriorly → helps relieve pupillary block/angle crowding (already covered) → rapidly lowers IOP.",
+      "EMERGENCY, temporizing measure only — stabilizes the eye before definitive laser peripheral iridotomy; not a chronic glaucoma management strategy.",
+    ],
+    applyIt: [
+      "This gives you the emergency pharmacologic intervention directly extending your existing Pupillary Block Mechanism & Iris Bombé content — a patient presenting with acute angle-closure glaucoma (severe pain, red eye, fixed mid-dilated pupil, markedly elevated IOP) should receive systemic hyperosmotic therapy as an urgent temporizing measure to reduce IOP and prevent further optic nerve damage while arrangements are made for definitive laser peripheral iridotomy.",
+    ],
+  },
+  "glaupharm-mydriatic-contraindication": {
+    name: "Mydriatic/Cycloplegic Contraindication in Known Angle-Closure Glaucoma",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "The general mydriasis/angle-closure risk principle already covered under Anterior Uvea Pharmacology content applies with particular, specific force to patients with KNOWN narrow, occludable, or previously-closed angles, directly relevant to this area's Anterior Chamber Angle classification content." },
+      { h: "Specific application to known angle-closure risk", t: "As already established, pharmacologic dilation can precipitate acute angle-closure glaucoma in a susceptible eye by causing peripheral iris bunching that mechanically occludes a narrow angle — this principle becomes a more definite, rather than theoretical, CONTRAINDICATION in a patient with a KNOWN history of narrow/occludable angles on prior gonioscopy (already covered under this area's Anterior Chamber Angle relevance content) or a prior episode of angle-closure glaucoma, where dilation should generally be avoided or performed only with specific precautions (e.g., after prophylactic laser iridotomy has already been performed)." },
+      { h: "Clinical workflow implication", t: "This reinforces why documenting angle status (via gonioscopy, already covered) BEFORE any dilated examination is genuinely important clinical practice — a patient's chart should clearly flag a known narrow/occludable angle so that future dilation decisions (for any reason, including routine fundus exams already covered) appropriately account for this specific, documented risk rather than defaulting to routine dilation practice." },
+    ],
+    memorizeIt: [
+      "Pharmacologic dilation is a definite (not just theoretical) contraindication concern in patients with a KNOWN history of narrow/occludable angles or prior angle-closure glaucoma.",
+      "Documenting angle status via gonioscopy (already covered) BEFORE dilation is essential clinical practice, especially in at-risk patients.",
+      "A patient's chart should clearly flag known narrow/occludable angle status to guide all future dilation decisions.",
+    ],
+    applyIt: [
+      "This gives you the practical clinical application directly extending your existing Mydriasis Contraindication Risk content (Anterior Uvea Pharmacology) and this area's Anterior Chamber Angle relevance content — a patient with documented narrow angles from a prior visit should have this flagged prominently, so that dilation for any future purpose (routine exam, this area's sibling diagnostic dilation content under Optic Nerve Pharmacology) is approached with appropriate caution or deferred until prophylactic iridotomy has addressed the underlying anatomic risk.",
+    ],
+  },
+  "glaupharm-sulfa-allergy": {
+    name: "Sulfonamide Cross-Reactivity in Carbonic Anhydrase Inhibitors",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard glaucoma pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Carbonic anhydrase inhibitors (CAIs, this area's sibling Beta-Blockers & CAI objective) are sulfonamide derivatives, carrying a genuine cross-reactivity consideration in patients with documented sulfa drug allergy — a practical, testable prescribing safety point." },
+      { h: "Sulfonamide structure and the cross-reactivity question", t: "Both topical (dorzolamide, brinzolamide) and oral (acetazolamide) CAIs share a sulfonamide chemical structure with sulfa antibiotics (already relevant to existing Antibiotic Mechanisms content) — while the degree of true clinical cross-reactivity between different classes of sulfonamide-containing drugs remains genuinely debated in the literature (antibiotic sulfonamides vs. non-antibiotic sulfonamides like CAIs may not cross-react as strongly as once assumed), documented severe sulfa allergy (e.g., Stevens-Johnson syndrome, already covered under existing hypersensitivity content) is generally considered a reason for caution or avoidance of CAIs." },
+      { h: "Practical prescribing approach", t: "Given this genuine, if debated, cross-reactivity concern, a documented sulfa allergy should prompt caution before prescribing a CAI — either avoiding this drug class in favor of an alternative mechanism (beta-blocker, alpha agonist, prostaglandin analog, or miotic, already covered) when reasonable alternatives exist, or proceeding with informed caution and monitoring in cases where CAI therapy is specifically needed and no adequate alternative is available." },
+    ],
+    memorizeIt: [
+      "CAIs (topical dorzolamide/brinzolamide, oral acetazolamide) are sulfonamide derivatives, structurally related to sulfa antibiotics.",
+      "True cross-reactivity degree is debated, but documented severe sulfa allergy (e.g., Stevens-Johnson syndrome, already covered) generally warrants caution/avoidance of CAIs.",
+      "Practical approach: prefer an alternative drug class mechanism when reasonable alternatives exist for a patient with documented sulfa allergy.",
+    ],
+    applyIt: [
+      "This gives you a genuinely practical, testable prescribing safety consideration directly extending your existing antiglaucoma drug class content — before prescribing a CAI (topical or oral) for a glaucoma patient, screening for sulfa drug allergy history is an important safety step, with a documented severe reaction prompting preference for an alternative mechanism (beta-blocker, prostaglandin analog, alpha agonist, or miotic, this area's sibling objectives) when clinically reasonable.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -16064,6 +16233,13 @@ const FLASHCARDS = [
   { id: "fc-1355", objectiveId: "glaudev-cb-plateau-iris", front: "Why doesn't laser iridotomy fully resolve plateau iris configuration?", back: "The angle crowding is driven by anteriorly-positioned ciliary body/processes, not by the pupillary pressure differential that iridotomy relieves." },
   { id: "fc-1356", objectiveId: "glaudev-retina-nfl", front: "What is the 'reserve capacity' concept in glaucoma risk?", back: "A lower baseline ganglion cell count (e.g., from a developmental factor) means less reserve before glaucomatous loss reaches the threshold of detectable field loss." },
   { id: "fc-1357", objectiveId: "glaudev-on-lamina", front: "Why does the lamina cribrosa's regional architecture explain the ISNT rule pattern?", back: "Pores are larger and connective tissue support sparser at the superior/inferior poles, making axons there more mechanically vulnerable to IOP-related stress." },
+  { id: "fc-1358", objectiveId: "glaupharmgen-mechanism-classes", front: "Which antiglaucoma drug classes decrease aqueous production, and which increase outflow?", back: "Decrease production: beta-blockers, alpha-2 agonists, CAIs. Increase outflow: prostaglandin analogs (uveoscleral) and miotics (trabecular)." },
+  { id: "fc-1359", objectiveId: "glaupharmgen-adherence", front: "Why is medication adherence a particular challenge in glaucoma management?", back: "Glaucoma is characteristically asymptomatic through most of its course, so patients lack immediate symptomatic feedback reinforcing adherence." },
+  { id: "fc-1360", objectiveId: "glaupharm-prostaglandin-firstline", front: "What two advantages make prostaglandin analogs typical first-line glaucoma therapy?", back: "Greatest single-agent IOP reduction of any class, plus once-daily (simplest) dosing." },
+  { id: "fc-1361", objectiveId: "glaupharm-betablocker-cai", front: "What two systemic contraindications apply to topical beta-blockers (timolol) for glaucoma?", back: "Asthma/COPD (bronchospasm risk) and significant cardiac conduction disease/heart block (bradycardia risk)." },
+  { id: "fc-1362", objectiveId: "glaupharm-hyperosmotic-acute", front: "How do systemic hyperosmotic agents (mannitol/glycerin) lower IOP in acute angle-closure glaucoma?", back: "They draw fluid out of the vitreous cavity, shrinking vitreous volume and pulling the lens-iris diaphragm posteriorly to help relieve angle crowding." },
+  { id: "fc-1363", objectiveId: "glaupharm-mydriatic-contraindication", front: "What should be flagged in the chart of a patient with known narrow/occludable angles?", back: "The angle status, so future dilation decisions for any purpose account for this documented risk." },
+  { id: "fc-1364", objectiveId: "glaupharm-sulfa-allergy", front: "What drug class shares sulfonamide structure with sulfa antibiotics, requiring allergy screening?", back: "Carbonic anhydrase inhibitors (topical dorzolamide/brinzolamide, oral acetazolamide)." },
 ];
 
 const QUESTIONS = [
@@ -21199,6 +21375,40 @@ const QUESTIONS = [
       b: "Correct — persistent angle crowding despite a flat iris and normal central chamber depth after iridotomy is classic for plateau iris configuration, where anteriorly-positioned ciliary processes push the peripheral iris against the angle independent of the pupillary pressure differential that iridotomy relieves.",
       c: "Incorrect — persistent angle crowding after iridotomy is a clinically significant finding requiring further evaluation and likely additional treatment (e.g., iridoplasty), not an expected benign finding.",
       d: "Incorrect — this presentation does not involve lens-related findings; plateau iris is a distinct, ciliary-body-driven mechanism.",
+    },
+  },
+  {
+    id: "q-303", objectiveId: "glaupharm-betablocker-cai", type: "Clinical application", difficulty: "Medium",
+    stem: "A glaucoma patient with a history of severe asthma is being considered for topical timolol therapy. What is the primary safety concern, and why?",
+    choices: [
+      { id: "a", text: "Timolol has no systemic absorption and poses no risk to asthmatic patients" },
+      { id: "b", text: "Topical timolol can be absorbed systemically via nasolacrimal drainage and cause bronchospasm through systemic beta-blockade, making it contraindicated in asthma" },
+      { id: "c", text: "Timolol only affects the eye and cannot reach the lungs through any route" },
+      { id: "d", text: "Asthma is a risk factor for glaucoma progression, unrelated to timolol safety" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — topical timolol undergoes genuine systemic absorption via nasolacrimal drainage, already established as a general principle for topical ocular medications.",
+      b: "Correct — topical timolol's nasolacrimal systemic absorption can produce systemic beta-blockade effects, including bronchospasm in susceptible patients, making it contraindicated in asthma/COPD.",
+      c: "Incorrect — nasolacrimal drainage provides a direct systemic absorption route bypassing the eye entirely, allowing genuine pulmonary/cardiac effects.",
+      d: "Incorrect — this question specifically concerns the pharmacologic safety of prescribing timolol in an asthmatic patient, not glaucoma risk factors.",
+    },
+  },
+  {
+    id: "q-304", objectiveId: "glaupharm-hyperosmotic-acute", type: "Clinical application", difficulty: "Medium",
+    stem: "A patient presents to the emergency department with acute angle-closure glaucoma, severe eye pain, and IOP of 60 mmHg. What is the role of IV mannitol in this scenario?",
+    choices: [
+      { id: "a", text: "It is the definitive, permanent treatment and no further intervention is needed" },
+      { id: "b", text: "It is an emergency temporizing measure that rapidly lowers IOP by drawing fluid out of the vitreous, stabilizing the eye until definitive laser peripheral iridotomy can be performed" },
+      { id: "c", text: "It works by directly increasing trabecular meshwork outflow, identical to miotics" },
+      { id: "d", text: "It has no meaningful effect on IOP in acute angle-closure glaucoma" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — systemic hyperosmotic therapy is a temporizing emergency measure, not a definitive treatment; laser peripheral iridotomy remains necessary.",
+      b: "Correct — IV mannitol creates an osmotic gradient drawing fluid out of the vitreous cavity, shrinking vitreous volume and helping relieve pupillary block, rapidly lowering dangerously elevated IOP as an emergency bridge to definitive laser treatment.",
+      c: "Incorrect — mannitol's mechanism involves osmotic vitreous volume reduction, not direct trabecular meshwork outflow enhancement like miotics.",
+      d: "Incorrect — systemic hyperosmotic therapy produces a genuine, rapid IOP reduction, which is precisely why it is used in this emergency scenario.",
     },
   },
 ];
