@@ -742,6 +742,33 @@ const ORBITBLOOD_OBJECTIVES = [
   { id: "orbitblood-venous", name: "Orbital Venous Drainage & the Cavernous Sinus", built: true },
 ];
 
+const ORBITDEV_TOPIC_ID = "t-8-1-0"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Anatomy(Developmental)(1) > Orbit(0)
+const ORBITDEV_OBJECTIVES = [
+  { id: "orbitdev-embryology", name: "Orbital Bone Development from Neural Crest Mesenchyme", built: true },
+  { id: "orbitdev-growth", name: "Postnatal Orbital Growth & Pediatric Fracture Patterns", built: true },
+];
+
+const EOMDEV_TOPIC_ID = "t-8-1-1"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Anatomy(Developmental)(1) > Extraocular muscles(1)
+// Ties directly into existing Amblyopia/Strabismus CN III/IV/VI Palsy content.
+const EOMDEV_OBJECTIVES = [
+  { id: "eomdev-embryology", name: "EOM Embryologic Origin from Mesoderm", built: true },
+  { id: "eomdev-ccdd", name: "Congenital Cranial Dysinnervation Disorders (Duane Syndrome, CFEOM)", built: true },
+];
+
+const LIDDEV_TOPIC_ID = "t-8-1-2"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Anatomy(Developmental)(1) > Eyelid(2)
+const LIDDEV_OBJECTIVES = [
+  { id: "liddev-formation", name: "Eyelid Formation & Fusion Timeline", built: true },
+  { id: "liddev-anomalies", name: "Congenital Eyelid Anomalies (Coloboma, Epicanthus, Cryptophthalmos)", built: true },
+];
+
+const LACDEV_TOPIC_ID = "t-8-1-3"; // Lids/Lashes/Lacrimal/Adnexa/Orbit(8) > Anatomy(Developmental)(1) > Lacrimal apparatus(3)
+// Ties directly into existing Dacryocystitis/NLDO and Lacrimal Drainage
+// Apparatus gross anatomy content.
+const LACDEV_OBJECTIVES = [
+  { id: "lacdev-formation", name: "Lacrimal Drainage System Embryologic Development", built: true },
+  { id: "lacdev-anomalies", name: "Congenital Lacrimal Anomalies & Dacryocystocele", built: true },
+];
+
 const GENHEALTH_TOPIC_ID = "t-15-7-0"; // Systemic Health(15) > Pathology(7) > General health(0)
 const GENHEALTH_OBJECTIVES = [
   { id: "genhealth-differential", name: "Differential Diagnosis of Common Systemic Symptoms", built: true },
@@ -1732,6 +1759,8 @@ const TOPIC_OBJECTIVES = {
   [LIDGROSS_TOPIC_ID]: LIDGROSS_OBJECTIVES, [EYEBROWGROSS_TOPIC_ID]: EYEBROWGROSS_OBJECTIVES,
   [LACSYSGROSS_TOPIC_ID]: LACSYSGROSS_OBJECTIVES, [ORBITGROSS_TOPIC_ID]: ORBITGROSS_OBJECTIVES,
   [EOMGROSS_TOPIC_ID]: EOMGROSS_OBJECTIVES, [ORBITBLOOD_TOPIC_ID]: ORBITBLOOD_OBJECTIVES,
+  [ORBITDEV_TOPIC_ID]: ORBITDEV_OBJECTIVES, [EOMDEV_TOPIC_ID]: EOMDEV_OBJECTIVES,
+  [LIDDEV_TOPIC_ID]: LIDDEV_OBJECTIVES, [LACDEV_TOPIC_ID]: LACDEV_OBJECTIVES,
 };
 const CONTENT_TOPICS = [
   { topicId: ENDO_TOPIC_ID, name: "Endocrine / Metabolic System", objectives: ENDO_OBJECTIVES },
@@ -1893,6 +1922,10 @@ const CONTENT_TOPICS = [
   { topicId: ORBITGROSS_TOPIC_ID, name: "Orbital Gross Anatomy", objectives: ORBITGROSS_OBJECTIVES },
   { topicId: EOMGROSS_TOPIC_ID, name: "Extraocular Muscle Gross Anatomy", objectives: EOMGROSS_OBJECTIVES },
   { topicId: ORBITBLOOD_TOPIC_ID, name: "Orbital Blood Supply", objectives: ORBITBLOOD_OBJECTIVES },
+  { topicId: ORBITDEV_TOPIC_ID, name: "Orbital Developmental Anatomy", objectives: ORBITDEV_OBJECTIVES },
+  { topicId: EOMDEV_TOPIC_ID, name: "Extraocular Muscle Developmental Anatomy", objectives: EOMDEV_OBJECTIVES },
+  { topicId: LIDDEV_TOPIC_ID, name: "Eyelid Developmental Anatomy", objectives: LIDDEV_OBJECTIVES },
+  { topicId: LACDEV_TOPIC_ID, name: "Lacrimal Apparatus Developmental Anatomy", objectives: LACDEV_OBJECTIVES },
 ];
 
 const PRIORITY_COLORS = { MUST: "var(--coral)", SHOULD: "var(--amber)", CLINICAL: "var(--teal)" };
@@ -11425,6 +11458,167 @@ const STUDY_PAGES = {
       "This gives you the anatomic mechanism explaining the most feared potential progression of your existing Preseptal vs. Orbital Cellulitis content — bilateral orbital signs or new cranial nerve palsies (III, IV, V1/V2, VI) in a patient with orbital cellulitis should immediately raise concern for cavernous sinus thrombosis via this valveless venous spread, representing a genuine neuro-ophthalmic and systemic emergency distinct from uncomplicated unilateral orbital cellulitis.",
     ],
   },
+  "orbitdev-embryology": {
+    name: "Orbital Bone Development from Neural Crest Mesenchyme",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "Most of the bony orbit develops via intramembranous ossification from cranial neural crest-derived mesenchyme, a distinct embryologic origin and process from the endochondral ossification (cartilage-first) pattern used for many other skeletal bones." },
+      { h: "Neural crest origin", t: "Cranial neural crest cells migrate from the dorsal neural tube early in development and give rise to most of the facial skeleton, including the frontal, lacrimal, zygomatic, and portions of the maxillary and ethmoid bones already covered under Orbital Bony Walls — this neural crest origin is a genuinely distinctive fact, since neural crest is more commonly associated with peripheral nervous system and pigment cell derivatives elsewhere in the body." },
+      { h: "Intramembranous ossification", t: "Unlike the long bones of the limbs (which form via endochondral ossification, with a cartilage model later replaced by bone), most orbital and facial bones form via intramembranous ossification — mesenchymal cells directly differentiate into bone-forming osteoblasts without a cartilage intermediate, a faster process producing the flat bones characteristic of the skull and face." },
+    ],
+    memorizeIt: [
+      "Most orbital bones derive from cranial NEURAL CREST-derived mesenchyme, not mesoderm.",
+      "Orbital/facial bones form via INTRAMEMBRANOUS ossification (direct mesenchyme-to-bone), not endochondral ossification (cartilage-first, used by limb long bones).",
+      "This neural crest origin is distinctive since neural crest is more typically associated with peripheral nerves and pigment cells elsewhere in the body.",
+    ],
+    applyIt: [
+      "This gives you the embryologic origin underlying your existing Orbital Bony Walls & Adjacent Sinuses content — understanding that these bones form via direct mesenchymal ossification without a cartilage intermediate helps explain their relatively rapid prenatal formation and sets up the postnatal growth pattern covered under this topic's sibling objective.",
+    ],
+  },
+  "orbitdev-growth": {
+    name: "Postnatal Orbital Growth & Pediatric Fracture Patterns",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology/pediatric ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "The orbit undergoes substantial postnatal growth, and the resulting difference in bone pliability between children and adults produces a genuinely distinct fracture pattern already relevant to your existing Orbital Bony Walls content on adult blowout fractures." },
+      { h: "Postnatal growth pattern", t: "Orbital volume increases substantially during the first several years of life, with growth continuing at a slower rate through childhood — interorbital distance and overall orbital proportions change as the craniofacial skeleton matures, relevant to the timing considerations for certain reconstructive and strabismus procedures." },
+      { h: "Pediatric 'trapdoor' (white-eyed) blowout fracture", t: "Pediatric orbital bone is more pliable (less brittle) than adult bone, producing a distinct fracture pattern: rather than a displaced, comminuted floor fracture with obvious bony gap (typical in adults, already covered), children can sustain a 'trapdoor' fracture where the bone bends open, allows the inferior rectus muscle to herniate through, and then springs back nearly into place — trapping the muscle with LITTLE OR NO visible bony displacement on imaging and often a deceptively quiet-looking ('white') eye externally, despite severe muscle entrapment underneath." },
+      { h: "Why this pediatric pattern is a surgical emergency", t: "This 'white-eyed blowout fracture' is a genuine surgical emergency distinct from the typical adult presentation, since the trapped muscle can become ischemic within hours if not surgically released — the deceptively mild external appearance (compared to the more obviously displaced/bruised adult fracture) makes it a dangerous diagnostic pitfall if the surgeon is not specifically aware that a benign-looking pediatric orbital injury with restricted eye movement still requires urgent evaluation and often urgent surgical release." },
+    ],
+    memorizeIt: [
+      "Orbital volume increases substantially in the first several years of life, with growth continuing more slowly through childhood.",
+      "Pediatric bone is more pliable than adult bone — produces 'trapdoor' fractures: bone bends open, muscle herniates through, bone springs back with LITTLE/NO visible displacement.",
+      "'White-eyed blowout fracture' = trapdoor fracture with deceptively mild external appearance despite severe muscle entrapment underneath.",
+      "This is a surgical EMERGENCY — trapped muscle can become ischemic within hours; urgent recognition and release is needed despite the benign external appearance.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important pediatric exception to your existing Orbital Bony Walls & Adjacent Sinuses content on adult blowout fractures — a child presenting after orbital trauma with a quiet, non-bruised-looking eye but restricted upgaze and vomiting/bradycardia (oculocardiac reflex from muscle traction) should raise urgent suspicion for a white-eyed trapdoor fracture requiring emergency surgical release, precisely because the deceptively mild appearance is the opposite of what the more obviously displaced adult fracture pattern would suggest.",
+    ],
+  },
+  "eomdev-embryology": {
+    name: "EOM Embryologic Origin from Mesoderm",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The extraocular muscles derive from cranial mesoderm (prechordal and paraxial/somitomeric mesoderm), a distinct embryologic origin from the surrounding neural-crest-derived orbital bones and connective tissue already covered under this topic's sibling objective, and each EOM's specific cranial nerve innervation develops in tight coordination with its mesodermal segment of origin." },
+      { h: "Mesodermal origin", t: "Unlike most orbital and facial connective/skeletal structures (neural crest-derived, already covered), the EOMs themselves arise from cranial mesoderm — a genuinely distinctive developmental fact, since it means the muscles and their surrounding bony orbit have two entirely different embryologic tissue origins despite their close final anatomic relationship." },
+      { h: "Coordinated nerve-muscle development", t: "Each EOM's specific cranial nerve innervation (CN III to the four recti + inferior oblique, CN IV to superior oblique, CN VI to lateral rectus, already established under existing EOM content) develops in tight embryologic coordination with the corresponding mesodermal muscle segment — this precise, coordinated pairing is what can go wrong in the congenital dysinnervation disorders covered under this topic's sibling objective, where the WRONG nerve ends up innervating a given muscle." },
+    ],
+    memorizeIt: [
+      "EOMs derive from cranial MESODERM (prechordal/paraxial), distinct from the neural-crest origin of the surrounding orbital bones (this topic's sibling area).",
+      "Each EOM's cranial nerve innervation (III, IV, VI) develops in tight coordination with its specific mesodermal muscle segment.",
+      "This muscle-nerve developmental pairing, when it goes wrong, is the basis for congenital cranial dysinnervation disorders (this topic's sibling objective).",
+    ],
+    applyIt: [
+      "This gives you the embryologic foundation directly setting up this topic's sibling objective on congenital cranial dysinnervation disorders — understanding that muscle and nerve development are normally tightly coordinated but embryologically separate processes explains how a specific miswiring error (the wrong nerve innervating a given muscle) can occur despite the muscle itself forming normally.",
+    ],
+  },
+  "eomdev-ccdd": {
+    name: "Congenital Cranial Dysinnervation Disorders (Duane Syndrome, CFEOM)",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pediatric ophthalmology/strabismus references"],
+    learnIt: [
+      { h: "Overview", t: "Congenital cranial dysinnervation disorders (CCDDs) are a category of congenital strabismus resulting from primary abnormal innervation of the extraocular muscles during development — genuinely distinct from the acquired CN III/IV/VI palsies already covered, since the nerve/muscle connections are miswired from birth rather than damaged later." },
+      { h: "Duane retraction syndrome", t: "Duane retraction syndrome results from congenital absence (agenesis) of the CN VI nucleus/abducens nerve, with the lateral rectus instead being aberrantly innervated by a branch of CN III (oculomotor) — this produces the syndrome's classic findings: limited abduction (since the lateral rectus lacks its normal CN VI innervation for pure abduction), and on attempted ADDUCTION, simultaneous co-contraction of both the medial rectus (normal CN III innervation) and the aberrantly-innervated lateral rectus, causing globe RETRACTION and narrowing of the palpebral fissure — a genuinely distinctive finding not seen in acquired CN VI palsy (already covered), which shows simple limited abduction without globe retraction." },
+      { h: "Congenital fibrosis of the extraocular muscles (CFEOM)", t: "CFEOM is a genetic disorder (often involving mutations affecting axon guidance during development) causing primary fibrosis/restriction of one or more EOMs due to abnormal or absent innervation during development, typically presenting with bilateral ptosis and severely restricted eye movements (often fixed in a downward position) from birth — a restrictive, non-progressive congenital condition distinct from an acquired cranial neuropathy." },
+      { h: "Key distinguishing principle from acquired palsies", t: "The key board-exam distinguishing principle is that CCDDs are congenital, non-progressive, and often show characteristic COMPENSATORY or PARADOXICAL findings (like Duane syndrome's globe retraction on adduction) that reflect the specific aberrant wiring pattern — findings not explained by simple, acquired, isolated cranial nerve dysfunction already covered under Head & Neck Anatomy's cranial nerve palsy content." },
+    ],
+    memorizeIt: [
+      "Duane retraction syndrome: CN VI agenesis + aberrant CN III innervation of the lateral rectus → limited abduction + globe RETRACTION/palpebral fissure narrowing on attempted adduction.",
+      "Duane syndrome's globe retraction (from co-contraction of medial + lateral rectus on adduction) is NOT seen in acquired CN VI palsy — a key distinguishing finding.",
+      "CFEOM: genetic axon-guidance disorder → primary EOM fibrosis, congenital bilateral ptosis + severely restricted eye movements (often fixed downward) from birth.",
+      "CCDDs are congenital and non-progressive — distinct from acquired CN III/IV/VI palsies already covered, which develop later and lack the aberrant co-contraction findings.",
+    ],
+    applyIt: [
+      "This gives you a genuinely important congenital counterpart to your existing CN III/IV/VI Palsies content under Amblyopia/Strabismus — a child presenting with lifelong (not acquired) limited abduction who also shows globe retraction and lid fissure narrowing specifically on attempted adduction has Duane syndrome, not a CN VI palsy, a critical distinction since Duane syndrome does not reflect a treatable acquired neurologic process and has different surgical management implications.",
+    ],
+  },
+  "liddev-formation": {
+    name: "Eyelid Formation & Fusion Timeline",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The eyelids develop as folds of surface ectoderm and underlying mesenchyme that transiently FUSE together during a specific gestational window before reopening — understanding this timeline explains several congenital eyelid anomalies covered under this topic's sibling objective." },
+      { h: "Formation and fusion", t: "Upper and lower eyelid folds begin forming around the 6th week of gestation from surface ectoderm (forming the skin, conjunctiva, and glandular epithelium) with mesenchymal contributions (forming the tarsus, muscle, and connective tissue) — by approximately the 10th week, the lid margins fuse together (a normal, transient state called physiologic ankyloblepharon), completely covering the developing eye." },
+      { h: "Reopening", t: "The fused eyelids normally remain sealed until approximately the 5th to 6th month of gestation, when they separate (reopen) — this fusion period corresponds to critical ocular structural development occurring behind the protectively closed lids, and premature separation or failure of proper reopening can be associated with structural anomalies of the anterior segment." },
+    ],
+    memorizeIt: [
+      "Eyelid folds form ~6th week gestation from surface ectoderm (skin/conjunctiva/glands) + mesenchyme (tarsus/muscle/connective tissue).",
+      "Lids fuse together (physiologic ankyloblepharon) by ~10th week — a normal, transient developmental state.",
+      "Lids reopen ~5th-6th month gestation, after a period of protecting the developing eye during critical structural development.",
+      "This fusion timeline sets up the congenital anomalies covered under this topic's sibling objective when formation, fusion, or reopening is disrupted.",
+    ],
+    applyIt: [
+      "This gives you the developmental timeline directly setting up this topic's sibling objective on congenital eyelid anomalies — understanding that normal eyelid development involves a deliberate fuse-then-reopen sequence explains why disruption at different points in this timeline (failure to form at all, vs. failure to properly separate) produces distinctly different congenital anomalies.",
+    ],
+  },
+  "liddev-anomalies": {
+    name: "Congenital Eyelid Anomalies (Coloboma, Epicanthus, Cryptophthalmos)",
+    priority: "MUST",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pediatric ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "Several distinct congenital eyelid anomalies arise from disruption at different points in the normal eyelid formation/fusion/reopening timeline (this topic's sibling objective), ranging from a common benign finding to a rare, severe malformation." },
+      { h: "Eyelid coloboma", t: "Eyelid coloboma is a full-thickness defect (notch) in the eyelid margin, typically the UPPER lid, resulting from a localized failure of eyelid fold fusion during development — often associated with Goldenhar syndrome (oculo-auriculo-vertebral spectrum) and other craniofacial syndromes, and clinically important because the resulting corneal exposure at the defect site can lead to exposure keratopathy requiring surgical repair." },
+      { h: "Epicanthal folds — a benign mimicker", t: "Epicanthal folds are vertical skin folds at the medial canthus, common normal findings in infants (and more prevalent in certain ethnic backgrounds) that can create the visual illusion of esotropia by covering the nasal sclera and making the eyes appear crossed — this is 'pseudostrabismus,' a genuinely important distinction from true esotropia already covered under Amblyopia/Strabismus content, since epicanthal folds resolve as the nasal bridge develops with age and require no treatment, unlike true strabismus." },
+      { h: "Cryptophthalmos — a severe malformation", t: "Cryptophthalmos is a rare, severe anomaly in which the eyelids fail to form/separate entirely, leaving skin continuously covering the globe with absent lid margins and lashes — often part of Fraser syndrome (a multisystem genetic syndrome), and representing the extreme end of the eyelid developmental disruption spectrum, in contrast to the much more common and benign epicanthal fold." },
+    ],
+    memorizeIt: [
+      "Eyelid coloboma: full-thickness UPPER lid margin defect from localized fusion failure; associated with Goldenhar syndrome; risk of exposure keratopathy.",
+      "Epicanthal folds: common, benign medial canthal skin folds causing 'pseudostrabismus' (mimics esotropia) — distinguish from true esotropia (already covered); resolves with nasal bridge development, no treatment needed.",
+      "Cryptophthalmos: rare, severe — eyelids fail to form/separate, skin covers the globe; associated with Fraser syndrome.",
+      "Key clinical distinguishing test for pseudostrabismus: cover test and corneal light reflex (Hirschberg) are NORMAL/symmetric in pseudostrabismus, unlike true strabismus.",
+    ],
+    applyIt: [
+      "This gives you a genuinely high-yield clinical distinction extending your existing Amblyopia/Strabismus content: an infant referred for 'crossed eyes' who has symmetric corneal light reflexes and a normal cover test, but prominent epicanthal folds, has pseudostrabismus from a benign developmental variant rather than true esotropia, avoiding unnecessary parental alarm and workup — while an asymmetric light reflex/abnormal cover test in the same scenario would point toward genuine strabismus requiring the evaluation already covered elsewhere.",
+    ],
+  },
+  "lacdev-formation": {
+    name: "Lacrimal Drainage System Embryologic Development",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "The nasolacrimal drainage system develops from a solid cord of surface ectoderm that must progressively hollow out (canalize) into a patent duct — and the fact that this canalization completes LAST at the most distal end directly explains why congenital NLDO (already covered under Dacryocystitis/NLDO and Lacrimal Drainage Apparatus gross anatomy) is so common." },
+      { h: "The nasolacrimal groove and ectodermal cord", t: "The nasolacrimal drainage system originates from the nasolacrimal groove, a groove of surface ectoderm buried between the maxillary and lateral nasal facial processes as they fuse during early facial development — this ectodermal groove becomes buried beneath the surface as a solid cord of cells, which must subsequently canalize (develop a hollow lumen) to become a functional drainage duct." },
+      { h: "Progressive canalization, completing distally", t: "Canalization of this solid ectodermal cord proceeds progressively, and critically, the MOST DISTAL portion — at the nasolacrimal duct's opening into the nasal cavity (the site of the valve of Hasner, already covered) — is typically the LAST segment to complete canalization, often not finishing until around the time of birth or shortly after; this developmental sequence is precisely why a persistent membrane at this specific distal site (incomplete canalization) is the most common anatomic basis for congenital NLDO already covered." },
+    ],
+    memorizeIt: [
+      "Nasolacrimal drainage system originates from the nasolacrimal groove (surface ectoderm), buried as a solid cord between the maxillary and lateral nasal processes.",
+      "This solid ectodermal cord must progressively CANALIZE (hollow out) to become a patent drainage duct.",
+      "The MOST DISTAL segment (valve of Hasner, at the nasal opening) canalizes LAST, often not completing until around birth.",
+      "This explains why congenital NLDO (already covered) is common — the last-to-canalize distal segment is the most frequent site of a persistent obstructing membrane.",
+    ],
+    applyIt: [
+      "This gives you the precise embryologic explanation for a clinical fact already established under your existing Dacryocystitis/NLDO content — congenital NLDO is common and often resolves spontaneously in the first year of life specifically because it reflects delayed completion of a normal, late-finishing canalization step (valve of Hasner) rather than a structural malformation, supporting the typical initial watch-and-massage management approach before considering probing.",
+    ],
+  },
+  "lacdev-anomalies": {
+    name: "Congenital Lacrimal Anomalies & Dacryocystocele",
+    priority: "SHOULD",
+    verification: "UNDER REVIEW",
+    sources: ["Standard pediatric ophthalmology references"],
+    learnIt: [
+      { h: "Overview", t: "Congenital dacryocystocele (also called an amniotocele or nasolacrimal duct mucocele) is a distinct and more urgent lacrimal developmental anomaly from simple congenital NLDO (this topic's sibling objective), resulting from a specific combination of BOTH proximal and distal obstruction." },
+      { h: "Mechanism — double obstruction", t: "A congenital dacryocystocele occurs when there is obstruction at BOTH ends of the lacrimal sac simultaneously: distally, the usual valve of Hasner obstruction (already covered), AND proximally, a functional obstruction at the valve of Rosenmüller (located at the junction of the common canaliculus and lacrimal sac) — this double obstruction traps amniotic fluid and mucous secretions within the closed lacrimal sac, distending it into a visible, palpable bluish swelling below the medial canthal tendon, present at or shortly after birth." },
+      { h: "Distinguishing from simple congenital NLDO", t: "Unlike simple congenital NLDO (this topic's sibling objective), which presents with tearing/mucoid discharge developing over the first weeks of life, a dacryocystocele presents as a firm, bluish, non-tender mass AT BIRTH — and while most cases resolve with conservative management (massage), a genuinely important risk exists if the mass is BILATERAL, since a bilateral dacryocystocele can cause nasal obstruction significant enough to compromise breathing in newborns, who are obligate nasal breathers, making bilateral cases a more urgent evaluation priority than the typical unilateral case." },
+    ],
+    memorizeIt: [
+      "Congenital dacryocystocele: BOTH proximal (valve of Rosenmüller) AND distal (valve of Hasner) obstruction, trapping fluid in the lacrimal sac.",
+      "Presents as a firm, bluish, non-tender medial canthal mass AT BIRTH — distinct from simple NLDO's tearing/discharge developing over weeks.",
+      "Most cases resolve with conservative management (massage), but BILATERAL dacryocystocele can cause nasal obstruction, a genuine breathing risk in obligate-nose-breathing newborns.",
+      "Bilateral presentation warrants more urgent evaluation than typical unilateral congenital NLDO.",
+    ],
+    applyIt: [
+      "This extends your existing Dacryocystitis/NLDO content with a genuinely distinct and occasionally urgent congenital variant — recognizing that a firm bluish mass present AT BIRTH (rather than gradually developing tearing) reflects a dacryocystocele's double (proximal + distal) obstruction mechanism, and that bilateral presentation specifically raises a neonatal airway risk given newborns' obligate nasal breathing, is a genuinely important clinical distinction from the more common and typically benign unilateral congenital NLDO.",
+    ],
+  },
 };
 const FLASHCARDS = [
   // Diabetes
@@ -13039,6 +13233,22 @@ const FLASHCARDS = [
   { id: "fc-1210", objectiveId: "orbitblood-arterial", front: "Name three ophthalmic artery branches beyond the central retinal and posterior ciliary arteries.", back: "Lacrimal artery, muscular branches, and supraorbital/supratrochlear arteries." },
   { id: "fc-1211", objectiveId: "orbitblood-venous", front: "What key anatomic feature of orbital/facial veins allows infection to spread posteriorly to the cavernous sinus?", back: "They are largely valveless, so blood flow direction can reverse." },
   { id: "fc-1212", objectiveId: "orbitblood-venous", front: "What distinguishes cavernous sinus thrombosis from uncomplicated orbital cellulitis on exam?", back: "Bilateral orbital signs plus cranial nerve III/IV/V1/V2/VI palsies (structures passing through/near the cavernous sinus)." },
+  { id: "fc-1213", objectiveId: "orbitdev-embryology", front: "What embryonic tissue gives rise to most orbital bones, and what ossification process do they use?", back: "Cranial neural crest-derived mesenchyme, via intramembranous ossification (no cartilage intermediate)." },
+  { id: "fc-1214", objectiveId: "orbitdev-embryology", front: "How does intramembranous ossification differ from endochondral ossification?", back: "Intramembranous: mesenchyme differentiates directly into bone. Endochondral: a cartilage model forms first and is later replaced by bone (used by limb long bones)." },
+  { id: "fc-1215", objectiveId: "orbitdev-growth", front: "What is a 'white-eyed' trapdoor blowout fracture, and why is it dangerous?", back: "A pediatric fracture where pliable bone bends open, lets the inferior rectus herniate through, then springs back with little visible displacement — deceptively mild-looking despite severe muscle entrapment risking ischemia; a surgical emergency." },
+  { id: "fc-1216", objectiveId: "orbitdev-growth", front: "Why do children get trapdoor fractures while adults typically get displaced, comminuted floor fractures?", back: "Pediatric bone is more pliable (less brittle) than adult bone." },
+  { id: "fc-1217", objectiveId: "eomdev-embryology", front: "What embryonic tissue gives rise to the extraocular muscles?", back: "Cranial mesoderm (prechordal and paraxial/somitomeric) — distinct from the neural-crest origin of the surrounding orbital bones." },
+  { id: "fc-1218", objectiveId: "eomdev-embryology", front: "What develops in tight coordination with each EOM's specific mesodermal segment of origin?", back: "That muscle's specific cranial nerve innervation (III, IV, or VI)." },
+  { id: "fc-1219", objectiveId: "eomdev-ccdd", front: "What is the embryologic mechanism of Duane retraction syndrome?", back: "CN VI (abducens) agenesis, with the lateral rectus instead aberrantly innervated by a branch of CN III." },
+  { id: "fc-1220", objectiveId: "eomdev-ccdd", front: "What finding distinguishes Duane syndrome from an acquired CN VI palsy on attempted adduction?", back: "Globe retraction and palpebral fissure narrowing, from co-contraction of the medial and aberrantly-innervated lateral rectus — not seen in simple acquired CN VI palsy." },
+  { id: "fc-1221", objectiveId: "liddev-formation", front: "By what gestational week do the eyelids normally fuse together, and when do they reopen?", back: "Fuse by ~10th week (physiologic ankyloblepharon); reopen ~5th-6th month gestation." },
+  { id: "fc-1222", objectiveId: "liddev-formation", front: "What two embryonic tissues contribute to eyelid formation?", back: "Surface ectoderm (skin, conjunctiva, glandular epithelium) and mesenchyme (tarsus, muscle, connective tissue)." },
+  { id: "fc-1223", objectiveId: "liddev-anomalies", front: "What congenital condition is often associated with eyelid coloboma?", back: "Goldenhar syndrome (oculo-auriculo-vertebral spectrum)." },
+  { id: "fc-1224", objectiveId: "liddev-anomalies", front: "What bedside tests distinguish pseudostrabismus (from epicanthal folds) from true esotropia?", back: "Cover test and corneal light reflex (Hirschberg) are normal/symmetric in pseudostrabismus, unlike true strabismus." },
+  { id: "fc-1225", objectiveId: "lacdev-formation", front: "What embryonic structure gives rise to the nasolacrimal drainage system?", back: "The nasolacrimal groove — surface ectoderm buried between the maxillary and lateral nasal facial processes, forming a solid cord that must canalize." },
+  { id: "fc-1226", objectiveId: "lacdev-formation", front: "Which segment of the nasolacrimal drainage system canalizes last, and what does this explain?", back: "The most distal segment (valve of Hasner) — explains why congenital NLDO from a persistent membrane there is so common." },
+  { id: "fc-1227", objectiveId: "lacdev-anomalies", front: "What double-obstruction mechanism causes a congenital dacryocystocele?", back: "Simultaneous obstruction at the valve of Rosenmüller (proximal) AND the valve of Hasner (distal), trapping fluid in the lacrimal sac." },
+  { id: "fc-1228", objectiveId: "lacdev-anomalies", front: "Why is a bilateral congenital dacryocystocele more urgent than a unilateral one?", back: "It can cause nasal obstruction significant enough to compromise breathing in newborns, who are obligate nasal breathers." },
 ];
 
 const QUESTIONS = [
@@ -17783,6 +17993,57 @@ const QUESTIONS = [
       b: "Correct — bilateral orbital signs with ophthalmoplegia in a patient with orbital cellulitis strongly suggest cavernous sinus thrombosis, which occurs via posterior spread through the valveless orbital venous system into the cavernous sinus, a shared midline structure connected to both orbits and traversed by CN III, IV, V1/V2, and VI.",
       c: "Incorrect — this presentation reflects spread of the original infection via the venous system, not an unrelated new infection.",
       d: "Incorrect — bilateral signs and ophthalmoplegia are NOT expected/benign findings in orbital cellulitis; they signal a serious complication requiring urgent evaluation.",
+    },
+  },
+  {
+    id: "q-280", objectiveId: "orbitdev-growth", type: "Clinical application", difficulty: "Hard",
+    stem: "A 7-year-old sustains blunt orbital trauma while playing sports. The eye appears externally quiet with minimal bruising, but the child cannot look upward and has nausea. Imaging shows minimal bony displacement of the orbital floor. What is the most appropriate next step?",
+    choices: [
+      { id: "a", text: "Reassure the family that minimal bony displacement means no significant injury occurred" },
+      { id: "b", text: "Recognize this as a likely 'white-eyed' trapdoor fracture with inferior rectus entrapment, requiring urgent surgical evaluation despite the deceptively mild appearance" },
+      { id: "c", text: "Diagnose a simple CN VI palsy and observe for spontaneous recovery" },
+      { id: "d", text: "Attribute the findings to a Duane retraction syndrome unmasked by trauma" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — pediatric trapdoor fractures classically show minimal bony displacement despite severe underlying muscle entrapment; the mild appearance is deceptive, not reassuring.",
+      b: "Correct — the combination of restricted upgaze, nausea (oculocardiac reflex from muscle traction), a quiet external appearance, and minimal bony displacement on imaging is classic for a pediatric 'white-eyed' trapdoor fracture with inferior rectus entrapment, which requires urgent surgical release before the entrapped muscle becomes ischemic.",
+      c: "Incorrect — restricted upgaze after trauma with entrapment findings reflects a mechanical/restrictive process, not a cranial nerve palsy.",
+      d: "Incorrect — Duane syndrome is a congenital condition present from birth, not something 'unmasked' by acute trauma; this presentation is explained by traumatic muscle entrapment.",
+    },
+  },
+  {
+    id: "q-281", objectiveId: "eomdev-ccdd", type: "Clinical differentiation", difficulty: "Hard",
+    stem: "A child has had limited abduction of the left eye since birth. On attempted adduction, the left globe retracts and the palpebral fissure narrows. What is the diagnosis, and how does it differ mechanistically from an acquired CN VI palsy?",
+    choices: [
+      { id: "a", text: "Acquired CN VI palsy; no mechanistic difference from Duane syndrome" },
+      { id: "b", text: "Duane retraction syndrome — CN VI agenesis with aberrant CN III innervation of the lateral rectus, causing co-contraction (and thus retraction) on adduction, a finding not seen in simple acquired CN VI palsy" },
+      { id: "c", text: "CFEOM, which characteristically causes globe retraction on adduction" },
+      { id: "d", text: "A normal variant requiring no further evaluation" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — an acquired CN VI palsy causes simple limited abduction WITHOUT globe retraction on adduction; the retraction finding specifically indicates aberrant innervation, not simple nerve palsy.",
+      b: "Correct — Duane retraction syndrome results from CN VI agenesis with the lateral rectus aberrantly innervated by CN III; attempted adduction causes co-contraction of the medial and lateral rectus, producing the characteristic globe retraction and fissure narrowing not seen in acquired CN VI palsy.",
+      c: "Incorrect — CFEOM classically presents with bilateral ptosis and globes fixed in a restricted (often downward) position from birth, not this specific retraction-on-adduction pattern.",
+      d: "Incorrect — congenital limited abduction with globe retraction on adduction is a specific, recognizable syndrome (Duane) requiring appropriate diagnosis, not a normal variant.",
+    },
+  },
+  {
+    id: "q-282", objectiveId: "lacdev-anomalies", type: "Clinical application", difficulty: "Hard",
+    stem: "A newborn presents with bilateral firm, bluish, non-tender masses below the medial canthal tendons, present since birth. What is the diagnosis, and what specific risk warrants urgent evaluation given the bilateral presentation?",
+    choices: [
+      { id: "a", text: "Simple unilateral congenital NLDO; manage with observation alone" },
+      { id: "b", text: "Bilateral congenital dacryocystocele; risk of nasal obstruction compromising breathing in an obligate nose-breathing newborn" },
+      { id: "c", text: "Acute dacryocystitis; requires only oral antibiotics" },
+      { id: "d", text: "Eyelid coloboma; requires surgical repair for corneal exposure" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — the presentation (bilateral, firm, bluish, present AT BIRTH) is not typical of simple NLDO, which usually presents with tearing/discharge developing over the first weeks, not a mass at birth.",
+      b: "Correct — a firm, bluish, non-tender medial canthal mass at birth reflects a dacryocystocele from combined proximal (valve of Rosenmüller) and distal (valve of Hasner) obstruction; when bilateral, it carries a genuine risk of compromising nasal breathing in newborns, who are obligate nasal breathers, warranting more urgent evaluation than a typical unilateral case.",
+      c: "Incorrect — the non-tender, bluish, congenital presentation is not consistent with acute infectious dacryocystitis, which would show erythema and tenderness.",
+      d: "Incorrect — eyelid coloboma is a lid margin defect, not a medial canthal mass, and is an unrelated anomaly.",
     },
   },
 ];
