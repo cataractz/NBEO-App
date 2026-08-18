@@ -591,11 +591,21 @@ const CLCOMPLIC_OBJECTIVES = [
 ];
 
 const LOWVISION_TOPIC_ID = "t-3-0-0"; // Low Vision(3) > Optics(Ophthalmic and Physiological)(0) > Epidemiology(0)
-// Low Vision's outline structure (Epidemiology, Examination, Management) maps
-// naturally onto three objectives rather than a disease list.
+// Low Vision's outline structure has 3 SEPARATE topic slots (Epidemiology,
+// Examination and testing, Management and rehabilitation) — previously all
+// 3 objectives were filed under this one topic id, leaving t-3-0-1/t-3-0-2
+// unmapped despite the content existing. Split below into their correct slots.
 const LOWVISION_OBJECTIVES = [
   { id: "lowvis-classification", name: "Low Vision Classification & Epidemiology", built: true },
+];
+
+const LOWVISEXAM_TOPIC_ID = "t-3-0-1"; // Low Vision(3) > Optics(Ophthalmic and Physiological)(0) > Examination and testing(1)
+const LOWVISEXAM_OBJECTIVES = [
   { id: "lowvis-testing", name: "Low Vision Examination & Testing", built: true },
+];
+
+const LOWVISMGMT_TOPIC_ID = "t-3-0-2"; // Low Vision(3) > Optics(Ophthalmic and Physiological)(0) > Management and rehabilitation(2)
+const LOWVISMGMT_OBJECTIVES = [
   { id: "lowvis-devices", name: "Low Vision Devices & Rehabilitation", built: true },
 ];
 
@@ -1560,6 +1570,7 @@ const TOPIC_OBJECTIVES = {
   [NUTRITION_TOPIC_ID]: NUTRITION_OBJECTIVES, [REPRO_TOPIC_ID]: REPRO_OBJECTIVES,
   [COLORVIS_TOPIC_ID]: COLORVIS_OBJECTIVES, [ACCVERG_TOPIC_ID]: ACCVERG_OBJECTIVES,
   [CLCOMPLIC_TOPIC_ID]: CLCOMPLIC_OBJECTIVES, [LOWVISION_TOPIC_ID]: LOWVISION_OBJECTIVES,
+  [LOWVISEXAM_TOPIC_ID]: LOWVISEXAM_OBJECTIVES, [LOWVISMGMT_TOPIC_ID]: LOWVISMGMT_OBJECTIVES,
   [CHILDDEV_TOPIC_ID]: CHILDDEV_OBJECTIVES, [AGING_TOPIC_ID]: AGING_OBJECTIVES,
   [SPACEPERCEP_TOPIC_ID]: SPACEPERCEP_OBJECTIVES, [FORMPERCEP_TOPIC_ID]: FORMPERCEP_OBJECTIVES,
   [LIGHTPERCEP_TOPIC_ID]: LIGHTPERCEP_OBJECTIVES, [MOTIONPERCEP_TOPIC_ID]: MOTIONPERCEP_OBJECTIVES,
@@ -1655,7 +1666,9 @@ const CONTENT_TOPICS = [
   { topicId: COLORVIS_TOPIC_ID, name: "Color Vision", objectives: COLORVIS_OBJECTIVES },
   { topicId: ACCVERG_TOPIC_ID, name: "Accommodation & Vergence Disorders", objectives: ACCVERG_OBJECTIVES },
   { topicId: CLCOMPLIC_TOPIC_ID, name: "Contact Lens Complications", objectives: CLCOMPLIC_OBJECTIVES },
-  { topicId: LOWVISION_TOPIC_ID, name: "Low Vision", objectives: LOWVISION_OBJECTIVES },
+  { topicId: LOWVISION_TOPIC_ID, name: "Low Vision — Classification & Epidemiology", objectives: LOWVISION_OBJECTIVES },
+  { topicId: LOWVISEXAM_TOPIC_ID, name: "Low Vision — Examination & Testing", objectives: LOWVISEXAM_OBJECTIVES },
+  { topicId: LOWVISMGMT_TOPIC_ID, name: "Low Vision — Management & Rehabilitation", objectives: LOWVISMGMT_OBJECTIVES },
   { topicId: CHILDDEV_TOPIC_ID, name: "Visual Development & Child Anomalies", objectives: CHILDDEV_OBJECTIVES },
   { topicId: AGING_TOPIC_ID, name: "Changes in Vision with Aging", objectives: AGING_OBJECTIVES },
   { topicId: SPACEPERCEP_TOPIC_ID, name: "Space Perception & Depth Cues", objectives: SPACEPERCEP_OBJECTIVES },
