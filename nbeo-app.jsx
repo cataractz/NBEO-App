@@ -561,6 +561,10 @@ const CORNEA_OBJECTIVES = [
   { id: "cornea-ded", name: "Dry Eye Disease", built: true },
   { id: "cornea-pterygium", name: "Pterygium / Pinguecula", built: true },
   { id: "cornea-refractive-surg", name: "Refractive Surgery (LASIK, PRK, SMILE) & Complications", built: true },
+  { id: "cornea-ebmd", name: "Epithelial Basement Membrane Dystrophy & Recurrent Corneal Erosion Syndrome", built: true },
+  { id: "cornea-viral-conjunctivitis", name: "Adenoviral Conjunctivitis / Epidemic Keratoconjunctivitis (EKC)", built: true },
+  { id: "cornea-chemical-injury", name: "Chemical Injury to the Ocular Surface (Alkali vs. Acid Burns)", built: true },
+  { id: "cornea-transplant", name: "Corneal Transplantation & Non-Refractive Surgical Procedures", built: true },
 ];
 
 const RETINA_TOPIC_ID = "t-12-3-0"; // Vitreous/Retina/Choroid(12) > Pathology(3) > Retina/Vitreous(0)
@@ -1706,6 +1710,7 @@ const CORNEAPHYS_OBJECTIVES = [
   { id: "corneaphys-transparency", name: "Corneal Transparency Mechanisms", built: true },
   { id: "corneaphys-endothelial-pump", name: "Endothelial Pump Function & Cell Density", built: true },
   { id: "corneaphys-metabolism", name: "Corneal Metabolism & Oxygen Requirements", built: true },
+  { id: "corneaphys-nerves-aging", name: "Corneal Nerve Physiology, Epithelial Regeneration & Aging Changes", built: true },
 ];
 
 const IOPMEAS_TOPIC_ID = "t-14-2-0"; // Glaucoma(14) > Physiology(2) > Intraocular pressure(0)
@@ -2394,6 +2399,7 @@ const CORNEAGROSS_TOPIC_ID = "t-9-0-0"; // Conjunctiva/Cornea/Refractive Surgery
 const CORNEAGROSS_OBJECTIVES = [
   { id: "corneagross-five-layers", name: "The Five (Six) Layers of the Cornea", built: true },
   { id: "corneagross-dimensions-innervation", name: "Corneal Dimensions, Curvature, & Innervation", built: true },
+  { id: "corneagross-limbus", name: "The Corneal Limbus — Landmark & Limbal Stem Cells", built: true },
 ];
 
 const CONJGROSS_TOPIC_ID = "t-9-0-1"; // Conjunctiva/Cornea/Refractive Surgery(9) > Anatomy(Gross)(0) > Conjunctiva(1)
@@ -2401,6 +2407,7 @@ const CONJGROSS_TOPIC_ID = "t-9-0-1"; // Conjunctiva/Cornea/Refractive Surgery(9
 // pathology content already built elsewhere.
 const CONJGROSS_OBJECTIVES = [
   { id: "conjgross-regions-histology", name: "Conjunctival Regions & Histologic Structure", built: true },
+  { id: "conjgross-vascular-adnexa", name: "Conjunctival Blood Supply, Innervation, Plica Semilunaris & Caruncle", built: true },
 ];
 
 const LENSGROSS_TOPIC_ID = "t-10-0-0"; // Lens/Cataract/IOL(10) > Anatomy(Gross)(0) > Lens, zonule(0)
@@ -3951,6 +3958,102 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "A patient with early, subclinical keratoconus who undergoes LASIK is at significant risk for post-surgical corneal ectasia — this is exactly why topography screening before refractive surgery is a non-negotiable step, a classic exam-testable safety principle.",
+    ],
+  },
+  "cornea-ebmd": {
+    name: "Epithelial Basement Membrane Dystrophy & Recurrent Corneal Erosion Syndrome",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard cornea/external disease references (e.g., standard cornea texts)"],
+    learnIt: [
+      { h: "Overview", t: "Epithelial basement membrane dystrophy (EBMD, also called map-dot-fingerprint dystrophy or Cogan microcystic dystrophy) is the most common of the anterior corneal dystrophies, resulting from an abnormal, redundant basement membrane produced by the epithelium (already covered under Corneal Gross Anatomy's basal lamina content) that poorly anchors the overlying epithelial cells to Bowman's layer." },
+      { h: "Pathophysiology", t: "The epithelial basal cells produce excess, abnormally thickened and multilaminar basement membrane that extends up into the epithelium — this defective basement membrane provides weak hemidesmosomal adhesion between the epithelium and the underlying Bowman's layer/stroma (already covered), making the epithelium prone to spontaneous or minor-trauma-induced detachment." },
+      { h: "Clinical presentation", t: "Often asymptomatic and found incidentally on slit-lamp exam, showing map-like patches, dot (microcyst) opacities, and fingerprint-like lines in the epithelium, best seen with retroillumination or fluorescein staining pooling in the irregular contours. Most clinically important is its role as the leading cause of recurrent corneal erosion syndrome (RCES)." },
+      { h: "Recurrent corneal erosion syndrome", t: "Because the poorly-adherent epithelium can shear off (classically on eye-opening in the morning, when the lid pulls against a weakly attached epithelium that adhered to the palpebral conjunctiva overnight), patients experience sudden, often severe eye pain, tearing, and photophobia on waking or eye-opening. Prior corneal trauma (especially a fingernail or paper-edge abrasion) is the other classic predisposing history, since a healed traumatic abrasion can also leave an area of poor basement membrane adhesion." },
+      { h: "Diagnostic testing", t: "Slit-lamp exam with fluorescein and retroillumination to visualize the abnormal basement membrane pattern and any loose/heaped epithelium; a history of recurrent, self-limited episodes of acute morning eye pain is highly suggestive." },
+      { h: "Management", t: "Acute erosion: lubrication, bandage contact lens, or pressure patching for comfort and healing. Prevention of recurrence: aggressive lubrication (including hypertonic saline ointment at bedtime, already covered under Hyperosmotic Agents content, to reduce epithelial-lid adhesion overnight), and for refractory cases, epithelial debridement, anterior stromal micropuncture, or phototherapeutic keratectomy (PTK) to promote firmer epithelial reattachment." },
+    ],
+    memorizeIt: [
+      "EBMD (map-dot-fingerprint dystrophy): most common anterior corneal dystrophy — abnormal, redundant epithelial basement membrane with poor epithelial adhesion.",
+      "Leading cause of recurrent corneal erosion syndrome (RCES) — classic history: sudden pain on eye-opening/waking, or prior fingernail/paper-cut corneal abrasion.",
+      "Diagnosis: slit-lamp with fluorescein/retroillumination showing map/dot/fingerprint patterns.",
+      "Prevention of recurrence: bedtime lubricating ointment/hypertonic saline; refractory cases may need debridement, stromal micropuncture, or PTK.",
+    ],
+    applyIt: [
+      "A patient reporting recurring episodes of sudden, severe eye pain specifically upon waking or first opening the eyes — especially with a history of a prior fingernail scratch to that eye — should prompt evaluation for EBMD-related recurrent corneal erosion syndrome, not just a new unrelated abrasion each time; this connects directly to your Corneal Gross Anatomy content on the basal lamina/Bowman's layer adhesion relationship.",
+    ],
+  },
+  "cornea-viral-conjunctivitis": {
+    name: "Adenoviral Conjunctivitis / Epidemic Keratoconjunctivitis (EKC)",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard cornea/external disease references (e.g., standard cornea texts)"],
+    learnIt: [
+      { h: "Overview", t: "Adenovirus is the most common cause of infectious conjunctivitis overall and the classic cause of epidemic keratoconjunctivitis (EKC), a highly contagious ocular surface infection distinct from the herpetic keratitis entities already covered." },
+      { h: "Clinical presentation", t: "Acute onset of watery discharge, redness, foreign body sensation, and a follicular conjunctival reaction (prominent in the fornices, already covered under Conjunctival Regions & Histologic Structure content) — often starts unilaterally and spreads to the second eye within days. Preauricular lymphadenopathy (a tender, palpable node in front of the ear) is a classic associated finding that helps distinguish viral from bacterial conjunctivitis." },
+      { h: "Subepithelial infiltrates — a distinguishing later finding", t: "In EKC specifically, an immune-mediated reaction can produce subepithelial corneal infiltrates roughly 1-2 weeks after the initial conjunctivitis, causing glare, photophobia, and reduced vision that can persist for weeks to months (occasionally longer) after the acute infection resolves — a genuinely important distinction from the milder, self-limited course of most other viral conjunctivitis presentations." },
+      { h: "Contagion and infection control", t: "Adenoviral conjunctivitis is extremely contagious via direct contact and fomites (towels, tonometer tips, doorknobs), with viral shedding continuing for up to 2 weeks after symptom onset — strict hand hygiene, instrument disinfection, and patient counseling to avoid close contact (including time off work/school) are essential to prevent outbreaks, a genuinely practical clinical management point distinct from its pharmacologic treatment." },
+      { h: "Management", t: "Primarily supportive — cold compresses and artificial tears/lubrication (already covered), since there is no specific antiviral therapy in routine use for adenovirus; topical corticosteroids or povidone-iodine are sometimes used for severe cases or visually significant subepithelial infiltrates, but steroids can prolong viral shedding and should be used cautiously and typically only after the acute infectious phase." },
+    ],
+    memorizeIt: [
+      "Adenovirus = most common cause of infectious conjunctivitis; EKC = its more severe, highly contagious form.",
+      "Classic triad clue: watery discharge, follicular reaction, preauricular lymphadenopathy — helps distinguish viral from bacterial conjunctivitis.",
+      "Subepithelial infiltrates (EKC-specific): appear ~1-2 weeks after onset, can cause prolonged glare/photophobia/reduced vision.",
+      "Extremely contagious via contact/fomites; viral shedding up to ~2 weeks — hand hygiene and instrument disinfection are essential.",
+      "Management is primarily supportive (cold compresses, lubrication) — no routine specific antiviral therapy.",
+    ],
+    applyIt: [
+      "A patient with acute watery, red eye and a palpable tender node just in front of the ear (preauricular lymphadenopathy) should be managed as presumed adenoviral conjunctivitis with contact precautions and instrument disinfection — connecting this to your Conjunctival Regions & Histologic Structure content, the follicular reaction you'd expect to see is most prominent in the fornices given their higher CALT concentration.",
+      "A patient who had adenoviral conjunctivitis several weeks ago and now reports persistent glare and mildly reduced vision (with the acute redness/discharge resolved) should be evaluated for EKC-related subepithelial infiltrates rather than assumed to have a new, unrelated problem.",
+    ],
+  },
+  "cornea-chemical-injury": {
+    name: "Chemical Injury to the Ocular Surface (Alkali vs. Acid Burns)",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard cornea/external disease references (e.g., standard cornea texts)"],
+    learnIt: [
+      { h: "Overview", t: "Chemical injury to the eye is a true ocular emergency requiring immediate action before formal diagnostic workup — alkali and acid substances injure the ocular surface through fundamentally different mechanisms, with alkali burns generally being far more destructive." },
+      { h: "Alkali burns — the more dangerous mechanism", t: "Alkali substances (e.g., lye, ammonia, lime/cement — a classic exposure) cause liquefactive necrosis: they saponify (dissolve) cell membrane lipids and denature proteins, allowing the alkali to penetrate progressively deeper into the cornea, anterior chamber, and even the lens/ciliary body over minutes to hours — this deep, ongoing penetration is why alkali burns are generally more severe and vision-threatening than acid burns." },
+      { h: "Acid burns — generally more limited", t: "Acid substances cause coagulative necrosis: the denatured, precipitated proteins form a barrier that tends to limit further penetration of the acid into deeper tissue — meaning acid burns, while still potentially serious, are generally more self-limited in depth than alkali burns (a notable exception is hydrofluoric acid, which can behave more like an alkali due to the fluoride ion's ability to penetrate tissue)." },
+      { h: "Immediate management — irrigation before everything else", t: "Copious, immediate irrigation with any available neutral fluid (normal saline preferred, but plain water is acceptable if that's what's available) for at least 15-30 minutes is the single most important intervention, performed BEFORE formal visual acuity testing or detailed exam — the goal is to normalize ocular surface pH (already relevant to existing Tear Film pH content) and physically dilute/remove residual chemical, continuing until pH testing confirms neutrality." },
+      { h: "Grading and prognosis — limbal ischemia is the key finding", t: "Severity and prognosis are graded largely by the degree of perilimbal (limbal) blanching/ischemia visible on exam — since the limbus houses the corneal epithelial stem cells (already relevant to Palisades of Vogt/limbal anatomy content), extensive limbal ischemia predicts poor epithelial healing capacity, limbal stem cell deficiency, and a substantially worse visual prognosis than a burn with a healthy-appearing, well-perfused limbus." },
+      { h: "Complications", t: "Symblepharon (already covered under Conjunctival Developmental Anatomy content), corneal scarring/opacification, limbal stem cell deficiency with persistent epithelial defects, secondary glaucoma (from angle damage/inflammation), and cataract in severe cases with deep chemical penetration." },
+    ],
+    memorizeIt: [
+      "Alkali burns: liquefactive necrosis, saponify lipids, penetrate deeply and progressively — generally more destructive than acid.",
+      "Acid burns: coagulative necrosis, precipitated proteins tend to limit further penetration — generally more self-limited (except hydrofluoric acid).",
+      "Immediate copious irrigation (≥15-30 min, normal saline or water) BEFORE formal exam is the single most important first step — continue until pH is neutral.",
+      "Prognosis is graded largely by perilimbal ischemia/blanching — extensive limbal ischemia predicts limbal stem cell deficiency and poor visual outcome.",
+      "Complications: symblepharon, corneal scarring, limbal stem cell deficiency, secondary glaucoma, cataract.",
+    ],
+    applyIt: [
+      "This connects directly to your existing Symblepharon content: aggressive fornix sweeping with a glass rod during acute alkali burn management is specifically aimed at preventing the conjunctival adhesions already covered there, since alkali burns are the classic cause of acquired symblepharon.",
+      "A patient presenting after a workplace chemical splash should be irrigated immediately, before you even confirm what the substance was or check acuity — recognizing that time-to-irrigation, not identifying the exact chemical first, is what determines outcome in a true chemical injury emergency.",
+    ],
+  },
+  "cornea-transplant": {
+    name: "Corneal Transplantation & Non-Refractive Surgical Procedures",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard cornea/external disease references (e.g., standard cornea texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the refractive procedures already covered, several non-refractive corneal surgical procedures address structural corneal disease and vision loss from corneal opacity or irregularity — differing mainly in how much corneal tissue is replaced." },
+      { h: "Penetrating keratoplasty (PK)", t: "Full-thickness corneal transplantation, replacing all corneal layers with a donor cornea sutured in place — historically the standard approach for full-thickness corneal disease (advanced keratoconus with scarring, corneal perforation, dense central scarring from any cause) but increasingly reserved for cases not suitable for a more selective lamellar procedure, given its longer visual recovery, higher astigmatism risk from sutures, and greater rejection risk (since the entire donor cornea, including its endothelium, is foreign tissue)." },
+      { h: "Selective lamellar procedures — DALK and endothelial keratoplasty", t: "Deep anterior lamellar keratoplasty (DALK) replaces the epithelium/stroma while preserving the patient's own healthy endothelium — appropriate for stromal disease (e.g., keratoconus, stromal scarring) with a healthy endothelium, avoiding endothelial rejection risk entirely. DMEK/DSAEK (already covered under Fuchs Endothelial Corneal Dystrophy content) selectively replace only the diseased endothelium/Descemet's membrane, appropriate for isolated endothelial disease with a healthy stroma — both lamellar approaches offer faster visual recovery and lower rejection risk than full-thickness PK, since less foreign donor tissue is transplanted." },
+      { h: "Corneal crosslinking and superficial keratectomy", t: "Corneal crosslinking (already covered under Keratoconus content) halts ectatic progression rather than replacing tissue. Superficial keratectomy (mechanical or laser removal of a superficial corneal opacity or irregularity, such as a band keratopathy calcium deposit already covered under Uveitis content, or recurrent EBMD-related erosions already covered) is used for anterior, non-full-thickness pathology not requiring transplantation." },
+      { h: "Graft rejection — a critical postoperative complication", t: "Corneal graft (especially PK) rejection presents with the classic \"RSVP\" symptom pattern — Redness, Sensitivity to light (photophobia), decreased Vision, and Pain — from an immune-mediated attack (already conceptually relevant to existing Hypersensitivity Reactions and Tissue Transplantation/Graft Rejection content) on the donor tissue, most often targeting the donor endothelium (endothelial rejection, the most visually threatening form, showing a rejection line of inflammatory cells — a Khodadoust line — advancing across the endothelium). Prompt recognition and aggressive topical (sometimes systemic) corticosteroid treatment can often reverse early rejection before irreversible endothelial decompensation occurs." },
+    ],
+    memorizeIt: [
+      "PK: full-thickness transplant — highest rejection risk, longest recovery, more suture-related astigmatism; reserved for full-thickness disease.",
+      "DALK: replaces epithelium/stroma only, preserves host endothelium — for stromal disease with healthy endothelium, no endothelial rejection risk.",
+      "DMEK/DSAEK (already covered under Fuchs content): replace only endothelium/Descemet's — for isolated endothelial disease.",
+      "Graft rejection = \"RSVP\": Redness, Sensitivity to light, decreased Vision, Pain — endothelial rejection (Khodadoust line) is the most vision-threatening form.",
+      "Early rejection is often reversible with prompt, aggressive corticosteroid treatment.",
+    ],
+    applyIt: [
+      "A post-PK patient presenting with new redness, photophobia, decreased vision, and pain (RSVP) needs urgent evaluation for graft rejection and prompt corticosteroid treatment — recognizing this pattern early, before irreversible endothelial decompensation, is what preserves the graft; this directly extends your existing Fuchs Endothelial Corneal Dystrophy content on why endothelial health specifically (not just corneal clarity broadly) is the ultimate determinant of graft survival.",
+      "A keratoconus patient with a healthy endothelium but significant stromal scarring is a better candidate for DALK than PK, since DALK avoids the endothelial rejection risk entirely by preserving the patient's own healthy endothelial layer — a genuinely practical surgical-planning distinction extending your existing Keratoconus management content.",
     ],
   },
   "retina-rd": {
@@ -8422,6 +8525,28 @@ const STUDY_PAGES = {
       "This completes the mechanistic chain behind your Contact Lens Hypoxia content: you now have the full pathway from reduced oxygen transmissibility (the lens material property) all the way to visible corneal edema (the clinical finding) — every intermediate step (anaerobic shift, lactate, osmotic swelling, collagen disruption) is now explained rather than just observed.",
     ],
   },
+  "corneaphys-nerves-aging": {
+    name: "Corneal Nerve Physiology, Epithelial Regeneration & Aging Changes",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard ocular physiology references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the structural innervation already covered under Corneal Gross Anatomy, the cornea's sensory nerves have specific physiologic roles in ocular surface homeostasis, and the epithelium's regenerative capacity and the cornea's changes with normal aging are both directly relevant to everyday clinical findings." },
+      { h: "Physiological roles of corneal nerves", t: "Beyond mediating pain/touch sensation (already covered), corneal sensory nerves have a genuine trophic function — they release neuropeptides (e.g., substance P, calcitonin gene-related peptide) that support epithelial cell metabolism, proliferation, and adhesion, and they drive the afferent limb of the blink reflex (already relevant to Eyelid Protective Function content), which spreads the tear film and protects against desiccation and debris. Denervation (as in neurotrophic keratopathy, already relevant to your existing HSV Keratitis content on trigeminal nerve damage) impairs epithelial healing independent of any direct mechanical injury, since the trophic support is lost along with sensation." },
+      { h: "Epithelial regeneration — normal and after trauma", t: "The corneal epithelium normally turns over continuously, with basal cells arising from the limbal stem cell population (already covered under Corneal Limbus content) migrating centripetally and superficially before being shed — a normal cycle taking roughly 7-10 days. After trauma (abrasion), healing occurs by adjacent epithelial cell sliding/migration to cover the defect within 24-72 hours for small defects, followed by mitotic proliferation to restore normal thickness — a process that is markedly impaired when the limbal stem cell source (already covered) or corneal nerve trophic support (this objective) is compromised." },
+      { h: "Aging changes of the cornea", t: "With normal aging, the cornea undergoes several characteristic changes: endothelial cell density progressively declines (already covered under Endothelial Pump Function content) with increasing polymegathism/pleomorphism in the surviving cells; corneal sensitivity gradually decreases; arcus senilis (a peripheral lipid deposit forming a grayish-white ring near the limbus, already covered under Corneal Limbus's transition-zone anatomy) becomes common and is generally a benign aging finding, though its presence in a young patient (<40 years) should prompt screening for a lipid disorder; and central corneal thickness and curvature show only modest change with age compared to these other findings." },
+    ],
+    memorizeIt: [
+      "Corneal nerves have a trophic (not just sensory) function — release neuropeptides supporting epithelial health; loss of innervation (neurotrophic keratopathy) impairs healing independent of direct injury.",
+      "Normal epithelial turnover cycle: ~7-10 days, sourced from limbal stem cells (already covered), migrating centripetally.",
+      "Small epithelial defects heal by cell sliding/migration within 24-72 hours, then proliferation restores thickness.",
+      "Aging changes: declining endothelial cell density + increasing polymegathism/pleomorphism, decreased corneal sensitivity, arcus senilis (benign after ~40; warrants lipid workup if younger).",
+    ],
+    applyIt: [
+      "This connects your existing HSV Keratitis content's hypoesthesia finding to a broader physiologic principle: chronic HSV-related corneal denervation doesn't just reduce sensation, it also removes the trophic neuropeptide support epithelial cells depend on, which is exactly why recurrent HSV keratitis can progress to neurotrophic keratopathy with poor epithelial healing even between active infectious episodes.",
+      "A grayish-white ring near the limbus in a 25-year-old patient should prompt a lipid panel, in contrast to the same finding (arcus senilis) in a 65-year-old, which is a benign, expected aging change requiring no workup — a useful age-dependent clinical distinction extending your existing Corneal Limbus content.",
+    ],
+  },
   "corneagross-five-layers": {
     name: "The Five (Six) Layers of the Cornea",
     priority: "MUST",
@@ -8464,6 +8589,28 @@ const STUDY_PAGES = {
       "This gives you the anatomic basis for a genuinely useful bedside diagnostic test already implicit in your existing HSV Keratitis content: testing corneal sensation with a simple cotton wisp can help distinguish HSV keratitis (reduced sensation, from trigeminal nerve involvement) from other infectious/inflammatory keratitis causes that typically spare corneal sensation — a low-tech, immediately available clinical test grounded directly in the cornea's dense trigeminal innervation.",
     ],
   },
+  "corneagross-limbus": {
+    name: "The Corneal Limbus — Landmark & Limbal Stem Cells",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular gross anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The limbus is the anatomic transition zone between the clear cornea and the opaque sclera/conjunctiva — a roughly 1-2mm-wide circumferential zone that is far more than a simple boundary line, serving both as a critical surgical landmark and as the home of the corneal epithelial stem cell population." },
+      { h: "Structural transition", t: "At the limbus, the cornea's regular, avascular, transparent architecture (already covered under Corneal Transparency Mechanisms) transitions to the sclera's irregular collagen arrangement and the conjunctiva's vascularized, non-keratinized epithelium (already covered under Conjunctival Regions & Histologic Structure) — Bowman's layer and Descemet's membrane (already covered) both terminate at or near the limbus, while the limbal stroma contains the vascular arcades that supply nutrients to the peripheral cornea (which, unlike the central avascular cornea already covered, has some vascular contribution from these limbal vessels)." },
+      { h: "Palisades of Vogt and limbal stem cells — the clinically critical feature", t: "The limbus contains the Palisades of Vogt, radially-oriented fibrovascular ridges that house the corneal epithelial stem cell niche — these limbal stem cells are the sole source of new corneal epithelial cells, continuously replenishing and centripetally migrating inward to maintain the corneal epithelium (already relevant to your existing Epithelial Regeneration content) — a genuinely important anatomic fact, since corneal epithelium itself has no stem cell population of its own." },
+      { h: "Limbal stem cell deficiency — the clinical consequence", t: "Destruction of the limbal stem cell niche (from severe chemical burns already covered, Stevens-Johnson syndrome, aniridia-related limbal deficiency, or chronic contact lens wear/multiple surgeries) causes limbal stem cell deficiency — without a functioning stem cell source, conjunctival epithelium abnormally migrates onto the corneal surface (conjunctivalization), causing chronic irregularity, vascularization, and vision loss that does not respond to standard corneal treatments and instead requires limbal stem cell transplantation." },
+      { h: "Surgical landmark", t: "The limbus is also the standard anatomic reference point for surgical incision placement (e.g., cataract surgery clear corneal or limbal incisions already relevant to Cataract Surgery content, glaucoma filtering surgery, strabismus surgery) and for measuring intraocular lens power and pupil/globe dimensions clinically." },
+    ],
+    memorizeIt: [
+      "Limbus = transition zone between clear cornea and opaque sclera/conjunctiva; ~1-2mm wide.",
+      "Palisades of Vogt house the limbal stem cell niche — the SOLE source of new corneal epithelial cells (corneal epithelium has no stem cells of its own).",
+      "Limbal stem cell deficiency (from chemical burns, Stevens-Johnson syndrome, aniridia, chronic CL wear) causes conjunctivalization of the cornea — vascularized, irregular surface unresponsive to standard treatment.",
+      "The limbus is the standard surgical landmark for anterior segment incisions (cataract, glaucoma, strabismus surgery).",
+    ],
+    applyIt: [
+      "This directly extends your existing Chemical Injury content: severe alkali burns with extensive perilimbal ischemia destroy the limbal stem cell niche described here, explaining exactly why such burns predict poor epithelial healing and long-term corneal surface failure — the limbal ischemia grading system you've already learned is really a proxy for how much of this stem cell population survived the injury.",
+    ],
+  },
   "conjgross-regions-histology": {
     name: "Conjunctival Regions & Histologic Structure",
     priority: "SHOULD",
@@ -8483,6 +8630,30 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you the anatomic basis for a genuinely practical slit-lamp examination skill extending your existing Conjunctivitis content: recognizing that follicles are most visible in the fornices (where CALT concentration is highest) while papillae are most visible on the tarsal conjunctiva (where the tightly adherent epithelium overlies a vascular substrate) helps you localize your examination to the region most likely to reveal the distinguishing sign — turning 'follicular vs. papillary' from an abstract descriptive term into a targeted examination technique.",
+    ],
+  },
+  "conjgross-vascular-adnexa": {
+    name: "Conjunctival Blood Supply, Innervation, Plica Semilunaris & Caruncle",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard ocular gross anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond its regional/histologic organization already covered, the conjunctiva has a specific dual blood supply, sensory innervation, and two distinctive medial structures (the plica semilunaris and caruncle) — details with direct relevance to conjunctival injection patterns and medial canthal anatomy already implicit elsewhere on this platform." },
+      { h: "Dual blood supply", t: "The conjunctiva is supplied by two vascular systems: the anterior (palpebral) conjunctival vessels, branching from the eyelid marginal and peripheral arcades (already covered under Eyelid Gross Anatomy blood supply content), and the posterior conjunctival vessels, arising from the anterior ciliary arteries (branches of the ophthalmic artery, already covered under Orbital Blood Supply content) — these two systems anastomose, but their differing origins explain why conjunctival injection patterns can be diffuse (bulbar hyperemia, e.g., conjunctivitis) versus more focal/perilimbal (ciliary flush, classically associated with anterior segment inflammation like uveitis or keratitis rather than simple conjunctivitis)." },
+      { h: "Venous and lymphatic drainage", t: "Conjunctival veins generally parallel the arterial supply, ultimately draining into the ophthalmic veins; lymphatic drainage follows the same general pattern as eyelid lymphatics already covered — medial conjunctiva drains toward submandibular nodes, while lateral/temporal conjunctiva drains toward preauricular nodes, directly explaining the preauricular lymphadenopathy already covered as a classic finding in adenoviral conjunctivitis." },
+      { h: "Innervation", t: "Conjunctival sensation is supplied by the ophthalmic (V1) division of the trigeminal nerve, via the same long ciliary and lacrimal nerve branches already covered under Corneal Innervation content — explaining why conjunctival irritation and corneal irritation often produce similar quality foreign-body-sensation symptoms, despite being different tissues." },
+      { h: "Plica semilunaris and caruncle — the medial canthal structures", t: "The plica semilunaris is a small, crescent-shaped fold of bulbar conjunctiva at the medial canthus — a vestigial remnant of the nictitating membrane (third eyelid) found in other vertebrates, allowing some redundant tissue for globe movement medially. The caruncle, just medial to the plica, is a small fleshy mound containing modified skin adnexal structures (sebaceous and sweat glands, fine hairs) rather than pure conjunctival tissue — a genuinely useful clinical point, since the caruncle can be a site for both conjunctival AND cutaneous/adnexal-type lesions (e.g., papillomas, nevi, and even sebaceous or sweat gland tumors), unlike the rest of the conjunctiva." },
+    ],
+    memorizeIt: [
+      "Conjunctival blood supply: anterior (palpebral) system from eyelid arcades + posterior (ciliary) system from anterior ciliary arteries.",
+      "Diffuse bulbar injection = typical conjunctivitis pattern; perilimbal (ciliary) flush = suggests deeper anterior segment inflammation (uveitis/keratitis).",
+      "Medial conjunctival lymphatics → submandibular nodes; lateral conjunctival lymphatics → preauricular nodes (explains preauricular adenopathy in viral conjunctivitis).",
+      "Conjunctival sensation: ophthalmic (V1) division of trigeminal nerve.",
+      "Plica semilunaris: vestigial nictitating membrane remnant. Caruncle: contains modified skin adnexal tissue (sebaceous/sweat glands, hairs) — can develop cutaneous-type as well as conjunctival-type lesions.",
+    ],
+    applyIt: [
+      "This gives you the anatomic basis for a genuinely useful bedside localization skill: a patient with diffuse, uniform bulbar redness most consistent with conjunctivitis versus a patient with redness concentrated in a ring immediately around the limbus (ciliary flush) should raise concern for anterior uveitis or keratitis instead — connecting directly to your existing Anterior Uveitis and Bacterial/HSV Keratitis content, where ciliary flush is a classic distinguishing exam finding from simple conjunctivitis.",
+      "This also completes the anatomic explanation for the preauricular lymphadenopathy already covered under your Adenoviral Conjunctivitis content: lateral/temporal conjunctival lymphatic drainage routes directly to the preauricular nodes, which is exactly why that specific node (not, say, a cervical node) becomes tender and palpable.",
     ],
   },
   "iopmeas-tonometry-methods": {
@@ -13947,11 +14118,13 @@ const STUDY_PAGES = {
       { h: "Surface ectoderm — corneal epithelium", t: "The corneal EPITHELIUM derives from surface ectoderm (the same tissue already covered as the shared origin of conjunctiva and lid skin under this topic's sibling objective), forming the outermost corneal layer first." },
       { h: "First neural crest wave — endothelium", t: "The FIRST wave of neural crest cell migration beneath the surface ectoderm forms the corneal ENDOTHELIUM, a single layer of cells that subsequently secretes Descemet's membrane — this endothelial layer is already established under Corneal Physiology as responsible for the active pump function maintaining corneal deturgescence (relative dehydration) and transparency." },
       { h: "Second neural crest wave — stroma and keratocytes", t: "A SECOND wave of neural crest cell migration occurs later, populating the space between epithelium and endothelium to form the corneal STROMA's keratocytes, which then organize the regularly-spaced collagen lamellae responsible for corneal transparency (already covered under Corneal Transparency Mechanisms) — this precisely regular collagen arrangement, established during this developmental wave, is the structural basis already contrasted with the sclera's irregular collagen arrangement." },
+      { h: "Corneal nerve development", t: "Corneal sensory nerve fibers originate from the ophthalmic (V1) division of the trigeminal nerve (already covered under Corneal Gross Anatomy's innervation content), growing into the developing cornea from the limbal stroma inward as branches of the neural-crest-derived trigeminal ganglion's peripheral processes, entering during the same general period as stromal keratocyte migration and eventually forming the dense subepithelial nerve plexus already covered — this shared neural crest lineage helps explain why the trigeminal ganglion (already relevant to your existing HSV Keratitis and Herpes Zoster Ophthalmicus latency content) is the specific site where these viruses establish and reactivate latency along the same pathway the corneal nerves originally followed to reach the cornea." },
     ],
     memorizeIt: [
       "Corneal epithelium: surface ectoderm (same origin as conjunctiva/lid skin, already covered).",
       "First neural crest wave: forms corneal ENDOTHELIUM (single layer, secretes Descemet's membrane) — already established as the site of the active pump function under Corneal Physiology.",
       "Second neural crest wave: forms corneal STROMA keratocytes, organizing the regular collagen lamellae responsible for transparency (already covered).",
+      "Corneal nerves originate from the trigeminal (V1) ganglion, growing inward from the limbus to form the subepithelial plexus — the same pathway HSV/VZV use to establish and reactivate latency.",
       "The cornea's layered structure (epithelium/endothelium from different tissue sources, stroma from a separate, later wave) directly reflects this developmental sequence.",
     ],
     applyIt: [
@@ -13987,11 +14160,13 @@ const STUDY_PAGES = {
     learnIt: [
       { h: "Overview", t: "Conjunctival and corneal disease draws on a genuinely broad range of topical pharmacologic classes — anesthetics, antihistamines, anti-inflammatories, lubricants, dyes, hyperosmotics, mast cell stabilizers, vasoconstrictors, immunomodulators, anti-infectives, and biologics (each covered under this topic's sibling objectives) — reflecting the ocular surface's exposure to a uniquely wide range of insults: infection, allergy, dryness, and mechanical/chemical injury." },
       { h: "Organizing principle", t: "A useful organizing framework is to separate DIAGNOSTIC agents (dyes, this topic's sibling objective, used to visualize pathology rather than treat it) from THERAPEUTIC agents, and within therapeutics, to separate agents targeting the underlying disease PROCESS (anti-infectives for infection, anti-inflammatories/immunomodulators for inflammatory disease, mast cell stabilizers/antihistamines for allergy) from agents providing SYMPTOMATIC relief or supportive therapy (lubricants, hyperosmotics, vasoconstrictors) — this framework helps organize the many specific drug classes covered across this topic's sibling objectives." },
+      { h: "Routes of administration for the ocular surface", t: "The overwhelming majority of cornea/conjunctiva medications are delivered topically (drops, gels, or ointments applied directly to the ocular surface), which maximizes local drug concentration while limiting systemic exposure — though nasolacrimal drainage still allows meaningful systemic absorption (already covered in detail under Lids/Lacrimal Pharmacology's Systemic Absorption content, including punctal occlusion as a mitigation strategy). Ointments and gels increase ocular surface contact/residence time compared with drops (already relevant to Artificial Tears formulation content) at the cost of transient blurring, making them better suited to bedtime dosing. Subconjunctival or intrastromal injection is reserved for select severe infectious or inflammatory disease requiring higher local drug levels than topical dosing alone can achieve." },
     ],
     memorizeIt: [
       "Cornea/conjunctiva pharmacology spans diagnostic (dyes) and therapeutic (anti-infective, anti-inflammatory, immunomodulator, antihistamine/mast cell stabilizer, symptomatic/supportive) classes.",
       "Organizing framework: diagnostic vs. therapeutic; within therapeutic, disease-process-targeting vs. symptomatic/supportive.",
       "This breadth reflects the ocular surface's exposure to infection, allergy, dryness, and mechanical/chemical injury.",
+      "Topical (drops/gel/ointment) is the dominant route; ointments/gels increase surface residence time but blur vision more, favoring bedtime use; subconjunctival/intrastromal injection is reserved for severe disease.",
     ],
     applyIt: [
       "This gives you an organizing framework for the full range of cornea/conjunctiva pharmacology covered across this topic's sibling objectives — recognizing whether a given clinical scenario calls for a disease-process-targeting agent (e.g., an anti-infective for confirmed bacterial keratitis) versus symptomatic/supportive therapy (e.g., lubricants for dry eye) is the foundational clinical reasoning step before selecting a specific drug class.",
@@ -16612,6 +16787,29 @@ const FLASHCARDS = [
   { id: "fc-141", objectiveId: "cornea-refractive-surg", front: "What is the key preoperative test to prevent post-refractive-surgery ectasia?", back: "Corneal topography, to rule out subclinical keratoconus." },
   { id: "fc-142", objectiveId: "cornea-refractive-surg", front: "How does PRK differ from LASIK in surgical approach?", back: "PRK removes the epithelium (no flap) before laser ablation; LASIK creates and lifts a corneal flap first." },
   { id: "fc-143", objectiveId: "cornea-refractive-surg", front: "What is the most common postoperative complaint across corneal refractive procedures?", back: "Dry eye, from corneal nerve disruption." },
+  // EBMD / recurrent corneal erosion
+  { id: "fc-1521", objectiveId: "cornea-ebmd", front: "What is the classic history for recurrent corneal erosion syndrome (RCES)?", back: "Sudden eye pain on waking/eye-opening, and/or a prior fingernail or paper-cut corneal abrasion." },
+  { id: "fc-1522", objectiveId: "cornea-ebmd", front: "What is the underlying defect in EBMD (map-dot-fingerprint dystrophy)?", back: "Abnormal, redundant epithelial basement membrane that poorly anchors the epithelium to Bowman's layer." },
+  { id: "fc-1523", objectiveId: "cornea-ebmd", front: "Name two options for refractory recurrent corneal erosion not responding to lubrication.", back: "Anterior stromal micropuncture or phototherapeutic keratectomy (PTK) (also epithelial debridement)." },
+  // Adenoviral conjunctivitis / EKC
+  { id: "fc-1524", objectiveId: "cornea-viral-conjunctivitis", front: "What three clinical findings classically suggest adenoviral conjunctivitis over bacterial conjunctivitis?", back: "Watery discharge, follicular conjunctival reaction, and preauricular lymphadenopathy." },
+  { id: "fc-1525", objectiveId: "cornea-viral-conjunctivitis", front: "What complication of EKC can cause prolonged glare and reduced vision weeks after the acute infection?", back: "Subepithelial corneal infiltrates." },
+  { id: "fc-1526", objectiveId: "cornea-viral-conjunctivitis", front: "Is there a specific antiviral treatment for adenoviral conjunctivitis?", back: "No — management is primarily supportive (cold compresses, lubrication); no routine specific antiviral therapy exists." },
+  // Chemical injury
+  { id: "fc-1527", objectiveId: "cornea-chemical-injury", front: "Which causes more severe corneal injury: alkali or acid, and why?", back: "Alkali — it causes liquefactive necrosis and saponifies lipids, allowing deep, progressive tissue penetration; acid causes coagulative necrosis that tends to limit further penetration." },
+  { id: "fc-1528", objectiveId: "cornea-chemical-injury", front: "What is the single most important immediate step after a chemical eye injury?", back: "Copious irrigation (≥15-30 min) BEFORE formal exam or visual acuity testing, until pH is neutral." },
+  { id: "fc-1529", objectiveId: "cornea-chemical-injury", front: "What exam finding is most prognostic after a chemical burn, and why?", back: "Degree of perilimbal (limbal) ischemia/blanching — it predicts limbal stem cell survival and epithelial healing capacity." },
+  // Corneal transplantation
+  { id: "fc-1530", objectiveId: "cornea-transplant", front: "What does DALK preserve that PK does not, and why does that matter?", back: "DALK preserves the patient's own healthy endothelium, avoiding endothelial graft rejection risk entirely." },
+  { id: "fc-1531", objectiveId: "cornea-transplant", front: "What does the mnemonic RSVP stand for in corneal graft rejection?", back: "Redness, Sensitivity to light (photophobia), decreased Vision, Pain." },
+  { id: "fc-1532", objectiveId: "cornea-transplant", front: "What is a Khodadoust line?", back: "A line of inflammatory cells advancing across the donor corneal endothelium during endothelial graft rejection." },
+  // Corneal limbus
+  { id: "fc-1533", objectiveId: "corneagross-limbus", front: "What structure at the limbus houses the corneal epithelial stem cells?", back: "The Palisades of Vogt." },
+  { id: "fc-1534", objectiveId: "corneagross-limbus", front: "What happens to the corneal surface when the limbal stem cell niche is destroyed?", back: "Conjunctivalization — conjunctival epithelium abnormally migrates onto the cornea, causing chronic vascularization/irregularity unresponsive to standard treatment." },
+  // Conjunctival vascular/adnexal anatomy
+  { id: "fc-1535", objectiveId: "conjgross-vascular-adnexa", front: "What conjunctival injection pattern suggests anterior segment inflammation (uveitis/keratitis) rather than simple conjunctivitis?", back: "Ciliary flush — perilimbal injection, versus the diffuse bulbar injection typical of conjunctivitis." },
+  { id: "fc-1536", objectiveId: "conjgross-vascular-adnexa", front: "What is the plica semilunaris, developmentally?", back: "A vestigial remnant of the nictitating membrane (third eyelid)." },
+  { id: "fc-1537", objectiveId: "conjgross-vascular-adnexa", front: "Why can the caruncle develop cutaneous-type lesions (not just conjunctival ones)?", back: "It contains modified skin adnexal structures — sebaceous glands, sweat glands, and fine hairs — unlike the rest of the conjunctiva." },
   // Retinal detachment
   { id: "fc-144", objectiveId: "retina-rd", front: "What are the three types of retinal detachment?", back: "Rhegmatogenous (break-related), tractional (fibrovascular traction), and exudative/serous (fluid without a break)." },
   { id: "fc-145", objectiveId: "retina-rd", front: "What symptoms can herald a retinal tear before full detachment?", back: "New flashes (photopsias) and a shower of floaters." },
@@ -17323,6 +17521,10 @@ const FLASHCARDS = [
   // Metabolism
   { id: "fc-624", objectiveId: "corneaphys-metabolism", front: "What are the separate oxygen sources for the anterior vs. posterior cornea?", back: "Anterior (epithelium): tear film/atmosphere. Posterior (endothelium): aqueous humor." },
   { id: "fc-625", objectiveId: "corneaphys-metabolism", front: "What happens metabolically when corneal oxygen supply is inadequate?", back: "Shift to anaerobic metabolism, producing lactate accumulation that contributes to stromal swelling." },
+  // Corneal nerve physiology, epithelial regeneration, aging
+  { id: "fc-1538", objectiveId: "corneaphys-nerves-aging", front: "Besides sensation, what physiologic role do corneal nerves play?", back: "A trophic role — releasing neuropeptides (e.g., substance P, CGRP) that support epithelial cell metabolism, proliferation, and adhesion." },
+  { id: "fc-1539", objectiveId: "corneaphys-nerves-aging", front: "How long does the normal corneal epithelial turnover cycle take, and where do new cells originate?", back: "Roughly 7-10 days; new cells arise from the limbal stem cell population and migrate centripetally." },
+  { id: "fc-1540", objectiveId: "corneaphys-nerves-aging", front: "What corneal finding is a benign aging change after age 40 but warrants a lipid workup if seen in a younger patient?", back: "Arcus senilis (a peripheral lipid ring near the limbus)." },
   // Tonometry methods
   { id: "fc-626", objectiveId: "iopmeas-tonometry-methods", front: "What principle underlies Goldmann applanation tonometry?", back: "The Imbert-Fick principle: pressure = force/area, for an ideal thin-walled sphere." },
   { id: "fc-627", objectiveId: "iopmeas-tonometry-methods", front: "What tonometry method is popular for home IOP monitoring and pediatric patients, and why?", back: "Rebound tonometry — no topical anesthesia needed, quick and well-tolerated." },
@@ -19120,6 +19322,40 @@ const QUESTIONS = [
       b: "Correct — the combination of dry eyes and dry mouth is classic for Sjögren syndrome, an autoimmune cause of aqueous-deficient dry eye.",
       c: "Incorrect — myasthenia gravis causes fatigable weakness, not sicca symptoms.",
       d: "Incorrect — Addison disease causes fatigue, hypotension, and hyperpigmentation, not this symptom pattern.",
+    },
+  },
+  {
+    id: "q-330", objectiveId: "cornea-chemical-injury", type: "Clinical application", difficulty: "Medium",
+    stem: "A patient arrives immediately after a workplace splash of an unidentified chemical to the eye, with significant pain and blepharospasm. What is the most appropriate immediate action?",
+    choices: [
+      { id: "a", text: "Wait to begin treatment until the exact chemical and its pH are identified" },
+      { id: "b", text: "Check visual acuity first, then irrigate" },
+      { id: "c", text: "Begin copious irrigation immediately, before formal exam or acuity testing" },
+      { id: "d", text: "Patch the eye and refer for delayed outpatient evaluation" },
+    ],
+    correct: "c",
+    explanations: {
+      a: "Incorrect — waiting to identify the exact chemical delays treatment and allows ongoing tissue penetration, particularly dangerous with an alkali agent.",
+      b: "Incorrect — formal testing should follow, not precede, irrigation in a true chemical injury; time-to-irrigation is the key determinant of outcome.",
+      c: "Correct — copious immediate irrigation (at least 15-30 minutes, continued until pH is neutral) is the single most important intervention and should precede formal exam/acuity testing.",
+      d: "Incorrect — chemical injury is a true emergency requiring immediate irrigation, not delayed evaluation.",
+    },
+  },
+  {
+    id: "q-331", objectiveId: "cornea-transplant", type: "Clinical recognition", difficulty: "Medium",
+    stem: "A patient who underwent penetrating keratoplasty (PK) two years ago presents with new redness, photophobia, decreased vision, and pain in the grafted eye. What is the most likely diagnosis and appropriate next step?",
+    choices: [
+      { id: "a", text: "Normal post-surgical astigmatism; reassure and observe" },
+      { id: "b", text: "Corneal graft rejection (RSVP pattern); prompt aggressive topical corticosteroid treatment" },
+      { id: "c", text: "Recurrent keratoconus; refer for repeat topography only" },
+      { id: "d", text: "Simple dry eye; recommend artificial tears only" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — astigmatism from sutures does not present with acute redness, photophobia, and pain; this is a different, more benign process.",
+      b: "Correct — Redness, Sensitivity to light, decreased Vision, and Pain (RSVP) is the classic presentation of corneal graft rejection; early, aggressive corticosteroid treatment can often reverse rejection before irreversible endothelial decompensation.",
+      c: "Incorrect — keratoconus does not recur in a full-thickness donor graft in this acute, inflammatory pattern.",
+      d: "Incorrect — while dry eye is common post-transplant, this acute RSVP symptom cluster specifically indicates rejection, which requires urgent treatment, not just lubrication.",
     },
   },
   {
