@@ -1818,6 +1818,8 @@ const CARDIOPHYS_OBJECTIVES = [
   { id: "cardiophys-conduction", name: "Cardiac Conduction System & the Cardiac Cycle", built: true },
   { id: "cardiophys-bp-regulation", name: "Blood Pressure Regulation (Baroreceptors, RAAS)", built: true },
   { id: "cardiophys-cardiac-output", name: "Cardiac Output & Frank-Starling Mechanism", built: true },
+  { id: "cardiophys-ekg", name: "The Electrocardiogram (EKG) — Waveforms & Clinical Significance", built: true },
+  { id: "cardiophys-hemostasis", name: "Blood & Hemostasis", built: true },
 ];
 
 const ENDOPHYS_TOPIC_ID = "t-15-4-7"; // Systemic Health(15) > Physiology(4) > Endocrine system(7)
@@ -1827,6 +1829,8 @@ const ENDOPHYS_OBJECTIVES = [
   { id: "endophys-hpa-axis", name: "Hypothalamic-Pituitary Axes & Negative Feedback", built: true },
   { id: "endophys-thyroid-hormone", name: "Thyroid Hormone Synthesis & Regulation", built: true },
   { id: "endophys-insulin-glucose", name: "Insulin, Glucagon & Glucose Homeostasis", built: true },
+  { id: "endophys-adrenal-hormones", name: "Adrenal Cortex & Medulla Hormone Physiology", built: true },
+  { id: "endophys-calcium-regulation", name: "Calcium Homeostasis — PTH, Vitamin D & Calcitonin", built: true },
 ];
 
 const RESPPHYS_TOPIC_ID = "t-15-4-1"; // Systemic Health(15) > Physiology(4) > Respiration(1)
@@ -1836,6 +1840,7 @@ const RESPPHYS_OBJECTIVES = [
   { id: "respphys-gas-exchange", name: "Gas Exchange & Ventilation-Perfusion Matching", built: true },
   { id: "respphys-oxyhemoglobin-curve", name: "Oxygen-Hemoglobin Dissociation Curve", built: true },
   { id: "respphys-control-breathing", name: "Control of Breathing (Chemoreceptors)", built: true },
+  { id: "respphys-mechanics", name: "Mechanics of Breathing", built: true },
 ];
 
 const GIPHYS_TOPIC_ID = "t-15-4-2"; // Systemic Health(15) > Physiology(4) > Gastrointestinal activity(2)
@@ -1863,6 +1868,8 @@ const MUSCLEPHYS_OBJECTIVES = [
   { id: "musclephys-contraction", name: "Skeletal Muscle Contraction & the Sliding Filament Mechanism", built: true },
   { id: "musclephys-nmj", name: "Neuromuscular Junction Transmission", built: true },
   { id: "musclephys-fiber-types", name: "Muscle Fiber Types & Energy Metabolism", built: true },
+  { id: "musclephys-contraction-types-reflex", name: "Types of Muscle Contraction & the Stretch Reflex Arc", built: true },
+  { id: "musclephys-smooth", name: "Smooth Muscle Physiology", built: true },
 ];
 
 const NERVEPHYS_TOPIC_ID = "t-15-4-9"; // Systemic Health(15) > Physiology(4) > Electrophysiology and the nerve cell(9)
@@ -1881,6 +1888,7 @@ const CELLPHYS_OBJECTIVES = [
   { id: "cellphys-membrane-transport", name: "Cell Membrane Transport Mechanisms", built: true },
   { id: "cellphys-cellular-respiration", name: "Cellular Respiration & ATP Production", built: true },
   { id: "cellphys-cell-cycle", name: "Cell Cycle & Its Regulation", built: true },
+  { id: "cellphys-signaling", name: "Cytoskeleton & Membrane Receptor Signal Transduction", built: true },
 ];
 
 const BODYFLUIDS_TOPIC_ID = "t-15-4-4"; // Systemic Health(15) > Physiology(4) > Body fluids(4)
@@ -1971,6 +1979,7 @@ const ANTIBODY_TOPIC_ID = "t-15-5-1"; // Systemic Health(15) > Immunology(5) > A
 const ANTIBODY_OBJECTIVES = [
   { id: "antibody-structure", name: "Antibody Structure & Classes (IgG, IgM, IgA, IgE, IgD)", built: true },
   { id: "antibody-function", name: "Antibody Function & Complement Activation", built: true },
+  { id: "antibody-diversity-clonal-selection", name: "Antibody Diversity Generation & Clonal Selection Theory", built: true },
 ];
 
 const ADAPTIVEIMMUNITY_TOPIC_ID = "t-15-5-6"; // Systemic Health(15) > Immunology(5) > Specific immunity(6)
@@ -9754,15 +9763,59 @@ const STUDY_PAGES = {
       { h: "Cardiac output equation", t: "Cardiac output = heart rate × stroke volume — a simple relationship, but one where either factor can be primarily affected by different disease processes (e.g., arrhythmias primarily affecting heart rate, valvular disease or myocardial dysfunction primarily affecting stroke volume, already relevant to your Cardiovascular content)." },
       { h: "The Frank-Starling mechanism", t: "Within physiologic limits, increased venous return (preload, the volume filling the ventricle before contraction) stretches cardiac muscle fibers, increasing the force of contraction and thus stroke volume — this is the heart's intrinsic ability to match output to venous return without requiring neural or hormonal input, a genuine built-in compensatory mechanism." },
       { h: "Heart failure and the Frank-Starling curve — direct connection to existing content", t: "In early/compensated heart failure (already covered in your Cardiovascular content), the heart initially relies on increased preload (via fluid retention, itself partly RAAS-driven as already covered) to maintain stroke volume via the Frank-Starling mechanism — but a failing heart's contractile function means this compensation becomes progressively less effective at higher preload, eventually plateauing or even declining (a shifted, flattened Frank-Starling curve) — explaining why fluid overload in decompensated heart failure doesn't just fail to help but can actively worsen cardiac performance." },
+      { h: "Hemodynamics and lymph formation — completing the circulatory picture", t: "At the vascular level, flow follows the same pressure-resistance relationship as Ohm's law (flow = pressure gradient / resistance), and resistance is exquisitely sensitive to vessel radius (resistance is inversely proportional to radius to the fourth power, per Poiseuille's law) — this is why arteriolar smooth muscle tone (already covered under Blood Pressure Regulation) is such an efficient blood-pressure-regulating lever, since even small radius changes produce large resistance changes; the small net excess of fluid that filters out of capillaries under normal Starling forces (already covered under Body Fluids Physiology) is returned to the circulation by the lymphatic system, which also returns the small amount of filtered plasma protein that escapes into the interstitium — lymphatic failure or obstruction (rather than a Starling-forces imbalance) is therefore a distinct, non-hydrostatic/non-oncotic mechanism of edema, already noted under your Edema content." },
     ],
     memorizeIt: [
       "Cardiac output = heart rate × stroke volume.",
       "Frank-Starling mechanism: increased preload (venous return) → increased stretch → increased contractile force → increased stroke volume.",
       "This is an intrinsic compensatory mechanism, not requiring neural/hormonal signaling.",
       "In heart failure, the Frank-Starling curve flattens/shifts — excess preload no longer effectively increases output and can worsen performance.",
+      "Vascular resistance ∝ 1/radius⁴ (Poiseuille's law) — small arteriolar radius changes produce large resistance/pressure changes. Lymphatics return filtered fluid/protein to circulation; lymphatic obstruction is a distinct, non-Starling-forces cause of edema.",
     ],
     applyIt: [
       "This gives you the physiologic mechanism behind a key concept in your Heart Failure content: RAAS-driven fluid retention (already covered) initially helps via the Frank-Starling mechanism in compensated heart failure, but as the disease progresses, that same fluid retention becomes counterproductive once the heart's Frank-Starling reserve is exhausted — explaining why diuretics (reducing preload) become an essential heart failure treatment despite the body's own compensatory drive toward fluid retention.",
+    ],
+  },
+  "cardiophys-ekg": {
+    name: "The Electrocardiogram (EKG) — Waveforms & Clinical Significance",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard cardiovascular physiology references (e.g., standard physiology texts)"],
+    learnIt: [
+      { h: "Overview", t: "The electrocardiogram (EKG) records the summed electrical activity of the heart from the body surface, and its characteristic waveforms directly correspond to the conduction sequence already covered under Cardiac Conduction — this content is the diagnostic-interpretation extension of that conduction physiology, already implicitly relevant to your Cardiac Arrhythmias content." },
+      { h: "The P wave, QRS complex, and T wave", t: "The P wave represents atrial depolarization (corresponding to the SA-node-initiated signal spreading across the atria, already covered); the QRS complex represents ventricular depolarization (the much larger ventricular muscle mass generates a proportionally larger deflection, and this signal also masks atrial repolarization, which occurs at the same time but produces too small a deflection to see separately); the T wave represents ventricular repolarization — there is no separately visible atrial repolarization wave and no separately visible wave for the AV-node delay itself (represented instead by the PR interval, the isoelectric segment between the P wave and QRS complex)." },
+      { h: "Key intervals and their significance", t: "The PR interval (start of P wave to start of QRS) reflects conduction time through the atria and AV node — a prolonged PR interval indicates AV conduction delay (first-degree AV block); the QT interval (start of QRS to end of T wave) reflects the total duration of ventricular depolarization plus repolarization — an abnormally prolonged QT interval (from congenital channelopathies or certain medications) increases risk of torsades de pointes, a life-threatening ventricular arrhythmia." },
+      { h: "Direct clinical relevance — connects to existing arrhythmia content", t: "This waveform framework directly explains how your existing Cardiac Arrhythmias content is diagnosed: atrial fibrillation (already covered) shows an absent, organized P wave (replaced by irregular fibrillatory activity) with an irregularly irregular QRS rhythm, since the atria are no longer depolarizing in the normal SA-node-driven sequence; heart block (already covered, relevant to endocarditis extending toward the AV node) shows a progressively or completely dissociated relationship between P waves and QRS complexes, directly reflecting impaired AV-node conduction of the atrial signal already covered under Cardiac Conduction." },
+    ],
+    memorizeIt: [
+      "P wave = atrial depolarization. QRS complex = ventricular depolarization (masks atrial repolarization). T wave = ventricular repolarization.",
+      "PR interval = atrial + AV-node conduction time — prolonged in first-degree AV block.",
+      "QT interval = total ventricular depolarization + repolarization time — prolongation raises torsades de pointes risk.",
+      "Atrial fibrillation: absent organized P waves, irregularly irregular QRS rhythm. Heart block: dissociated/delayed P-to-QRS relationship.",
+    ],
+    applyIt: [
+      "This gives you the direct diagnostic-physiology link for your existing Cardiac Arrhythmias and Infective Endocarditis content: recognizing that the EKG is simply a surface recording of the conduction sequence already covered (SA node → atria → AV node → ventricles) explains exactly why atrial fibrillation's chaotic atrial activity erases the normal P wave, and why AV-node-involving endocarditis produces the progressive P-to-QRS dissociation of heart block — the waveform abnormalities are a direct readout of which specific step in the conduction pathway has been disrupted.",
+    ],
+  },
+  "cardiophys-hemostasis": {
+    name: "Blood & Hemostasis",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard cardiovascular/hematology physiology references"],
+    learnIt: [
+      { h: "Overview", t: "Hemostasis is the coordinated physiologic process that stops bleeding after vascular injury while normally keeping blood fluid within intact vessels, proceeding through overlapping stages — this content is the missing physiologic foundation beneath the clotting-factor and anticoagulant content already referenced under your Cirrhosis/Liver Failure and Cardiovascular Pharmacology content." },
+      { h: "Vascular spasm and primary hemostasis (platelet plug)", t: "Vascular injury first triggers local vasoconstriction (vascular spasm), transiently reducing blood flow to the injured area; primary hemostasis then follows, as exposed subendothelial collagen and von Willebrand factor (vWF) enable platelets to adhere to the injury site, become activated (releasing ADP, thromboxane A2, and other mediators that recruit and activate additional platelets), and aggregate together (via platelet GPIIb/IIIa receptors cross-linking with fibrinogen) to form the initial, loosely-organized platelet plug — a fast (seconds to minutes) but mechanically fragile first response." },
+      { h: "Secondary hemostasis — the coagulation cascade", t: "Secondary hemostasis reinforces the platelet plug with a stable fibrin mesh, generated through the coagulation cascade — a sequential series of enzymatic clotting factor activations (the intrinsic and extrinsic pathways converging on a shared common pathway) that culminates in thrombin converting soluble fibrinogen into insoluble fibrin strands, which cross-link to form a stable clot; this pathway is the direct target of both warfarin (inhibiting vitamin K-dependent clotting factor synthesis, already covered under Anticoagulant Pharmacology) and heparin/DOACs (directly inhibiting specific activated clotting factors)." },
+      { h: "Fibrinolysis and clinical relevance — connects to existing liver/coagulation content", t: "Once healing begins, fibrinolysis (mediated by plasmin, generated from plasminogen) gradually breaks down the fibrin clot, restoring normal vessel patency — this same fibrinolytic system is pharmacologically activated by thrombolytic drugs in acute ischemic events; because most coagulation factors are synthesized in the liver, hepatic synthetic failure (already covered under your Cirrhosis/Liver Failure content) directly impairs secondary hemostasis, producing the coagulopathy and elevated bleeding risk already discussed there, distinct from (but additive to) the separate vitamin K-deficiency mechanism already covered under Digestion & Absorption's bile-related content." },
+    ],
+    memorizeIt: [
+      "Hemostasis sequence: vascular spasm → primary hemostasis (platelet adhesion/activation/aggregation → platelet plug) → secondary hemostasis (coagulation cascade → fibrin mesh) → fibrinolysis (plasmin-mediated clot breakdown during healing).",
+      "Primary hemostasis: platelets adhere via vWF/collagen, aggregate via GPIIb/IIIa-fibrinogen cross-linking — fast but fragile.",
+      "Secondary hemostasis: coagulation cascade → thrombin converts fibrinogen → fibrin — stabilizes the platelet plug; target of warfarin/heparin/DOACs.",
+      "Most clotting factors are hepatically synthesized — liver failure (already covered) directly impairs secondary hemostasis/coagulation, compounding the separate vitamin K-deficiency mechanism already covered.",
+    ],
+    applyIt: [
+      "This gives you the complete physiologic foundation for the coagulopathy already discussed under your Cirrhosis/Liver Failure content: hepatic synthetic failure doesn't just reduce albumin (already covered under edema mechanisms), it directly impairs secondary hemostasis by reducing coagulation factor synthesis — and recognizing this as a DISTINCT mechanism from the vitamin K/fat-malabsorption pathway already covered under Digestion & Absorption explains why cirrhotic coagulopathy is typically multifactorial (impaired synthesis plus impaired vitamin K-dependent activation) rather than attributable to a single cause.",
     ],
   },
   "endophys-hpa-axis": {
@@ -9828,6 +9881,48 @@ const STUDY_PAGES = {
       "This gives you the upstream endocrine mechanism behind your Diabetic Retinopathy content: understanding insulin/glucagon regulation as a normal physiologic system clarifies that diabetic retinopathy isn't caused by glucose itself being inherently toxic, but by the sustained regulatory failure (insufficient insulin action) that allows glucose to remain chronically elevated, driving the microvascular damage already covered.",
     ],
   },
+  "endophys-adrenal-hormones": {
+    name: "Adrenal Cortex & Medulla Hormone Physiology",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard endocrine physiology references (e.g., standard physiology texts)"],
+    learnIt: [
+      { h: "Overview", t: "The adrenal gland has two functionally and embryologically distinct components — the cortex (three hormone-producing zones) and the medulla (a modified sympathetic ganglion) — and understanding their normal hormone physiology directly underlies your existing Cushing Disease, Addison Disease, and Pheochromocytoma content." },
+      { h: "Adrenal cortex — three zones, three hormone classes", t: "The zona glomerulosa (outermost) produces mineralocorticoids (primarily aldosterone, regulated mainly by the renin-angiotensin system and plasma K+, already covered under Blood Pressure Regulation and Renal Tubular Function — largely independent of ACTH); the zona fasciculata (middle, largest zone) produces glucocorticoids (primarily cortisol, under ACTH/HPA-axis control already covered), which raise blood glucose (via gluconeogenesis and insulin antagonism), suppress the immune/inflammatory response, and support vascular responsiveness to catecholamines (\"permissive\" effect); the zona reticularis (innermost) produces adrenal androgens (e.g., DHEA), a minor contributor to androgen levels compared to the gonads." },
+      { h: "Adrenal medulla — catecholamine synthesis", t: "The adrenal medulla is embryologically a modified, specialized sympathetic postganglionic structure, directly innervated by sympathetic preganglionic fibers (rather than being a typical peripheral endocrine gland under HPA-axis control) — upon sympathetic stimulation, chromaffin cells release epinephrine (the majority, ~80%) and norepinephrine (the minority, ~20%) directly into the bloodstream, reinforcing and extending the same fight-or-flight sympathetic response already covered under Baroreceptor/RAAS Blood Pressure Regulation, but acting as a hormonal (bloodborne) amplifier of the direct neural sympathetic discharge rather than local synaptic transmission alone." },
+      { h: "Clinical relevance — connects to existing Cushing/Addison/pheochromocytoma content", t: "Cushing disease (already covered) reflects excess zona fasciculata cortisol; Addison disease (already covered) reflects failure of all three cortical zones (deficient cortisol AND aldosterone, distinguishing it from isolated pituitary ACTH failure, which spares aldosterone since aldosterone is primarily renin-angiotensin-driven rather than ACTH-driven); pheochromocytoma (already covered) is a catecholamine-secreting tumor of the adrenal medulla's chromaffin cells, producing the episodic hypertension, palpitations, and diaphoresis directly explained by unregulated epinephrine/norepinephrine release from this same medullary hormone system." },
+    ],
+    memorizeIt: [
+      "Adrenal cortex, outer to inner: zona glomerulosa (mineralocorticoids/aldosterone, RAAS/K+-driven) → zona fasciculata (glucocorticoids/cortisol, ACTH-driven) → zona reticularis (androgens).",
+      "Cortisol effects: raises blood glucose, suppresses immune/inflammatory response, permissive for catecholamine vascular effects.",
+      "Adrenal medulla: modified sympathetic ganglion, directly sympathetically innervated — releases epinephrine (~80%) and norepinephrine (~20%) into the bloodstream.",
+      "Primary adrenal (Addison) failure affects ALL three cortical zones (low cortisol AND low aldosterone); isolated pituitary ACTH failure spares aldosterone (RAAS-driven, not ACTH-driven).",
+    ],
+    applyIt: [
+      "This gives you the zone-specific mechanistic reason Addison disease (already covered) causes both hypotension/hyperkalemia (aldosterone deficiency) and hypoglycemia/fatigue (cortisol deficiency) simultaneously, while isolated secondary adrenal insufficiency from pituitary/hypothalamic disease causes only the cortisol-deficiency picture, sparing aldosterone — a genuinely high-yield distinction (primary vs. secondary adrenal insufficiency's differing electrolyte findings) that follows directly from which zone is ACTH-dependent versus RAAS-dependent.",
+    ],
+  },
+  "endophys-calcium-regulation": {
+    name: "Calcium Homeostasis — PTH, Vitamin D & Calcitonin",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard endocrine physiology references"],
+    learnIt: [
+      { h: "Overview", t: "Serum calcium is tightly regulated by the coordinated action of parathyroid hormone (PTH), vitamin D, and (to a lesser degree) calcitonin, and understanding this system directly underlies your existing Hyperparathyroidism and Hypoparathyroidism content." },
+      { h: "Parathyroid hormone (PTH) — the primary regulator", t: "PTH is released by the parathyroid glands in direct response to LOW serum calcium (sensed via the calcium-sensing receptor) and raises serum calcium through three coordinated actions: stimulating osteoclastic bone resorption (releasing calcium and phosphate from bone), increasing renal calcium reabsorption in the distal tubule while simultaneously decreasing renal phosphate reabsorption (phosphaturic effect), and stimulating renal 1-alpha-hydroxylase, which activates vitamin D (below) — PTH's net effect is raising serum calcium while lowering serum phosphate." },
+      { h: "Vitamin D activation and function", t: "Vitamin D (from skin synthesis via UV light or dietary intake) requires two sequential hydroxylation steps for activation: first in the liver (25-hydroxylation, producing the storage/measured form, 25-OH vitamin D) and then in the kidney (1-alpha-hydroxylation, PTH-stimulated as above, producing the active hormone, 1,25-dihydroxyvitamin D/calcitriol) — active vitamin D increases intestinal absorption of both calcium and phosphate (its primary effect) and also promotes bone mineralization at adequate calcium/phosphate levels; because renal 1-alpha-hydroxylase activity requires functioning kidneys, chronic kidney disease (already covered under Renal Failure content) causes vitamin D deficiency and consequent secondary hyperparathyroidism as a well-established complication." },
+      { h: "Calcitonin and clinical relevance — connects to existing parathyroid content", t: "Calcitonin (from thyroid parafollicular/C cells) opposes PTH, lowering serum calcium by inhibiting osteoclastic bone resorption — though it plays a comparatively minor role in normal human calcium homeostasis relative to PTH and vitamin D; primary hyperparathyroidism (already covered) — typically from a parathyroid adenoma — produces autonomous PTH excess with hypercalcemia and hypophosphatemia, while hypoparathyroidism (already covered) — from surgical removal (e.g., inadvertent parathyroidectomy during thyroidectomy) or autoimmune destruction — produces hypocalcemia with hyperphosphatemia and the resulting neuromuscular excitability (tetany, Chvostek/Trousseau signs) directly explained by calcium's normal role in stabilizing neuronal membrane excitability, already relevant to your Nerve Cell Electrophysiology content." },
+    ],
+    memorizeIt: [
+      "PTH (released for LOW serum Ca2+): increases bone resorption, increases renal Ca2+ reabsorption, decreases renal phosphate reabsorption, stimulates renal 1-alpha-hydroxylase (activates vitamin D) — net effect: raises Ca2+, lowers phosphate.",
+      "Vitamin D activation: skin/diet → liver 25-hydroxylation (storage form) → kidney 1-alpha-hydroxylation (PTH-stimulated, active calcitriol form) — increases intestinal Ca2+/phosphate absorption.",
+      "Chronic kidney disease → impaired renal 1-alpha-hydroxylation → vitamin D deficiency → secondary hyperparathyroidism.",
+      "Calcitonin (thyroid C cells): opposes PTH (inhibits bone resorption, lowers Ca2+) but plays a minor role in normal human calcium homeostasis. Hypoparathyroidism → hypocalcemia → tetany (Chvostek/Trousseau signs) from increased neuromuscular excitability.",
+    ],
+    applyIt: [
+      "This gives you the precise mechanistic explanation for why chronic kidney disease patients (already covered under Renal Failure content) develop secondary hyperparathyroidism and renal osteodystrophy: failing kidneys cannot adequately perform the second vitamin D activation step, producing a vitamin D-deficient state that reduces intestinal calcium absorption, prompting a compensatory (but ultimately maladaptive, bone-degrading) rise in PTH — a genuinely testable multi-system endocrine/renal connection extending directly from the calcium physiology covered here.",
+    ],
+  },
   "respphys-gas-exchange": {
     name: "Gas Exchange & Ventilation-Perfusion Matching",
     priority: "MUST",
@@ -9880,15 +9975,38 @@ const STUDY_PAGES = {
       { h: "Central chemoreceptors — the dominant normal drive", t: "Located in the medulla, central chemoreceptors respond to CO2 levels in the cerebrospinal fluid (CO2 crosses the blood-brain barrier and is hydrated to carbonic acid, lowering CSF pH, which is what the receptors actually detect) — under normal circumstances, this CO2-driven (\"hypercapnic\") drive is the dominant regulator of breathing rate, more sensitive and responsive than the oxygen-based drive." },
       { h: "Peripheral chemoreceptors — the backup oxygen-sensing system", t: "Located in the carotid and aortic bodies, peripheral chemoreceptors respond primarily to significantly low PaO2 (hypoxic drive), along with some CO2/pH sensitivity — normally a secondary contributor to breathing regulation compared to the dominant central CO2-driven mechanism." },
       { h: "Clinical relevance — direct connection to COPD content", t: "In chronic CO2 retention (as can occur in advanced COPD, already covered in your Respiratory content), the central chemoreceptors can become chronically desensitized to CO2 over time, causing some patients to rely more heavily on the peripheral hypoxic drive to regulate breathing — this is the physiologic basis for the classic (though more nuanced than sometimes described) caution about administering high-flow supplemental oxygen too aggressively in certain chronic CO2-retaining COPD patients, since blunting hypoxic drive in this specific population can theoretically reduce respiratory drive." },
+      { h: "CO2 transport and respiratory acid-base balance", t: "CO2 is carried in the blood in three forms: dissolved CO2 (a small fraction), carbaminohemoglobin (CO2 bound directly to hemoglobin's globin chains, distinct from O2's binding site), and — the majority, roughly 70% — as bicarbonate (HCO3-), generated when CO2 combines with water via carbonic anhydrase (predominantly inside red blood cells) to form carbonic acid, which dissociates into H+ and HCO3-; because CO2 and H+ are directly linked through this reaction, the lungs provide the body's fast-acting (minutes) respiratory arm of acid-base regulation, complementing the kidney's much slower (hours-days) metabolic arm already covered under Renal Acid-Base Regulation — hyperventilation blows off CO2, raising pH (respiratory alkalosis), while hypoventilation retains CO2, lowering pH (respiratory acidosis)." },
     ],
     memorizeIt: [
       "Central chemoreceptors (medulla): respond to CSF CO2/pH — the dominant normal breathing drive under most conditions.",
       "Peripheral chemoreceptors (carotid/aortic bodies): respond primarily to significantly low PaO2 — secondary, backup drive.",
       "Chronic CO2 retention (advanced COPD) can desensitize central chemoreceptors over time.",
       "This is the physiologic basis for cautious oxygen titration in certain chronic CO2-retaining COPD patients.",
+      "CO2 transport: dissolved (small) + carbaminohemoglobin + bicarbonate (majority, ~70%, via RBC carbonic anhydrase) — hyperventilation → respiratory alkalosis; hypoventilation → respiratory acidosis.",
     ],
     applyIt: [
       "This gives you the mechanistic basis for a nuanced but clinically important point in your COPD content: understanding why oxygen administration requires more careful titration in certain chronic CO2-retaining patients — it's not that oxygen is harmful in general, but that this specific subgroup may have come to rely more on hypoxic drive due to chronic central chemoreceptor desensitization from long-standing CO2 retention.",
+    ],
+  },
+  "respphys-mechanics": {
+    name: "Mechanics of Breathing",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard respiratory physiology references (e.g., standard physiology texts)"],
+    learnIt: [
+      { h: "Overview", t: "Airflow into and out of the lungs is generated by pressure gradients created through coordinated respiratory muscle action and passive lung/chest wall mechanics — this foundational mechanical framework, distinct from the gas-exchange and chemoreceptor-control content already covered, directly explains the restrictive breathing pattern in your existing Interstitial Lung Disease and obstructive pattern in your COPD/Asthma content." },
+      { h: "Inspiration and expiration", t: "During normal (quiet) inspiration, the diaphragm (the primary muscle of respiration) contracts and descends, along with external intercostal muscle contraction elevating the ribs, increasing thoracic volume — by Boyle's law, this decreases intrapleural and alveolar pressure below atmospheric pressure, drawing air in; quiet expiration is normally passive, driven by elastic recoil of the lungs and chest wall as inspiratory muscles relax, though forced expiration (e.g., during exercise or in obstructive disease) recruits internal intercostal and abdominal muscles." },
+      { h: "Intrapleural pressure and transmural pressure", t: "Intrapleural pressure is normally negative (subatmospheric) throughout the respiratory cycle, becoming more negative during inspiration — this negative pressure is what keeps the lung's elastic recoil (which constantly favors collapse) in mechanical balance against the chest wall's outward recoil, holding the lung expanded against the chest wall; if this seal is broken (e.g., pneumothorax, already relevant to trauma content), intrapleural pressure equalizes with atmospheric pressure and the lung collapses due to unopposed elastic recoil." },
+      { h: "Compliance and surfactant — direct connection to restrictive/obstructive disease", t: "Lung compliance (the change in lung volume per unit change in pressure) reflects how easily the lung expands — decreased compliance (a \"stiff\" lung, requiring more pressure change for the same volume change) is the defining mechanical abnormality of restrictive lung disease (e.g., interstitial lung disease/pulmonary fibrosis, already covered), while increased compliance (an overly \"floppy\" lung that expands easily but also recoils poorly) characterizes emphysema (already covered under COPD); pulmonary surfactant (produced by Type II alveolar cells) reduces alveolar surface tension, increasing compliance and preventing smaller alveoli from collapsing into larger ones (by Laplace's law, smaller radius alveoli would otherwise generate higher collapsing pressure) — surfactant deficiency (as in neonatal respiratory distress syndrome) produces the opposite problem, low compliance and diffuse alveolar collapse." },
+    ],
+    memorizeIt: [
+      "Inspiration: diaphragm + external intercostals contract → thoracic volume increases → intrapleural/alveolar pressure drops below atmospheric → air flows in. Quiet expiration: passive elastic recoil.",
+      "Intrapleural pressure is normally negative throughout the cycle — holds the lung expanded against chest wall recoil; pneumothorax equalizes it to atmospheric, causing lung collapse.",
+      "Compliance = volume change per pressure change. Decreased compliance (stiff lung) = restrictive disease (e.g., pulmonary fibrosis). Increased compliance (floppy lung, poor recoil) = emphysema.",
+      "Surfactant (Type II alveolar cells): reduces surface tension, increases compliance, prevents small-alveolar collapse (Laplace's law) — deficiency causes neonatal respiratory distress syndrome.",
+    ],
+    applyIt: [
+      "This gives you the mechanical framework that distinguishes two disease patterns already covered under your Respiratory System content: interstitial lung disease/pulmonary fibrosis is fundamentally a LOW-compliance (stiff, hard-to-expand) restrictive process, while emphysema is fundamentally a HIGH-compliance (floppy, poor-recoil) obstructive process — opposite mechanical abnormalities that nonetheless can produce overlapping symptoms of dyspnea, making the compliance framework a genuinely useful way to organize why pulmonary function testing patterns (reduced vs. preserved/increased lung volumes) differ between these two disease categories.",
     ],
   },
   "giphys-motility": {
@@ -9985,12 +10103,14 @@ const STUDY_PAGES = {
       { h: "Proximal convoluted tubule (PCT)", t: "Reabsorbs roughly two-thirds of filtered sodium, water, glucose, and amino acids via largely isosmotic (bulk) reabsorption; also the site of most bicarbonate reabsorption (via carbonic anhydrase-dependent mechanisms) and organic acid/base secretion — carbonic anhydrase inhibitors act here." },
       { h: "Loop of Henle — the countercurrent multiplier", t: "The thick ascending limb actively reabsorbs Na+/K+/2Cl− via the NKCC2 cotransporter (the target of loop diuretics like furosemide) and is impermeable to water, which is essential for generating the medullary concentration gradient that allows the kidney to produce concentrated urine; the descending limb, by contrast, is permeable to water but not solute." },
       { h: "Distal convoluted tubule and collecting duct", t: "The DCT reabsorbs Na+/Cl− via the NaCl cotransporter (the target of thiazide diuretics); the collecting duct's principal cells reabsorb Na+ and secrete K+ under aldosterone control (the target of potassium-sparing diuretics like spironolactone) and regulate water reabsorption via ADH-controlled aquaporin insertion — this segment-specific framework explains why loop diuretics cause more profound diuresis than thiazides (more upstream reabsorption blocked) and why potassium-sparing diuretics, unlike loop/thiazide agents, don't cause hypokalemia." },
+      { h: "The kidney as the effector organ for systemic blood pressure, water balance, and plasma Na+/K+ — connects to Cardiovascular and Body Fluids content", t: "This tubular map is precisely where the RAAS and ADH systems (already covered in full under Blood Pressure Regulation and Fluid Compartments content) exert their physiologic effects: aldosterone acts specifically on collecting duct principal cells to increase Na+ reabsorption (and, paired with it, K+ secretion), which is how the renin-angiotensin-aldosterone system actually controls long-term blood pressure and plasma Na+/K+ balance at the tubular level, while ADH acts specifically on collecting duct aquaporins to control free water reabsorption independent of solute — recognizing that these two systemic hormonal systems converge on this same nephron segment (but regulate two physiologically distinct variables, volume/Na+ versus free water) is the direct tubular-physiology completion of the Cardiovascular Physiology and Body Fluids content already built." },
     ],
     memorizeIt: [
       "PCT: ~2/3 of Na+/water/glucose/amino acid reabsorption, bulk of bicarbonate reabsorption — carbonic anhydrase inhibitor target.",
       "Thick ascending loop of Henle: NKCC2 (Na+/K+/2Cl−) — loop diuretic target; water-impermeable, generates medullary concentration gradient.",
       "DCT: NaCl cotransporter — thiazide diuretic target.",
       "Collecting duct principal cells: Na+ reabsorption/K+ secretion via aldosterone (potassium-sparing diuretic target); ADH controls water reabsorption via aquaporins.",
+      "RAAS/aldosterone controls Na+/K+ balance and long-term BP at the collecting duct; ADH separately controls free water reabsorption — two distinct hormonal systems converging on the same nephron segment.",
     ],
     applyIt: [
       "This segment-by-segment tubular map gives you the direct mechanistic basis for diuretic pharmacology across your platform: loop diuretics (most potent, block the segment responsible for the medullary concentration gradient) cause more profound diuresis and more electrolyte disturbance than thiazides, while potassium-sparing diuretics acting on the aldosterone-sensitive collecting duct are the only class that doesn't cause hypokalemia — a genuinely high-yield way to organize diuretic side-effect profiles by tubular site of action rather than memorizing them as isolated facts.",
@@ -10080,6 +10200,48 @@ const STUDY_PAGES = {
       "This gives you a physiologic extension of your existing Extraocular Muscle Physiology content: the eye's unique functional demands (both rapid, brief saccadic bursts and prolonged steady fixation) are reflected in a specialized mixed fiber-type composition unlike the more uniform fiber-type dominance seen in typical limb/postural skeletal muscle — a good example of structure following function at the cellular level.",
     ],
   },
+  "musclephys-contraction-types-reflex": {
+    name: "Types of Muscle Contraction & the Stretch Reflex Arc",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard muscle/neurophysiology references (e.g., standard physiology texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the sliding-filament mechanism itself (already covered under Skeletal Muscle Contraction), muscle contraction is classified by whether muscle length changes during force generation, and skeletal muscle length/tension is continuously monitored by dedicated sensory receptors that drive local reflex arcs — both concepts are classic, separately-tested NBEO physiology content distinct from the excitation-contraction coupling mechanism already covered." },
+      { h: "Isometric vs. isotonic contraction", t: "Isometric contraction generates force without a change in muscle length (e.g., pushing against an immovable object, or postural muscles maintaining a fixed joint angle against gravity) — cross-bridge cycling occurs but the sarcomere length stays constant because the external load equals or exceeds the force generated; isotonic contraction generates force WITH a change in muscle length, further divided into concentric (muscle shortens while generating force, e.g., lifting a weight) and eccentric (muscle lengthens while still generating force, e.g., slowly lowering a weight, resisting an external load that exceeds the muscle's force output) — eccentric contraction can generate the highest force of the three types and is associated with the most delayed-onset muscle soreness." },
+      { h: "Muscle spindles — length/stretch detection", t: "Muscle spindles are specialized sensory receptors embedded within skeletal muscle (in parallel with the main, \"extrafusal\" contractile fibers), containing intrafusal fibers innervated by sensory (Ia and II) afferents that detect muscle stretch (both the rate and the absolute length) — when a muscle is suddenly stretched, spindle afferents fire, triggering the monosynaptic stretch reflex (myotatic reflex): the Ia afferent synapses directly onto the alpha motor neuron innervating the SAME muscle, causing it to reflexively contract and resist the stretch, the physiologic basis of the clinically tested deep tendon reflexes (e.g., patellar reflex)." },
+      { h: "Golgi tendon organs — tension detection and autogenic inhibition", t: "Golgi tendon organs (GTOs) are located at the muscle-tendon junction (in series with the contractile fibers, unlike the parallel arrangement of muscle spindles) and detect muscle TENSION/force rather than length — when tension becomes excessive, GTO afferents (Ib) activate an inhibitory interneuron in the spinal cord that inhibits the alpha motor neuron of that SAME muscle (autogenic inhibition, a polysynaptic reflex, in contrast to the monosynaptic stretch reflex), a protective mechanism that reduces contraction force when tension risks tissue damage." },
+    ],
+    memorizeIt: [
+      "Isometric: force without length change (static). Isotonic: force with length change — concentric (shortening) or eccentric (lengthening under load).",
+      "Eccentric contraction generates the highest force of the three types and produces the most delayed-onset muscle soreness.",
+      "Muscle spindles (parallel to extrafusal fibers): detect stretch/length → monosynaptic stretch (myotatic) reflex → same-muscle contraction (e.g., patellar reflex).",
+      "Golgi tendon organs (in series, at muscle-tendon junction): detect tension → polysynaptic autogenic inhibition → same-muscle relaxation, protecting against excessive tension.",
+    ],
+    applyIt: [
+      "This gives you the physiologic basis for the deep tendon reflex examination already relevant to your Nervous System content: an intact patellar reflex (tapping the patellar tendon stretches the quadriceps, triggering the monosynaptic Ia-afferent stretch reflex already covered) confirms an intact sensory-motor arc at that spinal level, and understanding the muscle spindle/GTO distinction (length vs. tension sensing, parallel vs. series arrangement, monosynaptic vs. polysynaptic reflex) is exactly the kind of mechanistic detail that separates a genuine physiologic understanding from simply memorizing 'reflexes exist.'",
+    ],
+  },
+  "musclephys-smooth": {
+    name: "Smooth Muscle Physiology",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard muscle physiology references"],
+    learnIt: [
+      { h: "Overview", t: "Smooth muscle differs fundamentally from skeletal muscle (already covered under Skeletal Muscle Contraction) in its contractile trigger, its innervation, and its physiologic role — lining the walls of hollow organs and blood vessels, including structures already relevant to your existing GI Motility and Cardiovascular Physiology content." },
+      { h: "Contractile mechanism — calcium/calmodulin, not troponin", t: "Smooth muscle lacks the troponin complex that skeletal muscle uses to sense calcium (already covered); instead, calcium entering the cell binds calmodulin, and the calcium-calmodulin complex activates myosin light-chain kinase (MLCK), which phosphorylates myosin light chains, enabling cross-bridge cycling with actin — this calcium-calmodulin-MLCK pathway is slower to activate and slower to relax than skeletal muscle's troponin-based mechanism, but is far more energy-efficient, allowing smooth muscle to sustain tone for prolonged periods (e.g., vascular tone, sphincter closure) without fatiguing." },
+      { h: "Single-unit vs. multi-unit smooth muscle", t: "Single-unit (visceral) smooth muscle — found in the GI tract, uterus, and most blood vessels — is electrically coupled by gap junctions, allowing cells to depolarize and contract as a coordinated syncytium (directly relevant to the coordinated peristaltic contractions already covered under GI Motility & the Enteric Nervous System); multi-unit smooth muscle — found in the iris, ciliary body, and larger airways — lacks extensive gap-junction coupling, with each fiber innervated more independently, allowing finer, more graded, individually-controlled contraction, analogous in principle to skeletal muscle motor unit recruitment." },
+      { h: "Autonomic and hormonal regulation — connects to existing content", t: "Unlike skeletal muscle (which requires direct neuromuscular junction activation, already covered under NMJ Transmission), smooth muscle contraction is modulated (not strictly triggered) by autonomic input, circulating hormones, and local factors (e.g., stretch, pH, metabolites) — this is why smooth muscle can maintain baseline tone even without ongoing neural input, and explains the pharmacologic logic already relevant elsewhere on this platform: the iris sphincter/dilator and ciliary muscle (multi-unit smooth muscle, already covered under ocular pharmacology) respond directly to cholinergic/adrenergic agonists and antagonists, exactly because smooth muscle tone is autonomically modulated rather than being an all-or-none neurally-triggered event." },
+    ],
+    memorizeIt: [
+      "Smooth muscle: no troponin — calcium binds CALMODULIN → activates myosin light-chain kinase (MLCK) → myosin light-chain phosphorylation → cross-bridge cycling.",
+      "Calcium-calmodulin-MLCK mechanism is slower but far more energy-efficient than skeletal muscle's troponin system — allows sustained tone without fatigue.",
+      "Single-unit (visceral) smooth muscle: gap-junction coupled, contracts as a syncytium — GI tract, uterus, most blood vessels.",
+      "Multi-unit smooth muscle: minimal gap-junction coupling, independently/finely controlled — iris, ciliary body, large airways.",
+    ],
+    applyIt: [
+      "This gives you the mechanistic reason ocular pharmacologic agents (already covered elsewhere on this platform) work the way they do on the iris and ciliary body: because these are multi-unit smooth muscle under direct autonomic modulation rather than skeletal-muscle-type neuromuscular junction control, cholinergic agonists (pupillary miosis, accommodation) and adrenergic agonists (pupillary mydriasis) can directly and gradedly shift smooth muscle tone — a fundamentally different pharmacologic target than the nicotinic-receptor-based skeletal neuromuscular junction already covered under Myasthenia Gravis and NMJ Transmission content.",
+    ],
+  },
   "nervephys-resting-potential": {
     name: "Resting Membrane Potential & the Nernst Equation",
     priority: "SHOULD",
@@ -10111,12 +10273,14 @@ const STUDY_PAGES = {
       { h: "Phases of the action potential", t: "Depolarization: once threshold is reached, voltage-gated Na+ channels open rapidly, Na+ influx drives the membrane potential sharply positive; repolarization: Na+ channels inactivate and voltage-gated K+ channels open (delayed relative to Na+), K+ efflux drives the potential back down; hyperpolarization: K+ channels remain open briefly after repolarization, driving the potential transiently below resting level before returning to baseline." },
       { h: "All-or-none principle and refractory periods", t: "Once threshold is reached, the action potential fires at full amplitude regardless of stimulus strength above threshold (all-or-none); the absolute refractory period (Na+ channels inactivated) prevents a second action potential regardless of stimulus strength, while the relative refractory period (some K+ channels still open, membrane hyperpolarized) requires a stronger-than-normal stimulus to fire again — together these enforce unidirectional propagation and limit maximum firing frequency." },
       { h: "Saltatory conduction — direct link to existing content", t: "In myelinated axons (already covered under Optic Nerve Neurophysiology), action potentials effectively \"jump\" between nodes of Ranvier (saltatory conduction) because myelin insulates the internode, forcing regeneration of the signal only at the nodes where voltage-gated channels are concentrated — this dramatically increases conduction velocity compared to unmyelinated axons, and demyelination (as in multiple sclerosis, already covered) disrupts this efficient jumping mechanism, slowing or blocking conduction." },
+      { h: "The strength-duration curve — threshold as a function of stimulus duration", t: "Reaching threshold depends on both the intensity (strength) and the duration of a depolarizing stimulus, and the strength-duration curve plots this inverse relationship: a very brief stimulus requires greater intensity to reach threshold, while a stimulus applied for a longer duration can reach threshold at lower intensity, down to a minimum current (rheobase) below which no stimulus duration, however long, will trigger an action potential — chronaxie is the minimum stimulus duration required to trigger an action potential when using a current of twice the rheobase, and is used as a practical, single-value index of a nerve or muscle fiber's excitability (a lower chronaxie indicates a more excitable, typically larger-diameter/myelinated fiber)." },
     ],
     memorizeIt: [
       "Action potential phases: depolarization (Na+ influx) → repolarization (K+ efflux, Na+ channel inactivation) → transient hyperpolarization.",
       "All-or-none principle: fires at full amplitude once threshold reached, regardless of stimulus strength above threshold.",
       "Absolute refractory period: no second AP possible (Na+ channels inactivated). Relative refractory period: stronger stimulus needed.",
       "Saltatory conduction: myelin insulates internodes, AP regenerates only at nodes of Ranvier — dramatically faster than unmyelinated conduction; disrupted by demyelination (e.g., MS).",
+      "Strength-duration curve: rheobase = minimum current (at infinite duration) that reaches threshold; chronaxie = minimum stimulus duration at twice rheobase — a practical excitability index (lower chronaxie = more excitable fiber).",
     ],
     applyIt: [
       "This gives you the complete mechanistic chain underlying your existing MS/demyelination and Optic Nerve Neurophysiology content: saltatory conduction's speed advantage depends entirely on myelin's insulating effect concentrating channel activity at the nodes of Ranvier, so demyelination doesn't just slow conduction randomly — it specifically disrupts this jumping mechanism, forcing continuous (much slower, and potentially failing) conduction along the previously insulated segments.",
@@ -10132,12 +10296,14 @@ const STUDY_PAGES = {
       { h: "Presynaptic release mechanism", t: "An arriving action potential opens voltage-gated calcium channels in the presynaptic terminal; calcium influx triggers neurotransmitter-containing vesicles to fuse with the presynaptic membrane and release their contents into the synaptic cleft via exocytosis — this calcium-dependent release mechanism parallels the NMJ mechanism already covered." },
       { h: "Postsynaptic receptor types — ionotropic vs. metabotropic", t: "Ionotropic receptors are ligand-gated ion channels that produce fast, direct electrical effects (e.g., nicotinic ACh receptors at the NMJ, already covered); metabotropic receptors are G-protein coupled receptors that produce slower, indirect effects via second messenger cascades, often modulating rather than directly triggering an electrical response — this distinction explains why some synaptic effects are nearly instantaneous while others are slower and longer-lasting/modulatory." },
       { h: "Excitatory vs. inhibitory transmission", t: "Excitatory postsynaptic potentials (EPSPs) depolarize the postsynaptic membrane toward threshold (e.g., via glutamate, the primary excitatory CNS neurotransmitter); inhibitory postsynaptic potentials (IPSPs) hyperpolarize or stabilize the membrane away from threshold (e.g., via GABA or glycine) — a neuron's firing decision reflects the summed balance of EPSPs and IPSPs it receives across many synapses simultaneously." },
+      { h: "Spatial and temporal summation — how individual PSPs combine", t: "A single EPSP is typically too small to reach threshold on its own, so postsynaptic potentials must summate: spatial summation combines EPSPs (and/or IPSPs) arriving simultaneously from multiple different presynaptic terminals converging on the same postsynaptic neuron, while temporal summation combines successive EPSPs arriving in rapid succession from the SAME presynaptic terminal, close enough in time that the membrane hasn't fully returned to resting potential between them — both mechanisms allow the postsynaptic membrane's net depolarization to accumulate toward threshold; if concurrent IPSPs are also present, they subtract from this net depolarization, so a neuron's actual firing decision reflects the real-time algebraic sum of all excitatory and inhibitory input it is receiving, not any single synapse in isolation." },
     ],
     memorizeIt: [
       "Synaptic transmission: presynaptic Ca2+ influx → neurotransmitter vesicle fusion/exocytosis → diffusion across cleft → postsynaptic receptor binding.",
       "Ionotropic receptors: ligand-gated ion channels, fast direct effects (e.g., nicotinic ACh receptors).",
       "Metabotropic receptors: G-protein coupled, slower indirect effects via second messengers.",
       "Glutamate = primary excitatory CNS neurotransmitter (EPSP). GABA/glycine = primary inhibitory neurotransmitters (IPSP).",
+      "Spatial summation: simultaneous EPSPs/IPSPs from DIFFERENT synapses combine. Temporal summation: successive EPSPs from the SAME synapse, in rapid succession, combine.",
     ],
     applyIt: [
       "This gives you the generalized synaptic transmission framework that directly parallels the NMJ mechanism already covered under Muscle Physiology (both are fundamentally calcium-triggered vesicular neurotransmitter release onto ligand-gated receptors), while also introducing the ionotropic/metabotropic distinction that explains why some neural effects are near-instantaneous and others are slower, modulatory processes — a useful unifying lens for thinking about neural communication generally across both the CNS and peripheral synapses.",
@@ -10204,6 +10370,27 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you the direct mechanistic foundation for your existing Oncogenes & Tumor Suppressor Genes content: p53 and Rb aren't abstractly \"cancer-related\" genes, they are specific checkpoint enforcers (G1/S in particular) whose loss removes the cell's normal quality-control mechanism for halting division in damaged cells — precisely why tumor suppressor loss-of-function mutations are so consistently found across many cancer types, since disabling the checkpoint is a common final pathway regardless of which upstream damage initiated it.",
+    ],
+  },
+  "cellphys-signaling": {
+    name: "Cytoskeleton & Membrane Receptor Signal Transduction",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard cell physiology references (e.g., standard physiology texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond membrane transport (already covered), two additional cell physiology systems are classic NBEO content: the cytoskeleton (the cell's internal structural/transport scaffold) and membrane receptor signal transduction (how a cell converts an extracellular signal into an intracellular response) — both extend your existing Cell Membrane Transport and Second Messenger Systems content." },
+      { h: "The three cytoskeletal filament systems", t: "Microfilaments (actin, the thinnest) provide structural support, enable cell motility and shape change, and form the contractile ring during cytokinesis (already relevant to Cell Cycle content); microtubules (the thickest, built from tubulin) form the mitotic spindle (already relevant to Cell Cycle's spindle assembly checkpoint) and serve as tracks for organelle/vesicle transport via motor proteins (kinesin moves toward the microtubule's plus end, typically outward; dynein moves toward the minus end, typically inward) — the same microtubule-based axonal transport system already implicit in neuronal physiology; intermediate filaments (e.g., keratin, vimentin) provide the most durable, tension-resistant structural support and are notably cell-type specific, making them useful immunohistochemical tumor markers." },
+      { h: "Membrane receptor classes and postreceptor signaling", t: "Ligand-gated ion channel receptors open directly upon ligand binding, producing a fast electrical response (the same ionotropic mechanism already covered under Synaptic Transmission); G-protein coupled receptors (GPCRs) activate an intracellular G-protein upon ligand binding, which in turn modulates an effector enzyme (e.g., adenylyl cyclase, generating cAMP, or phospholipase C, generating IP3/DAG — already covered under Second Messenger Systems) to amplify and propagate the signal; enzyme-linked receptors (e.g., receptor tyrosine kinases, the insulin receptor already relevant to Insulin/Glucagon content) have intrinsic or associated enzymatic activity that is directly activated by ligand binding, typically triggering a phosphorylation cascade." },
+      { h: "Clinical relevance — connects to existing content", t: "This receptor-class framework explains why some hormones act within seconds (ligand-gated channels, or GPCR pathways with pre-formed second-messenger machinery) while others (e.g., steroid/thyroid hormones, which use intracellular rather than membrane receptors, already relevant to your Thyroid Hormone and Adrenal Cortex content) take hours, since they act by altering gene transcription rather than triggering a rapid enzymatic cascade — and the cytoskeleton's role in vesicle trafficking directly underlies the insulin-stimulated GLUT4 transporter translocation already covered under Insulin, Glucagon & Glucose Homeostasis, since that translocation is a microtubule/microfilament-dependent vesicle-trafficking event, not a passive process." },
+    ],
+    memorizeIt: [
+      "Microfilaments (actin): motility, shape, cytokinesis contractile ring. Microtubules (tubulin): mitotic spindle, organelle/vesicle transport (kinesin = outward, dynein = inward). Intermediate filaments: durable structural support, cell-type-specific (tumor marker use).",
+      "Ligand-gated ion channel receptors: fast, direct electrical response (ionotropic).",
+      "GPCRs: activate G-protein → effector enzyme (adenylyl cyclase/cAMP or phospholipase C/IP3-DAG) → amplified second-messenger response.",
+      "Enzyme-linked receptors (e.g., receptor tyrosine kinases, insulin receptor): intrinsic/associated enzymatic activity, typically triggers a phosphorylation cascade.",
+    ],
+    applyIt: [
+      "This gives you the structural/signaling machinery underlying your existing Insulin, Glucagon & Glucose Homeostasis content: insulin binding its receptor tyrosine kinase (an enzyme-linked receptor) triggers a phosphorylation cascade that drives GLUT4 transporter vesicles along the cytoskeleton to the plasma membrane — meaning both the receptor-signaling framework and the cytoskeletal transport system covered here are the literal mechanistic steps between 'insulin binds its receptor' and 'the cell actually takes up more glucose,' not just abstract background physiology.",
     ],
   },
   "bodyfluids-compartments": {
@@ -10752,6 +10939,27 @@ const STUDY_PAGES = {
       "This gives you a clean, mechanism-based way to distinguish Type II from Type III hypersensitivity in your existing content: both ultimately activate the same classical complement pathway and produce similar downstream inflammatory damage, but Type II involves antibody binding a fixed, cell-surface antigen directly at the site of damage, while Type III involves circulating immune complexes that deposit secondarily in tissues like the kidney or skin — exactly the distinction driving SLE's multi-organ immune complex-mediated pathology already covered.",
     ],
   },
+  "antibody-diversity-clonal-selection": {
+    name: "Antibody Diversity Generation & Clonal Selection Theory",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard immunology references (e.g., standard immunology texts)"],
+    learnIt: [
+      { h: "Overview", t: "The immune system can generate antibodies against a nearly unlimited range of antigens using a limited genome, and clonal selection theory explains how a single B cell's pre-existing, randomly-generated antibody specificity comes to dominate an immune response — this genetic/selective framework completes your existing Antibody Structure and B-Cell Activation content." },
+      { h: "V(D)J recombination — generating antibody diversity", t: "Each antibody's variable (antigen-binding) region is encoded not by one contiguous gene, but by separate gene segments — Variable (V), Diversity (D, heavy chain only), and Joining (J) segments — that are somatically (randomly) recombined during B-cell development, with one segment from each category joined together to form a unique variable-region exon; because there are many possible V, D, and J segments, and because the joining process itself introduces additional random nucleotide variation at the junctions, this combinatorial and junctional diversity generates a vast pre-existing repertoire of distinct B-cell receptor specificities — on the order of billions of possible combinations — before any antigen exposure has occurred." },
+      { h: "Clonal selection theory", t: "Clonal selection theory holds that antigen does not instruct the immune system to create a new, matching antibody — rather, the diverse B-cell repertoire (already randomly generated via V(D)J recombination, above) pre-exists, and an antigen simply selects/binds whichever B cells already happen to express a complementary B-cell receptor; that specific B cell is then activated (with T-cell help, already covered under B-Cell Activation) and proliferates, or \"clonally expands,\" producing a large population of identical (clonal) plasma cells and memory B cells all secreting the same antigen-specific antibody." },
+      { h: "Somatic hypermutation and affinity maturation — connects to existing content", t: "During an ongoing immune response (particularly in germinal centers), activated B cells undergo somatic hypermutation — additional, deliberate mutation of the already-rearranged variable-region genes — and B cells whose resulting antibody binds antigen with higher affinity (already relevant to your Antibody Affinity/Avidity content) are preferentially selected for further clonal expansion, a process called affinity maturation; this explains why antibody responses generally become more effective (higher affinity) over the course of an immune response and especially upon re-exposure, directly extending the primary-vs-secondary immune response framework already covered under B-Cell Activation & Humoral Immunity." },
+    ],
+    memorizeIt: [
+      "V(D)J recombination: random somatic joining of Variable, Diversity (heavy chain only), and Joining gene segments generates a vast pre-existing antibody repertoire before antigen exposure.",
+      "Clonal selection theory: antigen SELECTS a pre-existing, matching B cell (doesn't instruct new antibody creation) → that B cell clonally expands into plasma cells + memory cells.",
+      "Somatic hypermutation + affinity maturation (germinal centers): progressive mutation and selection for higher-affinity antibody variants during an ongoing/repeat immune response.",
+      "This explains why secondary immune responses (already covered) are not just faster but also produce higher-affinity antibody than the primary response.",
+    ],
+    applyIt: [
+      "This gives you the genetic/selective mechanism completing your existing B-Cell Activation & Humoral Immunity content: the reason a secondary immune response is both faster AND qualitatively better (higher affinity) than the primary response isn't just \"more memory cells are present\" — it's that those memory cells have already undergone somatic hypermutation and affinity maturation during the primary response's germinal center reaction, so re-exposure activates a pool of B cells with genuinely superior antigen-binding antibody compared to the naive repertoire that responded initially.",
+    ],
+  },
   "adaptiveimm-tcells": {
     name: "T-Cell Subsets & Cell-Mediated Immunity",
     priority: "MUST",
@@ -10867,6 +11075,7 @@ const STUDY_PAGES = {
       { h: "Physical barriers", t: "Intact skin and mucous membranes provide a mechanical barrier to pathogen entry; the ocular surface's blink reflex and continuous tear film flow (already covered under Eyelid Physiology and Tear Film & Lacrimal Physiology) provide a directly relevant example, physically clearing pathogens and debris from the corneal surface before they can establish infection." },
       { h: "Chemical barriers", t: "Low pH (stomach acid, skin surface) inhibits microbial growth; lysozyme (present in tears, saliva, and other secretions, already relevant to your Tear Film Structure content) enzymatically degrades bacterial cell walls; antimicrobial peptides (e.g., defensins) provide additional direct antimicrobial activity at mucosal and skin surfaces." },
       { h: "Direct clinical relevance — connects to existing ocular surface content", t: "This barrier-defense framework directly explains why conditions disrupting normal tear film or blink function (already covered under Dry Eye and related content) predispose to ocular surface infection: reduced tear volume means reduced lysozyme delivery and reduced mechanical clearance of pathogens, while incomplete blink (e.g., from lagophthalmos or facial nerve palsy, already relevant to your Lids/Lacrimal content) removes the mechanical sweeping action that normally protects the cornea — recognizing these barrier defenses as active, ongoing processes (not passive structures) explains why their disruption has real infectious consequences rather than just being a comfort issue." },
+      { h: "Beyond the barrier — phagocytic cells as the next innate layer", t: "If a pathogen breaches these physical/chemical barriers, the next line of nonspecific defense is cellular: neutrophils (the dominant early responder in acute bacterial infection), macrophages, and eosinophils (specialized for parasitic/helminth defense) — their chemotaxis, phagocytic mechanism, and antimicrobial killing activity are covered in full under this platform's existing Phagocytosis & Innate Immune Defenses content, which this barrier-defense objective deliberately complements rather than duplicates." },
     ],
     memorizeIt: [
       "Physical barriers: intact skin/mucous membranes; ocular surface blink reflex + continuous tear flow.",
@@ -18668,6 +18877,11 @@ const FLASHCARDS = [
   { id: "fc-688", objectiveId: "cardiophys-cardiac-output", front: "State the cardiac output equation.", back: "Cardiac output = heart rate × stroke volume." },
   { id: "fc-689", objectiveId: "cardiophys-cardiac-output", front: "State the Frank-Starling mechanism.", back: "Increased preload (venous return) stretches cardiac fibers, increasing contractile force and stroke volume." },
   { id: "fc-690", objectiveId: "cardiophys-cardiac-output", front: "Why does fluid overload worsen decompensated heart failure despite the Frank-Starling mechanism?", back: "The failing heart's Frank-Starling curve flattens/shifts — excess preload no longer effectively increases output and can worsen performance." },
+  { id: "fc-1686", objectiveId: "cardiophys-cardiac-output", front: "How does vessel radius relate to vascular resistance, per Poiseuille's law?", back: "Resistance is inversely proportional to radius to the fourth power — small radius changes produce large resistance changes, making arteriolar tone an efficient BP-regulating lever." },
+  { id: "fc-1687", objectiveId: "cardiophys-ekg", front: "What does each of the P wave, QRS complex, and T wave represent on an EKG?", back: "P wave: atrial depolarization. QRS complex: ventricular depolarization (masks atrial repolarization). T wave: ventricular repolarization." },
+  { id: "fc-1688", objectiveId: "cardiophys-ekg", front: "What does the PR interval represent, and what does prolongation indicate?", back: "Atrial + AV-node conduction time; prolongation indicates AV conduction delay (first-degree AV block)." },
+  { id: "fc-1689", objectiveId: "cardiophys-hemostasis", front: "List the sequence of hemostasis from vascular injury to healing.", back: "Vascular spasm → primary hemostasis (platelet plug) → secondary hemostasis (coagulation cascade/fibrin) → fibrinolysis (plasmin-mediated clot breakdown)." },
+  { id: "fc-1690", objectiveId: "cardiophys-hemostasis", front: "Contrast primary and secondary hemostasis.", back: "Primary: platelet adhesion/aggregation forms a fast but fragile platelet plug. Secondary: the coagulation cascade generates fibrin, stabilizing the clot." },
   // HPA axis
   { id: "fc-691", objectiveId: "endophys-hpa-axis", front: "What hormone pattern indicates PRIMARY gland failure?", back: "LOW peripheral hormone + HIGH tropic hormone (feedback lost)." },
   { id: "fc-692", objectiveId: "endophys-hpa-axis", front: "What hormone pattern indicates SECONDARY (pituitary) failure?", back: "LOW peripheral hormone + LOW/inappropriately normal tropic hormone." },
@@ -18678,6 +18892,10 @@ const FLASHCARDS = [
   // Insulin/glucagon
   { id: "fc-696", objectiveId: "endophys-insulin-glucose", front: "What are the opposing actions of insulin and glucagon on blood glucose?", back: "Insulin (beta cells) lowers glucose; glucagon (alpha cells) raises glucose." },
   { id: "fc-697", objectiveId: "endophys-insulin-glucose", front: "What underlying regulatory failure drives diabetic retinopathy?", back: "Insufficient insulin action (deficiency or resistance), causing sustained hyperglycemia that damages microvasculature." },
+  { id: "fc-1682", objectiveId: "endophys-adrenal-hormones", front: "Name the three adrenal cortex zones (outer to inner) and their hormone products.", back: "Zona glomerulosa (mineralocorticoids/aldosterone) → zona fasciculata (glucocorticoids/cortisol) → zona reticularis (androgens)." },
+  { id: "fc-1683", objectiveId: "endophys-adrenal-hormones", front: "Why does primary (Addison) adrenal insufficiency cause both hypotension and hypoglycemia, while isolated secondary (pituitary) insufficiency spares aldosterone?", back: "Addison disease destroys all three cortical zones (cortisol AND aldosterone deficient). Aldosterone is primarily RAAS/K+-driven, not ACTH-driven, so isolated pituitary ACTH failure only causes cortisol deficiency." },
+  { id: "fc-1684", objectiveId: "endophys-calcium-regulation", front: "What are PTH's three coordinated actions to raise serum calcium?", back: "Stimulates osteoclastic bone resorption, increases renal Ca2+ reabsorption (while decreasing phosphate reabsorption), and stimulates renal 1-alpha-hydroxylase to activate vitamin D." },
+  { id: "fc-1685", objectiveId: "endophys-calcium-regulation", front: "Why does chronic kidney disease cause secondary hyperparathyroidism?", back: "Failing kidneys cannot perform the second (1-alpha) vitamin D hydroxylation step, causing vitamin D deficiency, reduced intestinal calcium absorption, and a compensatory rise in PTH." },
   // Gas exchange/V-Q
   { id: "fc-698", objectiveId: "respphys-gas-exchange", front: "What does a HIGH V/Q mismatch represent, and give an example.", back: "Ventilation without adequate perfusion (wasted ventilation/dead space) — e.g., pulmonary embolism." },
   { id: "fc-699", objectiveId: "respphys-gas-exchange", front: "What does a LOW V/Q mismatch represent, and give an example.", back: "Perfusion without adequate ventilation (effective shunt) — e.g., pneumonia, severe asthma/COPD." },
@@ -18688,6 +18906,9 @@ const FLASHCARDS = [
   { id: "fc-702", objectiveId: "respphys-control-breathing", front: "What do central chemoreceptors primarily respond to, and where are they located?", back: "CSF CO2/pH; located in the medulla — the dominant normal breathing drive." },
   { id: "fc-703", objectiveId: "respphys-control-breathing", front: "What do peripheral chemoreceptors primarily respond to, and where are they located?", back: "Significantly low PaO2 (hypoxic drive); located in the carotid and aortic bodies." },
   { id: "fc-704", objectiveId: "respphys-control-breathing", front: "Why does chronic CO2 retention in advanced COPD warrant cautious oxygen titration in some patients?", back: "Central chemoreceptors can become desensitized to CO2, causing greater reliance on peripheral hypoxic drive." },
+  { id: "fc-1679", objectiveId: "respphys-control-breathing", front: "In what three forms is CO2 carried in the blood, and which is the majority?", back: "Dissolved CO2, carbaminohemoglobin, and bicarbonate (HCO3-, via RBC carbonic anhydrase) — bicarbonate is the majority (~70%)." },
+  { id: "fc-1680", objectiveId: "respphys-mechanics", front: "What lung mechanical abnormality distinguishes pulmonary fibrosis from emphysema?", back: "Pulmonary fibrosis: decreased compliance (stiff lung, restrictive). Emphysema: increased compliance (floppy lung, poor recoil, obstructive)." },
+  { id: "fc-1681", objectiveId: "respphys-mechanics", front: "What does pulmonary surfactant do, and what happens when it's deficient?", back: "Reduces alveolar surface tension, increasing compliance and preventing small-alveolar collapse; deficiency (e.g., in preterm infants) causes neonatal respiratory distress syndrome." },
   // GI motility / ENS
   { id: "fc-705", objectiveId: "giphys-motility", front: "What are the two main plexuses of the enteric nervous system, and what does each primarily control?", back: "Myenteric (Auerbach's) plexus — motility. Submucosal (Meissner's) plexus — secretion/local blood flow." },
   { id: "fc-706", objectiveId: "giphys-motility", front: "Distinguish peristalsis from segmentation.", back: "Peristalsis = propulsive, sequential contraction moving contents forward. Segmentation = non-propulsive, localized mixing contraction." },
@@ -18729,6 +18950,10 @@ const FLASHCARDS = [
   // Muscle - fiber types
   { id: "fc-735", objectiveId: "musclephys-fiber-types", front: "Compare Type I and Type IIx muscle fiber metabolism and fatigue resistance.", back: "Type I: oxidative, fatigue-resistant, sustained low-intensity activity. Type IIx: glycolytic, rapid high force, fatigues quickly." },
   { id: "fc-736", objectiveId: "musclephys-fiber-types", front: "What is unique about extraocular muscle fiber-type composition?", back: "A specialized mixed population supporting both rapid saccades and sustained fixation, unlike typical skeletal muscle's more uniform fiber-type dominance." },
+  { id: "fc-1671", objectiveId: "musclephys-contraction-types-reflex", front: "Contrast isometric and isotonic (concentric vs. eccentric) muscle contraction.", back: "Isometric: force without length change. Isotonic-concentric: muscle shortens generating force. Isotonic-eccentric: muscle lengthens under load, generating the highest force of the three (and most delayed-onset soreness)." },
+  { id: "fc-1672", objectiveId: "musclephys-contraction-types-reflex", front: "Contrast muscle spindles and Golgi tendon organs by what they sense and their reflex effect.", back: "Muscle spindles (parallel to fibers): sense stretch/length → monosynaptic stretch reflex → same-muscle contraction. Golgi tendon organs (in series, at tendon junction): sense tension → polysynaptic autogenic inhibition → same-muscle relaxation." },
+  { id: "fc-1673", objectiveId: "musclephys-smooth", front: "What replaces troponin as the calcium sensor in smooth muscle contraction?", back: "Calmodulin — calcium-calmodulin activates myosin light-chain kinase (MLCK), which phosphorylates myosin light chains to enable cross-bridge cycling." },
+  { id: "fc-1674", objectiveId: "musclephys-smooth", front: "Contrast single-unit and multi-unit smooth muscle, with an example of each.", back: "Single-unit (visceral): gap-junction coupled, contracts as a syncytium (e.g., GI tract, uterus). Multi-unit: minimal coupling, independently controlled (e.g., iris, ciliary body)." },
   // Nerve - resting potential
   { id: "fc-737", objectiveId: "nervephys-resting-potential", front: "What is the typical resting membrane potential, and which ion dominates it?", back: "~-70 mV, dominated by K+ (high intracellular K+, high resting K+ membrane permeability)." },
   { id: "fc-738", objectiveId: "nervephys-resting-potential", front: "What does the Na+/K+-ATPase do, and at what stoichiometry?", back: "Actively maintains ion gradients: pumps 3 Na+ out and 2 K+ in per ATP." },
@@ -18738,10 +18963,12 @@ const FLASHCARDS = [
   { id: "fc-741", objectiveId: "nervephys-action-potential", front: "Distinguish absolute vs. relative refractory period.", back: "Absolute: no second AP possible (Na+ channels inactivated). Relative: stronger-than-normal stimulus needed (K+ channels still open)." },
   { id: "fc-742", objectiveId: "nervephys-action-potential", front: "What is saltatory conduction, and why is it fast?", back: "Action potentials 'jump' between nodes of Ranvier in myelinated axons; myelin insulates internodes, concentrating regeneration only at nodes — much faster than continuous conduction." },
   { id: "fc-743", objectiveId: "nervephys-action-potential", front: "Why does demyelination (e.g., MS) slow nerve conduction?", back: "It disrupts the insulation that enables saltatory conduction, forcing slower (and potentially failing) continuous conduction." },
+  { id: "fc-1675", objectiveId: "nervephys-action-potential", front: "Define rheobase and chronaxie on the strength-duration curve.", back: "Rheobase: minimum current intensity that reaches threshold given infinite stimulus duration. Chronaxie: minimum stimulus duration needed to reach threshold at twice the rheobase — a practical excitability index." },
   // Nerve - synaptic transmission
   { id: "fc-744", objectiveId: "nervephys-synaptic", front: "Distinguish ionotropic from metabotropic postsynaptic receptors.", back: "Ionotropic: ligand-gated ion channels, fast direct effects. Metabotropic: G-protein coupled, slower indirect effects via second messengers." },
   { id: "fc-745", objectiveId: "nervephys-synaptic", front: "What are the primary excitatory and inhibitory CNS neurotransmitters?", back: "Excitatory: glutamate (EPSP). Inhibitory: GABA/glycine (IPSP)." },
   { id: "fc-746", objectiveId: "nervephys-synaptic", front: "How does general synaptic transmission mechanistically parallel NMJ transmission?", back: "Both are calcium-triggered vesicular neurotransmitter release onto ligand-gated (ionotropic) receptors — the NMJ is a specific case of this general synaptic mechanism." },
+  { id: "fc-1676", objectiveId: "nervephys-synaptic", front: "Distinguish spatial from temporal summation of postsynaptic potentials.", back: "Spatial summation: simultaneous EPSPs/IPSPs from different synapses combine. Temporal summation: successive EPSPs from the same synapse, in rapid succession, combine." },
   // Cellular - membrane transport
   { id: "fc-747", objectiveId: "cellphys-membrane-transport", front: "Distinguish simple diffusion from facilitated diffusion.", back: "Both passive, down gradient. Simple: no carrier protein. Facilitated: requires a specific carrier/channel protein (e.g., glucose)." },
   { id: "fc-748", objectiveId: "cellphys-membrane-transport", front: "Distinguish primary from secondary active transport.", back: "Primary: uses ATP directly (e.g., Na+/K+-ATPase). Secondary: uses stored energy from an ion gradient (usually Na+) to move a second solute against its gradient." },
@@ -18754,6 +18981,8 @@ const FLASHCARDS = [
   { id: "fc-753", objectiveId: "cellphys-cell-cycle", front: "List the cell cycle phases in order, and name the quiescent non-dividing state.", back: "G1 → S → G2 → M; quiescent state = G0." },
   { id: "fc-754", objectiveId: "cellphys-cell-cycle", front: "Which cell types remain permanently in G0, and what is the clinical significance?", back: "Mature neurons and cardiac myocytes — explains their very limited regenerative capacity after injury." },
   { id: "fc-755", objectiveId: "cellphys-cell-cycle", front: "What do tumor suppressor genes like p53 and Rb normally do at cell cycle checkpoints, and what happens when they're lost?", back: "Halt the cycle when DNA damage is detected (allow repair or trigger apoptosis); loss of function removes this quality control, allowing unchecked division." },
+  { id: "fc-1677", objectiveId: "cellphys-signaling", front: "Which cytoskeletal filament forms the mitotic spindle, and which motor proteins move along it in which direction?", back: "Microtubules form the mitotic spindle; kinesin moves toward the plus end (typically outward), dynein moves toward the minus end (typically inward)." },
+  { id: "fc-1678", objectiveId: "cellphys-signaling", front: "Contrast the three membrane receptor classes by their signaling mechanism.", back: "Ligand-gated ion channels: fast, direct electrical response. GPCRs: activate a G-protein → effector enzyme → second messenger (cAMP or IP3/DAG). Enzyme-linked receptors (e.g., receptor tyrosine kinases): intrinsic enzymatic activity triggers a phosphorylation cascade." },
   // Body fluids - compartments
   { id: "fc-756", objectiveId: "bodyfluids-compartments", front: "What fraction of total body water is ICF vs. ECF, and what are ECF's two subdivisions?", back: "ICF ≈ 2/3, ECF ≈ 1/3; ECF = plasma (intravascular) + interstitial fluid." },
   { id: "fc-757", objectiveId: "bodyfluids-compartments", front: "What hormone regulates plasma osmolality, and via what renal mechanism?", back: "ADH; increases renal water reabsorption via collecting duct aquaporin insertion." },
@@ -18864,6 +19093,9 @@ const FLASHCARDS = [
   { id: "fc-837", objectiveId: "antibody-function", front: "What is opsonization?", back: "Antibody (or complement) coating of a pathogen that enhances phagocytic recognition via Fc receptors." },
   { id: "fc-838", objectiveId: "antibody-function", front: "What does the classical complement pathway ultimately generate, and what triggers it?", back: "The membrane attack complex (MAC, causes cell lysis) plus C3a/C5a (inflammation); triggered by IgG/IgM binding antigen." },
   { id: "fc-839", objectiveId: "antibody-function", front: "Distinguish Type II from Type III hypersensitivity based on antibody target location.", back: "Type II: antibody binds a fixed tissue antigen directly. Type III: antibody-antigen immune complexes form first, then deposit in tissue." },
+  { id: "fc-1691", objectiveId: "antibody-diversity-clonal-selection", front: "What does clonal selection theory say about the relationship between antigen and pre-existing B cells?", back: "Antigen doesn't instruct creation of a new antibody — it selects/binds a pre-existing B cell with a matching (randomly generated) receptor, which then clonally expands." },
+  { id: "fc-1692", objectiveId: "antibody-diversity-clonal-selection", front: "What process generates the vast pre-existing antibody repertoire before antigen exposure?", back: "V(D)J recombination — random somatic joining of Variable, Diversity (heavy chain only), and Joining gene segments, plus junctional diversity." },
+  { id: "fc-1693", objectiveId: "antibody-diversity-clonal-selection", front: "What is affinity maturation, and where does it occur?", back: "Somatic hypermutation of rearranged variable-region genes with selection for higher-affinity antibody variants, occurring in germinal centers during an ongoing/repeat immune response." },
   // T-cell subsets
   { id: "fc-840", objectiveId: "adaptiveimm-tcells", front: "What MHC class do CD4+ vs. CD8+ T cells recognize, and what is each subset's primary function?", back: "CD4+: MHC Class II, coordinates/amplifies immune response via cytokines. CD8+: MHC Class I, directly kills infected/abnormal cells." },
   { id: "fc-841", objectiveId: "adaptiveimm-tcells", front: "Why does HIV's CD4+ T-cell depletion produce such broad immunodeficiency?", back: "CD4+ T cells coordinate B cells, cytotoxic T cells, and macrophages — losing them impairs nearly every arm of adaptive immunity." },
