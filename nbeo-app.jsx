@@ -25203,7 +25203,7 @@ const QUESTIONS = [
     ],
     correct: "a",
     explanations: {
-      a: "Correct — power factor = 1/(1-0.014×10.00) = 1/0.86 = 1.163; shape factor = 1/(1-(0.007/1.5)×8.00) = 1/(1-0.0373×8.00) = 1/0.9612 = 1.040; SM = 1.163×1.040 ≈ 1.21, meaning the retinal image is about 21% LARGER than uncorrected — consistent with a high-plus hyperopic correction magnifying the retinal image.",
+      a: "Correct — power factor = 1/(1-0.014×10.00) = 1/0.86 ≈ 1.163; shape factor = 1/(1-(t/n)×F1) = 1/(1-(0.007/1.5)×8.00) = 1/(1-0.00467×8.00) = 1/(1-0.0373) = 1/0.9627 ≈ 1.039; SM = 1.163×1.039 ≈ 1.21, meaning the retinal image is about 21% LARGER than uncorrected — consistent with a high-plus hyperopic correction magnifying the retinal image.",
       b: "Incorrect — this is the power factor alone; the shape factor (from front curvature and thickness) must also be multiplied in for the total spectacle magnification.",
       c: "Incorrect — this is the shape factor alone; the power factor (from lens power and vertex distance) must also be multiplied in for the total spectacle magnification.",
       d: "Incorrect — spectacle magnification is genuinely significant for higher-power lenses like this one; it is only negligible for very low-power corrections.",
@@ -25315,14 +25315,14 @@ const QUESTIONS = [
     id: "q-312", objectiveId: "thicklenses-equivalent-power-reduced-systems", type: "Calculation", difficulty: "Hard",
     stem: "A thick lens has front surface power F1 = +12.00D, back surface power F2 = +5.00D, center thickness t = 6mm, and material refractive index n = 1.6. Calculate the equivalent power of this lens.",
     choices: [
-      { id: "a", text: "+16.77D" },
+      { id: "a", text: "+16.78D" },
       { id: "b", text: "+17.00D" },
       { id: "c", text: "+17.57D" },
       { id: "d", text: "+17.10D" },
     ],
     correct: "a",
     explanations: {
-      a: "Correct — reduced thickness t/n = 0.006/1.6 = 0.00375m; Peq = F1+F2-(t/n)×F1×F2 = 12.00+5.00-(0.00375×12.00×5.00) = 17.00-0.225 = +16.77D.",
+      a: "Correct — reduced thickness t/n = 0.006/1.6 = 0.00375m; Peq = F1+F2-(t/n)×F1×F2 = 12.00+5.00-(0.00375×12.00×5.00) = 17.00-0.225 = 16.775, which rounds to +16.78D.",
       b: "Incorrect — this is simply F1+F2 (a naive thin-lens sum), ignoring the subtracted (t/n)×F1×F2 cross term that accounts for the lens's actual thickness.",
       c: "Incorrect — this is the back vertex power (BVP = F2 + F1/(1-(t/n)×F1) = +17.57D) for this lens, not the equivalent power — a different, though related, thick-lens power value already covered.",
       d: "Incorrect — this is the front vertex power (FVP = F1 + F2/(1-(t/n)×F2) = +17.10D) for this lens, not the equivalent power.",
