@@ -5,6 +5,113 @@
 > no memory of this conversation and must be able to pick up from this file alone,
 > plus PROJECT_SPEC.md and the current nbeo-app.jsx.
 
+## READ THIS FIRST — session of 2026-08-19: full accuracy audit, mobile layout, GitHub Pages deploy
+
+The user asked for every topic's study content to be double-checked for
+(1) factual accuracy against real optometry/medical references and (2)
+completeness against the official NBEO outline, with errors fixed and
+real gaps filled — "double check against the NBEO content matrix to
+ensure everything was covered."
+
+**Method**: split all 266 built topics into 16 chunks by condition
+area (splitting the huge Systemic Health area into 5 sub-chunks by
+discipline, and further splitting its 24-topic Pathology sub-chunk and
+one 20-topic chunk in half after one agent run hit a usage-limit
+mid-task). Each chunk was audited by a fresh subagent instructed to:
+read the topic's `objs[]` in `CURRICULUM` (the real NBEO outline text)
+as ground truth, verify every existing fact/formula/mechanism against
+standard references, fix errors in place, and add new objectives/
+STUDY_PAGES/flashcards for any `objs[]` item with zero real coverage.
+Every chunk's output was independently re-validated here (babel syntax
+check, `integrity_check.py`, spot-checking at least one specific claimed
+fix or calculation by hand) before committing — nothing was trusted
+blind. One chunk (Cornea/Conjunctiva) had to be re-run after a partial
+first attempt hit a usage limit; its safe partial progress was checkpointed
+and the re-run picked up from there without duplicating work.
+
+**Real errors found and fixed** (not just gaps — these were actively
+wrong before this session):
+- Schematic Eye Models: reduced-eye worked examples paired n'=1.336 with
+  a 22.22mm axial length that only matches n'=4/3 — internally
+  inconsistent math, now fixed throughout.
+- EOM physiology: yoke-muscle pairing mislabeled "R inferior oblique + L
+  superior rectus" as the down-and-left gaze pair; it's up-and-left.
+- Retina/Vitreous pharmacology: aflibercept was described as an antibody;
+  it's a VEGFR1/VEGFR2-Fc fusion protein. Faricimab (bispecific VEGF-A +
+  Ang-2 antibody) was missing entirely.
+- Retinal Gross Anatomy: the "ten layers" list double-counted
+  photoreceptor segments while omitting the ILM from the numbered ten.
+- Optic Nerve pupillary pathway: Horner syndrome pharmacologic testing
+  conflated "confirms the diagnosis" (cocaine/apraclonidine) with
+  "localizes the lesion" (only hydroxyamphetamine does that) — corrected,
+  and the missing hydroxyamphetamine test was added.
+- Autonomic pathway anatomy: pilocarpine pupil-testing logic was
+  backwards — it now correctly says pilocarpine constricts a CN III-palsy
+  pupil (denervated but intact sphincter) but NOT a pharmacologically-
+  blocked pupil (receptors already occupied).
+- Systemic Health Pharmacology: vague "certain agents" language for
+  antipsychotic ocular side effects replaced with the correct named
+  drugs (thioridazine → pigmentary retinopathy; chlorpromazine →
+  corneal/lens deposits).
+- Glaucoma: steroid-response and uveitic glaucoma were referenced as
+  "already covered under Glaucoma content" from ~10 other places in the
+  app but had never actually been built — added as real objectives.
+
+**Gaps filled**: roughly 150 new objectives/STUDY_PAGES entries added
+across all 16 chunks for `CURRICULUM.objs[]` items that had zero real
+coverage anywhere in the app — too many to list individually here; see
+each chunk's commit message (search git log for "Accuracy + coverage
+audit") for the specific list per condition area. Notable high-yield
+ones: subjective/objective refraction technique, laser-tissue
+interaction, allergic conjunctivitis (SAC/PAC/VKC/AKC), lung cancer,
+anaphylaxis, cardiovascular EKG/hemostasis, cerebrum white matter/Meyer's
+loop, rhino-orbital-cerebral mucormycosis, and ocular toxoplasmosis (the
+most common infectious cause of posterior uveitis).
+
+**Final state**: 710 objectives, 710 study pages, 1,777 flashcards, 355
+questions, 266 content topics — `integrity_check.py` zero orphans/
+duplicates, `audit_coverage.py` all 16/16 condition areas COMPLETE.
+
+**Other work this session**:
+- **NBEO Blueprint topic dropdowns** (see part-2 entry below) — carried
+  forward from the previous session, unaffected by this one.
+- **Learn tab reorganized** by condition area → discipline (accordion,
+  mirrors Blueprint's grouping) instead of one flat list of ~90 topics.
+- **Merged the working branch to `main`** — `main` is now the canonical,
+  actively-developed branch; the old `claude/nbeo-coverage-refactor-i8ionz`
+  branch's job is done.
+- **Deployment**: added a Vite build (`package.json`, `vite.config.js`,
+  `index.html`, `src/main.jsx`) so the app can be built and hosted.
+  Netlify was set up first but the user hit a billing prompt on their
+  account, so the primary deploy path is now **GitHub Pages via GitHub
+  Actions** (`.github/workflows/deploy-pages.yml`) — free, no card, ties
+  into the existing GitHub account. Deploys automatically on every push
+  to `main` once the user sets Settings → Pages → Source → "GitHub
+  Actions" (one-time manual step, already requested). `vite.config.js`'s
+  `base` is conditional on `GITHUB_ACTIONS` so local dev still serves
+  from `/` while the Pages build serves from `/NBEO-App/`.
+- **Mobile-responsive redesign**: the app shell had a fixed 232px sidebar
+  with zero breakpoints, unusable on a phone. It now converts to a
+  slide-in drawer (hamburger + sticky top bar) under 860px width, closes
+  on nav selection, plus wrap-instead-of-overflow fixes for Blueprint/
+  Learn's accordion rows and a horizontal-scroll wrapper for Dashboard's
+  coverage table. Verified with Playwright on an iPhone 13 viewport:
+  zero horizontal overflow, zero console errors.
+
+**What's actually left**: nothing structurally missing — 100% topic
+coverage, and this session's audit means every topic has now been
+checked at least once for accuracy and outline-completeness. Reasonable
+next steps if the user wants to keep improving: (1) a second audit pass
+focused specifically on calculation-heavy topics with fresh arithmetic
+re-verification, since CLAUDE.md requires that for every calculation
+question and this session's agents self-verified but a second
+independent pass never hurts; (2) polish remaining mobile screens beyond
+Dashboard/Blueprint/Learn (Flashcards/Questions/study-page detail views
+weren't specifically screenshot-tested on mobile this session, though
+they use simpler layouts less likely to overflow); (3) the "Exams,"
+"Images," "Study Planner," "Mistakes," "Analytics," "AI Tutor" nav items
+are still "coming soon" placeholders — build out if the user wants them.
+
 ## READ THIS FIRST — session of 2026-08-18 (part 2): Blueprint objective dropdowns
 
 The user asked for the NBEO Blueprint page's topic bullets (e.g. under
