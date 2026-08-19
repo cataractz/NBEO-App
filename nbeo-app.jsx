@@ -1105,6 +1105,7 @@ const LENSDEV_TOPIC_ID = "t-10-1-0"; // Lens/Cataract/IOL(10) > Anatomy(Developm
 const LENSDEV_OBJECTIVES = [
   { id: "lensdev-vesicle", name: "Lens Vesicle Formation & Fiber Differentiation", built: true },
   { id: "lensdev-anomalies", name: "Congenital Lens Anomalies (Lenticonus, Ectopia Lentis Differential)", built: true },
+  { id: "lensdev-induction-nuclei", name: "Lens Tissue Induction, Zonule Development, & Developmental Nuclei", built: true },
 ];
 
 const LENSPHARMGEN_TOPIC_ID = "t-10-4-0"; // Lens/Cataract/IOL(10) > Pharmacology(4) > General principles(0)
@@ -1132,6 +1133,7 @@ const LENSPHARMLUBRICANT_OBJECTIVES = [
 const LENSPHARMDYES_TOPIC_ID = "t-10-4-4"; // Lens/Cataract/IOL(10) > Pharmacology(4) > Dyes(4)
 const LENSPHARMDYES_OBJECTIVES = [
   { id: "lenspharm-trypan-blue", name: "Trypan Blue Capsule Staining for Cataract Surgery", built: true },
+  { id: "lenspharm-fluorescein-seidel", name: "Fluorescein & the Seidel Test for Post-Cataract-Surgery Wound Leak", built: true },
 ];
 
 const LENSPHARMINDICATIONS_TOPIC_ID = "t-10-4-5"; // Lens/Cataract/IOL(10) > Pharmacology(4) > Indications/contraindications/side effects/drug interactions(5)
@@ -1744,6 +1746,7 @@ const LENSPHYS_OBJECTIVES = [
   { id: "lensphys-transparency", name: "Lens Transparency & Crystallin Proteins", built: true },
   { id: "lensphys-accommodation-mechanism", name: "The Accommodation Mechanism (Helmholtz Theory)", built: true },
   { id: "lensphys-presbyopia-mechanism", name: "Presbyopia: The Physiologic Basis for Lens Stiffening", built: true },
+  { id: "lensphys-composition-metabolism", name: "Lens Composition, Metabolism, & Antioxidant Protection", built: true },
 ];
 
 const UVEAPHYS_TOPIC_ID = "t-11-2-0"; // Episclera/Sclera/Anterior Uvea(11) > Physiology(2) > Uvea(0)
@@ -4984,15 +4987,17 @@ const STUDY_PAGES = {
     sources: ["Standard cataract/anterior segment surgical references"],
     learnIt: [
       { h: "Overview", t: "Intraocular lens (IOL) power calculation determines the appropriate lens power to implant during cataract surgery to achieve the desired postoperative refractive outcome, most commonly targeting emmetropia or a small planned myopic offset." },
-      { h: "Key biometric inputs", t: "Axial length (measured by optical biometry or, when optical methods aren't possible, ultrasound) and corneal curvature (keratometry) are the two most influential measurements; errors in either can meaningfully shift the postoperative refractive outcome, with axial length errors generally having the largest impact." },
+      { h: "Key biometric inputs", t: "Axial length (measured by optical biometry or, when optical methods aren't possible, ultrasound) and corneal curvature (keratometry) are the two most influential measurements; errors in either can meaningfully shift the postoperative refractive outcome, with axial length errors generally having the largest impact — as a commonly cited rule of thumb, a 1 mm axial length measurement error shifts the postoperative refraction by roughly 2.5-3D at the spectacle plane, while a 1D keratometry measurement error shifts it by roughly 1D, which is why modern optical biometry (far more precise than older ultrasound methods) has substantially reduced refractive surprises." },
       { h: "IOL power formulas", t: "Modern formulas (e.g., third- and higher-generation regression/theoretical formulas) use axial length, keratometry, and anterior chamber depth to predict the effective lens position and calculate the needed IOL power; formula choice and accuracy particularly matter in atypical eyes (very long or very short axial lengths, or eyes with prior refractive surgery)." },
+      { h: "Worked example — the regression (SRK) formula concept", t: "Older regression-based formulas illustrate the basic relationship simply: IOL power (P) = A - 2.5L - 0.9K, where A is a lens-specific \"A-constant\" (typically around 118-119 for many posterior chamber IOLs), L is axial length in mm, and K is average keratometry in diopters. For an eye with A = 118.0, L = 23.5 mm, and K = 44.00D: P = 118.0 - 2.5(23.5) - 0.9(44.0) = 118.0 - 58.75 - 39.6 = 19.65D, rounded to the nearest commercially available 0.5D increment (19.5D or 20.0D). Note the formula's own coefficients reflect the same asymmetry as the rule of thumb above: axial length (coefficient 2.5) is weighted more heavily than keratometry (coefficient 0.9), consistent with axial length errors producing the larger refractive impact. Modern practice has largely replaced this simple regression approach with theoretical third-and-higher-generation formulas (e.g., SRK/T, Hoffer Q, Holladay, Barrett), which more accurately model effective lens position, but the same core inputs (A-constant, axial length, keratometry) remain central." },
       { h: "Special considerations", t: "Post-refractive-surgery eyes (prior LASIK/PRK — see your Cornea content) pose a particular challenge for accurate IOL calculation, since standard keratometry can be inaccurate after corneal reshaping, often requiring specialized formulas or historical preoperative data when available." },
       { h: "IOL types", t: "Monofocal IOLs (fixed single focal point, most common), toric IOLs (correct pre-existing corneal astigmatism), and multifocal/extended depth-of-focus IOLs (aim to reduce spectacle dependence at multiple distances, with trade-offs in contrast sensitivity/night vision symptoms for some patients)." },
       { h: "Clinical relevance", t: "Understanding these principles helps in patient counseling about realistic expectations for uncorrected vision after surgery and in recognizing when a patient's postoperative refractive surprise may relate to a preoperative measurement or calculation issue rather than a surgical complication." },
     ],
     memorizeIt: [
       "Axial length and keratometry are the two primary biometric inputs for IOL power calculation.",
-      "Axial length measurement error generally has the largest impact on refractive outcome.",
+      "Axial length measurement error generally has the largest impact on refractive outcome: ~2.5-3D of refractive surprise per 1mm of axial length error, vs. ~1D per 1D of keratometry error.",
+      "Regression (SRK) formula concept: IOL power P = A - 2.5L - 0.9K (A-constant, axial length in mm, average K in diopters) — illustrates that longer eyes and steeper corneas both require LOWER IOL power.",
       "Prior refractive surgery (LASIK/PRK) complicates IOL calculation due to altered keratometry.",
       "IOL types: monofocal (standard), toric (astigmatism correction), multifocal/EDOF (reduced spectacle dependence, some trade-offs).",
     ],
@@ -8947,12 +8952,14 @@ const STUDY_PAGES = {
       { h: "The lens capsule", t: "The lens capsule is an elastic basement membrane completely surrounding the lens, thickest anteriorly and at the equator, thinnest posteriorly (a clinically important detail during cataract surgery, since the posterior capsule's thinness makes it more vulnerable to rupture) — the capsule's elasticity is what allows the lens to change shape during accommodation (already covered under the Helmholtz mechanism), since the capsule itself exerts an inward, rounding force on the underlying lens substance when zonular tension is relaxed." },
       { h: "Cortex, nucleus, and lens fiber organization", t: "Beneath the capsule, the lens epithelium (a single layer, present only on the anterior surface) continuously produces new lens fibers throughout life (already covered under Lens Transparency content's non-renewable fiber accumulation) — these fibers are laid down in concentric layers, with the oldest fibers compressed centrally to form the nucleus and newer fibers forming the surrounding cortex — this age-stratified layering (oldest/most central, newest/most peripheral) is precisely why nuclear sclerotic cataracts (already covered) affect the oldest, most central lens fibers first." },
       { h: "Zonular fibers — the suspensory apparatus", t: "The zonular fibers (zonule of Zinn) are thin, elastic fibers extending from the ciliary body (already covered under Ciliary Body Secretory Function content) to the lens equator, suspending the lens in position and directly transmitting ciliary muscle contraction/relaxation into lens shape change — this is the precise anatomic link already implicit in the Helmholtz accommodation mechanism: ciliary muscle contraction relaxes zonular tension, allowing the lens's own elastic capsule to round the lens up for near focus, while ciliary muscle relaxation increases zonular tension, flattening the lens for distance focus — zonular fiber weakness or dehiscence (e.g., from trauma, or in conditions like pseudoexfoliation syndrome or Marfan syndrome, already covered under Genetic Principles content) can cause lens subluxation or dislocation, since the zonules are the sole anatomic structure holding the lens in its normal position." },
+      { h: "Lens sutures", t: "Lens sutures are the visible lines where the tapered ends of elongating lens fiber cells meet and interdigitate with fibers growing in from other directions around the lens circumference — in the fetal nucleus, this produces a simple upright \"Y\" suture pattern anteriorly and an inverted \"Y\" suture pattern posteriorly (fiber ends from three growth directions meeting at three points), visible on slit-lamp exam as fine branching lines within the lens substance; later-formed fiber layers (infantile and adult nucleus, already relevant to the developmental nuclei covered under Lens & Zonule Developmental Anatomy content) add progressively more complex, star-shaped sutures as more growth zones contribute fibers. Sutures mark exactly where fiber cell tips meet, not a separate structure — clinically relevant because opacities can localize precisely along the suture lines (sutural/stellate cataract)." },
     ],
     memorizeIt: [
       "Lens capsule: elastic basement membrane, thickest anteriorly/equatorially, THINNEST posteriorly (surgically important — posterior capsule rupture risk).",
       "Lens epithelium: single layer, ANTERIOR surface only — continuously produces new fibers throughout life.",
       "Fiber organization: oldest fibers = central (nucleus), newest fibers = peripheral (cortex) — explains why nuclear sclerotic cataracts affect the oldest fibers first.",
       "Zonular fibers (zonule of Zinn): ciliary body → lens equator — transmit ciliary muscle action into lens shape change (accommodation); weakness/dehiscence (trauma, pseudoexfoliation, Marfan syndrome, already covered) causes lens subluxation/dislocation.",
+      "Lens sutures = the lines where tapered fiber-cell ends meet; fetal nucleus shows a simple upright \"Y\" (anterior) / inverted \"Y\" (posterior) pattern; later nuclei form more complex star-shaped sutures as more fibers contribute.",
     ],
     applyIt: [
       "This gives you the anatomic substrate underlying your existing Accommodation Mechanism and Marfan Syndrome content: the zonular fibers are the literal physical link connecting ciliary muscle action to lens shape change, and understanding their role as the lens's sole suspensory support explains precisely why Marfan syndrome's connective tissue defect (already covered, causing zonular weakness) produces the characteristic ectopia lentis (lens subluxation, typically superotemporal in Marfan syndrome) — the same anatomic structure enabling normal accommodation is exactly what fails in this genetic connective tissue disorder.",
@@ -8977,6 +8984,31 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you the complete anatomic explanation for the phenylephrine blanching test already covered under your existing Episcleritis/Scleritis content: rather than simply memorizing 'phenylephrine blanches episcleritis but not scleritis,' you now understand this reflects the topical vasoconstrictor's limited penetration depth relative to the three-tiered vascular anatomy — reaching the superficial conjunctival and episcleral vessels but not the deeper scleral vessels — a genuinely satisfying anatomic grounding for a clinical test you already know how to use.",
+    ],
+  },
+  "lensphys-composition-metabolism": {
+    name: "Lens Composition, Metabolism, & Antioxidant Protection",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular physiology references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the crystallin-packing basis for transparency already covered under Lens Transparency content, several additional lens physiology facts are independently testable: the lens's overall composition and functions, how that composition differs from the aqueous humor bathing it, how the avascular lens actually generates energy, and the specific antioxidant molecules that protect its long-lived proteins from the oxidative damage already implicated in cataract formation." },
+      { h: "Composition and functions of the lens", t: "The lens is roughly 65% water and 35% protein by weight — the highest protein concentration of any tissue in the body, consistent with its densely packed crystallins (already covered). Beyond refracting and accommodating light (already covered), the lens contributes roughly one-third of the eye's total refractive power (the cornea contributing the other two-thirds, already covered under Corneal Physiology content) and also absorbs ultraviolet light (chiefly UV-A), a protective filtering function that shields the retina from UV-induced photic damage — a function progressively lost after cataract extraction with a UV-blocking IOL unless the implant itself incorporates a UV filter." },
+      { h: "Difference in composition between lens and aqueous", t: "The lens's ~35% protein content stands in sharp contrast to the aqueous humor (already covered under Aqueous content), which is roughly 99% water and essentially protein-poor (well under 1% protein) because the intact blood-aqueous barrier (already covered) excludes most plasma protein from the posterior chamber ultrafiltrate — the lens, unlike the fluid bathing it, is essentially a highly concentrated, structured protein gel." },
+      { h: "Lens metabolism — anaerobic glycolysis predominates", t: "Because the lens is avascular (blood vessels would scatter light, already relevant to Lens Transparency content) and derives its glucose/oxygen supply by diffusion from the aqueous, oxygen tension within the lens substance is low — as a result, roughly 80-90% of lens glucose metabolism proceeds via ANAEROBIC glycolysis rather than aerobic oxidation, an efficiency trade-off the avascular lens accepts to preserve transparency. A smaller fraction (roughly 5%) is shunted through the hexose monophosphate (pentose phosphate) pathway, which generates the NADPH required to keep glutathione in its reduced, active form." },
+      { h: "The polyol (sorbitol) pathway — link to diabetic cataract", t: "When glucose is present in excess (hyperglycemia), a portion is shunted through the polyol pathway: aldose reductase converts glucose to sorbitol, which is poorly diffusible out of the lens and osmotically active, drawing water into lens fibers and causing osmotic fiber swelling and damage — this is the precise biochemical mechanism already referenced under your Secondary Cataracts content as the cause of the \"true diabetic\" (snowflake) cataract in poorly controlled, often younger diabetic patients." },
+      { h: "Antioxidant protection — glutathione and vitamin C", t: "Reduced glutathione (GSH), maintained at high concentration especially in the lens epithelium and cortex, keeps crystallin sulfhydryl (-SH) groups in their reduced state, preventing the disulfide (-S-S-) cross-linking and protein aggregation that would otherwise reduce crystallin solubility and cause light-scattering opacity (already covered under Lens Transparency content); ascorbate (vitamin C), actively concentrated in the aqueous and lens well above plasma levels, provides a second, complementary antioxidant defense against oxidative damage. Both glutathione and ascorbate concentrations decline with age, particularly in the lens nucleus — reduced antioxidant protection permitting progressive protein aggregation and insolubility is a key contributor to age-related (especially nuclear sclerotic) cataract formation." },
+    ],
+    memorizeIt: [
+      "Lens: ~65% water, ~35% protein — the highest protein concentration of any body tissue; aqueous: ~99% water, essentially protein-poor (blood-aqueous barrier excludes plasma protein).",
+      "Lens contributes ~1/3 of total ocular refractive power (cornea ~2/3); also absorbs UV-A light, protecting the retina.",
+      "Lens metabolism: ~80-90% ANAEROBIC glycolysis (avascular, low O2 tension) + ~5% hexose monophosphate/pentose phosphate shunt (generates NADPH for glutathione recycling).",
+      "Polyol (sorbitol) pathway: excess glucose → aldose reductase → sorbitol (osmotically active, poorly diffusible) → fiber swelling — mechanism of diabetic (snowflake) cataract, already covered.",
+      "Glutathione (GSH) keeps crystallin -SH groups reduced, preventing disulfide cross-linking/aggregation; ascorbate is a second antioxidant — both decline with age, especially in the nucleus, contributing to cataract formation.",
+    ],
+    applyIt: [
+      "This gives you the specific biochemical mechanism underlying the \"true diabetic\" (snowflake) cataract already covered under Secondary Cataracts content — poor glycemic control drives excess glucose through the aldose-reductase/polyol pathway, and understanding that sorbitol is osmotically trapped within lens fibers explains exactly why hyperglycemia (rather than diabetes generically) is the proximate trigger for this specific, distinct cataract subtype.",
+      "This also extends your Lens Transparency and Age-Related Cataract content one biochemical layer deeper: nuclear sclerotic cataract isn't just \"old crystallins accumulating unrepaired\" — it specifically reflects declining glutathione/ascorbate antioxidant protection in the nucleus over time, permitting disulfide cross-linking and progressive loss of crystallin solubility in exactly the oldest, most centrally-located fiber population.",
     ],
   },
   "uveaphys-ciliary-secretion": {
@@ -14545,6 +14577,29 @@ const STUDY_PAGES = {
       "This gives you a genuinely high-yield differential diagnosis extending your existing Genetic Principles/Marfan Syndrome content — a tall, long-limbed patient with lens subluxation requires noting the SPECIFIC DIRECTION of displacement, since superotemporal points toward Marfan syndrome while inferonasal points toward homocystinuria, a distinction with major systemic management implications given homocystinuria's additional thromboembolism and intellectual disability risk not shared by Marfan syndrome.",
     ],
   },
+  "lensdev-induction-nuclei": {
+    name: "Lens Tissue Induction, Zonule Development, & Developmental Nuclei",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard ocular embryology references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the placode-to-vesicle sequence and primary/secondary fiber distinction already covered under Lens Vesicle Formation content, three additional developmental facts are frequently tested: the lens's inductive influence on neighboring ocular structures, the origin of the zonular fibers, and the naming convention for the layered developmental nuclei that the lens sutures (already covered under Lens & Zonule Gross Anatomy content) actually separate." },
+      { h: "Lens as an inductive tissue", t: "The lens vesicle is not just a passive product of induction — once formed, it actively induces the overlying surface ectoderm to differentiate into corneal epithelium and stimulates the surrounding mesenchyme to form the corneal stroma and endothelium (already covered under Corneal Developmental Anatomy content), and its presence is also required for normal iris and anterior chamber angle development; experimentally or clinically, a failed or absent lens vesicle (as in some cases of primary aphakia) is associated with secondary maldevelopment of the cornea and anterior segment, underscoring that the lens is an organizing structure for the whole anterior segment, not merely a downstream product of it." },
+      { h: "Zonule development", t: "The zonular fibers (zonule of Zinn, already covered anatomically under Lens & Zonule Gross Anatomy content) are produced by the non-pigmented epithelium of the ciliary body — a neuroectodermal derivative — beginning around the fourth month of gestation, well after the lens vesicle itself has formed and separated; this shared neuroectodermal origin links zonule formation developmentally to the inner (non-pigmented) ciliary epithelial layer responsible for aqueous secretion in the mature eye (already covered under Ciliary Body Secretory Function content)." },
+      { h: "Mechanism of lens fiber orientation and suture formation", t: "As secondary lens fibers elongate from the equatorial germinative zone, they curve around the lens periphery in two directions (toward the anterior and posterior poles) and meet fiber ends growing in from other directions at the lens sutures (already covered under Lens & Zonule Gross Anatomy content) — this fiber-end apposition, not a separate suture-forming tissue, is what creates the suture lines, and the number of fiber growth directions contributing determines suture complexity (simple upright/inverted \"Y\" in the fetal nucleus, progressively more complex star-shaped patterns in later-formed nuclei as more growth zones become active)." },
+      { h: "Developmental (growth) nuclei nomenclature", t: "The lens substance is conventionally divided into successive developmental nuclei named for the period in which each was laid down: the EMBRYONIC nucleus (formed first, by the primary lens fibers filling the vesicle lumen), the FETAL nucleus (formed by the first wave of secondary fibers, bounded by the classic Y-sutures), the INFANTILE nucleus (formed from birth to puberty), and the ADULT nucleus (formed from puberty onward) — with the adult cortex representing the most recently added, outermost secondary fibers; these are concentric, chronologically-ordered layers, directly analogous to tree growth rings, and this same age-ordered layering is the anatomic basis for why nuclear sclerotic cataract (already covered) selectively affects the oldest, most central (embryonic/fetal) layers first." },
+    ],
+    memorizeIt: [
+      "The lens vesicle actively INDUCES overlying ectoderm to form the corneal epithelium and induces mesenchyme to form corneal stroma/endothelium — the lens organizes anterior segment development, not just the reverse.",
+      "Zonular fibers arise from the non-pigmented ciliary epithelium (neuroectoderm) starting around gestational month 4 — after lens vesicle formation.",
+      "Lens sutures form from fiber-END APPOSITION as secondary fibers meet growing in from different directions — not a separate structure.",
+      "Developmental nuclei in chronological (and concentric, center-to-periphery) order: EMBRYONIC → FETAL → INFANTILE → ADULT — oldest/most central to newest/most peripheral.",
+    ],
+    applyIt: [
+      "This extends your existing Corneal Developmental Anatomy content: the classic embryology teaching point that 'the lens induces the cornea' is the direct explanation for why primary aphakia (absent lens development) is associated with secondary corneal and anterior segment maldevelopment — the lens vesicle is an organizing signal, not just a downstream structure that happens to sit near the cornea.",
+      "This also gives you the precise anatomic basis for a fact already used under Age-Related Cataract content: nuclear sclerotic cataract affects the oldest lens layers first specifically because the embryonic and fetal nuclei sit at the physical center of this chronologically-layered structure, exactly where oxidative damage has had the longest time to accumulate.",
+    ],
+  },
   "lenspharmgen-perioperative": {
     name: "Perioperative Cataract Surgery Medication Sequence",
     priority: "MUST",
@@ -14681,6 +14736,27 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you a genuinely distinct surgical-aid dye application extending your existing Cornea Pharmacology diagnostic dye content into the intraoperative cataract surgery context — while fluorescein/rose bengal/lissamine green (already covered) diagnose ocular SURFACE pathology in clinic, trypan blue serves a purely intraoperative surgical-visualization purpose targeting an entirely different tissue (the lens capsule), particularly valuable in exactly the mature cataract cases already relevant to existing Congenital/Mature Cataract content where the red reflex is most compromised.",
+    ],
+  },
+  "lenspharm-fluorescein-seidel": {
+    name: "Fluorescein & the Seidel Test for Post-Cataract-Surgery Wound Leak",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular pharmacology and cataract/anterior segment surgical references"],
+    learnIt: [
+      { h: "Overview", t: "Where trypan blue (this topic's sibling objective) is an intraoperative surgical-aid dye, fluorescein — already covered as an ocular surface diagnostic dye under Cornea Pharmacology content — has a specific, important TOPICAL DIAGNOSTIC role after cataract surgery: detecting a leaking corneal or scleral wound via the Seidel test." },
+      { h: "The Seidel test — mechanism and technique", t: "A moistened fluorescein strip (or dilute fluorescein solution) is applied to the surgical wound, then examined under the cobalt blue light of a slit lamp or Wood's lamp — intact, concentrated fluorescein on the ocular surface appears dark orange-brown, but if aqueous humor is actively leaking through the wound, the fluorescein is diluted at that exact point, and the diluted fluorescein fluoresces a bright, streaming green as it is washed away by the leaking aqueous — a POSITIVE Seidel test, directly visualizing the site and flow of the leak in real time." },
+      { h: "Clinical significance after cataract surgery", t: "A positive Seidel test after cataract surgery indicates a wound leak, which risks a shallow or flat anterior chamber, hypotony, and an open communication between the ocular surface and the intraocular space that meaningfully raises endophthalmitis risk (already covered under Perioperative Antibiotic & Antiseptic Prophylaxis content) — a wound leak found on a routine post-operative visit is a genuine urgent finding, not an incidental one, since untreated it can progress to choroidal effusion, iris incarceration in the wound, or intraocular infection." },
+      { h: "Management of a positive Seidel test", t: "Management depends on severity: small, slow leaks may be managed with aqueous suppressants (to reduce aqueous flow through the leak site), a pressure patch, or a bandage contact lens to allow the wound to self-seal, while larger or persistent leaks (or leaks with a shallow/flat anterior chamber) require prompt surgical wound revision/resuturing — recognizing the Seidel-positive finding is what triggers this urgency, so testing wound integrity is a standard, expected part of the post-cataract-surgery examination whenever a leak is clinically suspected (e.g., low IOP, shallow chamber, or patient-reported watery discharge)." },
+    ],
+    memorizeIt: [
+      "Fluorescein (already covered as a surface diagnostic dye) also serves a distinct post-cataract-surgery diagnostic role: the Seidel test for wound leak.",
+      "Positive Seidel test: concentrated fluorescein (dark) is diluted by leaking aqueous, producing a bright green STREAMING pattern under cobalt blue light at the leak site.",
+      "A wound leak risks a shallow/flat anterior chamber, hypotony, and elevated endophthalmitis risk (already covered) — an urgent, not incidental, post-operative finding.",
+      "Management: small leaks — aqueous suppressants, pressure patch, or bandage contact lens; larger/persistent leaks or a flat chamber — prompt surgical wound revision.",
+    ],
+    applyIt: [
+      "This gives fluorescein (already covered under Cornea Pharmacology as a corneal-surface diagnostic dye) a second, distinct clinical application specific to this topic area — a post-cataract-surgery patient with low IOP or a shallow anterior chamber on exam should prompt you to reach for the SAME dye already in your diagnostic toolkit, but interpret the finding completely differently: a bright green streaming pattern here means an open surgical wound requiring urgent management, not corneal epithelial staining.",
     ],
   },
   "lenspharm-nsaid-steroid-combination": {
@@ -17000,6 +17076,8 @@ const FLASHCARDS = [
   // IOL
   { id: "fc-254", objectiveId: "lens-iol", front: "What two biometric measurements are most influential in IOL power calculation?", back: "Axial length and keratometry (corneal curvature)." },
   { id: "fc-255", objectiveId: "lens-iol", front: "Why does prior LASIK/PRK complicate IOL power calculation?", back: "Standard keratometry becomes inaccurate after corneal reshaping." },
+  { id: "fc-1554", objectiveId: "lens-iol", front: "State the regression (SRK) IOL power formula, and calculate P for A=118.0, L=23.5mm, K=44.00D.", back: "P = A - 2.5L - 0.9K = 118.0 - 58.75 - 39.6 = 19.65D." },
+  { id: "fc-1555", objectiveId: "lens-iol", front: "Roughly how much postoperative refractive error results from a 1mm axial length error vs. a 1D keratometry error?", back: "~2.5-3D per 1mm of axial length error, vs. ~1D per 1D of keratometry error — axial length error has the larger impact." },
   // Anomalous correspondence
   { id: "fc-256", objectiveId: "amb-anomalous", front: "What is anomalous retinal correspondence (ARC)?", back: "The fovea of the fixating eye becomes linked to a non-foveal point in the deviating eye, allowing adapted binocular sensation despite misalignment." },
   { id: "fc-257", objectiveId: "amb-anomalous", front: "What can happen if strabismus is surgically corrected after longstanding ARC has developed?", back: "Diplopia can be unmasked, since the adapted correspondence no longer matches the new eye position." },
@@ -18292,6 +18370,16 @@ const FLASHCARDS = [
   { id: "fc-1132", objectiveId: "lensgross-structure-zonules", front: "Where is lens epithelium located, and what does it do throughout life?", back: "Anterior surface only; continuously produces new lens fibers throughout life." },
   { id: "fc-1133", objectiveId: "lensgross-structure-zonules", front: "Why do nuclear sclerotic cataracts affect the oldest lens fibers first?", back: "Oldest fibers are compressed centrally (nucleus); newest fibers form the peripheral cortex." },
   { id: "fc-1134", objectiveId: "lensgross-structure-zonules", front: "What are the zonular fibers, and what causes ectopia lentis in Marfan syndrome?", back: "Zonule of Zinn, connecting ciliary body to lens equator; Marfan's connective tissue defect weakens zonules, causing lens subluxation (typically superotemporal)." },
+  { id: "fc-1544", objectiveId: "lensgross-structure-zonules", front: "What shape do lens sutures form in the fetal nucleus, and what actually creates a suture?", back: "An upright \"Y\" anteriorly and inverted \"Y\" posteriorly; sutures form where the tapered ends of elongating lens fiber cells meet." },
+  { id: "fc-1545", objectiveId: "lensdev-induction-nuclei", front: "What does the developing lens vesicle induce, and what happens to the cornea/anterior segment if the lens fails to form?", back: "The lens vesicle induces overlying ectoderm to become corneal epithelium and induces mesenchyme to form corneal stroma/endothelium; in primary aphakia (absent lens), the cornea and anterior segment secondarily maldevelop." },
+  { id: "fc-1546", objectiveId: "lensdev-induction-nuclei", front: "From what tissue do the zonular fibers develop, and when?", back: "The non-pigmented ciliary epithelium (neuroectoderm), beginning around gestational month 4." },
+  { id: "fc-1547", objectiveId: "lensdev-induction-nuclei", front: "List the developmental (growth) nuclei of the lens in chronological/concentric order from center to periphery.", back: "Embryonic → fetal → infantile → adult (adult cortex = newest, outermost)." },
+  { id: "fc-1548", objectiveId: "lensphys-composition-metabolism", front: "How does lens protein content compare to aqueous humor, and why?", back: "Lens is ~35% protein (highest of any body tissue); aqueous is essentially protein-poor because the blood-aqueous barrier excludes plasma protein from the ultrafiltrate." },
+  { id: "fc-1549", objectiveId: "lensphys-composition-metabolism", front: "What fraction of lens glucose metabolism is anaerobic, and why?", back: "Roughly 80-90% — the avascular lens has low internal oxygen tension, so it relies predominantly on anaerobic glycolysis rather than aerobic oxidation." },
+  { id: "fc-1550", objectiveId: "lensphys-composition-metabolism", front: "What enzyme converts excess glucose to sorbitol in the lens, and what does this cause?", back: "Aldose reductase (polyol/sorbitol pathway); sorbitol is osmotically active and poorly diffusible, drawing water into lens fibers and causing osmotic damage — the mechanism of diabetic (snowflake) cataract." },
+  { id: "fc-1551", objectiveId: "lensphys-composition-metabolism", front: "What is glutathione's protective role in the lens, and what happens as its concentration declines with age?", back: "Reduced glutathione (GSH) keeps crystallin sulfhydryl groups reduced, preventing disulfide cross-linking; declining GSH with age (especially in the nucleus) permits protein aggregation/insolubility, contributing to cataract." },
+  { id: "fc-1552", objectiveId: "lenspharm-fluorescein-seidel", front: "What does a POSITIVE Seidel test look like, and what does it indicate after cataract surgery?", back: "A bright green streaming pattern where leaking aqueous dilutes the applied fluorescein under cobalt blue light — indicates a wound leak." },
+  { id: "fc-1553", objectiveId: "lenspharm-fluorescein-seidel", front: "What are the risks of an unrecognized post-cataract-surgery wound leak?", back: "Shallow/flat anterior chamber, hypotony, and increased endophthalmitis risk from an open communication with the ocular surface." },
   // Sclera gross anatomy
   { id: "fc-1135", objectiveId: "scleragross-structure-episclera", front: "Why is the sclera opaque while the cornea is transparent, despite both being collagenous?", back: "Sclera has irregularly arranged, variable-diameter collagen fibrils; cornea has precisely regular fibril spacing." },
   { id: "fc-1136", objectiveId: "scleragross-structure-episclera", front: "Describe the three-tiered ocular surface vascular arrangement from superficial to deep.", back: "Conjunctival vessels (superficial) → episcleral vessels (intermediate) → scleral vessels (deep)." },
@@ -19751,6 +19839,23 @@ const QUESTIONS = [
       b: "Correct — this delayed, gradual vision decline and glare after previously successful cataract surgery is classic for posterior capsule opacification, treated definitively with YAG laser capsulotomy.",
       c: "Incorrect — endophthalmitis presents acutely (days after surgery) with pain and inflammation, not this gradual two-year timeline.",
       d: "Incorrect — nothing in the stem suggests a field defect or retinal finding consistent with detachment.",
+    },
+  },
+  {
+    id: "q-332", objectiveId: "lens-iol", type: "Calculation", difficulty: "Hard",
+    stem: "Using the regression (SRK) formula P = A - 2.5L - 0.9K, calculate the IOL power for an eye with an A-constant of 118.0, an axial length of 23.5 mm, and average keratometry of 44.00D.",
+    choices: [
+      { id: "a", text: "15.25D" },
+      { id: "b", text: "19.65D" },
+      { id: "c", text: "59.25D" },
+      { id: "d", text: "78.40D" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — this results from forgetting to multiply K by its 0.9 coefficient (118.0 - 58.75 - 44.0 = 15.25); the keratometry term must be 0.9 × K = 39.6, not raw K.",
+      b: "Correct — P = 118.0 - 2.5(23.5) - 0.9(44.0) = 118.0 - 58.75 - 39.6 = 19.65D, which would be rounded to the nearest available 0.5D increment (19.5D or 20.0D) for the actual implant ordered.",
+      c: "Incorrect — this results from omitting the keratometry term entirely (118.0 - 58.75 = 59.25); both the axial length AND keratometry terms must be subtracted from the A-constant.",
+      d: "Incorrect — this results from omitting the axial length term entirely (118.0 - 39.6 = 78.4); both terms are required, and the axial length term (2.5L) has the larger effect on the result.",
     },
   },
   {
