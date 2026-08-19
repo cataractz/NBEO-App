@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
-import { BookOpen, Layers, HelpCircle, ClipboardList, Image as ImageIcon, Map, CalendarDays, AlertTriangle, BarChart3, MessageCircle, Search, ChevronDown, ChevronRight, CheckCircle2, Circle, X, ChevronLeft, RefreshCw, Check, XCircle } from "lucide-react";
+import { BookOpen, Layers, HelpCircle, ClipboardList, Image as ImageIcon, Map, CalendarDays, AlertTriangle, BarChart3, MessageCircle, Search, ChevronDown, ChevronRight, CheckCircle2, Circle, X, ChevronLeft, RefreshCw, Check, XCircle, Menu } from "lucide-react";
 
 /* ============================================================
    FONTS
@@ -20,6 +20,50 @@ const FontLoader = () => (
     .nbeo ::-webkit-scrollbar-thumb { background: var(--steel); border-radius: 4px; }
     .nbeo button:focus-visible, .nbeo input:focus-visible, .nbeo [tabindex]:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
     @media (prefers-reduced-motion: reduce) { .nbeo * { transition: none !important; animation: none !important; } }
+
+    /* ---- Responsive app shell ---- */
+    .nbeo-topbar { display: none; }
+    .nbeo-overlay { display: none; }
+    @media (max-width: 860px) {
+      .nbeo { flex-direction: column; }
+      .nbeo-sidebar { display: none !important; }
+      .nbeo-sidebar.nbeo-sidebar-open {
+        display: flex !important;
+        position: fixed !important;
+        inset: 0 auto 0 0;
+        top: 0; left: 0; bottom: 0;
+        z-index: 100;
+        width: 84vw !important;
+        max-width: 300px;
+        height: 100vh !important;
+        box-shadow: 4px 0 28px rgba(20,35,31,0.22);
+      }
+      .nbeo-overlay.nbeo-overlay-open {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(20,35,31,0.4);
+        z-index: 90;
+      }
+      .nbeo-topbar {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        background: #fff;
+        border-bottom: 1px solid var(--steel);
+        position: sticky;
+        top: 0;
+        z-index: 40;
+      }
+      .nbeo-topbar button { background: none; border: none; padding: 4px; cursor: pointer; color: var(--ink); display: flex; }
+      .nbeo-main { padding: 16px !important; }
+      .nbeo-main h1.disp { font-size: 26px !important; }
+      .nbeo table { font-size: 12.5px; }
+    }
+    @media (max-width: 480px) {
+      .nbeo-main { padding: 12px !important; }
+    }
   `}</style>
 );
 
@@ -26156,6 +26200,7 @@ function Dashboard({ coverage }) {
       <div>
         <h2 className="disp" style={{ fontSize: 20, fontWeight: 600, marginBottom: 10 }}>Coverage by condition area</h2>
         <div style={{ background: "#fff", border: "1px solid var(--steel)", borderRadius: 10, overflow: "hidden" }}>
+        <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13.5 }}>
             <thead>
               <tr style={{ textAlign: "left", background: "var(--teal-10)" }}>
@@ -26188,12 +26233,13 @@ function Dashboard({ coverage }) {
             </tbody>
           </table>
         </div>
+        </div>
       </div>
 
       <div style={{ background: "var(--amber-15)", border: "1px solid var(--amber)", borderRadius: 10, padding: "16px 20px" }}>
         <div style={{ fontWeight: 600, marginBottom: 4 }}>Where things stand</div>
         <div style={{ fontSize: 14, lineHeight: 1.5 }}>
-          The curriculum map is fully built and verified against the attached outline. 65 topics now have content, all fully complete. New: Endocrine Physiology, covering the general hypothalamic-pituitary-target organ feedback pattern, thyroid hormone synthesis, and insulin/glucagon regulation — the primary vs. secondary hormone-pairing diagnostic framework applies across your Adrenal and Thyroid content, and this gives the upstream mechanistic explanation for how diabetes leads to diabetic retinopathy. Visit Learn, Flashcards, or Questions to study them, or check the NBEO Blueprint for the full breakdown by condition area. Content generation continues from here.
+          The curriculum is at 100% structural coverage — all 266 official NBEO topics are built, with 692 knowledge objectives, 1,723 flashcards, and 344 practice questions across every condition area. Visit Learn, Flashcards, or Questions to study, or check the NBEO Blueprint for the full breakdown by condition area against the official outline.
         </div>
       </div>
     </div>
@@ -26250,9 +26296,9 @@ function Blueprint({ coverage }) {
           const pct = coverage.pctForArea(a.area);
           return (
             <div key={a.area} style={{ background: "#fff", border: "1px solid var(--steel)", borderRadius: 10, overflow: "hidden" }}>
-              <button onClick={() => toggle(a.area)} style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "14px 16px", background: "var(--teal-10)", border: "none", cursor: "pointer", textAlign: "left" }}>
+              <button onClick={() => toggle(a.area)} style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, rowGap: 4, padding: "14px 16px", background: "var(--teal-10)", border: "none", cursor: "pointer", textAlign: "left", flexWrap: "wrap" }}>
                 {isOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1, minWidth: 140 }}>
                   <div style={{ fontWeight: 600, fontSize: 15 }}>{a.area}</div>
                   <div style={{ fontSize: 11.5, color: "var(--steel)" }}>{a.major === AREA_A ? "Refractive/Sensory/Oculomotor" : "Normal Health/Disease/Trauma"} · {a.range[0]}–{a.range[1]} items</div>
                 </div>
@@ -26273,14 +26319,14 @@ function Blueprint({ coverage }) {
                             <li key={ti} style={{ borderTop: "1px solid #f0f0ee" }}>
                               <div
                                 onClick={hasObjs ? () => toggleTopic(topicKey) : undefined}
-                                style={{ display: "flex", alignItems: "center", gap: 8, padding: "5px 0", fontSize: 13.5, cursor: hasObjs ? "pointer" : "default" }}
+                                style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: 8, padding: "5px 0", fontSize: 13.5, cursor: hasObjs ? "pointer" : "default" }}
                               >
                                 {hasObjs ? (
                                   topicOpen ? <ChevronDown size={13} style={{ color: "var(--teal)", flexShrink: 0 }} /> : <ChevronRight size={13} style={{ color: "var(--steel)", flexShrink: 0 }} />
                                 ) : (
                                   <Circle size={7} style={{ color: "var(--steel)", flexShrink: 0, marginLeft: 2, marginRight: 1 }} fill="var(--steel)" />
                                 )}
-                                <span style={{ flex: 1, fontWeight: hasObjs && topicOpen ? 600 : 400 }}>{t.n}</span>
+                                <span style={{ flex: 1, minWidth: 120, fontWeight: hasObjs && topicOpen ? 600 : 400 }}>{t.n}</span>
                                 <span className="mono" style={{ fontSize: 11, color: "var(--steel)" }}>{t.o} obj.</span>
                               </div>
                               {hasObjs && topicOpen && (
@@ -26456,9 +26502,9 @@ function LearnTab() {
           const pct = g.totalObj > 0 ? (g.builtObj / g.totalObj) * 100 : 0;
           return (
             <div key={g.area} style={{ background: "#fff", border: "1px solid var(--steel)", borderRadius: 10, overflow: "hidden" }}>
-              <button onClick={() => toggleArea(g.area)} style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, padding: "14px 16px", background: "var(--teal-10)", border: "none", cursor: "pointer", textAlign: "left" }}>
+              <button onClick={() => toggleArea(g.area)} style={{ width: "100%", display: "flex", alignItems: "center", gap: 10, rowGap: 4, padding: "14px 16px", background: "var(--teal-10)", border: "none", cursor: "pointer", textAlign: "left", flexWrap: "wrap" }}>
                 {isOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
-                <div style={{ flex: 1 }}>
+                <div style={{ flex: 1, minWidth: 140 }}>
                   <div style={{ fontWeight: 600, fontSize: 15 }}>{g.area}</div>
                   <div style={{ fontSize: 11.5, color: "var(--steel)" }}>{g.major === AREA_A ? "Refractive/Sensory/Oculomotor" : "Normal Health/Disease/Trauma"} · {g.disciplines.length} {g.disciplines.length === 1 ? "discipline" : "disciplines"}</div>
                 </div>
@@ -26476,11 +26522,11 @@ function LearnTab() {
                           const tpct = (builtCount / ct.objectives.length) * 100;
                           return (
                             <div key={ct.topicId} onClick={() => setOpenTopic(ct.topicId)} style={{
-                              display: "flex", alignItems: "center", gap: 14, padding: "12px 16px", borderRadius: 10,
+                              display: "flex", alignItems: "center", flexWrap: "wrap", gap: 14, rowGap: 8, padding: "12px 16px", borderRadius: 10,
                               background: "var(--paper)", border: "1px solid #e6e8e4", cursor: "pointer",
                             }}>
                               <BookOpen size={18} color="var(--teal)" />
-                              <div style={{ flex: 1 }}>
+                              <div style={{ flex: 1, minWidth: 140 }}>
                                 <div style={{ fontWeight: 600, fontSize: 14.5 }}>{ct.name}</div>
                                 <div style={{ fontSize: 11.5, color: "var(--steel)" }}>{builtCount} of {ct.objectives.length} objectives built</div>
                               </div>
@@ -26781,15 +26827,31 @@ function useCoverage() {
 ============================================================ */
 export default function NBEOStudyApp() {
   const [tab, setTab] = useState("dashboard");
+  const [navOpen, setNavOpen] = useState(false);
   const coverage = useCoverage();
+
+  const goToTab = (id) => { setTab(id); setNavOpen(false); };
+  const activeLabel = NAV.find(n => n.id === tab)?.label || "";
 
   return (
     <div className="nbeo" style={{ minHeight: 640, display: "flex" }}>
       <FontLoader />
-      <aside style={{ width: 232, flexShrink: 0, borderRight: "1px solid var(--steel)", background: "#fff", padding: "20px 12px", display: "flex", flexDirection: "column" }}>
-        <div style={{ padding: "4px 10px 20px" }}>
-          <div className="disp" style={{ fontSize: 18, fontWeight: 700, lineHeight: 1.1 }}>Part I ABS</div>
-          <div style={{ fontSize: 10.5, letterSpacing: 1.5, color: "var(--teal)", fontWeight: 600, marginTop: 2 }}>STUDY PLATFORM</div>
+
+      <div className="nbeo-topbar">
+        <button aria-label="Open menu" onClick={() => setNavOpen(true)}><Menu size={22} /></button>
+        <div className="disp" style={{ fontSize: 16, fontWeight: 700 }}>{activeLabel || "Part I ABS"}</div>
+      </div>
+      <div className={`nbeo-overlay${navOpen ? " nbeo-overlay-open" : ""}`} onClick={() => setNavOpen(false)} />
+
+      <aside className={`nbeo-sidebar${navOpen ? " nbeo-sidebar-open" : ""}`} style={{ width: 232, flexShrink: 0, borderRight: "1px solid var(--steel)", background: "#fff", padding: "20px 12px", display: "flex", flexDirection: "column" }}>
+        <div style={{ padding: "4px 10px 20px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div>
+            <div className="disp" style={{ fontSize: 18, fontWeight: 700, lineHeight: 1.1 }}>Part I ABS</div>
+            <div style={{ fontSize: 10.5, letterSpacing: 1.5, color: "var(--teal)", fontWeight: 600, marginTop: 2 }}>STUDY PLATFORM</div>
+          </div>
+          <button aria-label="Close menu" onClick={() => setNavOpen(false)} style={{ display: navOpen ? "flex" : "none", background: "none", border: "none", cursor: "pointer", color: "var(--steel)", padding: 4 }}>
+            <X size={18} />
+          </button>
         </div>
         <nav style={{ display: "flex", flexDirection: "column", gap: 2 }}>
           {NAV.map(item => {
@@ -26798,7 +26860,7 @@ export default function NBEOStudyApp() {
             return (
               <button
                 key={item.id}
-                onClick={() => setTab(item.id)}
+                onClick={() => goToTab(item.id)}
                 style={{
                   display: "flex", alignItems: "center", gap: 10, padding: "9px 10px", borderRadius: 8, border: "none",
                   background: active ? "var(--teal)" : "transparent", color: active ? "#fff" : "var(--ink)",
@@ -26820,7 +26882,7 @@ export default function NBEOStudyApp() {
         </div>
       </aside>
 
-      <main style={{ flex: 1, padding: "28px 34px", overflowY: "auto" }}>
+      <main className="nbeo-main" style={{ flex: 1, padding: "28px 34px", overflowY: "auto", minWidth: 0 }}>
         {tab === "dashboard" && <Dashboard coverage={coverage} />}
         {tab === "blueprint" && <Blueprint coverage={coverage} />}
         {tab === "learn" && <LearnTab />}
