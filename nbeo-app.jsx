@@ -545,6 +545,8 @@ const GLAUCOMA_OBJECTIVES = [
   { id: "glau-pxg", name: "Pseudoexfoliation Glaucoma", built: true },
   { id: "glau-ntg", name: "Normal-Tension Glaucoma", built: true },
   { id: "glau-neo", name: "Neovascular Glaucoma", built: true },
+  { id: "glau-steroid", name: "Steroid-Response Glaucoma", built: true },
+  { id: "glau-uveitic", name: "Uveitic (Inflammatory) Glaucoma", built: true },
   { id: "glau-cong", name: "Congenital / Developmental Glaucoma", built: true },
   { id: "glau-surgery", name: "Glaucoma Surgery — Indications, Mechanisms, Co-management", built: true },
 ];
@@ -1454,6 +1456,7 @@ const GLAUPHARMAGENTS_TOPIC_ID = "t-14-4-1"; // Glaucoma(14) > Pharmacology(4) >
 const GLAUPHARMAGENTS_OBJECTIVES = [
   { id: "glaupharm-prostaglandin-firstline", name: "Prostaglandin Analogs — First-Line IOP-Lowering Therapy", built: true },
   { id: "glaupharm-betablocker-cai", name: "Beta-Blockers & Carbonic Anhydrase Inhibitors — Systemic Considerations", built: true },
+  { id: "glaupharm-alpha2-rho", name: "Alpha-2 Agonists & Rho Kinase Inhibitors", built: true },
 ];
 
 const GLAUPHARMHYPEROSM_TOPIC_ID = "t-14-4-2"; // Glaucoma(14) > Pharmacology(4) > Hyperosmotic agents(2)
@@ -3739,6 +3742,54 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "A patient with a history of central retinal vein occlusion who develops a painful red eye with high IOP should be examined for rubeosis iridis and evaluated for neovascular glaucoma, not simply treated as an isolated pressure spike.",
+    ],
+  },
+  "glau-steroid": {
+    name: "Steroid-Response Glaucoma",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular pathology/glaucoma references (e.g., Robbins & Cotran Pathologic Basis of Disease; standard glaucoma texts)"],
+    learnIt: [
+      { h: "Overview", t: "Steroid-response glaucoma is a secondary open-angle glaucoma caused by elevated IOP in response to corticosteroid exposure — topical, periocular, intravitreal, or even systemic/inhaled — already referenced across the platform's Corticosteroid Risks content (periocular, topical, and intravitreal) but not yet directly explained here." },
+      { h: "Mechanism", t: "Corticosteroids alter trabecular meshwork cell biology: they increase deposition of glycosaminoglycan/extracellular matrix material within the meshwork, alter the trabecular cytoskeleton, and reduce phagocytic clearance of debris by trabecular endothelial cells — collectively increasing outflow resistance through the trabecular pathway, producing an IOP rise that mimics POAG mechanistically." },
+      { h: "Who responds, and how much", t: "Roughly one-third of the general population shows a clinically meaningful IOP rise with chronic steroid exposure (\"steroid responders\"), and a smaller subset (roughly 5%) shows a marked rise. Known POAG patients and their first-degree relatives, high myopes, diabetics, and children are more likely to be steroid responders and to respond more severely." },
+      { h: "Time course and potency dependence", t: "IOP elevation typically develops after several weeks of regular use (classically 2-6 weeks for topical therapy) and is more likely with higher-potency, better-penetrating steroids (e.g., prednisolone acetate, dexamethasone) than with lower-potency/lower-penetration agents (e.g., fluorometholone, loteprednol) — the same potency spectrum already covered under existing Topical Corticosteroid content." },
+      { h: "Clinical recognition", t: "Steroid-response glaucoma is usually asymptomatic and found on routine IOP check in a patient using chronic steroid therapy; the angle remains open and gonioscopically indistinguishable from POAG, so a careful medication history (including periocular and intravitreal steroid exposure, not just topical drops) is essential to making the diagnosis." },
+      { h: "Management", t: "Tapering or discontinuing the corticosteroid is the first step where clinically feasible — IOP typically trends back toward baseline over weeks, though the response can be incomplete or slower after prolonged, high-dose exposure. If steroid therapy must continue, switching to a lower-potency/lower-penetration agent or adding standard antiglaucoma medical therapy (already covered) can control IOP without stopping needed anti-inflammatory treatment." },
+    ],
+    memorizeIt: [
+      "Mechanism: steroids increase trabecular meshwork extracellular matrix deposition and reduce trabecular cell phagocytic clearance → increased outflow resistance.",
+      "~1/3 of the general population are steroid responders; known POAG patients respond more frequently and more severely.",
+      "Onset classically 2-6 weeks after starting chronic steroid use; higher-potency steroids (prednisolone acetate, dexamethasone) pose greater risk than fluorometholone/loteprednol.",
+      "Angle is open on gonioscopy — indistinguishable from POAG without the steroid-exposure history.",
+      "First-line management: taper/discontinue the steroid if feasible, or switch to a lower-potency agent; add antiglaucoma therapy if the steroid must continue.",
+    ],
+    applyIt: [
+      "This is the mechanism your existing Periocular Corticosteroid Risks, Intravitreal Steroid Risks, and Topical Corticosteroid Potency content all reference as \"already covered under Glaucoma content\" — a patient on any of those steroid routes who develops elevated IOP should be evaluated for this entity before assuming new-onset POAG, since the management (steroid taper/switch first) differs from standard POAG's first-line prostaglandin analog approach.",
+      "Distinguishing steroid-response glaucoma from POAG matters practically: an open angle plus a positive steroid-exposure history plus IOP elevation with a clear temporal onset after starting steroids points here, whereas POAG lacks that temporal steroid link.",
+    ],
+  },
+  "glau-uveitic": {
+    name: "Uveitic (Inflammatory) Glaucoma",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular pathology/glaucoma references (e.g., Robbins & Cotran Pathologic Basis of Disease; standard glaucoma texts)"],
+    learnIt: [
+      { h: "Overview", t: "Uveitic glaucoma is secondary glaucoma occurring in the setting of intraocular inflammation, most classically anterior uveitis — it can arise through multiple distinct mechanisms and, unlike most other secondary glaucomas, can be either open-angle OR angle-closure, sometimes both at different points in the same eye's disease course." },
+      { h: "Open-angle mechanisms", t: "Inflammatory cells, protein, and debris can directly obstruct the trabecular meshwork, and the meshwork itself can become inflamed (\"trabeculitis\"), reducing outflow facility while the angle remains structurally open. A second, clinically important open-angle contributor is treatment-induced: the corticosteroids used to control the uveitis can independently cause steroid-response glaucoma (already covered), so an inflamed eye's IOP rise is often a combination of disease-driven and treatment-driven mechanisms." },
+      { h: "Angle-closure mechanisms", t: "Chronic inflammation promotes posterior synechiae — adhesions between the iris and the anterior lens capsule — which can progress circumferentially to seclusio pupillae (a fully sealed pupil), reproducing the same iris bombé/pupillary-block cascade already covered under Angle-Closure Glaucoma content, but triggered by inflammatory adhesion rather than a primarily anatomically narrow angle. Peripheral anterior synechiae from chronic angle inflammation can also directly and permanently close the angle." },
+      { h: "A key diagnostic caveat — IOP is often LOW, not high, during active inflammation", t: "Active ciliary body inflammation frequently suppresses aqueous production (ciliary body \"shutdown\"), so IOP during an active uveitis flare is often normal or even low — a normal or elevated IOP in the setting of active anterior chamber inflammation should raise suspicion for one of the secondary glaucoma mechanisms above, rather than being reassuring." },
+      { h: "Management", t: "Treating the underlying inflammation is central (topical/systemic corticosteroids, already covered, balanced against the steroid-response risk above) alongside cycloplegia to reduce synechiae formation (already covered under Uveitis Pharmacology content). Miotics (pilocarpine) are avoided in active uveitis (already covered as a direct prescribing conflict) because they promote synechiae and worsen inflammation; prostaglandin analogs are used cautiously in some practices given a theoretical pro-inflammatory concern. Refractory cases may require trabeculectomy (often with antimetabolites) or a tube shunt, generally with a lower success rate than in non-inflamed eyes." },
+    ],
+    memorizeIt: [
+      "Uveitic glaucoma can be OPEN-angle (trabeculitis, inflammatory debris, or steroid-response from treatment) OR ANGLE-CLOSURE (posterior synechiae → seclusio pupillae → iris bombé, or peripheral anterior synechiae).",
+      "Active ciliary body inflammation often LOWERS IOP by suppressing aqueous production — a normal/high IOP during an active flare should raise suspicion for secondary glaucoma, not reassure.",
+      "Miotics are avoided in active uveitis (already covered) — they promote synechiae formation and worsen inflammation, unlike their role in other open-angle glaucomas.",
+      "Both disease-driven (trabeculitis, synechiae) and treatment-driven (steroid-response, already covered) mechanisms commonly coexist.",
+    ],
+    applyIt: [
+      "This directly extends your existing Angle-Closure Glaucoma (iris bombé mechanism), Steroid-Response Glaucoma, and Uveitis Pharmacology (miotic-avoidance and cycloplegic) content — a uveitis patient with rising IOP needs the mechanism identified (synechial angle closure vs. trabeculitis vs. steroid response) before choosing therapy, since a miotic that would help typical open-angle glaucoma is specifically contraindicated here.",
+      "The paradox of LOW IOP during active inflammation (from ciliary body shutdown) versus the elevated IOP this topic otherwise centers on is a recurring board contrast — a uveitis patient shouldn't be falsely reassured by a normal IOP reading if inflammation is actively suppressing aqueous production.",
     ],
   },
   "glau-cong": {
@@ -8480,13 +8531,16 @@ const STUDY_PAGES = {
       { h: "Overview", t: "Aqueous humor is produced by the ciliary body's ciliary processes and fills the anterior and posterior chambers, providing nutrition to the avascular lens and cornea while also establishing the intraocular pressure (IOP) central to your extensive Glaucoma content — production and outflow together determine IOP, the single most important modifiable risk factor already covered there." },
       { h: "Production mechanism", t: "Three processes contribute to aqueous formation: active secretion (energy-dependent transport of ions, primarily sodium, across the ciliary epithelium, drawing water osmotically — the dominant mechanism and the target of aqueous-suppressant glaucoma medications), ultrafiltration (passive fluid movement driven by hydrostatic pressure differences), and diffusion (passive movement of lipid-soluble substances) — active secretion accounts for the majority of aqueous production." },
       { h: "Flow pathway", t: "Aqueous is produced in the posterior chamber (behind the iris, in front of the lens), flows through the pupil into the anterior chamber, and then exits via the outflow pathways covered in your next objective — this normal forward flow pattern is disrupted in angle-closure mechanisms (already covered in your Glaucoma content), where pupillary block prevents aqueous from reaching the anterior chamber outflow structures." },
-      { h: "Composition", t: "Aqueous is similar to blood plasma in many respects but has notably lower protein concentration (since it's actively secreted rather than simply filtered, unlike a true ultrafiltrate) and higher concentrations of certain substances like ascorbate — its composition supports lens and corneal metabolism given their avascularity." },
+      { h: "Composition", t: "Aqueous is similar to blood plasma in many respects but has notably lower protein concentration (since it's actively secreted rather than simply filtered, unlike a true ultrafiltrate) and higher concentrations of certain substances like ascorbate — its composition supports lens and corneal metabolism given their avascularity. This low-protein composition exists BECAUSE the blood-aqueous barrier (tight junctions in the non-pigmented ciliary epithelium and iris/ciliary body vasculature, already covered under Iris Pigmentation & the Blood-Aqueous Barrier content) restricts plasma protein from entering the aqueous — the same barrier whose breakdown produces the flare and cell of anterior uveitis." },
+      { h: "Volume, turnover, and physical properties", t: "Total aqueous volume is small — roughly 250-300 microliters, split between the posterior chamber (~60 μL) and the larger anterior chamber (~200 μL) — with production of roughly 2-3 μL/min, meaning the entire volume turns over in about 100 minutes (~1-1.5%/min). Aqueous osmolarity (~304 mOsm/L) is slightly higher than plasma (~295 mOsm/L), and its viscosity is close to that of water, only slightly higher, since it lacks plasma's high protein content — much less viscous than blood plasma." },
     ],
     memorizeIt: [
       "Aqueous is produced by the ciliary processes of the ciliary body.",
       "Active secretion (ion transport, primarily sodium) is the dominant production mechanism — target of aqueous-suppressant medications.",
       "Flow: posterior chamber → through pupil → anterior chamber → outflow pathways.",
       "Pupillary block (angle-closure mechanism) disrupts this normal forward flow pattern.",
+      "Total volume ~250-300 μL; turnover ~100 minutes (~1-1.5%/min); slightly hyperosmolar to plasma (~304 vs. ~295 mOsm/L); viscosity close to water.",
+      "Low protein content is a direct consequence of the blood-aqueous barrier (already covered) excluding plasma protein.",
     ],
     applyIt: [
       "This gives you the mechanistic target behind the aqueous-suppressant glaucoma medication class already implicit in your Glaucoma content: these drugs work specifically by reducing the active secretion component of aqueous production, the dominant production mechanism covered here.",
@@ -8522,6 +8576,8 @@ const STUDY_PAGES = {
       { h: "Overview", t: "Intraocular pressure reflects the dynamic balance between aqueous production (already covered) and outflow (already covered) — IOP is not a fixed value but fluctuates in predictable and unpredictable ways, relevant to how your Glaucoma content's diagnostic and monitoring approach must account for this variability." },
       { h: "Diurnal variation", t: "IOP normally fluctuates over the course of a day, classically peaking in the early morning hours in many individuals (related to circadian variation in aqueous production and other factors) — this normal variation means a single IOP measurement provides only a snapshot, and glaucoma patients may sometimes require diurnal IOP curve testing (multiple measurements across the day) to capture peak pressures that a single office visit measurement might miss." },
       { h: "Factors affecting IOP measurement", t: "Central corneal thickness affects the accuracy of applanation tonometry readings (thicker corneas can cause IOP to read artificially high, thinner corneas artificially low) — already relevant to your Glaucoma content's risk stratification, since corneal thickness is a recognized independent risk factor partly through this measurement artifact and partly through genuine biomechanical effects." },
+      { h: "Nervous system regulation of aqueous production", t: "Autonomic tone modulates aqueous production at the ciliary epithelium: beta-adrenergic (sympathetic) stimulation INCREASES aqueous production (the mechanistic target of beta-blocker glaucoma medications, already covered), while alpha-2 adrenergic stimulation DECREASES it — a different receptor subtype producing the opposite net effect on production, which is why both beta-blockers and alpha-2 agonists are used as aqueous-suppressant drug classes despite opposite adrenergic subtype involvement." },
+      { h: "Body position and blood pressure", t: "IOP is typically 1-6 mmHg HIGHER in the supine position than sitting/upright, related to increased episcleral venous pressure and altered orbital venous drainage when lying down — clinically relevant to patients who sleep prone or with the head lower than the body, and a contributor to the early-morning IOP peak already covered above. Systemic blood pressure has a complex relationship with IOP: acute BP elevation can transiently raise IOP via increased ocular blood flow/choroidal volume, while LOW ocular perfusion pressure (driven by low systemic BP relative to IOP) is itself an independent risk factor for glaucomatous progression." },
       { h: "Clinical relevance", t: "Understanding that a single normal IOP reading doesn't fully exclude glaucoma risk (given diurnal variation) reinforces why your Glaucoma content emphasizes a comprehensive risk assessment (optic nerve appearance, visual fields, corneal thickness, family history) rather than relying on IOP measurement alone." },
     ],
     memorizeIt: [
@@ -8529,6 +8585,8 @@ const STUDY_PAGES = {
       "Diurnal variation: IOP classically peaks in early morning hours for many individuals.",
       "A single office IOP measurement is only a snapshot — diurnal curve testing captures peak pressures some patients need assessed.",
       "Central corneal thickness affects tonometry accuracy — thicker corneas read artificially high, thinner artificially low.",
+      "Beta-adrenergic stimulation INCREASES aqueous production; alpha-2 stimulation DECREASES it — opposite adrenergic subtypes, both targeted by different glaucoma drug classes.",
+      "Supine position raises IOP ~1-6 mmHg vs. sitting (higher episcleral venous pressure); low ocular perfusion pressure is an independent glaucoma progression risk factor.",
     ],
     applyIt: [
       "This reinforces a key principle already implicit in your Glaucoma content: IOP measurement alone is an incomplete picture, both because of diurnal variation (a single reading might miss a patient's true peak pressure) and corneal thickness effects on measurement accuracy — comprehensive risk assessment beyond a single IOP number is genuinely necessary, not just thorough practice.",
@@ -8742,12 +8800,14 @@ const STUDY_PAGES = {
       { h: "Non-contact (air-puff) tonometry", t: "Uses a rapid air pulse to applanate the cornea, measuring the time required to achieve a standard degree of flattening via optical detection — avoids the need for topical anesthesia and corneal contact (useful for screening or in patients who cannot tolerate contact methods), but is generally considered less precise than Goldmann applanation, and can be less accurate at higher or unusual IOP levels." },
       { h: "Rebound tonometry", t: "Uses a lightweight probe that briefly contacts the cornea and rebounds, with deceleration characteristics correlating to IOP — does not require topical anesthesia, is quick and well-tolerated, and has become popular for home IOP monitoring and pediatric/uncooperative patient testing given its ease of use, though like other methods it remains subject to corneal thickness effects on accuracy." },
       { h: "Clinical selection", t: "Method choice depends on clinical context: Goldmann remains standard for definitive glaucoma diagnosis/monitoring in a cooperative adult, while non-contact and rebound methods serve well for screening, pediatric patients, or situations where contact/anesthesia is impractical." },
+      { h: "Normative values", t: "Population mean IOP is roughly 15-16 mmHg, with a statistically normal range typically cited as approximately 10-21 mmHg (about 2 standard deviations around the mean) — a value above this range is termed ocular hypertension when the optic nerve and visual field remain normal, while (already covered above) glaucomatous damage can occur even within this \"normal\" range, as in normal-tension glaucoma." },
     ],
     memorizeIt: [
       "Goldmann applanation: clinical gold standard, based on the Imbert-Fick principle, requires contact and anesthesia.",
       "Non-contact (air-puff): no contact/anesthesia needed, generally less precise than Goldmann, useful for screening.",
       "Rebound tonometry: brief probe contact, no anesthesia needed, popular for home monitoring and pediatric/uncooperative patients.",
       "All methods remain subject to corneal thickness effects on measurement accuracy.",
+      "Statistically normal IOP range: roughly 10-21 mmHg (mean ~15-16 mmHg); above this without optic nerve/field damage = ocular hypertension.",
     ],
     applyIt: [
       "This gives you the practical instrumentation context behind your Aqueous/IOP Regulation content's corneal thickness discussion: regardless of which tonometry method is used, the corneal thickness effect on measurement accuracy applies across all of them, which is why corneal thickness assessment remains relevant no matter which tonometer a given clinical setting uses.",
@@ -16531,11 +16591,13 @@ const STUDY_PAGES = {
       { h: "Overview", t: "Glaucoma medication adherence is a genuine, major real-world determinant of treatment success, distinct from pharmacologic drug efficacy itself, and directly relevant to interpreting apparent 'treatment failure' in clinical practice." },
       { h: "Why adherence is a particular challenge in glaucoma", t: "Glaucoma is characteristically asymptomatic through most of its course (already implicit in existing Glaucoma pathology and this area's Ganglion Cell Layer/OCT content, since structural damage can precede any noticeable functional change) — patients do not typically 'feel' their IOP or experience symptoms from early-to-moderate glaucomatous damage, meaning they lack the immediate symptomatic feedback that often reinforces medication adherence in other chronic conditions." },
       { h: "Adherence as a hidden cause of apparent treatment failure", t: "Poor medication adherence is a major, often underrecognized real-world cause of apparent glaucoma 'treatment failure' (continued IOP elevation or disease progression despite a prescribed regimen) that is NOT actually a pharmacologic failure of the medication itself — before escalating therapy or assuming a drug is ineffective, genuinely assessing and addressing adherence (dosing complexity, side effects, cost, technique issues with drop instillation) is an essential clinical step, since escalating to a more complex or invasive regimen would not solve an underlying adherence problem." },
+      { h: "Preservative-related ocular surface disease as a concrete adherence barrier", t: "One specific, testable side-effect driver of poor adherence is preservative toxicity: benzalkonium chloride (BAK), used in most multi-dose glaucoma drops, causes cumulative corneal/conjunctival epithelial toxicity with chronic use (already covered under BAK Preservative Toxicity content), and glaucoma patients on multiple long-term BAK-preserved drops are the highest-risk population named there — the resulting ocular surface irritation and discomfort is a genuine, mechanistically explainable reason patients stop instilling drops as prescribed, not simply noncompliance, and switching to preservative-free formulations (where available) can improve both comfort and adherence." },
     ],
     memorizeIt: [
       "Glaucoma is characteristically asymptomatic through most of its course — patients lack immediate symptomatic feedback that reinforces adherence.",
       "Poor adherence is a major, often underrecognized cause of apparent 'treatment failure' — NOT necessarily a true pharmacologic failure of the medication.",
       "Assessing/addressing adherence (dosing complexity, side effects, cost, instillation technique) is an essential step BEFORE escalating therapy for apparent progression.",
+      "BAK preservative toxicity (already covered) from chronic multi-drop glaucoma regimens is a concrete, mechanistic driver of poor adherence — not just \"noncompliance.\"",
     ],
     applyIt: [
       "This gives you a genuinely important real-world clinical principle extending your existing Glaucoma content — a patient with apparently progressive glaucomatous damage despite a prescribed multi-drop regimen should have adherence explicitly assessed (e.g., through direct questioning about missed doses, or noting an unexpectedly normal IOP at a visit right after a reminder call) before assuming the current medications are pharmacologically inadequate and escalating to surgery or additional agents.",
@@ -16578,6 +16640,29 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you the essential systemic safety screening directly extending your existing Systemic Absorption of Topical Medications and Ciliary Body Secretory Function content — a glaucoma patient with a history of asthma or heart block should specifically avoid topical timolol given genuine systemic beta-blockade risk via nasolacrimal absorption, reinforcing that 'just an eye drop' can have clinically significant systemic effects requiring the same contraindication screening as a systemic medication.",
+    ],
+  },
+  "glaupharm-alpha2-rho": {
+    name: "Alpha-2 Agonists & Rho Kinase Inhibitors",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard glaucoma pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the aqueous-suppressant and outflow-enhancing classes already covered (beta-blockers, CAIs, prostaglandin analogs), two additional antiglaucoma drug classes round out the standard therapeutic armamentarium — alpha-2 adrenergic agonists and the newer Rho kinase inhibitors — each with a distinct mechanism and a distinct, testable safety profile." },
+      { h: "Alpha-2 agonists — brimonidine", t: "Brimonidine is a selective alpha-2 adrenergic agonist with a dual mechanism: it DECREASES aqueous production (already covered under this area's Nervous System Regulation content) and modestly INCREASES uveoscleral outflow. Its most common side effect is allergic follicular conjunctivitis, which develops with chronic use in a meaningful minority of patients and often necessitates discontinuation. Critically, brimonidine is CONTRAINDICATED in infants and young children (generally under 2 years of age) — because it crosses the immature blood-brain barrier, it can cause severe CNS/respiratory depression, apnea, bradycardia, and hypotonia, and there are documented cases of serious toxicity from topical ocular use or accidental ingestion in this age group." },
+      { h: "Apraclonidine — related agent, different use pattern", t: "Apraclonidine, a related alpha-2 agonist, is used short-term rather than chronically — classically to blunt IOP spikes before and after anterior segment laser procedures (e.g., laser trabeculoplasty, laser peripheral iridotomy) — because it develops rapid tachyphylaxis (diminishing effect) and a high rate of allergic reactions with sustained use, making it unsuitable for long-term glaucoma management." },
+      { h: "Rho kinase inhibitors — netarsudil", t: "Netarsudil is a Rho-associated kinase (ROCK) inhibitor, the newest major antiglaucoma drug class — a genuinely distinct mechanism from all classes already covered: it relaxes the trabecular meshwork and inner wall of Schlemm's canal, directly increasing CONVENTIONAL (trabecular) outflow, while also modestly reducing episcleral venous pressure and aqueous production. It is dosed once daily. Characteristic side effects include conjunctival hyperemia (the most common, sometimes dose-limiting, side effect) and corneal verticillata (whorl-like epithelial deposits, generally benign and reversible with discontinuation)." },
+    ],
+    memorizeIt: [
+      "Brimonidine (alpha-2 agonist): decreases aqueous production + modestly increases uveoscleral outflow; common side effect is allergic follicular conjunctivitis.",
+      "Brimonidine is CONTRAINDICATED in infants/young children (<2 years) — crosses the immature blood-brain barrier, causing CNS/respiratory depression, apnea, bradycardia.",
+      "Apraclonidine: alpha-2 agonist used SHORT-TERM only (peri-laser IOP spike prevention) due to tachyphylaxis and high allergy rates with chronic use.",
+      "Netarsudil (Rho kinase inhibitor): increases CONVENTIONAL/trabecular outflow (a mechanism distinct from all other classes) + reduces episcleral venous pressure + modestly reduces production; once daily.",
+      "Netarsudil side effects: conjunctival hyperemia (most common) and corneal verticillata (benign, reversible whorl keratopathy).",
+    ],
+    applyIt: [
+      "This completes your existing Antiglaucoma Drug Classes framework (production-decreasing vs. outflow-increasing, already covered) — netarsudil is the only major class that directly targets the trabecular/conventional outflow pathway pharmacologically (miotics do so mechanically via ciliary muscle contraction, already covered), giving it a genuinely non-redundant mechanism when added to a prostaglandin analog or aqueous suppressant.",
+      "A pediatric patient prescribed brimonidine (e.g., for a childhood glaucoma) who presents with lethargy, poor feeding, or apnea should be evaluated for brimonidine toxicity — this is why brimonidine is specifically avoided in infants and very young children even when its IOP-lowering mechanism would otherwise be appropriate for their glaucoma.",
     ],
   },
   "glaupharm-hyperosmotic-acute": {
@@ -17263,6 +17348,14 @@ const FLASHCARDS = [
   { id: "fc-110", objectiveId: "glau-neo", front: "What is the hallmark early sign of neovascular glaucoma?", back: "Rubeosis iridis — abnormal new vessels on the iris surface, often first at the pupillary margin." },
   { id: "fc-111", objectiveId: "glau-neo", front: "What molecule drives the neovascularization in NVG, and what triggers its release?", back: "VEGF, released in response to retinal ischemia." },
   { id: "fc-112", objectiveId: "glau-neo", front: "Name three classic causes of NVG.", back: "Proliferative diabetic retinopathy, ischemic central retinal vein occlusion, ocular ischemic syndrome." },
+  // Steroid-response glaucoma
+  { id: "fc-1605", objectiveId: "glau-steroid", front: "What mechanism raises IOP with chronic corticosteroid use?", back: "Steroids increase extracellular matrix deposition in the trabecular meshwork and reduce trabecular cell phagocytic clearance, increasing outflow resistance." },
+  { id: "fc-1606", objectiveId: "glau-steroid", front: "How does the gonioscopic angle appearance differ between steroid-response glaucoma and POAG?", back: "It doesn't — the angle is open in both, so a medication history is essential to distinguish them." },
+  { id: "fc-1607", objectiveId: "glau-steroid", front: "First-line management of steroid-response glaucoma when the steroid can be stopped?", back: "Taper/discontinue the corticosteroid — IOP typically trends back toward baseline over weeks." },
+  // Uveitic glaucoma
+  { id: "fc-1608", objectiveId: "glau-uveitic", front: "Why is IOP often LOW, not high, during an active uveitis flare?", back: "Ciliary body inflammation suppresses aqueous production (\"ciliary body shutdown\") — a normal/elevated IOP during active inflammation should raise suspicion for secondary glaucoma instead." },
+  { id: "fc-1609", objectiveId: "glau-uveitic", front: "What angle-closure mechanism can occur in chronic uveitis?", back: "Posterior synechiae progressing to seclusio pupillae (360° pupil-lens adhesion), causing iris bombé and pupillary block." },
+  { id: "fc-1610", objectiveId: "glau-uveitic", front: "Why are miotics avoided in a uveitic glaucoma patient?", back: "They promote synechiae formation and worsen inflammation, unlike their beneficial role in typical open-angle glaucoma." },
   // Congenital glaucoma
   { id: "fc-113", objectiveId: "glau-cong", front: "What is the classic symptom triad of congenital glaucoma?", back: "Epiphora, photophobia, blepharospasm." },
   { id: "fc-114", objectiveId: "glau-cong", front: "What term describes an enlarged infant globe/cornea from elevated IOP, and what are Haab striae?", back: "Buphthalmos; Haab striae are linear breaks in Descemet membrane from corneal stretching." },
@@ -18032,6 +18125,8 @@ const FLASHCARDS = [
   { id: "fc-611", objectiveId: "aqueous-production", front: "What structure produces aqueous humor?", back: "The ciliary processes of the ciliary body." },
   { id: "fc-612", objectiveId: "aqueous-production", front: "What is the dominant aqueous production mechanism, and what medication class targets it?", back: "Active secretion (ion transport) — targeted by aqueous-suppressant glaucoma medications." },
   { id: "fc-613", objectiveId: "aqueous-production", front: "What is the normal aqueous flow pathway from production to the anterior chamber?", back: "Posterior chamber → through pupil → anterior chamber." },
+  { id: "fc-1611", objectiveId: "aqueous-production", front: "Roughly how long does it take for the entire aqueous volume to turn over?", back: "About 100 minutes (turnover rate ~1-1.5%/min of a total volume of roughly 250-300 μL)." },
+  { id: "fc-1612", objectiveId: "aqueous-production", front: "Is aqueous humor hyperosmolar or hypo-osmolar relative to plasma?", back: "Slightly hyperosmolar (~304 mOsm/L vs. plasma's ~295 mOsm/L)." },
   // Outflow pathways
   { id: "fc-614", objectiveId: "aqueous-outflow", front: "Name the two aqueous outflow pathways and which is dominant.", back: "Trabecular (conventional, dominant) and uveoscleral (unconventional, smaller fraction)." },
   { id: "fc-615", objectiveId: "aqueous-outflow", front: "What is the trabecular outflow route?", back: "Trabecular meshwork → Schlemm's canal → episcleral veins." },
@@ -18039,6 +18134,8 @@ const FLASHCARDS = [
   // IOP regulation
   { id: "fc-617", objectiveId: "aqueous-iop-regulation", front: "When does IOP classically peak during diurnal variation?", back: "Early morning hours, for many individuals." },
   { id: "fc-618", objectiveId: "aqueous-iop-regulation", front: "How does central corneal thickness affect tonometry readings?", back: "Thicker corneas: artificially high readings. Thinner corneas: artificially low readings." },
+  { id: "fc-1613", objectiveId: "aqueous-iop-regulation", front: "How does IOP typically change from sitting to lying supine, and why?", back: "It rises roughly 1-6 mmHg supine, mainly due to increased episcleral venous pressure in that position." },
+  { id: "fc-1614", objectiveId: "aqueous-iop-regulation", front: "How do beta-adrenergic and alpha-2 adrenergic stimulation differ in their effect on aqueous production?", back: "Beta-adrenergic stimulation increases production; alpha-2 stimulation decreases it — opposite effects from different adrenergic receptor subtypes." },
   // Corneal transparency
   { id: "fc-619", objectiveId: "corneaphys-transparency", front: "Name the four factors essential for corneal transparency.", back: "Regular collagen lamellar spacing, relative dehydration (deturgescence), avascularity, endothelial pump function." },
   { id: "fc-620", objectiveId: "corneaphys-transparency", front: "Why does corneal edema cause visible haze?", back: "Excess stromal water disrupts the regular collagen fibril spacing needed for transparency, causing light scatter." },
@@ -18056,6 +18153,7 @@ const FLASHCARDS = [
   // Tonometry methods
   { id: "fc-626", objectiveId: "iopmeas-tonometry-methods", front: "What principle underlies Goldmann applanation tonometry?", back: "The Imbert-Fick principle: pressure = force/area, for an ideal thin-walled sphere." },
   { id: "fc-627", objectiveId: "iopmeas-tonometry-methods", front: "What tonometry method is popular for home IOP monitoring and pediatric patients, and why?", back: "Rebound tonometry — no topical anesthesia needed, quick and well-tolerated." },
+  { id: "fc-1615", objectiveId: "iopmeas-tonometry-methods", front: "What is the statistically normal IOP range, and what is elevated IOP with a normal optic nerve/visual field called?", back: "Roughly 10-21 mmHg (mean ~15-16 mmHg); elevated IOP with normal nerve/field is ocular hypertension." },
   // Episcleral venous pressure
   { id: "fc-628", objectiveId: "iopmeas-episcleral-venous", front: "What sets the physiologic \"floor\" on IOP via the trabecular outflow pathway?", back: "Episcleral venous pressure (EVP) — IOP must exceed EVP for trabecular outflow to occur." },
   { id: "fc-629", objectiveId: "iopmeas-episcleral-venous", front: "Name a condition that causes secondary glaucoma via elevated episcleral venous pressure.", back: "Carotid-cavernous fistula (or Sturge-Weber syndrome, thyroid eye disease)." },
@@ -19069,6 +19167,10 @@ const FLASHCARDS = [
   { id: "fc-1359", objectiveId: "glaupharmgen-adherence", front: "Why is medication adherence a particular challenge in glaucoma management?", back: "Glaucoma is characteristically asymptomatic through most of its course, so patients lack immediate symptomatic feedback reinforcing adherence." },
   { id: "fc-1360", objectiveId: "glaupharm-prostaglandin-firstline", front: "What two advantages make prostaglandin analogs typical first-line glaucoma therapy?", back: "Greatest single-agent IOP reduction of any class, plus once-daily (simplest) dosing." },
   { id: "fc-1361", objectiveId: "glaupharm-betablocker-cai", front: "What two systemic contraindications apply to topical beta-blockers (timolol) for glaucoma?", back: "Asthma/COPD (bronchospasm risk) and significant cardiac conduction disease/heart block (bradycardia risk)." },
+  { id: "fc-1616", objectiveId: "glaupharm-alpha2-rho", front: "Why is brimonidine contraindicated in infants and young children?", back: "It crosses the immature blood-brain barrier, causing CNS/respiratory depression, apnea, and bradycardia." },
+  { id: "fc-1617", objectiveId: "glaupharm-alpha2-rho", front: "Why is apraclonidine used only short-term rather than for chronic glaucoma therapy?", back: "It develops rapid tachyphylaxis and a high rate of allergic reactions with sustained use." },
+  { id: "fc-1618", objectiveId: "glaupharm-alpha2-rho", front: "What is netarsudil's mechanism, and what makes it pharmacologically unique among antiglaucoma drug classes?", back: "A Rho kinase (ROCK) inhibitor that directly increases conventional/trabecular outflow — the only drug class that pharmacologically (not just mechanically) targets this pathway." },
+  { id: "fc-1619", objectiveId: "glaupharm-alpha2-rho", front: "What are netarsudil's two characteristic side effects?", back: "Conjunctival hyperemia (most common) and corneal verticillata (benign, reversible whorl keratopathy)." },
   { id: "fc-1362", objectiveId: "glaupharm-hyperosmotic-acute", front: "How do systemic hyperosmotic agents (mannitol/glycerin) lower IOP in acute angle-closure glaucoma?", back: "They draw fluid out of the vitreous cavity, shrinking vitreous volume and pulling the lens-iris diaphragm posteriorly to help relieve angle crowding." },
   { id: "fc-1363", objectiveId: "glaupharm-mydriatic-contraindication", front: "What should be flagged in the chart of a patient with known narrow/occludable angles?", back: "The angle status, so future dilation decisions for any purpose account for this documented risk." },
   { id: "fc-1364", objectiveId: "glaupharm-sulfa-allergy", front: "What drug class shares sulfonamide structure with sulfa antibiotics, requiring allergy screening?", back: "Carbonic anhydrase inhibitors (topical dorzolamide/brinzolamide, oral acetazolamide)." },
