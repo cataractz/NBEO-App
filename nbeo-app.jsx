@@ -765,6 +765,7 @@ const NUTRITION_OBJECTIVES = [
   { id: "nutr-vitamind", name: "Vitamin D Deficiency / Rickets", built: true },
   { id: "nutr-malnutrition", name: "Malnutrition & Eating Disorders", built: true },
   { id: "nutr-obesity", name: "Obesity & Metabolic Syndrome", built: true },
+  { id: "nutr-trace-malabsorption", name: "Trace Mineral Deficiencies & Malabsorption Syndromes", built: true },
 ];
 
 const REPRO_TOPIC_ID = "t-15-7-17"; // Systemic Health(15) > Pathology(7) > Reproductive system(17)
@@ -773,6 +774,7 @@ const REPRO_OBJECTIVES = [
   { id: "repro-pcos", name: "Polycystic Ovary Syndrome (PCOS)", built: true },
   { id: "repro-sti", name: "Sexually Transmitted Infections (incl. Ocular Manifestations)", built: true },
   { id: "repro-breast", name: "Breast Cancer", built: true },
+  { id: "repro-prostate-ed", name: "Prostate Disorders & Erectile Dysfunction", built: true },
 ];
 
 const COLORVIS_TOPIC_ID = "t-6-0-7"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Color perception(7)
@@ -2211,6 +2213,7 @@ const PATHHEADNECK_TOPIC_ID = "t-15-7-7"; // Systemic Health(15) > Pathology(7) 
 const PATHHEADNECK_OBJECTIVES = [
   { id: "pathheadneck-sinusitis", name: "Sinusitis & Its Orbital Complications", built: true },
   { id: "pathheadneck-salivary-thyroid-masses", name: "Salivary Gland & Thyroid Nodule Pathology", built: true },
+  { id: "pathheadneck-exam-symptoms", name: "Cervical Lymphadenopathy, Vascular Auscultation & Referred Head/Neck Symptoms", built: true },
 ];
 
 const CONGENITAL_TOPIC_ID = "t-15-7-21"; // Systemic Health(15) > Pathology(7) > Congenital/Hereditary conditions(21)
@@ -2219,6 +2222,7 @@ const CONGENITAL_TOPIC_ID = "t-15-7-21"; // Systemic Health(15) > Pathology(7) >
 const CONGENITAL_OBJECTIVES = [
   { id: "congenital-neurofibromatosis", name: "Neurofibromatosis (Type 1 & Type 2)", built: true },
   { id: "congenital-tuberous-sclerosis", name: "Tuberous Sclerosis Complex", built: true },
+  { id: "congenital-torch", name: "Congenital (TORCH) Infections", built: true },
 ];
 
 const CHILDANOMALIES_TOPIC_ID = "t-15-7-22"; // Systemic Health(15) > Pathology(7) > Anomalies of child development(22)
@@ -2237,6 +2241,7 @@ const AGINGANOMALIES_TOPIC_ID = "t-15-7-23"; // Systemic Health(15) > Pathology(
 const AGINGANOMALIES_OBJECTIVES = [
   { id: "aginganomalies-frailty-falls", name: "Frailty & Fall Risk in the Aging Adult", built: true },
   { id: "aginganomalies-polypharmacy", name: "Polypharmacy & Age-Related Pharmacokinetic Changes", built: true },
+  { id: "aginganomalies-sensory-cognitive", name: "Hearing, Cognitive & Psychosocial Changes in the Aging Adult", built: true },
 ];
 
 const RADIATION_TOPIC_ID = "t-0-2-5"; // Ametropia(0) > Optics(Physiological)(2) > Radiation and the eye(5)
@@ -6264,13 +6269,15 @@ const STUDY_PAGES = {
       { h: "Tumor suppressor genes", t: "Normal tumor suppressor genes restrain cell growth/division or promote apoptosis of damaged cells; loss-of-function mutations in these genes remove this restraint. Typically, both alleles must be inactivated to lose function entirely (following the \"two-hit hypothesis\"), since one functioning copy usually still provides some protective effect." },
       { h: "Representative examples already relevant to your content", t: "TP53 (\"guardian of the genome\") is the most commonly mutated tumor suppressor gene across human cancers broadly. RB1 (retinoblastoma gene) is the classic tumor suppressor example directly relevant to your field — its loss (in hereditary or sporadic form) underlies retinoblastoma, the pediatric malignancy already referenced in your Congenital Cataract content as a critical differential for leukocoria." },
       { h: "Hereditary cancer syndromes", t: "Inherited mutations in tumor suppressor genes (like RB1) explain why some cancers cluster in families and present earlier/bilaterally — a patient born with one already-mutated RB1 allele needs only a single additional \"hit\" to the remaining allele in a retinal cell to develop retinoblastoma, explaining the earlier and often bilateral presentation of hereditary cases compared to sporadic ones (which require two independent \"hits\" in the same cell)." },
-      { h: "Clinical relevance", t: "Understanding this framework explains why family history matters when a child presents with leukocoria — a hereditary predisposition changes screening recommendations for siblings and future children." },
+      { h: "Causes of neoplasia (carcinogenesis)", t: "Cancer arises from an accumulation of genetic damage, driven by four broad categories of carcinogens: chemical carcinogens (e.g., tobacco smoke/polycyclic aromatic hydrocarbons and lung/other cancers, aflatoxin and hepatocellular carcinoma, asbestos and mesothelioma), physical/radiation carcinogens (ionizing radiation — e.g., prior neck irradiation and thyroid malignancy risk, already referenced in your Salivary Gland/Thyroid content; and ultraviolet radiation, already covered as a driver of basal cell carcinoma and other skin malignancies in your Integumentary content), oncogenic viruses (e.g., HPV and cervical/oropharyngeal carcinoma, hepatitis B/C and hepatocellular carcinoma — already relevant to your Liver content, and EBV and certain lymphomas), and hereditary predisposition (inherited tumor suppressor/oncogene mutations, as above). Most cancers reflect a combination of environmental carcinogen exposure and accumulated somatic mutation over time, which is why cancer incidence rises substantially with age." },
+      { h: "Clinical relevance", t: "Understanding this framework explains why family history matters when a child presents with leukocoria — a hereditary predisposition changes screening recommendations for siblings and future children. It also explains why modifiable exposures (tobacco, UV exposure, chronic viral hepatitis) are central targets of cancer prevention counseling." },
     ],
     memorizeIt: [
       "Oncogenes: gain-of-function, one mutated allele sufficient (from proto-oncogenes).",
       "Tumor suppressor genes: loss-of-function, generally requires both alleles inactivated (\"two-hit hypothesis\").",
       "TP53 is the most commonly mutated tumor suppressor gene across cancers broadly.",
       "RB1 (retinoblastoma gene) — hereditary loss explains earlier, often bilateral retinoblastoma presentation.",
+      "Four broad carcinogen categories: chemical (tobacco, aflatoxin, asbestos), physical/radiation (ionizing radiation, UV), oncogenic viruses (HPV, HBV/HCV, EBV), and hereditary predisposition.",
     ],
     applyIt: [
       "This gives molecular context to your Congenital Cataract content's leukocoria differential: understanding that hereditary retinoblastoma requires only one additional genetic \"hit\" (since one is already present at birth) explains why hereditary cases present earlier and more often bilaterally than sporadic cases — and why family history changes screening urgency for at-risk relatives.",
@@ -6287,12 +6294,14 @@ const STUDY_PAGES = {
       { h: "Epidemiology", t: "One of the most common mental health conditions, with roughly twice the prevalence in women compared to men; can occur at any age." },
       { h: "Relevance to eye care practice", t: "Depression can present with vague somatic complaints (including visual complaints without a clear structural cause) and can affect a patient's engagement with their own eye care (e.g., adherence to glaucoma medications or diabetic eye exam follow-up) — recognizing signs of depression is relevant to holistic patient care and treatment adherence, even outside your direct scope of diagnosis or treatment." },
       { h: "Management", t: "Psychotherapy (e.g., cognitive behavioral therapy) and pharmacotherapy (e.g., SSRIs, SNRIs) are first-line treatments, often used in combination for moderate-to-severe disease." },
+      { h: "Psychological screening/assessment tools", t: "Brief, validated screening instruments are used across primary and specialty care to flag mental illness for further evaluation, not to make a definitive diagnosis alone: the PHQ-9 (Patient Health Questionnaire-9) screens for and grades depression severity based on DSM symptom criteria; the shorter PHQ-2 is a quick two-item pre-screen; the GAD-7 screens for generalized anxiety; the CAGE questionnaire (Cut down, Annoyed, Guilty, Eye-opener) screens for problem alcohol use; and the Mini-Mental State Examination (MMSE) screens for cognitive impairment/dementia rather than mood, useful context for the cognitive-change content covered under Anomalies of the Aging Adult. Recognizing that a positive screen prompts further evaluation (not an automatic diagnosis) is the key testable principle." },
     ],
     memorizeIt: [
       "MDD requires depressed mood and/or anhedonia for at least two weeks, with associated functional impairment.",
       "Roughly twice as prevalent in women as in men.",
       "First-line treatments: psychotherapy and/or SSRIs/SNRIs.",
       "Depression can affect treatment adherence — relevant to chronic eye conditions requiring consistent follow-up (e.g., glaucoma, diabetic eye disease).",
+      "Screening tools: PHQ-9 (depression), GAD-7 (anxiety), CAGE (alcohol use), MMSE (cognitive impairment) — a positive screen prompts further evaluation, not a standalone diagnosis.",
     ],
     applyIt: [
       "A patient who is inconsistently adherent to glaucoma drops or repeatedly missing diabetic eye exam follow-ups may have an underlying, unaddressed mental health barrier — recognizing this possibility (without diagnosing it yourself) can inform how you approach a supportive conversation about adherence.",
@@ -6332,11 +6341,13 @@ const STUDY_PAGES = {
       { h: "Clinical presentation", t: "Varies widely by substance and severity; signs can include changes in behavior, physical signs of use (e.g., pupillary changes, track marks), and functional impairment across social, occupational, or health domains." },
       { h: "Relevance to eye care history-taking", t: "A thorough case history, including substance use when relevant, can help explain otherwise puzzling findings — nutritional optic neuropathy in a patient with heavy alcohol use, or pupillary findings that don't fit a typical neuro-ophthalmic pattern, may have a substance-related explanation." },
       { h: "Management", t: "Varies by substance and severity — behavioral interventions, medication-assisted treatment (e.g., for opioid or alcohol use disorder), and support programs; withdrawal management may require medical supervision depending on the substance." },
+      { h: "Recognizing child, spouse, and elder abuse — behavioral disorders beyond substance use", t: "The outline groups substance abuse together with child, spouse, and elder abuse under \"behavioral disorders\" — abuse recognition is a genuinely important, testable skill for any healthcare provider, including optometrists, who are mandated reporters in most jurisdictions. Red flags include: injury patterns inconsistent with the stated history or mechanism, injuries in various stages of healing, delayed presentation for care, and a caregiver who is reluctant to leave the patient alone during the exam or who answers questions on the patient's behalf. In children specifically, abusive head trauma (\"shaken baby syndrome\") classically produces bilateral, multilayered retinal hemorrhages extending to the periphery — a highly specific finding an eye care provider may be the first to detect, since these infants often lack external signs of trauma. In elder abuse, ocular findings can include periorbital ecchymosis or subconjunctival hemorrhage inconsistent with the stated mechanism." },
     ],
     memorizeIt: [
       "Chronic alcohol use connects to your Optic Nerve content (nutritional optic neuropathy) and GI content (cirrhosis, scleral icterus).",
       "Opioid intoxication classically causes pupillary miosis; overdose causes respiratory depression.",
       "A thorough substance use history can explain otherwise puzzling ocular findings.",
+      "Abusive head trauma (shaken baby syndrome): bilateral, multilayered retinal hemorrhages extending to the periphery — a highly specific, sometimes first-detected finding on eye exam. Optometrists are mandated reporters for suspected abuse in most jurisdictions.",
     ],
     applyIt: [
       "This ties back to your Optic Nerve content: chronic heavy alcohol use is a recognized risk factor for the same nutritional (B12/folate/thiamine-related) optic neuropathy you already studied — a relevant piece of case history when evaluating unexplained, gradual, symmetric vision loss.",
@@ -6377,12 +6388,14 @@ const STUDY_PAGES = {
       { h: "Epidemiology", t: "A leading cause of preventable childhood blindness in developing regions with limited dietary vitamin A access; also seen in developed regions in the context of malabsorption (e.g., from bariatric surgery, cystic fibrosis, or severe chronic GI disease affecting fat-soluble vitamin absorption)." },
       { h: "Diagnostic testing", t: "Primarily clinical, based on the characteristic staged findings; serum retinol levels can confirm deficiency." },
       { h: "Management", t: "Vitamin A supplementation, which can reverse early findings (night blindness, xerosis, Bitot spots) if treated promptly, though corneal scarring from advanced keratomalacia may be irreversible." },
+      { h: "The other end of the spectrum — vitamin A toxicity (hypervitaminosis A)", t: "Because vitamin A is fat-soluble, it accumulates in the body, and excess intake (from high-dose supplementation or, rarely, excessive dietary intake such as polar bear liver) causes toxicity rather than simply being excreted like water-soluble vitamins. Chronic hypervitaminosis A can cause idiopathic intracranial hypertension (pseudotumor cerebri) with papilledema — directly relevant to your existing Papilledema content, where medication/vitamin history is part of the standard workup — along with headache, skin changes (dry, peeling skin), hepatotoxicity, and, in pregnancy, teratogenicity (a reason isotretinoin, a vitamin A derivative, requires strict pregnancy prevention precautions)." },
     ],
     memorizeIt: [
       "Night blindness is the earliest sign of vitamin A deficiency — from impaired rhodopsin regeneration.",
       "Bitot spots: foamy, triangular, keratinized conjunctival patches — a hallmark, specific finding.",
       "Progression: conjunctival xerosis → Bitot spots → corneal xerosis → corneal ulceration → keratomalacia.",
       "A leading cause of preventable childhood blindness worldwide.",
+      "Vitamin A TOXICITY (hypervitaminosis A, a fat-soluble vitamin) can cause idiopathic intracranial hypertension/papilledema — a vitamin history belongs in any papilledema workup.",
     ],
     applyIt: [
       "Board differentiator: night blindness from vitamin A deficiency is a reversible nutritional problem (rhodopsin regeneration), while night blindness from retinitis pigmentosa (your earlier content) reflects irreversible genetic photoreceptor degeneration — the symptom is identical, but the underlying mechanism and prognosis are completely different, which is exactly the kind of distinction boards test.",
@@ -6453,6 +6466,28 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This is the ultimate integration topic: nearly every systemic disease you've studied so far — diabetic retinopathy, hypertensive retinopathy, atherosclerotic disease, cirrhosis, osteoarthritis — traces back in many patients to this same shared root cause. Recognizing obesity/metabolic syndrome as the common upstream driver, rather than treating each downstream disease as an isolated fact, is the highest-level pattern this platform has built toward.",
+    ],
+  },
+  "nutr-trace-malabsorption": {
+    name: "Trace Mineral Deficiencies & Malabsorption Syndromes",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard nutrition/internal medicine references (e.g., standard internal medicine texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the vitamin deficiencies already covered, trace mineral deficiencies and the malabsorption syndromes that commonly produce them are separately testable, with two trace minerals — zinc and copper — carrying genuinely important, distinct ocular relevance." },
+      { h: "Zinc deficiency", t: "Zinc is a cofactor for many enzymes, including some involved in retinal metabolism, and is one of the antioxidant minerals included in the AREDS2 formulation already relevant to your Age-Related Macular Degeneration content (alongside vitamin C, vitamin E, lutein, and zeaxanthin, with copper added specifically to offset the copper deficiency that high-dose zinc supplementation alone can cause). Severe zinc deficiency can also impair dark adaptation, distinct from the classic vitamin A mechanism." },
+      { h: "Copper deficiency and Wilson disease — a genetics/nutrition crossover", t: "Copper deficiency itself is uncommon but can occur with malabsorption or excess zinc supplementation, causing anemia and neurologic findings. The more heavily tested copper-related entity is the reverse problem — Wilson disease, an autosomal recessive disorder of copper metabolism (ATP7B gene) causing pathologic COPPER ACCUMULATION rather than deficiency — with the classic ocular finding of Kayser-Fleischer rings (a golden-brown to greenish ring of copper deposition in Descemet's membrane at the corneal periphery, best seen on slit lamp or gonioscopy) and, less commonly, a \"sunflower cataract\" (copper deposition in the anterior/posterior lens capsule). Wilson disease also causes hepatic and neuropsychiatric disease from copper accumulation in the liver and basal ganglia." },
+      { h: "Malabsorption syndromes", t: "Conditions impairing nutrient absorption — celiac disease (autoimmune, gluten-triggered small bowel enteropathy), cystic fibrosis (pancreatic exocrine insufficiency, already noted in your Vitamin A content), inflammatory bowel disease (already covered in your Gastrointestinal content), and prior bariatric/small bowel surgery — put patients at risk for multiple simultaneous deficiencies, particularly of the fat-soluble vitamins (A, D, E, K) already covered, since fat malabsorption impairs their absorption together." },
+      { h: "Clinical relevance", t: "A patient with unexplained bull's-eye-appearing corneal ring findings, unusual cataract morphology, or multiple simultaneous nutritional deficiency signs should prompt consideration of an underlying malabsorptive or metabolic mineral disorder, not just an isolated dietary insufficiency." },
+    ],
+    memorizeIt: [
+      "Zinc + copper (with vitamins C, E, lutein/zeaxanthin) are the AREDS2 formulation components — already relevant to your AMD content; copper offsets the copper deficiency high-dose zinc alone would cause.",
+      "Wilson disease (copper ACCUMULATION, not deficiency; autosomal recessive, ATP7B): Kayser-Fleischer rings (Descemet's membrane, corneal periphery) and sunflower cataract.",
+      "Malabsorption syndromes (celiac disease, cystic fibrosis, IBD, bariatric surgery) risk multiple simultaneous fat-soluble vitamin deficiencies (A, D, E, K).",
+      "Kayser-Fleischer rings are best appreciated on slit lamp/gonioscopy — a genuine ocular diagnostic clue for a systemic metabolic disease.",
+    ],
+    applyIt: [
+      "This connects directly to your AMD/AREDS2 content: zinc and copper are co-formulated specifically because high-dose zinc alone induces copper deficiency, and separately, recognizing Kayser-Fleischer rings on slit lamp exam can be the finding that leads to a Wilson disease diagnosis in a young patient with unexplained liver or neuropsychiatric findings — another example of the eye exam providing diagnostically decisive information for a systemic metabolic disorder.",
     ],
   },
   "repro-preeclampsia": {
@@ -6546,6 +6581,28 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This closes the loop with your Metastasis content from the Neoplasia topic: now that you know the systemic disease itself (risk factors, presentation, screening), you have the full clinical picture behind why breast cancer specifically tops the differential for an unexplained choroidal or orbital mass in a woman.",
+    ],
+  },
+  "repro-prostate-ed": {
+    name: "Prostate Disorders & Erectile Dysfunction",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard urology/internal medicine references (e.g., standard internal medicine texts)"],
+    learnIt: [
+      { h: "Overview", t: "The male reproductive/genitourinary system has two distinct, high-yield disease entities worth recognizing: prostate disorders (benign prostatic hyperplasia and prostate cancer) and erectile dysfunction — both common in older men and both relevant to the systemic disease connections already built across this platform." },
+      { h: "Benign prostatic hyperplasia (BPH)", t: "A very common, non-malignant enlargement of the prostate in aging men, causing lower urinary tract symptoms from urethral compression (weak stream, urinary frequency/urgency, nocturia, incomplete emptying) — distinct from prostate cancer, though both can coexist and both can elevate PSA, which is why an elevated PSA alone does not confirm cancer." },
+      { h: "Prostate cancer", t: "The most common non-skin cancer in men; often asymptomatic in early, localized disease and increasingly detected via PSA screening (already covered in your Tumor Markers content) or digital rectal exam, with an irregular, hard, nodular prostate on exam raising more concern than the smooth, diffusely enlarged prostate typical of BPH. Advanced disease classically metastasizes to bone, producing osteoblastic (sclerotic) bone lesions and bone pain — distinct from the predominantly osteolytic pattern of many other metastatic cancers." },
+      { h: "Erectile dysfunction (ED)", t: "Persistent inability to achieve or maintain an erection sufficient for satisfactory sexual activity; while psychogenic causes exist, ED in an older patient is frequently VASCULOGENIC in origin, sharing the same endothelial dysfunction and atherosclerotic risk factor profile already covered in your Cardiovascular/Atherosclerosis content — ED can be an early clinical marker of systemic vascular disease, since the small penile arteries may show flow-limiting atherosclerotic changes before larger coronary vessels do. Diabetes (via both vascular and neuropathic mechanisms, already covered) is another major cause." },
+      { h: "Clinical relevance — ED as a vascular sentinel symptom", t: "A patient reporting new erectile dysfunction, particularly with other cardiovascular risk factors, warrants consideration of underlying atherosclerotic or diabetic vascular disease — the same systemic vascular pathology already connected throughout this platform to hypertensive and diabetic retinopathy, reinforcing the recurring theme that microvascular and macrovascular disease often manifest across multiple organ systems in the same patient." },
+    ],
+    memorizeIt: [
+      "BPH: benign, common with aging, urethral compression symptoms (weak stream, frequency, nocturia) — can coexist with and elevate PSA alongside prostate cancer.",
+      "Prostate cancer: most common non-skin cancer in men; irregular/hard/nodular exam finding; classically metastasizes to bone with OSTEOBLASTIC (sclerotic) lesions.",
+      "Erectile dysfunction in older men is frequently VASCULOGENIC — shares atherosclerotic/endothelial dysfunction risk factors already covered under Cardiovascular content, and can be an early marker of systemic vascular disease.",
+      "Diabetes causes ED via both vascular and neuropathic mechanisms.",
+    ],
+    applyIt: [
+      "This connects directly to your Atherosclerosis and Diabetes content: new-onset erectile dysfunction in a middle-aged or older man should prompt consideration of underlying cardiovascular risk, since the same small-vessel atherosclerotic process already linked to hypertensive and diabetic retinopathy elsewhere on this platform often affects the penile vasculature early, sometimes before overt coronary disease is diagnosed.",
     ],
   },
   "color-congenital": {
@@ -7338,12 +7395,14 @@ const STUDY_PAGES = {
       { h: "Fever", t: "Reflects an inflammatory or infectious process in most cases, though can also occur with malignancy or autoimmune disease (your Immunologic content) — the pattern, duration, and associated symptoms help narrow the differential considerably." },
       { h: "Dizziness", t: "A term patients use inconsistently — clarifying whether they mean true vertigo (a spinning sensation, often vestibular/neurologic in origin), presyncope (feeling faint, often cardiovascular), or general imbalance is an essential first step, since these point toward very different differential diagnoses and different organ systems." },
       { h: "Clinical relevance", t: "Recognizing when a patient's reported systemic symptom might be relevant to their eye care (e.g., could explain visual complaints, or represents an urgent referral need) versus when it's outside your scope but still worth noting and potentially referring, is a practical skill this topic supports." },
+      { h: "Abnormal body habitus and demeanor — pattern recognition across systemic disease", t: "A patient's general body habitus and demeanor can itself be a diagnostic clue, drawing directly on disease content already built across this platform: MARFANOID habitus (tall, thin stature, long limbs/fingers — arachnodactyly, already covered under Marfan Syndrome content) should prompt a lens exam for ectopia lentis; CUSHINGOID habitus (central/truncal obesity, moon facies, buffalo hump, thin extremities and skin, easy bruising, already covered under Hypercortisolism/Cushing content) suggests glucocorticoid excess (endogenous or from chronic steroid use, relevant given steroids' own cataract/glaucoma risk already covered); ACROMEGALIC features (enlarged hands/feet, coarsened facial features, prognathism, from excess growth hormone) suggest a growth-hormone-secreting pituitary adenoma (already covered under Hyperpituitarism content, and relevant to the bitemporal hemianopia risk from chiasmal compression); and MYXEDEMATOUS facies (puffy, coarse facial features, dry skin, hair thinning) suggests hypothyroidism, already covered under Endocrine content." },
     ],
     memorizeIt: [
       "Fatigue has an extremely broad differential — anemia, hypothyroidism, depression, chronic infection, malignancy, among many others.",
       "Unintentional weight loss is generally more concerning than fatigue alone and warrants more urgent evaluation.",
       "\"Dizziness\" must be clarified: true vertigo vs. presyncope vs. general imbalance point toward very different causes.",
       "Many of these symptom differentials connect directly to disease content already covered across this platform.",
+      "Body habitus pattern recognition: Marfanoid → ectopia lentis risk. Cushingoid → glucocorticoid excess. Acromegalic → GH-secreting pituitary adenoma/chiasmal compression risk. Myxedematous → hypothyroidism.",
     ],
     applyIt: [
       "A patient mentioning unintentional weight loss or persistent fatigue during a routine eye exam history is sharing information worth taking seriously and potentially referring for further workup — recognizing these as \"red flag\" symptoms, even outside your direct treatment scope, is part of comprehensive patient care.",
@@ -7380,12 +7439,14 @@ const STUDY_PAGES = {
       { h: "BLS core principles", t: "Recognition of cardiac arrest (unresponsiveness, absent/abnormal breathing), prompt activation of emergency response, high-quality chest compressions, and use of an automated external defibrillator (AED) when available — the core sequence taught in standard BLS certification courses, which many healthcare settings require for staff." },
       { h: "Preventive medicine and screening principles", t: "General concepts include the distinction between screening (testing asymptomatic individuals to detect disease early) and diagnostic testing (evaluating a symptomatic patient), and the principle that effective screening requires a sufficiently prevalent, detectable, and treatable condition to provide net benefit — concepts already implicitly relevant to why routine vision/amblyopia screening (your Amblyopia and Visual Development content) and diabetic retinopathy screening (your Retina/Diabetes content) are recommended practices." },
       { h: "Clinical relevance", t: "Being prepared for a medical emergency in an eye care setting (e.g., a patient becoming unresponsive during an exam) and understanding the screening principles that justify your own field's recommended screening practices (pediatric vision screening, diabetic eye exams) are both practical applications of this general medical knowledge." },
+      { h: "Physical developmental norms and standard screening labs", t: "Comprehensive general health knowledge also includes recognizing normal physical developmental milestones across the lifespan (e.g., the pediatric growth-chart norms and visual developmental milestones already covered in your Visual Developmental Milestones content, and normal age-related physiologic change patterns already covered under Anomalies of the Aging Adult) as a baseline against which abnormal presentations are recognized, and familiarity with the standard laboratory tests used for general medical screening: a complete blood count (CBC, screens for anemia/infection, already relevant to your Hematopoietic content), a comprehensive metabolic panel (electrolytes, renal and hepatic function), a fasting lipid panel and HbA1c/fasting glucose (already relevant to your Atherosclerosis and Diabetes content), and TSH (already relevant to your Endocrine content) — recognizing which lab abnormality pattern corresponds to which systemic disease already covered ties this general screening panel back to disease-specific content throughout the platform." },
     ],
     memorizeIt: [
       "BLS core sequence: recognize arrest, activate emergency response, chest compressions, AED use.",
       "Screening = testing asymptomatic individuals; diagnostic testing = evaluating a symptomatic patient — different purposes.",
       "Effective screening requires a sufficiently prevalent, detectable, and treatable condition for net benefit.",
       "These principles underlie why practices like diabetic eye screening and pediatric vision screening are recommended.",
+      "Standard screening labs: CBC (anemia/infection), metabolic panel (renal/hepatic function, electrolytes), lipid panel + HbA1c (cardiovascular/diabetes risk), TSH (thyroid function).",
     ],
     applyIt: [
       "This connects to a recurring theme across this platform: pediatric vision screening (your Visual Development content) and diabetic retinopathy screening (your Retina content) are both justified by these same general preventive medicine principles — early detection of a prevalent, treatable condition provides net benefit, the same logic applies across different specific screening programs.",
@@ -7401,11 +7462,13 @@ const STUDY_PAGES = {
       { h: "Key phagocytic cells", t: "Neutrophils (PMNs) are the predominant early responders in acute bacterial infection, arriving rapidly and short-lived; macrophages (derived from circulating monocytes) provide longer-term phagocytic activity and play a central role in chronic inflammation and antigen presentation, bridging innate and adaptive immunity." },
       { h: "Chemotaxis and phagocytic process", t: "Phagocytic cells are recruited to a site of infection/injury via chemotaxis (movement along a chemical gradient of inflammatory mediators), then recognize, engulf, and destroy the target using enzymatic and oxidative mechanisms within specialized intracellular compartments." },
       { h: "Role of antibody and complement", t: "Opsonization — coating a pathogen with antibody or complement proteins (already covered in your Immunologic System content) — dramatically enhances phagocytic efficiency by providing a recognizable \"tag\" for phagocytic cell receptors, connecting the innate and adaptive immune mechanisms." },
-      { h: "Clinical relevance", t: "Impaired phagocytic function (from certain genetic conditions or acquired immunosuppression) increases susceptibility to recurrent or severe infections, and understanding this pathway underlies the basic rationale for how the body clears many of the infectious conditions already covered across this platform's content." },
+      { h: "Eosinophil function — the third named phagocytic cell", t: "Eosinophils are a distinct granulocyte lineage whose primary role differs from neutrophils and macrophages: rather than being the predominant defense against typical bacteria, eosinophils are specialized for defense against PARASITIC (particularly helminth/multicellular) infections, releasing cytotoxic granule contents (including major basic protein) that are too large to be phagocytosed conventionally, and directly damaging the parasite's surface. Eosinophils have limited bactericidal/phagocytic capacity compared to neutrophils and macrophages for typical bacterial pathogens. Eosinophils are also centrally recruited in Th2-driven allergic/atopic inflammation (already covered in your Cytokines/Th1-Th2 content) — the same eosinophilic infiltration pattern seen in allergic and vernal conjunctivitis, already covered in your Allergic Conjunctivitis content, reflecting the same underlying eosinophil biology applied to an allergic rather than parasitic trigger." },
+      { h: "Clinical relevance", t: "Impaired phagocytic function (from certain genetic conditions or acquired immunosuppression) increases susceptibility to recurrent or severe infections, and understanding this pathway underlies the basic rationale for how the body clears many of the infectious conditions already covered across this platform's content. Peripheral eosinophilia on a blood count should prompt consideration of parasitic infection or an allergic/atopic process (including ocular allergic disease) as part of the differential." },
     ],
     memorizeIt: [
       "Neutrophils = predominant early responders in acute bacterial infection.",
       "Macrophages = longer-term phagocytic activity, bridge innate and adaptive immunity.",
+      "Eosinophils = specialized for PARASITIC (helminth) defense via cytotoxic granule release (major basic protein), not conventional bacterial phagocytosis; also drive Th2 allergic inflammation, including allergic/vernal conjunctivitis (already covered).",
       "Chemotaxis recruits phagocytic cells to the site of infection/injury.",
       "Opsonization (antibody/complement coating) enhances phagocytic efficiency.",
     ],
@@ -11797,6 +11860,29 @@ const STUDY_PAGES = {
       "This gives you a genuinely transferable clinical red-flag pattern: whenever a mass lesion is found near a named nerve (parotid/facial nerve, thyroid/recurrent laryngeal nerve, or by extension any other anatomic region with a nearby named nerve), the presence of nerve dysfunction (weakness, paralysis, hoarseness) should raise concern for malignant invasion rather than benign displacement — a pattern-recognition principle that generalizes well beyond just these two specific examples and reflects a fundamental difference in how benign versus malignant tumors interact with surrounding structures.",
     ],
   },
+  "pathheadneck-exam-symptoms": {
+    name: "Cervical Lymphadenopathy, Vascular Auscultation & Referred Head/Neck Symptoms",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard head and neck pathology/physical diagnosis references"],
+    learnIt: [
+      { h: "Overview", t: "A comprehensive head and neck evaluation includes examination skills beyond visual inspection: palpation for lymphadenopathy, auscultation for vascular bruits, and recognition of the significance of certain referred symptoms (dysarthria, dysphagia, dysphonia, hoarseness) and temporomandibular joint (TMJ) dysfunction — all genuinely relevant to a comprehensive eye care history and physical, since head/neck pathology can present with periorbital or visual symptoms." },
+      { h: "Cervical lymphadenopathy", t: "Enlarged cervical lymph nodes have a broad differential spanning benign reactive lymphadenopathy (from a local infection, e.g., a viral upper respiratory infection or the adenoviral conjunctivitis already covered in your Cornea content, which classically produces a palpable preauricular node) to malignant causes (metastatic disease from a head/neck primary, or lymphoma, already covered in your Hematopoietic content). Features raising concern for malignancy include a node that is hard, fixed to surrounding tissue, painless, and progressively enlarging, versus a benign reactive node that is typically softer, mobile, and tender." },
+      { h: "Auscultation for bruits and venous hum", t: "Auscultating over the carotid arteries can reveal a bruit — a turbulent-flow sound suggesting carotid stenosis, a source of embolic disease already relevant to your Amaurosis Fugax/CRAO and Cerebrovascular Disease content. Auscultating over the orbit/globe itself can occasionally reveal a bruit or continuous \"venous hum,\" a genuinely important finding suggesting a carotid-cavernous fistula (already covered in your Elevated Episcleral Venous Pressure/secondary glaucoma content) — an abnormal direct connection between the carotid artery and cavernous sinus that can present with pulsatile proptosis, dilated/tortuous \"corkscrew\" episcleral vessels, and an audible orbital bruit that may even be perceived by the patient (subjective bruit)." },
+      { h: "Significance of dysarthria, dysphagia, dysphonia, and hoarseness", t: "These referred symptoms localize to cranial nerve or bulbar/brainstem dysfunction and should not be dismissed as unrelated to a neuro-ophthalmic presentation: dysarthria (slurred/unclear speech) and dysphagia (difficulty swallowing) can reflect bulbar involvement in conditions already covered on this platform, including myasthenia gravis (fatigable weakness, already covered) and brainstem stroke; dysphonia/hoarseness can reflect vocal cord paralysis from recurrent laryngeal nerve involvement (already covered under Thyroid/Salivary Gland malignancy red flags) or, more centrally, brainstem or skull-base pathology affecting the vagus nerve. New or progressive dysarthria/dysphagia/dysphonia occurring alongside diplopia or ptosis should raise concern for a bulbar or neuromuscular process requiring urgent evaluation." },
+      { h: "Temporomandibular joint (TMJ) dysfunction", t: "TMJ disorder can present with periauricular/periorbital pain, headache, and jaw clicking or limited opening, and is a recognized entry in the differential for facial/periorbital pain of non-ocular origin — worth distinguishing from the jaw claudication of giant cell arteritis (already covered in your Headache/GCA content), since jaw claudication specifically refers to pain with chewing that resolves with rest, a distinct pattern from typical TMJ pain." },
+    ],
+    memorizeIt: [
+      "Malignant lymph node features: hard, fixed, painless, progressively enlarging. Benign reactive node: soft, mobile, tender.",
+      "Carotid bruit on auscultation suggests carotid stenosis — a source of embolic disease relevant to amaurosis fugax/CRAO/stroke.",
+      "Orbital bruit/venous hum suggests carotid-cavernous fistula — look for pulsatile proptosis and corkscrew episcleral vessels (already covered under elevated episcleral venous pressure).",
+      "Dysarthria/dysphagia (bulbar signs) + dysphonia/hoarseness (vagus/recurrent laryngeal nerve) alongside diplopia/ptosis should raise concern for a neuromuscular or brainstem process (e.g., myasthenia gravis, brainstem stroke).",
+      "TMJ dysfunction is a periorbital/facial pain differential distinct from GCA jaw claudication (which specifically worsens with chewing and resolves with rest).",
+    ],
+    applyIt: [
+      "This gives you a genuinely important bedside skill connecting directly to existing content: recognizing a pulsatile orbital bruit with corkscrew episcleral vessels as a carotid-cavernous fistula (rather than routine conjunctival injection) links your physical exam finding directly to the elevated episcleral venous pressure mechanism of secondary glaucoma already covered — and recognizing dysarthria/dysphonia alongside ocular motor findings should prompt the same urgent neuromuscular/brainstem workup already established for myasthenia gravis and stroke elsewhere on this platform.",
+    ],
+  },
   "congenital-neurofibromatosis": {
     name: "Neurofibromatosis (Type 1 & Type 2)",
     priority: "MUST",
@@ -11839,6 +11925,31 @@ const STUDY_PAGES = {
       "This gives you another genuinely useful example of the eye exam's diagnostic contribution to systemic genetic disease recognition, directly paralleling the Lisch nodule/NF1 pattern already covered: identifying a characteristic retinal astrocytic hamartoma on fundus exam in a child with seizures or suggestive skin findings can meaningfully support a TSC diagnosis, and recognizing its typically benign, asymptomatic natural history (unlike many other retinal lesions requiring active management) helps you appropriately reassure rather than over-treat when this specific finding is identified.",
     ],
   },
+  "congenital-torch": {
+    name: "Congenital (TORCH) Infections",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard pediatric/perinatal pathology references (e.g., standard pediatrics/infectious disease texts)"],
+    learnIt: [
+      { h: "Overview", t: "TORCH is a mnemonic for a group of infections that can cross the placenta or be transmitted perinatally, producing a partially overlapping constellation of congenital findings — genuinely high-yield given how often congenital cataract, chorioretinitis, and other ocular findings already covered on this platform trace back to one of these organisms. TORCH = Toxoplasmosis, Other (syphilis, varicella, parvovirus B19), Rubella, Cytomegalovirus (CMV), and Herpes simplex virus (HSV)." },
+      { h: "Congenital toxoplasmosis", t: "From maternal infection (classically via undercooked meat or cat feces/litter box exposure) transmitted transplacentally; classic findings are the triad of chorioretinitis, hydrocephalus, and intracranial calcifications — the chorioretinitis (often bilateral, macular-involving) is a genuinely important ocular finding and, notably, toxoplasmosis is also the most common cause of infectious posterior uveitis/retinochoroiditis in immunocompetent patients generally (including reactivation later in life), not just congenitally." },
+      { h: "Congenital rubella syndrome", t: "From maternal rubella infection, particularly in the first trimester when risk of fetal transmission and severity are highest; the classic triad is sensorineural hearing loss, congenital heart defects (classically patent ductus arteriosus), and cataract (already referenced in your Congenital Cataract content) — the cataract is often bilateral and can be associated with a \"salt-and-pepper\" pigmentary retinopathy, which (unlike the cataract) is typically visually insignificant." },
+      { h: "Congenital CMV", t: "The most common congenital infection overall (more common than toxoplasmosis or rubella), most infected infants are asymptomatic at birth, but symptomatic congenital CMV can cause sensorineural hearing loss (the most common long-term sequela), microcephaly, intracranial (periventricular) calcifications, and chorioretinitis — hearing loss can also be progressive/delayed-onset even in initially asymptomatic infants, which is why congenital CMV is a leading nongenetic cause of childhood sensorineural hearing loss." },
+      { h: "Congenital syphilis", t: "From transplacental Treponema pallidum transmission; classic late findings make up Hutchinson's triad — interstitial keratitis, Hutchinson teeth (notched, peg-shaped incisors), and sensorineural hearing loss (CN VIII involvement) — with interstitial keratitis (bilateral corneal stromal inflammation, typically presenting later in childhood, not at birth) being the genuinely important ocular finding, already referenced in your STI/Ocular Manifestations content." },
+      { h: "Congenital HSV", t: "Usually acquired perinatally during vaginal delivery from an actively shedding maternal genital HSV lesion (rather than transplacentally like the others); can cause a severe, potentially disseminated or CNS infection in the neonate, with skin/eye/mouth involvement including keratoconjunctivitis — a genuine neonatal emergency given the risk of disseminated disease, distinct from the more common adult/pediatric ocular HSV already covered under Herpes Simplex Keratitis content." },
+      { h: "Clinical relevance — the shared and distinguishing ocular clues", t: "Recognizing that congenital chorioretinitis points toward toxoplasmosis or CMV, congenital cataract with sensorineural hearing loss and cardiac defects points toward rubella, and interstitial keratitis with dental/hearing findings points toward syphilis gives you an organism-narrowing framework from ocular findings alone — directly useful for a pediatric patient presenting with an unexplained congenital ocular finding of uncertain etiology." },
+    ],
+    memorizeIt: [
+      "TORCH = Toxoplasmosis, Other (syphilis), Rubella, CMV, HSV.",
+      "Toxoplasmosis triad: chorioretinitis + hydrocephalus + intracranial calcifications. Also the most common cause of infectious posterior uveitis generally.",
+      "Rubella triad: sensorineural hearing loss + PDA (cardiac defect) + cataract (± salt-and-pepper retinopathy, visually insignificant).",
+      "CMV: MOST COMMON congenital infection overall; sensorineural hearing loss is the most common long-term sequela, can be progressive/delayed even if asymptomatic at birth.",
+      "Congenital syphilis (Hutchinson's triad): interstitial keratitis + Hutchinson teeth + sensorineural hearing loss.",
+    ],
+    applyIt: [
+      "This gives you an organism-narrowing framework directly from ocular findings: congenital chorioretinitis should raise toxoplasmosis or CMV; congenital cataract with hearing loss and a cardiac defect should raise rubella (already referenced in your Congenital Cataract content); and interstitial keratitis presenting later in childhood, alongside dental and hearing findings, should raise congenital syphilis (already referenced in your STI/Ocular Manifestations content as part of the syphilis 'great masquerader' pattern) — recognizing these organism-specific clusters lets the eye exam meaningfully narrow a congenital infectious differential.",
+    ],
+  },
   "childanomalies-fetal-alcohol": {
     name: "Fetal Alcohol Spectrum Disorder",
     priority: "SHOULD",
@@ -11870,12 +11981,14 @@ const STUDY_PAGES = {
       { h: "Organic vs. non-organic causes — a useful initial framework", t: "Organic FTT results from an identifiable underlying medical condition impairing growth — including malabsorption (e.g., celiac disease, cystic fibrosis-related pancreatic insufficiency, already conceptually related to the pancreatic exocrine function covered under Digestion & Absorption), congenital heart disease (increased metabolic demand from inadequate cardiac output, already conceptually related to Heart Chambers content), chronic infections, endocrine disorders, and genetic/metabolic conditions (some already covered under Genetic Principles and Inborn Errors of Metabolism-type conditions); non-organic FTT results from psychosocial factors (inadequate caloric intake from neglect, feeding difficulties, or poverty) without an identifiable underlying medical condition — though in practice, many cases involve overlapping organic and psychosocial contributors." },
       { h: "Metabolic and genetic causes with ocular relevance", t: "Certain metabolic and genetic conditions causing FTT have specific ocular findings already relevant elsewhere on this platform or worth being aware of — galactosemia (an inherited metabolic disorder) causes FTT alongside cataracts (from galactitol accumulation in the lens, an osmotic mechanism conceptually parallel to the diabetic 'true diabetic' snowflake cataract sorbitol mechanism already covered under Diabetic Cataract content); mitochondrial disorders (already covered under Cellular Respiration & ATP Production) can present with FTT alongside their more classically emphasized ophthalmic findings (optic atrophy, ophthalmoplegia, already covered)." },
       { h: "Direct clinical relevance — the eye exam's role in a broader workup", t: "This content reinforces a theme already established across several genetic/metabolic topics on this platform: a child presenting with failure to thrive and an unexplained cataract, optic nerve finding, or other ocular abnormality may be exhibiting the ocular manifestation of an underlying systemic metabolic or genetic condition, and recognizing conditions like galactosemia (where the OSMOTIC cataract mechanism directly parallels the sorbitol-driven diabetic cataract mechanism already covered) demonstrates how understanding one metabolic disease mechanism can help you recognize an analogous mechanism in a different condition." },
+      { h: "Broader developmental disorders — epidemiology and screening relevance", t: "Beyond growth failure specifically, \"deviation from expected patterns of development\" also encompasses global developmental delay (a child failing to meet multiple developmental milestone domains — motor, language, cognitive, social — before age 5) and autism spectrum disorder (a neurodevelopmental condition characterized by impaired social communication and restricted/repetitive behaviors, with rising recognized prevalence over recent decades, in part from broadened diagnostic criteria and increased screening). Universal developmental screening at routine pediatric well-child visits is standard practice, and a child flagged on developmental screening warrants a broader medical workup, which can include an ophthalmologic/optometric exam, since visual impairment itself can secondarily delay motor and social developmental milestones (already implicit in your Visual Developmental Milestones content) and should be excluded as a contributing or confounding factor before attributing delay purely to a primary neurodevelopmental diagnosis." },
     ],
     memorizeIt: [
       "FTT causes: organic (identifiable medical condition — malabsorption, congenital heart disease, chronic infection, endocrine, genetic/metabolic) vs. non-organic (psychosocial, often overlapping with organic factors in practice).",
       "Galactosemia: FTT + cataracts, from galactitol accumulation in the lens (osmotic mechanism, parallel to diabetic sorbitol-driven cataract already covered).",
       "Mitochondrial disorders can present with FTT alongside their more classic ophthalmic findings (optic atrophy, ophthalmoplegia, already covered).",
       "A child with FTT + unexplained ocular finding (cataract, optic nerve abnormality) should prompt consideration of an underlying systemic metabolic/genetic condition.",
+      "Global developmental delay = failure to meet multiple milestone domains before age 5; visual impairment itself can secondarily delay motor/social milestones and should be excluded on any developmental delay workup.",
     ],
     applyIt: [
       "This gives you a genuinely transferable pattern-recognition skill already reinforced by your existing Diabetic Cataract content: galactosemia's osmotic cataract mechanism (galactitol accumulation) is mechanistically parallel to the sorbitol-driven osmotic cataract mechanism in poorly controlled diabetes, and recognizing this shared 'osmotically active sugar alcohol accumulates in the lens, causing cataract' pattern helps you understand why cataracts can be an early or presenting sign of otherwise unsuspected metabolic disease in a child with failure to thrive, rather than treating each metabolic cataract cause as an isolated, unrelated fact.",
@@ -11921,6 +12034,29 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you the pharmacokinetic rationale for why a thorough, regularly updated medication history is essential in comprehensive eye care, especially in older patients: age-related declines in hepatic and renal drug clearance (already covered functionally under Renal Physiology) mean systemic medications can accumulate and produce ocular side effects at standard doses that might not occur in younger patients, and recognizing specific culprit medications (hydroxychloroquine, amiodarone, corticosteroids, anticholinergics) connects your existing knowledge of their individual ocular effects to the broader geriatric pharmacokinetic principles explaining why older patients are disproportionately affected.",
+    ],
+  },
+  "aginganomalies-sensory-cognitive": {
+    name: "Hearing, Cognitive & Psychosocial Changes in the Aging Adult",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard geriatric medicine references (e.g., standard geriatrics texts)"],
+    learnIt: [
+      { h: "Overview", t: "The outline specifically calls out non-visual perceptual and functional changes of aging across four domains: hearing, coordination, cognition, and psycho-social status. Coordination is already addressed in your Frailty & Fall Risk content (gait speed, weakness); this topic covers the remaining three, each with genuine relevance to comprehensive geriatric care and, in several cases, direct interaction with vision changes already covered elsewhere on this platform." },
+      { h: "Hearing — presbycusis", t: "Presbycusis is age-related, typically bilateral and symmetric sensorineural hearing loss, initially affecting higher frequencies (making consonant sounds and speech-in-noise discrimination disproportionately difficult even when overall hearing seems adequate) before progressing to lower frequencies. Combined sensory impairment (hearing loss PLUS vision impairment, already covered under your Aging/Cataract/AMD content) — sometimes called \"dual sensory impairment\" — has an outsized negative impact on communication, fall risk (already covered under Frailty & Fall Risk, since auditory cues contribute to spatial awareness), and social isolation, worse than either impairment alone." },
+      { h: "Cognition — mild cognitive impairment and dementia", t: "Age-related cognitive change exists on a spectrum from normal aging (mild, non-progressive slowing of processing speed and word-finding) to mild cognitive impairment (MCI, measurable cognitive decline beyond normal aging but not yet impairing independent daily function) to dementia (cognitive decline severe enough to impair independent function), of which Alzheimer disease (already covered in your Nervous System/Neurodegenerative Disease content) is the most common cause. Brief cognitive screening tools such as the Mini-Mental State Examination (MMSE, already referenced in your Psychological Tests content) can be used to flag concerning cognitive change for further workup. Cognitive impairment is directly relevant to eye care practice: it can affect a patient's ability to understand instructions, adhere to a complex glaucoma drop regimen, or reliably report visual symptoms, and may require involving a caregiver in care planning." },
+      { h: "Psycho-social status", t: "Aging is associated with meaningful psychosocial changes and risks: social isolation and loneliness (from loss of spouse/peers, reduced mobility, or sensory impairment as above), increased risk of late-life depression (which can present atypically in older adults, with more prominent somatic complaints or cognitive symptoms — sometimes called \"pseudodementia\" when severe depression mimics dementia — rather than classic mood symptoms, distinct from but related to the Major Depressive Disorder content already covered), and elder abuse risk (already covered in your Behavioral Disorders content) in dependent or isolated older adults." },
+      { h: "Clinical relevance — the integrated geriatric picture", t: "Recognizing that hearing loss, cognitive change, and psychosocial factors interact with the visual changes already covered across this platform's Cataract, AMD, and Frailty content reinforces that comprehensive geriatric eye care means seeing the whole patient — a patient with new difficulty following exam instructions may reflect hearing loss or early cognitive impairment rather than poor cooperation, and addressing correctable vision loss can itself meaningfully reduce the combined burden of dual sensory impairment and social isolation." },
+    ],
+    memorizeIt: [
+      "Presbycusis: bilateral, symmetric, sensorineural, high-frequency-first hearing loss.",
+      "\"Dual sensory impairment\" (hearing + vision loss) has an outsized negative effect on communication, falls, and social isolation compared to either alone.",
+      "Cognitive spectrum: normal aging → mild cognitive impairment (MCI) → dementia (Alzheimer disease is the most common cause, already covered).",
+      "Late-life depression can present atypically (somatic complaints, cognitive symptoms/\"pseudodementia\") rather than classic mood symptoms.",
+      "Cognitive impairment affects medication adherence (e.g., glaucoma drops) and reliability of reported symptoms — may require caregiver involvement in care planning.",
+    ],
+    applyIt: [
+      "This connects your Aging/Cataract/AMD, Frailty & Fall Risk, and Mental Illness content into one integrated geriatric picture: a frail older patient with combined hearing and vision loss faces compounded fall and isolation risk beyond either impairment alone, and a patient who seems confused or non-adherent during an eye exam may be showing early cognitive impairment or depression rather than simple non-compliance — prompting a broader referral rather than repeated, frustrated instruction-giving.",
     ],
   },
   "radiation-uv-spectrum-effects": {
@@ -13457,11 +13593,13 @@ const STUDY_PAGES = {
       { h: "Excessive scarring — hypertrophic scar vs. keloid", t: "A hypertrophic scar is excess collagen deposition CONFINED to the original wound boundary, while a KELOID is excess collagen deposition that extends BEYOND the original wound margins into surrounding normal tissue — a genuinely important distinguishing feature, since keloids are more difficult to treat and have a significant recurrence rate after excision, and show a notable predilection for darker skin pigmentation and specific body sites (ears, chest, shoulders)." },
       { h: "Wound dehiscence", t: "Wound dehiscence is mechanical reopening/separation of a healing (typically surgical) wound, usually from a combination of inadequate tensile strength during the still-early remodeling phase (this topic's sibling objective) and excessive mechanical stress on the wound — a genuine surgical complication requiring recognition, particularly relevant given the remodeling phase's prolonged (months to a year+) timeline already established." },
       { h: "Chronic (non-healing) wounds", t: "Chronic wounds fail to progress through the normal healing phases in an orderly fashion, often becoming STUCK in a prolonged inflammatory phase — common contributing factors include poor tissue perfusion (already relevant to existing Diabetes Mellitus microvascular disease and Atherosclerosis content), infection, and repeated mechanical trauma, explaining why diabetic patients (already covered as having impaired wound healing) are at particular risk for chronic, non-healing wounds." },
+      { h: "Systemic factors affecting the rate of wound healing", t: "Beyond local perfusion and infection, several systemic factors slow healing across the entire body, genuinely testable as a distinct outline objective: vitamin C deficiency (scurvy) directly impairs collagen synthesis, since vitamin C is a required cofactor for the hydroxylation step that stabilizes collagen's triple helix — connecting directly to your Nutrition content and explaining scurvy's classic findings of poor wound healing alongside gum disease and bruising; protein-calorie malnutrition (already covered in your Malnutrition content) limits the amino acid substrate available for collagen and new tissue synthesis; chronic corticosteroid use (already covered for its cataract/glaucoma risk) impairs healing by suppressing the inflammatory and proliferative phases and inhibiting collagen synthesis, a reason perioperative steroid use is scrutinized before elective surgery; advanced age slows healing at essentially every phase; and smoking impairs healing through nicotine-induced vasoconstriction and reduced tissue oxygenation, compounding the same perfusion-based mechanism already covered for diabetes and atherosclerosis." },
     ],
     memorizeIt: [
       "Hypertrophic scar: excess collagen CONFINED to original wound boundary. Keloid: excess collagen extends BEYOND original margins — harder to treat, higher recurrence, predilection for darker skin/certain sites.",
       "Wound dehiscence: mechanical reopening of a healing wound — related to still-incomplete tensile strength during the prolonged remodeling phase (already covered).",
       "Chronic (non-healing) wounds: stuck in a prolonged inflammatory phase — poor perfusion (already relevant to Diabetes/Atherosclerosis content), infection, repeated trauma are common causes.",
+      "Systemic factors impairing healing: vitamin C deficiency (impaired collagen hydroxylation/synthesis — scurvy), protein-calorie malnutrition, chronic corticosteroid use, advanced age, smoking (vasoconstriction/reduced tissue oxygenation).",
     ],
     applyIt: [
       "This extends your existing Diabetes Mellitus and Atherosclerosis content by explaining the mechanistic basis for diabetic patients' well-known impaired wound healing — poor microvascular perfusion (already covered) directly impairs the proliferation phase's oxygen/nutrient delivery requirements for fibroblast and angiogenic activity (this topic's sibling objective), explaining why diabetic patients are disproportionately prone to chronic, non-healing wounds getting stuck in a prolonged inflammatory phase.",
@@ -13498,12 +13636,14 @@ const STUDY_PAGES = {
       { h: "Dysplasia vs. metaplasia — a critical distinction", t: "While metaplasia (this topic's sibling objective) is an orderly, reversible substitution of one normal, well-organized cell type for another, DYSPLASIA is characterized by loss of normal cellular size/shape/organization uniformity, increased mitotic activity, and disordered tissue architecture — dysplasia can arise within a background of chronic metaplastic change (chronic irritation → metaplasia → and, if the irritation persists, progression to dysplasia), representing a genuine step-wise progression rather than two unrelated processes." },
       { h: "Dysplasia as a precursor to neoplasia", t: "Unlike the fully reversible adaptations covered under this topic's sibling objective, dysplasia is considered a PRE-NEOPLASTIC lesion — mild-to-moderate dysplasia may still be reversible if the underlying chronic stimulus is removed, but severe dysplasia carries substantial risk of progression to carcinoma in situ and then invasive malignancy (already covered under Neoplasia — Benign vs. Malignant Tumor Biology and Oncogenes & Tumor Suppressor Genes content), reflecting accumulating genetic/epigenetic damage in the dysplastic cell population." },
       { h: "Clinical relevance — surveillance and early intervention", t: "This progression sequence (chronic irritation → metaplasia → dysplasia → carcinoma in situ → invasive carcinoma) is the biological basis for clinical surveillance and biopsy of dysplastic lesions — identifying and treating dysplasia BEFORE progression to invasive malignancy is a genuinely high-value clinical intervention point, directly relevant to conditions already covered under this platform's Neoplasia content where early detection significantly improves outcomes." },
+      { h: "The cell cycle — the machinery dysplasia and neoplasia ultimately hijack", t: "The cell cycle proceeds through four phases: G1 (cell growth, organelle duplication), S (DNA synthesis/replication), G2 (further growth, preparation for division), and M (mitosis, actual cell division) — with resting, non-dividing cells described as being in G0. Progression through the cycle is driven by cyclins binding and activating cyclin-dependent kinases (CDKs) at each transition, and is normally restrained by CHECKPOINTS that pause the cycle if DNA damage is detected, allowing repair or, if damage is irreparable, triggering apoptosis (already covered under Cell Injury & Death content) rather than allowing a damaged cell to divide. TP53 (already covered under Oncogenes & Tumor Suppressor Genes) is the central regulator of the G1 checkpoint specifically — it halts the cycle at the G1/S transition in response to DNA damage, and its loss (the most common tumor suppressor mutation across human cancers) is precisely what allows damaged cells to bypass this checkpoint and continue dividing uncontrolled, directly connecting cell cycle dysregulation to the dysplasia-to-carcinoma progression described above." },
     ],
     memorizeIt: [
       "Dysplasia: disordered cellular growth/maturation, loss of normal architecture — genuinely distinct from metaplasia's orderly cell-type substitution (this topic's sibling objective).",
       "Progression sequence: chronic irritation → metaplasia (reversible) → dysplasia (may be reversible if mild, but pre-neoplastic) → carcinoma in situ → invasive carcinoma (already covered under Neoplasia content).",
       "Severe dysplasia carries substantial risk of progression to malignancy — reflects accumulating genetic/epigenetic damage.",
       "Clinical surveillance/biopsy of dysplastic lesions allows intervention BEFORE invasive malignancy develops — a high-value early-detection point.",
+      "Cell cycle phases: G1 → S (DNA synthesis) → G2 → M (mitosis); resting cells sit in G0. Cyclin-CDK complexes drive progression; checkpoints (TP53-controlled at G1/S) pause the cycle for DNA repair or trigger apoptosis — loss of this checkpoint lets damaged cells keep dividing, driving dysplasia toward carcinoma.",
     ],
     applyIt: [
       "This gives you the critical middle step connecting your existing Cellular Adaptation content (this topic's sibling objective) to your existing Neoplasia — Benign vs. Malignant Tumor Biology and Oncogenes & Tumor Suppressor Genes content — recognizing dysplasia as a genuine pre-neoplastic lesion (not simply another reversible adaptation like metaplasia) explains why chronic irritation states are worth monitoring over time, and why a biopsy showing dysplasia (rather than simple metaplasia) changes the clinical urgency from observation to active surveillance or intervention.",
@@ -17887,6 +18027,7 @@ const FLASHCARDS = [
   // MDD
   { id: "fc-385", objectiveId: "mental-mdd", front: "What is the minimum duration of symptoms required for a major depressive disorder diagnosis?", back: "At least two weeks." },
   { id: "fc-386", objectiveId: "mental-mdd", front: "Name two first-line treatment categories for MDD.", back: "Psychotherapy (e.g., CBT) and pharmacotherapy (e.g., SSRIs/SNRIs)." },
+  { id: "fc-1628", objectiveId: "mental-mdd", front: "What does the PHQ-9 screen for, and what does a positive screen require?", back: "Depression severity; a positive screen prompts further clinical evaluation, not an automatic diagnosis." },
   // Anxiety
   { id: "fc-387", objectiveId: "mental-anxiety", front: "How quickly do panic attack symptoms typically peak?", back: "Within minutes." },
   { id: "fc-388", objectiveId: "mental-anxiety", front: "What is the first-line evidence-based psychotherapy for anxiety disorders?", back: "Cognitive behavioral therapy (CBT)." },
@@ -17894,6 +18035,7 @@ const FLASHCARDS = [
   { id: "fc-389", objectiveId: "mental-substance", front: "What pupillary finding is classic for opioid intoxication?", back: "Miosis (constriction)." },
   { id: "fc-390", objectiveId: "mental-substance", front: "What life-threatening complication is associated with opioid overdose?", back: "Respiratory depression." },
   { id: "fc-391", objectiveId: "mental-substance", front: "What nutritional deficiency, associated with chronic alcohol use, causes toxic/nutritional optic neuropathy?", back: "B12, folate, and/or thiamine deficiency." },
+  { id: "fc-1629", objectiveId: "mental-substance", front: "What retinal finding is classic for abusive head trauma (shaken baby syndrome) in an infant?", back: "Bilateral, multilayered retinal hemorrhages extending to the periphery — often with no external signs of trauma." },
   // Schizophrenia/bipolar
   { id: "fc-392", objectiveId: "mental-schizophrenia", front: "Distinguish positive from negative symptoms of schizophrenia.", back: "Positive: hallucinations, delusions, disorganized thinking. Negative: flattened affect, social withdrawal, reduced motivation." },
   { id: "fc-393", objectiveId: "mental-schizophrenia", front: "What ocular side effects are associated with some antipsychotic medications?", back: "Pigmentary retinopathy and corneal/lens deposits with long-term use." },
@@ -17912,6 +18054,9 @@ const FLASHCARDS = [
   // Obesity/metabolic syndrome
   { id: "fc-403", objectiveId: "nutr-obesity", front: "What four components define metabolic syndrome?", back: "Central obesity, hypertension, elevated fasting glucose, dyslipidemia." },
   { id: "fc-404", objectiveId: "nutr-obesity", front: "Name three downstream conditions (already covered) that trace back to obesity/metabolic syndrome as a shared risk factor.", back: "Type 2 diabetes, hypertension, atherosclerosis/CAD (also NAFLD/cirrhosis, osteoarthritis)." },
+  { id: "fc-1630", objectiveId: "nutr-trace-malabsorption", front: "What is the classic ocular finding in Wilson disease, and where is it located?", back: "Kayser-Fleischer ring — copper deposition in Descemet's membrane at the corneal periphery." },
+  { id: "fc-1631", objectiveId: "nutr-trace-malabsorption", front: "Why is copper co-formulated with zinc in AREDS2?", back: "High-dose zinc supplementation alone induces copper deficiency; copper is added to offset it." },
+  { id: "fc-1632", objectiveId: "nutr-trace-malabsorption", front: "Is Wilson disease caused by copper deficiency or copper accumulation?", back: "Accumulation — an autosomal recessive defect (ATP7B gene) in copper excretion." },
   // Preeclampsia
   { id: "fc-405", objectiveId: "repro-preeclampsia", front: "What two findings define preeclampsia?", back: "New-onset hypertension + proteinuria after 20 weeks gestation." },
   { id: "fc-406", objectiveId: "repro-preeclampsia", front: "What is eclampsia?", back: "Preeclampsia with seizures — a severe, life-threatening progression." },
@@ -17929,6 +18074,10 @@ const FLASHCARDS = [
   { id: "fc-415", objectiveId: "repro-breast", front: "What genes confer substantially elevated breast cancer risk when mutated?", back: "BRCA1 and BRCA2." },
   { id: "fc-416", objectiveId: "repro-breast", front: "What is the primary breast cancer screening tool?", back: "Mammography." },
   { id: "fc-417", objectiveId: "repro-breast", front: "What is breast cancer's specific relevance to ocular metastasis?", back: "It's the most common source of metastatic disease to the eye/orbit in women." },
+
+  { id: "fc-1633", objectiveId: "repro-prostate-ed", front: "What bone lesion pattern is classic for metastatic prostate cancer?", back: "Osteoblastic (sclerotic) lesions — distinct from the osteolytic pattern of many other metastatic cancers." },
+  { id: "fc-1634", objectiveId: "repro-prostate-ed", front: "In an older man, erectile dysfunction is frequently a marker of what underlying systemic process?", back: "Vasculogenic/atherosclerotic vascular disease — can precede overt coronary disease." },
+  { id: "fc-1635", objectiveId: "repro-prostate-ed", front: "Does an elevated PSA alone confirm prostate cancer?", back: "No — both BPH and prostate cancer can elevate PSA; further evaluation (exam, biopsy) is needed." },
   // Congenital color vision
   { id: "fc-418", objectiveId: "color-congenital", front: "What is the inheritance pattern of red-green color vision deficiency, and why the male predominance?", back: "X-linked recessive — the L/M cone photopigment genes are on the X chromosome." },
   { id: "fc-419", objectiveId: "color-congenital", front: "Distinguish anomalous trichromacy from dichromacy.", back: "Anomalous trichromacy: all three cone types present, altered sensitivity (milder). Dichromacy: complete absence of one cone type (more severe)." },
@@ -18046,15 +18195,18 @@ const FLASHCARDS = [
   // General health - differential
   { id: "fc-498", objectiveId: "genhealth-differential", front: "Name three broad categories of causes for fatigue.", back: "Anemia, hypothyroidism, depression (also chronic infection, malignancy)." },
   { id: "fc-499", objectiveId: "genhealth-differential", front: "What three things should be clarified when a patient reports \"dizziness\"?", back: "True vertigo vs. presyncope vs. general imbalance." },
+  { id: "fc-1636", objectiveId: "genhealth-differential", front: "A patient has moon facies, buffalo hump, central obesity, and thin bruising skin. What body habitus pattern is this, and what does it suggest?", back: "Cushingoid habitus — suggests glucocorticoid excess (endogenous or from chronic steroid use)." },
   // Medication side effects
   { id: "fc-500", objectiveId: "genhealth-medication-se", front: "What medication is a classic cause of corneal deposits (vortex keratopathy)?", back: "Amiodarone." },
   { id: "fc-501", objectiveId: "genhealth-medication-se", front: "Name four ocular structures/functions commonly affected by systemic medications.", back: "Lens, retina, optic nerve, cornea (also pupil/accommodation)." },
   // BLS/prevention
   { id: "fc-502", objectiveId: "genhealth-bls-prevention", front: "What is the core BLS sequence?", back: "Recognize arrest, activate emergency response, chest compressions, AED use." },
   { id: "fc-503", objectiveId: "genhealth-bls-prevention", front: "How does screening differ from diagnostic testing?", back: "Screening tests asymptomatic individuals; diagnostic testing evaluates a symptomatic patient." },
+  { id: "fc-1637", objectiveId: "genhealth-bls-prevention", front: "Name four standard general medical screening labs and what each primarily assesses.", back: "CBC (anemia/infection), metabolic panel (renal/hepatic function), lipid panel + HbA1c (cardiovascular/diabetes risk), TSH (thyroid function)." },
   // Phagocytosis
   { id: "fc-504", objectiveId: "host-phagocytosis", front: "What is the predominant early phagocytic cell in acute bacterial infection?", back: "Neutrophils (PMNs)." },
   { id: "fc-505", objectiveId: "host-phagocytosis", front: "What is opsonization and why does it matter?", back: "Coating a pathogen with antibody/complement, enhancing phagocytic recognition and efficiency." },
+  { id: "fc-1638", objectiveId: "host-phagocytosis", front: "What is the primary role of eosinophils, distinct from neutrophils/macrophages?", back: "Defense against parasitic (helminth) infection via cytotoxic granule release (e.g., major basic protein); also central to Th2-driven allergic inflammation." },
   // Cell injury
   { id: "fc-506", objectiveId: "host-cell-injury", front: "Contrast necrosis and apoptosis by inflammatory consequence.", back: "Necrosis: triggers inflammation (membrane rupture, content release). Apoptosis: minimal inflammation (controlled, cleared by phagocytosis)." },
   { id: "fc-507", objectiveId: "host-cell-injury", front: "What cancer hallmark relates to apoptosis?", back: "Evasion of normal apoptotic signaling — a feature of malignant transformation." },
@@ -18786,6 +18938,10 @@ const FLASHCARDS = [
   // Head/neck pathology - salivary/thyroid
   { id: "fc-1001", objectiveId: "pathheadneck-salivary-thyroid-masses", front: "What clinical finding with a parotid mass is a red flag for malignancy, and why?", back: "Facial nerve weakness — the facial nerve runs through the parotid gland, and malignant tumors invade it while benign tumors typically just displace it." },
   { id: "fc-1002", objectiveId: "pathheadneck-salivary-thyroid-masses", front: "What thyroid nodule finding parallels facial nerve involvement in parotid masses, and what does it suggest?", back: "Vocal cord paralysis/hoarseness (recurrent laryngeal nerve invasion) — suggests malignancy over benign nodule." },
+
+  { id: "fc-1639", objectiveId: "pathheadneck-exam-symptoms", front: "What does an orbital bruit or continuous venous hum on auscultation suggest?", back: "A carotid-cavernous fistula — look for pulsatile proptosis and corkscrew episcleral vessels." },
+  { id: "fc-1640", objectiveId: "pathheadneck-exam-symptoms", front: "Contrast malignant vs. benign cervical lymph node exam features.", back: "Malignant: hard, fixed, painless, progressively enlarging. Benign reactive: soft, mobile, tender." },
+  { id: "fc-1641", objectiveId: "pathheadneck-exam-symptoms", front: "How does GCA jaw claudication differ from typical TMJ pain?", back: "Jaw claudication specifically worsens with chewing and resolves with rest; TMJ pain is more constant/positional and associated with clicking or limited opening." },
   // Congenital - neurofibromatosis
   { id: "fc-1003", objectiveId: "congenital-neurofibromatosis", front: "What iris finding is characteristic of NF1?", back: "Lisch nodules (iris hamartomas)." },
   { id: "fc-1004", objectiveId: "congenital-neurofibromatosis", front: "What is the hallmark finding of NF2, distinguishing it from NF1?", back: "Bilateral vestibular schwannomas (acoustic neuromas) — NF2 lacks the café-au-lait spots and Lisch nodules of NF1." },
@@ -18793,18 +18949,28 @@ const FLASHCARDS = [
   // Congenital - tuberous sclerosis
   { id: "fc-1006", objectiveId: "congenital-tuberous-sclerosis", front: "What is the classic ocular finding in tuberous sclerosis, and what is its typical clinical course?", back: "Retinal astrocytic hamartoma (yellowish-white, sometimes calcified/'mulberry' appearance) — usually asymptomatic, no treatment needed." },
   { id: "fc-1007", objectiveId: "congenital-tuberous-sclerosis", front: "What is the classic triad of tuberous sclerosis?", back: "Seizures + intellectual disability + characteristic skin findings (angiofibromas, ash-leaf spots, shagreen patches)." },
+
+  { id: "fc-1642", objectiveId: "congenital-torch", front: "What is the classic triad of congenital toxoplasmosis?", back: "Chorioretinitis, hydrocephalus, and intracranial calcifications." },
+  { id: "fc-1643", objectiveId: "congenital-torch", front: "What is the classic triad of congenital rubella syndrome?", back: "Sensorineural hearing loss, cardiac defect (classically PDA), and cataract." },
+  { id: "fc-1644", objectiveId: "congenital-torch", front: "What is the most common congenital infection overall, and what is its most common long-term sequela?", back: "CMV; sensorineural hearing loss (can be progressive/delayed even if asymptomatic at birth)." },
+  { id: "fc-1645", objectiveId: "congenital-torch", front: "What is Hutchinson's triad, and what condition does it indicate?", back: "Interstitial keratitis, Hutchinson (notched, peg-shaped) teeth, and sensorineural hearing loss — congenital syphilis." },
   // Child anomalies - FASD
   { id: "fc-1008", objectiveId: "childanomalies-fetal-alcohol", front: "What is the potentially visually significant ocular finding in fetal alcohol spectrum disorder?", back: "Optic nerve hypoplasia." },
   { id: "fc-1009", objectiveId: "childanomalies-fetal-alcohol", front: "Name the three facial features in the FASD facial triad.", back: "Smooth philtrum, thin vermillion border, small palpebral fissures." },
   // Child anomalies - FTT
   { id: "fc-1010", objectiveId: "childanomalies-failure-to-thrive", front: "What metabolic condition causes FTT plus cataracts, and what mechanism does it share with diabetic cataract?", back: "Galactosemia; osmotically active sugar alcohol (galactitol, parallel to sorbitol in diabetes) accumulates in the lens." },
   { id: "fc-1011", objectiveId: "childanomalies-failure-to-thrive", front: "Distinguish organic from non-organic failure to thrive.", back: "Organic: identifiable medical condition (malabsorption, heart disease, genetic/metabolic). Non-organic: psychosocial factors (often overlapping in practice)." },
+  { id: "fc-1646", objectiveId: "childanomalies-failure-to-thrive", front: "Why should visual impairment be excluded in a child flagged for developmental delay?", back: "Visual impairment can itself secondarily delay motor and social developmental milestones, confounding a primary neurodevelopmental diagnosis." },
   // Aging - frailty/falls
   { id: "fc-1012", objectiveId: "aginganomalies-frailty-falls", front: "List the five frailty criteria.", back: "Unintentional weight loss, exhaustion, weakness (grip strength), slow gait speed, low physical activity." },
   { id: "fc-1013", objectiveId: "aginganomalies-frailty-falls", front: "Name three visual mechanisms contributing to fall risk in older adults.", back: "Reduced contrast sensitivity (floor/step detection), reduced visual field (peripheral obstacle awareness), reduced visual acuity (cataract/AMD)." },
   // Aging - polypharmacy
   { id: "fc-1014", objectiveId: "aginganomalies-polypharmacy", front: "What age-related pharmacokinetic change most directly affects drug dosing safety in older adults?", back: "Decreased renal elimination (GFR decline) and decreased hepatic metabolism — often require lower doses/longer dosing intervals." },
   { id: "fc-1015", objectiveId: "aginganomalies-polypharmacy", front: "Name four systemic medications with recognized ocular side effects relevant to a comprehensive medication history.", back: "Corticosteroids (PSC cataract), anticholinergics (mydriasis/blurred near vision), amiodarone (corneal verticillata), hydroxychloroquine (retinal toxicity)." },
+
+  { id: "fc-1647", objectiveId: "aginganomalies-sensory-cognitive", front: "What frequency range is affected first in presbycusis?", back: "Higher frequencies — affecting consonant/speech-in-noise discrimination before lower frequencies are affected." },
+  { id: "fc-1648", objectiveId: "aginganomalies-sensory-cognitive", front: "Why is \"dual sensory impairment\" (hearing + vision loss) worse than either alone?", back: "It has an outsized negative impact on communication, fall risk, and social isolation compared to a single sensory impairment." },
+  { id: "fc-1649", objectiveId: "aginganomalies-sensory-cognitive", front: "What is \"pseudodementia\"?", back: "Severe late-life depression presenting with cognitive symptoms that mimic dementia." },
   // Radiation and the eye - UV spectrum
   { id: "fc-1016", objectiveId: "radiation-uv-spectrum-effects", front: "Which UV band is primarily responsible for photokeratitis and chronic surface changes like pterygium?", back: "UVB — absorbed mostly by the cornea and conjunctiva." },
   { id: "fc-1017", objectiveId: "radiation-uv-spectrum-effects", front: "Which UV band penetrates deep enough to reach the crystalline lens and contribute to cataractogenesis?", back: "UVA." },
@@ -19328,10 +19494,13 @@ const FLASHCARDS = [
   { id: "fc-1396", objectiveId: "repair-wound-healing-phases", front: "List the four phases of wound healing in order.", back: "Hemostasis → Inflammation → Proliferation → Remodeling/Maturation." },
   { id: "fc-1397", objectiveId: "repair-wound-healing-phases", front: "Contrast healing by primary vs. secondary intention.", back: "Primary: clean, apposed edges, fast, minimal scarring. Secondary: tissue loss/separated edges, granulation tissue fill-in, slower, more scarring." },
   { id: "fc-1398", objectiveId: "repair-healing-complications", front: "Distinguish a hypertrophic scar from a keloid.", back: "Hypertrophic scar: excess collagen confined to the original wound boundary. Keloid: excess collagen extends beyond the original margins." },
+  { id: "fc-1650", objectiveId: "repair-healing-complications", front: "Why does vitamin C deficiency impair wound healing?", back: "Vitamin C is a required cofactor for collagen hydroxylation, which stabilizes the collagen triple helix — deficiency (scurvy) directly impairs collagen synthesis." },
   { id: "fc-1399", objectiveId: "celldisease-adaptation-types", front: "Distinguish hypertrophy from hyperplasia.", back: "Hypertrophy: increased cell SIZE (not number). Hyperplasia: increased cell NUMBER via proliferation." },
   { id: "fc-1400", objectiveId: "celldisease-adaptation-types", front: "What is metaplasia, and what is its cost?", back: "A reversible change from one differentiated cell type to another, adaptive to chronic irritation — at the cost of losing the original cell type's specialized function." },
   { id: "fc-1401", objectiveId: "celldisease-dysplasia-neoplasia", front: "How does dysplasia differ from metaplasia?", back: "Metaplasia is an orderly, reversible cell-type substitution; dysplasia is disordered cellular growth/architecture with genuine malignant potential." },
   { id: "fc-1402", objectiveId: "celldisease-dysplasia-neoplasia", front: "State the full progression sequence from chronic irritation to invasive cancer.", back: "Chronic irritation → metaplasia → dysplasia → carcinoma in situ → invasive carcinoma." },
+  { id: "fc-1651", objectiveId: "celldisease-dysplasia-neoplasia", front: "List the four phases of the cell cycle in order, and what happens in each.", back: "G1 (growth) → S (DNA synthesis) → G2 (growth/preparation) → M (mitosis). Resting cells are in G0." },
+  { id: "fc-1652", objectiveId: "celldisease-dysplasia-neoplasia", front: "What gene controls the G1 checkpoint, and what happens when it's lost?", back: "TP53; its loss lets cells with DNA damage bypass the checkpoint and keep dividing instead of repairing or undergoing apoptosis." },
   { id: "fc-1457", objectiveId: "prism-vertical-imbalance", front: "Why does anisometropia cause vertical prism imbalance specifically at near, not at distance?", back: "Both eyes look through the lens below the distance optical center when reading; unequal lens powers induce unequal prism at that same decentered position (Prentice's rule), but at distance (looking near the optical centers) the induced prism from each lens is minimal." },
   { id: "fc-1458", objectiveId: "prism-vertical-imbalance", front: "What is slab-off, and which eye's lens does it typically modify?", back: "A bicentric grinding technique that adds compensating base-down prism confined to the lower (reading) portion of the lens — typically applied to the more minus (or less plus) eye, which otherwise has the greater induced base-up effect at near." },
   { id: "fc-1459", objectiveId: "prism-vertical-imbalance", front: "Why do contact lenses eliminate vertical prism imbalance in anisometropia?", back: "A contact lens moves with the eye, so its optical center always aligns with the line of sight — there is no decentration relative to gaze, so no Prentice's-rule-induced prism at any gaze position." },
