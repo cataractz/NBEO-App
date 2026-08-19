@@ -613,6 +613,7 @@ const UVEA_OBJECTIVES = [
   { id: "uvea-anterior", name: "Anterior Uveitis (Iritis)", built: true },
   { id: "uvea-scleritis", name: "Scleritis", built: true },
   { id: "uvea-episcleritis", name: "Episcleritis", built: true },
+  { id: "uvea-intermediate", name: "Intermediate Uveitis (Pars Planitis)", built: true },
   { id: "uvea-posterior", name: "Posterior Uveitis / Panuveitis", built: true },
   { id: "uvea-jia", name: "Uveitis Associated with Systemic Disease (e.g., JIA, Sarcoidosis)", built: true },
 ];
@@ -1166,6 +1167,7 @@ const CBGROSS_TOPIC_ID = "t-11-0-4"; // Episclera/Sclera/Anterior Uvea(11) > Ana
 const CBGROSS_OBJECTIVES = [
   { id: "cbgross-regions", name: "Ciliary Body Regions — Pars Plicata & Pars Plana", built: true },
   { id: "cbgross-muscle", name: "Ciliary Muscle Fiber Orientations & Function", built: true },
+  { id: "cbgross-epithelium-vascular", name: "Ciliary Epithelium, Blood Supply & Innervation", built: true },
 ];
 
 const SCLERADEV_TOPIC_ID = "t-11-1-0"; // Episclera/Sclera/Anterior Uvea(11) > Anatomy(Developmental)(1) > Sclera(0)
@@ -1218,6 +1220,7 @@ const UVEAPHARMANTIINFLAMM_TOPIC_ID = "t-11-4-3"; // Episclera/Sclera/Anterior U
 const UVEAPHARMANTIINFLAMM_OBJECTIVES = [
   { id: "uveapharm-steroid-routes", name: "Corticosteroid Delivery Routes for Uveitis Severity Staging", built: true },
   { id: "uveapharm-immunosuppressive", name: "Systemic Immunosuppressive & Biologic Therapy for Chronic Uveitis", built: true },
+  { id: "uveapharm-nsaid", name: "Non-Steroidal Anti-Inflammatory Agents in Anterior Uvea Disease", built: true },
 ];
 
 const UVEAPHARMLUBRICANT_TOPIC_ID = "t-11-4-4"; // Episclera/Sclera/Anterior Uvea(11) > Pharmacology(4) > Lubricants and tear substitutes(4)
@@ -1755,6 +1758,7 @@ const UVEAPHYS_OBJECTIVES = [
   { id: "uveaphys-ciliary-secretion", name: "Ciliary Body Secretory Function & Autonomic Control", built: true },
   { id: "uveaphys-pupillary-reflexes", name: "Pupillary Light & Near Reflexes", built: true },
   { id: "uveaphys-iris-pigment", name: "Iris Pigmentation & the Blood-Aqueous Barrier", built: true },
+  { id: "uveaphys-choroid-bloodflow", name: "Choroidal Function & Uveal Blood Flow (Choroid, Ciliary Body, Iris)", built: true },
 ];
 
 const VISPATHPHYS_TOPIC_ID = "t-13-2-1"; // Optic Nerve/Neuro-Ophthalmic Pathways(13) > Physiology(2) > Visual pathway(1)
@@ -2426,6 +2430,7 @@ const SCLERAGROSS_TOPIC_ID = "t-11-0-0"; // Episclera/Sclera/Anterior Uvea(11) >
 // already built.
 const SCLERAGROSS_OBJECTIVES = [
   { id: "scleragross-structure-episclera", name: "Scleral Structure & the Episclera", built: true },
+  { id: "scleragross-dimensions-emissaria", name: "Scleral Dimensions, Thickness & Emissaria", built: true },
 ];
 
 const LENSMETER_TOPIC_ID = "t-1-0-0"; // Ophthalmic Optics/Spectacles(1) > Optics(Geometrical)(0) > Ophthalmic and optical instruments(0)
@@ -4886,6 +4891,29 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "An infant with chronic tearing since birth most likely has simple congenital NLDO from a persistent Hasner valve membrane — but the same symptom in an adult with new, unilateral onset needs a more cautious workup to exclude a mass lesion before assuming simple involutional narrowing.",
+    ],
+  },
+  "uvea-intermediate": {
+    name: "Intermediate Uveitis (Pars Planitis)",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard uveitis/pathology references (e.g., standard uveitis texts)"],
+    learnIt: [
+      { h: "Overview", t: "Intermediate uveitis is inflammation centered on the vitreous and peripheral retina/pars plana, anatomically distinct from anterior uveitis (iris/ciliary body, already covered) and posterior uveitis (choroid/retina, already covered) — pars planitis is the idiopathic subtype and the most common form of intermediate uveitis." },
+      { h: "Clinical presentation", t: "Painless, gradual blurred vision and floaters, WITHOUT the pain, photophobia, or circumlimbal flush of anterior uveitis (already covered) — the eye is often white and comfortable despite significant intraocular inflammation, similar in that respect to the deceptively quiet presentation already covered under JIA-associated anterior uveitis, though the mechanism and location here are different." },
+      { h: "Exam findings", t: "Vitreous cells and haze (vitritis, the hallmark finding shared with posterior uveitis, already covered) plus two findings relatively specific to intermediate uveitis: \"snowballs\" (discrete, rounded inflammatory cell aggregates suspended in the inferior vitreous) and \"snowbanking\" (a white-gray fibrovascular exudate along the inferior pars plana/ora serrata, best seen with scleral depression) — cystoid macular edema is the most common cause of vision loss in this condition." },
+      { h: "Associations", t: "Most cases are idiopathic (true pars planitis), but intermediate uveitis is a recognized association of multiple sclerosis and, less commonly, sarcoidosis (already covered) — new-onset intermediate uveitis, especially in a young adult, should prompt consideration of an MS workup (e.g., MRI with attention to periventricular white matter) alongside the standard uveitis workup." },
+      { h: "Management", t: "Periocular (sub-Tenon's) or intravitreal corticosteroid injection is often preferred over topical therapy, since topical drops poorly penetrate to the vitreous/pars plana location of inflammation (already relevant to your Corticosteroid Delivery Routes content); peripheral scatter laser or cryotherapy is reserved for severe snowbanking with neovascular complications, and systemic immunosuppression is used for bilateral, vision-threatening, or steroid-dependent disease." },
+    ],
+    memorizeIt: [
+      "Intermediate uveitis = vitreous/pars plana inflammation; pars planitis is the idiopathic (most common) subtype.",
+      "Classic findings: vitreous \"snowballs\" (inferior vitreous cell aggregates) and \"snowbanking\" (pars plana/ora serrata exudate).",
+      "Painless, white eye despite significant inflammation — unlike anterior uveitis's pain/photophobia/flush.",
+      "Cystoid macular edema is the most common cause of vision loss; multiple sclerosis is a recognized systemic association.",
+      "Periocular/intravitreal steroid is generally preferred over topical drops, since topical therapy poorly reaches the vitreous/pars plana.",
+    ],
+    applyIt: [
+      "This directly extends your Corticosteroid Delivery Routes for Uveitis Severity Staging content, which already names intermediate uveitis as an indication for periocular/intravitreal (rather than topical) steroid — a young adult with new floaters, vitreous snowballs, and inferior snowbanking on scleral depression, but no anterior chamber flush or pain, fits intermediate uveitis rather than anterior uveitis, and should prompt an MS-focused review of systems in addition to the standard uveitis workup.",
     ],
   },
   "uvea-posterior": {
@@ -8986,6 +9014,29 @@ const STUDY_PAGES = {
       "This gives you the complete anatomic explanation for the phenylephrine blanching test already covered under your existing Episcleritis/Scleritis content: rather than simply memorizing 'phenylephrine blanches episcleritis but not scleritis,' you now understand this reflects the topical vasoconstrictor's limited penetration depth relative to the three-tiered vascular anatomy — reaching the superficial conjunctival and episcleral vessels but not the deeper scleral vessels — a genuinely satisfying anatomic grounding for a clinical test you already know how to use.",
     ],
   },
+  "scleragross-dimensions-emissaria": {
+    name: "Scleral Dimensions, Thickness & Emissaria",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard ocular gross anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the sclera's collagen-based composition already covered under Scleral Structure & the Episclera content, its regional variation in thickness and curvature, its relationship to Tenon's capsule and the suprachoroidal space, and the specific canals (emissaria) perforating it for vessels and nerves are all independently testable structural details." },
+      { h: "Thickness varies regionally", t: "Scleral thickness is NOT uniform: it is thickest posteriorly at the optic nerve insertion (roughly 1 mm), progressively thinner moving anteriorly, and thinnest at the equator and at the rectus muscle insertion sites (as little as ~0.3 mm) — this regional thinning at the muscle insertions is clinically relevant, since it is where the sclera is most vulnerable to perforation during strabismus surgery or from blunt trauma." },
+      { h: "Radius of curvature", t: "The sclera's radius of curvature is flatter (larger radius, roughly 11-12 mm) than the cornea's steeper curvature (roughly 7.8 mm, already covered under Corneal Curvature content) — this curvature mismatch at the limbus, where the steeply-curved cornea meets the flatter sclera, is why the limbal transition zone exists as a distinct anatomic landmark rather than a seamless curve." },
+      { h: "Relationship to Tenon's capsule and the suprachoroidal space", t: "Tenon's capsule (the fascial sheath already relevant to existing extraocular muscle/orbital anatomy content) envelops the globe as a distinct fibrous layer external to the sclera, separated from it by a potential (episcleral) space that allows the globe to rotate smoothly within its fascial sleeve — internally, the sclera is separated from the choroid by the suprachoroidal space, a potential space (not normally a true fluid-filled space) that can pathologically expand to accumulate fluid or blood in choroidal effusion or suprachoroidal hemorrhage (already relevant to existing post-surgical/hypotony content), since the sclera and choroid are only loosely adherent to one another here via fine connective tissue (lamina fusca) strands." },
+      { h: "Emissaria — scleral canals for vessels and nerves", t: "The sclera is perforated by numerous emissarial canals carrying vessels and nerves between the intraocular and extraocular spaces: posteriorly, the LONG and SHORT posterior ciliary arteries and nerves pass through emissaria around the optic nerve; the VORTEX VEINS (typically 4-8, draining the choroid, ciliary body, and iris venous circulation already relevant to existing Uveal Blood Flow content) exit through oblique emissarial canals posterior to the equator, usually near the rectus muscle insertions; and anteriorly, the ANTERIOR ciliary vessels pass through emissaria near the limbus. The single largest scleral perforation is posteriorly, where the sclera is modified into the sieve-like lamina cribrosa (already covered in detail under existing Glaucoma anatomy content) to allow optic nerve axons to exit the globe." },
+    ],
+    memorizeIt: [
+      "Sclera is thickest posteriorly (~1 mm at the optic nerve) and thinnest at the equator/rectus muscle insertions (~0.3 mm) — the most perforation-vulnerable sites surgically and traumatically.",
+      "Scleral curvature is flatter (larger radius, ~11-12 mm) than the cornea's steeper curvature (~7.8 mm, already covered) — the mismatch creates the limbal transition zone.",
+      "Tenon's capsule envelops the sclera externally (separated by the episcleral space); the suprachoroidal space separates sclera from choroid internally and can pathologically expand (choroidal effusion/hemorrhage).",
+      "Emissaria carry the long/short posterior ciliary vessels/nerves (posterior), vortex veins (near the equator/rectus insertions), and anterior ciliary vessels (near the limbus) through the sclera.",
+      "The largest scleral opening is the lamina cribrosa posteriorly, where optic nerve axons exit the globe (covered in detail under existing Glaucoma anatomy content).",
+    ],
+    applyIt: [
+      "This gives you the structural basis for two genuinely important clinical facts: strabismus surgery and blunt trauma carry the highest scleral perforation risk specifically at the thin rectus muscle insertion sites (this topic's thickness variation), and vortex vein damage during retinal/scleral buckling surgery near the equator can compromise venous drainage of the entire uveal tract (already relevant to your Uveal Blood Flow content) — connecting scleral surface anatomy directly to intraoperative surgical risk.",
+    ],
+  },
   "lensphys-composition-metabolism": {
     name: "Lens Composition, Metabolism, & Antioxidant Protection",
     priority: "MUST",
@@ -9042,12 +9093,14 @@ const STUDY_PAGES = {
       { h: "Iris muscles and autonomic control", t: "The iris sphincter muscle (parasympathetic control, via CN III) constricts the pupil (miosis), while the iris dilator muscle (sympathetic control) dilates the pupil (mydriasis) — this reciprocal autonomic arrangement is directly analogous in concept to Sherrington's reciprocal innervation already covered in your Extraocular Muscle content, though here governing smooth muscle rather than skeletal muscle." },
       { h: "The pupillary light reflex pathway", t: "Light stimulating one retina sends signal via the optic nerve to the pretectal nucleus, which projects bilaterally to both Edinger-Westphal nuclei (the parasympathetic component of CN III), producing simultaneous constriction of both pupils (consensual response) even though only one eye was stimulated — this bilateral projection is exactly why a normal direct AND consensual response, tested in isolation, is expected in a healthy pupillary pathway." },
       { h: "The near reflex — connects to Accommodation content", t: "The near triad (already relevant to your Accommodation Mechanism content) consists of accommodation, convergence, and pupillary miosis occurring together when shifting gaze to a near target — miosis during near viewing increases depth of focus, complementing the accommodative lens shape change already covered, working together to maintain clear near vision." },
+      { h: "The iris as an optical diaphragm — a distinct, non-reflex function", t: "Beyond the reflex pathways above, the iris also functions simply as an adjustable optical diaphragm: by varying pupil size, it regulates the amount of light reaching the retina (protecting against glare/photostress in bright conditions and maximizing light capture in dim conditions) and limits the eye's effective optical aperture, which reduces spherical and chromatic aberration and increases depth of field — the same optical principle already covered under Depth of Focus/Pinhole Effect content, here achieved physiologically rather than with an external pinhole occluder." },
     ],
     memorizeIt: [
       "Iris sphincter (parasympathetic, CN III): constriction (miosis). Iris dilator (sympathetic): dilation (mydriasis).",
       "Light reflex pathway: retina → optic nerve → pretectal nucleus → bilateral Edinger-Westphal nuclei → bilateral pupillary constriction.",
       "Consensual response: stimulating one eye produces bilateral constriction, due to bilateral pretectal projection.",
       "Near triad: accommodation + convergence + miosis, occurring together for near viewing.",
+      "The iris also functions as an optical diaphragm: smaller pupil size reduces spherical/chromatic aberration and increases depth of field (a physiologic pinhole effect), independent of the reflex pathways above.",
     ],
     applyIt: [
       "This gives you the neuroanatomic basis for pupil exam findings relevant to your Cranial Nerve Palsy content: a CN III palsy affecting the parasympathetic pupillary fibers produces an abnormally dilated, poorly reactive pupil, distinguishable from other pupillary abnormalities based on exactly which part of this reflex pathway is disrupted.",
@@ -9072,6 +9125,28 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you the actual physiologic basis for a clinical finding already central to your Uveitis content: anterior chamber flare and cell aren't just descriptive terms to memorize — they directly reflect how much blood-aqueous barrier breakdown is occurring, meaning flare/cell severity genuinely tracks disease activity in a mechanistically grounded way.",
+    ],
+  },
+  "uveaphys-choroid-bloodflow": {
+    name: "Choroidal Function & Uveal Blood Flow (Choroid, Ciliary Body, Iris)",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard ocular physiology references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the ciliary body's secretory function and the iris's pupillary/barrier functions already covered, the choroid's own function and the distinctive blood flow characteristics shared by all three uveal tissues (choroid, ciliary body, iris) round out the uvea's physiologic role, extending your existing Choroidal Function content (already covered under Choroidal Gross Anatomy) into a unified uveal blood flow picture." },
+      { h: "Function of the choroid", t: "The choroid's primary function is nourishing the outer retina — the photoreceptors and retinal pigment epithelium are avascular and depend entirely on diffusion across Bruch's membrane from the choriocapillaris (already covered) for oxygen and metabolic support, since the central retinal artery supplies only the inner retinal layers. The choroid's dense, high-flow circulation also serves a thermoregulatory role, dissipating heat generated by intense light absorption at the RPE/photoreceptor interface, and contributes to maintaining the eye's overall structural/hydrostatic support." },
+      { h: "Uveal blood flow is disproportionately high", t: "The uvea as a whole (choroid, ciliary body, iris) receives a strikingly disproportionate share of total ocular blood flow relative to its metabolic needs — the choroid in particular has one of the highest blood flow rates per gram of tissue of any tissue in the body, with a correspondingly low arteriovenous oxygen extraction (much of the oxygen delivered simply passes through unused), a pattern thought to serve the thermoregulatory and nutritive-reserve functions above rather than reflecting the choroid's own oxygen consumption alone." },
+      { h: "Ciliary body and iris blood flow — distinct roles", t: "Ciliary body blood flow (via the major arterial circle, already covered under Iris Vascular Supply content) directly supplies the ultrafiltration process underlying aqueous humor formation (already covered under Ciliary Secretory Function content) — flow here is tightly linked to aqueous production rate, unlike the choroid's excess-capacity pattern. Iris blood flow, via the major and minor arterial circles (already covered), is comparatively the lowest-volume of the three uveal circulations, consistent with the iris's primarily mechanical (pupillary) rather than highly metabolic function." },
+      { h: "Autonomic and local regulation", t: "Choroidal blood flow is largely regulated by autonomic (sympathetic vasoconstrictor) tone with limited autoregulation compared to the retinal circulation (already covered under Retinal Blood Flow content) — meaning choroidal flow passively tracks systemic blood pressure changes more than retinal flow does, a distinction relevant to understanding why choroidal vascular pathology (e.g., in severe hypertension) can differ from purely retinal vascular disease." },
+    ],
+    memorizeIt: [
+      "Choroid's key function: sole nutritive supply to the avascular outer retina (photoreceptors + RPE) via diffusion across Bruch's membrane, plus thermoregulation.",
+      "Choroidal blood flow is disproportionately HIGH relative to metabolic need, with LOW arteriovenous oxygen extraction — a distinctive uveal blood flow pattern.",
+      "Ciliary body blood flow is tightly linked to aqueous humor production (ultrafiltration, already covered); iris blood flow is the lowest-volume of the three uveal circulations.",
+      "Choroidal flow is largely autonomically regulated with LIMITED autoregulation (unlike the retinal circulation), so it more passively tracks systemic blood pressure.",
+    ],
+    applyIt: [
+      "This completes the physiologic picture underlying your existing Choroidal Gross Anatomy content (choriocapillaris nutrition of the outer retina) and your Ciliary Secretory Function content (aqueous production) — recognizing that the three uveal tissues have genuinely distinct blood flow purposes (thermoregulatory/nutritive excess-capacity for the choroid, production-linked for the ciliary body, low-volume/mechanical for the iris) explains why uveal vascular disease (e.g., choroidal ischemia in severe hypertension, already covered under Hypertensive Retinopathy content) can affect these three tissues quite differently despite their shared embryologic and anatomic continuity.",
     ],
   },
   "vispathphys-chiasm-decussation": {
@@ -14787,11 +14862,13 @@ const STUDY_PAGES = {
       { h: "Overview", t: "The anterior chamber and its angle contain specific, individually-identifiable gonioscopic landmarks, and knowing them by their anterior-to-posterior sequence directly grounds your existing Aqueous Outflow Pathways and Glaucoma content in clinically examinable anatomy." },
       { h: "Anterior chamber boundaries", t: "The anterior chamber is bounded anteriorly by the posterior corneal surface and posteriorly by the anterior iris surface, pupil, and the central anterior lens surface (already covered) — filled with aqueous humor (already covered under Aqueous Humor Production & Composition) that flows forward from the posterior chamber (this topic's sibling objective) through the pupil." },
       { h: "Gonioscopic angle landmarks, anterior to posterior", t: "Where the peripheral cornea meets the iris root, the anterior chamber angle contains, in order from most anterior to most posterior: Schwalbe's line (the peripheral termination of Descemet's membrane, already covered — the most anterior angle landmark), the trabecular meshwork (this topic's sibling objective), the scleral spur (a whitish ridge marking the posterior trabecular meshwork border and ciliary muscle attachment site), and the ciliary body band (the most posterior visible structure, where the iris root inserts) — this specific anterior-to-posterior sequence is the standard gonioscopic examination landmark order used clinically to grade angle structures and assess for angle closure risk." },
+      { h: "Shape, volume, and central depth", t: "The anterior chamber is a roughly biconvex, disc-like space (flatter peripherally, deepest centrally), with a normal central anterior chamber depth of approximately 3.0-3.5 mm (measured from the posterior corneal surface to the anterior lens surface) and a total volume of roughly 150-250 microliters — central depth decreases with age (as the lens progressively thickens, already relevant to existing Lens Growth content) and is characteristically shallow in angle-closure-prone eyes, making AC depth measurement (e.g., via slit-lamp estimation, pachymetry-based devices, or anterior segment OCT) a standard angle-closure risk assessment tool." },
     ],
     memorizeIt: [
       "Anterior chamber: bounded by posterior cornea (anterior) and anterior iris/pupil/central lens (posterior).",
       "Gonioscopic angle landmarks, ANTERIOR to POSTERIOR: Schwalbe's line (Descemet's termination) → trabecular meshwork → scleral spur → ciliary body band.",
       "Scleral spur: whitish ridge, posterior trabecular meshwork border, ciliary muscle attachment site — a key gonioscopic landmark.",
+      "Normal central anterior chamber depth: ~3.0-3.5 mm; total AC volume: ~150-250 microliters — both decrease with age as the lens thickens, an angle-closure risk factor.",
     ],
     applyIt: [
       "This gives you the specific anatomic sequence directly underlying gonioscopic examination technique, relevant to your existing Glaucoma content — recognizing these landmarks in their correct anterior-to-posterior order (Schwalbe's line, trabecular meshwork, scleral spur, ciliary body band) is the foundational skill for grading angle width and identifying angle closure risk on clinical exam.",
@@ -14826,12 +14903,14 @@ const STUDY_PAGES = {
       { h: "Layers, anterior to posterior", t: "From anterior to posterior, the iris consists of: the anterior border layer (a discontinuous layer of fibroblasts and melanocytes, its density determining iris color already relevant to existing Iris Pigmentation content), the STROMA (containing the sphincter pupillae muscle and blood vessels/nerves), and the posterior pigmented epithelium (two layers, heavily pigmented, continuous with the ciliary body and retinal pigment epithelium developmentally)." },
       { h: "Sphincter pupillae — parasympathetic", t: "The sphincter pupillae is a circular muscle band near the pupillary margin, within the stroma, innervated by PARASYMPATHETIC fibers (via the short ciliary nerves from the ciliary ganglion, already covered under Parasympathetic Pathway Anatomy) — contraction constricts the pupil (miosis), the effector mechanism already established under Pupillary Light & Near Reflexes content." },
       { h: "Dilator pupillae — sympathetic", t: "The dilator pupillae is a radially-oriented myoepithelial muscle (a genuinely distinctive fact — it derives from the posterior pigmented epithelium's anterior layer, a muscle of epithelial rather than mesodermal origin) innervated by SYMPATHETIC fibers (via the long ciliary nerves, already covered under Sympathetic Pathway Anatomy/the oculosympathetic chain) — contraction dilates the pupil (mydriasis), the effector mechanism already relevant to existing Horner Syndrome content, where sympathetic pathway disruption impairs this dilator function." },
+      { h: "Iris and pupil dimensions", t: "The iris has a diameter of roughly 12 mm (matching the horizontal corneal diameter, already covered under Corneal Gross Anatomy content, since the iris root inserts near the limbus), with the pupil centrally (very slightly nasally and inferiorly decentered relative to true iris center in most eyes) — normal pupil diameter ranges from about 2-4 mm in ambient/room lighting, narrowing to 1-2 mm with intense miosis and widening to roughly 6-8 mm with maximal pharmacologic mydriasis (already relevant to existing Mydriatics & Cycloplegics content)." },
     ],
     memorizeIt: [
       "Iris layers (anterior→posterior): anterior border layer → stroma (contains sphincter pupillae) → posterior pigmented epithelium (2 layers, contains dilator pupillae's origin).",
       "Sphincter pupillae: circular, PARASYMPATHETIC (short ciliary nerves, already covered) → miosis.",
       "Dilator pupillae: radial, myoepithelial (epithelial origin, NOT mesodermal), SYMPATHETIC (long ciliary nerves, already covered) → mydriasis.",
       "This anatomy directly underlies existing Horner Syndrome (sympathetic/dilator dysfunction) and pharmacologic pupil testing content.",
+      "Iris diameter ≈ 12 mm; normal pupil diameter ≈ 2-4 mm in ambient light, ranging from ~1-2 mm (miosis) to ~6-8 mm (maximal mydriasis).",
     ],
     applyIt: [
       "This gives you the precise anatomic and autonomic basis for your existing Horner Syndrome and Pupillary Pathway Clinical Testing content — recognizing that the dilator pupillae is sympathetically innervated explains exactly why Horner syndrome (sympathetic pathway disruption, already covered) impairs pupil dilation specifically, while the parasympathetically-innervated sphincter (and thus pupillary constriction) remains intact, producing the anisocoria that is WORSE in dim light already established under that content.",
@@ -14845,6 +14924,7 @@ const STUDY_PAGES = {
     learnIt: [
       { h: "Overview", t: "The iris receives its blood supply from two named arterial circles, and understanding this normal vascular anatomy sets up recognition of rubeosis iridis (iris neovascularization), a genuinely important clinical sign directly connecting to existing retinal ischemia content." },
       { h: "Major and minor arterial circles", t: "The MAJOR arterial circle of the iris, formed by the long posterior ciliary arteries and anterior ciliary arteries (already covered under Orbital Arterial Supply content), is located near the iris root/ciliary body junction; branches from the major circle course radially toward the pupil to form the MINOR arterial circle near the pupillary margin — together supplying the iris stroma and its two muscles (this topic's sibling objective)." },
+      { h: "Venous drainage", t: "Iris veins largely parallel the radial arterial pattern in reverse, draining peripherally from the minor circle back toward the major circle and the ciliary body's venous plexus, ultimately exiting the globe via the VORTEX VEINS (already covered under Scleral Dimensions & Emissaria content) rather than via any dedicated iris-specific venous channel — the iris's venous outflow is therefore functionally inseparable from, and shares the same final common pathway as, the ciliary body's and choroid's venous drainage (already relevant to existing Uveal Blood Flow content)." },
       { h: "Rubeosis iridis — pathologic neovascularization", t: "Rubeosis iridis is the pathologic growth of abnormal new blood vessels on the iris surface (distinct from and in addition to this normal vascular anatomy), classically triggered by chronic severe retinal ischemia — already relevant to existing Proliferative Diabetic Retinopathy and Central Retinal Vein Occlusion content — via the same VEGF-mediated angiogenic signaling already implicated in those conditions' retinal neovascularization, here manifesting on the iris instead of (or in addition to) the retina." },
       { h: "Clinical significance — neovascular glaucoma", t: "Rubeosis iridis is a genuine ophthalmic emergency warning sign, since the abnormal new vessels can grow across the anterior chamber angle (already covered under Trabecular Meshwork content) and physically obstruct conventional aqueous outflow, causing neovascular glaucoma — a severe, difficult-to-control form of secondary glaucoma requiring urgent identification and treatment of the underlying ischemic retinal disease driving the VEGF signal, not just IOP-lowering therapy alone." },
     ],
@@ -14867,11 +14947,13 @@ const STUDY_PAGES = {
       { h: "Overview", t: "The posterior chamber, genuinely distinct from the anterior chamber (this topic's sibling objective), is where aqueous humor is actually secreted, and tracing its precise boundaries clarifies a distinction commonly conflated with the anterior chamber, already relevant to existing Aqueous Humor Production content." },
       { h: "Boundaries", t: "The posterior chamber is a narrow, triangular space bounded anteriorly by the posterior iris surface, posteriorly by the anterior lens surface and zonular fibers, and peripherally by the ciliary body's pars plicata (this topic's sibling objective) — genuinely distinct from and much smaller than the anterior chamber." },
       { h: "Aqueous flow path — where secretion actually occurs", t: "Aqueous humor is secreted by the ciliary body's pars plicata (already covered under Aqueous Humor Production & Composition) directly INTO the posterior chamber, not the anterior chamber — it then flows forward through the pupil into the anterior chamber before reaching the trabecular meshwork/angle outflow structures (this topic's sibling objectives) — meaning the posterior chamber, despite being anatomically smaller and less commonly discussed than the anterior chamber, is where aqueous humor dynamics functionally begins." },
+      { h: "Size and volume", t: "The posterior chamber is a narrow, triangular, ring-shaped space with a volume of only about 50-60 microliters — considerably smaller than the anterior chamber's roughly 150-250 microliters (already covered under Anterior Chamber Boundaries content) — consistent with its narrow, cleft-like shape hugging the posterior iris, ciliary processes, and zonular fibers rather than forming an open pool of fluid the way the anterior chamber does." },
     ],
     memorizeIt: [
       "Posterior chamber: bounded by posterior iris (anterior), anterior lens/zonules (posterior), ciliary body pars plicata (peripheral) — distinct from and smaller than the anterior chamber.",
       "Aqueous humor is SECRETED by the ciliary body pars plicata directly INTO the posterior chamber (already covered under Aqueous Humor Production), not the anterior chamber.",
       "Aqueous flow: posterior chamber (secretion) → through pupil → anterior chamber → trabecular meshwork/angle outflow (this topic's sibling objectives).",
+      "Posterior chamber volume ≈ 50-60 microliters — much smaller than the anterior chamber's ~150-250 microliters (already covered).",
     ],
     applyIt: [
       "This gives you the precise starting point of your existing Aqueous Humor Production & Composition and Aqueous Outflow Pathways content — clarifying that aqueous secretion begins in the posterior chamber (not the more commonly discussed anterior chamber) sets up this topic's sibling objective on pupillary block, where obstruction of the normal posterior-to-anterior chamber flow path through the pupil causes a dangerous pressure differential between these two spaces.",
@@ -14937,6 +15019,28 @@ const STUDY_PAGES = {
       "This extends your existing Accommodation Mechanism (Helmholtz Theory) and Miotics (Direct & Indirect Cholinergic Agonists) content with the outflow-facilitating role of the LONGITUDINAL ciliary muscle fibers — explaining that cholinergic glaucoma medications lower IOP through TWO distinct anatomic mechanisms (pupillary miosis pulling the peripheral iris away from the angle, AND longitudinal ciliary muscle contraction mechanically widening the trabecular meshwork), not just the pupillary effect alone.",
     ],
   },
+  "cbgross-epithelium-vascular": {
+    name: "Ciliary Epithelium, Blood Supply & Innervation",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the ciliary body's regional anatomy and muscle already covered, its two-layer epithelium, stroma, blood supply, and innervation complete the structural picture underlying your existing Ciliary Secretory Function and Blood-Aqueous Barrier content." },
+      { h: "Two-layer ciliary epithelium", t: "The ciliary processes (pars plicata, already covered) are lined by a bilayer of epithelium arranged apex-to-apex: an outer PIGMENTED epithelium (continuous with the retinal pigment epithelium, already covered) and an inner NON-PIGMENTED epithelium (continuous with the neurosensory retina) — tight junctions between adjacent non-pigmented epithelial cells form the physiologic basis of the blood-aqueous barrier (already covered under Iris Pigmentation & the Blood-Aqueous Barrier content), while gap junctions link the pigmented and non-pigmented layers to one another, allowing the coordinated ion transport that drives aqueous secretion (already covered under Ciliary Secretory Function content) across this two-cell-layer system." },
+      { h: "Stroma", t: "The ciliary body stroma is a loose, vascular connective tissue layer containing the ciliary muscle (this topic's sibling objective), the major arterial circle of the iris and its ciliary body branches (this topic's own blood supply, below), melanocytes, and stromal fibroblasts — continuous with the choroidal stroma posteriorly and the iris stroma anteriorly, reflecting the uvea's overall continuous vascular coat structure." },
+      { h: "Blood supply and venous drainage", t: "The ciliary body receives its arterial supply from the anterior ciliary arteries and the long posterior ciliary arteries, which together form the major arterial circle of the iris (already covered under Iris Vascular Supply content) at the iris root/ciliary body junction — branches from this circle richly perfuse the ciliary processes to support aqueous ultrafiltration (already covered). Venous drainage follows the same final common pathway as the iris and choroid: via the vortex veins (already covered under Scleral Dimensions & Emissaria content), which exit the globe posterior to the equator." },
+      { h: "Innervation", t: "The ciliary body receives PARASYMPATHETIC innervation via short ciliary nerves from the ciliary ganglion (already covered under Parasympathetic Pathway Anatomy content), which drives ciliary muscle contraction for accommodation (already covered under Accommodation Mechanism content), and SYMPATHETIC innervation via long ciliary nerves from the oculosympathetic chain (already covered), along with sensory innervation via the nasociliary branch of CN V1 (already covered under Trigeminal Sensory Innervation content) — accounting for the significant pain associated with ciliary spasm in anterior uveitis (already covered under Anterior Uveitis content)." },
+    ],
+    memorizeIt: [
+      "Two-layer ciliary epithelium: outer PIGMENTED (continuous with RPE) + inner NON-PIGMENTED (continuous with neurosensory retina) — tight junctions in the non-pigmented layer form the blood-aqueous barrier (already covered).",
+      "Ciliary body arterial supply: anterior ciliary + long posterior ciliary arteries → major arterial circle of the iris (already covered).",
+      "Ciliary body venous drainage: vortex veins (already covered) — same final pathway as iris and choroid.",
+      "Innervation: PARASYMPATHETIC (short ciliary nerves, drives accommodation) + SYMPATHETIC (long ciliary nerves) + SENSORY (CN V1 nasociliary branch, already covered) — sensory fibers explain the pain of ciliary spasm in uveitis.",
+    ],
+    applyIt: [
+      "This gives you the structural completion of your existing Ciliary Secretory Function, Blood-Aqueous Barrier, and Cycloplegia for Uveitis content — understanding that CN V1 sensory fibers (not just the parasympathetic motor fibers) innervate the ciliary body explains why ciliary spasm in anterior uveitis is genuinely painful, and why cycloplegic agents (already covered) relieve this specific pain by paralyzing the muscle whose spasm is being sensed by these same nasociliary sensory fibers.",
+    ],
+  },
   "scleradev-origin": {
     name: "Scleral Development from Neural Crest & Mesoderm",
     priority: "SHOULD",
@@ -14946,11 +15050,13 @@ const STUDY_PAGES = {
       { h: "Overview", t: "The sclera develops from periocular mesenchyme with a genuinely distinctive DUAL embryologic origin, contrasting with the cornea's exclusively neural-crest-derived stroma already covered under Corneal Development from Neural Crest content." },
       { h: "Predominant neural crest contribution", t: "Most of the sclera, like the corneal stroma and endothelium (already covered), derives from cranial neural crest-derived periocular mesenchyme, which condenses and differentiates around the developing optic cup to form the sclera's dense, irregularly-arranged collagen fibrils (already covered under Scleral Structure content as the structural basis for scleral opacity, contrasting with the cornea's regular collagen arrangement)." },
       { h: "Mesodermal contribution at the posterior pole", t: "Unlike the cornea's exclusively neural-crest-derived stroma, a genuinely distinct contribution from MESODERM occurs at the posterior sclera, particularly around the optic nerve insertion — this dual (neural crest + mesoderm) origin is a distinguishing embryologic fact from the cornea's single-source stroma, though the functional/structural difference between these two contributing tissues within the mature sclera is not clinically distinguishable." },
+      { h: "Inductive mechanism — the optic cup drives scleral differentiation", t: "The periocular mesenchyme surrounding the developing optic cup does not spontaneously differentiate into sclera on its own — it requires an inductive signal FROM the retinal pigment epithelium/optic cup itself, which triggers the surrounding mesenchyme to condense and differentiate into the sclera's dense collagenous coat, beginning posteriorly (adjacent to the optic cup) and proceeding anteriorly toward the limbus — a genuinely distinct inductive relationship from the lens vesicle's own separate inductive role in corneal endothelial/stromal differentiation (already covered under Corneal Development content), illustrating that most anterior segment structures depend on a signal from an adjacent, already-differentiating neuroectodermal structure rather than differentiating autonomously." },
     ],
     memorizeIt: [
       "Sclera develops predominantly from cranial NEURAL CREST-derived periocular mesenchyme (like the corneal stroma, already covered).",
       "Genuinely distinct from cornea: sclera also receives a MESODERMAL contribution, particularly at the posterior pole/optic nerve insertion region.",
       "This dual origin (neural crest + mesoderm) contrasts with the cornea's exclusively neural-crest-derived stroma.",
+      "Scleral differentiation is INDUCED by the underlying optic cup/RPE, beginning posteriorly and proceeding anteriorly toward the limbus — the mesenchyme does not differentiate autonomously.",
     ],
     applyIt: [
       "This gives you the embryologic contrast point directly extending your existing Corneal Development from Neural Crest and Scleral Structure & the Episclera content — while both the cornea and sclera arise substantially from neural crest mesenchyme, the sclera's additional mesodermal contribution at the posterior pole is a genuinely distinguishing developmental fact between these two adjacent, collagen-based ocular coat structures.",
@@ -14964,10 +15070,14 @@ const STUDY_PAGES = {
     learnIt: [
       { h: "Overview", t: "The anterior chamber angle develops through a process termed 'anterior chamber cleavage,' and incomplete cleavage is the developmental basis for primary congenital glaucoma, directly extending your existing Aqueous Outflow Pathways and congenital glaucoma/buphthalmos content." },
       { h: "The cleavage process", t: "Neural crest-derived mesenchyme initially fills the space that will become the anterior chamber angle; through a progressive developmental process termed cleavage, this mesenchymal tissue differentiates into and remodels to form the mature angle structures (trabecular meshwork, Schwalbe's line, scleral spur — already covered under Anterior Chamber Angle gross anatomy content), while the angle recess itself progressively opens up as residual, undifferentiated mesenchymal tissue resolves." },
+      { h: "Four historical theories of angle opening", t: "\"Cleavage\" is the traditional umbrella term (from Barkan's original description) for angle development, but four distinct historical theories were proposed for exactly how the angle recess opens: the ATROPHY theory (residual mesenchymal tissue degenerates/dies back), the CLEAVAGE theory proper (a distinct anterior chamber literally splits or cleaves open within the pre-existing solid mesenchymal mass), the REORGANIZATION theory (the mesenchyme does not atrophy or split, but progressively differentiates and remodels in place into the mature angle structures — the view most consistent with current understanding), and the RAREFACTION theory (the mesenchyme progressively thins/becomes less dense without true cell death). These competing theories all attempt to explain the same observed endpoint — a patent, functional angle recess — but differ in the proposed fate of the transient mesenchymal tissue." },
+      { h: "The endothelial membrane", t: "During normal angle development, a transient single-cell-layer endothelial membrane (sometimes called Barkan's membrane) can be seen extending across the angle recess and inner trabecular meshwork surface — this membrane normally regresses as the angle matures; PERSISTENCE of this membrane is one proposed contributing mechanism in primary congenital glaucoma, potentially compounding the mechanical outflow obstruction from incomplete mesenchymal differentiation (below)." },
       { h: "Incomplete cleavage — the congenital glaucoma mechanism", t: "When this cleavage process is incomplete, residual undifferentiated mesenchymal tissue remains within the angle, mechanically obstructing normal aqueous outflow through the not-yet-properly-formed trabecular meshwork — this incomplete cleavage is the developmental basis for PRIMARY CONGENITAL GLAUCOMA, already implicit in existing buphthalmos/congenital glaucoma content, explaining the anatomic mechanism behind the elevated IOP in that condition from a developmental (rather than acquired) origin." },
     ],
     memorizeIt: [
       "Anterior chamber angle forms via 'cleavage' — neural crest mesenchyme differentiates into angle structures while the angle recess progressively opens.",
+      "Four historical theories of angle opening: ATROPHY (tissue degenerates), CLEAVAGE (tissue splits open), REORGANIZATION (tissue differentiates/remodels in place — closest to current understanding), RAREFACTION (tissue progressively thins).",
+      "A transient endothelial membrane (Barkan's membrane) normally regresses across the developing angle; its persistence is a proposed contributor to primary congenital glaucoma.",
       "INCOMPLETE cleavage leaves residual mesenchymal tissue obstructing the angle — the developmental basis for PRIMARY CONGENITAL GLAUCOMA (already covered as buphthalmos).",
       "This explains congenital glaucoma's elevated IOP mechanism as developmental angle malformation, distinct from acquired trabecular meshwork dysfunction in adult glaucoma.",
     ],
@@ -14984,11 +15094,13 @@ const STUDY_PAGES = {
       { h: "Overview", t: "Axenfeld-Rieger spectrum describes a range of related anterior segment developmental anomalies from disrupted anterior chamber cleavage (this topic's sibling objective), carrying both a high glaucoma risk and characteristic systemic associations." },
       { h: "Key ocular findings", t: "The hallmark ocular finding is a prominent, anteriorly-displaced Schwalbe's line visible on slit lamp exam without gonioscopy — termed posterior embryotoxon (already relevant to existing Anterior Chamber Angle gross anatomy content on Schwalbe's line's normal position) — often accompanied by iris strands adhering to and pulling on this displaced structure, and variable iris stromal hypoplasia (thinning) or pupil abnormalities (corectopia, an off-center pupil)." },
       { h: "Glaucoma risk and systemic associations", t: "Axenfeld-Rieger spectrum carries an approximately 50% lifetime risk of glaucoma (from the same underlying angle developmental anomaly already covered under this topic's sibling objective), making lifelong IOP monitoring essential even when initially normal — and is associated with characteristic systemic (non-ocular) findings including dental anomalies (microdontia, missing teeth) and redundant periumbilical skin, reflecting the shared neural-crest-derived mesenchymal origin of these craniofacial and periumbilical structures." },
+      { h: "Relationship to Peters anomaly — the broader anterior segment dysgenesis spectrum", t: "Axenfeld-Rieger spectrum is one member of a broader family of anterior segment dysgenesis disorders sharing disrupted neural crest-derived mesenchymal development, which also includes Peters anomaly (already covered under existing Congenital Corneal Anomalies content) — central corneal opacity with iridocorneal or lenticulocorneal adhesions from disrupted neural crest migration and incomplete lens vesicle separation. Both conditions can involve PAX6 or PITX2/FOXC1 gene pathways and carry significant glaucoma risk, though Axenfeld-Rieger is centered on the angle/iris while Peters anomaly is centered on the central cornea — recognizing them as related points along the same anterior segment dysgenesis spectrum, rather than as unrelated conditions, is a useful organizing framework." },
     ],
     memorizeIt: [
       "Axenfeld-Rieger spectrum: posterior embryotoxon (prominent, anteriorly-displaced Schwalbe's line, visible without gonioscopy) + iris strand adhesions + iris stromal hypoplasia/corectopia.",
       "~50% lifetime glaucoma risk — from the same disrupted angle cleavage mechanism (this topic's sibling objective) — requires lifelong IOP monitoring.",
       "Systemic associations: dental anomalies (microdontia), redundant periumbilical skin — reflect shared neural-crest mesenchymal origin.",
+      "Axenfeld-Rieger (angle/iris-centered) and Peters anomaly (central cornea-centered, already covered) are related anterior segment dysgenesis disorders from disrupted neural crest development, both carrying significant glaucoma risk.",
     ],
     applyIt: [
       "This gives you a genuinely high-yield anterior segment dysgenesis syndrome directly extending your existing Anterior Chamber Angle Development & Cleavage content — recognizing posterior embryotoxon on slit lamp exam (a prominent Schwalbe's line, visible without gonioscopy) should prompt screening for the full Axenfeld-Rieger spectrum, including dental/periumbilical exam and, critically, LIFELONG glaucoma monitoring given the ~50% risk even in an eye with initially normal IOP.",
@@ -15003,12 +15115,14 @@ const STUDY_PAGES = {
       { h: "Overview", t: "The iris forms from a combination of neuroectoderm (from the optic cup rim) and neural crest mesenchyme, and its pupil is transiently covered by a vascular membrane during development that must normally regress before birth — the developmental basis for this topic's sibling objective's persistent pupillary membrane anomaly." },
       { h: "Dual tissue origin", t: "The iris's posterior pigmented epithelium and its two muscles (sphincter and dilator pupillae, already covered under Iris Layers content) derive from the anterior rim of the optic cup — NEUROECTODERM, the same embryonic tissue that forms the retina and its pigment epithelium, explaining the developmental continuity already noted under existing Iris Layers content — while the iris STROMA derives from neural crest mesenchyme, the same tissue source as the corneal and scleral stroma (already covered)." },
       { h: "The pupillary membrane", t: "During development, a transient vascular membrane (the pupillary membrane, part of the anterior tunica vasculosa lentis blood supply system to the developing lens) covers the pupillary space — this membrane normally undergoes progressive atrophy and regression before birth, opening the pupil and allowing normal vision to develop; incomplete regression leaves residual iris strands crossing the pupil, covered under this topic's sibling objective as persistent pupillary membrane." },
+      { h: "Postnatal development of iris pigmentation", t: "Iris stromal pigmentation (already covered under Iris Pigmentation & the Blood-Aqueous Barrier content) is NOT complete at birth — most infants are born with relatively lightly pigmented, blue-gray irides regardless of their eventual eye color, because iris stromal melanocytes continue actively depositing melanin for roughly the first 6-12 months (and in lighter-eyed individuals, more gradually over the first few years) of postnatal life. This is why parents are often told a baby's \"true\" eye color cannot be reliably predicted at birth — the final color depends on how much additional stromal melanin accumulates during this postnatal pigmentation period, distinct from and later than the prenatal tissue/muscle development covered above." },
     ],
     memorizeIt: [
       "Iris posterior pigmented epithelium + sphincter/dilator muscles: from NEUROECTODERM (optic cup rim) — same tissue as retina/RPE.",
       "Iris STROMA: from neural crest mesenchyme — same source as corneal/scleral stroma (already covered).",
       "Pupillary membrane: transient vascular membrane covering the pupil during development, normally regresses before birth to open the pupil.",
       "Incomplete regression → persistent pupillary membrane (this topic's sibling objective).",
+      "Iris stromal pigmentation continues POSTNATALLY (roughly the first 6-12+ months) — infant eye color at birth does not reliably predict final adult eye color.",
     ],
     applyIt: [
       "This gives you the embryologic foundation directly setting up this topic's sibling objective on congenital iris anomalies — understanding that the iris muscles are neuroectoderm-derived (like the retina) while the stroma is neural-crest-derived explains the iris's structurally composite nature, and the normal pupillary membrane regression process explains why its INCOMPLETE regression (persistent pupillary membrane) is a common, usually benign finding rather than a sign of a more serious anomaly.",
@@ -15064,12 +15178,14 @@ const STUDY_PAGES = {
       { h: "Overview", t: "The ciliary body develops from the same anterior optic cup neuroectoderm that gives rise to the iris (this topic's sibling objectives) and the retina itself, and this shared origin directly explains the double-layered epithelial structure already relevant to existing Aqueous Humor Production content." },
       { h: "Neuroectodermal origin — the double epithelial layer", t: "The ciliary body's epithelium derives from the same anterior optic cup neuroectoderm as the iris posterior pigmented epithelium and the retina, forming a double-layered structure — an outer PIGMENTED layer (continuous with the retinal pigment epithelium) and an inner NON-PIGMENTED layer (continuous with the neurosensory retina, though non-visual here) — this double-layered epithelial arrangement is precisely the structural basis already relevant to Aqueous Humor Production content's secretory mechanism, since aqueous humor is actively secreted across this specific two-layer epithelial arrangement." },
       { h: "Neural crest contribution — muscle and stroma", t: "The ciliary muscle (already covered under Ciliary Muscle Fiber Orientations content) and ciliary body stroma derive from neural crest mesenchyme, the same tissue source already established for the iris stroma, corneal stroma, and sclera — meaning the ciliary body, like the iris, has a genuinely composite developmental origin: neuroectoderm for its epithelium, neural crest for its muscle/stroma." },
+      { h: "Development of the ciliary processes and vasculature", t: "The ciliary processes (already covered under Ciliary Body Regions content) form as the pars plicata epithelium and its underlying neural crest-derived stroma fold into approximately 70 radiating ridges, a process that proceeds alongside — and is closely coupled to — ingrowth of the ciliary vasculature from the developing major arterial circle (already covered under Iris Vascular Supply content), since each mature ciliary process is built around a rich capillary core; folding of the epithelium/stroma without adequate concurrent vascular ingrowth would leave the processes without the perfusion needed to support aqueous ultrafiltration once secretion begins after birth." },
     ],
     memorizeIt: [
       "Ciliary body epithelium: from anterior optic cup NEUROECTODERM (same origin as retina/iris posterior epithelium) — forms the double-layered (pigmented + non-pigmented) epithelial structure.",
       "This double epithelial layer is the structural basis for aqueous humor secretion (already covered under Aqueous Humor Production).",
       "Ciliary muscle + stroma: from NEURAL CREST mesenchyme (same source as iris/corneal/scleral stroma).",
       "Composite origin: neuroectoderm (epithelium) + neural crest (muscle/stroma) — parallels the iris's dual origin (this topic's sibling objective).",
+      "Ciliary process formation (epithelial/stromal folding into ~70 ridges) is closely coupled to ingrowth of the ciliary vasculature from the developing major arterial circle (already covered) — each mature process has a vascular core.",
     ],
     applyIt: [
       "This gives you the embryologic explanation for the double-layered ciliary epithelium already functionally relevant to your existing Aqueous Humor Production & Composition content — understanding that this two-layer structure (pigmented outer, non-pigmented inner) is a direct developmental continuation of the retina/RPE relationship explains why the ciliary epithelium is sometimes conceptually described as 'non-visual retina,' sharing its fundamental epithelial transport/secretory machinery with the true retinal pigment epithelium already covered under Photoreceptor & RPE Physiology content.",
@@ -15173,6 +15289,28 @@ const STUDY_PAGES = {
       "This gives you the modern targeted-therapy escalation pathway directly extending your existing Uveitis Associated with Systemic Disease (JIA, Sarcoidosis) content — a child with JIA-associated chronic anterior uveitis who fails topical steroids and requires escalating systemic therapy would typically progress from methotrexate to a TNF-alpha inhibitor like adalimumab, illustrating the practical treatment escalation pathway for exactly the systemic-disease-associated uveitis population already covered.",
     ],
   },
+  "uveapharm-nsaid": {
+    name: "Non-Steroidal Anti-Inflammatory Agents in Anterior Uvea Disease",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Non-steroidal anti-inflammatory drugs (NSAIDs) provide an important, mechanistically distinct alternative and adjunct to corticosteroids (already covered under Corticosteroid Delivery Routes content) for anterior uvea inflammation, acting by cyclooxygenase (COX) inhibition rather than the broader genomic anti-inflammatory mechanism of steroids." },
+      { h: "Mechanism — COX inhibition vs. steroid mechanism", t: "NSAIDs (e.g., ketorolac, nepafenac, bromfenac in topical ocular formulations) inhibit cyclooxygenase (COX-1 and/or COX-2), blocking prostaglandin synthesis from arachidonic acid — genuinely distinct from corticosteroids, which act further upstream by inducing lipocortin/annexin-1 to inhibit phospholipase A2 (already relevant to existing Corticosteroid Mechanism content), blocking arachidonic acid release itself rather than just its downstream prostaglandin conversion. This means NSAIDs and steroids act at different points of the same inflammatory cascade, providing a pharmacologic rationale for combining them in select cases." },
+      { h: "Oral NSAIDs — first-line for mild scleritis", t: "Oral NSAIDs (already relevant to existing Scleritis pathology content) are first-line therapy for mild, non-necrotizing scleritis, since prostaglandin-mediated inflammation is a major contributor to scleral inflammatory pain and vasodilation — more severe or necrotizing scleritis, however, requires escalation to systemic corticosteroids or immunosuppression (already covered), since oral NSAIDs alone are generally inadequate for that level of disease severity." },
+      { h: "Topical NSAIDs — uveitic and post-surgical cystoid macular edema", t: "Topical NSAIDs are a key tool for both preventing and treating cystoid macular edema (CME), including CME complicating chronic anterior/intermediate uveitis (already covered) and post-cataract-surgery CME (already relevant to existing Cataract Surgery Complications content) — because prostaglandins promote the breakdown of the blood-retinal barrier that drives macular fluid accumulation, and topical NSAIDs are often used in combination with topical steroids for an additive anti-inflammatory effect via these two distinct mechanisms." },
+      { h: "Key adverse effect — corneal toxicity", t: "A genuinely important safety consideration: topical NSAIDs carry a recognized, dose- and duration-dependent risk of corneal epithelial toxicity, ranging from mild punctate keratopathy to, rarely, sterile corneal melting/perforation — this risk is amplified in eyes with compromised corneal sensation or pre-existing epithelial disease (e.g., after refractive surgery or with concurrent topical steroid/NSAID combination use, already relevant to existing NSAID + Steroid Combination Rationale content), making NSAID duration and epithelial surveillance genuinely important prescribing considerations rather than an assumption of universal safety." },
+    ],
+    memorizeIt: [
+      "NSAIDs inhibit COX (blocking prostaglandin synthesis); steroids inhibit phospholipase A2 upstream (blocking arachidonic acid release) — different points of the same cascade, rationale for combination use.",
+      "Oral NSAIDs are first-line for MILD, non-necrotizing scleritis (already covered); severe/necrotizing scleritis needs systemic steroids/immunosuppression instead.",
+      "Topical NSAIDs are a key tool for preventing/treating cystoid macular edema (uveitic or post-cataract-surgery), often combined with topical steroids.",
+      "Key risk: topical NSAIDs can cause corneal epithelial toxicity, rarely progressing to sterile corneal melt/perforation with prolonged or high-risk use.",
+    ],
+    applyIt: [
+      "This gives you the mechanistic complement to your existing Corticosteroid Delivery Routes and Scleritis content — recognizing that mild scleritis is managed with oral NSAIDs (not steroids) while necrotizing scleritis escalates straight to systemic corticosteroids/immunosuppression reflects genuinely different treatment thresholds by severity, and understanding that topical NSAIDs act on prostaglandin-mediated blood-retinal barrier breakdown explains their specific value for uveitic and post-surgical cystoid macular edema beyond what steroids alone address.",
+    ],
+  },
   "uveapharm-lubricant-adjunct": {
     name: "Lubrication as Adjunctive Comfort Therapy in Anterior Uveitis",
     priority: "SHOULD",
@@ -15201,6 +15339,7 @@ const STUDY_PAGES = {
       { h: "Overview", t: "Iris fluorescein angiography uses intravenously injected fluorescein dye to directly visualize iris vascular perfusion and permeability, a genuinely distinct diagnostic application from the topical ocular surface dyes already covered under Cornea Pharmacology content, extending your existing Iris Vascular Supply & Rubeosis Iridis content into a specific imaging technique." },
       { h: "Technique and what it reveals", t: "Unlike topical fluorescein (already covered, used for ocular surface epithelial defect staining), iris fluorescein angiography involves INTRAVENOUS dye injection with sequential photography of the iris vasculature, allowing direct visualization of the normal major and minor arterial circles (already covered) and, critically, detection of abnormal vascular leakage or the earliest new vessel growth of rubeosis iridis (already covered) — sometimes before the abnormal vessels become clinically visible on routine slit lamp exam alone." },
       { h: "Clinical value", t: "This early detection capability makes iris fluorescein angiography valuable in patients at high risk for rubeosis iridis (already covered as a complication of severe retinal ischemia from proliferative diabetic retinopathy or CRVO) — identifying early leakage or subclinical new vessel formation before overt rubeosis is visible can prompt earlier intervention (treating the underlying retinal ischemia) before progression to neovascular glaucoma (already covered)." },
+      { h: "Topical diagnostic dyes relevant to the anterior segment", t: "Beyond this intravenous application, topical diagnostic dyes already covered in depth under Cornea Pharmacology Dyes content — fluorescein, rose bengal, and lissamine green — remain directly relevant to anterior uvea/anterior chamber assessment: topical fluorescein is essential for Goldmann applanation tonometry (accurately measuring the IOP that anterior chamber and angle pathology, already covered, directly affects) and for the Seidel test (detecting anterior chamber wound leaks, already covered), even though their staining mechanisms target ocular surface epithelium rather than the iris/uvea itself." },
     ],
     memorizeIt: [
       "Iris fluorescein angiography: INTRAVENOUS dye injection + sequential photography — distinct from topical fluorescein (ocular surface staining, already covered).",
@@ -17004,6 +17143,9 @@ const FLASHCARDS = [
   // Episcleritis
   { id: "fc-203", objectiveId: "uvea-episcleritis", front: "How do episcleral vessels respond to topical phenylephrine?", back: "They blanch — a key bedside differentiator from scleritis." },
   { id: "fc-204", objectiveId: "uvea-episcleritis", front: "Is episcleritis typically vision-threatening?", back: "No — it's usually mild and self-limited, unlike scleritis." },
+  { id: "fc-1556", objectiveId: "uvea-intermediate", front: "What two exam findings are relatively specific to intermediate uveitis (pars planitis)?", back: "Vitreous \"snowballs\" (inferior vitreous cell aggregates) and \"snowbanking\" (fibrovascular exudate over the inferior pars plana/ora serrata)." },
+  { id: "fc-1557", objectiveId: "uvea-intermediate", front: "What systemic condition should be considered in a young adult with new intermediate uveitis?", back: "Multiple sclerosis — a recognized association warranting MRI/neurologic workup alongside the standard uveitis workup." },
+  { id: "fc-1558", objectiveId: "uvea-intermediate", front: "Why is periocular or intravitreal steroid generally preferred over topical drops for intermediate uveitis?", back: "Topical drops poorly penetrate to the vitreous/pars plana, the site of inflammation in intermediate uveitis." },
   // Age-related cataract
   { id: "fc-205", objectiveId: "lens-agerelated", front: "What type of age-related cataract causes a myopic shift, and why is it sometimes called \"second sight\"?", back: "Nuclear sclerotic cataract — increased nuclear refractive index shifts refraction toward myopia, sometimes temporarily improving near vision without glasses." },
   { id: "fc-206", objectiveId: "lens-agerelated", front: "What cataract type produces disproportionate glare and near-vision symptoms?", back: "Posterior subcapsular cataract." },
@@ -17691,6 +17833,9 @@ const FLASHCARDS = [
   // Iris pigment/blood-aqueous barrier
   { id: "fc-659", objectiveId: "uveaphys-iris-pigment", front: "What produces flare and cell in anterior uveitis, physiologically?", back: "Breakdown of the blood-aqueous barrier, allowing protein (flare) and inflammatory cells (cell) to enter the aqueous." },
   { id: "fc-660", objectiveId: "uveaphys-iris-pigment", front: "Why do even blue eyes appear dark when examining the pupil?", back: "The posterior pigmented iris epithelium is present regardless of iris color, absorbing light." },
+  { id: "fc-1559", objectiveId: "uveaphys-choroid-bloodflow", front: "What is the choroid's primary physiologic function?", back: "Nourishing the avascular outer retina (photoreceptors + RPE) via diffusion across Bruch's membrane; it also serves a thermoregulatory role." },
+  { id: "fc-1560", objectiveId: "uveaphys-choroid-bloodflow", front: "How does choroidal blood flow compare to its metabolic need, and what does that mean for oxygen extraction?", back: "Choroidal flow is disproportionately HIGH relative to metabolic need, with correspondingly LOW arteriovenous oxygen extraction." },
+  { id: "fc-1561", objectiveId: "uveaphys-choroid-bloodflow", front: "Which uveal circulation is most tightly linked to aqueous humor production, and which is lowest-volume?", back: "Ciliary body flow is tightly linked to aqueous production; iris flow is the lowest-volume of the three uveal circulations." },
   // Chiasm decussation
   { id: "fc-661", objectiveId: "vispathphys-chiasm-decussation", front: "Which retinal fibers cross at the optic chiasm, and which stay uncrossed?", back: "Nasal retinal fibers cross (contralateral); temporal retinal fibers stay uncrossed (ipsilateral)." },
   { id: "fc-662", objectiveId: "vispathphys-chiasm-decussation", front: "What visual field defect does a pituitary tumor compressing the chiasm classically cause?", back: "Bitemporal hemianopia." },
@@ -18384,6 +18529,9 @@ const FLASHCARDS = [
   { id: "fc-1135", objectiveId: "scleragross-structure-episclera", front: "Why is the sclera opaque while the cornea is transparent, despite both being collagenous?", back: "Sclera has irregularly arranged, variable-diameter collagen fibrils; cornea has precisely regular fibril spacing." },
   { id: "fc-1136", objectiveId: "scleragross-structure-episclera", front: "Describe the three-tiered ocular surface vascular arrangement from superficial to deep.", back: "Conjunctival vessels (superficial) → episcleral vessels (intermediate) → scleral vessels (deep)." },
   { id: "fc-1137", objectiveId: "scleragross-structure-episclera", front: "Why does phenylephrine blanch episcleritis vessels but not scleritis vessels?", back: "Topical phenylephrine reaches the superficial conjunctival/episcleral vessels but not the deeper scleral vessels." },
+  { id: "fc-1562", objectiveId: "scleragross-dimensions-emissaria", front: "Where is the sclera thinnest, and why is that clinically important?", back: "At the equator and rectus muscle insertion sites (~0.3 mm) — the most perforation-vulnerable sites in strabismus surgery or blunt trauma." },
+  { id: "fc-1563", objectiveId: "scleragross-dimensions-emissaria", front: "Which vessels exit the sclera through emissarial canals near the equator?", back: "The vortex veins, draining the choroid, ciliary body, and iris venous circulation." },
+  { id: "fc-1564", objectiveId: "scleragross-dimensions-emissaria", front: "What separates the sclera from the choroid, and what can pathologically expand there?", back: "The suprachoroidal space — a potential space that can expand with fluid (choroidal effusion) or blood (suprachoroidal hemorrhage)." },
   { id: "fc-1138", objectiveId: "lensmeter-focimeter-principle", front: "What clinical instrument applies the vergence equation to measure a finished spectacle lens's power?", back: "The lensmeter (focimeter)." },
   { id: "fc-1139", objectiveId: "lensmeter-focimeter-principle", front: "Does a lensmeter measure front vertex power or back vertex power?", back: "Back vertex power — the clinically relevant vergence leaving the lens toward the eye." },
   { id: "fc-1140", objectiveId: "lensmeter-reading-technique", front: "How is unwanted prism identified on a lensmeter?", back: "By the displacement of the lens's optical center from the lensmeter's reticle (crosshair) center when the mires are centered — applies Prentice's Rule." },
@@ -18548,6 +18696,9 @@ const FLASHCARDS = [
   { id: "fc-1286", objectiveId: "pcgross-pupillaryblock", front: "What prior condition predisposes to absolute pupillary block via posterior synechiae?", back: "Prior anterior uveitis, causing iris-to-lens adhesions." },
   { id: "fc-1287", objectiveId: "cbgross-regions", front: "Why is the pars plana chosen as the standard surgical entry site for vitrectomy?", back: "It is relatively avascular and does not overlie the retina or lens, allowing safe instrument insertion." },
   { id: "fc-1288", objectiveId: "cbgross-muscle", front: "Through what mechanism do longitudinal ciliary muscle fibers (Brücke's muscle) lower IOP?", back: "Contraction pulls on the scleral spur and trabecular meshwork, mechanically widening trabecular meshwork spaces and aiding aqueous outflow." },
+  { id: "fc-1565", objectiveId: "cbgross-epithelium-vascular", front: "Which layer of the ciliary epithelium forms the blood-aqueous barrier, and via what junction type?", back: "The inner NON-PIGMENTED epithelium, via tight junctions between adjacent cells." },
+  { id: "fc-1566", objectiveId: "cbgross-epithelium-vascular", front: "What are the three types of nerve fibers innervating the ciliary body, and their sources?", back: "Parasympathetic (short ciliary nerves, ciliary ganglion), sympathetic (long ciliary nerves), and sensory (nasociliary branch of CN V1)." },
+  { id: "fc-1567", objectiveId: "cbgross-epithelium-vascular", front: "Why is ciliary spasm painful in anterior uveitis?", back: "The ciliary body receives sensory innervation via the nasociliary branch of CN V1, which senses the spasm." },
   { id: "fc-1289", objectiveId: "scleradev-origin", front: "What embryonic tissue contributes to the sclera in addition to neural crest, unlike the cornea?", back: "Mesoderm, particularly at the posterior pole/optic nerve insertion region." },
   { id: "fc-1290", objectiveId: "acdev-cleavage", front: "What developmental process forms the anterior chamber angle, and what results from its failure?", back: "Anterior chamber cleavage; incomplete cleavage leaves residual mesenchyme obstructing the angle, causing primary congenital glaucoma." },
   { id: "fc-1291", objectiveId: "acdev-arsspectrum", front: "What is posterior embryotoxon, and what syndrome is it a hallmark of?", back: "A prominent, anteriorly-displaced Schwalbe's line visible without gonioscopy — hallmark of Axenfeld-Rieger spectrum." },
@@ -18562,6 +18713,9 @@ const FLASHCARDS = [
   { id: "fc-1300", objectiveId: "uveapharm-miotic-caution", front: "Why are miotics relatively contraindicated during active anterior uveitis?", back: "Sustained pupillary constriction increases the risk of posterior synechiae formation — the opposite of the cycloplegic approach." },
   { id: "fc-1301", objectiveId: "uveapharm-steroid-routes", front: "What uveitis anatomic pattern typically requires systemic (rather than topical) corticosteroid therapy?", back: "Severe, bilateral, or posterior uveitis/panuveitis." },
   { id: "fc-1302", objectiveId: "uveapharm-immunosuppressive", front: "What biologic drug class is FDA-approved for refractory non-infectious uveitis, and what does it target?", back: "TNF-alpha inhibitors (e.g., adalimumab) — target tumor necrosis factor-alpha, a key pro-inflammatory cytokine." },
+  { id: "fc-1568", objectiveId: "uveapharm-nsaid", front: "What is first-line therapy for mild, non-necrotizing scleritis?", back: "Oral NSAIDs." },
+  { id: "fc-1569", objectiveId: "uveapharm-nsaid", front: "How do NSAIDs and corticosteroids differ mechanistically in the inflammatory cascade?", back: "NSAIDs inhibit COX (blocking prostaglandin synthesis downstream); steroids inhibit phospholipase A2 upstream (blocking arachidonic acid release)." },
+  { id: "fc-1570", objectiveId: "uveapharm-nsaid", front: "What is a key safety concern with prolonged topical NSAID use?", back: "Corneal epithelial toxicity, which can rarely progress to sterile corneal melting/perforation." },
   { id: "fc-1303", objectiveId: "uveapharm-lubricant-adjunct", front: "Why are preservative-free lubricants particularly preferred during active uveitis treatment?", back: "Uveitis treatment often involves multiple concurrent preserved drops (cycloplegic + steroid), compounding cumulative BAK exposure risk." },
   { id: "fc-1304", objectiveId: "uveapharm-iris-angiography", front: "How does iris fluorescein angiography differ from topical fluorescein staining?", back: "It uses intravenous dye injection with sequential photography to visualize iris vasculature, rather than topical dye staining ocular surface epithelial defects." },
   { id: "fc-1305", objectiveId: "uveapharm-phenylephrine-test", front: "What is the phenylephrine blanching test result pattern that distinguishes episcleritis from scleritis?", back: "Episcleritis blanches with topical phenylephrine (superficial vessels); scleritis does NOT blanch (deep scleral vessels unaffected)." },
