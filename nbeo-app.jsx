@@ -1960,6 +1960,9 @@ const BIOENERGETICS_OBJECTIVES = [
   { id: "bioenergetics-glycogen", name: "Glycogen Synthesis & Breakdown", built: true },
   { id: "bioenergetics-fat-storage", name: "Fat Storage & Mobilization (Lipogenesis/Lipolysis)", built: true },
   { id: "bioenergetics-fasting-states", name: "Fed vs. Fasting State Metabolism", built: true },
+  { id: "bioenergetics-thermodynamics", name: "Free Energy, Entropy & Reaction Coupling", built: true },
+  { id: "bioenergetics-energy-carriers", name: "ATP, NADH/FADH2, NADPH & Acetyl-CoA", built: true },
+  { id: "bioenergetics-ph-buffers", name: "pH, Henderson-Hasselbalch Equation & Biological Buffers", built: true },
 ];
 
 const MOLBIO_TOPIC_ID = "t-15-3-5"; // Systemic Health(15) > Biochemistry(3) > Molecular biology(5)
@@ -1969,6 +1972,8 @@ const MOLBIO_OBJECTIVES = [
   { id: "molbio-dna-replication", name: "DNA Structure & Replication", built: true },
   { id: "molbio-transcription-translation", name: "Transcription & Translation (Central Dogma)", built: true },
   { id: "molbio-mutation-types", name: "Mutation Types & Their Functional Consequences", built: true },
+  { id: "molbio-gene-regulation", name: "Gene Expression Regulation — Transcription Factors & Epigenetics", built: true },
+  { id: "molbio-recombinant-dna-genomics", name: "Recombinant DNA Technology, Genomics & Proteomics", built: true },
 ];
 
 const CARBBIOCHEM_TOPIC_ID = "t-15-3-3"; // Systemic Health(15) > Biochemistry(3) > Carbohydrate biochemistry(3)
@@ -1978,6 +1983,9 @@ const CARBBIOCHEM_OBJECTIVES = [
   { id: "carbbiochem-glycolysis", name: "Glycolysis — Pathway & Regulation", built: true },
   { id: "carbbiochem-gluconeogenesis", name: "Gluconeogenesis & the Cori Cycle", built: true },
   { id: "carbbiochem-pentose-phosphate", name: "Pentose Phosphate Pathway & NADPH", built: true },
+  { id: "carbbiochem-tca-cycle", name: "TCA (Krebs) Cycle — Steps, Enzymes & Regulation", built: true },
+  { id: "carbbiochem-electron-transport", name: "Electron Transport Chain & Oxidative Phosphorylation", built: true },
+  { id: "carbbiochem-structure", name: "Carbohydrate Structure — Saccharides, Glycosaminoglycans & Glycoproteins", built: true },
 ];
 
 const LIPIDBIOCHEM_TOPIC_ID = "t-15-3-4"; // Systemic Health(15) > Biochemistry(3) > Lipid biochemistry(4)
@@ -1987,6 +1995,8 @@ const LIPIDBIOCHEM_OBJECTIVES = [
   { id: "lipidbiochem-lipoproteins", name: "Lipoprotein Classes & Cholesterol Transport", built: true },
   { id: "lipidbiochem-fatty-acid-oxidation", name: "Fatty Acid Oxidation (Beta-Oxidation)", built: true },
   { id: "lipidbiochem-cholesterol-synthesis", name: "Cholesterol Synthesis & Statin Mechanism", built: true },
+  { id: "lipidbiochem-structure-classes", name: "Lipid Structure & Classes (Fatty Acids, Eicosanoids, Sphingolipids, Sterols)", built: true },
+  { id: "lipidbiochem-membrane", name: "Membrane Biochemistry — Lipid Bilayer & Fluid Mosaic Model", built: true },
 ];
 
 const PROTEINBIOCHEM_TOPIC_ID = "t-15-3-1"; // Systemic Health(15) > Biochemistry(3) > Proteins(1)
@@ -1995,6 +2005,7 @@ const PROTEINBIOCHEM_TOPIC_ID = "t-15-3-1"; // Systemic Health(15) > Biochemistr
 const PROTEINBIOCHEM_OBJECTIVES = [
   { id: "proteinbiochem-collagen", name: "Collagen Structure & Synthesis", built: true },
   { id: "proteinbiochem-protein-folding", name: "Protein Folding & Structural Levels", built: true },
+  { id: "proteinbiochem-enzyme-regulation", name: "Enzyme Regulation — Allosteric Control, Covalent Modification & Proteolytic Activation", built: true },
 ];
 
 const CELLBIOCHEM_TOPIC_ID = "t-15-3-0"; // Systemic Health(15) > Biochemistry(3) > Cellular biochemistry(0)
@@ -2004,6 +2015,7 @@ const CELLBIOCHEM_OBJECTIVES = [
   { id: "cellbiochem-enzyme-kinetics", name: "Enzyme Kinetics & Inhibition", built: true },
   { id: "cellbiochem-second-messengers", name: "Second Messenger Systems (cAMP, IP3/DAG)", built: true },
   { id: "cellbiochem-free-radicals", name: "Free Radicals & Antioxidant Defense", built: true },
+  { id: "cellbiochem-compartmentalization", name: "Cellular Compartmentalization, Organelle Biochemistry & Molecular Bonds", built: true },
 ];
 
 const NUTRBIOCHEM_TOPIC_ID = "t-15-3-6"; // Systemic Health(15) > Biochemistry(3) > Nutrition(6)
@@ -2015,6 +2027,7 @@ const NUTRBIOCHEM_TOPIC_ID = "t-15-3-6"; // Systemic Health(15) > Biochemistry(3
 const NUTRBIOCHEM_OBJECTIVES = [
   { id: "nutrbiochem-fat-soluble-vitamins", name: "Fat-Soluble Vitamin Metabolism (A, D, E, K)", built: true },
   { id: "nutrbiochem-water-soluble-vitamins", name: "Water-Soluble Vitamin Coenzyme Functions (B-Complex)", built: true },
+  { id: "nutrbiochem-macronutrients", name: "Macronutrient Digestion & Essential Amino Acids", built: true },
 ];
 
 const ANTIBODY_TOPIC_ID = "t-15-5-1"; // Systemic Health(15) > Immunology(5) > Antibodies(1)
@@ -2094,6 +2107,8 @@ const BACTERIOLOGY_TOPIC_ID = "t-15-6-0"; // Systemic Health(15) > Microbiology(
 const BACTERIOLOGY_OBJECTIVES = [
   { id: "bacteriology-classification", name: "Bacterial Structure & Gram Stain Classification", built: true },
   { id: "bacteriology-antibiotic-mechanisms", name: "Antibiotic Mechanisms of Action & Resistance", built: true },
+  { id: "bacteriology-growth-genetics", name: "Bacterial Growth Physiology & Genetic Mechanisms", built: true },
+  { id: "bacteriology-atypical-organisms", name: "Atypical Bacteria — Mycobacteria, Chlamydia, Rickettsia, Mycoplasma & Spirochetes", built: true },
 ];
 
 const VIROLOGY_TOPIC_ID = "t-15-6-1"; // Systemic Health(15) > Microbiology(6) > Virology(1)
@@ -2101,6 +2116,7 @@ const VIROLOGY_TOPIC_ID = "t-15-6-1"; // Systemic Health(15) > Microbiology(6) >
 const VIROLOGY_OBJECTIVES = [
   { id: "virology-replication-cycle", name: "Viral Structure & Replication Cycle", built: true },
   { id: "virology-antiviral-mechanisms", name: "Antiviral Drug Mechanisms & Latency", built: true },
+  { id: "virology-classification-prions", name: "Viral Classification Scheme & Prions", built: true },
 ];
 
 const MYCOLOGY_TOPIC_ID = "t-15-6-2"; // Systemic Health(15) > Microbiology(6) > Mycology(2)
@@ -2110,6 +2126,7 @@ const MYCOLOGY_TOPIC_ID = "t-15-6-2"; // Systemic Health(15) > Microbiology(6) >
 const MYCOLOGY_OBJECTIVES = [
   { id: "mycology-fungal-structure", name: "Fungal Structure & Classification (Yeasts vs. Molds)", built: true },
   { id: "mycology-fungal-keratitis", name: "Fungal Keratitis — Risk Factors & Clinical Distinction", built: true },
+  { id: "mycology-classification-systemic", name: "Classification of Mycoses by Tissue Depth & Laboratory Identification", built: true },
 ];
 
 const PARASITOLOGY_TOPIC_ID = "t-15-6-3"; // Systemic Health(15) > Microbiology(6) > Parasitology(3)
@@ -2117,6 +2134,7 @@ const PARASITOLOGY_TOPIC_ID = "t-15-6-3"; // Systemic Health(15) > Microbiology(
 // topic (contact lens-associated, classically misdiagnosed as HSV keratitis).
 const PARASITOLOGY_OBJECTIVES = [
   { id: "parasitology-acanthamoeba", name: "Acanthamoeba Keratitis — Pathophysiology & Clinical Distinction", built: true },
+  { id: "parasitology-classification-classes", name: "Parasite Classes — Nematodes, Cestodes, Trematodes & Ocular Toxoplasmosis", built: true },
 ];
 
 const HEADNECK_TOPIC_ID = "t-15-0-0"; // Systemic Health(15) > Anatomy(Gross)(0) > Head and neck(0)
@@ -10615,6 +10633,71 @@ const STUDY_PAGES = {
       "This gives you the complete biochemical sequence underlying your existing Diabetes Mellitus/DKA content: DKA is not simply 'too much sugar,' it's the consequence of cells being functionally starved of usable glucose despite hyperglycemia (since insulin is required for cellular glucose uptake), triggering the same ketogenic pathway the body normally uses during true starvation — except here it proceeds unchecked and produces dangerous, unregulated ketoacidosis rather than the mild, well-tolerated ketosis of ordinary prolonged fasting.",
     ],
   },
+  "bioenergetics-thermodynamics": {
+    name: "Free Energy, Entropy & Reaction Coupling",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry references (e.g., standard biochemistry texts)"],
+    learnIt: [
+      { h: "Overview", t: "Every biochemical reaction is governed by basic thermodynamic principles that determine whether it can proceed spontaneously, and understanding these principles — free energy, entropy, and reaction coupling — is the conceptual foundation underlying every metabolic pathway already covered on this platform (glycolysis, the Krebs cycle, beta-oxidation, and all the rest)." },
+      { h: "Free energy, enthalpy, and entropy", t: "Gibbs free energy (G) determines whether a reaction can occur spontaneously; the change in free energy (ΔG) is related to the change in enthalpy (ΔH, heat content) and entropy (ΔS, disorder/randomness) by ΔG = ΔH − TΔS (T = absolute temperature) — a reaction is thermodynamically spontaneous (favorable) when ΔG is negative, at equilibrium when ΔG is zero, and non-spontaneous (requires energy input) when ΔG is positive; ΔG is also related to the equilibrium constant (Keq) by ΔG°' = −RT ln(Keq), meaning reactions that strongly favor products at equilibrium have a large negative standard free energy change." },
+      { h: "Exergonic vs. endergonic reactions", t: "Exergonic reactions release free energy (negative ΔG) and proceed spontaneously — most catabolic (breakdown) reactions, like glycolysis and beta-oxidation (already covered), are exergonic; endergonic reactions require free energy input (positive ΔG) to proceed — most anabolic (biosynthetic) reactions, like gluconeogenesis and cholesterol synthesis (already covered), are endergonic and cannot occur without an external energy source." },
+      { h: "Reaction coupling — how endergonic reactions actually happen", t: "The cell drives thermodynamically unfavorable (endergonic) reactions forward by coupling them to a highly favorable (strongly exergonic) reaction, most commonly ATP hydrolysis (already relevant to ATP's role as the cell's universal energy currency, covered next) — because the combined ΔG of the coupled pair is negative overall (the large negative ΔG of ATP hydrolysis outweighs the positive ΔG of the endergonic step), the unfavorable reaction proceeds; this coupling principle explains why so many biosynthetic and active-transport processes already covered on this platform (e.g., glycogen synthesis, the Na+/K+-ATPase pump) consume ATP even though the reaction they're driving is not itself an ATP-consuming step in isolation." },
+      { h: "Oxidation-reduction reactions", t: "Oxidation is the loss of electrons (or hydrogen atoms); reduction is the gain of electrons — in every redox reaction, one substrate is oxidized while another is simultaneously reduced (electrons don't simply disappear); this principle underlies the electron-carrier molecules central to metabolism (already relevant to NADH/FADH2/NADPH, covered next), since these carriers work by being alternately reduced (accepting electrons from a substrate being oxidized in a catabolic pathway) and oxidized (donating those electrons onward, ultimately to the electron transport chain, already covered under Cellular Respiration)." },
+    ],
+    memorizeIt: [
+      "ΔG = ΔH − TΔS. Negative ΔG = spontaneous (exergonic); zero ΔG = equilibrium; positive ΔG = non-spontaneous (endergonic).",
+      "Exergonic (releases energy): most catabolic pathways (glycolysis, beta-oxidation). Endergonic (requires energy): most anabolic pathways (gluconeogenesis, cholesterol synthesis).",
+      "Reaction coupling: endergonic reactions are driven forward by pairing with a strongly exergonic reaction (classically ATP hydrolysis) so the combined ΔG is negative.",
+      "Oxidation = loss of electrons/H. Reduction = gain of electrons/H — always paired (one substrate oxidized, another reduced) in a redox reaction.",
+    ],
+    applyIt: [
+      "This gives you the thermodynamic vocabulary underlying essentially every metabolic pathway already covered on this platform: recognizing that anabolic pathways (gluconeogenesis, cholesterol synthesis, glycogen synthesis) are energetically uphill (endergonic) and therefore require ATP-coupled driving forces, while catabolic pathways (glycolysis, beta-oxidation, the Krebs cycle) are energetically downhill (exergonic) and release usable energy, is exactly the conceptual frame that explains why the cell needs a constant supply of ATP to keep running its biosynthetic machinery against the thermodynamic grain.",
+    ],
+  },
+  "bioenergetics-energy-carriers": {
+    name: "ATP, NADH/FADH2, NADPH & Acetyl-CoA",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry references"],
+    learnIt: [
+      { h: "Overview", t: "A small set of carrier molecules — ATP, NADH/FADH2, NADPH, and acetyl-CoA — appear repeatedly across essentially every metabolic pathway already covered on this platform (glycolysis, the Krebs cycle, beta-oxidation, cholesterol synthesis), and understanding each one's specific role clarifies why they're not interchangeable despite all being loosely described as 'energy' molecules." },
+      { h: "ATP and other nucleotide phosphates", t: "ATP (adenosine triphosphate) is the cell's universal, immediately usable energy currency — its two high-energy phosphoanhydride bonds release substantial free energy on hydrolysis to ADP + Pi (or AMP + PPi), energy that is directly coupled to power endergonic reactions, active transport, and mechanical work (already relevant to the Na+/K+-ATPase pump and muscle contraction); other nucleotide triphosphates (GTP, UTP, CTP) serve more specialized roles (GTP in protein synthesis and G-protein signaling, already covered under Second Messenger Systems; UTP in glycogen synthesis)." },
+      { h: "NADH and FADH2 — catabolic electron carriers", t: "NAD+ and FAD are oxidized electron carriers that become reduced to NADH and FADH2, respectively, by accepting high-energy electrons during catabolic pathways already covered (glycolysis, the Krebs cycle, beta-oxidation); NADH and FADH2 then donate these electrons to the electron transport chain (already covered under Cellular Respiration), where their energy drives oxidative phosphorylation to generate the large majority of cellular ATP — FADH2 enters the electron transport chain at a lower energy point than NADH, which is why each FADH2 yields somewhat less ATP than each NADH." },
+      { h: "NADPH — the anabolic/antioxidant carrier", t: "NADPH is structurally similar to NADH but serves a distinct role: rather than feeding the electron transport chain, NADPH is the primary electron donor for reductive biosynthesis (e.g., fatty acid and cholesterol synthesis, already covered) and for regenerating reduced glutathione in antioxidant defense (already covered under Free Radicals & Antioxidant Defense) — this NADH-vs-NADPH distinction (catabolic/ATP-generating vs. anabolic/reductive) is precisely why the pentose phosphate pathway (already covered), which generates NADPH rather than ATP, is metabolically distinct from glycolysis despite starting from the same substrate." },
+      { h: "Acetyl-CoA — the central metabolic hub", t: "Acetyl-CoA is the converging point where carbohydrate metabolism (via pyruvate dehydrogenase, already relevant to glycolysis's endpoint), fatty acid metabolism (via beta-oxidation, already covered), and certain amino acid catabolism all funnel their carbon skeletons before entry into the Krebs cycle — this makes acetyl-CoA the biochemical crossroads connecting carbohydrate, lipid, and (to a lesser extent) protein catabolism into one common oxidative pathway, and also the branch point for fatty acid/cholesterol synthesis and ketogenesis (already covered) when acetyl-CoA production exceeds the Krebs cycle's processing capacity." },
+    ],
+    memorizeIt: [
+      "ATP: universal, immediately usable energy currency — high-energy phosphoanhydride bonds, hydrolyzed to power endergonic reactions/transport/mechanical work.",
+      "NADH/FADH2: catabolic electron carriers — feed the electron transport chain to drive oxidative phosphorylation (ATP generation). FADH2 enters at a lower energy point than NADH → yields less ATP per molecule.",
+      "NADPH: anabolic/antioxidant electron donor — powers reductive biosynthesis (fatty acid/cholesterol synthesis) and glutathione regeneration, generated by the pentose phosphate pathway.",
+      "Acetyl-CoA: the central hub where carbohydrate (pyruvate), fat (beta-oxidation), and amino acid catabolism converge before entering the Krebs cycle.",
+    ],
+    applyIt: [
+      "This gives you the precise reason NADH and NADPH — chemically similar molecules — are not interchangeable anywhere on this platform's existing metabolic content: NADH is the cell's catabolic 'energy deposit' feeding ATP production via the electron transport chain, while NADPH is the cell's anabolic/antioxidant 'reducing power' spent on biosynthesis and glutathione regeneration — which is exactly why the pentose phosphate pathway (generating NADPH) and glycolysis (generating NADH), though both starting from glucose, serve fundamentally different metabolic purposes.",
+    ],
+  },
+  "bioenergetics-ph-buffers": {
+    name: "pH, Henderson-Hasselbalch Equation & Biological Buffers",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry references"],
+    learnIt: [
+      { h: "Overview", t: "Maintaining blood and intracellular pH within a narrow physiologic range is essential for normal enzyme function (since enzyme activity, already covered under Enzyme Kinetics, is highly pH-dependent), and the Henderson-Hasselbalch equation is the quantitative tool for understanding how biological buffer systems resist pH change — this directly underlies the acid-base physiology already relevant to your Respiratory and Renal content." },
+      { h: "The Henderson-Hasselbalch equation", t: "For a weak acid (HA) in equilibrium with its conjugate base (A−), pH = pKa + log([A−]/[HA]) — this equation shows that a buffer resists pH change most effectively when the ratio of base to acid form is near 1:1 (i.e., when pH is near the buffer's pKa), since a solution at that ratio has ample amounts of both forms available to neutralize either an added acid or an added base." },
+      { h: "Worked example — the bicarbonate buffer system", t: "The bicarbonate buffer system (CO2/H2CO3/HCO3−) is the principal extracellular buffer, with pKa ≈ 6.1 for the H2CO3/HCO3− pair; applying the equation to normal plasma values (HCO3− ≈ 24 mEq/L, dissolved CO2 ≈ 1.2 mmol/L) gives pH = 6.1 + log(24/1.2) = 6.1 + log(20) = 6.1 + 1.3 = 7.4, matching normal physiologic blood pH — this worked calculation shows exactly how the equation connects a measurable lab ratio (bicarbonate and CO2, both already relevant to arterial blood gas interpretation) to the actual pH value." },
+      { h: "Buffers as a general principle — connects to existing acid-base content", t: "Beyond bicarbonate, the body relies on additional buffer systems including phosphate (intracellular/renal) and proteins (including hemoglobin, already covered under the Oxyhemoglobin Curve's CO2-carrying role) — each buffer pair is most effective for resisting pH change near its own specific pKa, which is why the bicarbonate system (with a pKa somewhat below physiologic pH) remains effective as the primary plasma buffer specifically because it is an open system, continuously regulated by respiratory CO2 elimination (already covered) and renal bicarbonate handling working together to keep the HCO3−/CO2 ratio — and therefore pH — within the narrow normal range despite this pKa mismatch." },
+    ],
+    memorizeIt: [
+      "Henderson-Hasselbalch equation: pH = pKa + log([A−]/[HA]) — a buffer resists pH change best when pH is near its pKa (base:acid ratio near 1:1).",
+      "Bicarbonate buffer system: pH = 6.1 + log(HCO3−/CO2) — normal plasma values (HCO3− 24, CO2 1.2) give pH = 6.1 + log(20) ≈ 7.4.",
+      "The bicarbonate system stays effective as the primary plasma buffer (despite its pKa being below physiologic pH) because it's an open system — continuously regulated by respiratory CO2 elimination and renal HCO3− handling.",
+      "Other biological buffers: phosphate (intracellular/renal), proteins including hemoglobin.",
+    ],
+    applyIt: [
+      "This gives you the quantitative framework underlying arterial blood gas interpretation already relevant to your Respiratory and Renal content: the Henderson-Hasselbalch equation is precisely why respiratory disturbances (changing CO2, the equation's denominator) and metabolic/renal disturbances (changing HCO3−, the numerator) both shift blood pH, and why the body's compensatory response to any primary acid-base disturbance always works by adjusting the other component of that same ratio, back toward the ratio of about 20:1 that yields a normal pH of 7.4.",
+    ],
+  },
   "molbio-dna-replication": {
     name: "DNA Structure & Replication",
     priority: "SHOULD",
@@ -10676,6 +10759,49 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you the precise mechanistic reason inherited cancer-predisposition syndromes (carrying one tumor suppressor loss-of-function mutation from birth) so dramatically raise cancer risk, extending your existing Oncogenes & Tumor Suppressor Genes content: since tumor suppressors require both alleles inactivated (the two-hit hypothesis) to lose their checkpoint-enforcing function, a person already born with one non-functional copy needs only a single additional somatic mutation — rather than two independent hits — making cancer statistically far more likely and typically at an earlier age than in the general population.",
+    ],
+  },
+  "molbio-gene-regulation": {
+    name: "Gene Expression Regulation — Transcription Factors & Epigenetics",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard molecular biology references"],
+    learnIt: [
+      { h: "Overview", t: "Every cell in the body carries the same genome, yet different cell types express dramatically different sets of genes — this topic explains the regulatory mechanisms that control WHICH genes get transcribed (already covered under Transcription & Translation) in a given cell, at a given time, extending your existing Molecular Biology content beyond the mechanics of transcription itself." },
+      { h: "Promoters and transcription factors", t: "RNA polymerase (already covered) requires assistance to locate and bind the correct starting point for transcription — promoter sequences (DNA regions upstream of a gene) serve as the binding site for general transcription factors, which position RNA polymerase correctly; additional gene-specific transcription factors (activators and repressors) bind regulatory DNA sequences (enhancers, which can be located far from the gene itself, and silencers) to increase or decrease that particular gene's transcription rate, which is the primary mechanism by which different cell types selectively turn genes on or off despite sharing an identical genome." },
+      { h: "Epigenetic regulation — heritable regulation without changing the DNA sequence", t: "Epigenetic mechanisms alter gene expression without changing the underlying DNA sequence itself (distinct from the mutations already covered under Mutation Types): DNA methylation (addition of methyl groups, typically at CpG-rich promoter regions) generally silences gene transcription, while histone modification (acetylation generally loosens DNA-histone packaging, promoting transcription; deacetylation tightens it, repressing transcription) alters how accessible a gene's DNA is to the transcriptional machinery — these modifications can be stably inherited through cell division, which is part of how a liver cell's daughter cells remain liver cells rather than reverting to an undifferentiated state." },
+      { h: "Direct clinical relevance — connects to existing oncogene/tumor suppressor content", t: "Epigenetic silencing is a recognized alternative mechanism (alongside the mutational loss-of-function already covered under Mutation Types) by which tumor suppressor genes can be inactivated in cancer — hypermethylation of a tumor suppressor gene's promoter can silence its expression just as effectively as a structural mutation, without the DNA sequence itself being altered, which is why some cancers show reduced tumor suppressor protein expression without an identifiable mutation in the gene's coding sequence." },
+    ],
+    memorizeIt: [
+      "Promoters: DNA sequences where general transcription factors position RNA polymerase to begin transcription.",
+      "Gene-specific transcription factors (activators/repressors) bind enhancers/silencers to selectively increase/decrease a specific gene's transcription — the main reason different cell types express different genes from an identical genome.",
+      "DNA methylation (CpG promoter regions): generally SILENCES transcription. Histone acetylation: generally loosens packaging, PROMOTES transcription (deacetylation represses it).",
+      "Epigenetic changes alter gene expression WITHOUT changing the DNA sequence, and can be stably inherited through cell division — tumor suppressor gene promoter hypermethylation is a recognized epigenetic route to cancer, distinct from mutational inactivation.",
+    ],
+    applyIt: [
+      "This gives you an important extension of your existing Mutation Types and Oncogenes & Tumor Suppressor Genes content: not every loss of tumor suppressor function comes from a structural DNA mutation — epigenetic silencing (promoter hypermethylation) can inactivate a tumor suppressor gene just as functionally, which is a genuinely important distinction for understanding that 'genetic' and 'epigenetic' mechanisms of disease are related but mechanistically distinct routes to the same functional outcome (loss of a protective gene's expression).",
+    ],
+  },
+  "molbio-recombinant-dna-genomics": {
+    name: "Recombinant DNA Technology, Genomics & Proteomics",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard molecular biology/genetics references"],
+    learnIt: [
+      { h: "Overview", t: "Modern molecular biology relies on a set of laboratory techniques for amplifying, analyzing, and manipulating DNA, along with large-scale approaches for studying an organism's complete genetic and protein content — these tools directly explain how the genetic disorders and infectious diseases already covered elsewhere on this platform are actually diagnosed and studied in practice." },
+      { h: "Polymerase chain reaction (PCR)", t: "PCR exponentially amplifies a specific target DNA sequence in vitro using repeated cycles of denaturation (heating to separate the double helix, already covered), annealing (short synthetic primers bind flanking sequences of the target region), and extension (a heat-stable DNA polymerase, e.g., Taq polymerase, synthesizes new complementary strands from the primers) — each cycle doubles the amount of target DNA, so even a trace starting amount can be amplified to a readily detectable quantity within a couple dozen cycles; PCR-based testing is the diagnostic backbone for rapidly identifying specific pathogens (e.g., HSV DNA, already relevant to your Virology content) directly from a clinical sample." },
+      { h: "Southern blot and chromosome analysis", t: "Southern blot detects a specific DNA sequence within a complex sample: DNA is cut with restriction enzymes, separated by size via gel electrophoresis, transferred (\"blotted\") to a membrane, and probed with a labeled complementary sequence that binds (hybridizes) only to the matching target — an analogous technique using RNA is called Northern blot, and using protein, Western blot; chromosome analysis (karyotyping) visualizes an individual's full chromosome complement under a microscope to detect numerical abnormalities (e.g., trisomy 21, already relevant to your Genetic Principles content) or large structural rearrangements." },
+      { h: "Molecular therapy — gene therapy and antisense therapy", t: "Gene therapy introduces a functional copy of a gene (often via a modified viral vector) to compensate for a defective or missing gene product, an approach already referenced in the context of inherited retinal disease gene therapy elsewhere on this platform; antisense therapy uses synthetic oligonucleotides complementary to a target mRNA sequence, binding it to block translation or trigger its degradation, thereby reducing production of a specific (typically harmful) protein — these represent two distinct molecular strategies, adding a functional gene product versus suppressing an unwanted one, for intervening directly at the genetic/molecular level rather than treating downstream disease consequences." },
+      { h: "Genomics and proteomics", t: "Genomics is the large-scale study of an organism's complete genome (the full DNA sequence, including all genes and non-coding regions), enabling identification of disease-associated genetic variants across the entire genome rather than one gene at a time; proteomics is the large-scale study of an organism's (or cell type's) complete set of expressed proteins (the proteome), which — unlike the relatively fixed genome — varies by cell type, developmental stage, and physiologic state, since it reflects which genes are actually being transcribed and translated (already covered under Gene Expression Regulation) at a given moment rather than which genes are merely present." },
+    ],
+    memorizeIt: [
+      "PCR: denaturation → annealing (primers) → extension (Taq polymerase) — exponentially amplifies a specific target DNA sequence; diagnostic backbone for pathogen DNA/RNA detection.",
+      "Southern blot: DNA-specific hybridization technique (restriction digest → gel electrophoresis → blot → labeled probe). Northern = RNA, Western = protein (same underlying blotting logic).",
+      "Karyotyping: visualizes full chromosome complement — detects numerical (e.g., trisomy 21) or large structural chromosomal abnormalities.",
+      "Gene therapy: adds a functional gene copy (viral vector). Antisense therapy: synthetic oligonucleotide binds target mRNA to block translation/trigger degradation — opposite strategies (add function vs. suppress a specific transcript).",
+    ],
+    applyIt: [
+      "This gives you the laboratory-methods layer underlying diagnostic and therapeutic content already referenced elsewhere on this platform: PCR is the practical basis for rapid molecular diagnosis of pathogens like HSV (already covered under Virology), karyotyping is how numerical chromosomal disorders like trisomy 21 are actually confirmed (already relevant to your Genetic Principles content), and gene therapy is the mechanistic basis behind targeted treatment approaches for inherited retinal disease already referenced on this platform — connecting the abstract molecular biology concepts already covered to the concrete tools used to diagnose and treat the diseases built elsewhere on this platform.",
     ],
   },
   "carbbiochem-glycolysis": {
@@ -10741,6 +10867,69 @@ const STUDY_PAGES = {
       "This gives you a specific, high-yield enzyme-deficiency-to-clinical-syndrome link extending your existing Anemia content under Hematopoietic & Lymphoid System: G6PD deficiency is a classic example of how a single enzyme's role in antioxidant defense (via NADPH/glutathione) explains a very specific, triggerable pattern of hemolysis — recognizing the trigger list (fava beans, sulfa drugs, certain antimalarials, infection) alongside the underlying biochemical mechanism is exactly the kind of integrated understanding board questions tend to reward.",
     ],
   },
+  "carbbiochem-tca-cycle": {
+    name: "TCA (Krebs) Cycle — Steps, Enzymes & Regulation",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry references (e.g., standard biochemistry texts)"],
+    learnIt: [
+      { h: "Overview", t: "The TCA (tricarboxylic acid, citric acid, or Krebs) cycle is the mitochondrial matrix pathway that completes the oxidation of acetyl-CoA (already covered as the convergence point of carbohydrate, fat, and amino acid catabolism), generating the electron carriers that feed the electron transport chain — this pathway was already introduced briefly under Cellular Respiration & ATP Production, and this objective covers its specific steps, enzymes, and regulation in the detail expected for board-level mastery." },
+      { h: "The eight steps, in order", t: "(1) Citrate synthase combines acetyl-CoA with oxaloacetate (OAA) to form citrate; (2) aconitase isomerizes citrate to isocitrate; (3) isocitrate dehydrogenase oxidatively decarboxylates isocitrate to alpha-ketoglutarate, releasing CO2 and generating NADH — this is the rate-limiting, committed step of the cycle; (4) alpha-ketoglutarate dehydrogenase (a multi-enzyme complex requiring the same cofactor set as pyruvate dehydrogenase — thiamine pyrophosphate, lipoic acid, CoA, FAD, NAD+) oxidatively decarboxylates alpha-ketoglutarate to succinyl-CoA, again releasing CO2 and generating NADH; (5) succinyl-CoA synthetase converts succinyl-CoA to succinate, generating GTP directly by substrate-level phosphorylation; (6) succinate dehydrogenase oxidizes succinate to fumarate, generating FADH2 — this is the only TCA cycle enzyme embedded in the inner mitochondrial membrane, and it doubles as Complex II of the electron transport chain (already covered under Cellular Respiration); (7) fumarase hydrates fumarate to malate; (8) malate dehydrogenase oxidizes malate back to oxaloacetate, generating a third NADH and regenerating the OAA needed to accept the next acetyl-CoA." },
+      { h: "Net yield and regulation", t: "Each turn of the cycle (one acetyl-CoA) yields 3 NADH, 1 FADH2, 1 GTP (ATP-equivalent), and releases 2 CO2 — the cycle itself generates only one direct high-energy phosphate bond per turn, with the large majority of its energy yield realized only later, once NADH/FADH2 reach the electron transport chain; the cycle is regulated primarily at its irreversible steps — isocitrate dehydrogenase (activated by ADP and Ca2+, inhibited by ATP and NADH) and alpha-ketoglutarate dehydrogenase (inhibited by NADH, succinyl-CoA, and ATP) — along with citrate synthase, which is inhibited by its own product citrate as well as by ATP and NADH, collectively ensuring the cycle slows when the cell's energy charge (NADH/ATP) is already high and speeds up when energy is needed (high ADP/Ca2+, e.g., during increased muscle activity)." },
+      { h: "Direct clinical relevance — connects to existing beta-oxidation and ketogenesis content", t: "Because the cycle requires oxaloacetate to accept each new acetyl-CoA, and OAA is simultaneously the starting substrate for gluconeogenesis (already covered), states where OAA is heavily diverted toward gluconeogenesis (prolonged fasting, insulin deficiency) leave less OAA available to combine with the acetyl-CoA being generated by beta-oxidation (already covered) — this is the precise mechanistic reason excess acetyl-CoA gets shunted toward ketogenesis (already covered under Fatty Acid Oxidation) rather than being fully oxidized through the TCA cycle in these states." },
+    ],
+    memorizeIt: [
+      "TCA cycle enzymes in order: citrate synthase → aconitase → isocitrate dehydrogenase (rate-limiting) → alpha-ketoglutarate dehydrogenase → succinyl-CoA synthetase → succinate dehydrogenase (= ETC Complex II) → fumarase → malate dehydrogenase.",
+      "Per acetyl-CoA: 3 NADH + 1 FADH2 + 1 GTP + 2 CO2 released; oxaloacetate is regenerated to accept the next acetyl-CoA.",
+      "Regulation: isocitrate dehydrogenase and alpha-ketoglutarate dehydrogenase inhibited by NADH/ATP (activated by ADP/Ca2+) — cycle slows when energy charge is high, speeds up when ADP/Ca2+ signal energy demand.",
+      "Succinate dehydrogenase is the only TCA enzyme in the inner mitochondrial membrane — it IS Complex II of the electron transport chain, directly linking the TCA cycle to oxidative phosphorylation.",
+    ],
+    applyIt: [
+      "This gives you the specific enzymatic detail behind the TCA cycle summary already introduced under Cellular Respiration & ATP Production, and directly explains the oxaloacetate-competition mechanism already covered under Fatty Acid Oxidation: when gluconeogenesis (already covered) diverts OAA away from the TCA cycle during fasting or insulin deficiency, beta-oxidation-derived acetyl-CoA has nothing to condense with via citrate synthase, forcing the ketogenesis shunt — a complete mechanistic chain from named enzyme to clinical ketosis/ketoacidosis.",
+    ],
+  },
+  "carbbiochem-electron-transport": {
+    name: "Electron Transport Chain & Oxidative Phosphorylation",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry references"],
+    learnIt: [
+      { h: "Overview", t: "The electron transport chain (ETC), located in the inner mitochondrial membrane, is where the electron carriers generated by glycolysis, the TCA cycle, and beta-oxidation (all already covered) are finally used to generate the large majority of cellular ATP — this objective covers the specific complexes and the chemiosmotic mechanism already referenced briefly under Cellular Respiration & ATP Production." },
+      { h: "The four electron-transport complexes plus ATP synthase", t: "Complex I (NADH dehydrogenase) accepts electrons from NADH (already covered) and passes them to coenzyme Q (ubiquinone, a mobile lipid-soluble carrier), pumping protons into the intermembrane space in the process; Complex II is succinate dehydrogenase itself (already covered as a TCA cycle enzyme), which passes electrons from FADH2 to coenzyme Q WITHOUT pumping any protons — the direct reason each FADH2 yields less ATP than each NADH; Complex III passes electrons from coenzyme Q to cytochrome c (another mobile carrier), pumping additional protons; Complex IV (cytochrome c oxidase) passes electrons to the final electron acceptor, molecular oxygen, reducing it to water, and pumps a final round of protons — oxygen's role as the terminal electron acceptor is exactly why this entire process is oxygen-dependent (aerobic)." },
+      { h: "Chemiosmotic coupling and ATP synthase", t: "Complexes I, III, and IV each pump protons (H+) from the mitochondrial matrix into the intermembrane space, creating an electrochemical proton gradient (the proton-motive force) across the inner mitochondrial membrane; ATP synthase (Complex V) allows protons to flow back down this gradient into the matrix, and uses the energy released by that flow to phosphorylate ADP to ATP — this chemiosmotic mechanism (Peter Mitchell's chemiosmotic theory) is why electron transport and ATP synthesis are physically coupled processes: blocking the proton gradient (or providing an alternate route for protons to leak back, bypassing ATP synthase) uncouples the two." },
+      { h: "Mitochondrial DNA and uncoupling — direct clinical relevance", t: "Mitochondria contain their own small circular DNA genome, maternally inherited, encoding several ETC subunits (Complexes I, III, IV, and ATP synthase) along with the mitochondrial rRNA/tRNA needed to translate them — notably, Complex II (succinate dehydrogenase) is entirely nuclear-encoded, which is part of why mitochondrial DNA mutations (already covered under Mitochondrial Disorders, e.g., LHON) selectively impair some ETC complexes' function while sparing others; chemical uncouplers (e.g., 2,4-dinitrophenol) dissipate the proton gradient by allowing protons to leak across the membrane without passing through ATP synthase, so electron transport continues (oxygen consumption stays high) but ATP synthesis stops, with the dissipated energy released as heat instead — the same basic principle underlying physiologic non-shivering thermogenesis via uncoupling proteins in brown adipose tissue." },
+    ],
+    memorizeIt: [
+      "ETC complexes: I (NADH dehydrogenase, pumps H+) → CoQ ← II (succinate dehydrogenase, NO H+ pumped) → III (pumps H+) → cytochrome c → IV (cytochrome c oxidase, pumps H+, reduces O2 to H2O).",
+      "FADH2 enters at Complex II (no proton pumping there) — yields less ATP than NADH, which enters at Complex I.",
+      "Chemiosmotic coupling: proton gradient (matrix → intermembrane space via Complexes I/III/IV) drives ATP synthase (Complex V) as protons flow back into the matrix.",
+      "Mitochondrial DNA: circular, maternally inherited, encodes subunits of Complexes I/III/IV/V (NOT Complex II, which is entirely nuclear-encoded). Uncouplers (2,4-DNP, or physiologic brown-fat UCP1): dissipate the H+ gradient without ATP synthesis — energy released as heat.",
+    ],
+    applyIt: [
+      "This gives you the specific complex-by-complex mechanism completing your existing Mitochondrial Disorders content (LHON, CPEO): because mitochondrial DNA encodes subunits of Complexes I, III, IV, and V but not Complex II, mitochondrial DNA point mutations characteristically impair oxidative phosphorylation's ATP-generating capacity while succinate dehydrogenase (Complex II/TCA cycle) activity can remain relatively preserved — a nuance that helps explain the biochemical basis of the tissue-selective, energy-demand-driven pattern of mitochondrial disease already covered.",
+    ],
+  },
+  "carbbiochem-structure": {
+    name: "Carbohydrate Structure — Saccharides, Glycosaminoglycans & Glycoproteins",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond their role as metabolic fuel (already covered under Glycolysis and related pathways), carbohydrates serve major structural and cell-recognition roles throughout the body — several of which are directly relevant to ocular tissue already covered elsewhere on this platform, particularly the cornea." },
+      { h: "Mono-, oligo-, and polysaccharides", t: "Monosaccharides (e.g., glucose, fructose, galactose) are the simplest sugar units; oligosaccharides are short chains of a few monosaccharides linked by glycosidic bonds; polysaccharides are long chains of monosaccharides — glycogen (already covered) is the classic storage polysaccharide, while structural polysaccharides form the basis of the glycosaminoglycans discussed next." },
+      { h: "Glycosaminoglycans (GAGs) and proteoglycans — direct connection to Corneal content", t: "Glycosaminoglycans are long, unbranched polysaccharide chains of repeating disaccharide units, heavily negatively charged (due to sulfate and carboxyl groups), which attracts water and gives GAG-rich tissue its characteristic hydration and gel-like consistency; keratan sulfate and dermatan sulfate are the predominant corneal stromal GAGs (already relevant to your Corneal Anatomy/Physiology content), where they fill the space between collagen fibrils (already covered under Collagen Structure & Synthesis) and are essential for maintaining the precise, regular fibril spacing responsible for corneal transparency; proteoglycans are the larger macromolecules formed when GAG chains are covalently attached to a core protein, the functional structural unit actually found within the corneal stroma and other connective tissues." },
+      { h: "Glycoproteins", t: "Glycoproteins are proteins with shorter, branched oligosaccharide chains covalently attached (N-linked, to asparagine, or O-linked, to serine/threonine) — unlike GAGs, these oligosaccharide modifications function primarily in protein folding/stability, cell-cell recognition, and immune signaling rather than structural water-binding; ABO blood group antigens are a classic clinically relevant example of glycoprotein/glycolipid oligosaccharide structures determining antigenic identity." },
+    ],
+    memorizeIt: [
+      "Monosaccharides (simple sugars) → oligosaccharides (short chains) → polysaccharides (long chains, e.g., glycogen) — linked by glycosidic bonds.",
+      "Glycosaminoglycans (GAGs): long, unbranched, heavily negatively charged polysaccharide chains — attract water, give tissue hydration/gel consistency.",
+      "Corneal stroma: keratan sulfate + dermatan sulfate GAGs fill space between collagen fibrils, maintaining the precise fibril spacing required for corneal transparency.",
+      "Proteoglycans: GAG chains attached to a core protein (the actual structural unit in tissue). Glycoproteins: shorter branched oligosaccharides on protein (N-linked/O-linked) — function in recognition/signaling, not water-binding (e.g., ABO blood antigens).",
+    ],
+    applyIt: [
+      "This gives you the specific biochemical basis for a structure-function relationship already implicit in your existing Corneal content: corneal transparency depends not just on regular collagen fibril spacing (already covered) but specifically on the GAG-rich proteoglycans (keratan sulfate, dermatan sulfate) filling the interfibrillar space that maintain that spacing by controlling stromal hydration — which is exactly why disorders of GAG metabolism (e.g., macular corneal dystrophy, an inherited keratan sulfate abnormality) or stromal edema from any cause disrupt this precise spacing and produce corneal haze.",
+    ],
+  },
   "lipidbiochem-lipoproteins": {
     name: "Lipoprotein Classes & Cholesterol Transport",
     priority: "MUST",
@@ -10804,6 +10993,48 @@ const STUDY_PAGES = {
       "This gives you the complete pharmacologic mechanism underlying statin therapy in your existing Atherosclerosis & Coronary Artery Disease content: statins don't just passively lower a lab value, they actively reduce the circulating LDL pool through two reinforcing mechanisms (less synthesis, more hepatic clearance), directly reducing the substrate available for the oxidative-modification-to-foam-cell pathway already covered under Lipoprotein Classes & Cholesterol Transport — a complete mechanistic chain from enzyme inhibition to plaque-progression slowing.",
     ],
   },
+  "lipidbiochem-structure-classes": {
+    name: "Lipid Structure & Classes (Fatty Acids, Eicosanoids, Sphingolipids, Sterols)",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry references (e.g., standard biochemistry texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the specific lipid pathways already covered (lipoprotein transport, beta-oxidation, cholesterol synthesis), lipids exist as several structurally distinct classes with different biological roles — several of which directly connect to inflammatory signaling and lipid-storage disease already relevant to this platform." },
+      { h: "Fatty acids and eicosanoids", t: "Fatty acids are long hydrocarbon chains with a terminal carboxyl group, classified as saturated (no double bonds, straight chain, higher melting point) or unsaturated (one or more double bonds, typically in the biologically common cis configuration, which introduces a kink that lowers melting point and increases fluidity — directly relevant to membrane fluidity, covered under Membrane Biochemistry); linoleic acid and alpha-linolenic acid are essential fatty acids humans cannot synthesize; arachidonic acid (a 20-carbon polyunsaturated fatty acid) is the precursor for eicosanoids — prostaglandins and thromboxanes (via the cyclooxygenase, COX, pathway) and leukotrienes (via the lipoxygenase pathway) — signaling molecules central to inflammation, pain, and platelet aggregation, and the direct target of NSAIDs (COX inhibition, already relevant to anti-inflammatory pharmacology content)." },
+      { h: "Triacylglycerols and phosphoglycerides", t: "Triacylglycerols (triglycerides) consist of a glycerol backbone esterified to three fatty acids — the body's primary energy-storage lipid, already covered under Fat Storage & Mobilization; phosphoglycerides (glycerophospholipids) instead have a glycerol backbone with only two fatty acids plus a phosphate-linked polar head group (e.g., choline, ethanolamine, serine, or inositol) — phosphatidylinositol-4,5-bisphosphate (PIP2), already covered under Second Messenger Systems as the substrate cleaved by phospholipase C into IP3 and DAG, is a specific example of a phosphoglyceride with direct signaling relevance beyond its structural role." },
+      { h: "Sphingolipids and sterol derivatives/isoprenoids", t: "Sphingolipids are built on a sphingosine (rather than glycerol) backbone; sphingomyelin is a major component of the myelin sheath, while glycosphingolipids (cerebrosides, gangliosides) carry additional sugar head groups — GM2 ganglioside accumulation from a lysosomal enzyme defect underlies Tay-Sachs disease, already relevant to the cherry-red macular spot finding covered elsewhere on this platform; sterol derivatives (cholesterol, already covered, plus steroid hormones, bile acids, and vitamin D) and isoprenoids (built from repeating 5-carbon isoprene units, including cholesterol synthesis intermediates, dolichol, ubiquinone/coenzyme Q — already covered as the mobile electron carrier in the electron transport chain — and the isoprenoid side chains of fat-soluble vitamins A, E, and K, already covered) round out the major structural lipid classes." },
+    ],
+    memorizeIt: [
+      "Fatty acids: saturated (no double bonds) vs. unsaturated (cis double bonds → kinked chain, more fluid, lower melting point). Essential fatty acids: linoleic acid, alpha-linolenic acid.",
+      "Eicosanoids (from arachidonic acid): COX pathway → prostaglandins/thromboxanes; lipoxygenase pathway → leukotrienes. NSAIDs = COX inhibitors.",
+      "Triacylglycerols: glycerol + 3 fatty acids (energy storage). Phosphoglycerides: glycerol + 2 fatty acids + phosphate head group (e.g., PIP2, membrane signaling).",
+      "Sphingolipids: sphingosine backbone — sphingomyelin (myelin), gangliosides (GM2 accumulation → Tay-Sachs). Isoprenoids: coenzyme Q (ETC), dolichol, vitamins A/E/K side chains.",
+    ],
+    applyIt: [
+      "This gives you the structural classification underlying several already-built topics on this platform: recognizing PIP2 specifically as a phosphoglyceride (not just an abstract 'second messenger precursor') ties your Second Messenger Systems content back to lipid structure, and recognizing arachidonic acid as the shared precursor for both COX-derived prostaglandins/thromboxanes and lipoxygenase-derived leukotrienes explains why NSAIDs (blocking only the COX branch) leave leukotriene-mediated inflammation unaffected — a genuinely useful distinction for understanding why NSAIDs and other anti-inflammatory classes have different effects on the inflammatory cascade.",
+    ],
+  },
+  "lipidbiochem-membrane": {
+    name: "Membrane Biochemistry — Lipid Bilayer & Fluid Mosaic Model",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry/cell biology references"],
+    learnIt: [
+      { h: "Overview", t: "Every cell and organelle boundary is built on the same fundamental lipid bilayer architecture, and understanding this structure — and what modulates it — directly extends your existing Second Messenger Systems (receptor signaling occurs at this membrane) and Corneal Endothelial Pump (active transport across this membrane) content." },
+      { h: "The lipid bilayer (unit membrane)", t: "Membrane phospholipids (phosphoglycerides, already covered) are amphipathic — a hydrophilic (polar) head group and hydrophobic (nonpolar) fatty acid tails — and this dual nature drives their spontaneous self-assembly into a bilayer in an aqueous environment, with hydrophilic heads facing both the extracellular fluid and the cytoplasm, and hydrophobic tails buried in the interior, shielded from water; this basic bilayer architecture (the \"unit membrane\") is common to the plasma membrane and essentially all intracellular organelle membranes." },
+      { h: "The fluid mosaic model", t: "The fluid mosaic model (Singer-Nicolson) describes the membrane as a two-dimensional fluid in which individual lipid and protein molecules can diffuse laterally within their own leaflet (though flipping between the two leaflets is energetically unfavorable and slow without a dedicated enzyme, a flippase) — this fluidity is essential for normal membrane function, including receptor clustering, vesicle formation, and cell movement." },
+      { h: "Factors modulating fluidity, and membrane proteins", t: "Membrane fluidity increases with a higher proportion of unsaturated (kinked, already covered) fatty acid tails and with higher temperature, and decreases with more saturated tails and lower temperature; cholesterol (already covered) has a buffering effect on fluidity — at high temperatures it restrains excessive fluidity, while at low temperatures it prevents the membrane from becoming too rigid, by intercalating between phospholipid tails; membrane proteins are classified as integral (span or are embedded within the bilayer, e.g., ion channels, GPCRs, and transporters like Na+/K+-ATPase, already covered) or peripheral (loosely associated with the membrane surface, often via electrostatic interactions or binding to an integral protein, easily removed without disrupting the bilayer itself) — these proteins carry out the membrane's functional roles (transport, receptor signaling, enzymatic activity, cell-cell adhesion, cytoskeletal anchoring) that the lipid bilayer alone, as a passive barrier, cannot." },
+    ],
+    memorizeIt: [
+      "Lipid bilayer: amphipathic phospholipids self-assemble with hydrophilic heads facing aqueous environments (both sides), hydrophobic tails buried in the interior.",
+      "Fluid mosaic model (Singer-Nicolson): membrane = 2D fluid, lipids/proteins diffuse laterally within their leaflet; flipping between leaflets is slow (requires flippase).",
+      "Fluidity increases with: unsaturated fatty acids, higher temperature. Fluidity decreases with: saturated fatty acids, lower temperature. Cholesterol buffers fluidity in both directions.",
+      "Integral membrane proteins: span/embedded in the bilayer (channels, GPCRs, transporters). Peripheral proteins: loosely surface-associated, easily removed.",
+    ],
+    applyIt: [
+      "This gives you the structural foundation underlying your existing Second Messenger Systems and Corneal Endothelial Pump content: GPCRs and the Na+/K+-ATPase pump are both integral membrane proteins embedded within this fluid lipid bilayer, free to diffuse and cluster as needed for signaling or transport function — and recognizing cholesterol's fluidity-buffering role in the bilayer itself (distinct from its already-covered role as a lipoprotein cargo and steroid/vitamin D precursor) rounds out a complete picture of cholesterol's several distinct biological roles on this platform.",
+    ],
+  },
   "proteinbiochem-collagen": {
     name: "Collagen Structure & Synthesis",
     priority: "SHOULD",
@@ -10844,6 +11075,28 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you a nuanced extension of your existing Mutation Types content: a missense mutation's clinical severity isn't simply predictable from knowing 'an amino acid changed' — it depends on how much that specific change destabilizes the protein's tertiary folding, which is part of why the same gene can produce a wide clinical severity spectrum across different specific mutations, a genuinely useful concept for thinking about genotype-phenotype correlation questions.",
+    ],
+  },
+  "proteinbiochem-enzyme-regulation": {
+    name: "Enzyme Regulation — Allosteric Control, Covalent Modification & Proteolytic Activation",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry references (e.g., standard biochemistry texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the substrate-concentration-dependent kinetics already covered under Enzyme Kinetics & Inhibition, cells regulate enzyme activity through several additional mechanisms that allow rapid, reversible (or deliberately irreversible) control over metabolic pathways — several of which are already implicit in pathways covered elsewhere on this platform without being named explicitly." },
+      { h: "Biocatalysis and activation energy", t: "Enzymes accelerate reaction rates by lowering the activation energy (Ea) required to reach the reaction's transition state, typically by stabilizing that transition state — critically, enzymes do NOT change a reaction's overall free energy change (ΔG, already covered under Free Energy & Reaction Coupling) or its equilibrium position, meaning an enzyme cannot make a thermodynamically unfavorable reaction favorable; it can only speed up how quickly a reaction that was already going to happen actually occurs." },
+      { h: "Allosteric regulation and reversible covalent modification", t: "Allosteric enzymes have a regulatory (effector) binding site distinct from the active site — binding of an allosteric activator or inhibitor there changes the enzyme's conformation, respectively increasing or decreasing activity at the active site; this is frequently used for feedback regulation, where a pathway's own end product allosterically inhibits an earlier enzyme in that same pathway (negative feedback), already implicit in PFK-1's inhibition by ATP and citrate (already covered under Glycolysis); reversible covalent modification, most commonly phosphorylation/dephosphorylation by kinases and phosphatases, is a separate regulatory mechanism — glycogen phosphorylase (already covered under Glycogen Synthesis & Breakdown) is activated by phosphorylation while glycogen synthase is simultaneously inactivated by phosphorylation, allowing a single kinase cascade (already covered under Second Messenger Systems' PKA pathway) to reciprocally control glycogen breakdown and synthesis in opposite directions at once." },
+      { h: "Enzyme cascades and proteolytic activation (zymogens)", t: "Enzyme cascades amplify a signal through sequential activation steps, where each activated enzyme activates many downstream molecules — the cAMP/PKA cascade (already covered) is one example, and the blood clotting cascade is another; proteolytic activation is a distinct, typically IRREVERSIBLE regulatory mechanism in which an inactive precursor (zymogen/proenzyme) is cleaved by another protease to produce the active enzyme — pepsinogen is autocatalytically cleaved to pepsin by gastric acid, while trypsinogen is cleaved to trypsin by enteropeptidase in the duodenum (already covered under Digestion & Absorption), and trypsin then activates chymotrypsinogen and other pancreatic zymogens in a further cascade; storing digestive enzymes as inactive zymogens and only activating them after reaching their intended site of action (the GI lumen, not the pancreas itself) is the specific mechanism that protects the pancreas from autodigestion." },
+      { h: "Stimulation/inhibition by control proteins — connects to existing content", t: "Some enzymes require a separate, non-catalytic regulatory protein to become active or inactive — for example, the regulatory subunits of protein kinase A (already covered) bind and inhibit the catalytic subunits until cAMP binding releases them, and calmodulin is a calcium-binding regulatory protein that activates numerous target enzymes upon binding intracellular Ca2+ (already relevant to the IP3-triggered calcium release covered under Second Messenger Systems) — illustrating that enzyme activity is frequently controlled by dedicated regulatory proteins rather than by the substrate or a small-molecule effector alone." },
+    ],
+    memorizeIt: [
+      "Enzymes lower activation energy (stabilize the transition state) — they do NOT change a reaction's ΔG or equilibrium position; a thermodynamically unfavorable reaction stays unfavorable regardless of enzyme presence.",
+      "Allosteric regulation: effector binds a site distinct from the active site, changing enzyme conformation — classic feedback inhibition example: PFK-1 inhibited by ATP/citrate (already covered).",
+      "Reversible covalent modification (phosphorylation/dephosphorylation): glycogen phosphorylase activated by phosphorylation; glycogen synthase INACTIVATED by phosphorylation — reciprocal control from one kinase cascade.",
+      "Proteolytic activation (zymogens): irreversible cleavage of an inactive precursor — pepsinogen→pepsin (HCl), trypsinogen→trypsin (enteropeptidase) → activates other pancreatic zymogens; protects the pancreas from autodigestion.",
+    ],
+    applyIt: [
+      "This gives you the specific regulatory-mechanism vocabulary for patterns already built into several existing topics on this platform without being named: glycogen phosphorylase/synthase's reciprocal phosphorylation control (already covered under Glycogen Synthesis & Breakdown) is a textbook example of reversible covalent modification, while trypsinogen's duodenal activation (already covered under Digestion & Absorption) is a textbook example of proteolytic zymogen activation — recognizing these as instances of named, generalizable regulatory mechanisms (rather than isolated facts) is exactly the kind of integrative understanding board questions on enzyme regulation tend to reward.",
     ],
   },
   "cellbiochem-enzyme-kinetics": {
@@ -10909,6 +11162,28 @@ const STUDY_PAGES = {
       "This gives you the direct biochemical rationale for AREDS2 supplementation in your existing AMD content: the retina's chronic oxidative stress exposure (from light and high metabolic demand) makes it particularly reliant on both enzymatic antioxidant systems (dependent on PPP-derived NADPH, already covered) and dietary non-enzymatic antioxidants, which is precisely why the clinically-validated AREDS2 formula specifically combines vitamin C, vitamin E, zinc, copper, and lutein/zeaxanthin rather than any single antioxidant alone.",
     ],
   },
+  "cellbiochem-compartmentalization": {
+    name: "Cellular Compartmentalization, Organelle Biochemistry & Molecular Bonds",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry/cell biology references (e.g., standard biochemistry texts)"],
+    learnIt: [
+      { h: "Overview", t: "Eukaryotic cells organize their biochemistry into distinct membrane-bound compartments, each with its own internal environment, and understanding this compartmentalization — along with the fundamental molecular bonds holding biomolecules together — provides the structural logic underlying essentially every specific pathway already covered on this platform." },
+      { h: "Compartmentalization and organelle biochemistry", t: "Membrane-bound organelles allow the cell to maintain distinct, sometimes mutually incompatible, biochemical environments simultaneously: the nucleus encloses the genome (already covered under DNA/transcription); mitochondria (already covered, with their own DNA) house the TCA cycle, electron transport chain, and beta-oxidation; the rough endoplasmic reticulum (ribosome-studded) synthesizes and initially folds secreted/membrane proteins, while the smooth ER handles lipid synthesis, detoxification, and (in muscle, as the sarcoplasmic reticulum) calcium storage; the Golgi apparatus further modifies, sorts, and packages proteins for their final destination; lysosomes maintain an acidic interior housing hydrolytic enzymes that degrade macromolecules and organelles (a lysosomal enzyme deficiency, e.g., hexosaminidase A in Tay-Sachs, already covered, causes pathologic substrate accumulation); peroxisomes handle beta-oxidation of very-long-chain fatty acids and contain catalase (already covered under Free Radicals & Antioxidant Defense) for hydrogen peroxide detoxification." },
+      { h: "Why compartmentalization matters — a concrete example from already-covered content", t: "Compartmentalization allows the cell to run opposing pathways simultaneously without wasteful \"futile cycling\": fatty acid SYNTHESIS occurs in the cytoplasm while fatty acid oxidation (beta-oxidation, already covered) occurs in the mitochondrial matrix — physically separating these opposing pathways (using entirely distinct enzyme sets) allows each to be independently regulated by the fed/fasting hormonal signals already covered under Fat Storage & Mobilization, rather than both processes fighting each other within the same compartment." },
+      { h: "Intracellular vs. extracellular environment", t: "The intracellular and extracellular compartments maintain distinctly different ionic compositions — intracellular fluid is characteristically high in potassium (K+) and low in sodium (Na+), while extracellular fluid is the reverse (high Na+, low K+) — a gradient actively maintained by the Na+/K+-ATPase (already covered under the corneal endothelial pump) at the cost of continuous ATP consumption; this compartmental ion gradient is the biochemical foundation for cellular membrane potential and for the secondary active transport of numerous other solutes across the membrane." },
+      { h: "Bonds and molecular interactions", t: "Biomolecular structure depends on a hierarchy of bond strengths: covalent bonds (strong, e.g., the peptide bonds linking amino acids, already covered under Protein Folding, and phosphodiester bonds linking nucleotides, already covered under DNA Structure) define primary structure and require substantial energy to break; noncovalent interactions — hydrogen bonds (individually weak but numerous, already covered as essential to DNA base pairing and protein secondary structure), ionic bonds (electrostatic attraction between charged groups), van der Waals forces (very weak, short-range attractions from transient electron distribution asymmetry), and hydrophobic interactions (nonpolar groups clustering away from water, already covered as central to both protein tertiary folding and lipid bilayer self-assembly under Membrane Biochemistry) — are individually weaker than covalent bonds but collectively determine higher-order molecular structure and allow the reversible binding/unbinding (enzyme-substrate, receptor-ligand, antibody-antigen, already covered) essential to dynamic biological function." },
+    ],
+    memorizeIt: [
+      "Organelle roles: nucleus (genome), mitochondria (TCA/ETC/beta-oxidation), rough ER (secreted/membrane protein synthesis), smooth ER (lipid synthesis, detox, Ca2+ storage), Golgi (protein modification/sorting), lysosomes (acidic hydrolytic degradation), peroxisomes (very-long-chain fatty acid oxidation, catalase).",
+      "Compartmentalization prevents futile cycling: fatty acid synthesis (cytoplasm) vs. fatty acid oxidation (mitochondria) — physically separated, independently regulated opposing pathways.",
+      "Intracellular fluid: high K+, low Na+. Extracellular fluid: high Na+, low K+ — gradient maintained by Na+/K+-ATPase (ATP-dependent).",
+      "Bond hierarchy: covalent bonds (strong, e.g., peptide/phosphodiester bonds) vs. noncovalent interactions (hydrogen bonds, ionic bonds, van der Waals, hydrophobic interactions) — noncovalent bonds are individually weak but collectively determine higher-order structure and allow reversible binding.",
+    ],
+    applyIt: [
+      "This gives you the organizing structural logic tying together several pathways already covered separately on this platform: recognizing that fatty acid synthesis and beta-oxidation are compartmentally separated (cytoplasm vs. mitochondria) explains why the cell can regulate them independently via the same insulin/glucagon hormonal axis already covered under Fat Storage & Mobilization, and recognizing hydrophobic interactions as the shared driving force behind BOTH protein tertiary folding (already covered) AND lipid bilayer self-assembly (already covered) shows these are not two unrelated facts but one unifying chemical principle — nonpolar groups minimizing contact with water — appearing in two different structural contexts.",
+    ],
+  },
   "nutrbiochem-fat-soluble-vitamins": {
     name: "Fat-Soluble Vitamin Metabolism (A, D, E, K)",
     priority: "MUST",
@@ -10949,6 +11224,27 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you the exact distinguishing clinical feature between B12 and folate deficiency already implied but not fully explained under your existing Anemia content: both produce an identical-appearing megaloblastic anemia (since both are needed for DNA synthesis), but only B12 deficiency additionally produces neurologic symptoms, because B12 (unlike folate) is separately required for myelin synthesis — a genuinely high-yield distinction for differentiating these two similar lab presentations on the boards.",
+    ],
+  },
+  "nutrbiochem-macronutrients": {
+    name: "Macronutrient Digestion & Essential Amino Acids",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard biochemistry/nutrition references"],
+    learnIt: [
+      { h: "Overview", t: "Alongside the micronutrient (vitamin) content already covered, the digestion of the three macronutrient classes and the concept of dietary essential amino acids round out this platform's nutritional biochemistry coverage — the digestive mechanics themselves are already covered in detail elsewhere, so this objective focuses on tying that content to protein-specific nutritional requirements." },
+      { h: "Macronutrient digestion — brief summary, already covered", t: "Protein digestion begins with gastric pepsin (activated from pepsinogen by stomach acid) and continues with pancreatic proteases (trypsin, chymotrypsin, activated as zymogens in the duodenum, already covered under Digestion & Absorption and Enzyme Regulation) breaking proteins down to absorbable amino acids and small peptides; carbohydrate digestion begins with salivary and pancreatic amylase (breaking starch into smaller oligosaccharides/disaccharides) followed by brush-border disaccharidases (e.g., lactase, sucrase) completing digestion to absorbable monosaccharides; lipid digestion depends on pancreatic lipase acting together with bile salt emulsification (already covered), since lipids are otherwise poorly water-soluble substrates for a water-based digestive enzyme." },
+      { h: "Essential amino acids", t: "Of the 20 standard amino acids, nine are essential — meaning the body cannot synthesize them and they must be obtained from the diet: phenylalanine, valine, threonine, tryptophan, isoleucine, methionine, histidine, leucine, and lysine (commonly remembered by the mnemonic \"PVT TIM HALL\"); the remaining amino acids are nonessential (synthesized endogenously) or conditionally essential (normally nonessential, but becoming dietarily essential under specific circumstances)." },
+      { h: "Conditionally essential amino acids — a clinical example", t: "Tyrosine is normally synthesized from phenylalanine via phenylalanine hydroxylase, making it nonessential under normal circumstances — but in phenylketonuria (PKU, an autosomal recessive deficiency of phenylalanine hydroxylase), this conversion cannot occur, making tyrosine conditionally essential (requiring dietary supplementation) while simultaneously requiring dietary phenylalanine restriction, since unconverted phenylalanine accumulates to neurotoxic levels, causing severe intellectual disability if undiagnosed/untreated — PKU is detected by mandatory newborn screening in the United States specifically because early dietary intervention prevents this otherwise irreversible neurologic damage." },
+    ],
+    memorizeIt: [
+      "Protein digestion: pepsin (stomach) + pancreatic proteases (trypsin/chymotrypsin, zymogen-activated). Carbohydrate digestion: amylase (starch) + brush-border disaccharidases. Lipid digestion: pancreatic lipase + bile salt emulsification.",
+      "9 essential amino acids: phenylalanine, valine, threonine, tryptophan, isoleucine, methionine, histidine, leucine, lysine (\"PVT TIM HALL\").",
+      "Conditionally essential amino acids: normally nonessential, become dietarily essential under specific disease states (e.g., tyrosine in PKU).",
+      "PKU: phenylalanine hydroxylase deficiency → phenylalanine cannot convert to tyrosine → phenylalanine accumulates (neurotoxic) + tyrosine becomes conditionally essential; detected by newborn screening, managed by dietary phenylalanine restriction.",
+    ],
+    applyIt: [
+      "This gives you a concrete clinical example connecting your existing Molecular Biology (Mutation Types) and Enzyme Regulation content to nutritional biochemistry: PKU is a single-enzyme-deficiency genetic disorder (an inherited loss-of-function mutation, already covered) whose management is entirely nutritional (dietary phenylalanine restriction plus tyrosine supplementation) rather than pharmacologic — a useful reminder that not every enzyme deficiency disorder is treated with a drug, and that essential/conditionally-essential amino acid status can shift dramatically based on an underlying inherited metabolic defect.",
     ],
   },
   "antibody-structure": {
@@ -11277,12 +11573,14 @@ const STUDY_PAGES = {
       { h: "Gram-positive vs. Gram-negative cell wall structure", t: "Gram-positive bacteria have a thick peptidoglycan cell wall that retains crystal violet stain (appearing purple/blue), lacking an outer membrane; Gram-negative bacteria have a thinner peptidoglycan layer plus an additional outer membrane containing lipopolysaccharide (LPS/endotoxin), which does not retain crystal violet and instead takes up the counterstain (appearing pink/red) — this structural difference has major clinical significance, since LPS/endotoxin release from gram-negative bacteria can trigger a strong inflammatory/septic response, while the thicker peptidoglycan layer in gram-positive organisms is itself the target of many antibiotics." },
       { h: "Bacterial shape and arrangement", t: "Cocci (spherical) may be arranged in chains (streptococci), clusters (staphylococci), or pairs (diplococci); bacilli (rod-shaped) can be further characterized by additional features; these morphologic patterns, combined with Gram stain result, are often sufficient for a reasonable initial clinical categorization before culture confirmation, directly relevant to empiric treatment decisions in conditions like bacterial keratitis (already covered)." },
       { h: "Direct clinical relevance — connects to existing bacterial keratitis content", t: "Common bacterial keratitis pathogens span both Gram categories: Staphylococcus aureus and Streptococcus pneumoniae (Gram-positive cocci) versus Pseudomonas aeruginosa (Gram-negative rod, notoriously aggressive and associated with contact lens wear, already relevant to your Bacterial Keratitis content) — recognizing that Gram-negative organisms like Pseudomonas have an additional outer membrane barrier explains part of why they can be more resistant to certain antibiotics and require different empiric antibiotic coverage (e.g., fluoroquinolones with broader gram-negative coverage) than an infection more likely to be gram-positive." },
+      { h: "Normal ocular/body flora", t: "Most body surfaces exposed to the environment (skin, conjunctiva, GI tract, upper respiratory tract) host a resident normal flora that does not typically cause disease and can even help exclude more pathogenic organisms by competing for the same niche; the normal conjunctival/lid flora is dominated by Gram-positive organisms — Staphylococcus epidermidis (the single most common isolate), Corynebacterium species, and Cutibacterium (formerly Propionibacterium) acnes — these same normal-flora organisms become clinically relevant as the most common cause of postoperative endophthalmitis (already relevant to intraocular surgery content), since ocular surface flora can be introduced into the eye during surgical entry despite standard antiseptic preparation." },
     ],
     memorizeIt: [
       "Gram-positive: thick peptidoglycan, no outer membrane, retains crystal violet (purple/blue).",
       "Gram-negative: thin peptidoglycan + outer membrane with LPS/endotoxin, doesn't retain crystal violet (pink/red on counterstain).",
       "LPS/endotoxin (gram-negative only) can trigger strong inflammatory/septic response.",
       "Bacterial keratitis pathogens span both categories: S. aureus/S. pneumoniae (gram-positive) vs. Pseudomonas aeruginosa (gram-negative, contact lens-associated, aggressive).",
+      "Normal conjunctival/lid flora: predominantly gram-positive (S. epidermidis most common, also Corynebacterium and Cutibacterium acnes) — the leading source of postoperative endophthalmitis organisms.",
     ],
     applyIt: [
       "This gives you the structural basis for empiric antibiotic selection in your existing Bacterial Keratitis content: recognizing that Pseudomonas aeruginosa's gram-negative outer membrane creates an additional barrier (and is associated with more aggressive, vision-threatening infection in contact lens wearers) explains why broad-spectrum fluoroquinolone coverage is often chosen empirically for suspected bacterial keratitis before culture results are available, rather than narrower gram-positive-focused coverage alone.",
@@ -11298,15 +11596,61 @@ const STUDY_PAGES = {
       { h: "Cell wall synthesis inhibitors", t: "Beta-lactams (penicillins, cephalosporins) inhibit peptidoglycan cross-linking enzymes, weakening the bacterial cell wall (already covered under Bacterial Structure) until osmotic lysis occurs — since human cells lack a cell wall entirely, this mechanism provides good selective toxicity; this class is generally more effective against gram-positive organisms (thicker peptidoglycan layer) though many agents also cover gram-negative organisms." },
       { h: "Protein synthesis inhibitors", t: "Aminoglycosides, tetracyclines, and macrolides target bacterial ribosomes (which differ structurally from human ribosomes, again providing selective toxicity), interrupting bacterial protein synthesis at different steps — fluoroquinolones instead target bacterial DNA gyrase/topoisomerase (enzymes needed for DNA replication), a different, DNA-synthesis-based mechanism relevant to their broad-spectrum activity already noted under Bacterial Structure's Pseudomonas coverage discussion." },
       { h: "Antibiotic resistance mechanisms", t: "Bacteria develop resistance through several mechanisms: enzymatic drug inactivation (e.g., beta-lactamase enzymes that break down penicillins before they can act), target site modification (altering the antibiotic's binding target so it no longer binds effectively), efflux pumps (actively pumping the antibiotic back out of the bacterial cell before it can act), and reduced membrane permeability (particularly relevant to gram-negative organisms' additional outer membrane, already covered) — these mechanisms can be intrinsic (inherent to a species) or acquired (via mutation or horizontal gene transfer between bacteria, including plasmid-mediated resistance transfer)." },
+      { h: "Laboratory identification, susceptibility testing, and sterilization — practical framework", t: "Laboratory identification of an unknown bacterial isolate typically proceeds from Gram stain (already covered) and colony morphology on selective/differential culture media, through biochemical tests, to definitive species identification; antibiotic susceptibility testing determines which antibiotics will actually work against a specific isolate by exposing it to a panel of drugs (e.g., disk diffusion or broth dilution to determine minimum inhibitory concentration) — clinically essential since susceptibility varies not just by organism but by specific strain, especially given the resistance mechanisms above; sterilization (complete elimination of all microorganisms, including spores) is distinct from disinfection (reduction of microorganisms to a safer level, not necessarily including spores) — a practical distinction relevant to instrument reprocessing standards in clinical practice." },
     ],
     memorizeIt: [
       "Cell wall synthesis inhibitors (beta-lactams): target peptidoglycan cross-linking — selective toxicity since human cells lack a cell wall.",
       "Protein synthesis inhibitors (aminoglycosides, tetracyclines, macrolides): target bacterial ribosomes (structurally distinct from human ribosomes).",
       "Fluoroquinolones: target DNA gyrase/topoisomerase — different, DNA-synthesis-based mechanism, broad-spectrum including gram-negative coverage.",
       "Resistance mechanisms: enzymatic inactivation (beta-lactamase), target modification, efflux pumps, reduced permeability — can be intrinsic or acquired (mutation, horizontal gene transfer).",
+      "Sterilization: complete elimination of ALL microorganisms including spores. Disinfection: reduces microorganisms to a safer level, not necessarily eliminating spores — a meaningfully different standard.",
     ],
     applyIt: [
       "This gives you the mechanistic rationale for antibiotic selection in your existing Bacterial Keratitis content: fluoroquinolones' DNA gyrase-targeting mechanism (distinct from cell-wall-targeting beta-lactams) combined with their ability to penetrate the gram-negative outer membrane explains their broad-spectrum utility as first-line empiric therapy for suspected bacterial keratitis, covering both gram-positive organisms and the aggressive gram-negative Pseudomonas aeruginosa associated with contact lens wear, without needing to know the causative organism in advance.",
+    ],
+  },
+  "bacteriology-growth-genetics": {
+    name: "Bacterial Growth Physiology & Genetic Mechanisms",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard microbiology references (e.g., standard microbiology texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond cell wall structure and antibiotic mechanisms (already covered), bacteria are also classified by their oxygen requirements and growth pattern, and understanding bacterial genetic mechanisms directly explains how the antibiotic resistance already covered under Antibiotic Mechanisms actually spreads between organisms." },
+      { h: "Oxygen requirements and growth phases", t: "Obligate aerobes require oxygen for growth (e.g., Pseudomonas aeruginosa, already covered, and Mycobacterium tuberculosis); obligate anaerobes are killed by oxygen exposure (lacking the enzymes — catalase/superoxide dismutase, already covered under Free Radicals & Antioxidant Defense — needed to detoxify oxygen's reactive byproducts), e.g., Clostridium species; facultative anaerobes can grow with or without oxygen (e.g., E. coli, Staphylococcus, already covered); microaerophilic organisms require a small amount of oxygen but are harmed by full atmospheric levels (e.g., Campylobacter, Helicobacter pylori); a bacterial population's growth over time follows a predictable curve — lag phase (metabolic adaptation, minimal division) → log/exponential phase (rapid division at a constant rate) → stationary phase (growth rate equals death rate as nutrients deplete and waste accumulates) → death phase (net population decline)." },
+      { h: "Spore formation", t: "Certain Gram-positive genera — notably Bacillus and Clostridium — form highly resistant, metabolically dormant endospores under nutrient-limiting or otherwise stressful conditions; spores are markedly resistant to heat, desiccation, radiation, and many disinfectant chemicals, remaining viable for extended periods until conditions improve and the spore germinates back into a vegetative (actively growing) cell — this spore resistance is precisely why sterilization (already covered as distinct from disinfection under Antibiotic Mechanisms) requires more rigorous conditions (e.g., autoclaving at high pressure/temperature) than routine disinfection to reliably kill spore-forming organisms." },
+      { h: "Genetic mechanisms of bacteria — direct connection to existing resistance content", t: "Bacteria carry, in addition to their single circular chromosome, smaller circular extrachromosomal DNA elements called plasmids, which frequently encode antibiotic resistance genes (already covered as \"acquired\" resistance under Antibiotic Mechanisms) and can be transferred between bacterial cells; three mechanisms accomplish this horizontal gene transfer — transformation (uptake of free/naked DNA released into the environment by other bacteria), conjugation (direct cell-to-cell DNA transfer, typically of a plasmid, through a connecting sex pilus), and transduction (bacterial DNA is packaged into and transferred by a bacteriophage, a virus that infects bacteria) — these mechanisms, rather than only new spontaneous mutation, are the primary reason antibiotic resistance genes can spread rapidly through and even between different bacterial species/strains in a clinical setting." },
+    ],
+    memorizeIt: [
+      "Oxygen requirements: obligate aerobe (needs O2), obligate anaerobe (killed by O2, no catalase/SOD), facultative anaerobe (either), microaerophilic (needs a little O2, harmed by full atmospheric levels).",
+      "Bacterial growth curve: lag → log/exponential → stationary (growth = death rate) → death phase.",
+      "Endospores (Bacillus, Clostridium): highly resistant to heat/desiccation/radiation/disinfectants — why sterilization (not just disinfection) requires more rigorous conditions (e.g., autoclaving).",
+      "Horizontal gene transfer mechanisms: transformation (uptake of free DNA), conjugation (direct transfer via pilus, typically a plasmid), transduction (bacteriophage-mediated) — the primary route antibiotic resistance genes spread between bacteria.",
+    ],
+    applyIt: [
+      "This gives you the genetic mechanism underlying the 'acquired resistance via horizontal gene transfer' concept already introduced under Antibiotic Mechanisms of Action & Resistance: recognizing plasmid-mediated conjugation specifically (rather than resistance arising independently in every organism via new mutation) explains why antibiotic resistance genes can spread rapidly across a bacterial population, and even between different species sharing the same clinical environment, which is part of the biological rationale for antibiotic stewardship practices aimed at limiting selective pressure for resistance spread.",
+    ],
+  },
+  "bacteriology-atypical-organisms": {
+    name: "Atypical Bacteria — Mycobacteria, Chlamydia, Rickettsia, Mycoplasma & Spirochetes",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard microbiology references"],
+    learnIt: [
+      { h: "Overview", t: "Several bacterial classes fall outside the standard Gram-positive/Gram-negative framework (already covered) due to distinctive cell wall or life-cycle features, and each is already clinically relevant to specific disease content built elsewhere on this platform — this objective supplies the underlying microbiologic classification connecting those clinical facts together." },
+      { h: "Mycobacteria — acid-fast, not Gram-stained", t: "Mycobacteria (e.g., Mycobacterium tuberculosis, already covered under your Tuberculosis content) have a cell wall rich in mycolic acids (long-chain fatty acids) rather than the typical peptidoglycan-dominant wall — this lipid-rich wall does not reliably retain the standard Gram stain, so mycobacteria are instead identified by acid-fast staining (Ziehl-Neelsen), which exploits the mycolic acid wall's ability to retain carbol fuchsin dye despite an acid-alcohol decolorization step that would strip ordinary bacteria — the mycolic acid wall also makes mycobacteria notably slow-growing and intrinsically resistant to many standard antibiotics." },
+      { h: "Chlamydia — obligate intracellular, biphasic life cycle", t: "Chlamydia trachomatis (already covered under your Reactive Arthritis and Inclusion Conjunctivitis/Trachoma content) is an obligate intracellular organism, unable to generate its own ATP and entirely dependent on the host cell's energy metabolism (sometimes called an \"energy parasite\") — it has a distinctive biphasic life cycle alternating between the elementary body (EB: small, metabolically inactive, the infectious extracellular form that enters host cells) and the reticulate body (RB: larger, metabolically active, the intracellular form that replicates before converting back to EBs for release); Chlamydia's cell wall lacks the muramic acid component of classic peptidoglycan, which is part of why beta-lactam antibiotics (already covered as peptidoglycan-targeting) are not first-line therapy for chlamydial infection." },
+      { h: "Rickettsia and Mycoplasma", t: "Rickettsia (e.g., Rickettsia rickettsii, causing Rocky Mountain spotted fever) are also obligate intracellular organisms with a Gram-negative-type cell wall, but are distinguished by their transmission via arthropod vectors (ticks, lice, fleas, or mites) rather than direct person-to-person spread; Mycoplasma (e.g., Mycoplasma pneumoniae, already covered under your atypical \"walking\" pneumonia content) is unique among bacteria in having NO cell wall at all — instead stabilizing its membrane with sterols (unusual for bacteria) — which makes it both the smallest known free-living bacterium and intrinsically, completely resistant to all cell-wall-targeting antibiotics (beta-lactams, already covered), since there is no peptidoglycan target for them to act on." },
+      { h: "Spirochetes — direct connection to existing syphilis content", t: "Spirochetes (e.g., Treponema pallidum, already covered extensively as the cause of syphilis and congenital syphilis, and Borrelia burgdorferi, causing Lyme disease) are thin, helical (spiral-shaped) bacteria that are motile via internal periplasmic flagella (axial filaments) running along the length of the cell body beneath the outer membrane, rather than external flagella — this unusual internal motility structure, combined with the organism's extreme thinness, means spirochetes are often too thin to reliably visualize on standard Gram stain or light microscopy, requiring dark-field microscopy or special silver/immunofluorescent staining for direct visualization, which is part of why syphilis diagnosis (already covered) relies primarily on serologic testing rather than direct organism visualization in routine clinical practice." },
+    ],
+    memorizeIt: [
+      "Mycobacteria: mycolic acid cell wall, NOT Gram-stained — identified by acid-fast (Ziehl-Neelsen) stain; slow-growing (e.g., M. tuberculosis, already covered).",
+      "Chlamydia: obligate intracellular \"energy parasite,\" biphasic life cycle (elementary body = infectious/extracellular; reticulate body = replicating/intracellular); lacks muramic acid in cell wall (beta-lactams not first-line).",
+      "Rickettsia: obligate intracellular, arthropod-vector transmitted (ticks/lice/fleas/mites) — e.g., RMSF.",
+      "Mycoplasma: NO cell wall at all (sterol-stabilized membrane instead) — smallest free-living bacterium, intrinsically resistant to ALL beta-lactams/cell-wall-targeting antibiotics.",
+      "Spirochetes: thin, helical, motile via internal periplasmic flagella (axial filaments) — often invisible on standard Gram stain, requiring dark-field microscopy (e.g., Treponema pallidum, already covered under syphilis).",
+    ],
+    applyIt: [
+      "This gives you the microbiologic classification explaining several clinical facts already built into your existing content: Mycoplasma pneumoniae's complete lack of a cell wall (this objective) is exactly why beta-lactam antibiotics are ineffective against the atypical \"walking\" pneumonia it causes (already covered), and Treponema pallidum's thin, spirochete morphology (this objective) is exactly why syphilis diagnosis (already covered under your congenital syphilis and granulomatous uveitis content) depends on serologic testing rather than visualizing the organism directly on a routine stain — connecting organism-level structural biology to the practical diagnostic approach used for each disease.",
     ],
   },
   "virology-replication-cycle": {
@@ -11351,6 +11695,27 @@ const STUDY_PAGES = {
       "This gives you the complete pharmacologic explanation for a limitation already implicit in your existing HSV Keratitis content: antiviral therapy (acyclovir/valacyclovir) effectively treats active epithelial HSV disease by exploiting virus-specific thymidine kinase activation, but has no mechanism to act on latent virus sitting dormant in the trigeminal ganglion — which is precisely why patients with recurrent HSV keratitis may be placed on long-term suppressive (not curative) antiviral therapy to reduce reactivation frequency, rather than a finite treatment course that eliminates the infection entirely.",
     ],
   },
+  "virology-classification-prions": {
+    name: "Viral Classification Scheme & Prions",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard microbiology/virology references (e.g., standard microbiology texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the basic structure and replication cycle already covered, viruses are formally classified along three axes — genome type (DNA vs. RNA), strandedness (double- vs. single-stranded), and envelope status — and a genuinely distinct category of non-viral infectious agent, prions, rounds out the full spectrum of infectious particles this discipline covers." },
+      { h: "The DNA/RNA and strandedness classification scheme", t: "DNA viruses are mostly double-stranded (dsDNA) — the herpesvirus family (already covered, including HSV) is the classic enveloped dsDNA example; adenoviruses are a non-enveloped dsDNA example; RNA viruses are mostly single-stranded (ssRNA), further divided into positive-sense (the genome itself can be directly translated by host ribosomes, functioning like mRNA) and negative-sense (the genome must first be transcribed into a complementary, translatable strand by a virus-carried RNA-dependent RNA polymerase before protein synthesis can begin) — influenza is a classic enveloped negative-sense ssRNA example; retroviruses (e.g., HIV, already covered) are a distinctive enveloped ssRNA subgroup carrying reverse transcriptase, an enzyme that transcribes the RNA genome into DNA for host genome integration, the reverse of the usual DNA-to-RNA direction of the central dogma (already covered under Molecular Biology)." },
+      { h: "Envelope status — clinical/practical significance", t: "Enveloped viruses (e.g., HSV, HIV, influenza, already covered) acquire a lipid envelope from host cell membrane during budding, making them relatively fragile — susceptible to disruption by heat, drying, detergents, and alcohol-based disinfectants (already noted under Viral Structure & Replication Cycle); non-enveloped (\"naked\") viruses (e.g., adenovirus) lack this lipid layer, making them considerably more resistant to environmental inactivation and standard disinfection — a practically important distinction, since it explains why adenoviral conjunctivitis is so notoriously contagious via fomite transmission (surfaces, shared instruments) compared to enveloped viral infections, which are more easily inactivated by routine surface cleaning." },
+      { h: "Prions — infectious protein, no nucleic acid at all", t: "Prions are a fundamentally distinct category of infectious agent: unlike viruses (which always contain either DNA or RNA, already covered), prions consist entirely of misfolded protein with NO nucleic acid genome whatsoever — the normal cellular prion protein (PrPC, predominantly alpha-helical) can be induced to misfold into the pathogenic conformation (PrPSc, beta-sheet-rich), and PrPSc catalyzes this same conformational change in additional normal PrPC molecules it contacts, creating a self-propagating chain reaction without any replication of genetic material; PrPSc is protease-resistant and accumulates in neural tissue, producing progressive, invariably fatal spongiform (vacuolated) neurodegeneration — Creutzfeldt-Jakob disease (CJD) is the classic human prion disease." },
+    ],
+    memorizeIt: [
+      "DNA viruses: mostly dsDNA (e.g., herpesviruses, enveloped, already covered) — some non-enveloped (adenovirus). RNA viruses: mostly ssRNA — positive-sense (directly translatable) vs. negative-sense (requires viral RNA-dependent RNA polymerase first).",
+      "Retroviruses (e.g., HIV, already covered): enveloped ssRNA + reverse transcriptase (RNA → DNA, reverses the usual central dogma direction).",
+      "Enveloped viruses: fragile, susceptible to heat/drying/detergents/alcohol. Non-enveloped (naked) viruses: environmentally hardy, resistant to standard disinfection — explains highly contagious fomite transmission (e.g., adenoviral conjunctivitis).",
+      "Prions: infectious MISFOLDED PROTEIN, NO nucleic acid — PrPSc (beta-sheet, pathogenic) catalyzes PrPC (alpha-helix, normal) to misfold; protease-resistant, causes spongiform neurodegeneration (e.g., CJD); resistant to standard sterilization (requires specialized decontamination protocols).",
+    ],
+    applyIt: [
+      "This gives you a genuinely important clinical safety point extending your existing content: because Creutzfeldt-Jakob disease has documented (though rare) iatrogenic transmission via corneal transplantation and contaminated neurosurgical/ophthalmic instruments, and because prions — lacking nucleic acid — resist standard sterilization protocols effective against viruses and bacteria (already covered), tissue banks specifically screen corneal donors for CJD risk factors as part of standard donor eligibility criteria, a direct practical consequence of prions' fundamentally distinct, nucleic-acid-free infectious mechanism.",
+    ],
+  },
   "mycology-fungal-structure": {
     name: "Fungal Structure & Classification (Yeasts vs. Molds)",
     priority: "SHOULD",
@@ -11393,6 +11758,27 @@ const STUDY_PAGES = {
       "This gives you a genuinely high-yield differential diagnosis point that connects directly to your existing HSV Keratitis management content: while topical corticosteroids are an appropriate (and important) part of managing HSV stromal keratitis under antiviral cover, the same corticosteroid class can dramatically worsen an undiagnosed fungal infection — making the vegetative trauma history and feathery infiltrate appearance genuinely critical distinguishing features to actively rule out before initiating corticosteroid therapy for any atypical or steroid-considered corneal infiltrate.",
     ],
   },
+  "mycology-classification-systemic": {
+    name: "Classification of Mycoses by Tissue Depth & Laboratory Identification",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard microbiology references (e.g., standard microbiology texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond fungal keratitis (already covered), fungal disease is classified by the depth of tissue involvement — superficial, cutaneous, subcutaneous, systemic (endemic), and opportunistic — and this framework includes a genuinely sight- and life-threatening ophthalmic emergency, rhino-orbital-cerebral mucormycosis, that is critically important given its direct connection to your existing Diabetes Mellitus/DKA content." },
+      { h: "Superficial and cutaneous mycoses", t: "Superficial mycoses are limited to the outermost skin/hair layers with minimal host inflammatory response (e.g., tinea versicolor, caused by Malassezia species, producing hypo- or hyperpigmented skin patches); cutaneous mycoses (dermatophyte infections) invade keratinized tissue — skin, hair, and nails — caused by the dermatophyte genera Trichophyton, Microsporum, and Epidermophyton (collectively causing the various \"tinea\" infections, e.g., tinea corporis, tinea pedis), classically diagnosed by KOH (potassium hydroxide) preparation demonstrating branching hyphae after dissolving the surrounding keratin." },
+      { h: "Subcutaneous and systemic (endemic dimorphic) mycoses", t: "Subcutaneous mycoses result from traumatic inoculation of fungal spores into deeper skin/subcutaneous tissue — Sporothrix schenckii (\"rose gardener's disease,\" from thorn/plant matter injury) is the classic example, producing nodular lesions that spread along lymphatic channels; systemic (endemic) mycoses are caused by dimorphic fungi (existing as a mold in the environment but converting to a yeast form — or, for Coccidioides, a spherule form — at body temperature in tissue), acquired primarily by spore inhalation and capable of disseminating beyond the lungs: Histoplasma capsulatum (Ohio/Mississippi River valleys, associated with bird/bat droppings), Coccidioides immitis (southwestern U.S. desert regions, \"Valley fever\"), and Blastomyces dermatitidis are the classic examples." },
+      { h: "Opportunistic mycoses — mucormycosis and the DKA connection", t: "Opportunistic fungi cause serious disease primarily in immunocompromised hosts: Candida (yeast, mucocutaneous or invasive disease), Aspergillus (mold, invasive pulmonary/sinus disease in neutropenic patients), Cryptococcus neoformans (an encapsulated yeast identified by India ink staining, causing cryptococcal meningitis, classically in advanced HIV/AIDS, already covered) are important examples — but Mucor and Rhizopus (the agents of mucormycosis) deserve particular emphasis, since uncontrolled diabetes with ketoacidosis (already covered under Diabetes Mellitus/DKA) is a classic predisposing risk factor: mucormycosis is a rapidly progressive, angioinvasive infection (fungal hyphae invade blood vessel walls, causing thrombosis and tissue infarction/necrosis) that in the rhino-orbital-cerebral form spreads from the sinuses into the orbit and ultimately the brain, presenting with proptosis, ophthalmoplegia (orbital apex syndrome), vision loss, and a characteristic black necrotic eschar on the palate or nasal mucosa — a genuine ophthalmic emergency requiring urgent surgical debridement plus systemic antifungal therapy, with high mortality if treatment is delayed." },
+    ],
+    memorizeIt: [
+      "Classification by depth: superficial (Malassezia/tinea versicolor) → cutaneous (dermatophytes: Trichophyton/Microsporum/Epidermophyton, KOH prep shows hyphae) → subcutaneous (Sporothrix, traumatic inoculation) → systemic/endemic dimorphic (Histoplasma, Coccidioides, Blastomyces — mold in environment, yeast/spherule in tissue) → opportunistic (Candida, Aspergillus, Cryptococcus, Mucor/Rhizopus).",
+      "Cryptococcus neoformans: encapsulated yeast, India ink stain, causes meningitis classically in advanced HIV/AIDS (already covered).",
+      "Mucormycosis (Mucor/Rhizopus): classic risk factor = diabetic ketoacidosis (already covered) or other severe immunocompromise; ANGIOINVASIVE (vessel thrombosis/tissue necrosis).",
+      "Rhino-orbital-cerebral mucormycosis: proptosis, ophthalmoplegia, vision loss, black necrotic eschar (palate/nasal mucosa) — ophthalmic EMERGENCY requiring urgent surgical debridement + systemic antifungal therapy.",
+    ],
+    applyIt: [
+      "This gives you a genuinely high-yield, potentially sight- and life-threatening connection to your existing Diabetes Mellitus/DKA content: a diabetic patient presenting in DKA with new proptosis, ophthalmoplegia, facial pain, or a black nasal/palatal eschar should immediately raise suspicion for rhino-orbital-cerebral mucormycosis — an angioinvasive fungal emergency that can progress from sinus to orbit to brain within days, making rapid recognition (and urgent ENT/ophthalmology/infectious disease co-management with surgical debridement) a genuinely critical, board-relevant clinical skill rather than an obscure fact.",
+    ],
+  },
   "parasitology-acanthamoeba": {
     name: "Acanthamoeba Keratitis — Pathophysiology & Clinical Distinction",
     priority: "MUST",
@@ -11412,6 +11798,27 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you a genuinely high-yield diagnostic pitfall directly extending your existing HSV Keratitis and Contact Lens Complications content: a contact lens wearer presenting with severe, disproportionate pain and an early radial or linear corneal infiltrate should raise suspicion for Acanthamoeba (not automatically HSV), since the two can look deceptively similar early on but require completely different treatment approaches — recognizing the water-exposure risk factor history and the pain-out-of-proportion clue is exactly the kind of distinguishing detail that prevents a delayed diagnosis with serious visual consequences.",
+    ],
+  },
+  "parasitology-classification-classes": {
+    name: "Parasite Classes — Nematodes, Cestodes, Trematodes & Ocular Toxoplasmosis",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard microbiology/parasitology references (e.g., standard microbiology texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond Acanthamoeba (a protozoan, already covered), the parasite classes tested on boards include additional protozoa, nematodes (roundworms), cestodes (tapeworms), trematodes (flukes), and arthropods — several with genuinely high-yield, classic ocular presentations that round out this platform's parasitology coverage." },
+      { h: "Toxoplasma gondii — ocular toxoplasmosis, the most common infectious cause of posterior uveitis", t: "Toxoplasma gondii is an obligate intracellular protozoan whose definitive host is the cat (sexual reproduction, oocyst shedding in feces); humans are infected by ingesting oocyst-contaminated soil/water, undercooked meat containing tissue cysts, or via transplacental (congenital) transmission during acute maternal infection; ocular toxoplasmosis — the single most common infectious cause of posterior uveitis worldwide — classically presents as a focal necrotizing retinochoroiditis adjacent to an old pigmented chorioretinal scar (a \"satellite lesion,\" reflecting reactivation at the edge of a prior congenital lesion), with overlying vitreous inflammation producing the classic \"headlight in the fog\" clinical appearance; the congenital triad (chorioretinitis, hydrocephalus, intracranial calcifications) is classically tested, and treatment involves pyrimethamine plus sulfadiazine (with folinic acid to offset bone marrow toxicity) or alternative regimens." },
+      { h: "Nematodes — Toxocara and Onchocerca", t: "Toxocara canis/cati (dog/cat roundworms) infect humans as accidental hosts via ingestion of embryonated eggs from contaminated soil (classically in young children with pica) — larvae that migrate to the eye cause ocular larva migrans, typically unilateral, presenting as a peripheral or posterior granuloma or, less commonly, diffuse endophthalmitis; because Toxocara ocular larva migrans classically presents in a young child with leukocoria, it is a critical entry on the differential diagnosis of leukocoria alongside retinoblastoma (already relevant to Pediatric/Congenital content), distinguished by history, serology (ELISA), and imaging rather than by leukocoria appearance alone; Onchocerca volvulus, transmitted by blackfly (Simulium) bites and endemic in sub-Saharan Africa, produces microfilariae that migrate through skin and the eye, causing sclerosing keratitis, iridocyclitis, chorioretinitis, and optic atrophy — the cause of \"river blindness,\" one of the world's leading infectious causes of blindness, treated with ivermectin (which kills microfilariae, not adult worms)." },
+      { h: "Cestodes, trematodes, and arthropods — completing the classification", t: "Cestodes (tapeworms): Taenia solium (pork tapeworm) causes cysticercosis when eggs (rather than larval cysts in meat) are ingested — larvae can encyst in the eye (ocular cysticercosis, a cyst with a visible scolex in the vitreous or subretinal space) or brain (neurocysticercosis); trematodes (flukes): Schistosoma species use a snail intermediate host, with cercariae penetrating human skin from contaminated freshwater before adults settle in venous plexuses, causing granulomatous inflammation at sites of egg deposition — included here for classification completeness, though with less direct ocular relevance than the nematode/protozoan examples above; arthropods: Demodex mite infestation (already covered under your Blepharitis content) is the most clinically relevant ocular arthropod association, and Phthirus pubis (pubic/\"crab\" lice) can separately infest eyelashes (phthiriasis palpebrarum), a distinct entity from Demodex causing lash-based pruritus and visible nits/lice on slit lamp exam." },
+    ],
+    memorizeIt: [
+      "Toxoplasma gondii: cat = definitive host; ocular toxoplasmosis = MOST COMMON infectious cause of posterior uveitis — focal necrotizing retinochoroiditis adjacent to an old pigmented scar (\"satellite lesion\"), \"headlight in the fog\" vitritis. Congenital triad: chorioretinitis, hydrocephalus, intracranial calcifications.",
+      "Toxocara (nematode): ingested eggs (soil, pica in children) → ocular larva migrans — granuloma or endophthalmitis, KEY differential for leukocoria alongside retinoblastoma.",
+      "Onchocerca volvulus (nematode): blackfly-transmitted, sub-Saharan Africa — \"river blindness\" (sclerosing keratitis, chorioretinitis, optic atrophy); treated with ivermectin.",
+      "Cestode: Taenia solium → cysticercosis (egg ingestion) → can cause ocular cysticercosis (vitreous/subretinal cyst with scolex). Trematode: Schistosoma (snail vector, skin penetration). Arthropods: Demodex (already covered) and Phthirus pubis (lash infestation, distinct from Demodex).",
+    ],
+    applyIt: [
+      "This gives you two of the highest-yield ocular parasitology facts on the boards, both extending existing content: recognizing ocular toxoplasmosis's classic \"satellite lesion\" appearance (a new focus of active retinochoroiditis adjacent to an old chorioretinal scar) as the most common infectious cause of posterior uveitis directly complements your existing uveitis differential content, and recognizing Toxocara ocular larva migrans as a must-rule-out cause of pediatric leukocoria — alongside retinoblastoma — is exactly the kind of differential-diagnosis pairing that prevents a devastating missed or delayed diagnosis in a young child presenting with an abnormal red reflex.",
     ],
   },
   "headneck-cranial-nerves-vision": {
@@ -19298,6 +19705,15 @@ const FLASHCARDS = [
   { id: "fc-780", objectiveId: "bioenergetics-fasting-states", front: "Name three gluconeogenesis precursors.", back: "Lactate, glycerol (from lipolysis), amino acids (from muscle protein breakdown)." },
   { id: "fc-781", objectiveId: "bioenergetics-fasting-states", front: "Why can ketone bodies fuel the brain when fatty acids themselves cannot?", back: "Ketone bodies can cross the blood-brain barrier, unlike fatty acids, providing an alternative brain fuel during prolonged fasting." },
   { id: "fc-782", objectiveId: "bioenergetics-fasting-states", front: "How does DKA's ketogenesis differ from the ketosis of normal prolonged fasting?", back: "Same pathway, but pathologically unregulated due to insulin deficiency — occurs despite high blood glucose rather than in response to true glucose scarcity." },
+  { id: "fc-1724", objectiveId: "bioenergetics-thermodynamics", front: "What does the sign of ΔG tell you about a reaction, and what is the ΔG = ΔH − TΔS equation for?", back: "Negative ΔG = spontaneous (exergonic); zero = equilibrium; positive = non-spontaneous (endergonic). The equation relates free energy to enthalpy, entropy, and temperature." },
+  { id: "fc-1725", objectiveId: "bioenergetics-thermodynamics", front: "How does the cell drive an endergonic (unfavorable) reaction forward?", back: "Reaction coupling — pairing it with a strongly exergonic reaction (classically ATP hydrolysis) so the combined ΔG is negative." },
+  { id: "fc-1726", objectiveId: "bioenergetics-thermodynamics", front: "In a redox reaction, what happens to the substrate being oxidized vs. the substrate being reduced?", back: "Oxidized substrate loses electrons/H; reduced substrate gains electrons/H — always paired." },
+  { id: "fc-1727", objectiveId: "bioenergetics-energy-carriers", front: "Why does each FADH2 yield less ATP than each NADH from the electron transport chain?", back: "FADH2 enters the ETC at a lower energy point (Complex II) than NADH (Complex I), bypassing Complex I's proton pumping." },
+  { id: "fc-1728", objectiveId: "bioenergetics-energy-carriers", front: "What is the key functional difference between NADH and NADPH, despite their structural similarity?", back: "NADH: catabolic electron carrier, feeds the ETC for ATP production. NADPH: anabolic/antioxidant carrier, powers reductive biosynthesis and glutathione regeneration." },
+  { id: "fc-1729", objectiveId: "bioenergetics-energy-carriers", front: "Why is acetyl-CoA described as the central metabolic hub?", back: "Carbohydrate (via pyruvate), fat (via beta-oxidation), and amino acid catabolism all converge on acetyl-CoA before entering the Krebs cycle." },
+  { id: "fc-1730", objectiveId: "bioenergetics-ph-buffers", front: "Write the Henderson-Hasselbalch equation and state what a buffer needs to resist pH change most effectively.", back: "pH = pKa + log([A−]/[HA]); most effective when pH is near the buffer's pKa (base:acid ratio near 1:1)." },
+  { id: "fc-1731", objectiveId: "bioenergetics-ph-buffers", front: "Using the bicarbonate buffer system (pKa 6.1, normal HCO3− 24, CO2 1.2), calculate normal plasma pH.", back: "pH = 6.1 + log(24/1.2) = 6.1 + log(20) = 6.1 + 1.3 = 7.4." },
+  { id: "fc-1732", objectiveId: "bioenergetics-ph-buffers", front: "Why does the bicarbonate buffer system remain effective as the primary plasma buffer despite its pKa being below physiologic pH?", back: "It's an open system — continuously regulated by respiratory CO2 elimination and renal HCO3− handling working together." },
   // Molecular biology - DNA replication
   { id: "fc-783", objectiveId: "molbio-dna-replication", front: "What base pairing rule governs DNA structure, and which pairing has more hydrogen bonds?", back: "A-T (2 H-bonds), G-C (3 H-bonds) — GC-rich regions are more thermally stable." },
   { id: "fc-784", objectiveId: "molbio-dna-replication", front: "What does 'semiconservative' replication mean?", back: "Each daughter DNA molecule contains one original (parental) strand and one newly synthesized strand." },
@@ -19311,6 +19727,12 @@ const FLASHCARDS = [
   { id: "fc-790", objectiveId: "molbio-mutation-types", front: "What causes a frameshift mutation, and what is its typical effect?", back: "Insertion/deletion not a multiple of 3; shifts the entire downstream reading frame, usually producing a severely disrupted protein." },
   { id: "fc-791", objectiveId: "molbio-mutation-types", front: "Why are tumor suppressor gene mutations typically recessive at the cellular level, but oncogene mutations typically dominant?", back: "Tumor suppressors: loss-of-function, need both alleles inactivated (two-hit hypothesis). Oncogenes: gain-of-function, a single mutant allele suffices." },
   { id: "fc-792", objectiveId: "molbio-mutation-types", front: "Why do inherited cancer-predisposition syndromes so dramatically raise cancer risk?", back: "The person already carries one tumor suppressor loss-of-function 'hit' from birth, so only a single additional somatic hit (not two independent hits) is needed for cancer." },
+  { id: "fc-1733", objectiveId: "molbio-gene-regulation", front: "What is the main reason different cell types express different genes despite sharing an identical genome?", back: "Gene-specific transcription factors (activators/repressors) bind enhancers/silencers to selectively increase or decrease each gene's transcription in a given cell type." },
+  { id: "fc-1734", objectiveId: "molbio-gene-regulation", front: "What are the effects of DNA methylation and histone acetylation on gene transcription?", back: "DNA methylation (CpG promoter regions): generally silences transcription. Histone acetylation: generally loosens packaging, promotes transcription (deacetylation represses it)." },
+  { id: "fc-1735", objectiveId: "molbio-gene-regulation", front: "How can a tumor suppressor gene be inactivated WITHOUT a mutation in its DNA sequence?", back: "Epigenetic silencing — promoter hypermethylation can silence a tumor suppressor gene's expression without altering its coding sequence." },
+  { id: "fc-1736", objectiveId: "molbio-recombinant-dna-genomics", front: "Name the three steps of a PCR cycle, and what happens in each.", back: "Denaturation (heat separates the DNA strands), annealing (primers bind flanking sequences), extension (Taq polymerase synthesizes new strands)." },
+  { id: "fc-1737", objectiveId: "molbio-recombinant-dna-genomics", front: "What does Southern blot detect, and what are its RNA and protein analogues called?", back: "Southern blot detects a specific DNA sequence. Northern blot = RNA. Western blot = protein." },
+  { id: "fc-1738", objectiveId: "molbio-recombinant-dna-genomics", front: "Contrast gene therapy and antisense therapy as molecular treatment strategies.", back: "Gene therapy adds a functional gene copy (often via viral vector). Antisense therapy uses an oligonucleotide to bind and block/degrade a specific target mRNA — opposite strategies." },
   // Carbohydrate biochemistry - glycolysis
   { id: "fc-793", objectiveId: "carbbiochem-glycolysis", front: "What is the rate-limiting enzyme of glycolysis, and what reaction does it catalyze?", back: "PFK-1; catalyzes fructose-6-phosphate → fructose-1,6-bisphosphate." },
   { id: "fc-794", objectiveId: "carbbiochem-glycolysis", front: "What activates and what inhibits PFK-1?", back: "Activated by AMP and fructose-2,6-bisphosphate (low energy signals). Inhibited by ATP and citrate (adequate energy signals)." },
@@ -19323,6 +19745,15 @@ const FLASHCARDS = [
   { id: "fc-799", objectiveId: "carbbiochem-pentose-phosphate", front: "What are the two main products of the pentose phosphate pathway, and what is each used for?", back: "NADPH (antioxidant defense, regenerates glutathione) and ribose-5-phosphate (nucleotide synthesis)." },
   { id: "fc-800", objectiveId: "carbbiochem-pentose-phosphate", front: "Why are red blood cells especially dependent on the PPP?", back: "They lack mitochondria and have no alternative source of NADPH for antioxidant protection." },
   { id: "fc-801", objectiveId: "carbbiochem-pentose-phosphate", front: "What enzyme is deficient in G6PD deficiency, and what triggers acute hemolysis?", back: "Glucose-6-phosphate dehydrogenase; triggered by oxidant stressors — fava beans, certain drugs (sulfa, some antimalarials), infection." },
+  { id: "fc-1739", objectiveId: "carbbiochem-tca-cycle", front: "Which TCA cycle enzyme is rate-limiting, and which one doubles as an electron transport chain complex?", back: "Isocitrate dehydrogenase is rate-limiting. Succinate dehydrogenase IS Complex II of the ETC." },
+  { id: "fc-1740", objectiveId: "carbbiochem-tca-cycle", front: "What is the net yield of one turn of the TCA cycle (per acetyl-CoA)?", back: "3 NADH, 1 FADH2, 1 GTP, and 2 CO2 released; oxaloacetate is regenerated." },
+  { id: "fc-1741", objectiveId: "carbbiochem-tca-cycle", front: "Why does diverting oxaloacetate toward gluconeogenesis push acetyl-CoA toward ketogenesis instead of the TCA cycle?", back: "Acetyl-CoA needs OAA (via citrate synthase) to enter the TCA cycle; if OAA is being used for gluconeogenesis, acetyl-CoA has nothing to condense with and is shunted to ketone body synthesis instead." },
+  { id: "fc-1742", objectiveId: "carbbiochem-electron-transport", front: "Which ETC complexes pump protons, and which one does not?", back: "Complexes I, III, and IV pump protons. Complex II (succinate dehydrogenase) does NOT — why FADH2 yields less ATP than NADH." },
+  { id: "fc-1743", objectiveId: "carbbiochem-electron-transport", front: "What is chemiosmotic coupling, and what enzyme carries it out?", back: "Protons flow back down their gradient (intermembrane space → matrix) through ATP synthase (Complex V), which uses that energy to phosphorylate ADP to ATP." },
+  { id: "fc-1744", objectiveId: "carbbiochem-electron-transport", front: "What do chemical uncouplers (e.g., 2,4-DNP) do to the ETC and ATP synthesis?", back: "They dissipate the proton gradient without passing through ATP synthase — electron transport/O2 consumption continues, but ATP synthesis stops, with energy released as heat instead." },
+  { id: "fc-1745", objectiveId: "carbbiochem-structure", front: "What two glycosaminoglycans predominate in the corneal stroma, and what is their functional role?", back: "Keratan sulfate and dermatan sulfate — fill the space between collagen fibrils, maintaining the precise fibril spacing required for corneal transparency." },
+  { id: "fc-1746", objectiveId: "carbbiochem-structure", front: "What is the structural difference between a proteoglycan and a glycoprotein?", back: "Proteoglycan: long GAG chains attached to a core protein (structural, water-binding). Glycoprotein: shorter branched oligosaccharides on protein (recognition/signaling, e.g., ABO blood antigens)." },
+  { id: "fc-1747", objectiveId: "carbbiochem-structure", front: "Why do GAGs strongly attract water?", back: "They are heavily negatively charged (sulfate and carboxyl groups), which draws water in and gives GAG-rich tissue its hydrated, gel-like consistency." },
   // Lipid biochemistry - lipoproteins
   { id: "fc-802", objectiveId: "lipidbiochem-lipoproteins", front: "Distinguish the roles of chylomicrons, VLDL, LDL, and HDL.", back: "Chylomicrons: dietary triglycerides. VLDL: endogenous triglycerides. LDL: peripheral cholesterol delivery ('bad'). HDL: reverse cholesterol transport ('good')." },
   { id: "fc-803", objectiveId: "lipidbiochem-lipoproteins", front: "What is the hallmark early cellular event in atherosclerotic plaque formation, and what triggers it?", back: "Foam cell formation, triggered by macrophage scavenger-receptor uptake of oxidized/modified LDL." },
@@ -19335,6 +19766,12 @@ const FLASHCARDS = [
   { id: "fc-808", objectiveId: "lipidbiochem-cholesterol-synthesis", front: "What is the rate-limiting enzyme of cholesterol synthesis, and what reaction does it catalyze?", back: "HMG-CoA reductase; catalyzes HMG-CoA → mevalonate." },
   { id: "fc-809", objectiveId: "lipidbiochem-cholesterol-synthesis", front: "What is the mechanism of action of statins?", back: "Competitive inhibition of HMG-CoA reductase, reducing hepatic cholesterol synthesis." },
   { id: "fc-810", objectiveId: "lipidbiochem-cholesterol-synthesis", front: "What is the dual mechanism by which statins lower circulating LDL?", back: "(1) Reduced hepatic cholesterol synthesis, plus (2) compensatory upregulation of hepatic LDL receptors, increasing LDL clearance from blood." },
+  { id: "fc-1748", objectiveId: "lipidbiochem-structure-classes", front: "What fatty acid is the precursor for eicosanoids, and what two enzymatic pathways produce them?", back: "Arachidonic acid; cyclooxygenase (COX) → prostaglandins/thromboxanes, and lipoxygenase → leukotrienes." },
+  { id: "fc-1749", objectiveId: "lipidbiochem-structure-classes", front: "What distinguishes a phosphoglyceride from a triacylglycerol structurally?", back: "Phosphoglyceride: glycerol + 2 fatty acids + phosphate-linked polar head group. Triacylglyceride: glycerol + 3 fatty acids (no phosphate/head group)." },
+  { id: "fc-1750", objectiveId: "lipidbiochem-structure-classes", front: "What backbone do sphingolipids use instead of glycerol, and what disease results from ganglioside accumulation?", back: "Sphingosine backbone; GM2 ganglioside accumulation (from a lysosomal enzyme defect) causes Tay-Sachs disease." },
+  { id: "fc-1751", objectiveId: "lipidbiochem-membrane", front: "What property of phospholipids drives their spontaneous self-assembly into a bilayer?", back: "Amphipathic structure — hydrophilic head groups face the aqueous environment, hydrophobic tails bury in the interior away from water." },
+  { id: "fc-1752", objectiveId: "lipidbiochem-membrane", front: "How does cholesterol affect membrane fluidity at high vs. low temperatures?", back: "It buffers fluidity in both directions — restrains excessive fluidity at high temperature, prevents excessive rigidity at low temperature." },
+  { id: "fc-1753", objectiveId: "lipidbiochem-membrane", front: "Contrast integral and peripheral membrane proteins.", back: "Integral: span/embedded within the bilayer (e.g., ion channels, GPCRs, transporters). Peripheral: loosely surface-associated, easily removed without disrupting the bilayer." },
   // Protein biochemistry - collagen
   { id: "fc-811", objectiveId: "proteinbiochem-collagen", front: "What is the repeating amino acid sequence pattern in collagen, and why is glycine essential?", back: "Gly-X-Y (X/Y often proline/hydroxyproline); glycine's small size is required at every third position for tight triple-helix packing." },
   { id: "fc-812", objectiveId: "proteinbiochem-collagen", front: "What vitamin is required for prolyl/lysyl hydroxylase activity, and what deficiency disease results without it?", back: "Vitamin C; deficiency causes scurvy (unstable collagen → poor wound healing, gum disease, bruising)." },
@@ -19343,6 +19780,9 @@ const FLASHCARDS = [
   { id: "fc-814", objectiveId: "proteinbiochem-protein-folding", front: "List the four levels of protein structure.", back: "Primary (amino acid sequence), secondary (local folding, H-bonds), tertiary (single-chain 3D folding), quaternary (multi-subunit assembly)." },
   { id: "fc-815", objectiveId: "proteinbiochem-protein-folding", front: "What do molecular chaperones (e.g., heat shock proteins) do, and what happens to proteins that can't be properly refolded?", back: "Assist proper folding; misfolded proteins are targeted for ubiquitin-proteasome degradation." },
   { id: "fc-816", objectiveId: "proteinbiochem-protein-folding", front: "Why can the same gene produce a spectrum of disease severity across different missense mutations?", back: "Severity depends on how much a specific amino acid change destabilizes tertiary folding, not an all-or-nothing effect." },
+  { id: "fc-1754", objectiveId: "proteinbiochem-enzyme-regulation", front: "Do enzymes change a reaction's ΔG or equilibrium position?", back: "No — enzymes only lower the activation energy (speed up the rate); they cannot make a thermodynamically unfavorable reaction favorable." },
+  { id: "fc-1755", objectiveId: "proteinbiochem-enzyme-regulation", front: "Contrast allosteric regulation and reversible covalent modification as enzyme control mechanisms.", back: "Allosteric: effector binds a site distinct from the active site, changing conformation (e.g., PFK-1 inhibited by ATP/citrate). Covalent modification: phosphorylation/dephosphorylation by kinases/phosphatases (e.g., glycogen phosphorylase activated, glycogen synthase inactivated, by phosphorylation)." },
+  { id: "fc-1756", objectiveId: "proteinbiochem-enzyme-regulation", front: "What is a zymogen, and why does the pancreas store its digestive enzymes this way?", back: "An inactive enzyme precursor requiring proteolytic cleavage to activate (e.g., trypsinogen → trypsin via enteropeptidase); storing enzymes as inactive zymogens until they reach the duodenum protects the pancreas from autodigestion." },
   // Cellular biochemistry - enzyme kinetics
   { id: "fc-817", objectiveId: "cellbiochem-enzyme-kinetics", front: "Define Km and Vmax, and state what a lower Km indicates about enzyme-substrate affinity.", back: "Vmax: max reaction rate at saturating substrate. Km: substrate concentration at half-Vmax. Lower Km = higher affinity." },
   { id: "fc-818", objectiveId: "cellbiochem-enzyme-kinetics", front: "How does competitive inhibition affect Km and Vmax? How does noncompetitive inhibition affect them?", back: "Competitive: Vmax unchanged, apparent Km increases. Noncompetitive: Vmax decreases, Km unchanged." },
@@ -19355,6 +19795,9 @@ const FLASHCARDS = [
   { id: "fc-823", objectiveId: "cellbiochem-free-radicals", front: "Name the two main enzymatic antioxidant defense steps against ROS.", back: "Superoxide dismutase (superoxide → H2O2), then catalase/glutathione peroxidase (H2O2 → water)." },
   { id: "fc-824", objectiveId: "cellbiochem-free-radicals", front: "What pathway regenerates the reduced glutathione that glutathione peroxidase depends on?", back: "The pentose phosphate pathway, via NADPH." },
   { id: "fc-825", objectiveId: "cellbiochem-free-radicals", front: "What is the biochemical rationale for AREDS2 supplementation in AMD?", back: "The retina's chronic oxidative stress (light exposure, high metabolic demand) benefits from combined antioxidant support — vitamin C, vitamin E, zinc, copper, lutein/zeaxanthin." },
+  { id: "fc-1757", objectiveId: "cellbiochem-compartmentalization", front: "Why does the cell perform fatty acid synthesis in the cytoplasm but fatty acid oxidation in the mitochondria?", back: "Physically separating these opposing pathways (distinct enzyme sets, distinct compartments) prevents wasteful futile cycling and allows each to be independently regulated by fed/fasting hormonal signals." },
+  { id: "fc-1758", objectiveId: "cellbiochem-compartmentalization", front: "Contrast the ionic composition of intracellular vs. extracellular fluid, and what maintains this gradient.", back: "Intracellular: high K+, low Na+. Extracellular: high Na+, low K+. Maintained by the ATP-dependent Na+/K+-ATPase." },
+  { id: "fc-1759", objectiveId: "cellbiochem-compartmentalization", front: "What single chemical principle explains BOTH protein tertiary folding and lipid bilayer self-assembly?", back: "Hydrophobic interactions — nonpolar groups clustering away from water — drive both processes." },
   // Nutritional biochemistry - fat-soluble vitamins
   { id: "fc-826", objectiveId: "nutrbiochem-fat-soluble-vitamins", front: "What form does vitamin A take in the visual cycle, and what does its deficiency cause first?", back: "11-cis-retinal (the visual cycle chromophore); deficiency first causes night blindness (impaired rod function), progressing to xerophthalmia/keratomalacia." },
   { id: "fc-827", objectiveId: "nutrbiochem-fat-soluble-vitamins", front: "Trace vitamin D's activation pathway from intake to active hormone.", back: "Liver 25-hydroxylation (storage/measured form) → kidney 1-alpha-hydroxylation → calcitriol (active hormone)." },
@@ -19364,6 +19807,9 @@ const FLASHCARDS = [
   { id: "fc-830", objectiveId: "nutrbiochem-water-soluble-vitamins", front: "What enzyme requires thiamine pyrophosphate as a cofactor, and what syndrome results from thiamine deficiency (e.g., in alcoholism)?", back: "Pyruvate dehydrogenase (and alpha-ketoglutarate dehydrogenase); deficiency causes Wernicke-Korsakoff syndrome (confusion, ataxia, ophthalmoplegia) and beriberi." },
   { id: "fc-831", objectiveId: "nutrbiochem-water-soluble-vitamins", front: "What is niacin's active coenzyme form, and what deficiency syndrome results from severe deficiency?", back: "NAD+/NADH; deficiency causes pellagra (dermatitis, diarrhea, dementia)." },
   { id: "fc-832", objectiveId: "nutrbiochem-water-soluble-vitamins", front: "What key clinical feature distinguishes B12 deficiency from folate deficiency, despite both causing megaloblastic anemia?", back: "Only B12 deficiency also causes neurologic symptoms, from impaired myelin synthesis." },
+  { id: "fc-1760", objectiveId: "nutrbiochem-macronutrients", front: "List the 9 essential amino acids (mnemonic).", back: "Phenylalanine, Valine, Threonine, Tryptophan, Isoleucine, Methionine, Histidine, Leucine, Lysine — \"PVT TIM HALL.\"" },
+  { id: "fc-1761", objectiveId: "nutrbiochem-macronutrients", front: "What makes tyrosine a conditionally essential amino acid in PKU?", back: "Tyrosine is normally made from phenylalanine via phenylalanine hydroxylase; in PKU (phenylalanine hydroxylase deficiency), this conversion can't occur, so tyrosine must come from the diet." },
+  { id: "fc-1762", objectiveId: "nutrbiochem-macronutrients", front: "How is PKU managed, and why does this matter clinically?", back: "Dietary phenylalanine restriction plus tyrosine supplementation; detected by mandatory newborn screening since early intervention prevents otherwise irreversible neurologic damage from phenylalanine accumulation." },
   // Antibody structure
   { id: "fc-833", objectiveId: "antibody-structure", front: "What do the Fab and Fc regions of an antibody each determine?", back: "Fab: antigen-binding specificity (variable). Fc: antibody class/effector function (constant)." },
   { id: "fc-834", objectiveId: "antibody-structure", front: "Which immunoglobulin class is the first responder in a primary immune response, and what structural feature makes it a potent complement activator?", back: "IgM; it exists as a pentamer with multiple binding sites." },
@@ -19433,6 +19879,12 @@ const FLASHCARDS = [
   { id: "fc-880", objectiveId: "bacteriology-antibiotic-mechanisms", front: "Why do beta-lactam antibiotics have good selective toxicity against bacteria?", back: "They target peptidoglycan cell wall synthesis, a structure human cells entirely lack." },
   { id: "fc-881", objectiveId: "bacteriology-antibiotic-mechanisms", front: "What do fluoroquinolones target, and why does this matter for empiric bacterial keratitis treatment?", back: "Bacterial DNA gyrase/topoisomerase; this mechanism plus outer-membrane penetration gives broad-spectrum coverage including gram-negative Pseudomonas." },
   { id: "fc-882", objectiveId: "bacteriology-antibiotic-mechanisms", front: "Name four bacterial antibiotic resistance mechanisms.", back: "Enzymatic drug inactivation (e.g., beta-lactamase), target site modification, efflux pumps, reduced membrane permeability." },
+  { id: "fc-1763", objectiveId: "bacteriology-growth-genetics", front: "Distinguish obligate aerobes, obligate anaerobes, facultative anaerobes, and microaerophiles.", back: "Obligate aerobe: needs O2. Obligate anaerobe: killed by O2 (no catalase/SOD). Facultative anaerobe: grows with or without O2. Microaerophile: needs a little O2, harmed by full atmospheric levels." },
+  { id: "fc-1764", objectiveId: "bacteriology-growth-genetics", front: "Which bacterial genera form endospores, and why are spores clinically important for sterilization?", back: "Bacillus and Clostridium; spores are highly resistant to heat/desiccation/chemicals, so sterilization (e.g., autoclaving) requires more rigorous conditions than routine disinfection to kill them." },
+  { id: "fc-1765", objectiveId: "bacteriology-growth-genetics", front: "Name the three mechanisms of bacterial horizontal gene transfer.", back: "Transformation (uptake of free DNA), conjugation (direct transfer via pilus, typically a plasmid), transduction (bacteriophage-mediated) — the primary route antibiotic resistance spreads between bacteria." },
+  { id: "fc-1766", objectiveId: "bacteriology-atypical-organisms", front: "Why are mycobacteria identified by acid-fast stain rather than Gram stain?", back: "Their mycolic acid-rich cell wall doesn't reliably retain Gram stain but does retain carbol fuchsin despite acid-alcohol decolorization (Ziehl-Neelsen stain)." },
+  { id: "fc-1767", objectiveId: "bacteriology-atypical-organisms", front: "Describe Chlamydia's biphasic life cycle.", back: "Elementary body (EB): small, metabolically inactive, infectious extracellular form. Reticulate body (RB): larger, metabolically active, intracellular replicating form — RB converts back to EBs for release." },
+  { id: "fc-1768", objectiveId: "bacteriology-atypical-organisms", front: "Why is Mycoplasma intrinsically resistant to all beta-lactam antibiotics?", back: "It has NO cell wall at all (no peptidoglycan target) — its membrane is instead stabilized by sterols." },
   // Virology - replication
   { id: "fc-883", objectiveId: "virology-replication-cycle", front: "List the steps of the viral replication cycle in order.", back: "Attachment → penetration/entry → uncoating → replication → assembly → release." },
   { id: "fc-884", objectiveId: "virology-replication-cycle", front: "Why are enveloped viruses like HSV more susceptible to environmental inactivation than non-enveloped viruses?", back: "Their lipid envelope (from host membrane) is disrupted by heat, drying, and detergents, disabling infectivity." },
@@ -19441,6 +19893,9 @@ const FLASHCARDS = [
   { id: "fc-886", objectiveId: "virology-antiviral-mechanisms", front: "What enzyme must activate acyclovir before it works, and why does this give selective toxicity?", back: "Viral thymidine kinase; it's only present/active in infected cells, sparing uninfected host cells." },
   { id: "fc-887", objectiveId: "virology-antiviral-mechanisms", front: "Why doesn't antiviral therapy eliminate HSV's latent reservoir?", back: "Nucleoside analogs require active viral DNA replication to work; latent virus isn't replicating, so it's unaffected." },
   { id: "fc-888", objectiveId: "virology-antiviral-mechanisms", front: "Why is combination antiviral therapy (e.g., in HIV treatment) more effective than a single drug?", back: "Different drug classes target different replication cycle steps simultaneously, making viral escape/resistance harder." },
+  { id: "fc-1769", objectiveId: "virology-classification-prions", front: "What distinguishes a positive-sense from a negative-sense ssRNA virus?", back: "Positive-sense: genome directly translatable by host ribosomes (like mRNA). Negative-sense: genome must first be transcribed by a viral RNA-dependent RNA polymerase before translation." },
+  { id: "fc-1770", objectiveId: "virology-classification-prions", front: "Why are non-enveloped (naked) viruses like adenovirus so much more contagious via fomite transmission than enveloped viruses?", back: "They lack a lipid envelope, making them considerably more resistant to environmental inactivation (heat, drying, alcohol-based disinfectants) than enveloped viruses." },
+  { id: "fc-1771", objectiveId: "virology-classification-prions", front: "What makes prions fundamentally different from viruses, and why do they resist standard sterilization?", back: "Prions are entirely misfolded protein with NO nucleic acid genome at all; lacking nucleic acid, they resist sterilization methods that target genetic material, requiring specialized decontamination protocols." },
   // Mycology - structure
   { id: "fc-889", objectiveId: "mycology-fungal-structure", front: "What is the fungal cell wall composed of, and why does this matter for antibacterial drug activity?", back: "Chitin and glucans (not peptidoglycan) — antibacterial antibiotics have no effect on fungi." },
   { id: "fc-890", objectiveId: "mycology-fungal-structure", front: "What fungal cell membrane component do many antifungal drugs target?", back: "Ergosterol (the fungal analog of human cholesterol)." },
@@ -19449,10 +19904,16 @@ const FLASHCARDS = [
   { id: "fc-892", objectiveId: "mycology-fungal-keratitis", front: "What is the classic, highly testable risk factor for fungal keratitis?", back: "Vegetative/plant matter corneal trauma." },
   { id: "fc-893", objectiveId: "mycology-fungal-keratitis", front: "How does fungal keratitis's infiltrate margin appearance differ from bacterial keratitis?", back: "Fungal: feathery, filamentous (branching) margins. Bacterial: more discrete, well-demarcated margins." },
   { id: "fc-894", objectiveId: "mycology-fungal-keratitis", front: "Why is inappropriate corticosteroid use dangerous in undiagnosed fungal keratitis?", back: "Corticosteroids suppress local immune defenses, allowing fungal overgrowth and dramatically worsening the infection." },
+  { id: "fc-1772", objectiveId: "mycology-classification-systemic", front: "List the five categories of mycoses by tissue depth, from most to least superficial.", back: "Superficial → cutaneous (dermatophytes) → subcutaneous (e.g., Sporothrix) → systemic/endemic dimorphic (e.g., Histoplasma, Coccidioides, Blastomyces) → opportunistic (e.g., Candida, Aspergillus, Cryptococcus, Mucor)." },
+  { id: "fc-1773", objectiveId: "mycology-classification-systemic", front: "What is the classic predisposing risk factor for rhino-orbital-cerebral mucormycosis, and what is its key mechanism of tissue damage?", back: "Diabetic ketoacidosis (or other severe immunocompromise); it is angioinvasive — fungal hyphae invade blood vessels, causing thrombosis and tissue necrosis." },
+  { id: "fc-1774", objectiveId: "mycology-classification-systemic", front: "What are the classic clinical findings of rhino-orbital-cerebral mucormycosis?", back: "Proptosis, ophthalmoplegia (orbital apex syndrome), vision loss, and a black necrotic eschar on the palate or nasal mucosa — an ophthalmic emergency requiring urgent surgical debridement plus systemic antifungal therapy." },
   // Parasitology - acanthamoeba
   { id: "fc-895", objectiveId: "parasitology-acanthamoeba", front: "What is the classic risk factor combination for Acanthamoeba keratitis?", back: "Contact lens wear + contaminated water exposure (swimming, tap water rinsing of lenses)." },
   { id: "fc-896", objectiveId: "parasitology-acanthamoeba", front: "What key symptom distinguishes Acanthamoeba keratitis from HSV keratitis?", back: "Pain disproportionate to clinical signs (vs. HSV's often-reduced corneal sensation)." },
   { id: "fc-897", objectiveId: "parasitology-acanthamoeba", front: "What is the pathognomonic (often late) clinical finding in Acanthamoeba keratitis, and what early finding can mimic HSV dendrites?", back: "Ring-shaped stromal infiltrate (pathognomonic, late); radial perineuritis (early, can mimic HSV)." },
+  { id: "fc-1775", objectiveId: "parasitology-classification-classes", front: "What is the most common infectious cause of posterior uveitis worldwide, and what is its classic fundus appearance?", back: "Toxoplasma gondii (ocular toxoplasmosis) — a focal necrotizing retinochoroiditis adjacent to an old pigmented chorioretinal scar (\"satellite lesion\"), with overlying vitritis (\"headlight in the fog\")." },
+  { id: "fc-1776", objectiveId: "parasitology-classification-classes", front: "A young child presents with leukocoria. What parasitic cause must be on the differential alongside retinoblastoma?", back: "Toxocara ocular larva migrans (from ingesting embryonated eggs, classically with pica) — distinguished by history, serology (ELISA), and imaging." },
+  { id: "fc-1777", objectiveId: "parasitology-classification-classes", front: "What organism causes river blindness, how is it transmitted, and how is it treated?", back: "Onchocerca volvulus (a nematode), transmitted by blackfly (Simulium) bites; treated with ivermectin, which kills microfilariae (not adult worms)." },
   // Head/Neck - cranial nerves
   { id: "fc-898", objectiveId: "headneck-cranial-nerves-vision", front: "What is the classic eye position and pupil finding in a complete CN III palsy?", back: "'Down and out' eye position, ptosis, +/- dilated poorly-reactive pupil." },
   { id: "fc-899", objectiveId: "headneck-cranial-nerves-vision", front: "What classic symptom pattern and compensatory posture suggests CN IV (trochlear) palsy?", back: "Vertical diplopia worse on downgaze/reading; head tilt AWAY from the affected side." },
@@ -24219,6 +24680,193 @@ const QUESTIONS = [
       b: "Correct — the combination of contact lens wear with water exposure (a classic Acanthamoeba risk factor) and pain disproportionate to visible clinical signs is a hallmark presentation for Acanthamoeba keratitis, genuinely useful for distinguishing it from HSV keratitis, which the disease is frequently and problematically mistaken for early in its course.",
       c: "Incorrect — the water-exposure risk factor and pain-out-of-proportion pattern described are not the classic presentation of bacterial keratitis.",
       d: "Incorrect — this presentation pattern (contact lens + water exposure + disproportionate pain) is a well-recognized, clinically important pattern specifically suggestive of Acanthamoeba keratitis.",
+    },
+  },
+  {
+    id: "q-345", objectiveId: "bioenergetics-ph-buffers", type: "Calculation", difficulty: "Hard",
+    stem: "A patient's arterial blood gas shows a plasma bicarbonate (HCO3−) of 12 mEq/L and a dissolved CO2 of 1.2 mmol/L. Using the Henderson-Hasselbalch equation (pKa = 6.1 for the bicarbonate buffer system), what is this patient's approximate blood pH?",
+    choices: [
+      { id: "a", text: "pH ≈ 7.1 (acidotic)" },
+      { id: "b", text: "pH ≈ 7.4 (normal)" },
+      { id: "c", text: "pH ≈ 7.7 (alkalotic)" },
+      { id: "d", text: "pH cannot be calculated from bicarbonate and CO2 values" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — pH = 6.1 + log(HCO3−/CO2) = 6.1 + log(12/1.2) = 6.1 + log(10) = 6.1 + 1 = 7.1, an acidotic value (normal is 7.4), consistent with this patient's low bicarbonate relative to CO2 (a metabolic acidosis pattern).",
+      b: "Incorrect — a normal pH of 7.4 would require a HCO3−/CO2 ratio of about 20:1 (e.g., 24/1.2), not the 10:1 ratio given here.",
+      c: "Incorrect — this ratio yields an acidotic, not alkalotic, pH — the low HCO3− relative to CO2 pulls pH below normal, not above it.",
+      d: "Incorrect — the Henderson-Hasselbalch equation is specifically designed to calculate pH from exactly this ratio.",
+    },
+  },
+  {
+    id: "q-346", objectiveId: "molbio-recombinant-dna-genomics", type: "Mechanism", difficulty: "Medium",
+    stem: "During PCR, short synthetic DNA sequences bind to the flanking regions of the target DNA sequence so that a heat-stable polymerase can begin synthesizing new complementary strands. What are these short synthetic sequences called, and during which PCR step do they bind?",
+    choices: [
+      { id: "a", text: "Probes, during the denaturation step" },
+      { id: "b", text: "Primers, during the annealing step" },
+      { id: "c", text: "Restriction enzymes, during the extension step" },
+      { id: "d", text: "Ligases, during the denaturation step" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — probes are labeled sequences used in blotting techniques (e.g., Southern blot) to detect a target sequence, not the short sequences used to initiate PCR synthesis.",
+      b: "Correct — primers are short synthetic oligonucleotides complementary to the flanking sequences of the target DNA; they bind (anneal) to the denatured template strands during the annealing step, providing the starting point (a free 3' end) that Taq polymerase then extends during the extension step.",
+      c: "Incorrect — restriction enzymes cut DNA at specific recognition sequences (relevant to Southern blot preparation), and are not part of the PCR cycle itself.",
+      d: "Incorrect — ligases join DNA fragments together (e.g., in recombinant DNA cloning), not a component of the PCR amplification cycle.",
+    },
+  },
+  {
+    id: "q-347", objectiveId: "carbbiochem-electron-transport", type: "Conceptual", difficulty: "Medium",
+    stem: "Why does each molecule of FADH2 generated by the TCA cycle and beta-oxidation ultimately yield less ATP than each molecule of NADH?",
+    choices: [
+      { id: "a", text: "FADH2 delivers its electrons to Complex II, which does not pump protons, bypassing Complex I's proton pumping that NADH benefits from" },
+      { id: "b", text: "FADH2 is not actually used by the electron transport chain at all" },
+      { id: "c", text: "FADH2 delivers its electrons directly to oxygen, skipping the entire electron transport chain" },
+      { id: "d", text: "NADH and FADH2 always yield exactly the same amount of ATP" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — NADH donates its electrons to Complex I, which pumps protons; FADH2 (via succinate dehydrogenase/Complex II) donates electrons directly to coenzyme Q without any proton pumping at that step, so less of the proton-motive force (and therefore less ATP) is generated per FADH2 compared to per NADH.",
+      b: "Incorrect — FADH2 is a genuine electron transport chain substrate, entering at Complex II.",
+      c: "Incorrect — FADH2's electrons still pass through the full downstream chain (coenzyme Q → Complex III → cytochrome c → Complex IV → oxygen), just entering at Complex II rather than Complex I.",
+      d: "Incorrect — this is precisely the pattern that does NOT hold; FADH2 yields measurably less ATP than NADH due to its lower entry point in the chain.",
+    },
+  },
+  {
+    id: "q-348", objectiveId: "lipidbiochem-membrane", type: "Conceptual", difficulty: "Medium",
+    stem: "A cell membrane's phospholipids are modified to contain a higher proportion of unsaturated (rather than saturated) fatty acid tails, with all other factors held constant. What effect would this be expected to have on membrane fluidity, and why?",
+    choices: [
+      { id: "a", text: "Increased fluidity, because cis double bonds introduce kinks in the fatty acid tails that prevent tight packing" },
+      { id: "b", text: "Decreased fluidity, because unsaturated tails pack more tightly than saturated tails" },
+      { id: "c", text: "No change, since fatty acid saturation has no effect on membrane properties" },
+      { id: "d", text: "The membrane would become entirely rigid and solid regardless of temperature" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — unsaturated fatty acids (with biologically common cis double bonds) have a kinked chain shape that prevents the tight, orderly packing possible with straight saturated chains, increasing space between adjacent lipid tails and therefore increasing membrane fluidity.",
+      b: "Incorrect — this describes the opposite relationship; saturated (straight-chain) tails pack more tightly, decreasing fluidity, while unsaturated (kinked) tails increase it.",
+      c: "Incorrect — fatty acid saturation is one of the primary determinants of membrane fluidity, alongside temperature and cholesterol content.",
+      d: "Incorrect — increasing unsaturated fatty acid content increases fluidity, moving the membrane away from (not toward) a rigid, solid state.",
+    },
+  },
+  {
+    id: "q-349", objectiveId: "proteinbiochem-enzyme-regulation", type: "Mechanism", difficulty: "Medium",
+    stem: "Trypsinogen is synthesized and stored in the pancreas in its inactive zymogen form, only being converted to active trypsin after reaching the duodenum (via cleavage by enteropeptidase). What is the biological rationale for this arrangement?",
+    choices: [
+      { id: "a", text: "It has no functional purpose and is simply an evolutionary accident" },
+      { id: "b", text: "It protects the pancreas from autodigestion, since active trypsin would otherwise begin digesting pancreatic tissue itself before reaching its intended site of action" },
+      { id: "c", text: "Trypsinogen is actually more enzymatically active than trypsin" },
+      { id: "d", text: "This arrangement exists only to slow down digestion unnecessarily" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — zymogen storage of digestive proteases is a deliberate, biologically important regulatory mechanism, not an incidental feature.",
+      b: "Correct — storing trypsin (and other pancreatic proteases like chymotrypsin) as inactive zymogens until they reach the duodenum, where enteropeptidase performs the initial activating cleavage, prevents these powerful proteolytic enzymes from digesting the pancreas's own tissue before reaching their intended site of action in the gut lumen.",
+      c: "Incorrect — trypsinogen is the inactive precursor; proteolytic cleavage to trypsin is specifically what confers full enzymatic activity.",
+      d: "Incorrect — the arrangement's purpose is protective (preventing autodigestion), not simply to delay digestion.",
+    },
+  },
+  {
+    id: "q-350", objectiveId: "cellbiochem-compartmentalization", type: "Conceptual", difficulty: "Medium",
+    stem: "Fatty acid synthesis occurs in the cytoplasm while fatty acid oxidation (beta-oxidation) occurs in the mitochondrial matrix, using entirely distinct sets of enzymes. What is the primary biochemical advantage of this compartmental separation?",
+    choices: [
+      { id: "a", text: "It allows the cell to run these opposing pathways independently and avoid a wasteful futile cycle of simultaneous synthesis and breakdown" },
+      { id: "b", text: "It has no functional advantage and is simply incidental to cell structure" },
+      { id: "c", text: "It ensures both pathways always run at the exact same rate at all times" },
+      { id: "d", text: "It prevents fatty acids from ever being used as an energy source" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — because the two pathways use distinct enzymes in physically separate compartments, the cell can independently activate one while suppressing the other in response to the fed/fasting hormonal state (insulin favoring cytoplasmic synthesis, glucagon/epinephrine favoring mitochondrial oxidation), avoiding the energy waste of running both simultaneously.",
+      b: "Incorrect — this compartmentalization is a deliberate and functionally important regulatory feature, not an incidental structural detail.",
+      c: "Incorrect — the entire point of the separation is to allow independent (not synchronized) regulation, so that one pathway can be active while the other is suppressed.",
+      d: "Incorrect — beta-oxidation is precisely how fatty acids ARE used as an energy source; the compartmentalization organizes this process rather than preventing it.",
+    },
+  },
+  {
+    id: "q-351", objectiveId: "nutrbiochem-macronutrients", type: "Clinical application", difficulty: "Medium",
+    stem: "An infant is diagnosed with phenylketonuria (PKU) on newborn screening. What dietary management approach directly follows from the underlying enzyme defect?",
+    choices: [
+      { id: "a", text: "Restrict dietary phenylalanine while supplementing tyrosine, since phenylalanine hydroxylase deficiency prevents the normal conversion of phenylalanine to tyrosine" },
+      { id: "b", text: "Restrict dietary tyrosine while supplementing phenylalanine" },
+      { id: "c", text: "No dietary modification is needed since PKU has no relationship to amino acid metabolism" },
+      { id: "d", text: "Eliminate all dietary protein permanently" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — PKU results from phenylalanine hydroxylase deficiency, which normally converts phenylalanine to tyrosine; without this conversion, phenylalanine accumulates to neurotoxic levels (requiring dietary restriction) while tyrosine becomes conditionally essential (requiring dietary supplementation) since the body can no longer make it from phenylalanine.",
+      b: "Incorrect — this reverses the correct relationship; phenylalanine (not tyrosine) is the amino acid that must be restricted in PKU.",
+      c: "Incorrect — PKU is fundamentally a disorder of amino acid metabolism, specifically phenylalanine/tyrosine conversion, and requires lifelong dietary management.",
+      d: "Incorrect — complete protein elimination is neither necessary nor appropriate; the management is specific restriction of phenylalanine intake, not elimination of all protein.",
+    },
+  },
+  {
+    id: "q-352", objectiveId: "bacteriology-atypical-organisms", type: "Mechanism", difficulty: "Medium",
+    stem: "A patient with community-acquired 'walking pneumonia' caused by Mycoplasma pneumoniae is treated with a macrolide antibiotic rather than a penicillin. What is the microbiologic basis for penicillin's ineffectiveness against this organism?",
+    choices: [
+      { id: "a", text: "Mycoplasma has no cell wall at all (no peptidoglycan), so beta-lactam antibiotics — which target peptidoglycan cross-linking — have no target to act on" },
+      { id: "b", text: "Mycoplasma has an unusually thick peptidoglycan wall that penicillin cannot penetrate" },
+      { id: "c", text: "Penicillin only works against viruses, not bacteria" },
+      { id: "d", text: "Mycoplasma actively produces an enzyme that destroys penicillin before it can act" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — Mycoplasma is unique among bacteria in having no cell wall whatsoever, instead stabilizing its membrane with sterols; since beta-lactam antibiotics work specifically by inhibiting peptidoglycan cross-linking, an organism with no peptidoglycan at all is intrinsically and completely resistant to this entire antibiotic class, regardless of dose.",
+      b: "Incorrect — Mycoplasma has no peptidoglycan cell wall at all, not simply a thick one; a thick gram-positive-type wall would be a peptidoglycan-synthesis-inhibitor target, not a barrier to it.",
+      c: "Incorrect — penicillin's mechanism specifically targets bacterial peptidoglycan synthesis, and it has no antiviral activity at all — this doesn't explain Mycoplasma's resistance.",
+      d: "Incorrect — beta-lactamase enzyme production (drug inactivation) is a different, acquired resistance mechanism seen in some other bacteria; Mycoplasma's resistance to beta-lactams is intrinsic, due to the complete absence of its target structure.",
+    },
+  },
+  {
+    id: "q-353", objectiveId: "virology-classification-prions", type: "Conceptual", difficulty: "Hard",
+    stem: "Reusable surgical instruments used on a patient later diagnosed with Creutzfeldt-Jakob disease (CJD) require specialized decontamination protocols beyond routine sterilization procedures effective against bacteria and viruses. What property of the infectious agent explains this?",
+    choices: [
+      { id: "a", text: "Prions are entirely misfolded protein with no nucleic acid genome, so standard sterilization methods targeting nucleic acid or typical microbial structures are ineffective against them" },
+      { id: "b", text: "CJD is caused by an unusually large, thick-walled bacterium resistant to heat" },
+      { id: "c", text: "CJD is caused by a virus with an especially thick protective envelope" },
+      { id: "d", text: "Standard sterilization is actually fully effective against CJD, and no special precautions are needed" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — prions (the infectious agent in CJD) are composed entirely of misfolded protein (PrPSc) with no DNA or RNA genome at all; because standard sterilization and disinfection methods were developed to inactivate microorganisms via mechanisms often involving nucleic acid damage or typical cell/viral structural disruption, prions' complete lack of nucleic acid and their protease-resistant protein structure make them unusually resistant, requiring specialized extended decontamination protocols.",
+      b: "Incorrect — CJD is not caused by a bacterium at all; it is caused by a prion, an infectious protein with no cellular structure or genome.",
+      c: "Incorrect — prions are not viruses and have no envelope or capsid structure; they are misfolded protein alone.",
+      d: "Incorrect — this is precisely why specialized protocols exist: prions are notably resistant to routine sterilization procedures that reliably inactivate ordinary bacteria and viruses.",
+    },
+  },
+  {
+    id: "q-354", objectiveId: "mycology-classification-systemic", type: "Clinical application", difficulty: "Hard",
+    stem: "A patient hospitalized in diabetic ketoacidosis develops acute proptosis, ophthalmoplegia, and a black necrotic eschar on the hard palate. What diagnosis must be urgently considered, and why is this organism class particularly dangerous?",
+    choices: [
+      { id: "a", text: "Rhino-orbital-cerebral mucormycosis — the causative fungi (Mucor/Rhizopus) are angioinvasive, causing vessel thrombosis and rapid tissue necrosis as they spread from sinuses to orbit to brain" },
+      { id: "b", text: "Allergic fungal sinusitis, a self-limited condition requiring no urgent intervention" },
+      { id: "c", text: "A viral conjunctivitis unrelated to the patient's diabetic ketoacidosis" },
+      { id: "d", text: "Normal findings expected in any patient with diabetic ketoacidosis" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — diabetic ketoacidosis is a classic predisposing risk factor for mucormycosis (Mucor/Rhizopus species), and the described presentation (proptosis, ophthalmoplegia, black necrotic eschar) is the classic picture of rhino-orbital-cerebral mucormycosis, a rapidly progressive, angioinvasive fungal infection that requires emergent surgical debridement plus systemic antifungal therapy given its high mortality if treatment is delayed.",
+      b: "Incorrect — this presentation, especially in the setting of DKA, is a medical/surgical emergency, not a self-limited process.",
+      c: "Incorrect — proptosis, ophthalmoplegia, and a necrotic eschar are not typical of viral conjunctivitis, and the strong association with DKA points specifically toward mucormycosis.",
+      d: "Incorrect — these findings are never expected or normal in DKA; they represent a rare but life- and sight-threatening superimposed complication requiring urgent recognition.",
+    },
+  },
+  {
+    id: "q-355", objectiveId: "parasitology-classification-classes", type: "Clinical differentiation", difficulty: "Hard",
+    stem: "A newborn is found to have chorioretinitis, hydrocephalus, and intracranial calcifications on imaging. What congenital infection does this classic triad suggest, and what is the typical fundus finding when active disease later reactivates?",
+    choices: [
+      { id: "a", text: "Congenital toxoplasmosis; reactivation classically produces a new focus of necrotizing retinochoroiditis adjacent to an old pigmented chorioretinal scar, with overlying vitritis" },
+      { id: "b", text: "Congenital Toxocara infection; reactivation produces a ring-shaped stromal corneal infiltrate" },
+      { id: "c", text: "Congenital Onchocerca infection; reactivation produces sclerosing keratitis only" },
+      { id: "d", text: "This triad has no established association with any congenital infection" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — chorioretinitis, hydrocephalus, and intracranial calcifications form the classic congenital toxoplasmosis triad; reactivation of congenital ocular toxoplasmosis characteristically appears as a new focus of active, necrotizing retinochoroiditis at the edge of a pre-existing pigmented chorioretinal scar, with vitreous inflammation producing the classic 'headlight in the fog' appearance.",
+      b: "Incorrect — Toxocara causes ocular larva migrans (a granuloma or diffuse endophthalmitis, classically confused with retinoblastoma), not a corneal ring infiltrate (which is a feature of Acanthamoeba keratitis, already covered), and is not the classic cause of this congenital triad.",
+      c: "Incorrect — Onchocerca causes river blindness via microfilarial migration through skin and eye in endemic tropical regions, not this specific congenital neurologic/ophthalmic triad.",
+      d: "Incorrect — this triad is a well-established, classically tested finding specifically associated with congenital toxoplasmosis.",
     },
   },
   {
