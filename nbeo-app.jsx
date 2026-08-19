@@ -651,6 +651,7 @@ const CARDIO_OBJECTIVES = [
   { id: "cardio-endocarditis", name: "Infective Endocarditis", built: true },
   { id: "cardio-chf", name: "Congestive Heart Failure", built: true },
   { id: "cardio-arrhythmia", name: "Cardiac Arrhythmias", built: true },
+  { id: "cardio-cardiomyopathy", name: "Cardiomyopathies (Dilated, Hypertrophic, Restrictive)", built: true },
 ];
 
 const HEME_TOPIC_ID = "t-15-7-10"; // Systemic Health(15) > Pathology(7) > Hematopoietic and lymphoid system(10)
@@ -702,6 +703,8 @@ const RESP_OBJECTIVES = [
   { id: "resp-tb", name: "Tuberculosis", built: true },
   { id: "resp-pneumonia", name: "Pneumonia", built: true },
   { id: "resp-ild", name: "Interstitial Lung Disease / Pneumoconiosis", built: true },
+  { id: "resp-lungcancer", name: "Neoplastic Diseases of the Lung", built: true },
+  { id: "resp-anaphylaxis", name: "Anaphylaxis (Symptoms, Signs & Emergency Management)", built: true },
 ];
 
 const MSK_TOPIC_ID = "t-15-7-5"; // Systemic Health(15) > Pathology(7) > Musculoskeletal system(5)
@@ -718,6 +721,7 @@ const GI_OBJECTIVES = [
   { id: "gi-gerd", name: "GERD", built: true },
   { id: "gi-pud", name: "Peptic Ulcer Disease", built: true },
   { id: "gi-liver", name: "Cirrhosis / Liver Failure", built: true },
+  { id: "gi-neoplasm", name: "Neoplastic Disorders of the GI Tract", built: true },
 ];
 
 const RENAL_TOPIC_ID = "t-15-7-16"; // Systemic Health(15) > Pathology(7) > Renal and urogenital system(16)
@@ -4783,17 +4787,21 @@ const STUDY_PAGES = {
       { h: "Pathophysiology", t: "Endothelial injury and lipid deposition trigger an inflammatory response, with macrophages taking up lipid to form foam cells; over time, plaques develop a fibrous cap, and rupture of an unstable plaque can trigger acute thrombosis and vessel occlusion." },
       { h: "Coronary artery disease presentation", t: "Angina (chest pain from myocardial ischemia, classically exertional and relieved by rest), progressing to myocardial infarction if a coronary vessel becomes acutely occluded." },
       { h: "Ocular relevance", t: "Carotid atherosclerosis is a source of embolic ocular events already covered elsewhere in your content — amaurosis fugax and some cases of retinal artery occlusion; Hollenhorst plaques (cholesterol emboli, often visible as small, bright, glinting particles at retinal arteriole bifurcations) are a direct fundus sign of carotid atherosclerotic disease." },
-      { h: "Diagnostic testing", t: "Lipid panel, EKG and cardiac stress testing for coronary disease, carotid duplex ultrasound when embolic ocular events raise concern for carotid disease." },
-      { h: "Management", t: "Risk factor modification (statins, blood pressure control, smoking cessation, glycemic control), antiplatelet therapy, and revascularization procedures (angioplasty/stenting, bypass) for significant coronary disease." },
+      { h: "Aortic aneurysm and dissection — a distinct atherosclerotic/connective-tissue consequence", t: "Abdominal aortic aneurysm (AAA) is a focal dilation of the aortic wall most often driven by atherosclerotic degeneration, with the strongest risk factors being smoking, advancing age, male sex, and hypertension; most are asymptomatic until rupture (a catastrophic, often fatal event), which is why one-time ultrasound screening is recommended for older male smokers. Aortic dissection is a distinct, acute process — a tear in the intima allows blood to dissect between the layers of the aortic wall — classically presenting as sudden, severe, tearing chest or back pain; hypertension is the leading risk factor, but an underlying connective tissue disorder (Marfan syndrome, already covered in your Genetic Principles content, with its aortic root dilation) is the classic non-atherosclerotic cause to keep in mind, especially in a younger patient without typical atherosclerotic risk factors." },
+      { h: "Diagnostic testing", t: "Lipid panel, EKG and cardiac stress testing for coronary disease, carotid duplex ultrasound when embolic ocular events raise concern for carotid disease; abdominal ultrasound for AAA screening/surveillance, and CT angiography for suspected aortic dissection." },
+      { h: "Management", t: "Risk factor modification (statins, blood pressure control, smoking cessation, glycemic control), antiplatelet therapy, and revascularization procedures (angioplasty/stenting, bypass) for significant coronary disease. AAA: elective surgical/endovascular repair once a size threshold is reached, given rupture risk. Aortic dissection is a surgical emergency when it involves the ascending aorta." },
     ],
     memorizeIt: [
       "Atherosclerosis = lipid plaque buildup in arterial walls; shared root cause of coronary disease, stroke, and many ocular vascular events.",
       "Hollenhorst plaques = cholesterol emboli at arteriole bifurcations — a fundus sign of carotid atherosclerosis.",
       "Angina = exertional chest pain from myocardial ischemia, relieved by rest.",
       "Statins, risk factor control, and antiplatelet therapy are mainstays of management.",
+      "AAA: atherosclerotic, usually asymptomatic until rupture; screened by ultrasound in older male smokers.",
+      "Aortic dissection: sudden tearing chest/back pain; hypertension is the leading risk factor, Marfan syndrome the classic connective-tissue cause in a younger patient.",
     ],
     applyIt: [
       "Seeing a Hollenhorst plaque on fundus exam should prompt the same urgent carotid/cardiac workup as amaurosis fugax — it's a direct fundus sign of the same underlying atherosclerotic disease process you've already studied in the Retina and Cerebrovascular Disease content.",
+      "This directly extends your Marfan Syndrome content: a young patient with superotemporal ectopia lentis and tall, long-limbed stature carries the same aortic dissection risk described here — the ocular finding and this cardiovascular emergency share one underlying connective tissue defect, not two unrelated diagnoses.",
     ],
   },
   "cardio-endocarditis": {
@@ -4803,7 +4811,7 @@ const STUDY_PAGES = {
     sources: ["Standard systemic disease/pathology references (e.g., Robbins & Cotran Pathologic Basis of Disease)"],
     learnIt: [
       { h: "Overview", t: "Infective endocarditis is infection of the heart valves or endocardial surface, most often bacterial, producing vegetations that can damage the valve and shed septic emboli into the systemic circulation." },
-      { h: "Risk factors", t: "Pre-existing valvular disease, prosthetic heart valves, intravenous drug use, and recent dental or invasive procedures (which can introduce transient bacteremia)." },
+      { h: "Risk factors", t: "Pre-existing valvular disease, prosthetic heart valves, intravenous drug use, and recent dental or invasive procedures (which can introduce transient bacteremia). Rheumatic heart disease — chronic valvular scarring from acute rheumatic fever, a nonsuppurative post-streptococcal (group A Streptococcus pharyngitis) immune-mediated sequela that classically damages the mitral valve — is a classic predisposing lesion, creating the abnormal valve surface on which endocarditis-causing organisms can later take hold." },
       { h: "Clinical presentation", t: "Fever, new or changing heart murmur, and constitutional symptoms (fatigue, weight loss); embolic phenomena from septic vegetations can affect multiple organ systems, including the eye." },
       { h: "Ocular findings — high-yield", t: "Roth spots — retinal hemorrhages with a pale/white center (representing a fibrin-platelet plug or septic embolus within the hemorrhage) — are a classic, though not specific, finding associated with infective endocarditis; conjunctival and subconjunctival petechiae/hemorrhages can also occur from septic emboli or immune complex deposition." },
       { h: "Diagnostic testing", t: "Blood cultures (multiple sets, to identify the causative organism) and echocardiography (to visualize valvular vegetations) are the cornerstones of diagnosis." },
@@ -4814,6 +4822,7 @@ const STUDY_PAGES = {
       "Roth spots can also occur in other conditions (e.g., leukemia, severe anemia) — not exclusive to endocarditis.",
       "Blood cultures and echocardiography are the diagnostic cornerstones.",
       "New or changing heart murmur plus fever is a classic presenting combination.",
+      "Rheumatic fever (post-streptococcal, nonsuppurative) scars the mitral valve, a classic predisposing lesion for later infective endocarditis.",
     ],
     applyIt: [
       "Finding Roth spots on fundus exam should prompt asking about fever and cardiac symptoms and considering infective endocarditis — but remember this finding isn't exclusive to endocarditis, so the full clinical picture (and, as you'll see in Hematopoietic System content, conditions like leukemia) matters for the differential.",
@@ -5190,6 +5199,30 @@ const STUDY_PAGES = {
       "When you learned CRAO and cerebrovascular disease earlier, atrial fibrillation is one of the cardiac embolic sources that workup is specifically screening for — recognize AFib as a root cause feeding directly into those ocular vascular emergencies.",
     ],
   },
+  "cardio-cardiomyopathy": {
+    name: "Cardiomyopathies (Dilated, Hypertrophic, Restrictive)",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard systemic disease/pathology references (e.g., Robbins & Cotran Pathologic Basis of Disease)"],
+    learnIt: [
+      { h: "Overview", t: "Cardiomyopathies are primary diseases of heart muscle itself (rather than secondary to coronary artery disease, hypertension, or valvular disease), classified by their functional pattern into three main types: dilated, hypertrophic, and restrictive." },
+      { h: "Dilated cardiomyopathy (DCM)", t: "The most common type. The ventricle dilates and contractile (systolic) function declines, reducing ejection fraction. Causes include idiopathic, viral myocarditis, chronic alcohol use, peripartum onset, certain chemotherapy agents (e.g., doxorubicin), and genetic forms. DCM is a leading cause of the congestive heart failure picture already covered in your CHF content." },
+      { h: "Hypertrophic cardiomyopathy (HCM)", t: "An autosomal dominant disorder of sarcomere protein genes causing asymmetric thickening of the ventricular septum, which can obstruct left ventricular outflow. Impaired ventricular filling (diastolic dysfunction) is the primary functional problem rather than reduced contractility. HCM is the most common cause of sudden cardiac death in young, otherwise healthy athletes, often from a fatal arrhythmia during exertion." },
+      { h: "Restrictive cardiomyopathy", t: "The least common type — the ventricular walls become stiff and noncompliant (without necessarily thickening or dilating), impairing diastolic filling. Classic causes are infiltrative diseases: amyloidosis, hemochromatosis, and sarcoidosis — the same granulomatous disease already covered in your Immunologic System content, here infiltrating cardiac rather than pulmonary/uveal tissue." },
+      { h: "Diagnostic testing", t: "Echocardiography is the primary diagnostic tool, distinguishing the three types by chamber size, wall thickness, and systolic vs. diastolic dysfunction pattern; genetic testing and family screening are relevant for HCM given its autosomal dominant inheritance and sudden cardiac death risk in relatives." },
+      { h: "Management", t: "DCM: standard heart-failure-directed therapy (diuretics, ACE inhibitors/ARBs, beta-blockers), transplantation for end-stage disease. HCM: beta-blockers or other agents to reduce outflow obstruction, activity restriction in high-risk patients, and implantable defibrillators for those at significant sudden death risk. Restrictive: directed at the underlying infiltrative cause where possible; overall prognosis is often the poorest of the three." },
+    ],
+    memorizeIt: [
+      "Dilated: most common type, systolic (contractile) dysfunction, dilated chamber — a leading cause of CHF.",
+      "Hypertrophic: autosomal dominant, sarcomere gene mutations, diastolic dysfunction from septal thickening/outflow obstruction — leading cause of sudden cardiac death in young athletes.",
+      "Restrictive: least common, stiff noncompliant myocardium, diastolic dysfunction — classic causes are amyloidosis, hemochromatosis, and sarcoidosis.",
+      "Echocardiography is the key diagnostic tool distinguishing all three types.",
+    ],
+    applyIt: [
+      "This connects directly to your Sarcoidosis content: the same non-caseating granulomatous disease that causes anterior/posterior uveitis and pulmonary involvement can also infiltrate the myocardium and produce restrictive cardiomyopathy — one systemic disease, a third organ system affected, reinforcing that sarcoidosis workup should consider cardiac involvement, not just pulmonary and ocular findings.",
+      "A young, previously healthy athlete who collapses during exertion is a classic board scenario for undiagnosed hypertrophic cardiomyopathy — distinct from the CAD/atherosclerosis-driven cardiac events that dominate presentations in older patients.",
+    ],
+  },
   "heme-lymphoma": {
     name: "Lymphoma",
     priority: "CLINICAL",
@@ -5199,12 +5232,14 @@ const STUDY_PAGES = {
       { h: "Overview", t: "Lymphomas are malignant proliferations of lymphoid cells, broadly divided into Hodgkin and non-Hodgkin lymphoma, with distinct clinical and pathologic features." },
       { h: "Hodgkin lymphoma", t: "Characterized by the presence of Reed-Sternberg cells; classically presents with painless lymphadenopathy (often cervical) and can show a distinctive pattern of spread to contiguous lymph node regions; systemic \"B symptoms\" (fever, night sweats, weight loss) are a recognized and prognostically relevant presentation." },
       { h: "Non-Hodgkin lymphoma", t: "A more heterogeneous category encompassing many subtypes with varying behavior; spread pattern is typically less predictable/contiguous than Hodgkin lymphoma." },
+      { h: "Reactive (non-neoplastic) lymphadenopathy — the key differential", t: "Most enlarged lymph nodes encountered clinically are reactive, not neoplastic — a benign response to a nearby or systemic infection/inflammatory process (e.g., viral pharyngitis, dental infection, cat-scratch disease). Reactive nodes are typically tender, soft/mobile, and shrink over days to weeks as the underlying trigger resolves. Features that instead raise concern for a neoplastic (lymphomatous or metastatic) node include painlessness, firm/rubbery or hard texture, fixation to surrounding tissue, and progressive enlargement over weeks without an identifiable infectious cause — the same painless, persistent pattern already described for Hodgkin lymphoma above." },
       { h: "Ocular/orbital involvement", t: "Lymphoma can involve the orbit (orbital lymphoma, often presenting as a painless, slowly progressive mass causing proptosis or lid swelling — a differential consideration alongside thyroid eye disease and orbital cellulitis, already covered elsewhere) or, less commonly, present as intraocular lymphoma, which can mimic chronic, treatment-resistant uveitis — an important masquerade syndrome to keep in mind for atypical or poorly responsive uveitis cases." },
       { h: "Diagnostic testing", t: "Lymph node or orbital tissue biopsy for definitive histologic diagnosis; imaging (CT/MRI, PET) for staging; vitreous biopsy may be needed when intraocular lymphoma is suspected in a masquerade presentation." },
       { h: "Management", t: "Chemotherapy and/or radiation therapy, tailored to lymphoma subtype and stage; orbital or intraocular involvement is managed in coordination with oncology." },
     ],
     memorizeIt: [
       "Hodgkin lymphoma: Reed-Sternberg cells, painless lymphadenopathy, contiguous spread pattern, B symptoms.",
+      "Reactive lymphadenopathy is tender, soft/mobile, and resolves with the triggering infection — the opposite pattern from a neoplastic node.",
       "Orbital lymphoma: painless, slowly progressive mass — differential alongside thyroid eye disease and orbital cellulitis.",
       "Intraocular lymphoma is a recognized masquerade syndrome for chronic, treatment-resistant uveitis.",
       "Biopsy is required for definitive diagnosis.",
@@ -5483,6 +5518,7 @@ const STUDY_PAGES = {
       { h: "Autosomal recessive (AR)", t: "Two copies of the mutated gene are needed for disease expression; typically both parents are unaffected carriers, with a 25% recurrence risk per pregnancy for two carrier parents; consanguinity increases risk of AR conditions given shared carrier genes. Example already covered: Tay-Sachs disease." },
       { h: "X-linked recessive", t: "The gene is on the X chromosome; affected individuals are predominantly male (since they have only one X chromosome), while female carriers are typically unaffected or mildly affected; an affected father cannot pass the condition to sons (who receive his Y chromosome) but all daughters become carriers." },
       { h: "Mendelian ratios summary", t: "AD (one affected parent × one unaffected): ~50% of children affected. AR (two carrier parents): ~25% affected, ~50% carriers, ~25% unaffected/non-carrier. X-linked recessive (carrier mother × unaffected father): ~50% of sons affected, ~50% of daughters carriers." },
+      { h: "Multifactorial (polygenic) disorders — the fourth inheritance category", t: "Not every disorder follows a clean single-gene Mendelian pattern. Multifactorial disorders result from the combined, additive effect of multiple genes plus environmental factors, producing a continuous liability distribution rather than a simple dominant/recessive ratio — recurrence risk is empiric (based on observed family data) rather than a fixed fraction like 50% or 25%, and risk rises with the number of affected relatives and the severity of their disease. Classic examples include cleft lip/palate, neural tube defects (e.g., spina bifida, anencephalic; folic acid supplementation reduces risk), congenital heart defects, pyloric stenosis, and, more broadly, common adult diseases with strong genetic components layered on environmental triggers — type 2 diabetes and essential (primary) hypertension (both already covered elsewhere on this platform) are themselves classic multifactorial diseases, distinct from the single-gene disorders covered elsewhere on this page." },
       { h: "Clinical relevance", t: "Recognizing the inheritance pattern of a condition already covered elsewhere on this platform helps you counsel patients on recurrence risk and recognize which family members might need screening (e.g., relatives of a Marfan or NF1 patient)." },
     ],
     memorizeIt: [
@@ -5490,6 +5526,7 @@ const STUDY_PAGES = {
       "AR: 25% risk per child if both parents are carriers. Example: Tay-Sachs disease.",
       "X-linked recessive: predominantly affects males; affected father can't pass to sons, all daughters become carriers.",
       "Consanguinity raises AR condition risk due to shared carrier genes.",
+      "Multifactorial (polygenic + environmental) disorders use empiric, not fixed, recurrence risk — examples: cleft lip/palate, neural tube defects, type 2 diabetes, essential hypertension.",
     ],
     applyIt: [
       "This is a genuine \"connect everything\" topic: go back through your Nervous System, Integumentary, and Lens content and sort each genetic condition you've learned (Marfan, NF1, tuberous sclerosis, Tay-Sachs, myotonic dystrophy) into its inheritance category — this kind of active recall across topics is exactly how these facts stay retrievable on exam day.",
@@ -5726,6 +5763,55 @@ const STUDY_PAGES = {
       "This completes the restrictive-vs-obstructive contrast for your Respiratory content: asthma and COPD are obstructive (reduced FEV1/FVC ratio), while ILD/pneumoconiosis is restrictive (preserved or increased ratio, but reduced overall volumes) — know this pairing as the core spirometry-pattern distinction across the whole topic.",
     ],
   },
+  "resp-lungcancer": {
+    name: "Neoplastic Diseases of the Lung",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard pulmonology/oncology references (e.g., Robbins & Cotran Pathologic Basis of Disease)"],
+    learnIt: [
+      { h: "Overview", t: "Lung cancer is broadly divided into non-small cell lung cancer (NSCLC, roughly 85% of cases) and small cell lung cancer (SCLC, roughly 15%), a distinction that drives both behavior and treatment approach. Cigarette smoking is by far the dominant risk factor for both, though adenocarcinoma (the most common NSCLC subtype) also occurs in never-smokers." },
+      { h: "NSCLC subtypes", t: "Adenocarcinoma (most common overall, often peripheral in location), squamous cell carcinoma (centrally located, classically cavitating, and a cause of paraneoplastic hypercalcemia via PTH-related protein secretion), and large cell carcinoma." },
+      { h: "Small cell lung cancer (SCLC)", t: "Centrally located and highly aggressive, with a strong association with cigarette smoking and a tendency toward early metastasis. SCLC is notorious for paraneoplastic syndromes: ectopic ACTH secretion (causing Cushing syndrome, already covered in your Hypercortisolism content), SIADH (syndrome of inappropriate antidiuretic hormone, causing hyponatremia), and Lambert-Eaton myasthenic syndrome (LEMS) — an autoimmune presynaptic neuromuscular disorder that, unlike myasthenia gravis (already covered in your Nervous System content), causes weakness that IMPROVES with repeated muscle use rather than worsening (the opposite fatigability pattern from MG)." },
+      { h: "Pancoast tumor — the direct ocular connection", t: "A tumor at the apex (superior sulcus) of the lung can invade the adjacent cervical sympathetic chain, producing Horner syndrome (ptosis, miosis, and anhidrosis — the same triad already covered in your Ptosis content) as a presenting sign, sometimes before any respiratory symptoms appear. It can also invade the brachial plexus (C8-T1), causing shoulder and arm pain with hand weakness." },
+      { h: "Diagnostic testing", t: "Chest imaging (CT) for detection, tissue biopsy for histologic diagnosis and subtyping, and PET/CT or other staging studies to guide treatment; low-dose CT screening is recommended for high-risk current/former heavy smokers." },
+      { h: "Management", t: "NSCLC: surgical resection for localized disease, with chemotherapy, radiation, targeted therapy, or immunotherapy depending on stage and molecular subtype. SCLC: typically treated with chemotherapy and radiation given its propensity for early spread, as surgery is rarely curative by the time of diagnosis." },
+    ],
+    memorizeIt: [
+      "NSCLC (~85%): adenocarcinoma (most common, peripheral), squamous cell (central, cavitating, PTHrP-mediated hypercalcemia), large cell.",
+      "SCLC (~15%): central, aggressive, strongly smoking-associated; causes ectopic ACTH (Cushing), SIADH, and Lambert-Eaton myasthenic syndrome.",
+      "Lambert-Eaton: weakness IMPROVES with repeated use — the opposite of myasthenia gravis's fatigable weakness.",
+      "Pancoast (superior sulcus) tumor: classic cause of Horner syndrome (ptosis, miosis, anhidrosis) — can be lung cancer's presenting sign.",
+    ],
+    applyIt: [
+      "This is a direct extension of your Ptosis content: a patient presenting with new Horner syndrome (mild ptosis + miosis, not the fatigable pattern of MG or the proptosis of TED) needs a chest imaging workup for an apical (Pancoast) lung tumor as part of the differential, not just a routine neuro-ophthalmic evaluation.",
+      "This also extends your Myasthenia Gravis content by contrast: Lambert-Eaton syndrome mimics MG's neuromuscular weakness but with the opposite exercise response (improves, not worsens, with repeated use) — recognizing this inverse pattern, and its association with SCLC, is a classic board differentiator.",
+    ],
+  },
+  "resp-anaphylaxis": {
+    name: "Anaphylaxis",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard allergy/immunology and emergency medicine references (e.g., Robbins & Cotran Pathologic Basis of Disease)"],
+    learnIt: [
+      { h: "Overview", t: "Anaphylaxis is a severe, rapid-onset, potentially fatal systemic Type I (IgE-mediated) hypersensitivity reaction — the same mechanism already covered in your Hypersensitivity Reactions content, escalated to a systemic, multi-organ scale rather than confined to one tissue (e.g., allergic conjunctivitis)." },
+      { h: "Common triggers", t: "Foods (e.g., peanuts, shellfish), insect stings, medications (e.g., antibiotics, NSAIDs), latex, and, relevant to eye care specifically, injectable diagnostic dyes such as IV fluorescein (already covered in your Fluorescein Angiography content, where anaphylaxis was noted as the rare but serious reaction requiring a monitored setting)." },
+      { h: "Clinical presentation — multi-system, rapid onset", t: "Symptoms typically develop within minutes of exposure and can involve the skin/mucosa (urticaria, flushing, angioedema — including lip, tongue, and periorbital swelling), the respiratory system (wheezing, stridor from laryngeal edema, dyspnea), the cardiovascular system (hypotension, tachycardia, and in severe cases distributive shock), and the GI tract (nausea, vomiting, cramping). A sense of impending doom is a classically reported subjective symptom." },
+      { h: "Diagnosis", t: "Clinical — based on rapid onset of characteristic multi-system symptoms following exposure to a known or suspected trigger; there is no time for confirmatory lab testing to guide acute management." },
+      { h: "Management — time-critical", t: "Intramuscular epinephrine (anterolateral thigh) is the first-line, immediate treatment and should not be delayed for other measures; antihistamines and corticosteroids are adjunctive only and are not substitutes for epinephrine. Patients require observation after treatment given the risk of a biphasic reaction (recurrent symptoms hours after apparent resolution)." },
+      { h: "Relevance to eye care practice", t: "Topical ocular anesthetics, fluorescein dye, and latex-containing exam materials are all recognized (if uncommon) potential anaphylaxis triggers in an eye care setting — recognizing the early signs (periorbital/facial angioedema, urticaria, wheezing) and having immediate access to epinephrine is a genuine patient-safety responsibility, not just a general medical fact to memorize." },
+    ],
+    memorizeIt: [
+      "Anaphylaxis = systemic Type I (IgE-mediated) hypersensitivity reaction — same mechanism as allergic conjunctivitis, but multi-organ and life-threatening.",
+      "Rapid onset (minutes): urticaria/angioedema, wheezing/stridor, hypotension, GI symptoms.",
+      "IM epinephrine (anterolateral thigh) is first-line and should never be delayed — antihistamines/steroids are adjunctive only.",
+      "Biphasic reactions can recur hours later — post-treatment observation is required.",
+      "IV fluorescein and topical ocular medications are recognized (rare) triggers relevant to eye care settings.",
+    ],
+    applyIt: [
+      "This directly extends your Type I Hypersensitivity and Fluorescein Angiography content: the same IgE-mediated mechanism behind allergic conjunctivitis, taken to a systemic scale, is why fluorescein angiography is performed in a monitored setting — recognize anaphylaxis as the severe end of a spectrum you've already studied, not a separate, unrelated topic.",
+      "A patient who develops facial/periorbital swelling and wheezing shortly after a diagnostic dye injection or new topical medication needs immediate IM epinephrine, not just antihistamines — knowing this hierarchy of treatment could be a practice-setting emergency, not just a board question.",
+    ],
+  },
   "msk-ra": {
     name: "Rheumatoid Arthritis",
     priority: "MUST",
@@ -5736,6 +5822,7 @@ const STUDY_PAGES = {
       { h: "Epidemiology", t: "Female predominance, typically presenting in middle adulthood, though it can occur at any age." },
       { h: "Systemic features", t: "Symmetric polyarthritis, most classically affecting the small joints of the hands (proximal interphalangeal and metacarpophalangeal joints) and wrists, with morning stiffness lasting more than an hour being a characteristic feature; joint deformities (e.g., ulnar deviation) develop in longstanding disease." },
       { h: "Ocular findings — reinforces existing content", t: "Scleritis is the most serious ocular association (already covered in detail in your Scleritis content — RA is the most common systemic association for that condition) and dry eye/keratoconjunctivitis sicca is common, often from a secondary, overlapping Sjögren-like process similar to what you learned under SLE." },
+      { h: "Juvenile idiopathic arthritis (JIA) — the pediatric arthritic syndrome", t: "JIA (formerly called juvenile rheumatoid arthritis, JRA) is chronic arthritis of childhood onset (before age 16) persisting more than 6 weeks, after other causes are excluded. It is subclassified by the number of joints involved in the first 6 months: oligoarticular (≤4 joints — the most common subtype and, notably, the subtype carrying the highest uveitis risk), polyarticular (≥5 joints), and systemic JIA (Still disease — high spiking fevers, evanescent salmon-colored rash, and prominent systemic inflammation alongside the arthritis). Unlike adult RA, rheumatoid factor is usually negative in JIA; ANA positivity instead correlates with uveitis risk, as already covered in your Uveitis Associated with Systemic Disease content." },
       { h: "Diagnostic testing", t: "Rheumatoid factor and anti-cyclic citrullinated peptide (anti-CCP) antibodies support diagnosis (anti-CCP is more specific); elevated inflammatory markers (ESR, CRP) reflect disease activity; imaging shows characteristic joint erosions in established disease." },
       { h: "Management", t: "Disease-modifying antirheumatic drugs (DMARDs, e.g., methotrexate) are the mainstay of long-term treatment to slow joint damage; biologic agents for more severe/refractory disease; NSAIDs and corticosteroids for symptomatic flares." },
     ],
@@ -5744,9 +5831,11 @@ const STUDY_PAGES = {
       "Anti-CCP antibody is more specific than rheumatoid factor for RA.",
       "Scleritis is RA's most serious ocular association — already covered in your Scleritis content.",
       "DMARDs (e.g., methotrexate) are the mainstay of long-term treatment.",
+      "JIA subtypes: oligoarticular (≤4 joints, highest uveitis risk), polyarticular (≥5 joints), systemic/Still disease (fever + salmon rash). RF is usually negative; ANA positivity tracks uveitis risk.",
     ],
     applyIt: [
       "This directly reinforces your Scleritis content: recall that RA was already flagged there as the most common systemic association — now you have the full systemic disease picture (joint findings, lab markers, treatment) behind that ocular connection.",
+      "This gives you the full arthritic-disease picture behind your Uveitis Associated with Systemic Disease content: oligoarticular JIA's high uveitis risk isn't a random fact but reflects the specific subtype/ANA-status pattern covered here — the joint classification and the uveitis screening recommendation are two views of the same disease.",
     ],
   },
   "msk-as": {
@@ -5872,6 +5961,7 @@ const STUDY_PAGES = {
       { h: "Overview", t: "Peptic ulcer disease (PUD) is mucosal erosion of the stomach or duodenum from an imbalance between mucosal-protective factors and damaging factors (acid, pepsin), most commonly from one of two major causes." },
       { h: "Major causes", t: "Helicobacter pylori infection is the leading cause of peptic ulcers overall; chronic NSAID use is the other major cause, from direct mucosal injury and inhibition of protective prostaglandin synthesis." },
       { h: "Gastric vs. duodenal ulcers", t: "Duodenal ulcers are more common overall and classically cause pain that improves with eating (food buffers acid) and worsens 2-3 hours later as the stomach empties. Gastric ulcers classically cause pain that may worsen with eating, and carry a higher (though still relatively low) concern for underlying malignancy, making endoscopic biopsy more routinely pursued for gastric ulcers." },
+      { h: "Gastritis — a related but distinct entity", t: "Gastritis is inflammation of the gastric mucosa without necessarily forming a discrete ulcer crater; it shares H. pylori and NSAID use as common causes, but a key additional cause is autoimmune (chronic atrophic) gastritis, in which autoantibodies destroy gastric parietal cells. This eliminates production of intrinsic factor (required for terminal-ileum B12 absorption), producing pernicious anemia — the same macrocytic, B12-deficiency anemia already covered in your Anemia content, here from a gastric autoimmune cause rather than a dietary one." },
       { h: "Clinical presentation", t: "Epigastric pain with the eating-relationship patterns above; alarm symptoms (bleeding, perforation with acute severe pain, weight loss) require urgent evaluation." },
       { h: "Diagnostic testing", t: "H. pylori testing (e.g., urea breath test, stool antigen, or biopsy-based testing during endoscopy); endoscopy for evaluation and, for gastric ulcers, biopsy to exclude malignancy." },
       { h: "Management", t: "H. pylori eradication (combination antibiotic therapy plus acid suppression) when present; discontinuing NSAIDs when possible; proton pump inhibitors to promote healing regardless of cause." },
@@ -5881,9 +5971,11 @@ const STUDY_PAGES = {
       "Duodenal ulcer: pain improves with eating, worsens 2-3 hours later.",
       "Gastric ulcer: pain may worsen with eating; higher (though still low) malignancy concern — routinely biopsied.",
       "H. pylori eradication requires combination antibiotic therapy plus acid suppression.",
+      "Autoimmune (atrophic) gastritis destroys parietal cells → loss of intrinsic factor → pernicious anemia (B12 deficiency).",
     ],
     applyIt: [
       "The eating-relationship pattern (better with food = duodenal, worse with food = gastric) is a simple, testable clinical differentiator worth remembering as a pair, similar to how you've paired other contrasting conditions throughout this platform.",
+      "This connects directly to your Anemia content: pernicious anemia is the same macrocytic B12-deficiency anemia covered there, just traced back to its autoimmune gastric root cause here — recognize it as one nutritional/hematologic endpoint with multiple possible upstream mechanisms (dietary deficiency vs. autoimmune gastritis).",
     ],
   },
   "gi-liver": {
@@ -5908,6 +6000,30 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "Noticing scleral icterus during a routine external eye exam is a genuinely valuable clinical observation — it can be the first visible clue to underlying liver disease a patient hasn't yet been diagnosed with, making this a real point where eye care intersects with detecting systemic disease.",
+    ],
+  },
+  "gi-neoplasm": {
+    name: "Neoplastic Disorders of the GI Tract",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard gastroenterology/oncology references (e.g., Robbins & Cotran Pathologic Basis of Disease)"],
+    learnIt: [
+      { h: "Overview", t: "GI malignancies span the length of the tract, and several have strong, testable ties to disease processes already covered on this platform." },
+      { h: "Colorectal cancer", t: "The most common GI malignancy overall. Risk rises with age, and is further elevated by chronic inflammatory bowel disease — ulcerative colitis carries a higher risk than Crohn's disease for a given extent/duration of colonic involvement, already covered in your IBD content, which is why long-standing UC patients require surveillance colonoscopy. Hereditary syndromes are also important: familial adenomatous polyposis (FAP, an autosomal dominant APC gene mutation causing thousands of colonic polyps with near-certain malignant transformation without prophylactic colectomy) and Lynch syndrome (hereditary nonpolyposis colorectal cancer, also autosomal dominant) — both fitting the AD inheritance pattern already covered in your Genetic Principles content. Right-sided colon cancers often present with occult bleeding and iron deficiency anemia (already covered in your Anemia content) rather than an obvious change in bowel habits, while left-sided tumors more often cause overt hematochezia, altered bowel habits, or obstruction." },
+      { h: "Gastric cancer", t: "Strongly associated with chronic H. pylori infection (already covered in your Peptic Ulcer Disease content) and with dietary factors (smoked/preserved foods). Often presents late, with weight loss and early satiety; a palpable left supraclavicular lymph node (Virchow node) is a classic, though late, sign of metastatic spread." },
+      { h: "Esophageal cancer", t: "Two main histologic types with different risk profiles: squamous cell carcinoma (associated with smoking and alcohol use) and adenocarcinoma (arising from Barrett esophagus, the metaplastic complication of chronic GERD already covered in your GERD content — adenocarcinoma is now the more common type in developed countries, reflecting rising GERD/obesity prevalence)." },
+      { h: "Diagnostic testing", t: "Endoscopy with biopsy is the definitive diagnostic tool across the GI tract; colonoscopy also serves as a screening/preventive tool (detecting and removing precancerous polyps before they progress). Tumor markers (e.g., CEA for colorectal cancer) are used for monitoring treatment response and recurrence, not as primary screening tools." },
+      { h: "Management", t: "Surgical resection is central to curative treatment for localized disease across these cancers, often combined with chemotherapy and/or radiation depending on stage and tumor type." },
+    ],
+    memorizeIt: [
+      "Colorectal cancer: most common GI malignancy; UC (more than Crohn's) and FAP/Lynch syndrome (both autosomal dominant) raise risk.",
+      "Right-sided colon cancer classically presents with occult bleeding/iron deficiency anemia; left-sided with hematochezia/obstruction.",
+      "Gastric cancer: linked to H. pylori; Virchow node = classic sign of metastatic spread.",
+      "Esophageal adenocarcinoma arises from Barrett esophagus (chronic GERD); squamous cell type is linked to smoking/alcohol.",
+    ],
+    applyIt: [
+      "This ties together three separate topics you've already built: chronic GERD (Barrett esophagus → esophageal adenocarcinoma), H. pylori-related peptic ulcer disease (→ gastric cancer), and ulcerative colitis (→ colorectal cancer) all represent the same principle — chronic, unresolved GI inflammation is a recognized malignancy risk factor, which is exactly why surveillance intervals exist for each of these conditions.",
+      "A patient with new iron deficiency anemia and no obvious bleeding source should prompt GI evaluation for an occult right-sided colon cancer — recognize this as a genuine extension of your Anemia content's differential, not just a routine iron-deficiency workup.",
     ],
   },
   "renal-diabetic-neph": {
@@ -5964,6 +6080,7 @@ const STUDY_PAGES = {
       { h: "Overview", t: "Renal failure is loss of kidney function, classified as acute (sudden onset, often reversible if the cause is addressed promptly) or chronic (progressive, generally irreversible decline over months to years)." },
       { h: "Acute kidney injury causes", t: "Classified by location: prerenal (reduced renal blood flow, e.g., from dehydration or heart failure — often reversible if perfusion is restored promptly), intrinsic/renal (direct kidney damage, e.g., acute tubular necrosis from ischemia or nephrotoxins), and postrenal (urinary tract obstruction)." },
       { h: "Chronic kidney disease causes", t: "Diabetes (already covered) and hypertension (already covered) are the two leading causes of chronic kidney disease overall, reflecting the same vascular risk factors you've now seen drive disease across cardiovascular, retinal, and renal systems." },
+      { h: "Urinary tract infection and pyelonephritis — a distinct, common cause of postrenal/intrinsic injury", t: "Cystitis (lower UTI, bladder infection) presents with dysuria, urinary frequency/urgency, and suprapubic discomfort, generally without fever or flank pain. Pyelonephritis (upper UTI, kidney infection — typically an ascending infection from the bladder) adds fever, flank pain, and costovertebral angle tenderness to the cystitis picture, and — if severe, bilateral, or complicated by obstruction/sepsis — can itself precipitate acute kidney injury. E. coli is the most common causative organism for both." },
       { h: "Clinical presentation", t: "Acute: oliguria/anuria, rising creatinine, electrolyte abnormalities, sometimes with an identifiable precipitating event. Chronic: often insidious, with fatigue, edema, and eventually uremic symptoms as function progressively declines; anemia (from reduced erythropoietin production) is a recognized chronic kidney disease complication." },
       { h: "Diagnostic testing", t: "Serum creatinine and estimated GFR track kidney function; urinalysis and imaging help localize the cause; the trajectory (acute rise vs. chronic gradual decline) is central to distinguishing acute from chronic disease." },
       { h: "Management", t: "Acute: addressing the underlying cause (fluid resuscitation for prerenal, removing nephrotoxins, relieving obstruction) and supportive care, with dialysis for severe cases. Chronic: slowing progression (blood pressure/glycemic control, ACE inhibitors/ARBs), managing complications (anemia, mineral/bone disease), and dialysis or transplantation for end-stage disease." },
@@ -5973,6 +6090,7 @@ const STUDY_PAGES = {
       "Diabetes and hypertension are the two leading causes of chronic kidney disease.",
       "Chronic kidney disease causes anemia from reduced erythropoietin production.",
       "Acute is often reversible if addressed promptly; chronic is generally progressive and irreversible.",
+      "Pyelonephritis = cystitis symptoms PLUS fever, flank pain, and CVA tenderness — E. coli is the most common organism for both.",
     ],
     applyIt: [
       "This ties together three organ systems you've studied as sharing the same root causes: diabetes and hypertension drive disease in the retina (diabetic retinopathy, hypertensive retinopathy), the heart (CAD, CHF), and now the kidney (nephropathy, CKD) — recognizing this as one shared vascular risk profile across systems, rather than separate unrelated facts, is exactly the kind of integrated understanding these boards reward.",
@@ -5988,6 +6106,7 @@ const STUDY_PAGES = {
       { h: "Nephritic vs. nephrotic — key distinction", t: "The nephritic syndrome (glomerulonephritis) is characterized by hematuria (often with red cell casts), hypertension, and mild-to-moderate proteinuria (less than the massive proteinuria of nephrotic syndrome), reflecting an inflammatory glomerular injury with breaks in the filtration barrier that let red cells through, in contrast to nephrotic syndrome's more purely protein-selective leakage." },
       { h: "Common causes", t: "Post-infectious (classically post-streptococcal) glomerulonephritis, IgA nephropathy (one of the most common causes of glomerulonephritis overall, often presenting with hematuria coinciding with or shortly after an upper respiratory infection), and lupus nephritis — directly connecting to your SLE content, where immune complex deposition (a Type III hypersensitivity mechanism, per your Hypersensitivity content) drives glomerular inflammation." },
       { h: "Clinical presentation", t: "Hematuria (sometimes visibly \"tea-colored\" or \"cola-colored\" urine), hypertension, variable degrees of edema, and, in severe cases, declining kidney function." },
+      { h: "Hematuria differential — don't anchor on glomerulonephritis alone", t: "Painless gross hematuria WITHOUT red cell casts, proteinuria, or hypertension should not be assumed to be glomerulonephritis — this pattern instead raises concern for a urologic source, including malignancy of the urinary tract (e.g., bladder or renal cell carcinoma), and warrants urologic evaluation (cystoscopy, imaging) rather than a nephrology-focused glomerular workup." },
       { h: "Diagnostic testing", t: "Urinalysis showing red cell casts is a key distinguishing finding; complement levels can be helpful (e.g., low in post-streptococcal GN and lupus nephritis); renal biopsy identifies the specific underlying pattern when needed." },
       { h: "Management", t: "Directed at the underlying cause — supportive care for post-infectious GN (often self-limited), immunosuppression for lupus nephritis and other autoimmune-driven forms, and blood pressure control across all types given the hypertension component." },
     ],
@@ -5996,6 +6115,7 @@ const STUDY_PAGES = {
       "Nephrotic: massive proteinuria + hypoalbuminemia + edema + hyperlipidemia (minimal hematuria).",
       "IgA nephropathy: one of the most common causes, hematuria often tied to a recent respiratory infection.",
       "Lupus nephritis connects directly to your SLE and Type III Hypersensitivity content.",
+      "Painless hematuria WITHOUT casts/proteinuria/hypertension = think urologic malignancy, not glomerulonephritis.",
     ],
     applyIt: [
       "Use the nephritic vs. nephrotic distinction as a paired contrast, the same way you've paired other conditions throughout this platform: hematuria + red cell casts points toward glomerulonephritis, while massive proteinuria + hyperlipidemia points toward nephrotic syndrome — knowing which lab pattern goes with which name is the actual testable skill.",
@@ -19240,6 +19360,14 @@ const FLASHCARDS = [
   { id: "fc-1602", objectiveId: "opticnervedev-chiasm-upperpathway-cupping", front: "What chiasmal decussation abnormality occurs in albinism, and how can it be objectively detected?", back: "An abnormally excessive proportion of TEMPORAL retinal fibers also cross the midline (normally only nasal fibers cross) — detectable via an asymmetric VEP response pattern." },
   { id: "fc-1603", objectiveId: "opticnervedev-chiasm-upperpathway-cupping", front: "How does the myelination timeline of the 'lower' visual pathway (optic nerve/chiasm/tract) differ from the 'upper' visual pathway (LGN to cortex)?", back: "The lower pathway myelinates mostly by birth. The upper pathway myelinates on a slower, protracted postnatal course over roughly the first 1-2 years, paralleling postnatal maturation of central/foveal visual acuity." },
   { id: "fc-1604", objectiveId: "opticnervedev-chiasm-upperpathway-cupping", front: "What developmentally determines the size of a person's physiologic optic cup, and what makes it 'physiologic' rather than pathologic?", back: "The relationship between retinal ganglion cell axon number and scleral canal opening size, established during development. It is physiologic because it is stable over time with an intact neuroretinal rim and no visual field defect — unlike progressive, rim-thinning glaucomatous cupping." },
+  { id: "fc-1620", objectiveId: "cardio-cardiomyopathy", front: "Which cardiomyopathy is the most common cause of sudden cardiac death in young athletes, and why?", back: "Hypertrophic cardiomyopathy (HCM) — autosomal dominant sarcomere gene mutations cause septal hypertrophy and outflow obstruction, which can trigger a fatal arrhythmia during exertion." },
+  { id: "fc-1621", objectiveId: "cardio-cardiomyopathy", front: "What are the three classic infiltrative causes of restrictive cardiomyopathy?", back: "Amyloidosis, hemochromatosis, and sarcoidosis." },
+  { id: "fc-1622", objectiveId: "gi-neoplasm", front: "Why does right-sided colon cancer classically present differently than left-sided colon cancer?", back: "Right-sided tumors cause occult bleeding/iron deficiency anemia (larger lumen, later obstruction); left-sided tumors more often cause overt hematochezia, altered bowel habits, or obstruction." },
+  { id: "fc-1623", objectiveId: "gi-neoplasm", front: "What precancerous condition links chronic GERD to esophageal adenocarcinoma?", back: "Barrett esophagus (intestinal metaplasia of the distal esophageal mucosa from chronic acid exposure)." },
+  { id: "fc-1624", objectiveId: "resp-lungcancer", front: "What classic ocular sign can be the presenting feature of a Pancoast (superior sulcus) lung tumor?", back: "Horner syndrome (ptosis, miosis, anhidrosis) from invasion of the cervical sympathetic chain." },
+  { id: "fc-1625", objectiveId: "resp-lungcancer", front: "How does Lambert-Eaton myasthenic syndrome's weakness pattern differ from myasthenia gravis?", back: "LEMS weakness IMPROVES with repeated muscle use; MG weakness WORSENS (fatigues) with repeated use — the opposite pattern." },
+  { id: "fc-1626", objectiveId: "resp-anaphylaxis", front: "What is the first-line, immediate treatment for anaphylaxis, and what should never delay it?", back: "IM epinephrine (anterolateral thigh) — antihistamines and corticosteroids are adjunctive only and should not delay epinephrine administration." },
+  { id: "fc-1627", objectiveId: "resp-anaphylaxis", front: "Why must a patient be observed after treatment for anaphylaxis?", back: "Risk of a biphasic reaction — recurrence of symptoms hours after apparent resolution." },
 ];
 
 const QUESTIONS = [
