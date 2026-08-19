@@ -27081,22 +27081,29 @@ function LearnTab() {
 
   const groupedByArea = useMemo(() => {
     const byArea = {};
+    const areaOrder = [];
     CONTENT_TOPICS.forEach(ct => {
       const info = TOPIC_INFO_BY_ID[ct.topicId];
-      const area = info ? info.area : "Other";
-      const disc = info ? info.discipline : "Other";
-      if (!byArea[area]) byArea[area] = { major: info?.major, discOrder: [], byDisc: {} };
+      // Topics with no CURRICULUM match (e.g. supplemental reference material
+      // like the drug-class quick reference) aren't part of the official NBEO
+      // outline — group them under their own non-official area instead of
+      // dropping them, using each topic's own name as its discipline label.
+      const area = info ? info.area : "Drug Reference (Supplemental)";
+      const disc = info ? info.discipline : ct.name;
+      if (!byArea[area]) { byArea[area] = { major: info?.major, discOrder: [], byDisc: {} }; areaOrder.push(area); }
       const entry = byArea[area];
       if (!entry.byDisc[disc]) { entry.byDisc[disc] = []; entry.discOrder.push(disc); }
       entry.byDisc[disc].push(ct);
     });
-    return CURRICULUM.map(a => a.area).filter(area => byArea[area]).map(area => {
+    const officialAreas = CURRICULUM.map(a => a.area).filter(area => byArea[area]);
+    const supplementalAreas = areaOrder.filter(area => !officialAreas.includes(area));
+    return [...officialAreas, ...supplementalAreas].map(area => {
       const entry = byArea[area];
       const disciplines = entry.discOrder.map(d => ({ d, topics: entry.byDisc[d] }));
       const allTopics = disciplines.flatMap(g => g.topics);
       const builtObj = allTopics.reduce((s, ct) => s + ct.objectives.filter(o => o.built).length, 0);
       const totalObj = allTopics.reduce((s, ct) => s + ct.objectives.length, 0);
-      return { area, major: entry.major, disciplines, topicCount: allTopics.length, builtObj, totalObj };
+      return { area, major: entry.major, disciplines, topicCount: allTopics.length, builtObj, totalObj, supplemental: !entry.major };
     });
   }, []);
 
@@ -27154,7 +27161,7 @@ function LearnTab() {
                 {isOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
                 <div style={{ flex: 1, minWidth: 140 }}>
                   <div style={{ fontWeight: 600, fontSize: 15 }}>{g.area}</div>
-                  <div style={{ fontSize: 11.5, color: "var(--steel)" }}>{g.major === AREA_A ? "Refractive/Sensory/Oculomotor" : "Normal Health/Disease/Trauma"} · {g.disciplines.length} {g.disciplines.length === 1 ? "discipline" : "disciplines"}</div>
+                  <div style={{ fontSize: 11.5, color: "var(--steel)" }}>{g.supplemental ? "Cross-cutting reference, not part of the official NBEO outline" : (g.major === AREA_A ? "Refractive/Sensory/Oculomotor" : "Normal Health/Disease/Trauma")} · {g.disciplines.length} {g.disciplines.length === 1 ? "discipline" : "disciplines"}</div>
                 </div>
                 <span className="mono" style={{ fontSize: 11.5, color: "var(--steel)" }}>{g.topicCount} {g.topicCount === 1 ? "topic" : "topics"} · {g.builtObj}/{g.totalObj} obj.</span>
                 <span className="mono" style={{ fontSize: 12, fontWeight: 600, color: pct > 0 ? "var(--teal)" : "var(--steel)", minWidth: 44, textAlign: "right" }}>{pct.toFixed(0)}%</span>
