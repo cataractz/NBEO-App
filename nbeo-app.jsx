@@ -771,6 +771,7 @@ const COLORVIS_OBJECTIVES = [
   { id: "color-acquired", name: "Acquired Color Vision Loss", built: true },
   { id: "color-testing", name: "Color Vision Testing Methods", built: true },
   { id: "color-mechanisms", name: "Color Mixture & Opponent-Process Theory", built: true },
+  { id: "color-colorimetry-constancy", name: "Color Specification (CIE Colorimetry) & Color Constancy", built: true },
 ];
 
 const ACCVERG_TOPIC_ID = "t-4-0-2"; // Accommodation/Vergence/Oculomotor Function(4) > Optics(Physiological)(0) > Accommodation and accommodative vergence(2)
@@ -826,6 +827,7 @@ const SPACEPERCEP_OBJECTIVES = [
   { id: "space-binocular-cues", name: "Binocular Depth Cues (Stereopsis)", built: true },
   { id: "space-monocular-cues", name: "Monocular Depth Cues", built: true },
   { id: "space-stereopsis-testing", name: "Clinical Testing of Stereopsis & Depth Perception", built: true },
+  { id: "space-sensorimotor", name: "Horopter, Binocular Rivalry & Sensory-Motor Space Perception", built: true },
 ];
 
 const FORMPERCEP_TOPIC_ID = "t-6-0-2"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Form perception(2)
@@ -833,6 +835,7 @@ const FORMPERCEP_OBJECTIVES = [
   { id: "form-acuity-spec", name: "Visual Acuity Specification & Measurement", built: true },
   { id: "form-contrast-sensitivity", name: "Contrast Sensitivity Function", built: true },
   { id: "form-spatial-interactions", name: "Spatial Interactions (Crowding, Mach Bands)", built: true },
+  { id: "form-illusions-constancy", name: "Perceptual Constancies, Figure-Ground Organization & Visual Illusions", built: true },
 ];
 
 const LIGHTPERCEP_TOPIC_ID = "t-6-0-3"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Light perception(3)
@@ -856,6 +859,7 @@ const ACQUIREDPERC_TOPIC_ID = "t-6-0-0"; // Perceptual Function/Color Vision(6) 
 const ACQUIREDPERC_OBJECTIVES = [
   { id: "acquiredperc-agnosia", name: "Visual Agnosia — Apperceptive vs. Associative", built: true },
   { id: "acquiredperc-balint-anton", name: "Balint Syndrome, Anton Syndrome & Simultanagnosia", built: true },
+  { id: "acquiredperc-neglect-management", name: "Hemispatial Neglect & Modified Optometric Management After Acquired Neurological Impairment", built: true },
 ];
 
 const TEMPORALPERC_TOPIC_ID = "t-6-0-5"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Temporal perception(5)
@@ -865,6 +869,7 @@ const TEMPORALPERC_TOPIC_ID = "t-6-0-5"; // Perceptual Function/Color Vision(6) 
 const TEMPORALPERC_OBJECTIVES = [
   { id: "temporalperc-cff", name: "Critical Flicker Fusion (CFF) Frequency", built: true },
   { id: "temporalperc-tcsf", name: "Temporal Contrast Sensitivity & Persistence of Vision", built: true },
+  { id: "temporalperc-suppression", name: "Troxler Fading, Saccadic Suppression & Successive Contrast", built: true },
 ];
 
 const ENTOPTIC_TOPIC_ID = "t-6-0-6"; // Perceptual Function/Color Vision(6) > Optics(Physiological)(0) > Entopic phenomena(6)
@@ -1621,6 +1626,7 @@ const VISDEV_OBJECTIVES = [
   { id: "visdev-emmetropization", name: "Emmetropization", built: true },
   { id: "visdev-accommodation-dev", name: "Accommodative Development", built: true },
   { id: "visdev-stereopsis-timeline", name: "Stereopsis & Binocular Vision Development Timeline", built: true },
+  { id: "visdev-sensory-timeline", name: "Developmental Timeline — Color, Visual Field, Light Sensitivity, Temporal & Motion Vision", built: true },
 ];
 
 const PERCMOTOR_TOPIC_ID = "t-7-0-3"; // Visual and Human Development(7) > Optics(Physiological)(0) > Vision perceptual-motor skills(3)
@@ -2337,6 +2343,7 @@ const EYEMOVEMENTS_TOPIC_ID = "t-4-0-0"; // Accommodation/Vergence/Oculomotor Fu
 const EYEMOVEMENTS_OBJECTIVES = [
   { id: "eyemovements-saccades-pursuit", name: "Saccades & Smooth Pursuit — Two Distinct Voluntary Systems", built: true },
   { id: "eyemovements-vor-okn", name: "Vestibulo-Ocular Reflex & Optokinetic Nystagmus", built: true },
+  { id: "eyemovements-fixation-torsion", name: "Purpose of Eye Movements, Fixational Micro-Movements & Torsional Gaze Specification", built: true },
 ];
 
 const PUPILSCLINICAL_TOPIC_ID = "t-4-0-3"; // Accommodation/Vergence/Oculomotor Function(4) > Optics(Physiological)(0) > Pupils(3)
@@ -2354,6 +2361,7 @@ const EOMANOMALIES_TOPIC_ID = "t-4-0-1"; // Accommodation/Vergence/Oculomotor Fu
 // 3 of 4 Optics(Physiological) subtopics in this condition area.
 const EOMANOMALIES_OBJECTIVES = [
   { id: "eomanomalies-acquired-nystagmus", name: "Acquired Nystagmus — Localizing Patterns", built: true },
+  { id: "eomanomalies-fixation-disparity", name: "Fixation Disparity Testing & Prism Prescribing Criteria", built: true },
 ];
 
 const ACCVERGPHARM_TOPIC_ID = "t-4-1-0"; // Accommodation/Vergence/Oculomotor Function(4) > Pharmacology(1) > Autonomic and/or neuromuscular junction drugs(0)
@@ -6279,6 +6287,29 @@ const STUDY_PAGES = {
       "This gives theoretical grounding to Kollner's rule from your Acquired Color Vision Loss content: outer retinal disease disrupts the receptor-level trichromatic input (often affecting the S-cone/blue-yellow system disproportionately), while optic nerve disease disrupts the downstream opponent-process encoding (often affecting the red-green channel) — the clinical rule you already memorized has a real anatomic and theoretical basis, not just an arbitrary pattern to memorize.",
     ],
   },
+  "color-colorimetry-constancy": {
+    name: "Color Specification (CIE Colorimetry) & Color Constancy",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard visual perception/physiological optics references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Why color needs a specification system", t: "Because trichromatic theory (already covered) shows that any perceived color results from a specific ratio of stimulation across three cone types, ANY color can, in principle, be precisely and reproducibly specified by three numbers (tristimulus values) rather than by a subjective, unreliable verbal description — this is the basis of colorimetry, the science of objectively specifying and measuring color." },
+      { h: "The CIE system and the chromaticity diagram", t: "The CIE (Commission Internationale de l'Éclairage/International Commission on Illumination) established a standardized colorimetric system using three standardized color-matching functions (representing an average human observer's tristimulus response) to assign any color a precise set of coordinates; the CIE 1931 chromaticity diagram plots these coordinates in two dimensions (after normalizing out overall luminance), producing a horseshoe-shaped diagram where the curved outer boundary represents the pure, fully-saturated spectral (monochromatic) colors, the straight line connecting its ends represents the non-spectral purples, and white/achromatic light falls near the center — any two colors' relative saturation and hue relationships, and whether a given color can be matched by mixing two others, can be read directly from this diagram, giving colorimetry a genuinely quantitative, objective foundation distinct from the descriptive classification (protan/deutan/tritan) used clinically for color vision deficiencies (already covered)." },
+      { h: "Color constancy — perceptual stability despite a changing physical stimulus", t: "Color constancy (already introduced under your Perceptual Constancies content) is the tendency to perceive an object's surface color as relatively stable despite substantial changes in the spectral composition of the illuminating light — a red apple continues to look red under daylight, incandescent light, and fluorescent light, even though the actual wavelength mixture of light reflected to the eye differs meaningfully across these conditions." },
+      { h: "Chromatic adaptation — the mechanism behind color constancy", t: "Chromatic adaptation is the visual system's capacity to recalibrate its sensitivity to each cone class based on the ambient illuminant's average spectral composition, effectively 'discounting' the illuminant's color bias to recover the object's underlying surface reflectance properties — a process sometimes modeled by the von Kries coefficient law (independent gain adjustment of each of the three cone types based on the adapting light) — this is the same general category of adapting, relative (rather than absolute) neural processing already established under your Color Mixture & Opponent-Process Theory content, now applied to explain how color PERCEPTION (not just brightness) remains stable across real-world lighting changes." },
+      { h: "Clinical/practical relevance", t: "Chromatic adaptation and color constancy have practical limits — some illuminants (e.g., low-pressure sodium-vapor lighting, which is nearly monochromatic) fall so far outside the range the visual system can successfully 'discount' that color constancy genuinely fails and colors are perceived inaccurately; this is also why color vision testing (already covered) specifies standardized lighting conditions — testing color discrimination under an atypical or poorly-controlled illuminant can produce inaccurate or unreliable results, since even a color-normal observer's discrimination performance depends on adequate, standardized illumination." },
+    ],
+    memorizeIt: [
+      "Colorimetry specifies color objectively via tristimulus values, built directly on trichromatic (three-cone-type) theory already covered.",
+      "CIE 1931 chromaticity diagram: horseshoe shape, curved edge = pure spectral colors, straight edge = non-spectral purples, center = white/achromatic.",
+      "Color constancy: perceived surface color stays stable despite the illuminant's spectral composition changing.",
+      "Chromatic adaptation (e.g., von Kries-type independent cone gain adjustment) is the mechanism behind color constancy — an adapting, relative process akin to opponent-process theory already covered.",
+      "Color constancy has limits — extreme/near-monochromatic illuminants (e.g., sodium-vapor lighting) can defeat it, which is also why color vision testing requires standardized lighting conditions.",
+    ],
+    applyIt: [
+      "This gives you the quantitative/objective specification framework (CIE colorimetry) underlying the descriptive protan/deutan/tritan classification already covered in your Congenital Color Vision Deficiencies content, and explains a practical point implicit in your Color Vision Testing content: standardized illumination is required for reliable color vision testing precisely because chromatic adaptation and color constancy are illuminant-dependent processes with real limits, not an infinitely flexible correction.",
+    ],
+  },
   "acc-convergence-insuff": {
     name: "Convergence Insufficiency",
     priority: "MUST",
@@ -6703,6 +6734,30 @@ const STUDY_PAGES = {
       "If precise, uncheatable stereoacuity measurement matters clinically (e.g., monitoring treatment response in a strabismus/amblyopia patient), a random-dot test is the more rigorous choice over a contour-based test — know this distinction as a practical test-selection principle, not just a list of test names.",
     ],
   },
+  "space-sensorimotor": {
+    name: "Horopter, Binocular Rivalry & Sensory-Motor Space Perception",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard binocular vision/visual perception references (e.g., standard binocular vision texts)"],
+    learnIt: [
+      { h: "Corresponding retinal points and the horopter", t: "Corresponding retinal points are pairs of points, one in each eye, that share the same subjective visual direction — when an object's image falls on corresponding points in both eyes, it is perceived as a single, fused location in space. The horopter is the theoretical locus of all points in external space that stimulate corresponding retinal points for a given fixation distance; the theoretical (Vieth-Müller circle) horopter, a circle passing through the fixation point and the two eyes' nodal points, differs somewhat from the empirically measured horopter (which is flatter than the theoretical circle, a discrepancy called the Hering-Hillebrand deviation) — this is foundational vocabulary underlying your existing Binocular Depth Cues content, since points falling slightly in front of or behind the horopter (within a small tolerance) produce the retinal disparity that stereopsis (already covered) depends on." },
+      { h: "Panum's fusional area", t: "Panum's fusional area is the small zone of retinal disparity surrounding the horopter within which points still fuse into a single percept (rather than diplopia) — disparities within this area produce stereopsis, while disparities exceeding it produce physiological diplopia; this same fusional tolerance zone is what allows fixation disparity (already covered under your Fixation Disparity Testing content) to exist without conscious double vision." },
+      { h: "Binocular summation vs. binocular rivalry — two very different two-eyed interactions", t: "Binocular summation is the (normal) phenomenon where detection/discrimination performance with both eyes open is measurably better than with either eye alone, since the visual cortex combines compatible input from both eyes; binocular rivalry is a fundamentally different phenomenon that occurs when the two eyes are presented with mutually INCOMPATIBLE images (e.g., different orientations or patterns to each eye) — rather than perceiving a blended or double image, perception alternates unpredictably between the two eyes' inputs over time, each eye's image dominating in turn. Binocular suppression (already covered elsewhere in your Amblyopia/Strabismus content) is a related but distinct, pathological adaptation where the brain persistently and selectively ignores one eye's input (e.g., in strabismus) rather than alternating — rivalry is a normal perceptual phenomenon from incompatible stimuli, while suppression is an adaptive (and in a child, potentially amblyogenic) response to a misaligned or optically mismatched eye." },
+      { h: "Sensory-motor interactions — past pointing", t: "Past pointing is a diagnostic sign seen in ACUTE, recent-onset extraocular muscle paresis (already relevant to your Cranial Nerve Palsy content): when asked to point (without visual feedback, e.g., in the dark) toward a target using the paretic eye, the patient consistently mislocalizes PAST the target in the direction of the paretic muscle's field of action — because the brain's sense of eye position is based on the OUTGOING neural effort sent to the extraocular muscles (efference copy) rather than the eye's actual achieved position, and a paretic muscle requires disproportionately more neural effort to reach a given position, the brain overestimates how far the eye actually rotated, causing the perceived (and pointed-to) target location to be displaced further in the direction of gaze than the eye actually moved." },
+      { h: "Self-motion perception (vection) and postural interactions", t: "Vection is the illusory perception of self-motion induced by a moving visual scene despite the observer being physically stationary (e.g., the sensation of moving backward when a train alongside your own begins moving forward) — visually-guided postural control also depends on this same large-field visual motion information, since the visual system contributes, alongside vestibular and proprioceptive input, to maintaining upright body posture and a stable sense of self-orientation in space; conflicting visual-vestibular self-motion signals (e.g., in a moving vehicle when reading, or in virtual reality) can produce motion sickness/discomfort as a consequence of this sensory mismatch." },
+    ],
+    memorizeIt: [
+      "Corresponding retinal points → same subjective visual direction; horopter = locus of points stimulating corresponding points at a given fixation distance.",
+      "Panum's fusional area: small disparity zone around the horopter that still fuses (produces stereopsis) rather than diplopia — the same tolerance that allows fixation disparity to exist without conscious double vision.",
+      "Binocular summation (better performance with 2 eyes, normal) ≠ binocular rivalry (alternating perception from incompatible dichoptic images, normal) ≠ binocular suppression (persistent selective ignoring of one eye's input, pathologic/amblyogenic).",
+      "Past pointing: acute EOM paresis → patient mislocalizes PAST the target in the paretic muscle's field of action, from efference-copy-based overestimation of eye rotation.",
+      "Vection: illusory self-motion from a moving visual scene despite being physically stationary — vision contributes to postural control alongside vestibular/proprioceptive input.",
+    ],
+    applyIt: [
+      "This gives you the underlying sensory vocabulary (corresponding points, horopter, Panum's area) that your existing Binocular Depth Cues and Fixation Disparity Testing content already assumed — disparity within Panum's area produces both ordinary stereopsis and the small, non-symptomatic misalignment of fixation disparity, while disparity beyond it produces overt diplopia, tying these two topics together mechanistically.",
+      "Past pointing extends your Cranial Nerve Palsy content with a genuinely useful bedside localizing sign distinct from the ductions/versions testing already covered: a patient who consistently reaches past a target specifically in the field of action of a suspected paretic muscle provides converging behavioral evidence for that muscle's specific weakness, complementary to observed ocular motility limitation.",
+    ],
+  },
   "form-acuity-spec": {
     name: "Visual Acuity Specification & Measurement",
     priority: "MUST",
@@ -6767,6 +6822,29 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This is a direct reinforcement of your Amblyopia content, now with the underlying visual-processing mechanism behind the crowding phenomenon you already knew as a clinical fact — understanding why crowding happens (contour interference, exaggerated in amblyopic vision) makes the clinical testing rule (always use crowded/line optotypes) easier to remember and apply correctly.",
+    ],
+  },
+  "form-illusions-constancy": {
+    name: "Perceptual Constancies, Figure-Ground Organization & Visual Illusions",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard visual perception references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Perceptual constancy — why the world doesn't look like it 'should'", t: "Perceptual constancy is the visual system's tendency to perceive an object's physical properties (size, shape, color/lightness) as stable despite substantial changes in the retinal image caused by viewing distance, angle, or illumination — a genuinely active, interpretive process, not a passive readout of raw retinal image data." },
+      { h: "Size constancy", t: "An object is perceived as maintaining a constant physical size despite its retinal image shrinking as viewing distance increases — the visual system uses perceived distance cues (already covered in your Monocular Depth Cues content) to effectively 'scale up' the interpretation of a smaller retinal image at greater distance, so a person walking away is correctly perceived as the same size person getting farther away, not as a shrinking person." },
+      { h: "Shape constancy", t: "An object's shape is perceived as stable despite the retinal image's shape changing with viewing angle (e.g., a circular plate viewed at an oblique angle casts an elliptical retinal image, yet is still perceived as circular) — the visual system factors in perceived surface slant/orientation to correctly interpret the underlying true shape." },
+      { h: "Color/lightness constancy", t: "An object's perceived color or surface lightness (e.g., white paper vs. gray paper) remains relatively stable across substantial changes in the illuminant's spectral composition or intensity (e.g., white paper still looks white in reddish incandescent light, indoor fluorescent light, and outdoor daylight, despite very different physical wavelength compositions actually reaching the eye in each case) — this depends on the same opponent-process, adapting neural machinery already covered in your Color Vision content, and its failure/limits are what make certain unusual illumination conditions (e.g., sodium-vapor lighting) capable of producing genuinely inaccurate color perception." },
+      { h: "Figure-ground organization", t: "Figure-ground organization is the perceptual process of segregating a visual scene into a 'figure' (the object of attention, perceived as having a defined shape and appearing to be in front) versus 'ground' (the surrounding, relatively formless background) — classically demonstrated by bistable/reversible figures (e.g., Rubin's vase-faces illusion), where the same physical image can be perceptually organized as figure-vs-ground in two different, mutually exclusive ways, with perception spontaneously alternating between the two interpretations — a foundational Gestalt grouping principle underlying ordinary object perception, not just a curiosity confined to illusion demonstrations." },
+      { h: "Geometric illusions — misapplied constancy scaling", t: "Several classic geometric illusions are thought to arise from the visual system inappropriately applying its normal constancy-scaling machinery to a 2-D image that merely contains depth CUES without actual depth: in the Müller-Lyer illusion, a line with outward-pointing (wing-like) arrowheads is perceived as longer than an identical-length line with inward-pointing arrowheads, plausibly because the arrowhead configurations mimic depth/perspective cues (e.g., resembling a building's near outside corner vs. far inside corner) that trigger inappropriate size-constancy scaling; the Ponzo illusion similarly uses linear-perspective-like converging lines to make an object placed near the 'far' (converging) end appear larger than an identical object placed near the 'near' (diverging) end, again through inappropriate depth-cue-driven size scaling of two objectively equal retinal images." },
+    ],
+    memorizeIt: [
+      "Perceptual constancy: object properties (size, shape, color/lightness) perceived as stable despite retinal image changes from distance/angle/illumination — an active, interpretive process.",
+      "Size constancy uses perceived distance cues; shape constancy uses perceived slant/orientation; color/lightness constancy uses adapting, opponent-process color mechanisms (already covered).",
+      "Figure-ground organization: segregating a scene into figure (attended, shaped, 'in front') vs. ground (formless background) — demonstrated by bistable figures like Rubin's vase.",
+      "Müller-Lyer and Ponzo illusions are classically explained as misapplied size-constancy scaling triggered by depth/perspective cues embedded in a flat 2-D image.",
+    ],
+    applyIt: [
+      "This gives theoretical depth to your existing Monocular Depth Cues and Color Vision content: size constancy is literally what makes monocular distance cues perceptually useful (correctly interpreting a smaller retinal image as a normally-sized but more distant object rather than a truly smaller object), and color constancy depends on the same adapting opponent-process machinery already covered — recognizing these as the same underlying visual-system tendency (interpreting raw retinal data through a stability-seeking, cue-informed lens) ties several perception topics together under one organizing principle.",
     ],
   },
   "light-adaptation": {
@@ -7694,6 +7772,30 @@ const STUDY_PAGES = {
       "This adds a specific timeline to your Deprivation and Amblyopia content: knowing that stereopsis normally emerges around 3-6 months helps you interpret why early-onset strabismus (before this window) tends to carry a worse stereopsis prognosis than strabismus developing after stereopsis is already established.",
     ],
   },
+  "visdev-sensory-timeline": {
+    name: "Developmental Timeline — Color, Visual Field, Light Sensitivity, Temporal & Motion Vision",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard visual development/pediatric optometry references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the acuity, refractive, accommodative, and stereopsis development timelines already covered elsewhere on this platform, several other visual dimensions named explicitly in the NBEO outline's Vision Development objectives follow their own characteristic infant developmental timelines — color vision, spectral transmission of the ocular media, light sensitivity, visual fields, temporal vision, and motion perception." },
+      { h: "Color vision development", t: "Behavioral evidence of functional color discrimination emerges within the first couple of months of life and continues maturing over the following months, with color vision approaching adult-like discrimination performance by mid-to-late infancy — notably later-developing and more gradual than basic light detection, consistent with color vision's dependence on more complex, comparative (opponent-process) neural processing (already covered under your Color Mixture & Opponent-Process Theory content) rather than simple photoreceptor presence alone." },
+      { h: "Spectral transmission of the ocular media", t: "The infant crystalline lens is considerably more transparent to short-wavelength (blue/violet) and near-ultraviolet light than the adult lens, which progressively yellows and increasingly absorbs short-wavelength light with age (already covered under your Aging content) — meaning the infant retina is exposed to a broader spectral range than an older adult's, a detail relevant to counseling about UV protection in children given their comparatively less-filtered ocular media." },
+      { h: "Light sensitivity and visual fields", t: "Absolute light detection thresholds are elevated (i.e., sensitivity is reduced) in early infancy compared to adults, and dark adaptation function is immature at birth, gradually maturing toward adult-like function over infancy and early childhood; the infant's peripheral visual field is also considerably restricted compared to the adult visual field at birth, expanding progressively over infancy and early childhood as retinal and cortical visual processing matures, eventually approaching adult extent." },
+      { h: "Temporal vision and motion perception", t: "Critical flicker fusion frequency (already covered under your Temporal Perception content) is lower in infants than in adults, increasing with age toward adult values through childhood, reflecting the same general neural processing maturation underlying other developmental timelines; sensitivity to visual motion (including direction discrimination and coherent motion detection) is present in a basic form early in infancy but continues to mature over subsequent months to years, with more complex motion processing (e.g., discriminating coherent global motion from random noise) showing a comparatively protracted developmental course." },
+      { h: "Form/spatial vision development — cross-reference", t: "Grating acuity (spatial vision), already discussed in general terms under your Visual Developmental Milestones content, is measured objectively in infants via preferential looking or visual evoked potential techniques rather than subjective report, given that verbal acuity testing is not possible at this age — newborn grating acuity is poor by adult standards (commonly cited as roughly in the 20/400 to 20/600 range) and improves rapidly over the first year, approaching adult-level acuity by approximately 3-5 years of age." },
+    ],
+    memorizeIt: [
+      "Color vision: functional discrimination emerges within the first couple months of life, maturing toward adult-like performance over infancy — later and more gradual than basic light detection.",
+      "Infant ocular media transmit MORE short-wavelength/UV light than the adult lens, which progressively yellows/filters more with age (already covered under Aging content) — opposite-direction change across the lifespan.",
+      "Infant absolute light thresholds are elevated (less sensitive) and dark adaptation is immature at birth; visual fields are restricted at birth and expand progressively through early childhood.",
+      "CFF is lower in infants than adults, increasing with age; motion perception (especially complex/coherent motion processing) has a protracted developmental course extending well beyond infancy.",
+      "Newborn grating acuity ≈ 20/400-20/600, improving rapidly and approaching adult levels by roughly 3-5 years — measured via preferential looking/VEP, not subjective report.",
+    ],
+    applyIt: [
+      "This rounds out your existing Vision Development content (Emmetropization, Accommodative Development, Stereopsis Timeline) with the remaining visual dimensions named in the NBEO outline's Vision Development objectives, and directly cross-references your Aging content: ocular media spectral transmission moves in OPPOSITE directions across the lifespan — increasing short-wavelength transmission in infancy (immature, undeveloped lens pigmentation) versus decreasing short-wavelength transmission in aging (progressive lens yellowing) — a genuinely testable contrast between the two ends of the human lifespan covered by this platform's Visual and Human Development content.",
+    ],
+  },
   "percmotor-visual-motor-integration": {
     name: "Visual-Motor Integration & Learning-Related Vision",
     priority: "CLINICAL",
@@ -7704,15 +7806,18 @@ const STUDY_PAGES = {
       { h: "Relationship to basic visual function", t: "A child can have entirely normal visual acuity, ocular health, and even normal binocular vision/stereopsis (already covered in your Space Perception and Vision Development content) and still have a visual-motor integration deficit — this is why a comprehensive eye exam ruling out ocular pathology and refractive error doesn't necessarily rule out this category of difficulty." },
       { h: "Clinical relevance — \"learning-related vision problems\"", t: "Visual-motor integration difficulties are sometimes implicated in academic struggles (e.g., poor handwriting, difficulty copying from a board), often discussed under the umbrella of \"learning-related vision problems\" — an area where optometric evaluation and, in some practice models, vision therapy are used, though the evidence base and appropriate scope for this area is a subject of ongoing discussion within the profession and warrants matching your assessment and referral approach to the specific findings rather than assuming a single explanation for academic difficulty." },
       { h: "Distinguishing from other conditions already covered", t: "Visual-motor integration difficulty should be differentiated from convergence insufficiency and accommodative dysfunction (both already covered in your Accommodation & Vergence content), which produce more classic near-work symptom patterns (eye strain, blur, diplopia) — visual-motor integration issues center more specifically on the coordination between visual perception and motor execution (e.g., handwriting quality, copying accuracy) rather than comfort/symptom-based complaints." },
+      { h: "The broader developmental test battery — intersensory integration and bilateral integration/laterality", t: "Beyond visual-motor integration itself, standard developmental optometric assessment recognizes several related, distinct sub-skills tested by dedicated instruments (e.g., visual-motor integration copying tasks such as the Beery VMI, and broader visual-perceptual skill batteries): visual attention and discrimination (the ability to selectively attend to and distinguish relevant visual information from a busy field, foundational to all the skills below); intersensory (cross-modal) integration — the ability to accurately match or coordinate information arriving through different sensory channels (e.g., matching a visually-presented pattern to a rhythmically-tapped auditory pattern), relevant since real-world tasks like reading and handwriting require coordinating visual input with auditory (phonics) and motor/proprioceptive channels simultaneously; and bilateral integration and laterality — awareness of and ability to coordinate the two sides of the body (bilateral integration) together with internal awareness of right/left sidedness (laterality) and the ability to project that awareness onto external space (directionality, e.g., correctly judging right/left in another person facing you) — deficits in this domain have been discussed as contributing to letter reversals and directional confusion sometimes seen in early reading difficulty." },
     ],
     memorizeIt: [
       "Visual-motor integration: coordinating visual information with motor output (e.g., handwriting, copying, catching).",
       "Can be impaired even with entirely normal acuity, ocular health, and binocular vision/stereopsis.",
       "Often discussed under \"learning-related vision problems\" — evidence base and scope is an area of ongoing professional discussion.",
       "Distinct from convergence insufficiency/accommodative dysfunction, which center on near-work comfort symptoms rather than motor coordination.",
+      "Broader developmental test domains: visual attention/discrimination, intersensory (cross-modal) integration, and bilateral integration/laterality (right-left body awareness projected onto external directionality) — each assessed by dedicated developmental test batteries beyond simple VMI copying tasks.",
     ],
     applyIt: [
       "This adds an important diagnostic distinction to your Accommodation & Vergence content: a child struggling with handwriting or copying from the board needs to be evaluated for visual-motor integration specifically, not automatically assumed to have convergence insufficiency or accommodative dysfunction, since these present with meaningfully different symptom patterns despite some overlap in how they're clinically framed.",
+      "Recognizing bilateral integration/laterality as a distinct developmental domain from visual-motor integration itself matters clinically: a child with persistent letter reversals or right-left confusion beyond the age where this is developmentally typical may be showing a laterality/directionality deficit specifically, which calls for assessment tools and intervention strategies targeted at that domain rather than assuming a general 'visual-motor' label covers every developmental vision-related learning concern.",
     ],
   },
   "clfit-rgp-vs-soft": {
@@ -12023,6 +12128,28 @@ const STUDY_PAGES = {
       "This gives you a genuinely practical clinical tool for a challenging diagnostic scenario: when evaluating a patient with claimed complete vision loss but no identifiable organic cause, eliciting a normal OKN response to a moving striped target provides objective, patient-cooperation-independent evidence that the visual pathway is functioning — since a truly non-seeing eye cannot generate this reflexive tracking response — directly useful for distinguishing functional (non-organic) vision loss from a genuine organic visual deficit.",
     ],
   },
+  "eyemovements-fixation-torsion": {
+    name: "Purpose of Eye Movements, Fixational Micro-Movements & Torsional Gaze Specification",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard oculomotor physiology references (e.g., standard neuro-ophthalmology texts)"],
+    learnIt: [
+      { h: "Why the eyes move at all — the purposes of eye movements", t: "Beyond simply redirecting gaze, eye movements serve two related overarching purposes for vision: (1) bringing and holding the image of an object of interest on the fovea (the retina's highest-acuity region), which is the shared goal of saccades, smooth pursuit, and vergence movements already covered; and (2) constantly, subtly repositioning the retinal image even during 'steady' fixation, which — counterintuitively — is itself REQUIRED for continuous visual perception, since a perfectly motionless retinal image fades from awareness (this topic's sibling content on Troxler fading/stabilized retinal images, under Temporal Perception, covers exactly this phenomenon)." },
+      { h: "Fixational eye movements — never truly 'still'", t: "Even during attempted steady fixation on a single point, the eye is never perfectly motionless: microsaccades (tiny, involuntary, saccade-like jumps), ocular drift (slow, continuous wandering between microsaccades), and ocular microtremor (a very high-frequency, extremely small-amplitude vibration) together constitute normal fixational eye movements — these constant micro-movements continuously refresh the retinal image on slightly different photoreceptors, preventing the neural adaptation/fading that would otherwise occur if the retinal image were truly stabilized (directly explaining why an artificially, optically stabilized retinal image — bypassing these normal fixational movements — fades from perception, the basis of the Troxler effect and of experimental retinal-image-stabilization studies)." },
+      { h: "Specifying gaze direction — including torsion", t: "Fully specifying eye position requires three rotational degrees of freedom, not just two: horizontal (adduction/abduction) and vertical (elevation/depression) rotation determine where the eye is POINTING (already implicit throughout your extraocular muscle and gaze-palsy content), while torsion (intorsion/extorsion — rotation of the eye's vertical meridian around the visual axis itself) describes how the eye is ROTATED around its own line of sight, independent of where it's pointing." },
+      { h: "Listing's law", t: "Listing's law describes how the eye normally handles this third (torsional) degree of freedom: for any eye position reached from primary gaze (straight-ahead) by a single rotation about an axis lying in a single reference plane (Listing's plane), the eye adopts a specific, predictable torsional orientation — in practical terms, this means normal voluntary eye movements do NOT introduce extra, arbitrary torsion; ocular torsion instead is normally reserved for specific reflexive contexts, most notably cyclovergence/cyclotorsion accompanying head tilt (already relevant to your Superior Oblique Palsy content, where the Bielschowsky head tilt test exploits the eye's normal torsional response to head tilt) and vergence-related cyclovergence, rather than occurring during ordinary horizontal/vertical saccades and pursuit." },
+    ],
+    memorizeIt: [
+      "Eye movements serve two purposes: (1) foveate/track an object of interest; (2) constantly refresh the retinal image during fixation, since a truly stabilized image fades from perception.",
+      "Fixational eye movements: microsaccades (small jumps) + drift (slow wander) + microtremor (high-frequency vibration) — prevent retinal image fading during 'steady' fixation.",
+      "Gaze direction requires 3 degrees of freedom: horizontal + vertical rotation (where the eye points) + torsion (intorsion/extorsion, how the eye is rotated about the line of sight).",
+      "Listing's law: normal voluntary eye movements from primary position do not add extraneous torsion — torsion is reserved for specific reflexive contexts like head-tilt-induced cyclotorsion (already relevant to the Bielschowsky head tilt test).",
+    ],
+    applyIt: [
+      "This gives you the mechanistic reason behind a phenomenon covered under your Temporal Perception content: because fixational micro-movements (microsaccades, drift, microtremor) normally keep continuously refreshing which photoreceptors are stimulated, an experimentally or pathologically stabilized retinal image loses this refresh and fades from perception (Troxler fading) — the same underlying principle also explains why patients with certain forms of nystagmus or absent fixational movements can have qualitatively different perceptual experiences of 'steady' targets.",
+      "This also extends your existing Superior Oblique Palsy/Bielschowsky head tilt test content: the head tilt test works specifically because normal eyes generate a predictable reflexive cyclotorsion (excyclotorsion of the eye on the side away from the tilt, intorsion of the eye tilted toward) to keep the visual world appearing upright, and Listing's law is the framework describing how torsion is normally handled — a superior oblique-palsied eye cannot generate its expected intorsion on head tilt toward the affected side, worsening the vertical deviation and producing the test's classic positive result.",
+    ],
+  },
   "pupilsclinical-adie-tonic": {
     name: "Adie's Tonic Pupil",
     priority: "MUST",
@@ -12086,6 +12213,27 @@ const STUDY_PAGES = {
       "This gives you a genuinely high-yield localizing framework extending your existing brainstem and diencephalon anatomy content: recognizing that downbeat nystagmus specifically points to the craniocervical junction (prompting a search for Chiari malformation) while upbeat nystagmus instead points to the medulla, and that the rare see-saw pattern points to a parasellar/suprasellar process like a large pituitary tumor (already covered), demonstrates that nystagmus DIRECTION is a specific, board-relevant localizing sign — not simply a nonspecific indicator that 'something is wrong with the brainstem.'",
     ],
   },
+  "eomanomalies-fixation-disparity": {
+    name: "Fixation Disparity Testing & Prism Prescribing Criteria",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard binocular vision/clinical optics references (e.g., standard binocular vision texts)"],
+    learnIt: [
+      { h: "Overview", t: "Fixation disparity is a small, sub-clinical misalignment of the visual axes that persists even though binocular single vision (fusion) is maintained — genuinely distinct from a heterophoria (already covered across your Vergence Anomalies content), which is the LARGER latent deviation revealed only when fusion is actively broken (e.g., by a cover test or Maddox rod), rather than the tiny residual misalignment present DURING normal binocular viewing." },
+      { h: "Why fixation disparity happens", t: "Motor fusion is not a perfectly precise, zero-error system — Panum's fusional area (the small retinal zone within which single binocular vision is still perceived despite slight retinal disparity) allows a small, sustained misalignment to exist without disrupting fusion or producing conscious diplopia, and the size/direction of this residual misalignment reflects the ongoing vergence demand (fixation disparity is essentially the small motor error a patient's fusional vergence system is 'absorbing' to keep the phoria from breaking into a manifest deviation)." },
+      { h: "Clinical measurement — the associated phoria", t: "Fixation disparity itself cannot be directly seen (it exists behind normal binocular fusion), so it is clinically measured indirectly via the associated phoria — using a target with a central fusable portion flanked by two dichoptically-presented (one eye per strip) alignment strips or arrows (e.g., the Mallett unit or Wesson fixation disparity card): the examiner adds prism in front of one eye until the patient reports the two strips/arrows appear aligned, and the prism power required to achieve that alignment is the associated phoria — the amount of prism needed to null the fixation disparity, distinct from the (larger) dissociated phoria measured by a Maddox rod or von Graefe technique that breaks fusion entirely." },
+      { h: "Using fixation disparity to guide prism prescribing — Sheard's and Percival's criteria", t: "Because fixation disparity reflects how much a patient's fusional vergence reserve is being taxed to maintain comfortable single vision, it underlies two classic clinical criteria for prescribing prism or vision therapy for a symptomatic heterophoria: Sheard's criterion states that the fusional vergence reserve (in the direction opposing the phoria) should be at least TWICE the magnitude of the phoria itself for comfortable, sustainable binocular function; Percival's criterion (used when both positive and negative fusional vergence ranges are relevant, as in a vertical or more complex case) states that the phoria should lie within the MIDDLE THIRD of the total fusional vergence range between its blur-inducing endpoints. When either criterion is not met — i.e., a patient's fusional reserve is inadequate relative to their phoria — that patient is more likely to be symptomatic and more likely to benefit from prism prescription, vision therapy, or both." },
+    ],
+    memorizeIt: [
+      "Fixation disparity = small, sustained misalignment WITHIN Panum's fusional area, present DURING fusion — distinct from heterophoria, the larger latent deviation revealed only when fusion is broken.",
+      "Clinically measured via the ASSOCIATED phoria (Mallett unit / Wesson card: prism needed to align dichoptic strips while central fusion lock is maintained) — not the same as the dissociated phoria (Maddox rod/von Graefe).",
+      "Sheard's criterion: fusional vergence reserve should be ≥ 2× the phoria magnitude for comfortable binocularity.",
+      "Percival's criterion: the phoria should fall within the MIDDLE THIRD of the total fusional vergence range.",
+    ],
+    applyIt: [
+      "This gives you the clinical testing methodology and prism-prescribing decision rule directly extending your existing Convergence Insufficiency and Vergence Anomalies content: a symptomatic patient whose measured fusional vergence reserve fails Sheard's criterion (less than twice their phoria) is exactly the patient who benefits from either vision therapy (to build fusional reserve) or prism prescription (to reduce the phoria's demand on that reserve) — the associated-phoria/fixation-disparity measurement is what lets you quantify how much prism to actually prescribe, rather than prescribing prism by intuition alone.",
+    ],
+  },
   "accvergpharm-mydriatics-cycloplegics": {
     name: "Mydriatics & Cycloplegics — Mechanisms & Duration of Action",
     priority: "MUST",
@@ -12117,12 +12265,16 @@ const STUDY_PAGES = {
       { h: "Direct-acting cholinergic agonists", t: "Pilocarpine (already covered extensively under your Adie's Tonic Pupil and Pharmacologic Pupil Testing content, though there used purely diagnostically) is the classic direct-acting muscarinic agonist, directly stimulating the iris sphincter's muscarinic receptors to produce miosis, and the ciliary muscle to produce accommodative spasm (the opposite effect of cycloplegic agents already covered) — historically used therapeutically in glaucoma management (increasing outflow facility via ciliary muscle contraction's effect on the trabecular meshwork) before largely being superseded by other glaucoma drug classes, though it remains clinically relevant for its diagnostic pupil-testing applications already covered." },
       { h: "Indirect-acting cholinergic agonists — acetylcholinesterase inhibitors", t: "Indirect-acting miotics (e.g., echothiophate, a longer-acting agent, though rarely used currently given side effect profile) work by inhibiting acetylcholinesterase (already covered under Neuromuscular Junction Transmission as the enzyme normally terminating cholinergic signaling) rather than directly stimulating receptors — this prolongs endogenous acetylcholine's action at the iris sphincter and ciliary muscle, producing a similar miotic/accommodative-spasm effect through a mechanistically distinct route (enzyme inhibition rather than direct receptor agonism) — this is the same general mechanistic category (acetylcholinesterase inhibition) already covered under your Myasthenia Gravis content, just applied to the eye's cholinergic targets rather than the neuromuscular junction of skeletal muscle." },
       { h: "Direct clinical relevance — systemic cholinergic side effects", t: "Because muscarinic receptors are present throughout the body (not just the eye), both direct and indirect-acting miotics carry potential for systemic cholinergic side effects (bradycardia, bronchospasm, GI upset, excessive salivation/sweating) if significant systemic absorption occurs — this systemic absorption risk, combined with the accommodative spasm and induced myopia these agents can cause (limiting their tolerability for younger patients with significant accommodative capacity), explains why miotic glaucoma therapy has been largely replaced by other drug classes (prostaglandin analogs, beta-blockers, etc., not detailed here) in modern practice, despite miotics' historical importance and continued relevance for diagnostic pupil testing already covered." },
+      { h: "Rounding out the autonomic drug framework — ganglionic and neuromuscular agents", t: "The mydriatic/cycloplegic and miotic agents above act at the POSTganglionic autonomic synapse (on the iris/ciliary muscle itself) or the neuromuscular junction — but autonomic pharmacology also includes agents acting one step earlier, at the autonomic ganglion. Ganglionic agonists (e.g., nicotine, at the nicotinic-receptor-mediated ganglionic synapse shared by both sympathetic and parasympathetic chains) and ganglionic antagonists (e.g., trimethaphan, historically used for controlled hypotension) act at this shared nicotinic synapse point rather than at the postganglionic muscarinic or adrenergic receptors already covered — a mechanistically distinct site from every drug detailed above, and clinically of minor/historical relevance to ocular pharmacology specifically, but part of the same overall neurohumoral transmission framework." },
+      { h: "Neuromuscular transmission agonists/antagonists — beyond the eye's smooth muscle", t: "A separate class of agents acts at the SKELETAL neuromuscular junction (nicotinic, not muscarinic, receptors) rather than the eye's smooth muscle — already covered in detail elsewhere on this platform as botulinum toxin (a presynaptic NMJ transmission antagonist, blocking ACh vesicle release, used for blepharospasm/hemifacial spasm and cosmetic brow work) and the acetylcholinesterase-inhibitor treatment of myasthenia gravis (already covered), giving you complete coverage of this drug category across both its ocular smooth-muscle and skeletal-muscle applications, even though the two act on pharmacologically distinct receptor types (nicotinic at skeletal muscle vs. muscarinic at the iris/ciliary muscle)." },
     ],
     memorizeIt: [
       "Direct-acting miotic: pilocarpine — direct muscarinic agonist, stimulates iris sphincter (miosis) + ciliary muscle (accommodative spasm).",
       "Indirect-acting miotic: acetylcholinesterase inhibitors (e.g., echothiophate) — prolong endogenous ACh action, same general mechanism class as Myasthenia Gravis treatment (already covered), applied to ocular cholinergic targets.",
       "Systemic cholinergic side effects (from absorption): bradycardia, bronchospasm, GI upset, excessive salivation/sweating.",
       "Miotic glaucoma therapy has been largely superseded by other drug classes, given accommodative spasm/induced myopia and systemic side effect burden.",
+      "Ganglionic agents (nicotine = agonist, trimethaphan = antagonist) act at the shared nicotinic ganglionic synapse — a distinct site from postganglionic muscarinic/adrenergic drugs.",
+      "Skeletal NMJ agents (nicotinic receptors, distinct from the eye's muscarinic receptors): botulinum toxin (presynaptic ACh release blocker) and myasthenia gravis's cholinesterase-inhibitor treatment — both already covered elsewhere on this platform.",
     ],
     applyIt: [
       "This gives you the mechanistic link between your existing Myasthenia Gravis content and ocular miotic pharmacology: acetylcholinesterase inhibition is the SAME general mechanism whether applied therapeutically at the skeletal neuromuscular junction (already covered, prolonging ACh to partially compensate for myasthenia gravis's receptor deficit) or, historically, at the eye's cholinergic targets (indirect-acting miotics) — recognizing this shared mechanistic principle across two very different clinical applications (systemic neuromuscular disease vs. ocular pupil/accommodation control) is a useful example of how the same basic pharmacologic tool (cholinesterase inhibition) can be applied in different clinical contexts.",
@@ -12759,6 +12911,28 @@ const STUDY_PAGES = {
       "This gives you two genuinely high-yield, classic cortical syndromes that directly extend your existing Cerebral Blood Supply & Stroke Syndromes and Pupillary Pathway Clinical Testing content: a patient who appears blind but has entirely normal pupillary light reflexes and denies any visual deficit is demonstrating the exact pupil-sparing-cortical-lesion logic already established, now applied to Anton syndrome specifically as the classic clinical vignette.",
     ],
   },
+  "acquiredperc-neglect-management": {
+    name: "Hemispatial Neglect & Modified Optometric Management After Acquired Neurological Impairment",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard neuro-ophthalmology/neuro-rehabilitation references"],
+    learnIt: [
+      { h: "Hemispatial neglect vs. homonymous hemianopia — a critical distinction", t: "Hemispatial (visuospatial) neglect is a disorder of ATTENTION, not of primary visual sensation — the patient fails to attend to, report, or respond to stimuli on one side of space (classically the LEFT side, from a RIGHT parietal lobe lesion, most often a right MCA territory stroke, already relevant to your Cerebral Blood Supply content) despite an intact visual pathway and, often, a full visual field on formal perimetry — this is fundamentally different from homonymous hemianopia (already covered extensively under your Neuroanatomy/Stroke content), a SENSORY visual field defect from damage anywhere along the retrogeniculate visual pathway, where the patient genuinely cannot see the affected field regardless of attention." },
+      { h: "Why the distinction matters clinically", t: "A patient with pure hemianopia is typically AWARE of their deficit and spontaneously compensates by turning the head/eyes toward the blind side; a patient with neglect is often UNAWARE of the deficit (a form of anosognosia specific to the neglected side) and does NOT spontaneously compensate — neglect patients may leave food on one side of the plate uneaten, fail to groom one side of the body, collide with objects on the neglected side, or fail to read one half of a page, even though visual field testing may show preserved sensitivity in that field on formal single-stimulus testing." },
+      { h: "Bedside/clinical testing that distinguishes the two", t: "Line bisection testing (asking the patient to mark the midpoint of a horizontal line) is classic for neglect: a neglect patient consistently marks the midpoint displaced toward the non-neglected (typically right) side, since they are effectively only attending to a portion of the line. Target cancellation tasks (asking the patient to cross out all instances of a target symbol scattered across a page) show a systematic omission pattern concentrated on the neglected side. EXTINCTION on double simultaneous stimulation — presenting a stimulus in each hemifield SIMULTANEOUSLY — is another hallmark: a neglect patient may correctly detect a single stimulus presented alone in the affected field, but fails to detect it when a competing stimulus is presented simultaneously in the intact field, demonstrating that the deficit is attentional/competitive rather than a fixed sensory field cut." },
+      { h: "Modifying optometric management for the patient with acquired neurological impairment", t: "Beyond neglect specifically, patients with stroke, traumatic brain injury, or other acquired neurologic impairment (already relevant to your Cerebral Blood Supply and TBI content) often require adapted examination and management approaches: field loss (hemianopic or quadrantanopic, already covered) may benefit from prism-based field expansion devices or systematic scanning training to compensate; noncomitant strabismus/diplopia from an acquired cranial nerve palsy (already covered under Cranial Nerve Palsy content) may require prism, occlusion, or spectacle modification rather than the surgical/therapy-first approach typically used for a longstanding comitant childhood strabismus; loss of accommodation or fusion from the acquired injury may require reading glasses, base-in prism, or simplified visual tasks; and low vision/vision rehabilitation referral, environmental modification counseling (e.g., placing important items on the non-neglected side for a neglect patient, high-contrast markers/lighting), and close coordination with the patient's broader neurorehabilitation team (physical therapy, occupational therapy) are frequently necessary, since the visual deficit is often only one component of a larger functional picture." },
+    ],
+    memorizeIt: [
+      "Hemispatial neglect = attentional deficit (typically LEFT-sided, from a RIGHT parietal lesion) with an intact visual pathway; homonymous hemianopia = sensory field defect from retrogeniculate pathway damage (already covered) — genuinely different mechanisms.",
+      "Neglect patients are often UNAWARE and do NOT spontaneously compensate; hemianopia patients are typically aware and turn head/eyes to compensate.",
+      "Line bisection (midpoint marked toward non-neglected side) and cancellation tasks (omissions concentrated on the neglected side) are classic bedside neglect tests.",
+      "Extinction on double simultaneous stimulation: single stimulus in the affected field is detected, but is missed when a competing stimulus is presented simultaneously in the intact field — hallmark of an attentional (not sensory) deficit.",
+      "Modified management for acquired neuro impairment: prism/scanning training for field loss, prism/occlusion for noncomitant acquired diplopia, environmental modification (non-neglected-side placement) for neglect, and coordination with the neurorehabilitation team.",
+    ],
+    applyIt: [
+      "This gives you the essential distinction your existing homonymous hemianopia content didn't yet make explicit: a right-parietal-stroke patient who bumps into objects on the left and doesn't finish food on the left side of the plate has neglect, not (or not only) a hemianopia — and the line-bisection/cancellation/extinction bedside tests let you tell the two apart, which matters because their management differs (compensatory scanning training helps hemianopia awareness-driven compensation, but a neglect patient's lack of awareness means they often need cueing/environmental strategies instead of relying on self-directed compensation).",
+    ],
+  },
   "temporalperc-cff": {
     name: "Critical Flicker Fusion (CFF) Frequency",
     priority: "SHOULD",
@@ -12800,6 +12974,27 @@ const STUDY_PAGES = {
       "This completes your existing Motion Perception content's mechanistic foundation — persistence of vision is precisely the perceptual bridging mechanism that makes the apparent-motion illusion (already covered under Real & Apparent Motion Detection) work, explaining WHY a sufficiently fast sequence of discrete static images is perceived as smooth continuous motion rather than a series of individual pictures.",
     ],
   },
+  "temporalperc-suppression": {
+    name: "Troxler Fading, Saccadic Suppression & Successive Contrast",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard visual psychophysics references"],
+    learnIt: [
+      { h: "Troxler fading — stabilized retinal images", t: "The Troxler effect (Troxler fading) is the disappearance of a steadily-fixated peripheral visual target from perception when the observer maintains fixation elsewhere without shifting gaze — this occurs because the target's retinal image, no longer being refreshed by the normal fixational eye movements it would otherwise receive (already covered under your Eye Movements content's fixational micro-movements — microsaccades, drift, microtremor), undergoes neural adaptation and fades from awareness; deliberately, optically stabilizing a retinal image experimentally produces a much faster, more complete version of the same fading, directly demonstrating that continuous, small retinal image motion is required to sustain ordinary visual perception." },
+      { h: "Saccadic suppression", t: "Saccadic suppression is the transient, active reduction of visual sensitivity that occurs specifically DURING a saccade (already covered under your Eye Movements content) — without this suppression, the rapid sweep of the visual scene across the retina during a saccade's high angular velocity would produce a smeared, blurred percept; saccadic suppression instead prevents this motion blur from being consciously perceived, which is also why a person is subjectively unaware of the brief 'blank' gaps in vision that occur many times per second during normal scanning eye movements, and is part of why a person cannot see their own eyes move when looking back and forth in a mirror (though the movement is clearly visible to an observer)." },
+      { h: "Bartley brightness enhancement — a subfusional flicker phenomenon", t: "The Bartley effect (Bartley brightness enhancement) is a counterintuitive phenomenon in which an intermittent (flickering) light presented at certain SUBfusional frequencies (below the critical flicker fusion frequency already covered, typically in a low flicker-rate range) is perceived as subjectively BRIGHTER than an equivalent steady (continuous) light of the same time-averaged physical intensity — an example of the visual system's brightness perception not being a simple linear readout of average physical light energy." },
+      { h: "Successive contrast and masking", t: "Successive contrast describes how the perception of a stimulus is altered by a stimulus that PRECEDED it in time (e.g., a gray patch appearing to shift in apparent brightness/color depending on what was viewed just before it, the temporal analog of the simultaneous contrast phenomenon already covered under your Form Perception content); visual masking refers to the reduction or elimination of a target stimulus's visibility by another stimulus (the mask) presented in close temporal proximity — masking can occur when the mask precedes the target (forward masking), follows it (backward masking), or is simultaneous with it, and is used experimentally to probe the time-course of early visual processing." },
+    ],
+    memorizeIt: [
+      "Troxler fading: a steadily-fixated peripheral target disappears from perception because its retinal image isn't refreshed by normal fixational eye movements — extends existing Eye Movements content.",
+      "Saccadic suppression: transient reduced visual sensitivity DURING a saccade, preventing perceived motion blur/smear from the retinal image sweep — extends existing Eye Movements content.",
+      "Bartley brightness enhancement: certain subfusional flicker rates are perceived as BRIGHTER than a steady light of the same average physical intensity.",
+      "Successive contrast (temporal analog of simultaneous contrast) and visual masking (forward/backward/simultaneous) both describe how a preceding or co-occurring stimulus alters perception of a target.",
+    ],
+    applyIt: [
+      "This directly extends your existing Eye Movements content's fixational micro-movement material: Troxler fading and saccadic suppression are the perceptual FLIP SIDES of the same fixational/saccadic eye movement physiology — fixational micro-movements normally PREVENT fading during steady gaze, while saccadic suppression actively PREVENTS a different perceptual problem (motion blur) during the rapid gaze shifts between fixations, together explaining how continuous, stable visual perception is maintained despite the eye never truly being still.",
+    ],
+  },
   "entoptic-phenomena-types": {
     name: "Entoptic Phenomena — Purkinje Tree, Blue-Field Entoptoscopy & Haidinger's Brush",
     priority: "SHOULD",
@@ -12810,12 +13005,19 @@ const STUDY_PAGES = {
       { h: "The Purkinje tree (vascular shadow)", t: "The Purkinje tree is the shadow cast by the observer's own retinal blood vessels onto their own photoreceptors — normally imperceptible because the shadow's position on the retina stays constant during normal eye/light conditions, causing neural adaptation; it becomes visible when a light source is moved rapidly across the sclera (e.g., a penlight shone through the lower lid), shifting the vascular shadow's position and revealing the branching vessel pattern perceptually." },
       { h: "Blue-field entoptoscopy", t: "When viewing a uniform bright blue field, an observer perceives tiny bright dots moving along curving paths, corresponding to individual white blood cells moving through the perifoveal retinal capillaries — the WBC's larger size and lack of hemoglobin allow more blue light through the capillary at that point compared to the more light-absorbing red-blood-cell-filled segments, making each passing leukocyte perceptible as a brief bright dot; the moving dots' visible paths directly trace the perifoveal capillary network." },
       { h: "Haidinger's brush", t: "Haidinger's brush is a faint, bowtie or brush-shaped entoptic pattern perceived when viewing a uniform field of polarized blue light, arising from the radially-oriented, birefringent arrangement of macular xanthophyll (lutein/zeaxanthin) pigment — directly connecting to your existing Polarization content (Malus's law, already covered under Wave Optics), since the phenomenon depends specifically on the light's polarization interacting with this radially-structured macular pigment." },
+      { h: "Maxwell's spot", t: "Maxwell's spot is a related but distinct macular entoptic phenomenon — a faint, ring-like or slightly darker/yellowish spot corresponding to the macular xanthophyll pigment's boundary, best seen when alternately viewing blue and blue-minus (e.g., blue vs. white) light — like Haidinger's brush, it arises from the same macular pigment, but appears as a spot/ring localizing the pigment's extent rather than the bowtie orientation pattern that specifically requires polarized light." },
+      { h: "Muscae volitantes (vitreous floaters)", t: "Muscae volitantes ('flying flies') are the shadows cast onto the retina by vitreous opacities — condensed collagen fibrils, cellular debris, or (physiologically) remnants of the fetal hyaloid vasculature — most noticeable against a bright, uniform background (e.g., a blue sky or blank wall); unlike the other entoptic phenomena covered here, floaters arise from actual physical media opacities rather than a purely functional/neural phenomenon, and become more common with age as vitreous syneresis and posterior vitreous detachment progress (already relevant to your Vitreous/Retina content) — a sudden, marked increase in floaters, especially accompanied by photopsias, is a clinically important red flag for possible retinal tear or detachment requiring prompt dilated fundus examination." },
+      { h: "Moore's lightning streaks and blue arcs of the retina", t: "Moore's lightning streaks are brief, flash-like photopsias typically perceived in the temporal peripheral field, classically arising from mechanical vitreoretinal traction (the posterior vitreous tugging on the retina, mechanically stimulating photoreceptors and being interpreted as a flash of light) — like sudden floaters, new or increasing lightning streaks/photopsias are a clinically significant symptom warranting dilated exam to rule out a retinal tear. Blue arcs of the retina are faint, curved bluish lines perceived extending from a small central fixation light toward the blind spot, thought to arise from stimulation propagating along retinal nerve fiber layer axons as they converge toward the optic disc." },
+      { h: "Phosphenes", t: "Phosphenes are perceived flashes or patterns of light generated WITHOUT any actual light stimulus reaching the retina — instead produced by mechanical (e.g., firm digital pressure on the closed eyelid/globe, 'seeing stars' after a blow to the eye), electrical, or magnetic stimulation of the retina or visual pathway, demonstrating that the visual system interprets any sufficiently strong stimulation of its neurons as light, regardless of the stimulus's actual physical nature." },
     ],
     memorizeIt: [
       "Entoptic phenomena = perceptions arising from structures WITHIN the observer's own eye, not from external visual stimuli.",
       "Purkinje tree: shadow of the observer's own retinal vessels, revealed by moving a light source across the sclera (shifts the shadow position, defeating neural adaptation).",
       "Blue-field entoptoscopy: moving bright dots = individual WBCs traversing perifoveal capillaries (visible against blue light due to WBCs' lower light absorption vs. RBCs).",
-      "Haidinger's brush: bowtie-shaped pattern seen in polarized blue light, from radially-arranged birefringent macular xanthophyll pigment — connects to existing Polarization content.",
+      "Haidinger's brush (polarized blue light, bowtie pattern) and Maxwell's spot (blue vs. blue-minus light, ring/spot pattern) both arise from the same radially-arranged macular xanthophyll pigment.",
+      "Muscae volitantes (floaters): shadows from actual vitreous opacities, not a purely neural phenomenon — sudden increase + photopsias is a retinal tear/detachment red flag.",
+      "Moore's lightning streaks: photopsias from vitreoretinal traction — same red-flag significance as sudden new floaters. Blue arcs: faint lines from retinal nerve fiber layer axon stimulation.",
+      "Phosphenes: light perceived from mechanical/electrical/magnetic stimulation of the retina or visual pathway — no actual light involved.",
     ],
     applyIt: [
       "This gives you a genuinely distinct category of visual phenomena directly extending your existing Wave Optics (Polarization/Malus's law) content — Haidinger's brush is a direct clinical demonstration of polarized light interacting with a specific anatomic structure (radially-arranged macular pigment), the same physical principle already covered for polarized sunglass lenses, just applied intraocularly.",
@@ -16908,6 +17110,30 @@ const FLASHCARDS = [
   { id: "fc-587", objectiveId: "clpharm-solution-types", front: "What happens if hydrogen peroxide neutralization is skipped or shortened?", back: "Significant ocular irritation/chemical injury from residual peroxide." },
   { id: "fc-1484", objectiveId: "clpharm-solution-types", front: "What is a bandage (therapeutic) contact lens used for?", back: "Its mechanical/protective effect — promoting epithelial healing and reducing pain after corneal surgery, abrasion, or persistent epithelial defects." },
   { id: "fc-1485", objectiveId: "clpharm-solution-types", front: "Why can a drug-eluting or medication-soaked contact lens improve on conventional drop dosing?", back: "Drops are largely lost to reflex tearing/nasolacrimal drainage within seconds to minutes; a lens held against the cornea provides more prolonged, consistent drug contact and can improve bioavailability and compliance." },
+  // Eye Movements — fixational movements & torsion
+  { id: "fc-1486", objectiveId: "eyemovements-fixation-torsion", front: "What three types of fixational eye movements occur even during 'steady' fixation?", back: "Microsaccades, ocular drift, and ocular microtremor." },
+  { id: "fc-1487", objectiveId: "eyemovements-fixation-torsion", front: "What does Listing's law say about torsion during normal voluntary eye movements from primary position?", back: "Normal voluntary eye movements do not add extraneous torsion — torsion is reserved for reflexive contexts like head-tilt-induced cyclotorsion." },
+  // Fixation disparity testing
+  { id: "fc-1488", objectiveId: "eomanomalies-fixation-disparity", front: "How does fixation disparity differ from heterophoria?", back: "Fixation disparity is a small misalignment WITHIN Panum's area that persists during fusion; heterophoria is the larger latent deviation revealed only when fusion is broken." },
+  { id: "fc-1489", objectiveId: "eomanomalies-fixation-disparity", front: "State Sheard's criterion.", back: "Fusional vergence reserve (opposing the phoria) should be at least twice the phoria magnitude for comfortable, sustainable binocular function." },
+  // Space perception — sensorimotor
+  { id: "fc-1490", objectiveId: "space-sensorimotor", front: "What is past pointing, and what causes it?", back: "In acute EOM paresis, the patient mislocalizes past a target in the paretic muscle's field of action, from efference-copy-based overestimation of how far the eye actually rotated." },
+  { id: "fc-1491", objectiveId: "space-sensorimotor", front: "Distinguish binocular rivalry from binocular suppression.", back: "Rivalry is normal alternating perception from incompatible dichoptic images; suppression is a pathologic, persistent selective ignoring of one eye's input (e.g., in strabismus)." },
+  // Form perception — illusions/constancy
+  { id: "fc-1492", objectiveId: "form-illusions-constancy", front: "What perceptual mechanism is classically invoked to explain the Müller-Lyer and Ponzo illusions?", back: "Misapplied size-constancy scaling triggered by depth/perspective cues embedded in a flat 2-D image." },
+  { id: "fc-1493", objectiveId: "form-illusions-constancy", front: "What classic bistable image demonstrates figure-ground reversal?", back: "Rubin's vase-faces illusion." },
+  // Temporal perception — suppression phenomena
+  { id: "fc-1494", objectiveId: "temporalperc-suppression", front: "What is the Troxler effect?", back: "The disappearance of a steadily-fixated peripheral target from perception when the observer fixates elsewhere, due to lack of normal retinal-image refresh from fixational eye movements." },
+  { id: "fc-1495", objectiveId: "temporalperc-suppression", front: "What is the Bartley effect?", back: "Certain subfusional flicker frequencies are perceived as brighter than a steady light of the same average physical intensity." },
+  // Acquired perceptual anomalies — neglect
+  { id: "fc-1496", objectiveId: "acquiredperc-neglect-management", front: "What lesion location classically causes left hemispatial neglect?", back: "A right parietal lobe lesion (often right MCA territory stroke)." },
+  { id: "fc-1497", objectiveId: "acquiredperc-neglect-management", front: "What bedside finding demonstrates extinction, and what does it indicate?", back: "A single stimulus in the affected field is detected alone but missed when a competing stimulus is presented simultaneously in the intact field — indicates an attentional (neglect), not sensory, deficit." },
+  // Color vision — colorimetry/constancy
+  { id: "fc-1498", objectiveId: "color-colorimetry-constancy", front: "What does the curved outer boundary of the CIE 1931 chromaticity diagram represent?", back: "The pure, fully-saturated spectral (monochromatic) colors." },
+  { id: "fc-1499", objectiveId: "color-colorimetry-constancy", front: "What mechanism underlies color constancy?", back: "Chromatic adaptation — the visual system recalibrates each cone class's gain based on the ambient illuminant (e.g., the von Kries coefficient law)." },
+  // Vision development — sensory timeline
+  { id: "fc-1500", objectiveId: "visdev-sensory-timeline", front: "How does the spectral transmission of the ocular media differ between infants and older adults?", back: "The infant lens transmits MORE short-wavelength/UV light than the adult lens, which progressively yellows and filters more short-wavelength light with age — opposite-direction change across the lifespan." },
+  { id: "fc-1501", objectiveId: "visdev-sensory-timeline", front: "Approximately what is newborn grating acuity, and when does it approach adult levels?", back: "Roughly 20/400 to 20/600 at birth, improving rapidly and approaching adult levels by about 3-5 years of age." },
   // Indications/contraindications
   { id: "fc-588", objectiveId: "clpharm-indications", front: "Why should most topical eye drops not be instilled while wearing soft contact lenses?", back: "Soft lenses can absorb preservative/drug, altering delivery and potentially exposing the eye to a concentrated preservative bolus later." },
   { id: "fc-589", objectiveId: "clpharm-indications", front: "What medication category can reduce tear production and worsen contact lens tolerance?", back: "Anticholinergic-effect medications." },
@@ -23540,6 +23766,40 @@ const QUESTIONS = [
       b: "Correct — a soft (hydrogel) lens's curvature and effective refractive index change with its hydration state, so accurate power verification requires measuring the lens wet, in a wet cell, not dry.",
       c: "Incorrect — lensometers do measure contact lens power; RGP lenses can be measured dry, while soft lenses require a wet cell.",
       d: "Incorrect — a radiuscope verifies RGP base curve radius, a separate instrument and separate parameter from lensometer power verification.",
+    },
+  },
+  {
+    id: "q-328", objectiveId: "acquiredperc-neglect-management", type: "Clinical differentiation", difficulty: "Medium",
+    stem: "A patient recovering from a right MCA territory stroke consistently bumps into objects on the left side, leaves food on the left side of the plate, and marks the midpoint of a horizontal line noticeably to the right of true center. Formal automated perimetry shows a full visual field in both eyes. What is the most likely explanation for this presentation?",
+    choices: [
+      { id: "a", text: "Left homonymous hemianopia" },
+      { id: "b", text: "Left hemispatial neglect" },
+      { id: "c", text: "Bitemporal hemianopia" },
+      { id: "d", text: "Malingering, since the visual field is full" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — a true homonymous hemianopia would produce a corresponding sensory field defect on formal perimetry; here the field is documented as full, which argues against a primary sensory field cut.",
+      b: "Correct — an attentional deficit with a full field on formal single-stimulus perimetry, right-sided lesion, left-sided functional neglect (missed food, collisions), and a line bisection error shifted toward the non-neglected (right) side is the classic presentation of left hemispatial neglect from a right parietal (often right MCA territory) lesion.",
+      c: "Incorrect — bitemporal hemianopia results from chiasmal compression (e.g., pituitary tumor), an unrelated mechanism and field pattern not fitting this presentation.",
+      d: "Incorrect — this is a well-described, reproducible neurologic deficit from cortical injury, not a fabricated or exaggerated complaint; the full field on perimetry reflects the attentional (not sensory) nature of the deficit, not inconsistency suggesting malingering.",
+    },
+  },
+  {
+    id: "q-329", objectiveId: "eomanomalies-fixation-disparity", type: "Applied concept", difficulty: "Medium",
+    stem: "A symptomatic patient has a 6 prism diopter esophoria at near, with a measured positive fusional vergence (base-out) break of 8 prism diopters at near. Applying Sheard's criterion, is this patient's fusional reserve adequate, and what does this imply?",
+    choices: [
+      { id: "a", text: "Adequate — 8 PD of reserve exceeds the 6 PD phoria" },
+      { id: "b", text: "Inadequate — Sheard's criterion requires reserve ≥ 2× the phoria (12 PD), and only 8 PD is available" },
+      { id: "c", text: "Adequate — any positive reserve greater than zero satisfies Sheard's criterion" },
+      { id: "d", text: "Cannot be determined without also measuring the associated phoria" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — Sheard's criterion is not simply 'reserve greater than phoria'; it specifically requires the opposing fusional reserve to be at least TWICE the phoria magnitude.",
+      b: "Correct — Sheard's criterion requires fusional vergence reserve ≥ 2 × phoria. Here, 2 × 6 PD = 12 PD would be required, but only 8 PD of positive fusional vergence is available, so the criterion is NOT met — this patient's fusional reserve is inadequate relative to their phoria, consistent with their symptoms and supporting a role for vision therapy and/or prism.",
+      c: "Incorrect — this describes a much weaker (and clinically insufficient) standard than Sheard's actual 2:1 criterion.",
+      d: "Incorrect — Sheard's criterion is calculated directly from the phoria and fusional vergence reserve; the associated phoria (fixation disparity measurement) is a related but separate clinical tool, not required to apply Sheard's criterion itself.",
     },
   },
 ];
