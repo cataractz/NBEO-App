@@ -1255,6 +1255,7 @@ const VITREOUSGROSS_TOPIC_ID = "t-12-0-1"; // Vitreous/Retina/Choroid(12) > Anat
 // Ties directly into existing Retinal Detachment/PVD content.
 const VITREOUSGROSS_OBJECTIVES = [
   { id: "vitreousgross-attachments", name: "Vitreous Base & Attachment Sites", built: true },
+  { id: "vitreousgross-shape-landmarks", name: "Vitreous Shape & Named Landmarks — Patellar Fossa, Anterior/Posterior Hyaloid, Cortex", built: true },
 ];
 
 const RETINAGROSS_TOPIC_ID = "t-12-0-2"; // Vitreous/Retina/Choroid(12) > Anatomy(Gross)(0) > Retina(2)
@@ -1271,7 +1272,7 @@ const CHOROIDDEV_OBJECTIVES = [
 const VITREOUSDEV_TOPIC_ID = "t-12-1-1"; // Vitreous/Retina/Choroid(12) > Anatomy(Developmental)(1) > Vitreous(1)
 // Ties directly into existing Hyaloid System/Persistent Fetal Vasculature content.
 const VITREOUSDEV_OBJECTIVES = [
-  { id: "vitreousdev-primary-secondary", name: "Primary vs. Secondary Vitreous Formation & Cloquet's Canal", built: true },
+  { id: "vitreousdev-primary-secondary", name: "Primary, Secondary & Tertiary Vitreous Formation & Cloquet's Canal", built: true },
 ];
 
 const RETINADEV_TOPIC_ID = "t-12-1-2"; // Vitreous/Retina/Choroid(12) > Anatomy(Developmental)(1) > Retina(2)
@@ -1279,6 +1280,7 @@ const RETINADEV_TOPIC_ID = "t-12-1-2"; // Vitreous/Retina/Choroid(12) > Anatomy(
 const RETINADEV_OBJECTIVES = [
   { id: "retinadev-optic-cup", name: "Retinal Development from the Optic Cup — Two Layers", built: true },
   { id: "retinadev-anomalies", name: "Congenital Retinal Anomalies (X-Linked Retinoschisis, Chorioretinal Coloboma)", built: true },
+  { id: "retinadev-vascular-macular", name: "Retinal Vascular Development & Postnatal Macular/Foveal Maturation", built: true },
 ];
 
 const RETINAPHARMGEN_TOPIC_ID = "t-12-4-0"; // Vitreous/Retina/Choroid(12) > Pharmacology(4) > General principles(0)
@@ -1291,6 +1293,7 @@ const RETINAPHARMANTIINFLAMM_TOPIC_ID = "t-12-4-1"; // Vitreous/Retina/Choroid(1
 const RETINAPHARMANTIINFLAMM_OBJECTIVES = [
   { id: "retinapharm-intravitreal-steroid", name: "Intravitreal Corticosteroid Implants for Macular Edema", built: true },
   { id: "retinapharm-steroid-risks", name: "Intravitreal Steroid Risks — Cataract & Steroid-Response Glaucoma", built: true },
+  { id: "retinapharm-nsaid", name: "Topical NSAIDs for Cystoid Macular Edema — Non-Steroidal Anti-Inflammatory Mechanism", built: true },
 ];
 
 const RETINAPHARMANTIINFECT_TOPIC_ID = "t-12-4-2"; // Vitreous/Retina/Choroid(12) > Pharmacology(4) > Anti-infective agents(2)
@@ -1302,6 +1305,7 @@ const RETINAPHARMDYES_TOPIC_ID = "t-12-4-3"; // Vitreous/Retina/Choroid(12) > Ph
 const RETINAPHARMDYES_OBJECTIVES = [
   { id: "retinapharm-icg-angiography", name: "Indocyanine Green (ICG) Angiography for Choroidal Imaging", built: true },
   { id: "retinapharm-intraop-dyes", name: "Intraoperative Vital Dyes for Membrane Peeling", built: true },
+  { id: "retinapharm-fluorescein-angiography", name: "Intravenous Fluorescein Angiography — Mechanism & Adverse Effects", built: true },
 ];
 
 const RETINAPHARMNUTRITION_TOPIC_ID = "t-12-4-4"; // Vitreous/Retina/Choroid(12) > Pharmacology(4) > Nutritional supplements(4)
@@ -1733,6 +1737,9 @@ const PHOTOPHYS_OBJECTIVES = [
   { id: "photophys-phototransduction", name: "Phototransduction Cascade", built: true },
   { id: "photophys-visual-cycle", name: "The Visual (Retinoid) Cycle & RPE Function", built: true },
   { id: "photophys-rod-cone", name: "Rod-Cone Differences & Adaptation Mechanisms", built: true },
+  { id: "photophys-dark-current", name: "Photoreceptor Electrophysiology & the Dark Current", built: true },
+  { id: "photophys-interneurons", name: "Retinal Neurotransmitters & Interneuron Function (Bipolar, Horizontal, Amacrine, Ganglion Cells)", built: true },
+  { id: "photophys-bloodflow", name: "Retinal Blood Flow, Dual Circulation & Retinal Metabolism", built: true },
 ];
 
 const VITREOUSPHYS_TOPIC_ID = "t-12-2-0"; // Vitreous/Retina/Choroid(12) > Physiology(2) > Vitreous(0)
@@ -4151,12 +4158,14 @@ const STUDY_PAGES = {
       { h: "Diagnostic testing", t: "Fluorescein angiography helps distinguish ischemic from non-ischemic CRVO by quantifying areas of capillary non-perfusion; OCT identifies macular edema, a major driver of vision loss in CRVO." },
       { h: "Management", t: "Intravitreal anti-VEGF injections are used to treat associated macular edema and to reduce the risk of neovascular complications; regular monitoring for neovascularization (iris, angle, or retinal) is essential, especially in ischemic CRVO, given the risk of neovascular glaucoma." },
       { h: "Complications", t: "Macular edema (the main cause of vision loss in many cases), and neovascular glaucoma — typically developing within about 90 days of an ischemic CRVO, sometimes referred to as \"90-day glaucoma.\"" },
+      { h: "Branch retinal vein occlusion (BRVO) — the localized counterpart", t: "BRVO occurs when a branch retinal vein (rather than the central trunk) is occluded, almost always at an arteriovenous (AV) crossing, where the retinal artery and vein share a common adventitial sheath — arteriolar wall thickening from chronic hypertension compresses the adjacent vein at this crossing point, precipitating thrombosis. This produces sector-shaped (wedge-shaped) hemorrhages and edema confined to the retinal quadrant drained by the affected branch, rather than the diffuse four-quadrant findings of CRVO. Vision loss depends on whether the affected sector involves the macula; BRVO is more common than CRVO overall, and, like CRVO, carries a risk of macular edema (treated with anti-VEGF) and, in ischemic cases, neovascularization, though neovascular glaucoma is far less common than with ischemic CRVO since less total retina is involved." },
     ],
     memorizeIt: [
       "\"Blood and thunder\" fundus: diffuse four-quadrant hemorrhages, venous tortuosity, cotton wool spots, disc edema.",
       "Ischemic CRVO carries a high risk of neovascular glaucoma (\"90-day glaucoma\") — worse prognosis than non-ischemic.",
       "Sudden, painless, unilateral vision loss is the classic presentation.",
       "Anti-VEGF injections treat macular edema and help manage neovascular risk.",
+      "BRVO occurs at an AV crossing (shared adventitial sheath, hypertensive arteriolar compression of the vein) — sector-shaped hemorrhage/edema confined to one quadrant, not diffuse like CRVO; lower neovascular glaucoma risk than ischemic CRVO.",
     ],
     applyIt: [
       "This connects directly back to neovascular glaucoma: any patient diagnosed with ischemic CRVO needs close follow-up specifically watching for rubeosis iridis over the following months — recognizing this link across topics is exactly the kind of cross-referenced knowledge the boards reward.",
@@ -4175,12 +4184,14 @@ const STUDY_PAGES = {
       { h: "Diagnostic testing", t: "Urgent evaluation must include an ESR/CRP to rule out giant cell arteritis, along with urgent carotid and cardiac workup given the stroke-equivalent nature of the event; systemic stroke workup and urgent referral (often to an emergency department/stroke pathway) is appropriate." },
       { h: "Management", t: "No treatment reliably restores vision once infarction has occurred, but time-sensitive interventions (e.g., ocular massage, anterior chamber paracentesis) are sometimes attempted very early in an effort to dislodge an embolus, though evidence for benefit is limited; the greater priority is urgent systemic workup, since CRAO carries substantial risk of a subsequent cerebral stroke." },
       { h: "Complications", t: "Permanent, severe vision loss is common; the systemic vascular risk (stroke) is the most important overall management priority." },
+      { h: "Branch retinal artery occlusion (BRAO) — the localized counterpart", t: "BRAO is embolic occlusion of a branch (rather than the central trunk) of the retinal artery, sharing the same embolic etiologies as CRAO (carotid or cardiac source; giant cell arteritis must still be considered in older patients). Because only the sector of retina supplied by that branch is ischemic, BRAO produces a sudden, painless, sector-shaped (altitudinal or wedge) visual field defect rather than the severe global vision loss of CRAO — visual acuity may be preserved if the affected sector spares the fovea. Fundus exam shows sector retinal whitening corresponding to the affected branch's distribution, sometimes with a visible embolus (Hollenhorst plaque) at a bifurcation. Workup and management follow the same urgent stroke-equivalent pathway as CRAO, since the systemic embolic risk is identical regardless of whether the occlusion is central or branch." },
     ],
     memorizeIt: [
       "CRAO = sudden, severe, painless monocular vision loss — a stroke equivalent of the eye.",
       "Classic fundus: diffuse retinal whitening with a cherry-red spot at the fovea.",
       "Must rule out giant cell arteritis (ESR/CRP) in older patients.",
       "Requires urgent systemic stroke workup (carotid, cardiac) given shared risk with cerebral stroke.",
+      "BRAO = same embolic mechanism as CRAO, but confined to one branch's distribution — sector visual field defect, sector fundus whitening, acuity may be spared if the fovea is outside the affected sector; still requires the same urgent systemic workup.",
     ],
     applyIt: [
       "A patient with sudden painless monocular vision loss and a cherry-red spot needs to be treated with the same urgency as a stroke patient — urgent same-day referral for systemic workup, not a routine ophthalmology follow-up.",
@@ -8844,6 +8855,73 @@ const STUDY_PAGES = {
       "This connects three of your existing topics into one coherent picture: the biphasic dark adaptation curve (Light Perception content), the rod-first pattern of vision loss in retinitis pigmentosa (Retina content), and foveal cone-exclusivity underlying color vision and visual acuity (Color Vision content) are all direct consequences of the same underlying rod-cone distribution and sensitivity differences covered here.",
     ],
   },
+  "photophys-dark-current": {
+    name: "Photoreceptor Electrophysiology & the Dark Current",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular physiology references"],
+    learnIt: [
+      { h: "Overview", t: "Photoreceptors have an unusual baseline electrical state compared to most neurons — in darkness they are relatively DEPOLARIZED (not at rest), maintained by a continuous ionic current called the dark current, and understanding this baseline state explains why light causes hyperpolarization rather than the reverse (already covered under Phototransduction Cascade content)." },
+      { h: "The dark current — sodium's role", t: "In darkness, cGMP levels in the outer segment are high, keeping cGMP-gated cation channels open — sodium (and some calcium) continuously flows INTO the outer segment through these open channels, while potassium continuously flows OUT of the inner segment via the Na+/K+-ATPase pump and separate potassium channels. This continuous inward sodium flow (the 'dark current') keeps the photoreceptor depolarized at roughly -40 mV in the dark (far less negative than the typical -70 mV resting potential of most neurons), driving tonic (continuous) glutamate release at the synaptic terminal — already relevant to this topic's sibling Interneuron Function objective." },
+      { h: "Light response — channel closure and calcium's feedback role", t: "Light-triggered cGMP breakdown (already covered under Phototransduction Cascade content) closes these cGMP-gated channels, stopping both sodium AND calcium influx — the resulting drop in intracellular calcium is not merely passive but serves as an active NEGATIVE FEEDBACK signal: falling calcium activates guanylate cyclase (via calcium-sensitive guanylate cyclase-activating proteins, GCAPs) to resynthesize cGMP and reopen channels, and also accelerates rhodopsin/transducin deactivation — this calcium-dependent feedback loop is what allows the photoreceptor to recover baseline sensitivity and adapt to sustained light rather than remaining permanently hyperpolarized." },
+      { h: "Clinical/diagnostic relevance", t: "This dark-current-dependent membrane potential change is the electrophysiologic basis of the electroretinogram's (ERG) a-wave, which directly reflects photoreceptor hyperpolarization — already relevant to your existing Retinitis Pigmentosa content, where reduced/absent ERG responses reflect photoreceptor dysfunction at this exact ionic-current level." },
+    ],
+    memorizeIt: [
+      "Dark current: in darkness, high cGMP keeps channels OPEN → Na+/Ca2+ influx into outer segment → photoreceptor stays depolarized (~-40 mV) → tonic glutamate release.",
+      "Light → cGMP breakdown → channels CLOSE → Na+/Ca2+ influx stops → hyperpolarization → REDUCED glutamate release.",
+      "Falling intracellular Ca2+ (from channel closure) is an active negative-feedback signal — activates guanylate cyclase (via GCAPs) to resynthesize cGMP, contributing to light adaptation and recovery.",
+      "This ionic mechanism is the basis of the ERG a-wave (already relevant to Retinitis Pigmentosa content).",
+    ],
+    applyIt: [
+      "This gives you the precise ionic mechanism underlying your existing Phototransduction Cascade content's 'hyperpolarization, not depolarization' concept — and it explains why calcium (not just cGMP/sodium) is a required part of any complete phototransduction answer, since calcium's fall is what actively drives recovery and adaptation rather than the cascade simply running to completion and stopping.",
+    ],
+  },
+  "photophys-interneurons": {
+    name: "Retinal Neurotransmitters & Interneuron Function (Bipolar, Horizontal, Amacrine, Ganglion Cells)",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular physiology references"],
+    learnIt: [
+      { h: "Overview", t: "Between the photoreceptors and the optic nerve, several classes of retinal interneurons process the visual signal — and the specific neurotransmitters and receptor types each uses explains how a single presynaptic signal (photoreceptor glutamate release, already covered under Dark Current content) can produce two functionally opposite downstream pathways." },
+      { h: "Bipolar cells — the ON/OFF split from one glutamate signal", t: "Bipolar cells relay the photoreceptor signal to ganglion cells and split into two functionally opposite types based on their glutamate receptor: ON bipolar cells express metabotropic glutamate receptors (mGluR6) that are INHIBITORY, so glutamate (released in the dark) keeps them hyperpolarized — when light reduces glutamate release, this inhibition is removed and ON bipolar cells DEPOLARIZE. OFF bipolar cells express ionotropic (AMPA/kainate) glutamate receptors that are EXCITATORY, so glutamate directly depolarizes them in the dark — when light reduces glutamate, OFF bipolar cells hyperpolarize. This single divergence point is why the same photoreceptor output produces both light-responsive (ON) and dark-responsive (OFF) parallel pathways." },
+      { h: "Horizontal cells — lateral inhibition and receptive field surrounds", t: "Horizontal cells synapse laterally across many photoreceptors at the outer plexiform layer (already covered under Retinal Gross Anatomy content), using GABA as their primary neurotransmitter to provide feedback and feedforward inhibition onto neighboring photoreceptors and bipolar cells — this lateral inhibition is the physiologic basis of the ANTAGONISTIC SURROUND in center-surround receptive fields, enhancing contrast detection at edges and borders rather than simply reporting absolute light level." },
+      { h: "Amacrine cells — inner retinal modulation", t: "Amacrine cells, located at the inner nuclear layer/inner plexiform layer border (already covered), are a highly diverse group (dozens of subtypes) that modulate bipolar-to-ganglion cell signaling, predominantly using GABA or glycine (both inhibitory). One clinically important subtype, the AII amacrine cell, is the critical relay in the rod pathway — it receives rod bipolar cell input and relays it via gap junctions and glycinergic synapses into the cone bipolar/ganglion cell pathway, since rods have no direct bipolar-to-ganglion pathway of their own." },
+      { h: "Ganglion cells — center-surround receptive fields and the final common output", t: "Ganglion cells integrate direct bipolar cell input (forming the receptive field CENTER) with lateral horizontal/amacrine cell input (forming the antagonistic SURROUND), producing classic ON-center/OFF-surround or OFF-center/ON-surround receptive field organization — this center-surround antagonism is a general retinal circuit principle that maximizes sensitivity to spatial contrast and edges rather than uniform illumination. Ganglion cells use glutamate as their neurotransmitter and their axons form the nerve fiber layer (already covered), converging to become the optic nerve (already covered under Visual Pathway Physiology)." },
+    ],
+    memorizeIt: [
+      "ON bipolar cells: mGluR6 (metabotropic, INHIBITORY) — glutamate hyperpolarizes; light (less glutamate) → depolarization.",
+      "OFF bipolar cells: AMPA/kainate (ionotropic, EXCITATORY) — glutamate depolarizes; light (less glutamate) → hyperpolarization.",
+      "Horizontal cells: GABAergic, lateral inhibition at the outer plexiform layer — physiologic basis of the receptive field SURROUND.",
+      "Amacrine cells: GABA/glycine, inner plexiform layer — diverse subtypes; AII amacrine cell relays the rod pathway into the cone/ganglion pathway via gap junctions.",
+      "Ganglion cells: glutamatergic output; center-surround receptive fields (ON-center/OFF-surround or vice versa) from bipolar-center + horizontal/amacrine-surround integration.",
+    ],
+    applyIt: [
+      "This gives you the cellular circuit basis for the center-surround receptive field concept already implicit across your Visual Pathway Physiology and Perceptual Function content — recognizing that center-surround antagonism arises from the specific combination of direct (bipolar) and lateral (horizontal/amacrine) inputs explains why the visual system is fundamentally tuned to detect contrast and edges rather than simply reporting absolute brightness at each point.",
+    ],
+  },
+  "photophys-bloodflow": {
+    name: "Retinal Blood Flow, Dual Circulation & Retinal Metabolism",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular physiology references"],
+    learnIt: [
+      { h: "Overview", t: "The retina has a genuinely unique DUAL blood supply arrangement, and understanding the specific boundary between the two circulations explains the very different patterns of damage seen in retinal vascular disease (already covered) versus choroidal/outer retinal disease (already covered under Choroidal Function content)." },
+      { h: "Two separate circulations with a sharp anatomic boundary", t: "The INNER retina (nerve fiber layer through the inner nuclear layer, already covered under Retinal Gross Anatomy content) is supplied by the central retinal artery and its branches — the retinal circulation — forming capillary networks confined to the inner retinal layers and stopping at roughly the outer plexiform layer. The OUTER retina (photoreceptors and RPE, already covered) has NO vessels of its own and depends entirely on diffusion from the choriocapillaris (already covered under Choroidal Function content) across Bruch's membrane. This dual arrangement means CRAO/CRVO (already covered) selectively damage the inner retina while sparing choroid-dependent photoreceptors, whereas choroidal vascular disease selectively threatens the photoreceptors/RPE instead." },
+      { h: "Autoregulation and the inner blood-retinal barrier", t: "Unlike the choroidal circulation (which is richly autonomically innervated and has very high, largely unregulated flow, already covered), the retinal circulation lacks autonomic innervation entirely and instead relies on local autoregulation — myogenic and metabolic mechanisms that adjust vessel tone in response to changes in perfusion pressure, oxygen tension, and local metabolic demand, keeping retinal blood flow relatively constant despite fluctuations in systemic blood pressure or IOP. Retinal vascular endothelial tight junctions also form the INNER blood-retinal barrier, distinct from (though functionally analogous to) the RPE-based OUTER blood-retinal barrier already covered under Visual Cycle & RPE Function content." },
+      { h: "High metabolic demand", t: "Photoreceptors have among the highest oxygen consumption per gram of any tissue in the body, driven substantially by the energy cost of continuously running the Na+/K+-ATPase pump that maintains the dark current (already covered under Dark Current content) — this exceptionally high metabolic demand is precisely why the outer retina requires the choroid's disproportionately high blood flow (already covered under Choroidal Function content) rather than being adequately served by the retinal circulation alone." },
+      { h: "Pathologic relevance — autoregulatory failure", t: "In diabetic retinopathy (already covered), chronic hyperglycemia damages retinal capillary autoregulation and the inner blood-retinal barrier, contributing to the microaneurysms, capillary non-perfusion, and breakdown of barrier integrity (causing macular edema) already established as core features of that disease — retinal blood flow physiology is therefore not just background anatomy but the direct mechanistic basis of diabetic retinopathy's vascular findings." },
+    ],
+    memorizeIt: [
+      "Dual retinal blood supply: INNER retina ← central retinal artery/retinal circulation; OUTER retina (photoreceptors, RPE) ← choriocapillaris diffusion only (avascular).",
+      "Retinal circulation has NO autonomic innervation — relies on local (myogenic/metabolic) autoregulation, unlike the autonomically-driven, high-flow choroidal circulation.",
+      "Retinal vascular endothelium = INNER blood-retinal barrier; RPE = OUTER blood-retinal barrier (already covered) — two distinct barriers.",
+      "Photoreceptors have very high oxygen demand (dark current's Na+/K+-ATPase cost) — explains dependence on high choroidal flow.",
+      "Diabetic retinopathy's vascular findings (already covered) reflect breakdown of retinal capillary autoregulation and the inner blood-retinal barrier.",
+    ],
+    applyIt: [
+      "This gives you the dual-circulation framework directly explaining why your existing CRAO/CRVO content describes inner retinal findings while your existing AMD/Choroidal Function content describes outer retinal/RPE findings — these are not overlapping disease patterns but reflect two anatomically and functionally separate blood supplies, each vulnerable to a distinct set of vascular insults.",
+    ],
+  },
   "vitreousphys-composition": {
     name: "Vitreous Composition & Structure",
     priority: "SHOULD",
@@ -8854,12 +8932,15 @@ const STUDY_PAGES = {
       { h: "Structural components", t: "Type II collagen fibrils form a loose meshwork scaffold, while hyaluronic acid molecules fill the spaces between fibrils, binding water and giving the vitreous its viscous, gel-like consistency — this is a fundamentally different structural arrangement from the regular, densely-packed collagen lamellae providing corneal transparency already covered in your Corneal Physiology content, illustrating that transparency can be achieved through different structural strategies in different ocular tissues." },
       { h: "Attachment points", t: "The vitreous is most firmly attached to the retina at the vitreous base (a band anterior to the ora serrata), the optic disc margin, and the macula — these firm attachment sites become clinically important stress points during the posterior vitreous detachment process already covered in your next objective, since traction at these points can produce retinal tears if strong enough." },
       { h: "Functional roles", t: "Beyond simple space-filling, the vitreous provides some structural support to the globe, a pathway for metabolite diffusion between anterior and posterior segments, and (in youth) some optical clarity contribution — though its functional importance is most clinically apparent through the problems that arise when its structure changes with age, covered in your following objectives." },
+      { h: "Volume and metabolism", t: "The adult vitreous cavity holds approximately 4 mL, accounting for roughly 80% of the eye's total volume. The vitreous itself is essentially acellular and metabolically quiescent — its only resident cells are hyalocytes, sparse mononuclear cells concentrated in the cortex that synthesize hyaluronic acid and collagen and retain some phagocytic capacity — so the vitreous functions less as an active metabolic tissue than as a passive diffusion reservoir, allowing glucose, oxygen, and metabolic waste to move between the anterior segment (aqueous-dependent) and posterior segment (choroid-dependent, already covered under Choroidal Function content). Vitreous ascorbate (vitamin C) concentration is markedly higher than in plasma, contributing an antioxidant function that helps limit oxidative stress reaching the lens (already covered under Lens Transparency content) — this is part of why vitrectomy, which removes this ascorbate-rich buffer and increases vitreous cavity oxygen tension, accelerates nuclear cataract formation in previously phakic eyes." },
     ],
     memorizeIt: [
       "Vitreous composition: >98% water, sparse type II collagen fibril meshwork, hyaluronic acid filling interfibrillar spaces.",
       "Firmest attachment points: vitreous base (anterior to ora serrata), optic disc margin, macula.",
       "These firm attachment points become traction stress points during posterior vitreous detachment.",
       "Vitreous transparency arises from a very different structural strategy than corneal transparency (sparse gel vs. dense regular lamellae).",
+      "Adult vitreous volume ≈ 4 mL (~80% of ocular volume); essentially acellular (hyalocytes only) — functions as a passive metabolite diffusion reservoir, not an active metabolic tissue.",
+      "High vitreous ascorbate provides antioxidant protection to the lens — vitrectomy removes this buffer and accelerates nuclear cataract formation.",
     ],
     applyIt: [
       "This gives you the anatomic basis for why retinal tears during PVD occur preferentially at specific locations: the vitreous base, disc margin, and macula are where vitreoretinal adhesion is strongest, so these are exactly where traction forces concentrate during the detachment process covered in your next objective.",
@@ -15398,11 +15479,16 @@ const STUDY_PAGES = {
       { h: "Overview", t: "The choroid is organized into three vascular layers arranged by vessel caliber, and this layered structure directly grounds your existing AMD and Photoreceptor & RPE Physiology content in specific anatomic detail." },
       { h: "Three layers, outer to inner", t: "From outermost (nearest sclera) to innermost (nearest retina): Haller's layer (largest-caliber vessels), Sattler's layer (medium-caliber vessels), and the choriocapillaris (innermost, a dense network of fenestrated capillaries lying directly against Bruch's membrane, already covered under Visual Cycle & RPE Function content) — this progressive decrease in vessel caliber from outer to inner choroid optimizes the final capillary bed for close, efficient exchange with the overlying RPE and outer retina." },
       { h: "Clinical relevance to AMD", t: "The choriocapillaris and its relationship to Bruch's membrane and the RPE (already covered) is the anatomic site of pathology in age-related macular degeneration (already covered) — choriocapillaris flow reduction and thickening/dysfunction of the adjacent Bruch's membrane are implicated in both dry AMD's drusen formation and wet AMD's choroidal neovascularization, since new vessels in wet AMD characteristically arise from this choriocapillaris layer, breaking through a compromised Bruch's membrane." },
+      { h: "Extent, thickness, and the outer boundary at the lamina fusca", t: "The choroid extends from the optic disc posteriorly to the ora serrata anteriorly (already covered under Retinal Landmarks content), where it becomes continuous with the ciliary body stroma; it is thickest posteriorly beneath the macula (roughly 0.2 mm) and progressively thins anteriorly toward the ora serrata (roughly 0.1 mm or less). Externally, the choroid abuts the sclera's innermost surface via the lamina fusca — a thin, pigmented layer of loosely arranged connective tissue and melanocytes forming the outer boundary of the suprachoroidal space (already covered under Scleral Anatomy content) — the choroid and sclera are only loosely adherent here, which is why this potential space can pathologically expand with fluid or blood in choroidal effusion or suprachoroidal hemorrhage (already covered)." },
+      { h: "Blood supply, venous drainage, and innervation", t: "Arterial supply to the choroid comes from the short and long posterior ciliary arteries (branches of the ophthalmic artery, already covered under Orbital Arterial Supply content) — the short posterior ciliary arteries primarily feed the choriocapillaris and posterior choroid directly, while the long posterior ciliary arteries contribute anteriorly via the major arterial circle of the iris (already covered under Iris Vascular Supply content). Venous drainage is entirely via the vortex veins (typically 4-8, already covered under Scleral Emissaria content), which collect blood from the choroid, ciliary body, and iris and exit through oblique scleral canals posterior to the equator. Innervation is autonomic, via the short ciliary nerves (already covered under Parasympathetic Pathway/Adie's Pupil content) — sympathetic fibers provide vasoconstriction and parasympathetic fibers contribute vasodilation, regulating the choroid's high resting blood flow (this topic's sibling Function objective)." },
     ],
     memorizeIt: [
       "Choroidal layers, outer to inner: Haller's (large vessels) → Sattler's (medium vessels) → choriocapillaris (fenestrated capillaries, against Bruch's membrane).",
       "Choriocapillaris directly abuts Bruch's membrane/RPE (already covered) — the critical exchange interface for outer retinal nutrition.",
       "Choriocapillaris is the anatomic origin site of choroidal neovascularization in wet AMD (already covered), breaking through a compromised Bruch's membrane.",
+      "Choroid extent: optic disc → ora serrata (continuous with ciliary body stroma). Thickest posteriorly (~0.2 mm), thins anteriorly (~0.1 mm).",
+      "Lamina fusca: pigmented outer boundary layer where choroid loosely adheres to sclera — forms the suprachoroidal space (already covered).",
+      "Blood supply: short/long posterior ciliary arteries. Venous drainage: vortex veins (4-8, already covered). Innervation: short ciliary nerves (sympathetic vasoconstriction, parasympathetic vasodilation, already covered).",
     ],
     applyIt: [
       "This gives you the precise vascular anatomy underlying your existing Age-Related Macular Degeneration content — understanding that choroidal neovascularization in wet AMD specifically originates from the choriocapillaris breaking through Bruch's membrane explains the anatomic target of anti-VEGF therapy (this topic's sibling Pharmacology objective), which works by blocking the angiogenic signal driving this exact choriocapillaris-to-subretinal-space vessel growth.",
@@ -15446,6 +15532,28 @@ const STUDY_PAGES = {
       "This gives you the precise anatomic basis for your existing Posterior Vitreous Detachment Mechanics and Retinal Detachment content — understanding that the vitreous base's exceptional attachment strength (versus the weaker optic disc/macula/vessel attachments) explains exactly why retinal tears occur at these specific weaker sites during PVD rather than at the vitreous base itself, and why a new Weiss ring floater (from disc margin separation, already covered) is a clinically meaningful sign prompting dilated exam to look for an associated retinal tear at one of these vulnerable attachment sites.",
     ],
   },
+  "vitreousgross-shape-landmarks": {
+    name: "Vitreous Shape & Named Landmarks — Patellar Fossa, Anterior/Posterior Hyaloid, Cortex",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond its attachment sites (this topic's sibling objective), the vitreous body has a specific overall shape and several distinctly named surface landmarks — the patellar fossa, anterior and posterior hyaloid faces, and cortex — that are frequently tested by name and location, extending your existing Vitreous Composition & Structure and Cloquet's Canal content into precise gross anatomic terminology." },
+      { h: "Overall shape", t: "The vitreous body is roughly spherical/ovoid overall, but not uniformly so — its ANTERIOR surface is not convex like the rest of the sphere but instead flattened into a shallow, saucer-like concavity called the patellar fossa (below), which cradles the convex posterior surface of the lens (already covered under Lens Gross Anatomy content); the vitreous is thus best described as a modified sphere with this one flattened anterior indentation." },
+      { h: "Patellar fossa", t: "The patellar fossa (also called the hyaloid fossa) is this shallow, saucer-shaped depression on the anterior vitreous face, precisely where the vitreous body's anterior surface conforms to and contacts the posterior lens capsule (already covered under Lens Zonular Attachment content) — the depression is most pronounced in youth, when vitreoretinal/vitreolenticular apposition is tightest, and becomes progressively shallower and less distinct with age as the vitreous liquefies (already covered under Vitreous Aging & Syneresis content)." },
+      { h: "Anterior and posterior hyaloid — the vitreous body's two named boundary faces", t: "The ANTERIOR hyaloid (face) is the condensed membrane forming the vitreous body's anterior boundary, extending circumferentially from the ora serrata (already covered) and forming the patellar fossa where it meets the lens — after cataract surgery or in aphakia, the anterior hyaloid can bulge forward through a compromised posterior capsule (already covered under Posterior Capsule Opacification content). The POSTERIOR hyaloid (face) is the vitreous body's posterior boundary, applied directly against the internal limiting membrane of the retina (already covered) across the vitreous base, disc margin, and macula (this topic's sibling attachment-site objective) — it is specifically the posterior hyaloid's separation from the retina that constitutes posterior vitreous detachment (already covered), making 'posterior hyaloid detachment' a clinically synonymous term for PVD." },
+      { h: "Cortex", t: "The vitreous cortex is a thin, condensed peripheral shell of the vitreous body — both an anterior and posterior cortex are recognized — where collagen fibrils are markedly more densely packed than in the liquid-gel central vitreous (already covered under Composition & Structure content), and where the sparse hyalocyte population (already covered) is concentrated; this dense cortical condensation is precisely what allows the cortex to function as a coherent, separable structural sheet during PVD, rather than the vitreous simply dissolving uniformly." },
+    ],
+    memorizeIt: [
+      "Vitreous shape: roughly spherical/ovoid, EXCEPT for a shallow anterior concavity — the patellar fossa — where it cradles the posterior lens.",
+      "Patellar (hyaloid) fossa: saucer-shaped anterior depression conforming to the lens; most pronounced in youth, shallows with age-related liquefaction.",
+      "Anterior hyaloid: anterior vitreous boundary (ora serrata to patellar fossa). Posterior hyaloid: posterior vitreous boundary against the retina — its separation from the retina IS posterior vitreous detachment.",
+      "Vitreous cortex: densely-packed collagen shell (anterior + posterior) at the vitreous periphery, concentrating hyalocytes — distinct from the more liquid central vitreous gel.",
+    ],
+    applyIt: [
+      "This gives you the precise named anatomy behind terminology used loosely elsewhere on this platform — recognizing that 'posterior hyaloid detachment' and 'PVD' (already covered) refer to the identical event, and that the patellar fossa's age-related shallowing (already connected to Vitreous Aging & Syneresis content) is part of the same structural loosening that predisposes to PVD, ties this topic's named landmarks directly into the mechanical detachment process covered throughout your existing Vitreous/Retina content.",
+    ],
+  },
   "retinagross-layers": {
     name: "The Ten Retinal Layers",
     priority: "MUST",
@@ -15453,13 +15561,16 @@ const STUDY_PAGES = {
     sources: ["Standard ocular anatomy references"],
     learnIt: [
       { h: "Overview", t: "The retina's ten histologic layers, organized from outer (choroid-facing) to inner (vitreous-facing), directly ground your existing Phototransduction Cascade and Visual Pathway Physiology content in specific structural detail." },
-      { h: "The ten layers, outer to inner", t: "From outermost to innermost: (1) retinal pigment epithelium (RPE, already covered), (2) photoreceptor outer segments, (3) photoreceptor inner segments, (4) external limiting membrane, (5) outer nuclear layer (photoreceptor cell bodies), (6) outer plexiform layer (photoreceptor-to-bipolar cell synapses), (7) inner nuclear layer (bipolar, horizontal, amacrine cell bodies), (8) inner plexiform layer (bipolar-to-ganglion cell synapses), (9) ganglion cell layer (ganglion cell bodies), and (10) nerve fiber layer (ganglion cell AXONS, already covered as converging to form the optic nerve under Visual Pathway Physiology) plus the internal limiting membrane as the innermost boundary." },
+      { h: "The ten layers, outer to inner", t: "From outermost to innermost: (1) retinal pigment epithelium (RPE, already covered), (2) photoreceptor layer (rod and cone inner and outer segments), (3) external limiting membrane, (4) outer nuclear layer (photoreceptor cell bodies), (5) outer plexiform layer (photoreceptor-to-bipolar cell synapses), (6) inner nuclear layer (bipolar, horizontal, amacrine cell bodies), (7) inner plexiform layer (bipolar-to-ganglion cell synapses), (8) ganglion cell layer (ganglion cell bodies), (9) nerve fiber layer (ganglion cell AXONS, already covered as converging to form the optic nerve under Visual Pathway Physiology), and (10) internal limiting membrane, the innermost boundary abutting the vitreous." },
       { h: "Clinical relevance of layer-specific pathology", t: "Understanding these specific layers explains why certain conditions affect the retina at a precise structural level — X-linked retinoschisis (this topic's sibling developmental objective) classically splits the retina at the nerve fiber layer, distinct from rhegmatogenous retinal detachment's separation plane between the RPE and photoreceptor outer segments (already covered), a genuinely important distinguishing structural detail between these two conditions that can both cause visual field/acuity symptoms." },
+      { h: "Retinal glial cells — the Müller cell as the retina's signature glial type", t: "The Müller cell is the retina's principal and most distinctive glial cell — a radial glial cell whose cell body sits in the inner nuclear layer (already covered) but whose processes span the ENTIRE retinal thickness, from the external limiting membrane (where its apical processes, together with photoreceptor inner segments, form this membrane's junctional complexes) to the internal limiting membrane (where its basal endfeet form this membrane's inner boundary against the vitreous, already covered). Müller cells provide structural scaffolding for the entire neural retina, buffer extracellular potassium released during neuronal activity, recycle neurotransmitters (including glutamate, already covered under Retinal Neurotransmitters content), store glycogen, and contribute to the inner retinal component of retinal metabolism. Two other glial types are also present: astrocytes, confined to the nerve fiber/ganglion cell layers where they support the retinal vasculature (already covered under Retinal Blood Flow content), and microglia, the retina's resident immune cells, distributed through the plexiform layers for immune surveillance." },
     ],
     memorizeIt: [
-      "Ten retinal layers, OUTER to INNER: RPE → photoreceptor outer segments → inner segments → external limiting membrane → outer nuclear layer → outer plexiform layer → inner nuclear layer → inner plexiform layer → ganglion cell layer → nerve fiber layer (+ internal limiting membrane).",
+      "Ten retinal layers, OUTER to INNER: RPE → photoreceptor layer (outer/inner segments) → external limiting membrane → outer nuclear layer → outer plexiform layer → inner nuclear layer → inner plexiform layer → ganglion cell layer → nerve fiber layer → internal limiting membrane.",
       "Nerve fiber layer = ganglion cell AXONS, converging to form the optic nerve (already covered under Visual Pathway Physiology).",
       "Retinal detachment (already covered): separation plane between RPE and photoreceptor outer segments. X-linked retinoschisis: splits at the nerve fiber layer — a distinct structural plane.",
+      "Müller cells: radial glia spanning the ENTIRE retina (external limiting membrane to internal limiting membrane) — structural support, K+ buffering, glutamate recycling, glycogen storage.",
+      "Astrocytes: confined to nerve fiber/ganglion cell layers, support retinal vasculature. Microglia: resident immune cells, distributed through the plexiform layers.",
     ],
     applyIt: [
       "This gives you the precise layer-by-layer structure directly underlying your existing Phototransduction Cascade and Retinal Detachment content — knowing that RD's separation plane is between the RPE and photoreceptor outer segments (rather than anywhere else in these ten layers) explains why RD characteristically causes profound vision loss (separating photoreceptors from their essential RPE-dependent visual cycle support, already covered) in the detached area, distinct from the different structural plane and typically better-preserved function seen in X-linked retinoschisis (this topic's sibling developmental objective).",
@@ -15494,18 +15605,22 @@ const STUDY_PAGES = {
       { h: "Overview", t: "The choroid develops from periocular mesenchyme surrounding the optic cup, sharing its predominant neural crest origin with the sclera, corneal stroma, and iris/ciliary body stroma already covered this session, continuing this platform's established theme of neural-crest-derived ocular connective/vascular tissues." },
       { h: "Neural crest origin and vascular differentiation", t: "Neural crest-derived mesenchyme surrounding the optic cup differentiates into the choroid's stromal and vascular elements, with the vasculature itself forming through angiogenesis within this mesenchymal tissue, ultimately organizing into the three-layered structure (Haller's, Sattler's, choriocapillaris, already covered) — this shares the same fundamental neural crest mesenchymal origin already established for the sclera (Scleral Development content) immediately external to it." },
       { h: "Continuity with the sclera and ciliary body", t: "Since the choroid, sclera, and ciliary body stroma (already covered) all arise from a shared neural crest mesenchymal population surrounding the developing eye, they form a structurally continuous, developmentally related tissue plane — the choroid is essentially continuous with the ciliary body stroma anteriorly (already covered under Ciliary Body Development) and bounded externally by the sclera, reflecting this common embryologic origin." },
+      { h: "Three stages of choroidal vascular development — an 'inside-out' sequence", t: "Choroidal vascularization proceeds in three progressive stages rather than appearing all at once: (1) an initial primitive capillary plexus first forms in the mesenchyme immediately adjacent to the developing RPE — the precursor of the choriocapillaris, already covered as the innermost, RPE-facing layer; (2) larger-caliber vessels then progressively differentiate external to this plexus, forming the future Sattler's (medium) and Haller's (large) layers, already covered; (3) the vasculature matures and organizes into the definitive three-layer adult pattern with formation of the vortex vein drainage system. This inside-out sequence — choriocapillaris first, larger outer vessels later — parallels the choriocapillaris's privileged position as the layer in closest, earliest-established contact with the metabolically demanding RPE/photoreceptor complex it will go on to nourish." },
+      { h: "Development of Bruch's membrane — a dual-source structure", t: "Bruch's membrane (already covered under Choroidal Layers content as the innermost choroidal boundary) develops from TWO separate embryologic sources that meet in the middle: an inner component derived from the RPE's own basal lamina, and an outer component derived from the choriocapillaris endothelium's basal lamina, with an elastic layer forming between them as the choriocapillaris differentiates (stage 1, above) — this dual RPE-plus-choroidal origin explains why age-related thickening and dysfunction of Bruch's membrane (already covered as central to AMD pathophysiology) can reflect pathology originating from either its RPE-derived or choroid-derived side." },
     ],
     memorizeIt: [
       "Choroid develops from NEURAL CREST-derived periocular mesenchyme — same origin as sclera, corneal stroma, and iris/ciliary body stroma (already covered).",
       "Choroidal vasculature forms via angiogenesis within this mesenchymal tissue, organizing into the three-layered structure (already covered).",
       "Choroid, sclera, and ciliary body stroma are developmentally continuous, sharing a common neural crest mesenchymal origin.",
+      "3 stages of choroidal vascular development: (1) primitive capillary plexus adjacent to RPE (future choriocapillaris) → (2) larger outer vessels differentiate (future Sattler's/Haller's) → (3) maturation into the adult three-layer pattern with vortex vein drainage — an 'inside-out' sequence.",
+      "Bruch's membrane forms from TWO sources meeting in the middle: RPE basal lamina (inner) + choriocapillaris endothelial basal lamina (outer), with an elastic layer between.",
     ],
     applyIt: [
       "This extends the neural-crest-mesenchyme theme already established across your existing Scleral Development, Ciliary Body Development, and Corneal Development content — recognizing that the choroid, sclera, and ciliary body stroma are all developmentally continuous, common-origin tissues helps explain why inflammatory or structural disease can sometimes span these adjoining structures (e.g., posterior scleritis extending to involve the adjacent choroid).",
     ],
   },
   "vitreousdev-primary-secondary": {
-    name: "Primary vs. Secondary Vitreous Formation & Cloquet's Canal",
+    name: "Primary, Secondary & Tertiary Vitreous Formation & Cloquet's Canal",
     priority: "MUST",
     verification: "UNDER REVIEW",
     sources: ["Standard ocular embryology references"],
@@ -15514,10 +15629,12 @@ const STUDY_PAGES = {
       { h: "Primary vitreous", t: "The PRIMARY vitreous forms early in development and contains the hyaloid vascular system (already covered under Hyaloid Vascular System Regression & Persistent Fetal Vasculature content) — this primary vitreous is vascular and relatively small in volume compared to what follows." },
       { h: "Secondary vitreous", t: "The SECONDARY vitreous forms later, produced by the retina itself, and is avascular, composed of collagen and hyaluronic acid (already covered under Vitreous Composition & Structure content) — the secondary vitreous progressively surrounds and grows to vastly outsize the primary vitreous, compressing it centrally into a narrow channel." },
       { h: "Cloquet's canal — the residual channel", t: "As the hyaloid vascular system (contained within the primary vitreous) regresses (already covered under this topic's sibling Persistent Fetal Vasculature content), it leaves behind Cloquet's canal — a normal, clinically insignificant, narrow, S-shaped or straight optically clearer channel running from the optic disc to the posterior lens surface, marking the former path of the hyaloid artery within the otherwise gel-like secondary vitreous that comprises essentially the entire adult vitreous volume." },
+      { h: "Tertiary vitreous — a third, structurally distinct stage forming the zonules", t: "A THIRD stage, the tertiary vitreous, forms last and is structurally and functionally distinct from both earlier stages: rather than contributing to the gel body of the vitreous itself, tertiary vitreous fibrils condense at the equatorial periphery of the lens (already covered under Lens Development content) to form the zonular fibers (Zinn's zonules) — the suspensory ligament connecting the ciliary body to the lens equator, already covered under Ciliary Body/Accommodation content. Tertiary vitreous carries no hyaloid vasculature remnant of its own (unlike primary vitreous) and does not persist as part of the adult vitreous gel — instead its fibrillar product (the zonules) persists as a permanent structure entirely separate from the vitreous cavity." },
     ],
     memorizeIt: [
       "Primary vitreous: forms early, VASCULAR, contains the hyaloid vascular system (already covered).",
       "Secondary vitreous: forms later from the retina, AVASCULAR (collagen + hyaluronic acid, already covered), compresses primary vitreous centrally.",
+      "Tertiary vitreous: forms last, condenses at the lens equator to become the zonular fibers (Zinn's zonules) — not part of the adult vitreous gel, and carries no hyaloid vasculature remnant.",
       "Cloquet's canal: residual channel from optic disc to posterior lens, marking the regressed hyaloid artery's former path — a normal, clinically insignificant finding within the adult (secondary) vitreous.",
     ],
     applyIt: [
@@ -15563,6 +15680,27 @@ const STUDY_PAGES = {
       "This gives you a genuinely important structural distinction extending your existing Retinal Detachment and (this session's) iris coloboma content — recognizing that X-linked retinoschisis splits at a completely different retinal layer (nerve fiber layer) than retinal detachment (RPE/photoreceptor interface) explains why these two conditions, despite both causing visual field/acuity symptoms, have different clinical appearances and prognoses, while chorioretinal coloboma's shared embryologic mechanism with iris coloboma explains why finding one should prompt careful examination for the other along the same fissure closure line.",
     ],
   },
+  "retinadev-vascular-macular": {
+    name: "Retinal Vascular Development & Postnatal Macular/Foveal Maturation",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard pediatric ophthalmology/embryology references"],
+    learnIt: [
+      { h: "Overview", t: "Two retinal developmental processes are NOT complete at birth — retinal vascularization and foveal/macular differentiation — and understanding both is essential board knowledge, since the retinal vasculature's incomplete development is the direct embryologic basis of retinopathy of prematurity, and the fovea's prolonged postnatal maturation explains why infant visual acuity is initially poor." },
+      { h: "Retinal vascular development — centrifugal growth from the optic disc", t: "Unlike the neurosensory retina itself, the retinal blood vessels are NOT present when the optic cup's two layers differentiate (already covered under Optic Cup content) — instead, spindle-cell vascular precursors migrate outward from the optic disc across the developing nerve fiber layer, following a pre-existing astrocyte scaffold, progressively vascularizing the retina in a centrifugal (disc-to-periphery) pattern beginning in mid-gestation. Nasal retina, having a shorter distance to travel, completes vascularization earlier; TEMPORAL retina, having the longest distance to the periphery, is the LAST region to become fully vascularized — normally not completing until near full-term birth." },
+      { h: "Clinical relevance — retinopathy of prematurity", t: "Because retinal vascularization is not complete until near term, infants born prematurely are born with a zone of persistently AVASCULAR peripheral retina (most extensively temporally, already covered as the last-vascularizing region) — the abrupt transition from the relatively hypoxic intrauterine environment to a relatively hyperoxic extrauterine environment (compounded by supplemental oxygen exposure in the NICU) disrupts the normal VEGF-driven vascularization signal, and the avascular/vascularized junction becomes a site of pathologic neovascularization — retinopathy of prematurity is thus a direct consequence of interrupting this specific normal developmental sequence, and connects directly to your existing Anti-VEGF Therapy content, since anti-VEGF agents are now also used to treat severe ROP." },
+      { h: "Macular/foveal postnatal differentiation", t: "While most peripheral retina is histologically mature at birth, the MACULA — and especially the fovea at its center (already covered under Retinal Landmarks content) — is one of the LAST retinal regions to complete differentiation, continuing to mature for approximately the first several years of postnatal life. Foveal maturation involves progressive centrifugal displacement of the inner retinal layers (ganglion cells, bipolar cells, and overlying layers) away from the foveal center, thinning the fovea and allowing more direct, less-scattered light to reach the underlying cone photoreceptors, alongside continued elongation and packing of the foveal cones themselves — this gradual anatomic maturation, not complete until roughly age 4, is the structural basis for the well-known postnatal improvement in visual acuity over the first several years of life." },
+    ],
+    memorizeIt: [
+      "Retinal vessels are NOT present at optic cup differentiation — they grow centrifugally (disc → periphery) from spindle-cell precursors following an astrocyte scaffold, beginning mid-gestation.",
+      "TEMPORAL retina is the LAST region to complete vascularization (longest distance from disc) — normally not finished until near full-term birth.",
+      "Retinopathy of prematurity: premature birth leaves peripheral (especially temporal) retina persistently avascular; hyperoxic exposure disrupts VEGF-driven vascularization, triggering pathologic neovascularization at the vascular/avascular junction.",
+      "The fovea/macula is one of the LAST retinal regions to fully differentiate — foveal maturation (inner layer displacement, cone packing) continues postnatally until roughly age 4, underlying infant visual acuity improvement.",
+    ],
+    applyIt: [
+      "This gives you the direct embryologic explanation for retinopathy of prematurity screening protocols in premature infants, and connects your existing Anti-VEGF Therapy content (already covered for AMD/diabetic retinopathy) to its expanding role in severe ROP — both are VEGF-driven pathologic neovascularization at a junction between vascularized and ischemic/avascular retina, just arising from opposite developmental circumstances (premature interruption of normal vascular growth vs. adult ischemia-driven VEGF upregulation).",
+    ],
+  },
   "retinapharmgen-routes": {
     name: "Drug Delivery Routes to the Posterior Segment — Intravitreal vs. Systemic",
     priority: "MUST",
@@ -15573,11 +15711,15 @@ const STUDY_PAGES = {
       { h: "Why topical drops are inadequate for posterior segment disease", t: "Topical eye drops, effective for anterior segment structures (already covered extensively under Cornea/Lens/Anterior Uvea Pharmacology content), achieve negligible therapeutic concentration at the retina and choroid, since the diffusion distance from the ocular surface to the posterior segment — through the full thickness of the vitreous or around/through the entire anterior segment — is simply too great for adequate drug penetration." },
       { h: "Intravitreal injection — the primary posterior segment route", t: "Intravitreal injection — direct injection of medication into the vitreous cavity — has become the primary route for many modern retinal therapies (anti-VEGF agents, this topic's sibling objective; corticosteroid implants, this topic's other sibling objective), bypassing the diffusion barrier entirely by placing the drug directly adjacent to its target tissue, though at the cost of requiring a repeated invasive procedure (with its own small but real risks, this topic's sibling indications objective) rather than a simple topical drop." },
       { h: "Systemic routes", t: "Systemic (oral/IV) administration can reach the posterior segment for certain conditions (e.g., systemic corticosteroids or immunosuppressants for posterior uveitis, already covered under Anterior Uvea Pharmacology content), but requires overcoming the blood-retinal barrier — analogous to the blood-aqueous barrier already covered — generally necessitating higher systemic doses with correspondingly greater systemic side-effect exposure than a locally-targeted intravitreal approach." },
+      { h: "Factors affecting intravitreal drug bioavailability", t: "Once injected, a drug's molecular size and structure determine its intravitreal half-life and clearance route: larger molecules (e.g., aflibercept's fusion protein or full antibodies like bevacizumab, already covered under Anti-VEGF Therapy content) clear more slowly and diffuse less readily out through the retina, generally giving a LONGER intravitreal duration of action than smaller fragments (e.g., ranibizumab's Fab fragment) — this size-dependent half-life difference is part of why different anti-VEGF agents are dosed at different injection intervals in practice. Lipophilicity and protein binding similarly govern diffusion and retention for other intravitreally-delivered drugs (e.g., corticosteroid implants, this topic's sibling objective)." },
+      { h: "Preservatives — why intravitreal formulations must be preservative-free", t: "Preservatives such as benzalkonium chloride (BAK), routinely used in topical ophthalmic drops (already covered under Cornea Pharmacology content) to prevent microbial contamination in a multi-dose bottle, are directly TOXIC to intraocular structures — the retina, lens, and other intraocular tissues lack the ocular surface's relative tolerance for these compounds. For this reason, any medication intended for intravitreal or intracameral injection (already covered under Lens/Cataract Pharmacology's intracameral antibiotic content) must be specially compounded as preservative-free, a critical practical distinction from the preserved multi-dose topical formulations used for anterior segment disease." },
     ],
     memorizeIt: [
       "Topical drops achieve negligible therapeutic concentration at the retina/choroid — diffusion distance is too great (unlike anterior segment structures, already covered).",
       "Intravitreal injection: primary modern route for posterior segment therapy — bypasses the diffusion barrier by direct placement, at the cost of an invasive repeated procedure.",
       "Systemic routes must overcome the blood-retinal barrier (analogous to the blood-aqueous barrier, already covered) — higher doses, more systemic side effects than local intravitreal delivery.",
+      "Larger intravitreal molecules (full antibodies, fusion proteins) generally have LONGER intravitreal half-life than smaller fragments — a key bioavailability factor distinguishing anti-VEGF agents' dosing intervals.",
+      "Preservatives (e.g., BAK, already covered as a topical additive) are TOXIC intraocularly — all intravitreal/intracameral medications must be preservative-free, unlike standard multi-dose topical drops.",
     ],
     applyIt: [
       "This gives you the fundamental delivery-strategy contrast between anterior and posterior segment pharmacology already implicit across your existing Cornea, Lens, and Anterior Uvea Pharmacology content — explaining why retinal disease treatment (already covered: AMD, diabetic retinopathy, CRVO) so often requires office-based intravitreal injection procedures rather than the topical drops sufficient for most anterior segment conditions.",
@@ -15590,11 +15732,13 @@ const STUDY_PAGES = {
     sources: ["Standard ocular pharmacology references"],
     learnIt: [
       { h: "Overview", t: "Anti-VEGF (vascular endothelial growth factor) therapy directly targets the same angiogenic signaling pathway already established under your existing Rubeosis Iridis content, here treated at its retinal source rather than downstream on the iris — representing one of the most transformative modern ophthalmic drug classes." },
-      { h: "Mechanism", t: "Anti-VEGF agents (bevacizumab, ranibizumab, aflibercept) are antibodies or antibody fragments that bind and neutralize VEGF, the pro-angiogenic signaling protein already established as the driver of pathologic retinal/iris neovascularization (already covered under Rubeosis Iridis content) and of the increased vascular permeability that causes macular edema — administered via intravitreal injection (this topic's sibling general-principles objective) directly into the vitreous cavity adjacent to the retina." },
+      { h: "Mechanism — not all agents share the same molecular format or target", t: "Bevacizumab (a full-length humanized monoclonal antibody) and ranibizumab (an antibody Fab fragment derived from the same parent antibody) both bind and neutralize VEGF-A specifically. Aflibercept is NOT an antibody at all — it is a recombinant fusion protein ('VEGF-Trap') combining VEGF-binding domains from VEGF receptors 1 and 2 with an antibody Fc region, and it binds a broader set of ligands: VEGF-A, VEGF-B, and placental growth factor (PlGF). Faricimab, the newest agent, is a bispecific antibody that binds two distinct targets — VEGF-A AND angiopoietin-2 (Ang-2) — simultaneously blocking angiogenesis/permeability (VEGF-A) and vascular destabilization (Ang-2), a dual mechanism broader than any of the other three agents." },
       { h: "Clinical applications", t: "Anti-VEGF therapy is first-line treatment for neovascular ('wet') AMD (already covered, blocking choroidal neovascularization originating from the choriocapillaris already covered under Choroidal Layers content), diabetic macular edema, and macular edema from CRVO/BRVO (already covered) — in each case directly addressing the VEGF-driven abnormal vascular permeability or neovascularization responsible for vision loss in that specific disease." },
     ],
     memorizeIt: [
-      "Anti-VEGF agents (bevacizumab, ranibizumab, aflibercept): bind/neutralize VEGF, the same angiogenic signal already established as driving rubeosis iridis (already covered) — here targeted directly at the retina/choroid.",
+      "Bevacizumab (full antibody) and ranibizumab (Fab fragment): bind VEGF-A specifically.",
+      "Aflibercept: a fusion protein ('VEGF-Trap'), NOT an antibody — binds VEGF-A, VEGF-B, AND placental growth factor (PlGF), broader than bevacizumab/ranibizumab.",
+      "Faricimab: a bispecific antibody binding BOTH VEGF-A and angiopoietin-2 (Ang-2) — the broadest dual mechanism of the four agents.",
       "Administered via intravitreal injection (this topic's sibling objective).",
       "First-line for: neovascular (wet) AMD, diabetic macular edema, CRVO/BRVO-related macular edema (all already covered).",
     ],
@@ -15640,6 +15784,25 @@ const STUDY_PAGES = {
       "This gives you the genuinely important risk-profile counseling point extending your existing Lens & Cataract and Glaucoma steroid-response content into this specific high-exposure delivery route — a phakic patient starting long-term fluocinolone implant therapy for chronic macular edema should be counseled that cataract surgery and/or glaucoma management are likely eventual consequences of this treatment, not merely theoretical risks, directly connecting two already-covered disease processes to this specific therapeutic context.",
     ],
   },
+  "retinapharm-nsaid": {
+    name: "Topical NSAIDs for Cystoid Macular Edema — Non-Steroidal Anti-Inflammatory Mechanism",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard ocular pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Topical non-steroidal anti-inflammatory drugs (NSAIDs) offer a genuinely distinct, non-steroid mechanism for treating and preventing cystoid macular edema (CME, already covered under Retina Pathology content), particularly pseudophakic (Irvine-Gass) CME, complementing rather than duplicating the corticosteroid mechanisms already covered in this topic's sibling steroid objectives." },
+      { h: "Mechanism — COX inhibition, not broad immunosuppression", t: "Ophthalmic NSAIDs (e.g., ketorolac, nepafenac, bromfenac) inhibit cyclooxygenase (COX), blocking the conversion of arachidonic acid to prostaglandins — prostaglandins promote inflammation and increase vascular permeability at the blood-retinal barrier, so blocking their synthesis directly reduces the fluid leakage responsible for macular edema. This is a genuinely narrower, more targeted mechanism than corticosteroids' broad anti-inflammatory gene transcription effects (already covered under Intravitreal Corticosteroid content), which is why NSAIDs carry a substantially lower risk of the steroid-specific complications (cataract acceleration, steroid-response glaucoma, already covered) that make long-term steroid use problematic." },
+      { h: "Clinical use — perioperative CME prophylaxis and treatment", t: "Topical NSAIDs are widely used perioperatively around cataract surgery (already covered under Lens/Cataract Pharmacology content) to reduce the incidence of pseudophakic CME, and are first-line treatment (often combined with topical corticosteroids) once Irvine-Gass CME (already covered) has developed — since NSAIDs avoid steroid-specific IOP/cataract risk, they are a particularly attractive option for prolonged use in patients where those steroid risks are a specific concern." },
+    ],
+    memorizeIt: [
+      "Ophthalmic NSAIDs (ketorolac, nepafenac, bromfenac): inhibit COX → block prostaglandin synthesis → reduce blood-retinal barrier permeability/macular fluid leakage.",
+      "Narrower, more targeted mechanism than corticosteroids — lower risk of steroid-specific cataract/IOP complications (already covered).",
+      "Used perioperatively to reduce pseudophakic CME incidence, and as first-line (often with steroids) treatment of established Irvine-Gass CME (already covered).",
+    ],
+    applyIt: [
+      "This gives you the non-steroidal counterpart to your existing Intravitreal Corticosteroid and Steroid Risks content — recognizing that NSAIDs and steroids treat macular edema through genuinely different mechanisms (COX/prostaglandin inhibition vs. broad anti-inflammatory gene effects) explains why NSAIDs are preferred for long-term perioperative CME prophylaxis specifically because they avoid the cataract/glaucoma risk profile already established for chronic steroid exposure.",
+    ],
+  },
   "retinapharm-intravitreal-antibiotics": {
     name: "Intravitreal Antibiotics for Endophthalmitis Treatment",
     priority: "MUST",
@@ -15649,11 +15812,13 @@ const STUDY_PAGES = {
       { h: "Overview", t: "While Lens Pharmacology content already covered ANTIBIOTIC PROPHYLAXIS to prevent endophthalmitis, established endophthalmitis (once it has occurred) requires a genuinely different, more aggressive TREATMENT approach — direct intravitreal antibiotic injection — representing a true ophthalmic emergency." },
       { h: "Why intravitreal (not topical/systemic) treatment", t: "Once endophthalmitis is established, topical and systemic antibiotics (already covered under Cornea Pharmacology content for external ocular infection) cannot achieve adequate therapeutic concentration within the vitreous cavity (the same posterior segment penetration barrier already covered under this topic's sibling general-principles objective) — requiring direct intravitreal injection of antibiotics (typically vancomycin for gram-positive coverage plus ceftazidime for gram-negative coverage, extending the same antibiotic classes already covered under Cornea Pharmacology's fortified antibiotic content) directly into the vitreous cavity for adequate local concentration." },
       { h: "The tap-and-inject emergency protocol", t: "Suspected endophthalmitis requires an urgent 'tap and inject' procedure — often performed the SAME DAY as presentation — where a vitreous sample is obtained for culture (the 'tap') immediately followed by intravitreal antibiotic injection (the 'inject') empirically, without waiting for culture results, given the time-sensitive, vision-threatening nature of this infection — a genuine ophthalmic emergency paralleling the urgency already established for other sight-threatening infections on this platform." },
+      { h: "Beyond bacteria — intravitreal antivirals and antifungals", t: "Posterior segment infection isn't always bacterial: cytomegalovirus (CMV) retinitis, occurring primarily in significantly immunocompromised patients (e.g., advanced HIV/AIDS or transplant recipients on immunosuppression), is treated with intravitreal ganciclovir injections (or a ganciclovir implant) and/or systemic valganciclovir, targeting CMV's viral DNA polymerase. Fungal endophthalmitis (from either exogenous surgical/traumatic inoculation or endogenous hematogenous spread, e.g., in candidemia) is treated with intravitreal amphotericin B or voriconazole, agents targeting fungal cell membrane ergosterol synthesis/binding rather than bacterial cell wall or protein synthesis — a genuinely distinct antimicrobial class from the vancomycin/ceftazidime antibacterial regimen used for bacterial endophthalmitis." },
     ],
     memorizeIt: [
       "Established endophthalmitis TREATMENT requires intravitreal antibiotic injection — topical/systemic routes cannot achieve adequate vitreous cavity concentration (same barrier as this topic's sibling general-principles objective).",
       "Typical intravitreal antibiotics: vancomycin (gram-positive) + ceftazidime (gram-negative) — extends existing fortified antibiotic classes already covered under Cornea Pharmacology.",
       "'Tap and inject': vitreous sample for culture + empiric intravitreal antibiotic injection, performed URGENTLY (often same-day) without waiting for culture results.",
+      "CMV retinitis (immunocompromised patients): intravitreal ganciclovir ± systemic valganciclovir. Fungal endophthalmitis: intravitreal amphotericin B or voriconazole.",
     ],
     applyIt: [
       "This gives you the genuine emergency treatment protocol directly extending your existing Cornea Anti-Infective Agents and Lens/Cataract Endophthalmitis Prophylaxis content — distinguishing PREVENTION (povidone-iodine antisepsis + intracameral antibiotic at the time of surgery, already covered) from TREATMENT of established endophthalmitis (urgent tap-and-inject with intravitreal antibiotics) clarifies that these are two entirely different clinical scenarios requiring different interventions, both aimed at the same devastating potential outcome.",
@@ -15695,6 +15860,28 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you a genuinely satisfying parallel extending your existing Trypan Blue Capsule Staining content (Lens/Cataract Pharmacology) to a distinct posterior segment surgical context — both applications share the identical underlying principle (staining an otherwise nearly-invisible surgically critical membrane to enable precise, controlled peeling), just applied to different tissue targets (lens capsule vs. internal limiting membrane) in different surgical procedures.",
+    ],
+  },
+  "retinapharm-fluorescein-angiography": {
+    name: "Intravenous Fluorescein Angiography — Mechanism & Adverse Effects",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ocular pharmacology/imaging references"],
+    learnIt: [
+      { h: "Overview", t: "Intravenous fluorescein angiography (FA) is the primary dye study for imaging the RETINAL vasculature, complementing rather than duplicating ICG angiography's choroidal-vessel imaging (this topic's sibling objective) — FA is referenced repeatedly across your existing AMD, CRVO, and CME pathology content as a diagnostic test, and understanding the dye's own pharmacology and adverse effect profile is a distinct, testable pharmacology objective in its own right." },
+      { h: "Mechanism", t: "Sodium fluorescein, injected intravenously, is a small, water-soluble molecule that fluoresces yellow-green when excited by blue light — as it circulates through the retinal vasculature, a rapid-sequence camera captures its transit, timing, and any abnormal leakage. Fluorescein leaks freely wherever the blood-retinal barrier (already covered under Retinal Blood Flow content) is disrupted — such as at sites of neovascularization (already covered under Wet AMD content) or increased vascular permeability (already covered under CRVO/BRVO and CME content) — producing the characteristic patterns (e.g., CME's 'petaloid' late leakage, already covered) that make FA diagnostically useful." },
+      { h: "Adverse effects — common but generally benign, rare serious reactions", t: "Nausea is the most common adverse effect, occurring in a meaningful minority of patients (roughly one in ten) shortly after injection, and is generally transient and self-limited. Transient yellowish discoloration of the skin and urine is expected and harmless, resolving as the dye is renally cleared, and patients should be counseled about this in advance. Vasovagal reactions and urticaria/pruritus can occur; true anaphylaxis is rare but is the serious, potentially life-threatening reaction that requires the injection site/setting to have emergency management capability available, similar in principle to the anaphylaxis risk already covered for other injectable/systemic ocular medications." },
+      { h: "Extravasation risk", t: "Because fluorescein is injected as a bolus into a peripheral vein, extravasation at the injection site can cause localized pain and, uncommonly, tissue injury — proper injection technique and vein selection reduce this risk, a practical procedural consideration distinct from the dye's systemic adverse effect profile." },
+    ],
+    memorizeIt: [
+      "IV fluorescein: images RETINAL vasculature (vs. ICG's choroidal imaging, already covered) — leaks wherever the blood-retinal barrier is disrupted (neovascularization, vascular permeability, already covered).",
+      "Most common adverse effect: transient nausea (~10% of patients).",
+      "Expected, harmless: transient yellow discoloration of skin and urine.",
+      "Rare but serious: anaphylaxis — requires emergency management capability at the injection setting.",
+      "Extravasation at the injection site can cause local pain/tissue injury — a procedural, not systemic, risk.",
+    ],
+    applyIt: [
+      "This gives you the dye pharmacology underlying the fluorescein angiography findings referenced throughout your existing AMD, CRVO/BRVO, and CME pathology content — a patient about to undergo FA should be counseled about expected transient nausea and skin/urine discoloration in advance, while the rare anaphylaxis risk is why FA is performed in a monitored clinical setting rather than treated as a routine, risk-free imaging test.",
     ],
   },
   "retinapharm-areds2": {
@@ -17075,10 +17262,12 @@ const FLASHCARDS = [
   { id: "fc-150", objectiveId: "retina-crvo", front: "Describe the classic fundus appearance of CRVO.", back: "\"Blood and thunder\" — diffuse four-quadrant hemorrhages, venous tortuosity, cotton wool spots, disc edema." },
   { id: "fc-151", objectiveId: "retina-crvo", front: "What serious complication is ischemic CRVO at high risk for, and by when?", back: "Neovascular glaucoma, often within about 90 days (\"90-day glaucoma\")." },
   { id: "fc-152", objectiveId: "retina-crvo", front: "What test helps distinguish ischemic from non-ischemic CRVO?", back: "Fluorescein angiography, to quantify capillary non-perfusion." },
+  { id: "fc-1573", objectiveId: "retina-crvo", front: "Where does BRVO characteristically occur, and why?", back: "At an arteriovenous (AV) crossing, where a hypertensive, thickened artery compresses the vein sharing its common adventitial sheath, precipitating thrombosis." },
   // CRAO
   { id: "fc-153", objectiveId: "retina-crao", front: "What is the classic fundus finding in CRAO?", back: "Diffuse retinal whitening with a cherry-red spot at the fovea." },
   { id: "fc-154", objectiveId: "retina-crao", front: "Why is CRAO considered a stroke equivalent?", back: "It shares the same embolic/vascular mechanisms as cerebral stroke and carries significant risk of subsequent stroke — requires urgent systemic workup." },
   { id: "fc-155", objectiveId: "retina-crao", front: "What condition must be ruled out in an older patient with CRAO?", back: "Giant cell arteritis (check ESR/CRP)." },
+  { id: "fc-1574", objectiveId: "retina-crao", front: "How does BRAO's visual field defect differ from CRAO's presentation?", back: "BRAO causes a sector (altitudinal/wedge) field defect from a branch embolus, with acuity potentially preserved if the fovea is spared — unlike CRAO's severe global monocular vision loss." },
   // PVD
   { id: "fc-156", objectiveId: "retina-pvd", front: "What classic entoptic finding confirms complete PVD on exam?", back: "A Weiss ring (detached ring of tissue from around the optic disc)." },
   { id: "fc-157", objectiveId: "retina-pvd", front: "What is the main clinical danger associated with PVD?", back: "An associated retinal tear, which can progress to retinal detachment if unrecognized." },
@@ -17803,8 +17992,16 @@ const FLASHCARDS = [
   // Rod-cone differences
   { id: "fc-638", objectiveId: "photophys-rod-cone", front: "Why is dark adaptation biphasic?", back: "Faster cone-mediated adaptation phase, followed by slower rod-mediated phase reaching greater ultimate sensitivity." },
   { id: "fc-639", objectiveId: "photophys-rod-cone", front: "Why does retinitis pigmentosa cause night blindness and peripheral loss before central/color vision loss?", back: "Rods (peripheral-dominant, scotopic) are preferentially affected, while cone-dominant central/color function is relatively preserved until later." },
+  { id: "fc-1575", objectiveId: "photophys-dark-current", front: "What ionic event maintains the photoreceptor's depolarized state in the dark?", back: "The dark current — high cGMP keeps cGMP-gated channels open, allowing continuous Na+/Ca2+ influx into the outer segment, keeping the cell at ~-40 mV." },
+  { id: "fc-1576", objectiveId: "photophys-dark-current", front: "What is the role of falling intracellular calcium during the light response?", back: "It is an active negative-feedback signal — activates guanylate cyclase (via GCAPs) to resynthesize cGMP and reopen channels, driving light adaptation/recovery." },
+  { id: "fc-1577", objectiveId: "photophys-interneurons", front: "What glutamate receptor type distinguishes ON from OFF bipolar cells?", back: "ON bipolar cells: metabotropic mGluR6 (inhibitory — light removes inhibition, causing depolarization). OFF bipolar cells: ionotropic AMPA/kainate (excitatory — light removes excitation, causing hyperpolarization)." },
+  { id: "fc-1578", objectiveId: "photophys-interneurons", front: "What neurotransmitter do horizontal cells use, and what receptive field feature does this create?", back: "GABA — provides lateral inhibition at the outer plexiform layer, forming the antagonistic SURROUND of center-surround receptive fields." },
+  { id: "fc-1579", objectiveId: "photophys-interneurons", front: "What is the function of the AII amacrine cell?", back: "It relays the rod bipolar cell signal into the cone bipolar/ganglion cell pathway via gap junctions and glycinergic synapses, since rods lack a direct pathway to ganglion cells." },
+  { id: "fc-1580", objectiveId: "photophys-bloodflow", front: "What supplies the inner vs. outer retina, and why does this matter clinically?", back: "Inner retina: central retinal artery/retinal circulation. Outer retina (photoreceptors, RPE): choriocapillaris diffusion only. This is why CRAO/CRVO spare the photoreceptors while choroidal disease spares the inner retina." },
+  { id: "fc-1581", objectiveId: "photophys-bloodflow", front: "How does retinal circulation regulation differ from choroidal circulation?", back: "Retinal circulation has no autonomic innervation and relies on local myogenic/metabolic autoregulation; choroidal circulation is autonomically innervated with very high, largely unregulated flow." },
   // Vitreous composition
   { id: "fc-640", objectiveId: "vitreousphys-composition", front: "What are the main structural components of the vitreous?", back: "Sparse type II collagen fibril meshwork and hyaluronic acid, in a matrix that is >98% water." },
+  { id: "fc-1582", objectiveId: "vitreousphys-composition", front: "What is the approximate adult vitreous volume, and why does vitrectomy accelerate cataract formation?", back: "~4 mL (~80% of ocular volume). Vitrectomy removes the ascorbate-rich antioxidant buffer and raises vitreous oxygen tension, accelerating nuclear cataract formation in phakic eyes." },
   { id: "fc-641", objectiveId: "vitreousphys-composition", front: "Name the three firmest vitreoretinal attachment points.", back: "Vitreous base, optic disc margin, and macula." },
   // Aging/syneresis
   { id: "fc-642", objectiveId: "vitreousphys-aging-syneresis", front: "What is vitreous syneresis?", back: "Progressive liquefaction of the vitreous gel, forming liquid pockets (lacunae) as collagen and hyaluronic acid separate." },
@@ -18721,23 +18918,39 @@ const FLASHCARDS = [
   { id: "fc-1305", objectiveId: "uveapharm-phenylephrine-test", front: "What is the phenylephrine blanching test result pattern that distinguishes episcleritis from scleritis?", back: "Episcleritis blanches with topical phenylephrine (superficial vessels); scleritis does NOT blanch (deep scleral vessels unaffected)." },
   { id: "fc-1306", objectiveId: "uveapharm-mydriasis-angle-contra", front: "What safety screening step should precede dilating any patient, and why?", back: "Assessing angle depth/occludability (gonioscopy) — dilation in a narrow/occludable angle can precipitate acute angle-closure glaucoma." },
   { id: "fc-1307", objectiveId: "choroidgross-layers", front: "List the three choroidal layers from outer to inner.", back: "Haller's layer (large vessels) → Sattler's layer (medium vessels) → choriocapillaris (fenestrated capillaries, against Bruch's membrane)." },
+  { id: "fc-1590", objectiveId: "choroidgross-layers", front: "What is the lamina fusca, and what space does it help form?", back: "A thin, pigmented layer of loose connective tissue where the choroid meets the sclera — forms the outer boundary of the (potential) suprachoroidal space." },
+  { id: "fc-1591", objectiveId: "choroidgross-layers", front: "What supplies the choroid arterially, and how does it drain venously?", back: "Short and long posterior ciliary arteries (branches of the ophthalmic artery) supply it; vortex veins (4-8) provide all venous drainage." },
   { id: "fc-1308", objectiveId: "choroidgross-function", front: "Why is the outer retina entirely dependent on the choroid, rather than retinal vessels, for its blood supply?", back: "The outer retina (photoreceptors + RPE) is avascular and depends on diffusion from the choriocapillaris across Bruch's membrane." },
   { id: "fc-1309", objectiveId: "vitreousgross-attachments", front: "Which vitreous attachment site is the strongest, and does it separate during normal PVD?", back: "The vitreous base (straddling the ora serrata) — it does NOT separate during normal PVD." },
   { id: "fc-1310", objectiveId: "vitreousgross-attachments", front: "What floater sign results from vitreous separation at the optic disc margin during PVD?", back: "A Weiss ring." },
+  { id: "fc-1593", objectiveId: "vitreousgross-shape-landmarks", front: "What is the patellar fossa?", back: "The shallow, saucer-shaped concavity on the anterior vitreous face where it cradles the posterior lens surface — most pronounced in youth, shallows with age." },
+  { id: "fc-1594", objectiveId: "vitreousgross-shape-landmarks", front: "What event is synonymous with 'posterior hyaloid detachment'?", back: "Posterior vitreous detachment (PVD) — the posterior hyaloid face separating from the retinal internal limiting membrane." },
   { id: "fc-1311", objectiveId: "retinagross-layers", front: "At what specific retinal layer does X-linked retinoschisis classically split, as opposed to retinal detachment's separation plane?", back: "Retinoschisis: nerve fiber layer. Retinal detachment: between the RPE and photoreceptor outer segments." },
+  { id: "fc-1592", objectiveId: "retinagross-layers", front: "What is the Müller cell, and what span does it cover?", back: "The retina's principal radial glial cell — spans the entire retinal thickness, from the external limiting membrane to the internal limiting membrane, providing structural support and K+ buffering." },
   { id: "fc-1312", objectiveId: "retinagross-landmarks", front: "What is the foveal avascular zone, and why does it lack blood vessels?", back: "The blood-vessel-free zone at the center of the fovea (foveola) — avoids degrading the optical path to the highest-acuity region; relies entirely on choroidal diffusion." },
   { id: "fc-1313", objectiveId: "choroiddev-origin", front: "What embryonic tissue gives rise to the choroid, and what other ocular structures share this origin?", back: "Neural crest-derived periocular mesenchyme — same origin as sclera, corneal stroma, and iris/ciliary body stroma." },
+  { id: "fc-1583", objectiveId: "choroiddev-origin", front: "Bruch's membrane develops from two separate sources — what are they?", back: "An inner component from the RPE's basal lamina and an outer component from the choriocapillaris endothelium's basal lamina, with an elastic layer forming between them." },
   { id: "fc-1314", objectiveId: "vitreousdev-primary-secondary", front: "What is Cloquet's canal, and is it pathologic?", back: "A normal, clinically insignificant residual channel from the regressed hyaloid artery, running from the optic disc to the posterior lens — not pathologic." },
+  { id: "fc-1572", objectiveId: "vitreousdev-primary-secondary", front: "What does tertiary vitreous become, and is it part of the adult vitreous gel?", back: "It condenses at the lens equator to form the zonular fibers (Zinn's zonules) — it is NOT part of the adult vitreous gel and carries no hyaloid vasculature remnant." },
   { id: "fc-1315", objectiveId: "retinadev-optic-cup", front: "What embryonic structure gives rise to the RPE and neurosensory retina, and how?", back: "The double-walled optic cup — outer layer becomes RPE, inner layer becomes neurosensory retina." },
   { id: "fc-1316", objectiveId: "retinadev-optic-cup", front: "Why does retinal detachment separate specifically at the RPE/photoreceptor interface?", back: "This is the potential space between the optic cup's original two embryonic layers — RD reopens this developmental cleavage plane." },
   { id: "fc-1317", objectiveId: "retinadev-anomalies", front: "What gene/protein is mutated in X-linked juvenile retinoschisis, and what is the classic foveal exam finding?", back: "RS1 gene/retinoschisin protein; classic 'spoke-wheel' foveal schisis pattern." },
+  { id: "fc-1595", objectiveId: "retinadev-vascular-macular", front: "Which region of the retina is the LAST to complete vascularization, and why does this matter for premature infants?", back: "The temporal retina (longest distance from the disc) — premature infants are born with this region still avascular, setting up retinopathy of prematurity when hyperoxic exposure disrupts normal VEGF-driven vascular growth." },
+  { id: "fc-1596", objectiveId: "retinadev-vascular-macular", front: "By approximately what age is foveal anatomic maturation complete, and what process drives it?", back: "Roughly age 4 — driven by centrifugal displacement of inner retinal layers away from the foveal center plus continued cone photoreceptor elongation/packing." },
   { id: "fc-1318", objectiveId: "retinapharmgen-routes", front: "Why can't topical eye drops achieve therapeutic drug concentrations at the retina/choroid?", back: "The diffusion distance from the ocular surface to the posterior segment is too great for adequate penetration." },
-  { id: "fc-1319", objectiveId: "retinapharmgen-antivegf", front: "Name the three anti-VEGF agents and their common mechanism.", back: "Bevacizumab, ranibizumab, aflibercept — bind and neutralize VEGF, the pro-angiogenic/permeability signal." },
+  { id: "fc-1584", objectiveId: "retinapharmgen-routes", front: "Why must intravitreal medications be preservative-free?", back: "Preservatives like benzalkonium chloride (BAK), well-tolerated on the ocular surface, are directly toxic to intraocular tissues (retina, lens), so intravitreal/intracameral formulations must be specially compounded without them." },
+  { id: "fc-1319", objectiveId: "retinapharmgen-antivegf", front: "Which anti-VEGF agent is not an antibody, and what does it bind?", back: "Aflibercept — a VEGF-Trap fusion protein binding VEGF-A, VEGF-B, and placental growth factor (PlGF), broader than the antibody-based agents (bevacizumab, ranibizumab), which bind VEGF-A only." },
+  { id: "fc-1571", objectiveId: "retinapharmgen-antivegf", front: "What makes faricimab's mechanism unique among anti-VEGF agents?", back: "It is a bispecific antibody that binds BOTH VEGF-A and angiopoietin-2 (Ang-2), targeting angiogenesis/permeability and vascular destabilization simultaneously." },
   { id: "fc-1320", objectiveId: "retinapharm-intravitreal-steroid", front: "What two intravitreal steroid implants are used for macular edema, and which lasts longer?", back: "Dexamethasone and fluocinolone acetonide implants; fluocinolone lasts significantly longer." },
   { id: "fc-1321", objectiveId: "retinapharm-steroid-risks", front: "What two complications are near-universal/high-incidence with long-term intravitreal steroid implant use?", back: "Cataract acceleration (phakic eyes) and steroid-response IOP elevation/glaucoma." },
+  { id: "fc-1585", objectiveId: "retinapharm-nsaid", front: "What is the mechanism of ophthalmic NSAIDs in treating CME?", back: "COX inhibition blocks prostaglandin synthesis, reducing blood-retinal barrier permeability and macular fluid leakage — a narrower mechanism than steroids, with lower cataract/IOP risk." },
+  { id: "fc-1586", objectiveId: "retinapharm-nsaid", front: "Name three ophthalmic NSAIDs used for macular edema.", back: "Ketorolac, nepafenac, bromfenac." },
   { id: "fc-1322", objectiveId: "retinapharm-intravitreal-antibiotics", front: "What does the 'tap and inject' protocol for suspected endophthalmitis involve?", back: "Vitreous sample for culture (tap) immediately followed by empiric intravitreal antibiotic injection (inject), without waiting for culture results." },
+  { id: "fc-1589", objectiveId: "retinapharm-intravitreal-antibiotics", front: "What is the treatment for CMV retinitis, and what population is at risk?", back: "Intravitreal ganciclovir (± systemic valganciclovir) in significantly immunocompromised patients (e.g., advanced HIV/AIDS, transplant recipients)." },
   { id: "fc-1323", objectiveId: "retinapharm-icg-angiography", front: "Why does ICG angiography image the choroid better than fluorescein angiography?", back: "ICG binds plasma proteins and fluoresces in near-infrared, penetrating through the RPE/pigment more effectively than fluorescein's visible-spectrum emission." },
   { id: "fc-1324", objectiveId: "retinapharm-intraop-dyes", front: "What retinal structure do ICG/brilliant blue G stain intraoperatively during vitrectomy, and for what procedures?", back: "The internal limiting membrane (ILM), for macular hole repair or epiretinal membrane removal." },
+  { id: "fc-1587", objectiveId: "retinapharm-fluorescein-angiography", front: "What is the most common adverse effect of IV fluorescein angiography, and what two findings are expected/harmless?", back: "Nausea (~10% of patients) is most common. Transient yellow discoloration of skin and urine is expected and harmless." },
+  { id: "fc-1588", objectiveId: "retinapharm-fluorescein-angiography", front: "What is the rare but serious adverse reaction to IV fluorescein, requiring emergency preparedness at the injection setting?", back: "Anaphylaxis." },
   { id: "fc-1325", objectiveId: "retinapharm-areds2", front: "Which patient population benefits from AREDS2 supplementation, and what does it NOT do?", back: "Intermediate AMD, or advanced AMD in one eye; does NOT prevent AMD onset and does NOT treat active wet AMD (that requires anti-VEGF)." },
   { id: "fc-1326", objectiveId: "retinapharm-antivegf-risks", front: "What theoretical systemic risk is associated with long-term anti-VEGF therapy, and in what patient population is it a particular consideration?", back: "Systemic thromboembolic events (stroke, MI), from small systemic drug absorption — particular consideration in patients with recent stroke/MI history." },
   { id: "fc-1327", objectiveId: "orbitalnerves-sensory", front: "List V1's three orbital branches.", back: "Lacrimal, frontal, and nasociliary nerves." },
@@ -21897,6 +22110,74 @@ const QUESTIONS = [
       b: "Correct — new flashes and floaters are the classic symptom presentation of PVD, and prompt dilated examination is needed to rule out a retinal tear at one of the firm vitreoretinal attachment points, since an undetected tear can progress to retinal detachment.",
       c: "Incorrect — oral medication has no role here; the concern is a mechanical retinal issue requiring direct examination.",
       d: "Incorrect — flashes and floaters are directly mechanistically related to vitreoretinal traction and potential tear formation.",
+    },
+  },
+  {
+    id: "q-333", objectiveId: "photophys-dark-current", type: "Conceptual", difficulty: "Hard",
+    stem: "In darkness, why are photoreceptors held at a depolarized membrane potential (roughly -40 mV) instead of the more negative resting potential typical of most neurons?",
+    choices: [
+      { id: "a", text: "High cGMP levels keep cGMP-gated cation channels open, allowing a continuous inward sodium/calcium 'dark current'" },
+      { id: "b", text: "Rhodopsin is constantly active in darkness, directly depolarizing the membrane" },
+      { id: "c", text: "Potassium channels are closed in darkness, trapping positive charge inside the cell" },
+      { id: "d", text: "The RPE actively depolarizes photoreceptors via direct electrical coupling" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — in darkness, high cGMP keeps cGMP-gated channels open, so sodium and calcium continuously flow into the outer segment (the 'dark current'), while potassium efflux continues via the Na+/K+-ATPase — the net effect is a depolarized baseline (~-40 mV) and tonic glutamate release.",
+      b: "Incorrect — rhodopsin is inactive (not isomerized) in darkness; light, not darkness, activates rhodopsin.",
+      c: "Incorrect — potassium channels remain functional in darkness; it is the cGMP-gated sodium/calcium channels being open, not potassium channel closure, that drives the depolarized dark state.",
+      d: "Incorrect — the RPE supports the visual cycle and outer segment maintenance but does not electrically depolarize photoreceptors directly.",
+    },
+  },
+  {
+    id: "q-334", objectiveId: "photophys-interneurons", type: "Conceptual", difficulty: "Hard",
+    stem: "ON and OFF bipolar cells receive the exact same presynaptic signal (photoreceptor glutamate release) yet respond in opposite directions to light. What explains this divergence?",
+    choices: [
+      { id: "a", text: "ON and OFF bipolar cells synapse with different types of photoreceptors that release different neurotransmitters" },
+      { id: "b", text: "ON bipolar cells express inhibitory metabotropic glutamate receptors (mGluR6), while OFF bipolar cells express excitatory ionotropic glutamate receptors (AMPA/kainate)" },
+      { id: "c", text: "ON bipolar cells are only connected to rods, and OFF bipolar cells are only connected to cones" },
+      { id: "d", text: "The divergence occurs at the ganglion cell level, not the bipolar cell level" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — both bipolar cell types receive glutamate, the same neurotransmitter released by all photoreceptors; the difference is in their postsynaptic receptor, not the presynaptic transmitter.",
+      b: "Correct — the postsynaptic receptor type determines the response sign: mGluR6 (ON bipolar cells) is inhibitory, so reduced glutamate in light causes depolarization, while AMPA/kainate receptors (OFF bipolar cells) are excitatory, so reduced glutamate in light causes hyperpolarization.",
+      c: "Incorrect — both rods and cones synapse onto both ON and OFF bipolar cell pathways (via rod and cone bipolar subtypes); the ON/OFF split is not a rod/cone split.",
+      d: "Incorrect — the ON/OFF divergence originates at the bipolar cell synapse itself, based on receptor type, before any ganglion cell processing occurs.",
+    },
+  },
+  {
+    id: "q-335", objectiveId: "retinapharm-fluorescein-angiography", type: "Applied concept", difficulty: "Medium",
+    stem: "A patient is being consented for intravenous fluorescein angiography. Which statement about expected effects and risks is accurate?",
+    choices: [
+      { id: "a", text: "Transient nausea is common and skin/urine discoloration is expected and harmless, but the rare risk of anaphylaxis means the procedure should occur where emergency management is available" },
+      { id: "b", text: "Fluorescein angiography carries no meaningful adverse effect profile and requires no special precautions" },
+      { id: "c", text: "Permanent skin discoloration is an expected, common outcome" },
+      { id: "d", text: "Fluorescein angiography images the choroidal vasculature, while ICG images the retinal vasculature" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — nausea is the most common adverse effect (roughly one in ten patients), transient yellow discoloration of skin/urine is expected and harmless, and while anaphylaxis is rare, it is serious enough that the injection should occur in a setting with emergency management capability.",
+      b: "Incorrect — while generally well-tolerated, fluorescein angiography has a real, well-characterized adverse effect profile that requires patient counseling and procedural precautions.",
+      c: "Incorrect — the skin/urine discoloration is transient, resolving as the dye is renally cleared, not permanent.",
+      d: "Incorrect — this has the imaging targets reversed: fluorescein angiography images the RETINAL vasculature; ICG (already covered) images the CHOROIDAL vasculature.",
+    },
+  },
+  {
+    id: "q-336", objectiveId: "retinadev-vascular-macular", type: "Applied concept", difficulty: "Hard",
+    stem: "Why are premature infants specifically at risk for retinopathy of prematurity, in terms of normal retinal developmental timing?",
+    choices: [
+      { id: "a", text: "Retinal vascularization proceeds centrifugally from the optic disc and is not complete until near full-term birth, so premature infants are born with peripheral (especially temporal) retina still avascular" },
+      { id: "b", text: "The fovea is fully vascularized before any other retinal region, making it the site of earliest risk" },
+      { id: "c", text: "Retinal vessels are present from the earliest stages of optic cup formation, so prematurity has no effect on vascular completeness" },
+      { id: "d", text: "Nasal retina is the last region to vascularize, explaining why ROP characteristically affects the nasal retina" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — retinal vessels grow centrifugally from the optic disc outward, following an astrocyte scaffold, and this process normally isn't complete until near term; premature birth interrupts it, leaving peripheral (especially temporal, the longest distance from the disc) retina avascular and setting up the vascular/avascular junction where pathologic neovascularization occurs.",
+      b: "Incorrect — the fovea is actually one of the LAST retinal regions to anatomically mature, and retinal vessel growth (not foveal maturation specifically) is what determines ROP risk.",
+      c: "Incorrect — retinal vessels are notably ABSENT when the optic cup first differentiates; they develop later via a separate, prolonged centrifugal growth process.",
+      d: "Incorrect — this has it backwards: TEMPORAL retina, not nasal, is the last region to complete vascularization (given its greater distance from the optic disc), so ROP characteristically involves the temporal periphery.",
     },
   },
   {
