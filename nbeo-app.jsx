@@ -1641,6 +1641,7 @@ const CLOPTICS_OBJECTIVES = [
   { id: "clopt-tear-lens", name: "Tear Lens Power & Base Curve Effects", built: true },
   { id: "clopt-vertex-conversion", name: "Vertex Distance Conversion for Contact Lenses", built: true },
   { id: "clopt-sam-fap", name: "Contact Lens Power Calculation (SAM-FAP Rule)", built: true },
+  { id: "clopt-materials-verification", name: "Lens Materials, Design Parameters & Verification", built: true },
 ];
 
 const CLPHARM_TOPIC_ID = "t-2-3-0"; // Contact Lenses(2) > Pharmacology(3) > Preparations used with contact lenses(0)
@@ -4471,6 +4472,8 @@ const STUDY_PAGES = {
       { h: "Deprivation amblyopia", t: "Results from anything that physically obstructs the visual axis during the critical period of visual development — most classically a congenital or early-acquired cataract; this is generally considered the most severe and treatment-resistant form, given the profound and complete image degradation involved." },
       { h: "Critical period", t: "Visual development is most plastic (and amblyopia most treatable) during early childhood, roughly through about age 7-9, though some capacity for improvement can persist somewhat beyond this in select cases." },
       { h: "Diagnostic clue — crowding phenomenon", t: "Amblyopic eyes characteristically read isolated (single) optotypes better than the same-sized optotypes presented in a full line — this is called the crowding phenomenon and is a useful clinical sign supporting an amblyopia diagnosis." },
+      { h: "Testing monocular fixation pattern — central vs. eccentric fixation", t: "Beyond acuity testing, examining the fixation pattern of the amblyopic eye reveals how severely the amblyopia has disrupted normal foveal fixation. Central (foveal) fixation means the amblyopic eye still uses its fovea to fixate a target — the typical pattern in mild-to-moderate amblyopia. Eccentric (non-foveal) fixation, in which the eye habitually fixates with a non-foveal retinal point instead of the fovea, signals more severe, longstanding amblyopia and carries a worse visual prognosis than central fixation of comparable acuity." },
+      { h: "Visuscope / direct ophthalmoscope fixation test", t: "The classic clinical technique projects a fixation target (e.g., a small illuminated star or ring, either from a dedicated visuscope or the graticule of a direct ophthalmoscope) onto the retina of the occluded (amblyopic) eye while the patient fixates the light: if the target falls directly on (or very near) the anatomic foveal reflex, fixation is central; if it consistently falls on a retinal point away from the fovea, fixation is eccentric. This is a purely objective test — it does not rely on the patient's subjective report — which makes it especially useful in young or poorly verbal children." },
       { h: "Management", t: "Treat the underlying cause first (glasses for refractive causes, strabismus surgery/management, cataract removal for deprivation causes), combined with occlusion therapy (patching the stronger eye) or penalization (e.g., atropine) of the better eye to force use of the amblyopic eye." },
     ],
     memorizeIt: [
@@ -4478,6 +4481,7 @@ const STUDY_PAGES = {
       "Deprivation amblyopia (e.g., from congenital cataract) is generally the most severe and hardest to treat.",
       "Crowding phenomenon: amblyopic eyes see isolated optotypes better than full lines — a classic diagnostic clue.",
       "Treatment window is most effective in early childhood (critical period), roughly through age 7-9.",
+      "Fixation pattern testing (visuscope/direct ophthalmoscope): central fixation = target lands on the fovea; eccentric fixation = target lands off the fovea, indicating more severe amblyopia with a worse prognosis.",
     ],
     applyIt: [
       "A child with a significant difference in refractive error between the two eyes but no visible strabismus can still have amblyopia — don't require strabismus to be present before considering the diagnosis.",
@@ -6461,14 +6465,23 @@ const STUDY_PAGES = {
       { h: "Acuity testing adaptations", t: "Standard acuity charts may not adequately characterize severely reduced vision; low vision-specific charts (e.g., using a logarithmic progression like the ETDRS chart, or charts extending to lower acuity levels) provide more precise, reproducible measurement across the full range of impairment than standard Snellen charts, which become imprecise at the low-acuity end." },
       { h: "Functional assessment", t: "Beyond acuity, assessment includes contrast sensitivity (often more functionally relevant than acuity alone for tasks like face recognition or mobility), visual field testing (relevant given the legal blindness field criterion), reading assessment (reading speed and required print size, not just acuity), and glare sensitivity/lighting needs assessment." },
       { h: "Patient-centered goal setting", t: "A low vision exam typically includes direct discussion of the patient's specific functional goals (reading mail, recognizing faces, cooking safely, using a computer) since management is tailored to these individual priorities rather than a generic acuity target." },
+      { h: "Special refraction techniques", t: "A trial frame with loose lenses is generally preferred over the standard phoropter for low vision refraction, since it allows the patient to view eccentrically (turning the head/eyes to use a preferred non-foveal retinal locus, important for patients with a central scotoma from macular disease) and permits a closer, more natural working distance than a phoropter's fixed back vertex distance allows. Because severely reduced acuity limits a patient's ability to detect small blur differences, refraction proceeds in much larger dioptric steps (e.g., ±1.00D or even ±2.00D increments) rather than the standard ±0.25D steps used in routine refraction." },
+      { h: "Magnification determination — Kestenbaum's Rule", t: "Kestenbaum's Rule is a quick clinical estimate of the reading addition (in diopters) needed to read standard-size (1M) print, calculated as the reciprocal of the patient's best-corrected distance Snellen fraction: estimated near add (D) = denominator ÷ numerator of the distance acuity fraction. Worked example: a patient with distance acuity of 20/100 needs an estimated add of 100/20 = +5.00D over their distance correction. Since required working distance (in cm) = 100 ÷ power (D), that +5.00D add requires reading at approximately 100/5 = 20cm — illustrating why high-add low vision corrections necessarily force a much closer working distance. This is only a starting estimate; the actual add is refined with trial lenses and the patient's real-world reading performance." },
+      { h: "M-notation for print/target size", t: "Low vision print size and target size are commonly specified in M-units: 1M print is defined as the size legible by a person with normal (1.0/20-20-equivalent) acuity at a distance of 1 meter (8M print is legible at 8 meters, and so on). Reporting near acuity as a specific M-value at a specific test distance (rather than only a Snellen-style fraction) more precisely captures the actual print size a low vision patient can and cannot read, which is essential for accurately prescribing magnification." },
+      { h: "In-office evaluation with low vision devices", t: "Trial fitting of actual magnifiers, telescopes, and electronic devices in the office — not just calculating a theoretical power — confirms that a given device genuinely lets the patient perform their target task, since factors like field of view, working distance tolerance, hand steadiness, and device weight/handling can make a device impractical even when its calculated power is theoretically correct; this in-office trial is what ultimately determines the final device recommendation." },
     ],
     memorizeIt: [
       "Low vision charts (e.g., ETDRS-style, logarithmic progression) are more precise than standard Snellen charts at low acuity levels.",
       "Contrast sensitivity is often more functionally relevant than acuity alone for many daily tasks.",
       "Functional, goal-directed assessment (specific patient priorities) is central to a low vision exam, distinct from a routine exam's acuity focus.",
+      "Trial frame refraction (not phoropter) with large dioptric steps (e.g., ±1.00D) is standard for low vision, allowing eccentric viewing and closer working distances.",
+      "Kestenbaum's Rule: estimated near add (D) = reciprocal of the distance Snellen fraction (e.g., 20/100 → 100/20 = +5.00D estimated add).",
+      "M-notation: 1M print is legible at 1 meter by a person with normal acuity — used to precisely specify print/target size in low vision.",
+      "In-office device trials confirm real-world usability (field of view, working distance, handling) beyond the theoretical calculated power.",
     ],
     applyIt: [
       "The shift from \"what's the best acuity we can measure\" to \"what does this patient need to do and how can we help them do it\" is the defining conceptual difference between a routine and a low vision exam — worth remembering as the organizing principle behind all the specific testing differences.",
+      "Kestenbaum's Rule connects directly to your Low Vision Devices content: the estimated add power it produces is the starting point for selecting a device category — a large estimated add (implying a very close required working distance) often points toward a stand magnifier or telescope rather than a spectacle-mounted add, since holding reading material only a few centimeters from the face is often impractical.",
     ],
   },
   "lowvis-devices": {
@@ -7832,6 +7845,33 @@ const STUDY_PAGES = {
       "This ties your two prior objectives into one complete, testable calculation sequence: vertex distance conversion handles the spectacle-to-cornea plane shift, and SAM-FAP handles the base-curve-to-K deviation — both steps, applied together, are what actually happens behind the scenes whenever an RGP lens is ordered for a real patient.",
     ],
   },
+  "clopt-materials-verification": {
+    name: "Lens Materials, Design Parameters & Verification",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard clinical optics/contact lens references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond power calculation (already covered under your Tear Lens, Vertex Conversion, and SAM-FAP content), the NBEO outline's contact lens optics section also covers lens materials, key physical design parameters, and how a finished lens's parameters are actually verified before dispensing." },
+      { h: "Soft lens materials — FDA classification", t: "Soft (hydrogel and silicone hydrogel) lens materials are grouped by the FDA into four groups based on water content and surface ionic charge: Group I (low water, <50%, nonionic), Group II (high water, ≥50%, nonionic), Group III (low water, <50%, ionic), and Group IV (high water, ≥50%, ionic). Ionic materials bind cationic preservatives and deposit proteins more readily than nonionic materials, which is why lens material group is relevant to selecting compatible care solutions (already relevant to your Multipurpose Solutions content)." },
+      { h: "RGP lens materials", t: "Original rigid lenses were PMMA (polymethyl methacrylate) — completely oxygen-impermeable, relying entirely on tear exchange for corneal oxygenation and now largely obsolete given the hypoxic risk already covered in your Corneal Hypoxia content. Modern RGP lenses use oxygen-permeable silicone acrylate or fluorosilicone acrylate copolymers, which allow direct transmissibility through the lens material itself, similar in principle to silicone hydrogel soft lenses." },
+      { h: "Sagittal depth and thickness parameters", t: "Sagittal depth (the vault of the lens's back surface) increases with a steeper base curve (smaller radius) or a larger overall diameter, and must be matched reasonably to the eye's own sagittal height for proper fit (connecting to your Fitting Parameters content on base curve/diameter selection). Center and edge thickness affect comfort, edge lift, and — for RGP lenses — oxygen transmissibility, since a thicker lens has a lower effective Dk/t even with the same base material Dk." },
+      { h: "Flexure and asphericity", t: "Flexure is a phenomenon largely specific to RGP lenses fit on a toric (astigmatic) cornea: a thin RGP lens can bend to partially conform to the corneal toricity rather than remaining perfectly spherical, which lets some of the corneal astigmatism 'leak through' into the tear lens/lens system uncorrected, producing residual astigmatism despite an otherwise correct power calculation — thicker or stiffer (higher-modulus) lens materials reduce flexure. Aspheric lens surfaces (flattening progressively toward the periphery, rather than maintaining one uniform spherical curvature) are used in some RGP and multifocal designs to reduce peripheral edge lift and spherical aberration." },
+      { h: "Fabrication, inspection & verification", t: "A finished lens's back vertex power is verified on a lensometer; for soft (hydrogel) lenses this must be measured wet, in a wet cell, since the material's hydration state affects its curvature and effective refractive index — measuring a soft lens dry gives an inaccurate power reading. An RGP lens's base curve radius is verified with a radiuscope, which applies the same reflected-image principle as a keratometer (already covered in your Keratometry content) but measures the lens surface instead of the cornea." },
+      { h: "Optical filters — UV-blocking/tinted contact lenses", t: "Some soft contact lenses incorporate a UV-blocking or photochromic component (same underlying photochromic chemistry already covered in your Absorptive/Photochromic Lens content). A key, frequently-tested distinction: UV-blocking contact lenses do NOT provide adequate protection to replace UV-blocking sunglasses, because the lens covers only the cornea — leaving the conjunctiva, sclera, eyelids, and periocular skin fully unprotected — so patients should still be counseled to wear UV-blocking sunglasses outdoors even if their contact lenses have a UV-filtering feature." },
+    ],
+    memorizeIt: [
+      "FDA soft lens groups: I = low water/nonionic, II = high water/nonionic, III = low water/ionic, IV = high water/ionic.",
+      "RGP materials: PMMA (obsolete, oxygen-impermeable) vs. modern silicone/fluorosilicone acrylate (oxygen-permeable).",
+      "Sagittal depth increases with a steeper base curve or larger diameter.",
+      "Flexure (RGP on toric corneas) induces residual astigmatism; thicker/stiffer lenses flex less.",
+      "Soft lens power verification requires a WET cell on the lensometer; RGP base curve is verified with a radiuscope.",
+      "UV-blocking contact lenses do NOT replace UV-blocking sunglasses — they only protect the cornea, not the conjunctiva/sclera/eyelids.",
+    ],
+    applyIt: [
+      "This connects your Solution Toxicity content to lens material selection: an ionic (Group III/IV) soft lens material binds cationic preservatives like benzalkonium chloride more readily than a nonionic material, making lens material group a relevant consideration when troubleshooting recurrent solution-related toxicity, not just the solution itself.",
+      "The UV-blocking contact lens counseling point is a classic 'don't let a patient over-trust a partial protection feature' scenario, similar in spirit to counseling points elsewhere on this platform about incomplete protective measures — always pair a UV-blocking contact lens with real UV-blocking sunglasses for outdoor use.",
+    ],
+  },
   "clpharm-solution-types": {
     name: "Multipurpose Solutions vs. Hydrogen Peroxide Systems",
     priority: "MUST",
@@ -7842,15 +7882,20 @@ const STUDY_PAGES = {
       { h: "Multipurpose solutions (MPS)", t: "All-in-one products combining cleaning, disinfection, rinsing, and storage in a single solution, typically containing a preservative (e.g., polyquaternium, or the older benzalkonium chloride already covered in your Solution Toxicity content) to maintain antimicrobial activity in the bottle and on the lens — convenient (one-step, no neutralization needed) but the preservative itself is the source of the toxic/hypersensitivity reactions already covered in that content." },
       { h: "Hydrogen peroxide systems", t: "Use hydrogen peroxide as the disinfecting agent, requiring a neutralization step (usually via a catalytic platinum disc in the lens case, or a separate neutralizing tablet/solution) before the lenses can be safely worn — hydrogen peroxide is a more potent disinfectant than most MPS preservative systems and avoids the preservative-related toxicity issues of MPS, but improper use (skipping or shortening the neutralization step) causes significant ocular irritation/chemical injury from residual peroxide, a distinct and more acute complication than typical MPS preservative toxicity." },
       { h: "Clinical decision-making", t: "Patients with recurrent solution-related toxicity or sensitivity reactions (already covered in your Solution Toxicity content) may benefit from switching to a hydrogen peroxide system specifically to eliminate the preservative exposure — provided they can reliably follow the neutralization protocol, since improper hydrogen peroxide use creates its own distinct risk." },
+      { h: "Contact lenses as drug delivery systems", t: "Beyond lens care solutions, contact lenses themselves can be used as a deliberate drug delivery vehicle. Bandage (therapeutic) soft contact lenses are placed for their mechanical/protective effect — promoting epithelial healing and reducing pain after corneal surgery, abrasion, or in persistent epithelial defects, already relevant to your Corneal Epithelium content — and are frequently combined with concurrent topical medication drops for this purpose. Collagen shields (dissolvable, collagen-based lenses) can be soaked in a medication solution before placement to provide a short burst of sustained ocular surface drug exposure. More advanced drug-eluting contact lenses (e.g., an FDA-approved lens that releases an antihistamine for allergic conjunctivitis) are engineered to release a therapeutic agent gradually over the wearing period, offering more sustained and consistent drug delivery than intermittent drop dosing." },
+      { h: "Why lens-based delivery can improve on drops", t: "Conventional topical drops have poor ocular bioavailability, since most of an instilled drop is lost to reflex tearing and nasolacrimal drainage within seconds to minutes; a drug-eluting or medication-soaked lens held against the cornea provides more prolonged, consistent tissue contact and can improve bioavailability and patient compliance (a single lens vs. multiple daily drop doses) compared to drops alone." },
     ],
     memorizeIt: [
       "MPS: one-step, convenient, contains preservative — the source of the toxicity already covered.",
       "Hydrogen peroxide systems: more potent disinfectant, avoid MPS preservative issues, but require a neutralization step.",
       "Improper hydrogen peroxide neutralization causes acute chemical irritation from residual peroxide.",
       "Patients with recurrent MPS-related toxicity are candidates for switching to hydrogen peroxide systems.",
+      "Bandage contact lenses: mechanical/protective, promote epithelial healing after surgery/abrasion/persistent defects.",
+      "Collagen shields and drug-eluting lenses (e.g., antihistamine-releasing) deliver medication with more sustained ocular surface contact than intermittent drops.",
     ],
     applyIt: [
       "This directly extends your Solution Toxicity content: a patient with recurrent diffuse superficial punctate keratitis from MPS preservative exposure has a genuine alternative — switching to a hydrogen peroxide system — but this trade requires patient counseling on strict adherence to the neutralization step to avoid a different, more acute chemical injury risk.",
+      "This connects to your Contact Lens Indications/Contraindications content on soft lenses unintentionally absorbing topical medication: a bandage lens or drug-eluting lens deliberately exploits that same absorption/reservoir property for therapeutic benefit, rather than treating it as an unwanted interaction to be avoided.",
     ],
   },
   "clpharm-indications": {
@@ -16332,6 +16377,7 @@ const FLASHCARDS = [
   { id: "fc-214", objectiveId: "amb-amblyopia", front: "Name the three types of amblyopia.", back: "Strabismic, refractive (anisometropic), and deprivation." },
   { id: "fc-215", objectiveId: "amb-amblyopia", front: "Which type of amblyopia is generally the most severe/treatment-resistant, and why?", back: "Deprivation amblyopia — from profound, complete image degradation (e.g., congenital cataract) during the critical period." },
   { id: "fc-216", objectiveId: "amb-amblyopia", front: "What is the crowding phenomenon?", back: "Amblyopic eyes read isolated optotypes better than the same-size optotypes in a full line." },
+  { id: "fc-1477", objectiveId: "amb-amblyopia", front: "What does eccentric fixation on visuscope/direct ophthalmoscope testing indicate, and how does it differ from central fixation?", back: "The amblyopic eye fixates with a non-foveal retinal point rather than the fovea; it indicates more severe, longstanding amblyopia with a worse prognosis than central (foveal) fixation." },
   // Esotropia
   { id: "fc-217", objectiveId: "amb-esotropia", front: "What drives accommodative esotropia, and how is it treated?", back: "Accommodative convergence from uncorrected hyperopia; treated with full hyperopic spectacle correction." },
   { id: "fc-218", objectiveId: "amb-esotropia", front: "How does congenital/infantile esotropia typically present and how is it usually treated?", back: "Presents within the first 6 months of life with a large constant deviation; usually requires surgery." },
@@ -16661,6 +16707,8 @@ const FLASHCARDS = [
   // Low vision testing
   { id: "fc-451", objectiveId: "lowvis-testing", front: "Why are low-vision-specific acuity charts (e.g., ETDRS) preferred over standard Snellen charts for severely reduced vision?", back: "They provide more precise, reproducible measurement at low acuity levels." },
   { id: "fc-452", objectiveId: "lowvis-testing", front: "What visual function, beyond acuity, is often more relevant to tasks like face recognition?", back: "Contrast sensitivity." },
+  { id: "fc-1478", objectiveId: "lowvis-testing", front: "Using Kestenbaum's Rule, what estimated near add does a patient with 20/100 best-corrected distance acuity need?", back: "+5.00D (reciprocal of the Snellen fraction: 100/20 = 5.00D)." },
+  { id: "fc-1479", objectiveId: "lowvis-testing", front: "Why is a trial frame generally preferred over a phoropter for low vision refraction?", back: "It allows eccentric viewing (using a preferred non-foveal retinal locus) and closer, more natural working distances than a phoropter's fixed vertex distance." },
   // Low vision devices
   { id: "fc-453", objectiveId: "lowvis-devices", front: "What device category addresses near tasks vs. distance tasks in low vision?", back: "Near: magnifiers. Distance: telescopes." },
   { id: "fc-454", objectiveId: "lowvis-devices", front: "Name the three mechanisms by which low vision devices magnify.", back: "Relative size magnification, relative distance magnification, angular (telescopic) magnification." },
@@ -16849,10 +16897,17 @@ const FLASHCARDS = [
   // SAM-FAP calculation
   { id: "fc-583", objectiveId: "clopt-sam-fap", front: "What two adjustments must be applied in sequence to determine final RGP lens power?", back: "Vertex distance conversion, then tear lens (SAM-FAP) compensation." },
   { id: "fc-584", objectiveId: "clopt-sam-fap", front: "If a base curve is fit 0.50D steeper than K, how much minus power is added to compensate?", back: "0.50D of minus power (per SAM-FAP)." },
+
+  { id: "fc-1480", objectiveId: "clopt-materials-verification", front: "What are the four FDA soft contact lens material groups, defined by which two properties?", back: "Water content (low <50% vs. high ≥50%) and surface ionic charge (nonionic vs. ionic): Group I (low/nonionic), II (high/nonionic), III (low/ionic), IV (high/ionic)." },
+  { id: "fc-1481", objectiveId: "clopt-materials-verification", front: "Why must soft contact lens power be verified on a lensometer using a wet cell?", back: "Soft lens hydration state affects its curvature and effective refractive index — measuring dry gives an inaccurate power reading." },
+  { id: "fc-1482", objectiveId: "clopt-materials-verification", front: "What instrument verifies an RGP lens's base curve radius, and what principle does it share with the keratometer?", back: "The radiuscope — it applies the same reflected-image principle as a keratometer, but measures the lens surface instead of the cornea." },
+  { id: "fc-1483", objectiveId: "clopt-materials-verification", front: "Why don't UV-blocking contact lenses replace UV-blocking sunglasses?", back: "They only protect the cornea — the conjunctiva, sclera, eyelids, and periocular skin remain fully unprotected." },
   // Solution types
   { id: "fc-585", objectiveId: "clpharm-solution-types", front: "What preservative type in MPS is the source of the toxicity issues already covered?", back: "Preservatives like polyquaternium or benzalkonium chloride." },
   { id: "fc-586", objectiveId: "clpharm-solution-types", front: "What step is required before hydrogen peroxide contact lens systems can be safely worn?", back: "Neutralization (via catalytic disc or neutralizing tablet/solution)." },
   { id: "fc-587", objectiveId: "clpharm-solution-types", front: "What happens if hydrogen peroxide neutralization is skipped or shortened?", back: "Significant ocular irritation/chemical injury from residual peroxide." },
+  { id: "fc-1484", objectiveId: "clpharm-solution-types", front: "What is a bandage (therapeutic) contact lens used for?", back: "Its mechanical/protective effect — promoting epithelial healing and reducing pain after corneal surgery, abrasion, or persistent epithelial defects." },
+  { id: "fc-1485", objectiveId: "clpharm-solution-types", front: "Why can a drug-eluting or medication-soaked contact lens improve on conventional drop dosing?", back: "Drops are largely lost to reflex tearing/nasolacrimal drainage within seconds to minutes; a lens held against the cornea provides more prolonged, consistent drug contact and can improve bioavailability and compliance." },
   // Indications/contraindications
   { id: "fc-588", objectiveId: "clpharm-indications", front: "Why should most topical eye drops not be instilled while wearing soft contact lenses?", back: "Soft lenses can absorb preservative/drug, altering delivery and potentially exposing the eye to a concentrated preservative bolus later." },
   { id: "fc-589", objectiveId: "clpharm-indications", front: "What medication category can reduce tear production and worsen contact lens tolerance?", back: "Anticholinergic-effect medications." },
@@ -23451,6 +23506,40 @@ const QUESTIONS = [
       b: "Correct — effective diameter is the diagonal measurement (twice the distance from the lens's geometric center to the farthest point of the box) used to ensure the uncut lens blank ordered is large enough to fully glaze the frame shape without running out of material at any edge.",
       c: "Incorrect — that describes segment height, a separate multifocal fitting measurement.",
       d: "Incorrect — DBL (distance between lenses) is the bridge/nose-bridge measurement, a distinct boxing-system value from ED.",
+    },
+  },
+  {
+    id: "q-326", objectiveId: "lowvis-testing", type: "Calculation", difficulty: "Medium",
+    stem: "A patient's best-corrected distance visual acuity is 20/160. Using Kestenbaum's Rule, what is the estimated near addition (over the distance correction) needed to read 1M print, and approximately what working distance does that add require?",
+    choices: [
+      { id: "a", text: "+1.60D add; approximately 63cm working distance" },
+      { id: "b", text: "+8.00D add; approximately 12.5cm working distance" },
+      { id: "c", text: "+0.125D add; approximately 800cm working distance" },
+      { id: "d", text: "+16.00D add; approximately 6cm working distance" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — Kestenbaum's Rule uses the reciprocal of the full Snellen fraction (denominator ÷ numerator), not the numerator ÷ denominator.",
+      b: "Correct — Kestenbaum's Rule: estimated add = 160/20 = +8.00D. Required working distance (cm) = 100 ÷ power (D) = 100/8 = 12.5cm.",
+      c: "Incorrect — this inverts the calculation; the estimated add should be a value well above +1.00D for this level of reduced acuity, not a fraction of a diopter.",
+      d: "Incorrect — this doubles the correct add power; 160/20 = 8.00D, not 16.00D.",
+    },
+  },
+  {
+    id: "q-327", objectiveId: "clopt-materials-verification", type: "Applied concept", difficulty: "Medium",
+    stem: "A soft contact lens is checked on a lensometer immediately after being removed from its blister pack and blotted dry, giving an unexpectedly inaccurate power reading. What is the most likely explanation, and what should be done instead?",
+    choices: [
+      { id: "a", text: "The lens is defective and should be discarded; dry lensometry is normally accurate for soft lenses" },
+      { id: "b", text: "Soft lens curvature and effective refractive index depend on hydration state; the lens should be measured wet, in a wet cell" },
+      { id: "c", text: "Lensometers cannot measure any contact lens, soft or rigid, under any condition" },
+      { id: "d", text: "The lensometer needs to be recalibrated using a radiuscope before soft lenses can be measured" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — this is expected, normal behavior for a soft lens measured dry, not evidence of a defective lens.",
+      b: "Correct — a soft (hydrogel) lens's curvature and effective refractive index change with its hydration state, so accurate power verification requires measuring the lens wet, in a wet cell, not dry.",
+      c: "Incorrect — lensometers do measure contact lens power; RGP lenses can be measured dry, while soft lenses require a wet cell.",
+      d: "Incorrect — a radiuscope verifies RGP base curve radius, a separate instrument and separate parameter from lensometer power verification.",
     },
   },
 ];
