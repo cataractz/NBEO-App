@@ -1578,6 +1578,7 @@ const PRISM_OBJECTIVES = [
   { id: "prism-diopter-prentice", name: "Prism Diopter & Prentice's Rule", built: true },
   { id: "prism-prescribing", name: "Prism Prescribing for Diplopia & Vergence Disorders", built: true },
   { id: "prism-fresnel", name: "Fresnel Press-On Prisms", built: true },
+  { id: "prism-vertical-imbalance", name: "Correcting Vertical Prism Imbalance (Slab-Off & Related Techniques)", built: true },
 ];
 
 const MULTIFOCAL_TOPIC_ID = "t-1-2-4"; // Ophthalmic Optics/Spectacles(1) > Optics(Ophthalmic)(2) > Multifocal lenses(4)
@@ -1606,6 +1607,11 @@ const LENSOPTICS_OBJECTIVES = [
   { id: "lensopt-forms-basecurve", name: "Lens Forms & Base Curve Selection", built: true },
   { id: "lensopt-oblique-astig", name: "Oblique Astigmatism & the Tscherning Ellipse", built: true },
   { id: "lensopt-ar-coating", name: "Reflection & Anti-Reflective Coatings", built: true },
+  { id: "lensopt-reference-points", name: "Optical Axis, Optical Center, Geometric Center & Major Reference Points", built: true },
+  { id: "lensopt-verification", name: "Verifying Lens Prescriptions — Lens Gauge & Hand Neutralization", built: true },
+  { id: "lensopt-transposition", name: "Writing & Transposing Lens Prescriptions", built: true },
+  { id: "lensopt-effective-power", name: "Effective Power — Vertex Distance & Lens Tilt", built: true },
+  { id: "lensopt-magnification", name: "Spectacle Magnification & Iseikonic Lens Design", built: true },
 ];
 
 const VISDEV_TOPIC_ID = "t-7-0-0"; // Visual and Human Development(7) > Optics(Physiological)(0) > Vision development in the infant/child(0)
@@ -2365,6 +2371,8 @@ const SPECREFLECTION_TOPIC_ID = "t-1-2-1"; // Ophthalmic Optics/Spectacles(1) > 
 const SPECREFLECTION_OBJECTIVES = [
   { id: "specreflection-ar-coating-mechanism", name: "Anti-Reflective Coating — Mechanism & Clinical Trade-offs", built: true },
   { id: "specreflection-mirror-coatings", name: "Mirror Coatings & UV-Reflective Treatments", built: true },
+  { id: "specreflection-mirror-fundamentals", name: "Spherical & Planar Mirror Optics — Power, Ray Tracing & Image Formation", built: true },
+  { id: "specreflection-fresnel-law", name: "Fresnel's Law — Quantifying Reflected Light at an Interface", built: true },
 ];
 
 const CORNEAGROSS_TOPIC_ID = "t-9-0-0"; // Conjunctiva/Cornea/Refractive Surgery(9) > Anatomy(Gross)(0) > Cornea(0)
@@ -2412,6 +2420,8 @@ const SPECPOLAR_TOPIC_ID = "t-1-1-0"; // Ophthalmic Optics/Spectacles(1) > Optic
 const SPECPOLAR_OBJECTIVES = [
   { id: "specpolar-glare-filtering", name: "Polarizing Sunglass Lenses — Selective Filtering of Reflected Glare", built: true },
   { id: "specpolar-clinical-limitations", name: "Clinical Considerations & Limitations of Polarized Lenses", built: true },
+  { id: "specpolar-brewster-scattering", name: "Brewster's Law, Circular/Elliptical Polarization & Scattering Effects", built: true },
+  { id: "specpolar-stress-analysis", name: "Successive Polarizers & Stress Analysis of Ophthalmic Lenses", built: true },
 ];
 
 const LENSPHYSCHAR_TOPIC_ID = "t-1-2-0"; // Ophthalmic Optics/Spectacles(1) > Optics(Ophthalmic)(2) > Physical characteristics of ophthalmic lenses(0)
@@ -2421,6 +2431,7 @@ const LENSPHYSCHAR_TOPIC_ID = "t-1-2-0"; // Ophthalmic Optics/Spectacles(1) > Op
 const LENSPHYSCHAR_OBJECTIVES = [
   { id: "lensphyschar-material-tradeoffs", name: "Index of Refraction, Abbe Number & Density Trade-offs", built: true },
   { id: "lensphyschar-durability", name: "Scratch Resistance, Chemical Resistance & Hard Coatings", built: true },
+  { id: "lensphyschar-thickness-sizing", name: "Lens Thickness Control & Frame/Lens Size Specification (Boxing System)", built: true },
 ];
 
 const FRAMEMAT_TOPIC_ID = "t-1-2-5"; // Ophthalmic Optics/Spectacles(1) > Optics(Ophthalmic)(2) > Frame materials (physical/biological compatibility)(5)
@@ -2436,6 +2447,7 @@ const ABSORPTIVE_TOPIC_ID = "t-1-2-8"; // Ophthalmic Optics/Spectacles(1) > Opti
 const ABSORPTIVE_OBJECTIVES = [
   { id: "absorptive-transmittance-standards", name: "Visible Light Transmittance & Sunglass Lens Categories", built: true },
   { id: "absorptive-photochromic-mechanism", name: "Photochromic Lens Chemistry & Activation/Fade Kinetics", built: true },
+  { id: "absorptive-thickness-occupational", name: "Lens Thickness Effects on Tint Density & Occupational Shade Requirements", built: true },
 ];
 
 const OPTTOLERANCE_TOPIC_ID = "t-1-2-10"; // Ophthalmic Optics/Spectacles(1) > Optics(Ophthalmic)(2) > Optical tolerances & physical requirements (FDA, ANSI Z80/Z87, OSHA)(10)
@@ -7138,12 +7150,16 @@ const STUDY_PAGES = {
       { h: "Prentice's rule — the key clinical calculation", t: "Prentice's rule quantifies the unwanted prismatic effect induced when looking through a spectacle lens away from its optical center: prismatic effect (Δ) = lens power (D) × decentration (cm). This explains why a high-power lens with even modest decentration (e.g., from incorrect PD, already covered in your Spectacle Fitting content) can induce a clinically significant unwanted prism." },
       { h: "Base direction convention", t: "Prism is described by its base direction (base-up, base-down, base-in, base-out), which determines the direction of image displacement — base-in prism displaces the image outward (temporally), useful for convergence-related issues, while base-out prism displaces the image inward (nasally)." },
       { h: "Clinical relevance", t: "Understanding Prentice's rule explains both intentional therapeutic prism prescribing (covered in your next objective) and the unwanted, unintentional prism that can result from PD errors or lens decentration in standard spectacle dispensing — the same formula applies to both situations." },
+      { h: "Prentice's rule for spherocylindrical lenses", t: "For a spherocylindrical lens, the power varies by meridian, so Prentice's rule must be applied using the power IN THE MERIDIAN OF DECENTRATION, not simply the sphere power — a horizontal decentration uses the lens's power in the horizontal meridian, and a vertical decentration uses its power in the vertical meridian. If decentration occurs obliquely (both horizontally and vertically), the horizontal and vertical prismatic components are calculated separately (each using the respective meridian power) and then combined as a resultant prism vector — this is why peripheral prismatic effects in a spherocylindrical lens are direction-dependent in a way they aren't for a spherical lens." },
+      { h: "Thickness difference across a prism", t: "A prism is physically thicker at its base than at its apex, and — just as with the edge/center thickness relationship for spherical lenses — this thickness differential increases with greater prism power (more Δ) and with a larger lens diameter, and decreases with a higher-index lens material (a given prism power requires less physical thickness difference in a high-index material than in standard CR-39). This is why a strong prism correction ground into a low-index lens can become cosmetically thick and heavy, motivating either a high-index material or a Fresnel press-on prism (covered next) for significant prism amounts." },
     ],
     memorizeIt: [
       "Prism diopter (Δ): 1 cm of displacement at 1 meter — a linear, not angular, unit.",
       "Prentice's rule: prismatic effect (Δ) = lens power (D) × decentration (cm).",
       "Base direction (up/down/in/out) determines the direction of image displacement.",
       "High-power lenses are especially sensitive to decentration-induced unwanted prism, per Prentice's rule.",
+      "For spherocylindrical lenses, use the power IN THE MERIDIAN of the decentration — horizontal decentration uses horizontal-meridian power, vertical uses vertical-meridian power.",
+      "Prism thickness (base minus apex) increases with prism power and lens diameter, decreases with higher refractive index — same logic as spherical lens edge thickness.",
     ],
     applyIt: [
       "This gives you the formula behind the unwanted prism problem already introduced in your Spectacle Fitting content: incorrect PD becomes a bigger problem in higher-power prescriptions specifically because Prentice's rule shows prismatic effect scales directly with lens power.",
@@ -7192,6 +7208,29 @@ const STUDY_PAGES = {
       "This connects to your Nervous System content on cranial nerve palsies: a patient with a recent acute CN IV or VI palsy causing diplopia is a classic Fresnel prism candidate, since the deviation angle may still be evolving and a permanent ground-in prism prescription would be premature.",
     ],
   },
+  "prism-vertical-imbalance": {
+    name: "Correcting Vertical Prism Imbalance (Slab-Off & Related Techniques)",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard ophthalmic dispensing/clinical optics references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Overview", t: "Anisometropia (unequal refractive power between the two eyes, already covered in your Ametropia content) creates a specific near-vision problem: because the two lenses have different powers, they induce different amounts of prism at the same reading position below the distance optical centers, per Prentice's rule (already covered) — this unequal induced prism is vertical prism imbalance, and it can cause asthenopia or vertical diplopia at near even when distance vision is perfectly clear and comfortable." },
+      { h: "Why the imbalance occurs", t: "When both eyes look downward together to read (converging on a near target below the distance optical centers), each lens induces prism proportional to its own power and the decentration distance. Because the two eyes' lens powers differ in anisometropia, the induced prism differs between the eyes at the same reading position — the eye with the more minus (or less plus) power develops a relatively greater vertical prismatic effect than the fellow eye, and this differential is what the patient experiences as image misalignment at near." },
+      { h: "Slab-off (bicentric grinding)", t: "The classic correction technique: a compensating prism is ground into the LOWER (reading) portion of the more minus (or less plus) lens, confined to below a horizontal dividing line, leaving the distance portion of the lens unaffected — this is conventionally called slab-off because the lower segment's front surface is reground with a flatter curve, effectively \"slabbing off\" material to introduce base-down prism that cancels the excess base-up effect from that eye's greater minus power. The curve can be reground on the front or back surface and applied to the top or bottom segment depending on the specific lab technique; a 'reverse slab-off' (compensating base-up prism applied instead) is occasionally used for the less common case of high hyperopic anisometropia where the imbalance runs the opposite direction." },
+      { h: "Alternative and adjunct techniques", t: "Dissimilar segments: using multifocal segments of different sizes or vertical positions between the two eyes so the effective near optical centers align more closely, reducing the differential without regrinding a slab-off curve. Prism segments: a separate small compensating prism fused or ground directly into just the segment area. Multiple corrections: combining more than one of these techniques for larger imbalances that a single technique doesn't fully resolve. Fresnel Adds: a Fresnel press-on prism (already covered) applied specifically over the near/reading area of one lens, offering an easily adjustable trial or temporary correction for vertical imbalance before committing to a permanent ground-in slab-off." },
+      { h: "Contact lenses as a solution", t: "Because a contact lens moves with the eye, its optical center effectively always aligns with the line of sight regardless of gaze direction — eliminating decentration-induced prism (and therefore vertical imbalance) entirely. This is a genuine clinical advantage of contact lens correction for significant anisometropia, distinct from the cosmetic/aniseikonia benefits already covered under your Spectacle Magnification content." },
+    ],
+    memorizeIt: [
+      "Vertical prism imbalance: unequal anisometropic lens powers induce unequal prism (per Prentice's rule) at the same near reading position, causing asthenopia/vertical diplopia despite good distance vision.",
+      "Slab-off (bicentric grinding): compensating prism ground into the lower/reading portion of the more minus (or less plus) lens only, leaving the distance portion unaffected.",
+      "Reverse slab-off: used for the opposite (high hyperopic anisometropia) imbalance direction.",
+      "Other techniques: dissimilar segments, prism segments, multiple corrections, and Fresnel Adds (temporary/trial correction).",
+      "Contact lenses eliminate decentration-induced prism entirely, since the lens moves with the eye — a definitive solution for anisometropic vertical imbalance.",
+    ],
+    applyIt: [
+      "This is the direct near-vision counterpart to your Prism Diopter & Prentice's Rule content: the same formula that explains unwanted prism from PD/decentration errors also explains why anisometropic patients specifically develop trouble at near (not distance), and slab-off is the classic dispensing technique that fixes it — a frequently tested pairing of 'why does this patient have trouble reading but not driving' with the underlying optics.",
+    ],
+  },
   "multi-segment-types": {
     name: "Bifocal & Trifocal Segment Types",
     priority: "SHOULD",
@@ -7202,12 +7241,18 @@ const STUDY_PAGES = {
       { h: "Common bifocal segment shapes", t: "Flat-top (D-segment): a flat-topped, semicircular near segment, currently the most common bifocal style, offering a good compromise between segment size and image jump (covered in your next objective). Round segment: a circular near segment, historically common but largely superseded by flat-top designs. Executive (full-width): a segment spanning the full width of the lens, providing the largest near field but with more noticeable image jump and a more visible demarcation line." },
       { h: "Trifocals", t: "Add an intermediate-power segment between the distance and near zones, useful for patients with significant intermediate-distance visual demands (e.g., computer use) that a simple bifocal doesn't adequately serve — trifocals have been substantially supplanted by PALs for most patients but remain relevant to understand conceptually." },
       { h: "Segment height positioning", t: "As already introduced in your Multifocal Adaptation content, correct vertical segment positioning is essential regardless of segment type — this is a shared fitting principle across all multifocal designs, not unique to PALs." },
+      { h: "Construction types: fused, one-piece, and blended", t: "Beyond segment SHAPE, traditional bifocals also differ in how the segment is physically constructed. Fused bifocals embed a small button/segment of a higher-index glass into a matching well ground into the main (lower-index) distance lens — because the two indices differ, the segment edge shows a faint color fringe or 'ghost image' from chromatic mismatch at the fusion boundary, a classic identifying feature of fused bifocals. One-piece (solid) bifocals are ground from a single piece of material (typically plastic) with no separate segment button, so there is no index mismatch and no chromatic fringe at the segment line — the vast majority of modern plastic bifocals are one-piece construction. Blended (invisible) bifocals start as a standard segmented design but have the demarcation line mechanically polished/blended away for cosmetic appearance, at the cost of a narrow zone of optical distortion (a visible-line-free but optically imperfect transition) where the blending occurs." },
+      { h: "Segment center location and optical center placement", t: "The distance portion's optical center is conventionally positioned at (or very near) the patient's pupil center in primary gaze, while the near segment has its own separate optical center, positioned near the TOP of the segment for most traditional designs (already relevant to the base-down prism mechanism in your Image Jump content) — placing the segment optical center high in the segment means the wearer's downward, inward gaze when reading naturally lands closer to it, minimizing unwanted prismatic effect during typical near use." },
     ],
     memorizeIt: [
       "Flat-top (D-segment): most common bifocal style, good size/image-jump compromise.",
       "Round segment: older style, mostly superseded by flat-top.",
       "Executive (full-width): largest near field, most noticeable image jump and demarcation line.",
       "Trifocals add an intermediate segment — largely supplanted by PALs but conceptually relevant.",
+      "Fused bifocal: higher-index segment button fused into the main lens — shows a color fringe/ghost image at the segment edge from index mismatch.",
+      "One-piece (solid) bifocal: ground from a single material, no index mismatch, no chromatic fringe — the modern standard for plastic bifocals.",
+      "Blended (invisible) bifocal: demarcation line mechanically polished away for cosmesis, at the cost of a narrow zone of optical distortion.",
+      "Near segment optical center is positioned near the TOP of the segment, so typical reading gaze naturally minimizes unwanted prismatic effect.",
     ],
     applyIt: [
       "This gives you the design vocabulary behind the segment-height fitting principle already covered in your Multifocal Adaptation content — regardless of which segment shape is chosen, correct vertical positioning remains the shared, essential fitting requirement.",
@@ -7330,12 +7375,16 @@ const STUDY_PAGES = {
       { h: "ANSI Z87.1 — occupational/safety eyewear", t: "A substantially more rigorous voluntary consensus standard specifically for occupational safety eyewear, involving higher-velocity impact testing than the baseline FDA requirement — required in many workplace settings by OSHA regulations referencing this standard, and relevant when patients need occupational safety glasses (already touched on in your General Health/prevention content)." },
       { h: "ANSI Z80.1 — prescription eyewear tolerances", t: "Governs allowable manufacturing tolerances for prescription accuracy (power, axis, prism) in finished spectacle lenses — a quality-control standard distinct from the impact-resistance standards, ensuring dispensed lenses actually match the intended prescription within acceptable limits." },
       { h: "Clinical relevance", t: "Understanding which standard applies helps guide appropriate patient counseling — a patient requesting safety glasses for occupational use (e.g., construction, manufacturing) needs ANSI Z87.1-rated eyewear specifically, not just standard FDA-compliant dress eyewear, since the two have meaningfully different impact resistance levels." },
+      { h: "How impact resistance is actually verified — the drop-ball test", t: "The FDA baseline test drops a 5/8-inch (about 16mm) diameter steel ball weighing approximately 0.56 ounce (~16 grams) from a height of 50 inches onto the lens's horizontal upper surface; the lens passes if it does not fracture. This single, relatively low-energy drop-ball test is the minimum legal requirement for essentially all dress spectacle lenses regardless of material." },
+      { h: "ANSI Z87.1 verification — more rigorous testing", t: "ANSI Z87.1 testing goes further, including both a basic impact (drop-ball) test more stringent than the FDA baseline and a high-velocity impact test, in which a small steel ball (commonly cited as about 1/4-inch diameter) is fired at the lens at high speed (on the order of 150 feet per second) to simulate flying debris or projectile impact — a meaningfully more demanding verification standard than the FDA's static drop-ball test alone, which is why Z87.1-rated eyewear is specifically required (rather than merely FDA-compliant dress eyewear) in occupational settings with genuine projectile/debris risk." },
     ],
     memorizeIt: [
       "FDA impact standard: baseline requirement for ALL dress spectacle lenses sold in the U.S. (drop-ball test).",
       "ANSI Z87.1: more rigorous voluntary standard specifically for occupational/safety eyewear, often required by OSHA.",
       "ANSI Z80.1: governs prescription accuracy tolerances — a different standard from impact resistance.",
       "Occupational safety glasses require Z87.1 rating, not just standard FDA-compliant dress eyewear.",
+      "FDA drop-ball test: ~5/8-inch steel ball (~0.56 oz) dropped from 50 inches — lens must not fracture.",
+      "ANSI Z87.1 adds a high-velocity impact test (small steel ball fired at high speed, ~150 ft/sec) simulating flying debris — well beyond the FDA's static drop-ball test.",
     ],
     applyIt: [
       "A patient asking for safety glasses for a job site needs specific counseling that standard prescription glasses (FDA-compliant) are not the same as certified safety eyewear (ANSI Z87.1-rated) — this distinction has real occupational safety implications, not just a technicality.",
@@ -7352,12 +7401,16 @@ const STUDY_PAGES = {
       { h: "Trivex — a comparable alternative", t: "A newer material with impact resistance comparable to polycarbonate but with somewhat better optical clarity (higher Abbe value, less chromatic aberration, connecting to the tradeoffs already discussed in your High-Index Materials content) — an alternative choice for patients wanting high impact resistance with less optical compromise than polycarbonate." },
       { h: "Standard plastic and glass — lower impact resistance", t: "CR-39 plastic, while FDA-compliant for dress eyewear, has meaningfully lower impact resistance than polycarbonate/Trivex; glass lenses, though largely uncommon in modern dispensing, have the lowest impact resistance among common lens materials and shatter risk, making them a poor choice when impact protection is a priority." },
       { h: "Clinical counseling priority", t: "Any patient with functionally monocular vision (best vision in only one eye, from any cause already covered on this platform — amblyopia, prior enucleation, severe unilateral disease) should be specifically counseled toward polycarbonate or Trivex lenses regardless of prescription power, given the outsized importance of protecting their sole functional eye." },
+      { h: "How materials are rendered impact resistant", t: "Impact resistance is achieved differently depending on the material. Polycarbonate and Trivex are inherently impact resistant thermoplastics by virtue of their polymer molecular structure (they absorb and dissipate impact energy through flexing rather than fracturing) and require no additional treatment to meet even the ANSI Z87.1 standard. Glass lenses, in contrast, are NOT inherently impact resistant enough to pass even the baseline FDA drop-ball test as ordinary annealed glass — they must be specifically treated, either by heat tempering (rapid heating and cooling that puts the outer surface under compression) or chemical tempering (ion-exchange strengthening), before dispensing; this is why plain, untreated glass lenses are not legally dispensable in the U.S. Standard CR-39 plastic achieves its FDA-compliant baseline resistance from the inherent toughness of the cured resin itself, without requiring the tempering process glass needs." },
+      { h: "Performance upon and after impact", t: "How a material behaves AT the moment of impact and afterward differs meaningfully by material. Polycarbonate and Trivex flex and absorb impact energy, typically surviving high-energy impacts without fracturing at all. Tempered glass, if it does fail, tends to fracture into many small, relatively blunt fragments (a deliberate safety design of the tempering process) rather than large sharp shards — safer than untreated glass, but still a fragmentation risk that thermoplastic materials do not share. CR-39 plastic, if a high-energy impact exceeds its resistance, tends to crack or shatter into fewer, larger, potentially sharp-edged pieces, which is a key reason CR-39 is not considered adequate for occupational safety or pediatric eyewear despite passing the baseline FDA test." },
     ],
     memorizeIt: [
       "Polycarbonate: significantly more impact-resistant than CR-39 plastic or glass — standard for children, sports, safety eyewear.",
       "Trivex: comparable impact resistance to polycarbonate, better optical clarity (higher Abbe value).",
       "Glass has the lowest impact resistance among common lens materials.",
       "Functionally monocular patients should be counseled toward polycarbonate/Trivex regardless of prescription power.",
+      "Polycarbonate/Trivex are inherently impact resistant (polymer structure) — no treatment needed. Glass MUST be heat- or chemically-tempered to meet even the FDA baseline; untreated glass is not legally dispensable.",
+      "Upon failure: polycarbonate/Trivex flex/absorb energy (rarely fracture); tempered glass fragments into small blunt pieces; CR-39 tends to crack into fewer, larger, sharper pieces.",
     ],
     applyIt: [
       "This connects directly to your Amblyopia content: a child with amblyopia (functionally more dependent on their better-seeing eye) is a textbook case for polycarbonate or Trivex lens counseling, independent of their specific refractive error — protecting the dominant eye is a genuine clinical priority, not just a routine material upsell.",
@@ -7396,12 +7449,14 @@ const STUDY_PAGES = {
       { h: "Best-form (corrected-curve) lenses", t: "Lens designs specifically chosen to minimize oblique astigmatism (covered in your next objective) across the range of powers a patient might need, rather than simply using whatever curve combination is easiest to manufacture — modern lens design largely defaults to best-form principles, but understanding the concept clarifies why lens quality can differ even at identical power and material." },
       { h: "Base curve selection tradeoffs", t: "A flatter base curve reduces lens thickness and improves cosmetic appearance (already relevant to your Aspheric Lens content) but, if too flat for the given power, increases peripheral aberration and reduces off-axis image quality — base curve selection is a genuine optimization problem, not an arbitrary manufacturing choice." },
       { h: "Clinical relevance", t: "Higher-quality lens labs and best-form/aspheric lens designs (already covered) optimize base curve selection automatically for a given power and patient's typical gaze pattern, but understanding the underlying tradeoff helps explain why two lenses of identical power and material can still perform differently in terms of peripheral clarity." },
+      { h: "Spectacle lens processing", t: "After a lens is surfaced (ground and polished to the prescribed power), it goes through several finishing steps before it can be worn: edging (cutting the lens blank down to the frame's exact shape, using a pattern or the frame itself as a template), beveling (creating an angled edge profile so the lens seats securely in the frame groove, or a flat/grooved edge for rimless mounting), and safety/tinting/coating treatments (as already covered) applied before or after edging depending on the specific treatment. Precise centration (aligning the lens's optical center with the patient's measured pupil position, per your Optical Center content) must be maintained throughout edging, since decentration introduced at this stage produces the unwanted prism already covered under Prentice's Rule." },
     ],
     memorizeIt: [
       "Multiple front/back curve combinations can produce the same total lens power — lens form matters beyond just power.",
       "Best-form (corrected-curve) lenses are specifically optimized to minimize oblique astigmatism.",
       "Flatter base curve: thinner/more cosmetic, but more peripheral aberration if too flat for the power.",
       "Base curve selection is a genuine optical optimization, connecting to your Aspheric Lens content.",
+      "Spectacle lens processing sequence: surfacing (grind/polish to power) → edging (cut to frame shape) → beveling/grooving (fit the frame mount) → coatings/tints — with centration accuracy maintained throughout to avoid unwanted decentration prism.",
     ],
     applyIt: [
       "This adds nuance to your Aspheric Lens content: aspheric design and best-form base curve selection are related but distinct strategies for the same underlying goal — minimizing peripheral optical degradation — and understanding both gives you a fuller picture of how modern lens design addresses this problem.",
@@ -7438,15 +7493,129 @@ const STUDY_PAGES = {
       { h: "Anti-reflective (AR) coating mechanism", t: "AR coatings use thin-film interference — multiple very thin layers of material with specific thicknesses and refractive indices — to cause destructive interference of reflected light waves, substantially reducing reflection and increasing the amount of light transmitted through the lens." },
       { h: "Benefits", t: "Reduced glare/reflections (both cosmetically, improving how the wearer's eyes appear to others, and functionally, reducing distracting reflections the wearer sees, e.g., from overhead lighting or oncoming headlights at night — connecting to your Aging content's discussion of night driving glare sensitivity), and improved light transmission, particularly beneficial for high-index lenses given their inherently higher baseline reflection." },
       { h: "Practical considerations", t: "AR-coated lenses show smudges/fingerprints more visibly (since less light scatter masks them) and require somewhat more diligent cleaning; coating quality and durability vary by manufacturer, with some older or lower-quality AR coatings prone to peeling or crazing over time." },
+      { h: "Ghost images specifically", t: "\"Ghost images\" refer to a faint, offset secondary image the wearer perceives, distinct from simple glare — they arise from internal reflections bouncing between the lens's front and back surfaces (or, in a multifocal, between the segment and main lens surfaces) before finally reaching the eye, most noticeable against a bright point source at night (e.g., oncoming headlights). Because ghost images specifically require multiple internal reflections, they are reduced by the same AR coating mechanism that reduces simple single-surface reflections, and are worst in uncoated high-index lenses (given their proportionally greater Fresnel reflection at each surface) — remedying reflections and ghost images is therefore the same underlying fix (AR coating) applied to two related but distinguishable visual complaints." },
     ],
     memorizeIt: [
       "Surface reflection increases with the refractive index difference between lens material and air — worse for high-index materials.",
       "AR coating mechanism: thin-film interference causing destructive interference of reflected light.",
       "Benefits: reduced glare/reflections, improved light transmission, particularly valuable for high-index lenses.",
       "AR-coated lenses show smudges more visibly and require more diligent cleaning.",
+      "Ghost images = a faint offset secondary image from multiple internal reflections (front-back surface, or segment-to-main-lens) — distinct from simple single-surface glare, but remedied by the same AR coating mechanism.",
     ],
     applyIt: [
       "This connects two of your Ophthalmic Optics topics directly: high-index lenses (already covered) specifically benefit from AR coating given their greater inherent surface reflection, and AR coating's night-glare reduction benefit directly complements the polarized/absorptive lens glare counseling already covered in your Aging and Spectacle Fitting content.",
+    ],
+  },
+  "lensopt-reference-points": {
+    name: "Optical Axis, Optical Center, Geometric Center & Major Reference Points",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ophthalmic dispensing/clinical optics references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Overview", t: "A finished spectacle lens has several distinct, precisely-defined reference points, and confusing them is a common source of error in both understanding and verifying a prescription — these terms describe DIFFERENT locations on the lens that only sometimes coincide." },
+      { h: "Optical center (OC)", t: "The single point on a lens through which light passes without any prismatic deviation — the point where the lens's front and back surface curvatures are effectively concentric (for a spherical lens) or, more generally, where the two principal meridians' powers are both centered. Any point away from the optical center induces prism per Prentice's rule (already covered), which is exactly why correct optical center placement over the pupil is clinically essential." },
+      { h: "Geometric center (GC)", t: "Simply the center of the lens's physical SHAPE as cut for the frame (the midpoint of the lens's boxed dimensions) — a purely mechanical/geometric definition, unrelated to optical performance. The geometric center and optical center frequently do NOT coincide, especially when a lens is deliberately decentered (to induce therapeutic prism, or to correct for the frame's geometric center not matching the patient's PD)." },
+      { h: "Optic axis", t: "The imaginary line passing through the centers of curvature of both lens surfaces — for a simple lens, this line passes through the optical center perpendicular to the lens at that point, and is the reference axis about which the lens's curvature is rotationally symmetric (for a spherical lens) or against which cylinder axis is specified (for a spherocylindrical lens)." },
+      { h: "Major reference point (MRP)", t: "The specific point on the finished lens where the manufacturer intends the prescribed power to be verified (e.g., on the lensmeter, already covered) — for a single-vision lens, the MRP is normally the same as the optical center, but for some multifocal designs the MRP for the distance portion may be marked at a different location than the true optical center, so verification must be performed at the specifically marked/intended point rather than assumed to be identical to the geometric or optical center." },
+    ],
+    memorizeIt: [
+      "Optical center (OC): the point with zero prismatic effect — any point away from it induces prism per Prentice's rule.",
+      "Geometric center (GC): the physical center of the lens's cut SHAPE — a mechanical definition, often different from the OC.",
+      "Optic axis: the line through both surfaces' centers of curvature, passing through the OC perpendicular to the lens.",
+      "Major reference point (MRP): the specific point marked for power verification — usually equals the OC for single-vision lenses, but not always for multifocals.",
+    ],
+    applyIt: [
+      "This gives you the precise vocabulary underlying both your Prentice's Rule/Decentration content (which specifically concerns the OPTICAL center, not the geometric center) and your Lensmeter content (which verifies power AT the marked MRP) — mixing these terms up is a classic source of confusion when a lens appears to be 'decentered' from the frame's geometric center on purpose, as intentional prism prescriptions require.",
+    ],
+  },
+  "lensopt-verification": {
+    name: "Verifying Lens Prescriptions — Lens Gauge & Hand Neutralization",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard ophthalmic dispensing/clinical optics references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Overview", t: "The lensmeter (already covered in detail under your Lensmeter & Optical Dispensing Instruments content) is the primary verification instrument, but two other classic dispensing tools — the lens clock (lens gauge) and hand neutralization — are also part of standard prescription verification and measure related but distinct things." },
+      { h: "Lens clock (lens gauge)", t: "A mechanical (or dial) instrument with three small pins/legs — one fixed center pin and two moving outer pins — that presses against a lens surface; the center pin's displacement relative to the outer pins mechanically measures the surface's SAGITTA (sag), which the instrument's dial directly converts and displays as SURFACE POWER in diopters (calibrated assuming a standard reference refractive index, conventionally 1.53) for that specific surface. Because the lens clock measures only ONE surface's curvature, it reports surface power, not the lens's total back vertex power — the two are only the same for a plano lens on the opposite surface, so a lens clock reading on the front surface is used to identify base curve, not to verify the finished Rx power (that's the lensmeter's job)." },
+      { h: "Hand neutralization", t: "A manual technique for determining an unknown lens's approximate power without an instrument, using a set of trial lenses: the examiner holds trial lenses of known power against the unknown lens (or views a target through both together) and observes the \"swim\" of a viewed object as the lens is moved side to side — the WITH motion (target appears to move in the same direction as the lens) indicates net plus power in that combination, while AGAINST motion indicates net minus power; the trial lens power is adjusted until the swim is neutralized (no apparent motion), at which point the trial lens power is equal and opposite to the unknown lens's power. This is a lower-precision, backup technique historically important before automated lensmeters became standard, and remains a useful conceptual check when no instrument is available." },
+      { h: "Why these are distinct from the lensmeter", t: "The lens clock measures a single surface's curvature/power (useful for base curve identification and as a design/manufacturing tool), while hand neutralization estimates the lens's overall power through a manual optical technique rather than an instrument reading — neither replaces the lensmeter's precise back vertex power measurement (already covered), but each serves a specific, distinct verification or design role in the dispensing process." },
+    ],
+    memorizeIt: [
+      "Lens clock (lens gauge): mechanically measures a surface's sagitta, dial-converts it to SURFACE power (one surface only) — used for base curve identification, not finished Rx verification.",
+      "Lens clock is calibrated to a standard reference index (conventionally 1.53) — readings on a lens of a different actual index require conversion.",
+      "Hand neutralization: uses trial lenses and observed WITH/AGAINST motion (swim) to manually estimate an unknown lens's power without an instrument.",
+      "WITH motion = net plus power; AGAINST motion = net minus power; neutralized (no motion) = trial lens power equals and opposes the unknown lens power.",
+    ],
+    applyIt: [
+      "This rounds out your dispensing verification toolkit alongside the already-covered Lensmeter content: the lensmeter gives precise back vertex power for the finished prescription, the lens clock identifies a single surface's curvature (useful for confirming base curve or lens form, already covered), and hand neutralization is the manual fallback technique for a quick power estimate without any instrument at all.",
+    ],
+  },
+  "lensopt-transposition": {
+    name: "Writing & Transposing Lens Prescriptions",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard ophthalmic dispensing/clinical optics references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Overview", t: "A spherocylindrical prescription can be written in two mathematically equivalent forms — plus-cylinder notation and minus-cylinder notation — and converting between them (transposition) is a routine, exactly-defined arithmetic procedure that every dispensing and verification workflow depends on, since different instruments, labs, and clinicians may default to different notations." },
+      { h: "The transposition rule", t: "To transpose a prescription from one cylinder form to the other: (1) add the sphere and cylinder powers together algebraically to get the NEW sphere; (2) reverse the SIGN of the cylinder power (keeping the same magnitude) to get the NEW cylinder; (3) change the axis by 90° (add 90° if the original axis is 90° or less, subtract 90° if it is greater than 90°) to get the NEW axis, keeping the final axis within the standard 1°–180° range." },
+      { h: "Worked example", t: "Transpose +1.00 +2.00 x090 (plus-cylinder form) into minus-cylinder form. New sphere = +1.00 + (+2.00) = +3.00. New cylinder = −(+2.00) = −2.00. New axis = 090 − 90 = 000, which is adjusted to 180 (axis is conventionally expressed as 1–180, not 0). Result: +3.00 −2.00 x180 — a classic reference example, since both forms describe the exact same physical lens power in every meridian." },
+      { h: "Why this matters clinically", t: "Lensmeters, some autorefractors, and different prescribing conventions may default to either plus- or minus-cylinder form; verifying a lensmeter reading against a prescription written in the other notation REQUIRES transposition first, not a direct side-by-side comparison — attempting to compare a minus-cylinder Rx directly against a plus-cylinder lensmeter reading without transposing would incorrectly suggest the lens is wrong when it may in fact be correctly fabricated." },
+    ],
+    memorizeIt: [
+      "Transposition rule: New sphere = old sphere + old cylinder. New cylinder = −(old cylinder). New axis = old axis ± 90° (kept within 1°–180°).",
+      "Worked example: +1.00 +2.00 x090 transposes to +3.00 −2.00 x180 — the same lens, both forms.",
+      "Sphere and cylinder power in the two forms differ, but the powers in every individual meridian of the lens are identical between the two notations — transposition changes notation, not the physical lens.",
+      "Always transpose to a common notation before comparing a prescription against a lensmeter reading verified in the opposite cylinder form.",
+    ],
+    applyIt: [
+      "This is the essential companion skill to your Lensmeter Reading Technique content: before declaring a lensmeter verification a 'mismatch' against the prescribed Rx, first confirm both are expressed in the same cylinder notation — a large apparent discrepancy is often nothing more than an un-transposed comparison between plus- and minus-cylinder forms of the identical lens.",
+    ],
+  },
+  "lensopt-effective-power": {
+    name: "Effective Power — Vertex Distance & Lens Tilt",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard clinical optics references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Overview", t: "A lens's power as measured on a lensmeter (its nominal, on-axis, at-a-specified-distance power) is not necessarily the power actually experienced by the eye once the lens is worn — both the vertex distance (how far the lens sits from the eye) and the lens's tilt (pantoscopic or faceform angle, already introduced qualitatively under your Spectacle Fitting content) change the EFFECTIVE power delivered to the eye, and both effects are quantifiable." },
+      { h: "Vertex distance and effective power — the formula", t: "Moving a lens of power F to a new vertex distance changes its effective power to F' = F / (1 − d·F), where d is the vertex distance change in METERS, taken as positive when the lens moves CLOSER to the eye (the direction used when converting a spectacle Rx to the equivalent power at the corneal plane, e.g., contact lens power)." },
+      { h: "Worked example — plus and minus lenses behave oppositely", t: "A +10.00D spectacle lens at a 12mm (0.012m) vertex distance: contact lens equivalent power = 10.00/(1 − 0.012×10.00) = 10.00/0.88 ≈ +11.36D — the CL needs MORE plus than the spectacle Rx. A −10.00D spectacle lens at the same 12mm vertex distance: CL equivalent = −10.00/(1 − 0.012×(−10.00)) = −10.00/1.12 ≈ −8.93D — the CL needs LESS minus than the spectacle Rx. This is the optical basis for the well-known clinical rule: high hyperopes need MORE plus power in contacts than in glasses, and high myopes need LESS minus power in contacts than in glasses." },
+      { h: "When vertex distance matters clinically", t: "The effect is proportional to the square of the power (roughly) and becomes clinically significant for higher prescriptions — commonly cited as becoming meaningful above about ±4.00D — which is why vertex distance is recorded and accounted for when converting between spectacle and contact lens power for higher Rx, but is usually ignored as clinically negligible for low prescriptions." },
+      { h: "Lens tilt and induced effects", t: "Tilting a spherical lens about a principal meridian (pantoscopic tilt about the horizontal axis, or faceform/wrap tilt about the vertical axis, already introduced under your Spectacle Fitting content) induces two related effects: a small increase in effective power along the meridian of the tilt, and UNWANTED CYLINDER POWER (induced astigmatism) with its axis coincident with the tilt axis. The commonly used clinical approximation for the induced cylinder is: induced cylinder ≈ F × tan²(θ), where F is the lens's power and θ is the tilt angle — both effects grow with the square of the tilt angle, so small fitting tilts produce a small effect while excessive tilt (a poorly adjusted frame) can produce clinically noticeable unwanted astigmatism." },
+      { h: "Worked example — tilt-induced cylinder", t: "A −4.00D lens tilted 10° pantoscopically: induced cylinder ≈ −4.00 × tan²(10°) = −4.00 × (0.1763)² ≈ −4.00 × 0.0311 ≈ −0.12D, with its axis coincident with the tilt axis (180 for a horizontal/pantoscopic tilt) — a small but real amount for a typical fitting tilt, which grows disproportionately (with tan²θ) for larger, poorly-fit tilt angles." },
+    ],
+    memorizeIt: [
+      "Effective power formula: F' = F/(1 − d·F), with d = vertex distance change in meters, positive when moving the lens CLOSER to the eye.",
+      "Moving a PLUS lens closer to the eye REQUIRES MORE plus power for the same effect; moving a MINUS lens closer requires LESS minus power — the basis of spectacle-to-contact-lens power conversion.",
+      "Vertex distance effects become clinically significant above roughly ±4.00D.",
+      "Lens tilt induces unwanted cylinder with axis along the tilt axis, approximated by induced cylinder ≈ F × tan²(θ) — grows with the square of the tilt angle.",
+      "Both vertex distance and tilt effects connect directly to your Aspheric/High-Powered Lens content, since precise as-worn fitting matters most for high-power prescriptions where these effects are largest.",
+    ],
+    applyIt: [
+      "This gives you the exact formula behind two facts already referenced qualitatively elsewhere on this platform: the vertex-distance formula explains precisely why your Aphakia and High-Powered Lens content notes that contact lens power differs meaningfully from spectacle power for high prescriptions, and the tilt formula explains why your Spectacle Fitting content's note that 'pantoscopic tilt affects effective power' is a real, calculable optical effect and not just a qualitative fitting nicety.",
+    ],
+  },
+  "lensopt-magnification": {
+    name: "Spectacle Magnification & Iseikonic Lens Design",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard clinical optics references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Overview", t: "Every spectacle lens magnifies or minifies the retinal image to some degree relative to the eye's uncorrected state — spectacle magnification (SM) is the quantified version of this effect, and it is the direct optical explanation for why anisometropic patients (unequal Rx between the eyes, already covered under your Prism and Vertical Imbalance content) can experience unequal retinal image sizes between their two eyes (aniseikonia) even after each eye is individually well-corrected." },
+      { h: "The two components of spectacle magnification", t: "SM = Shape Factor × Power Factor. The Shape Factor (SF) depends on the lens's FORM — its front surface power, center thickness, and index — and is given by SF = 1 / (1 − (t/n)·F1), where t is center thickness (meters), n is refractive index, and F1 is the front surface power (D). The Power Factor (PF) depends on the lens's back vertex power and its vertex distance from the eye: PF = 1 / (1 − d·Fv), where d is vertex distance (meters) and Fv is back vertex power (D) — this is the SAME vertex-distance relationship already covered under Effective Power, applied here to image size rather than power." },
+      { h: "Worked example", t: "A lens with front surface power F1 = +6.00D, center thickness t = 6mm (0.006m), index n = 1.5, back vertex power Fv = +8.00D, worn at vertex distance d = 12mm (0.012m). Shape Factor = 1/(1 − (0.006/1.5)×6.00) = 1/(1 − 0.024) = 1/0.976 ≈ 1.0246 (≈ +2.5% magnification from shape). Power Factor = 1/(1 − 0.012×8.00) = 1/(1 − 0.096) = 1/0.904 ≈ 1.1062 (≈ +10.6% magnification from power/vertex distance). Total spectacle magnification = 1.0246 × 1.1062 ≈ 1.1334, meaning this lens magnifies the retinal image by roughly 13.3% overall." },
+      { h: "Practical implications of each factor", t: "A THICKER lens or a STEEPER (more curved) front surface increases the shape factor's magnification; a lens worn FARTHER from the eye or with MORE PLUS back vertex power increases the power factor's magnification. This is why high-plus lenses (aphakic correction, already covered under your High-Powered Lens content) are strongly magnifying, while high-minus lenses are strongly minifying — and why simply flattening the front curve or reducing center thickness (already covered under Base Curve Selection and Lens Thickness content) can reduce unwanted magnification for a given power." },
+      { h: "Iseikonic lens design", t: "When anisometropia produces a clinically significant image-size difference between the eyes (aniseikonia) that disrupts binocular fusion, an iseikonic lens design deliberately manipulates the shape factor (adjusting front curve, thickness, or, less commonly, a special meniscus \"size lens\" design added independent of the power correction) on one eye's lens to equalize the two eyes' retinal image sizes, rather than accepting whatever shape factor the standard best-form lens design would otherwise produce — a targeted application of the shape-factor formula to solve a specific binocular vision problem, distinct from (though it can combine with) the vertical-imbalance slab-off techniques already covered under your Prism content." },
+    ],
+    memorizeIt: [
+      "Spectacle magnification (SM) = Shape Factor × Power Factor.",
+      "Shape Factor = 1/(1 − (t/n)·F1) — depends on center thickness, index, and FRONT surface power.",
+      "Power Factor = 1/(1 − d·Fv) — depends on vertex distance and BACK VERTEX power (same relationship as the Effective Power formula, applied to image size).",
+      "Worked example: F1=+6.00D, t=6mm, n=1.5, Fv=+8.00D, d=12mm → SF≈1.025 (+2.5%), PF≈1.106 (+10.6%), SM≈1.133 (≈+13.3% total magnification).",
+      "High-plus lenses magnify (aphakia); high-minus lenses minify — both shape and power factors contribute.",
+      "Iseikonic lens design deliberately adjusts shape factor (curve/thickness) to equalize retinal image size between the eyes in anisometropic aniseikonia.",
+    ],
+    applyIt: [
+      "This gives you the exact quantitative tool behind two topics already covered qualitatively: your High-Powered Lens content's note that aspheric/thinner design reduces the 'bug-eye' magnified appearance of high-plus lenses, and your Prism/Vertical Imbalance content's anisometropia discussion — the SAME anisometropic patient can have BOTH a vertical prism imbalance problem at near (solved by slab-off) AND a retinal image size (aniseikonia) problem at all distances (solved by iseikonic lens design), and distinguishing which problem you're addressing (and with which technique) is a genuinely testable clinical distinction.",
     ],
   },
   "visdev-emmetropization": {
@@ -11956,6 +12125,54 @@ const STUDY_PAGES = {
       "This gives you a genuinely important dispensing-counseling principle completing your existing sun lens content (Absorptive/Photochromic Lenses, Polarization, Radiation & the Eye): a patient should never assume a tinted or mirrored lens automatically provides adequate UV protection, since tint, mirror coating, polarization, and UV-blocking are each independently engineered and specified lens properties — explicitly confirming UV protection specification (rather than assuming it from a lens's visible appearance or tint darkness) is essential, especially for patients at elevated UV-related ocular risk already covered under your Pterygium and Cataract content.",
     ],
   },
+  "specreflection-mirror-fundamentals": {
+    name: "Spherical & Planar Mirror Optics — Power, Ray Tracing & Image Formation",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard geometrical optics references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Overview", t: "Before any dispensing-specific coating content, reflection has its own fundamental geometric optics — plane and spherical mirrors form images by the law of reflection (angle of incidence = angle of reflection, both measured from the surface normal) rather than by refraction, and mirrors follow their own version of the vergence framework already used throughout this platform for lenses and refracting surfaces." },
+      { h: "Plane mirrors", t: "A flat (planar) mirror always forms a VIRTUAL, ERECT, same-SIZE image located as far BEHIND the mirror as the object is in FRONT of it — no power, no magnification change, and no real image possible from a plane mirror alone. This is the simplest reflecting system and the baseline against which spherical mirror behavior is compared." },
+      { h: "Spherical mirrors — concave and convex", t: "A concave mirror (reflecting surface curves toward the incident light, like the inside of a bowl) is CONVERGING, functionally analogous to a plus lens — it has a real focal point in front of the mirror and can form either a real, inverted image (object beyond the focal point) or a virtual, erect, magnified image (object within the focal point, as in a shaving/makeup mirror). A convex mirror (reflecting surface curves away from the incident light, like the back of a spoon or a car's passenger-side mirror) is DIVERGING, functionally analogous to a minus lens — it always forms a virtual, erect, minified image regardless of object position, which is exactly why convex mirrors are used where a wide field of view matters more than image size (e.g., car mirrors, security mirrors)." },
+      { h: "Mirror power and focal length", t: "For a spherical mirror in air, power (in diopters) = 2/r, where r is the radius of curvature (in meters) — equivalently, focal length f = r/2. This mirrors (no pun intended) the same vergence-equation framework (V = U + P) already used for refracting surfaces and thin lenses elsewhere on this platform, allowing mirror image position to be solved the same way once mirror power is known." },
+      { h: "Ray tracing rules for spherical mirrors", t: "Three principal rays locate a mirror's image, directly analogous to the principal rays already used for lenses: (1) a ray parallel to the optical axis reflects through the focal point (concave) or appears to diverge from the focal point behind the mirror (convex); (2) a ray directed through the center of curvature strikes the mirror surface along the surface normal and reflects straight back along its own path; (3) a ray striking the mirror's vertex reflects at an equal angle on the opposite side of the optical axis. The intersection of any two of these located rays gives the image position." },
+      { h: "Magnification for a single reflecting surface", t: "As with a single refracting surface, transverse magnification for a mirror can be expressed as m = U/V (object vergence over image vergence) — a negative magnification indicates an inverted image, while a positive magnification indicates an erect image, consistent with the sign conventions already used for refracting-surface magnification elsewhere on this platform." },
+      { h: "Lens/mirror systems", t: "Some clinical and optical instruments combine a lens and a mirror in the same optical path (e.g., certain indirect ophthalmoscopy or slit lamp accessory optics, and the general design principle behind catadioptric systems) — light can be traced sequentially through such a combined system by applying the refracting-surface vergence equation at each lens surface and the mirror equation at the reflecting surface, in the actual physical sequence the light encounters them, exactly as multi-surface refracting systems are handled elsewhere on this platform." },
+    ],
+    memorizeIt: [
+      "Plane mirror: virtual, erect, same-size image, same distance behind the mirror as the object is in front.",
+      "Concave mirror = converging (like a plus lens): real focal point, can form real/inverted OR virtual/erect/magnified images depending on object position.",
+      "Convex mirror = diverging (like a minus lens): always virtual, erect, minified — used where wide field of view matters (car mirrors).",
+      "Mirror power (D) = 2/r (r = radius of curvature in meters); focal length f = r/2.",
+      "Three principal mirror rays: parallel-to-axis → through focal point; through center of curvature → reflects straight back; to the vertex → reflects at an equal angle on the other side of the axis.",
+      "Magnification (single surface, including mirrors): m = U/V — negative sign indicates an inverted image.",
+    ],
+    applyIt: [
+      "This gives you the geometric-optics foundation underlying several clinical applications already touched on elsewhere on this platform — the cornea acting as a convex mirror in keratometry (image minified, per convex-mirror behavior) and the Purkinje-Sanson images (P1–P3 from convex, erect-image-forming surfaces; P4 uniquely inverted because the posterior lens surface acts as a concave mirror as viewed from within the eye) are both direct, real-world applications of these same mirror ray-tracing and image-formation principles.",
+    ],
+  },
+  "specreflection-fresnel-law": {
+    name: "Fresnel's Law — Quantifying Reflected Light at an Interface",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard geometrical/physical optics references"],
+    learnIt: [
+      { h: "Overview", t: "Fresnel's law (the Fresnel equations) quantifies exactly what fraction of light is reflected versus transmitted at any refracting interface — this is the precise mathematical basis for the qualitative statement already made under your AR Coating content that 'reflection increases with index difference,' now expressed as an actual formula." },
+      { h: "The normal-incidence reflectance formula", t: "For light striking an interface perpendicular to the surface (normal incidence — the practical case for most everyday spectacle lens viewing), the fraction of light reflected is R = [(n₂ − n₁)/(n₂ + n₁)]², where n₁ and n₂ are the refractive indices of the two media. For a typical air-to-lens interface (n₁ = 1 for air), this simplifies to R = [(n − 1)/(n + 1)]², where n is the lens material's index." },
+      { h: "Worked example — why high-index lenses reflect more", t: "Standard CR-39 plastic (n = 1.498): R = (0.498/2.498)² ≈ 4.0% reflected at a single surface. A high-index 1.74 material: R = (0.74/2.74)² ≈ 7.3% reflected at a single surface — nearly double the reflectance loss of CR-39, confirming the qualitative rule already stated under AR Coating that higher-index materials inherently reflect more light and therefore benefit proportionally more from AR treatment." },
+      { h: "Two surfaces, not one", t: "An uncoated lens has TWO air-material interfaces (front and back surface), each reflecting light independently — the total light lost to reflection across an uncoated lens is therefore meaningfully more than the single-surface value (roughly double, for a first approximation), which is why an uncoated high-index lens can lose on the order of 13–14% of incident light to reflection at both surfaces combined, versus roughly 8% for uncoated CR-39 — a real, clinically noticeable difference in light transmission and cosmetic glare, not just a theoretical one." },
+      { h: "Reflectance increases at oblique angles", t: "The simple normal-incidence formula above is the minimum reflectance case — as the angle of incidence increases from normal (0°) toward grazing incidence (90°), reflectance rises for both polarization components (this is the more general angle-dependent form of the Fresnel equations, already touched on conceptually under your Brewster's Law/Polarization content, where reflectance for one polarization component actually falls to ZERO at exactly the Brewster angle before rising again at more oblique angles)." },
+    ],
+    memorizeIt: [
+      "Fresnel's law (normal incidence): R = [(n₂−n₁)/(n₂+n₁)]² — the fraction of light reflected at an interface.",
+      "For an air-to-lens interface: R = [(n−1)/(n+1)]² — CR-39 (n=1.498) ≈ 4.0% reflected per surface; high-index 1.74 ≈ 7.3% per surface.",
+      "An uncoated lens has TWO reflecting surfaces (front and back) — total reflection loss is roughly double the single-surface value.",
+      "Reflectance is minimum at normal incidence and generally increases toward oblique/grazing angles (except at the Brewster angle for one polarization component, where reflectance for that component falls to zero).",
+    ],
+    applyIt: [
+      "This is the exact quantitative formula behind your existing AR Coating content's qualitative claim that AR coating benefits high-index lenses proportionally more — you can now show precisely (≈7.3% vs. ≈4.0% per surface) why a high-index lens without AR coating reflects nearly double the light of standard CR-39, giving concrete numbers behind a recommendation you already knew to make.",
+    ],
+  },
   "lensmeter-focimeter-principle": {
     name: "The Lensmeter (Focimeter) — Optical Principles",
     priority: "MUST",
@@ -12039,6 +12256,48 @@ const STUDY_PAGES = {
       "This extends your existing Mirror Coatings & UV-Reflective Treatments content's core counseling principle — that sunglass lens properties are independently specified, not automatically bundled — to polarization specifically, and adds a genuinely testable occupational contraindication (aviation) that distinguishes polarized lens counseling from simple tinted lens counseling.",
     ],
   },
+  "specpolar-brewster-scattering": {
+    name: "Brewster's Law, Circular/Elliptical Polarization & Scattering Effects",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard physical optics references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the linear polarization/Malus's law mechanism already covered under Glare Filtering, three related physical-optics concepts complete the polarization picture tested on the boards: Brewster's law (the specific angle at which reflection fully polarizes light), circular/elliptical polarization (a more general form of polarized light beyond simple linear), and the effect of scattering on polarization (why skylight itself is partially polarized)." },
+      { h: "Brewster's law", t: "When unpolarized light strikes an interface at a specific angle of incidence — Brewster's angle — the reflected light becomes COMPLETELY (100%) linearly polarized, with its plane of polarization perpendicular to the plane of incidence. Brewster's angle is given by tan(θ_B) = n₂/n₁, where n₁ and n₂ are the refractive indices of the two media. For an air-to-water interface (n₂ ≈ 1.33): θ_B ≈ 53°. For an air-to-glass/CR-39 interface (n₂ ≈ 1.5): θ_B ≈ 56°. This is the precise physical explanation for why reflected glare off water and roads (already covered under Glare Filtering) is so strongly (though not always perfectly) polarized — real-world glare sources are often viewed near, though not always exactly at, Brewster's angle." },
+      { h: "Circular and elliptical polarization", t: "Linear polarization (already covered) is only one special case of polarized light — more generally, the electric field vector can trace out a circular or elliptical path as the wave propagates, rather than oscillating along a single fixed plane. Circular polarization results when two perpendicular linear polarization components have equal amplitude and are exactly 90° out of phase; elliptical polarization is the more general case (unequal amplitude and/or a phase difference other than exactly 90°). Circularly polarized filters are used in some specialized applications (e.g., certain 3D display/glasses systems, distinct from the passive linear-polarized 3D systems that rely on simple orientation) and in some anti-reflective camera/optical filter designs — clinically relevant primarily as a distinguishing concept from the simple linear polarization used in standard polarized sunglasses." },
+      { h: "Effects of scattering on polarization", t: "Rayleigh scattering (already covered under Wave Optics, in the context of why the sky is blue) also partially polarizes scattered light — sunlight scattered by air molecules becomes partially linearly polarized, with the degree of polarization being greatest at a 90° scattering angle from the sun (i.e., looking at the sky perpendicular to the sun's direction) and essentially zero looking directly at or away from the sun. This is why polarized sunglasses can noticeably darken/enhance contrast in a patch of open sky at certain viewing angles relative to the sun, distinct from their primary reflected-glare-blocking mechanism already covered." },
+    ],
+    memorizeIt: [
+      "Brewster's law: tan(θ_B) = n₂/n₁ — the angle at which reflected light becomes completely (100%) linearly polarized.",
+      "Brewster's angle ≈ 53° for water, ≈ 56° for typical glass/CR-39 (air as the first medium).",
+      "Circular polarization: two perpendicular linear components, equal amplitude, 90° phase difference. Elliptical polarization: the more general case (unequal amplitude and/or other phase difference).",
+      "Rayleigh-scattered skylight is partially polarized, maximally at 90° from the sun's direction — why polarized sunglasses can visibly darken patches of open sky.",
+    ],
+    applyIt: [
+      "This gives you the precise angle (Brewster's law) and the scattering mechanism behind two facts already stated qualitatively under your Glare Filtering content: reflected glare off water/roads is strongly polarized because these viewing geometries are often near Brewster's angle, and even open sky itself (via Rayleigh scattering) is partially polarized, both of which polarized sunglasses selectively exploit.",
+    ],
+  },
+  "specpolar-stress-analysis": {
+    name: "Successive Polarizers & Stress Analysis of Ophthalmic Lenses",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard physical optics/ophthalmic materials references"],
+    learnIt: [
+      { h: "Overview", t: "Malus's law (already covered under Glare Filtering, I = I₀cos²θ) governs not just a single polarizer's glare-blocking behavior but also what happens when light passes through TWO OR MORE polarizers in succession — a concept with a genuine, testable clinical dispensing application: stress/strain analysis of ophthalmic lens materials." },
+      { h: "Successive (crossed) polarizers", t: "When light passes through a first polarizer (establishing a known polarization direction) and then a SECOND polarizer, the transmitted intensity follows Malus's law using the angle between the two polarizers' transmission axes: I = I₀cos²θ. When the two polarizers' axes are PARALLEL (θ=0°), transmission is maximal (cos²0°=1, full transmission of the already-polarized light). When the two axes are exactly PERPENDICULAR (crossed polarizers, θ=90°), transmission drops to ZERO (cos²90°=0) — no light passes through the second polarizer at all, regardless of source intensity." },
+      { h: "Stress analysis (photoelasticity) of ophthalmic lenses", t: "Certain transparent materials, including some ophthalmic plastics, become optically active (birefringent) when placed under mechanical stress — internal strain from the manufacturing/molding process, or from mounting stress in a frame, alters the material's refractive properties in a stress-dependent way. Viewing such a stressed lens between two crossed polarizers (a simple polariscope setup) reveals the internal stress pattern directly, visible as colored or light/dark banding (isochromatic fringes) at points of higher strain — normally-crossed polarizers transmit no light, but strain-induced birefringence in the lens between them locally rotates the polarization, allowing some light through in a pattern that maps the internal stress distribution." },
+      { h: "Clinical/quality-control relevance", t: "This stress-visualization technique is a genuine lens quality-control tool: excessive residual internal stress from lens manufacturing (surfacing, tempering, or improper frame mounting) can predispose a lens to unexpected fracture or reduced impact performance, connecting directly to your existing Impact Resistance content — a lens showing pronounced stress fringes under polariscope examination may be more prone to failure than one showing minimal strain, even if both measure the same nominal power and pass a standard impact test." },
+    ],
+    memorizeIt: [
+      "Successive polarizers follow Malus's law using the angle BETWEEN their transmission axes: I = I₀cos²θ.",
+      "Parallel polarizer axes (θ=0°): maximal transmission. Crossed polarizer axes (θ=90°): zero transmission.",
+      "Stress-induced birefringence in a transparent lens material rotates polarization locally, allowing light through crossed polarizers in a pattern (isochromatic fringes) that maps internal stress — the basis of polariscope stress analysis.",
+      "Pronounced stress fringes on polariscope exam indicate residual internal strain, a quality-control concern connecting to your existing Impact Resistance content (strained material may be more failure-prone).",
+    ],
+    applyIt: [
+      "This extends your Glare Filtering content's Malus's law formula to a genuinely different clinical application: rather than a single polarizer blocking environmental glare, TWO polarizers in sequence with a stressed lens between them become a diagnostic tool for internal lens strain — connecting the pure physics of successive polarizers to a real ophthalmic materials quality-control practice already relevant to your Impact Resistance content.",
+    ],
+  },
   "lensphyschar-material-tradeoffs": {
     name: "Index of Refraction, Abbe Number & Density Trade-offs",
     priority: "MUST",
@@ -12079,6 +12338,27 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This extends the independently-engineered-properties principle already established under Mirror Coatings & UV-Reflective Treatments to the full modern coating stack, and gives a genuine practical counseling point (proper lens cleaning technique) that protects the AR coating and hard coat investment already covered elsewhere on this platform.",
+    ],
+  },
+  "lensphyschar-thickness-sizing": {
+    name: "Lens Thickness Control & Frame/Lens Size Specification (Boxing System)",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard ophthalmic dispensing/optics references (e.g., standard clinical optics texts)"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the material trade-offs already covered, a finished lens's physical dimensions — its center and edge thickness, and its overall size/shape as cut for the frame — are governed by their own set of practical rules and a standardized measurement system, both genuinely testable and distinct from the material/coating content already covered." },
+      { h: "Center and edge thickness by lens power sign", t: "A PLUS (converging) lens is thickest at its center and thins toward the edge; sufficient CENTER thickness must be maintained for structural integrity, since an overly thin center risks cracking or an unstable optical surface, especially in high-plus prescriptions (already relevant to your High-Powered Lens content). A MINUS (diverging) lens is thinnest at its center and thickens toward the edge; sufficient EDGE thickness must be maintained (particularly important for frame mounting security and for rimless/drill-mount designs, already relevant to your Frame Materials content), since an overly thin edge is fragile and can crack at the mounting point or frame groove." },
+      { h: "Iso-thickness curves", t: "Iso-thickness curves are contour lines used in lens design and manufacturing that connect points of EQUAL thickness across a lens's surface for a given prescription — a design/engineering tool (not something a clinician directly measures) used by lens labs to visualize and optimize how thickness varies across a complex lens surface (particularly relevant for aspheric, high-index, and progressive lens designs, already covered elsewhere), helping ensure minimum thickness standards are met everywhere on the lens without unnecessary excess material elsewhere." },
+      { h: "The boxing system — standardized size/shape specification", t: "Spectacle lens and frame dimensions are conventionally specified using the boxing system, which draws an imaginary rectangular \"box\" tightly around the lens shape: A = the horizontal boxed dimension (eye size), B = the vertical boxed dimension, and DBL (distance between lenses) = the bridge size (the horizontal gap between the two lens boxes). ED (effective diameter) is the diagonal measurement of the box (twice the distance from the lens's geometric center to the box's farthest corner) — this is the value used to confirm that an ordered lens BLANK (the uncut, round lens material before edging) is large enough to fully glaze the frame shape without running short of material at any point during edging, connecting directly to your existing Spectacle Lens Processing content." },
+    ],
+    memorizeIt: [
+      "Plus lenses: thickest at CENTER, thin at edge — minimum CENTER thickness matters for structural integrity.",
+      "Minus lenses: thinnest at CENTER, thick at edge — minimum EDGE thickness matters for frame-mounting security, especially rimless/drill-mount designs.",
+      "Iso-thickness curves: contour lines connecting equal-thickness points across a lens surface — a lens design/manufacturing optimization tool.",
+      "Boxing system: A = horizontal box (eye size), B = vertical box, DBL = bridge size (distance between lens boxes), ED = effective (diagonal) diameter, used to confirm the ordered lens blank is large enough to glaze the frame.",
+    ],
+    applyIt: [
+      "This connects directly to your High-Powered Lens and Frame Materials content: understanding why high-plus lenses need adequate center thickness (structural integrity) and high-minus lenses need adequate edge thickness (frame mounting, especially rimless designs) explains a genuine, practical lab/dispensing consideration beyond simply selecting the right base curve or material — and the boxing system (A, B, DBL, ED) is the standardized language used to specify and verify these dimensions are met.",
     ],
   },
   "framemat-metal-frames": {
@@ -12163,6 +12443,27 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you the underlying photochemistry completing your existing Absorptive & Photochromic Lens Considerations content, and directly extends your existing Radiation & the Eye (UV Spectrum) content by explaining precisely why the UV-blocking windshield glass that already protects against UVB-related anterior segment damage also, as a side effect, prevents photochromic lenses from darkening while driving.",
+    ],
+  },
+  "absorptive-thickness-occupational": {
+    name: "Lens Thickness Effects on Tint Density & Occupational Shade Requirements",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard ophthalmic dispensing/occupational safety references"],
+    learnIt: [
+      { h: "Overview", t: "Two further practical aspects of absorptive lenses round out this topic: how a lens's varying THICKNESS affects the uniformity of its tint appearance, and the specific, elevated shade requirements for certain occupational tasks (most notably welding) — both genuinely distinct from the VLT/photochromic content already covered." },
+      { h: "Lens thickness and tint density", t: "For a dyed (tinted) lens of uniform dye concentration, the amount of light absorbed increases with the THICKNESS of material the light travels through (the same physical principle — greater path length through an absorbing medium produces greater absorption — that governs light attenuation in any absorbing material). Because a lens's thickness varies across its surface (already covered under your Physical Characteristics content — plus lenses thick at center/thin at edge, minus lenses the reverse), a UNIFORMLY-applied dye can appear unevenly dark across the lens: a high-minus lens, for example, can show a visibly darker tint at its thicker edge than at its thinner center for the exact same dye concentration. Lens labs compensate for this with techniques like gradient/timed dip-tinting adjusted for the specific lens's thickness profile, aiming for a cosmetically uniform appearance despite the underlying thickness variation." },
+      { h: "Occupational shade requirements — welding as the classic example", t: "Certain occupational tasks require absorptive lenses with a specific, standardized MINIMUM shade number (a numeric density scale, with higher numbers indicating darker/more protective lenses) to adequately protect against the intense visible light, infrared, and UV radiation produced by the specific task — welding is the classic example, where the appropriate shade number requirement increases with the process and amperage/intensity involved (ranging from relatively light shades for lower-intensity tasks like soldering/brazing up to much darker shades for high-amperage arc welding or plasma-arc processes). Using too LIGHT a shade for a given task risks acute retinal/corneal photic injury (already relevant to your Radiation & the Eye content); using too DARK a shade impairs the worker's ability to see their work adequately." },
+      { h: "Regulatory connection", t: "These occupational shade requirements are specified by ANSI/OSHA standards (already covered under your Impact Resistance and Optical Tolerances content in a different context — impact resistance and prescription accuracy, respectively) — here the relevant standard instead governs optical DENSITY/shade appropriate to the specific hazard, a third distinct category of ANSI-referenced ophthalmic regulation alongside impact resistance and prescription tolerance." },
+    ],
+    memorizeIt: [
+      "For a uniformly-dyed lens, greater material thickness = greater light absorption (longer path length) — the same dye concentration can look darker at a lens's thicker regions than its thinner regions.",
+      "High-minus lenses (thick edge/thin center) are especially prone to visibly uneven tint density without lab compensation (gradient/timed dip-tinting).",
+      "Occupational tasks (e.g., welding) require a specific MINIMUM shade number that increases with task/process intensity — too light risks photic injury, too dark impairs work visibility.",
+      "Occupational shade requirements are a third distinct category of ANSI/OSHA-referenced ophthalmic regulation, alongside impact resistance (Z87.1) and prescription tolerance (Z80.1).",
+    ],
+    applyIt: [
+      "This connects your Physical Characteristics (lens thickness variation) and Impact Resistance/Optical Tolerances (ANSI/OSHA regulatory framework) content into the absorptive-lens context specifically: a high-minus patient getting a uniform tint may need lab-side compensation for edge/center thickness variation, and a patient needing occupational welding eyewear needs a specifically shade-rated lens, not just a generically dark tint — both genuinely practical, testable dispensing distinctions.",
     ],
   },
   "opttolerance-ansi-z80": {
@@ -17604,6 +17905,26 @@ const FLASHCARDS = [
   { id: "fc-1400", objectiveId: "celldisease-adaptation-types", front: "What is metaplasia, and what is its cost?", back: "A reversible change from one differentiated cell type to another, adaptive to chronic irritation — at the cost of losing the original cell type's specialized function." },
   { id: "fc-1401", objectiveId: "celldisease-dysplasia-neoplasia", front: "How does dysplasia differ from metaplasia?", back: "Metaplasia is an orderly, reversible cell-type substitution; dysplasia is disordered cellular growth/architecture with genuine malignant potential." },
   { id: "fc-1402", objectiveId: "celldisease-dysplasia-neoplasia", front: "State the full progression sequence from chronic irritation to invasive cancer.", back: "Chronic irritation → metaplasia → dysplasia → carcinoma in situ → invasive carcinoma." },
+  { id: "fc-1457", objectiveId: "prism-vertical-imbalance", front: "Why does anisometropia cause vertical prism imbalance specifically at near, not at distance?", back: "Both eyes look through the lens below the distance optical center when reading; unequal lens powers induce unequal prism at that same decentered position (Prentice's rule), but at distance (looking near the optical centers) the induced prism from each lens is minimal." },
+  { id: "fc-1458", objectiveId: "prism-vertical-imbalance", front: "What is slab-off, and which eye's lens does it typically modify?", back: "A bicentric grinding technique that adds compensating base-down prism confined to the lower (reading) portion of the lens — typically applied to the more minus (or less plus) eye, which otherwise has the greater induced base-up effect at near." },
+  { id: "fc-1459", objectiveId: "prism-vertical-imbalance", front: "Why do contact lenses eliminate vertical prism imbalance in anisometropia?", back: "A contact lens moves with the eye, so its optical center always aligns with the line of sight — there is no decentration relative to gaze, so no Prentice's-rule-induced prism at any gaze position." },
+  { id: "fc-1460", objectiveId: "lensopt-reference-points", front: "Distinguish the optical center from the geometric center of a spectacle lens.", back: "Optical center: the point with zero prismatic effect. Geometric center: the physical center of the lens's cut shape. They often do NOT coincide, especially with intentional decentration." },
+  { id: "fc-1461", objectiveId: "lensopt-verification", front: "What does a lens clock (lens gauge) actually measure, and what does it NOT tell you?", back: "It measures one surface's sagitta and converts it to that surface's power (assuming a standard reference index, ~1.53) — it does NOT measure the lens's total back vertex power, so it can't verify the finished Rx by itself." },
+  { id: "fc-1462", objectiveId: "lensopt-verification", front: "In hand neutralization, what does WITH motion vs. AGAINST motion of the target indicate?", back: "WITH motion (target moves same direction as the lens) = net plus power. AGAINST motion (opposite direction) = net minus power. Neutralized (no motion) = trial lens power equals and opposes the unknown lens." },
+  { id: "fc-1463", objectiveId: "lensopt-transposition", front: "Transpose +1.00 +2.00 x090 into minus-cylinder form.", back: "+3.00 −2.00 x180. (New sphere = 1.00+2.00=3.00; new cylinder = −2.00; new axis = 090−90=000→180.)" },
+  { id: "fc-1464", objectiveId: "lensopt-effective-power", front: "State the effective power (vertex distance) formula and its sign convention.", back: "F' = F/(1−d·F), with d = vertex distance change in meters, positive when the lens moves CLOSER to the eye (e.g., spectacle-to-contact-lens conversion)." },
+  { id: "fc-1465", objectiveId: "lensopt-effective-power", front: "A +10.00D spectacle lens sits at a 12mm vertex distance. Approximately what contact lens power is equivalent?", back: "≈ +11.36D (10/(1−0.012×10) = 10/0.88 ≈ 11.36) — high hyperopes need MORE plus power in contacts than in glasses." },
+  { id: "fc-1466", objectiveId: "lensopt-magnification", front: "State the spectacle magnification formula and its two components.", back: "SM = Shape Factor × Power Factor. SF = 1/(1−(t/n)·F1) [center thickness, index, front surface power]. PF = 1/(1−d·Fv) [vertex distance, back vertex power]." },
+  { id: "fc-1467", objectiveId: "lensopt-magnification", front: "What is an iseikonic lens design used for?", back: "Deliberately adjusting a lens's shape factor (front curve, thickness) to equalize retinal image size between the two eyes in anisometropic patients with clinically significant aniseikonia." },
+  { id: "fc-1468", objectiveId: "specreflection-mirror-fundamentals", front: "State mirror power in terms of radius of curvature, and give the corresponding focal length relationship.", back: "Mirror power (D) = 2/r (r in meters). Focal length f = r/2." },
+  { id: "fc-1469", objectiveId: "specreflection-mirror-fundamentals", front: "Why does a convex mirror always form a virtual, erect, minified image regardless of object position?", back: "A convex mirror is diverging (like a minus lens) — it has no real focal point in front of it, so it can never converge rays to form a real image; only a virtual, erect, minified image results, which is why it's used for wide-field applications like car mirrors." },
+  { id: "fc-1470", objectiveId: "specreflection-fresnel-law", front: "State Fresnel's law for reflectance at normal incidence, and compute it for CR-39 (n=1.498).", back: "R = [(n−1)/(n+1)]² for an air interface. CR-39: R = (0.498/2.498)² ≈ 4.0% reflected per surface." },
+  { id: "fc-1471", objectiveId: "specreflection-fresnel-law", front: "Why does an uncoated high-index (n=1.74) lens lose noticeably more light to reflection than uncoated CR-39?", back: "Fresnel reflectance R=[(n−1)/(n+1)]² increases with index difference from air: ≈7.3% per surface at n=1.74 vs. ≈4.0% at n=1.498 (CR-39) — roughly double, across two surfaces." },
+  { id: "fc-1472", objectiveId: "specpolar-brewster-scattering", front: "State Brewster's law, and give the approximate Brewster angle for water.", back: "tan(θ_B) = n2/n1 — the angle at which reflected light becomes fully polarized. For water (n≈1.33), θ_B ≈ 53°." },
+  { id: "fc-1473", objectiveId: "specpolar-brewster-scattering", front: "Why is the open sky itself partially polarized?", back: "Rayleigh scattering of sunlight by air molecules partially polarizes the scattered light, maximally at a 90° angle from the sun's direction." },
+  { id: "fc-1474", objectiveId: "specpolar-stress-analysis", front: "What happens to light transmission when two polarizers are crossed (axes at 90°), and how is this exploited to visualize lens stress?", back: "Transmission drops to zero (Malus's law, cos²90°=0). Stress-induced birefringence in a lens placed between crossed polarizers locally rotates polarization, letting light through in a pattern that maps internal strain (photoelasticity/polariscope testing)." },
+  { id: "fc-1475", objectiveId: "lensphyschar-thickness-sizing", front: "In the boxing system, what do A, B, DBL, and ED each specify?", back: "A = horizontal box (eye size). B = vertical box. DBL = bridge size (distance between lens boxes). ED = effective (diagonal) diameter, used to confirm the lens blank is large enough to glaze the frame." },
+  { id: "fc-1476", objectiveId: "absorptive-thickness-occupational", front: "Why can a uniformly-dyed high-minus lens appear darker at the edge than at the center?", back: "Light absorption increases with path length through the dyed material; a minus lens is thicker at the edge than the center, so the same dye concentration absorbs more light (looks darker) at the thicker edge." },
 ];
 
 const QUESTIONS = [
@@ -20138,6 +20459,57 @@ const QUESTIONS = [
       b: "Correct — AR coating directly reduces surface reflections via thin-film interference, addressing both the cosmetic (visible reflections) and functional (glare) concerns, and is particularly valuable for high-index lenses given their greater inherent reflection.",
       c: "Incorrect — tinting reduces overall light transmission but doesn't specifically address surface reflection in the way AR coating does.",
       d: "Incorrect — frame style doesn't address lens surface reflection.",
+    },
+  },
+  {
+    id: "q-319", objectiveId: "lensopt-effective-power", type: "Calculation", difficulty: "Hard",
+    stem: "A patient's spectacle Rx is +10.00 D measured at a 12 mm (0.012 m) vertex distance. Using the effective power formula F' = F/(1 − dF), approximately what power contact lens (at the corneal plane) would be equivalent?",
+    choices: [
+      { id: "a", text: "+8.80 D" },
+      { id: "b", text: "+10.00 D" },
+      { id: "c", text: "+11.36 D" },
+      { id: "d", text: "+12.20 D" },
+    ],
+    correct: "c",
+    explanations: {
+      a: "Incorrect — this would result from adding rather than the correct vertex-distance division, and moves the power the wrong direction for a plus lens moved closer to the eye.",
+      b: "Incorrect — this ignores the vertex distance change entirely; at +10.00D the effect is too large to ignore (roughly a 1.36D difference).",
+      c: "Correct — F' = 10.00/(1 − 0.012 × 10.00) = 10.00/0.88 ≈ +11.36 D. Moving a plus lens closer to the eye (spectacle to contact lens) requires MORE plus power for the same effect.",
+      d: "Incorrect — this overstates the effect; recompute using d = 0.012 m, not a larger vertex distance value.",
+    },
+  },
+  {
+    id: "q-320", objectiveId: "lensopt-transposition", type: "Calculation", difficulty: "Medium",
+    stem: "Transpose the prescription −3.00 −1.50 x045 (minus-cylinder form) into plus-cylinder form.",
+    choices: [
+      { id: "a", text: "−4.50 +1.50 x135" },
+      { id: "b", text: "−3.00 +1.50 x045" },
+      { id: "c", text: "−1.50 +1.50 x135" },
+      { id: "d", text: "−4.50 −1.50 x135" },
+    ],
+    correct: "a",
+    explanations: {
+      a: "Correct — new sphere = −3.00 + (−1.50) = −4.50; new cylinder = −(−1.50) = +1.50; new axis = 045 + 90 = 135 (axis ≤90°, so add 90°).",
+      b: "Incorrect — the sphere must also change (new sphere = old sphere + old cylinder), not stay the same.",
+      c: "Incorrect — the sphere calculation is wrong; −3.00 + (−1.50) = −4.50, not −1.50.",
+      d: "Incorrect — the cylinder sign must flip when transposing; it should be +1.50, not −1.50.",
+    },
+  },
+  {
+    id: "q-321", objectiveId: "prism-vertical-imbalance", type: "Clinical application", difficulty: "Medium",
+    stem: "An anisometropic patient (right eye −1.00 D, left eye −5.00 D) reports comfortable, clear distance vision but vertical diplopia and eyestrain specifically when reading. What is the most likely cause, and what is the classic corrective technique?",
+    choices: [
+      { id: "a", text: "Uncorrected presbyopia; the fix is simply increasing the reading add" },
+      { id: "b", text: "Vertical prism imbalance from unequal induced prism in downgaze (per Prentice's rule); the classic fix is slab-off applied to the more minus (left) lens" },
+      { id: "c", text: "A lensmeter fabrication error; the glasses should be remade with a new PD measurement" },
+      { id: "d", text: "Convergence insufficiency; the fix is base-in prism split between both lenses" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — symptoms specific to reading with normal distance vision, in the setting of significant anisometropia, point to a prism (not accommodative) mechanism.",
+      b: "Correct — anisometropia causes unequal induced prism per Prentice's rule at the same decentered (below-OC) reading position; slab-off adds compensating prism to the lower portion of the more minus lens (here, the left eye) to equalize the vertical effect.",
+      c: "Incorrect — this is an expected optical consequence of anisometropia, not necessarily a fabrication error; PD accuracy affects horizontal, not primarily vertical, imbalance.",
+      d: "Incorrect — the symptom pattern (distance-comfortable, near-symptomatic, tied to unequal Rx) is classic for vertical imbalance, not a horizontal vergence disorder.",
     },
   },
   {
@@ -23011,6 +23383,74 @@ const QUESTIONS = [
       b: "Correct — dysplasia is disordered, abnormal cellular growth genuinely distinct from metaplasia's orderly substitution of one normal cell type for another; unlike metaplasia, dysplasia is a pre-neoplastic lesion carrying malignant potential, particularly if severe, warranting clinical surveillance or intervention before potential progression to carcinoma in situ and invasive malignancy.",
       c: "Incorrect — no invasion beyond the basement membrane means this is not yet invasive carcinoma; it is a pre-neoplastic (dysplastic) lesion.",
       d: "Incorrect — dysplasia and metaplasia are genuinely distinct processes with different implications: metaplasia is orderly and fully reversible, while dysplasia is disordered and carries malignant potential.",
+    },
+  },
+  {
+    id: "q-322", objectiveId: "specreflection-fresnel-law", type: "Calculation", difficulty: "Hard",
+    stem: "Using Fresnel's law for normal incidence, R = [(n−1)/(n+1)]², approximately what percentage of light is reflected at a single air-to-lens surface for a high-index 1.74 lens material?",
+    choices: [
+      { id: "a", text: "1.7%" },
+      { id: "b", text: "4.0%" },
+      { id: "c", text: "7.3%" },
+      { id: "d", text: "17.4%" },
+    ],
+    correct: "c",
+    explanations: {
+      a: "Incorrect — this is not the result of the Fresnel formula; it appears to just reference the index value itself.",
+      b: "Incorrect — this is the reflectance for standard CR-39 (n=1.498), not high-index 1.74 material.",
+      c: "Correct — R = [(1.74−1)/(1.74+1)]² = (0.74/2.74)² ≈ 0.0729, or about 7.3% reflected at this single surface — nearly double the ~4.0% reflectance of CR-39.",
+      d: "Incorrect — this overstates the single-surface reflectance; recheck the squaring step in the formula.",
+    },
+  },
+  {
+    id: "q-323", objectiveId: "specreflection-mirror-fundamentals", type: "Calculation", difficulty: "Medium",
+    stem: "A concave mirror has a radius of curvature of 40 cm (0.40 m). What is its approximate power in diopters?",
+    choices: [
+      { id: "a", text: "+2.50 D" },
+      { id: "b", text: "+5.00 D" },
+      { id: "c", text: "+10.00 D" },
+      { id: "d", text: "+20.00 D" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — this would be the result of using f = r rather than P = 2/r.",
+      b: "Correct — mirror power = 2/r = 2/0.40 = +5.00 D (positive/converging, consistent with a concave mirror).",
+      c: "Incorrect — this doubles the correct value; recheck the formula (P = 2/r, not 4/r).",
+      d: "Incorrect — this substantially overstates the power for this radius of curvature.",
+    },
+  },
+  {
+    id: "q-324", objectiveId: "specpolar-brewster-scattering", type: "Applied concept", difficulty: "Medium",
+    stem: "At approximately what angle of incidence (from the normal) does light reflecting off a water surface become completely (100%) polarized, per Brewster's law?",
+    choices: [
+      { id: "a", text: "0° (normal incidence)" },
+      { id: "b", text: "~33°" },
+      { id: "c", text: "~53°" },
+      { id: "d", text: "~90° (grazing incidence)" },
+    ],
+    correct: "c",
+    explanations: {
+      a: "Incorrect — at normal incidence there is no preferential polarization of the (small amount of) reflected light.",
+      b: "Incorrect — this underestimates Brewster's angle for a water surface.",
+      c: "Correct — Brewster's angle: tan(θB) = n2/n1 = 1.33/1.00, giving θB ≈ 53° for an air-water interface — the angle at which reflected light is fully polarized perpendicular to the plane of incidence.",
+      d: "Incorrect — at grazing incidence reflectance is high but not fully polarized; Brewster's angle is a specific intermediate angle, not the grazing limit.",
+    },
+  },
+  {
+    id: "q-325", objectiveId: "lensphyschar-thickness-sizing", type: "Applied concept", difficulty: "Medium",
+    stem: "In the boxing system used to specify spectacle lens/frame size, what does the 'ED' (effective diameter) measurement determine?",
+    choices: [
+      { id: "a", text: "The patient's interpupillary distance" },
+      { id: "b", text: "The minimum lens blank diameter needed to fully glaze the frame's largest lens opening dimension" },
+      { id: "c", text: "The vertical drop of the bifocal segment below the distance optical center" },
+      { id: "d", text: "The frame's bridge (DBL) size" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — interpupillary distance is a separate patient measurement, not a boxing-system frame/lens dimension.",
+      b: "Correct — effective diameter is the diagonal measurement (twice the distance from the lens's geometric center to the farthest point of the box) used to ensure the uncut lens blank ordered is large enough to fully glaze the frame shape without running out of material at any edge.",
+      c: "Incorrect — that describes segment height, a separate multifocal fitting measurement.",
+      d: "Incorrect — DBL (distance between lenses) is the bridge/nose-bridge measurement, a distinct boxing-system value from ED.",
     },
   },
 ];
