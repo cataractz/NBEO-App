@@ -2083,6 +2083,8 @@ const HEADNECK_TOPIC_ID = "t-15-0-0"; // Systemic Health(15) > Anatomy(Gross)(0)
 const HEADNECK_OBJECTIVES = [
   { id: "headneck-cranial-nerves-vision", name: "Cranial Nerves Relevant to Vision & Ocular Motility (II, III, IV, V, VI, VII)", built: true },
   { id: "headneck-carotid-circulation", name: "Carotid Arterial Supply to the Eye & Brain", built: true },
+  { id: "headneck-skull-orbit-dural-sinuses", name: "Skull Foramina, Meninges, & Dural Venous Sinuses", built: true },
+  { id: "headneck-muscles-glands-triangles", name: "Facial/Neck Muscles, Cervical Triangles, Salivary Glands, Nose, & Ear", built: true },
 ];
 
 const DIENCEPHALON_TOPIC_ID = "t-15-1-5"; // Systemic Health(15) > Anatomy(Neuroanatomy)(1) > Diencephalon(5)
@@ -2092,6 +2094,7 @@ const DIENCEPHALON_TOPIC_ID = "t-15-1-5"; // Systemic Health(15) > Anatomy(Neuro
 const DIENCEPHALON_OBJECTIVES = [
   { id: "diencephalon-thalamus-lgn", name: "Thalamus & the Lateral Geniculate Nucleus — Visual Relay", built: true },
   { id: "diencephalon-hypothalamus", name: "Hypothalamus — Autonomic & Endocrine Control Center", built: true },
+  { id: "diencephalon-epithalamus-subthalamus", name: "Epithalamus & Subthalamus", built: true },
 ];
 
 const NEUROHISTOLOGY_TOPIC_ID = "t-15-2-3"; // Systemic Health(15) > Anatomy(Histology)(2) > Neurohistology(3)
@@ -2102,6 +2105,7 @@ const NEUROHISTOLOGY_TOPIC_ID = "t-15-2-3"; // Systemic Health(15) > Anatomy(His
 const NEUROHISTOLOGY_OBJECTIVES = [
   { id: "neurohistology-neuron-glia", name: "Neuron Structure & Glial Cell Types", built: true },
   { id: "neurohistology-myelin", name: "Myelination — Oligodendrocytes vs. Schwann Cells", built: true },
+  { id: "neurohistology-neural-tube-development", name: "Neural Tube Development & Neural Crest Derivatives", built: true },
 ];
 
 const AUTONOMICANAT_TOPIC_ID = "t-15-1-1"; // Systemic Health(15) > Anatomy(Neuroanatomy)(1) > Autonomic nervous system(1)
@@ -2110,6 +2114,7 @@ const AUTONOMICANAT_TOPIC_ID = "t-15-1-1"; // Systemic Health(15) > Anatomy(Neur
 const AUTONOMICANAT_OBJECTIVES = [
   { id: "autonomicanat-sympathetic-pathway", name: "Sympathetic Pathway Anatomy — The Three-Neuron Oculosympathetic Chain", built: true },
   { id: "autonomicanat-parasympathetic-pathway", name: "Parasympathetic Pathway Anatomy — Edinger-Westphal to Iris Sphincter", built: true },
+  { id: "autonomicanat-general-organization", name: "Autonomic Nervous System — General Organization & Neurotransmitters", built: true },
 ];
 
 const MEDULLA_TOPIC_ID = "t-15-1-2"; // Systemic Health(15) > Anatomy(Neuroanatomy)(1) > Medulla(2)
@@ -2118,6 +2123,7 @@ const MEDULLA_TOPIC_ID = "t-15-1-2"; // Systemic Health(15) > Anatomy(Neuroanato
 const MEDULLA_OBJECTIVES = [
   { id: "medulla-cranial-nerve-nuclei", name: "Lower Cranial Nerve Nuclei (IX, X, XI, XII) & Brainstem Localization", built: true },
   { id: "medulla-vital-centers", name: "Medullary Vital Centers — Cardiac, Respiratory, & Vasomotor Control", built: true },
+  { id: "medulla-cross-sectional-levels", name: "Medullary Cross-Sectional Levels (Motor/Sensory Decussation, Inferior Olive, Open Medulla)", built: true },
 ];
 
 const PONS_TOPIC_ID = "t-15-1-3"; // Systemic Health(15) > Anatomy(Neuroanatomy)(1) > Pons(3)
@@ -2142,6 +2148,7 @@ const CEREBRUM_TOPIC_ID = "t-15-1-6"; // Systemic Health(15) > Anatomy(Neuroanat
 const CEREBRUM_OBJECTIVES = [
   { id: "cerebrum-lobes-visual-cortex", name: "Cerebral Lobes & the Primary Visual Cortex (Occipital Lobe Localization)", built: true },
   { id: "cerebrum-frontal-eye-fields", name: "Frontal Eye Fields & Voluntary Gaze Control", built: true },
+  { id: "cerebrum-white-matter-optic-radiations", name: "Cerebral White Matter & the Optic Radiations", built: true },
 ];
 
 const CEREBELLUM_TOPIC_ID = "t-15-1-7"; // Systemic Health(15) > Anatomy(Neuroanatomy)(1) > Cerebellum(7)
@@ -2167,6 +2174,7 @@ const SPINALCORD_TOPIC_ID = "t-15-1-0"; // Systemic Health(15) > Anatomy(Neuroan
 const SPINALCORD_OBJECTIVES = [
   { id: "spinalcord-tract-organization", name: "Spinal Cord Tract Organization — Corticospinal & Spinothalamic Pathways", built: true },
   { id: "spinalcord-cord-syndromes", name: "Spinal Cord Syndromes & Lesion Localization", built: true },
+  { id: "spinalcord-gray-matter-nerves", name: "Spinal Gray Matter Organization & Spinal Nerves", built: true },
 ];
 
 const SYSCIRC_TOPIC_ID = "t-15-0-3"; // Systemic Health(15) > Anatomy(Gross)(0) > Systemic circulation of blood and lymph(3)
@@ -2183,6 +2191,7 @@ const GENCELL_TOPIC_ID = "t-15-2-0"; // Systemic Health(15) > Anatomy(Histology)
 const GENCELL_OBJECTIVES = [
   { id: "gencell-organelles", name: "Cell Organelles — Structure & Function", built: true },
   { id: "gencell-nucleus-er-golgi", name: "Nucleus, Endoplasmic Reticulum, & Golgi Apparatus — The Secretory Pathway", built: true },
+  { id: "gencell-inclusions-cytoskeleton", name: "Cellular Inclusions & the Cytoskeleton", built: true },
 ];
 
 const TISSUETYPES_TOPIC_ID = "t-15-2-1"; // Systemic Health(15) > Anatomy(Histology)(2) > Tissue types(1)
@@ -2201,6 +2210,7 @@ const ORGANSYSTEMS_TOPIC_ID = "t-15-2-2"; // Systemic Health(15) > Anatomy(Histo
 const ORGANSYSTEMS_OBJECTIVES = [
   { id: "organsystems-epithelial-linings", name: "Epithelial Linings of Major Organ Systems", built: true },
   { id: "organsystems-glandular-tissue", name: "Glandular Tissue — Exocrine vs. Endocrine Organization", built: true },
+  { id: "organsystems-integumentary-cardiovascular", name: "Integumentary & Cardiovascular System Histology", built: true },
 ];
 
 const THORAX_TOPIC_ID = "t-15-0-1"; // Systemic Health(15) > Anatomy(Gross)(0) > Thorax(1)
@@ -11403,6 +11413,48 @@ const STUDY_PAGES = {
       "This gives you the anatomic explanation for why your existing Amaurosis Fugax content treats this symptom as a genuine medical emergency requiring prompt carotid and cardiovascular workup rather than a benign, isolated visual event: because the central retinal artery is literally downstream of the same internal carotid circulation that supplies the brain, embolic material capable of reaching the eye has demonstrated its capability of also reaching cerebral circulation — making amaurosis fugax a directly actionable stroke-risk indicator, not just an ophthalmic curiosity.",
     ],
   },
+  "headneck-skull-orbit-dural-sinuses": {
+    name: "Skull Foramina, Meninges, & Dural Venous Sinuses",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard gross/neuroanatomy references (e.g., Snell's Clinical Neuroanatomy)"],
+    learnIt: [
+      { h: "Overview", t: "The skull's foramina are the specific openings through which the nerves and vessels already covered under Cranial Nerves & Carotid Circulation actually pass, and the meninges/dural venous sinuses (particularly the cavernous sinus) provide the anatomic explanation for why several cranial nerve palsies characteristically occur together — this structural detail is what turns isolated cranial nerve facts into a genuine localization framework." },
+      { h: "Key orbital/skull foramina", t: "The optic canal (in the lesser wing of the sphenoid) transmits CN II (optic nerve, already covered) and the ophthalmic artery (already covered under Carotid Circulation) together — explaining why a single optic canal fracture or compressive lesion can produce combined visual loss and, less commonly, retinal ischemic findings; the superior orbital fissure (between the greater and lesser sphenoid wings) transmits CN III, IV, VI, and the ophthalmic division of CN V (V1, already covered) plus the superior ophthalmic vein — meaning a single superior orbital fissure lesion (e.g., a mass or thrombosis) can produce total ophthalmoplegia (CN III, IV, VI) with V1 sensory loss, a recognizable combined syndrome distinct from any single isolated cranial nerve palsy already covered." },
+      { h: "The meninges", t: "Three meningeal layers surround the brain and spinal cord: dura mater (outermost, tough fibrous layer, with an inner periosteal and outer meningeal component that separates to enclose the dural venous sinuses), arachnoid mater (a thin middle layer, with the subarachnoid space beneath it containing cerebrospinal fluid, already relevant to the CSF content covered next), and pia mater (innermost, adherent directly to the brain/spinal cord surface) — this three-layer organization is why an epidural hemorrhage (between skull and dura, classically arterial/middle meningeal artery) and a subdural hemorrhage (between dura and arachnoid, classically venous/bridging veins) have such different clinical courses (epidural: rapid arterial accumulation; subdural: slower venous accumulation, often with a lucid interval)." },
+      { h: "Dural venous sinuses — the cavernous sinus and its clinical significance", t: "The dural venous sinuses are venous channels formed between the two dural layers, ultimately draining into the internal jugular vein; the cavernous sinus (on either side of the pituitary gland/sella turcica) is the single most clinically important sinus for eye-related anatomy, since CN III, IV, V1, V2, and VI all pass through or along its lateral wall (CN VI actually runs freely WITHIN the sinus itself, alongside the internal carotid artery, making it the most vulnerable of the group to cavernous sinus pathology) — this is precisely why cavernous sinus thrombosis or a cavernous sinus mass (e.g., from an aggressively spreading orbital/sinus infection, already relevant to your existing Sinusitis content) characteristically produces a combination of proptosis, chemosis, and multiple ocular cranial nerve palsies (a distinctive multi-nerve syndrome, analogous to the anatomic-concentration principle already established for brainstem syndromes) rather than an isolated single-nerve deficit." },
+    ],
+    memorizeIt: [
+      "Optic canal: CN II + ophthalmic artery. Superior orbital fissure: CN III, IV, VI + V1 + superior ophthalmic vein — a lesion here produces combined total ophthalmoplegia + V1 sensory loss.",
+      "Meninges (outer to inner): dura mater (encloses dural venous sinuses) → arachnoid mater (subarachnoid space/CSF beneath it) → pia mater (adherent to brain surface).",
+      "Epidural hemorrhage: skull-dura, arterial (middle meningeal artery), rapid. Subdural hemorrhage: dura-arachnoid, venous (bridging veins), slower, often with a lucid interval.",
+      "Cavernous sinus: CN III, IV, V1, V2, VI all pass through/along it — CN VI runs freely within the sinus (most vulnerable). Cavernous sinus thrombosis/mass → proptosis + chemosis + multiple ocular cranial nerve palsies together.",
+    ],
+    applyIt: [
+      "This gives you the precise anatomic explanation for why certain cranial nerve palsies already covered under Head & Neck Anatomy tend to occur in specific combinations rather than in isolation: a patient with combined CN III, IV, and VI palsies plus V1 sensory loss localizes to the superior orbital fissure or cavernous sinus (not to three separate, coincidental single-nerve lesions), and recognizing cavernous sinus syndrome's classic triad (proptosis, chemosis, multi-nerve ophthalmoplegia) — often from posterior spread of orbital or sinus infection, already relevant to your existing Sinusitis & Orbital Complications content — is exactly the kind of anatomic reasoning that lets you localize a lesion from a cluster of findings rather than treating each cranial nerve deficit as an unrelated fact.",
+    ],
+  },
+  "headneck-muscles-glands-triangles": {
+    name: "Facial/Neck Muscles, Cervical Triangles, Salivary Glands, Nose, & Ear",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard gross anatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the cranial nerves and vasculature already covered, the head and neck contain a set of muscular, glandular, and triangular anatomic landmarks that round out the region's gross anatomy — while lower-yield individually for ocular disease than the cranial nerve/vascular/dural sinus content already covered, several have direct clinical relevance worth knowing." },
+      { h: "Facial expression vs. mastication muscles", t: "The muscles of facial expression (orbicularis oculi, orbicularis oris, frontalis, etc.) are all innervated by CN VII (facial nerve, already covered) and develop embryologically from the second pharyngeal arch; the muscles of mastication (temporalis, masseter, medial and lateral pterygoids) are innervated by CN V3 (the mandibular division of the trigeminal nerve, distinct from the V1 division already covered for corneal sensation) and develop from the first pharyngeal arch — this CN VII/CN V3 innervation split is why a facial nerve palsy (Bell's palsy, already covered) weakens expression (including eyelid closure — lagophthalmos, already covered) but does NOT weaken chewing, which remains entirely normal since it is a different nerve, a different muscle group, and a different pharyngeal arch of origin." },
+      { h: "Cervical triangles, thyroid/parathyroid, and salivary glands", t: "The neck is anatomically divided by the sternocleidomastoid muscle into anterior and posterior triangles, each with further subdivisions containing specific named structures (major vessels, nerves, and lymph nodes) — clinically useful primarily as a systematic framework for describing the location of a neck mass; the thyroid gland sits anterior in the neck (already relevant to your extensively covered Thyroid Eye Disease/Graves disease content, since the thyroid's location explains why thyroid pathology is a neck, not orbital, disease process even though it produces prominent orbital signs), with the four small parathyroid glands typically embedded on its posterior surface; the three major paired salivary glands (parotid, submandibular, sublingual) secrete saliva via named ducts into the oral cavity, with the parotid gland notably traversed by CN VII as it exits the skull (explaining why parotid gland surgery carries a specific, well-recognized risk of facial nerve injury)." },
+      { h: "Nose, paranasal sinuses, and ear — brief orientation", t: "The nasal cavity is divided by the nasal septum and lined by respiratory epithelium (already conceptually related to the pseudostratified ciliated columnar epithelium covered under Organ Systems Histology); the paranasal sinuses (frontal, maxillary, ethmoid, sphenoid) are air-filled spaces draining into the nasal cavity, with the ethmoid sinus's thin lamina papyracea forming its clinically critical shared wall with the orbit (already covered in detail under your existing Sinusitis & Orbital Complications content); the ear is organized into outer (pinna, external auditory canal), middle (tympanic membrane, ossicles — malleus, incus, stapes — transmitting sound to the inner ear), and inner (cochlea for hearing, vestibular apparatus for balance, already conceptually related to the vestibular nuclei covered under Medulla) compartments." },
+    ],
+    memorizeIt: [
+      "Facial expression muscles: CN VII, 2nd pharyngeal arch. Mastication muscles: CN V3, 1st pharyngeal arch — explains why Bell's palsy (CN VII) weakens eyelid closure/expression but spares chewing.",
+      "Neck divided by sternocleidomastoid into anterior/posterior triangles — a systematic framework for localizing neck masses.",
+      "Thyroid: anterior neck (already relevant to Graves/Thyroid Eye Disease). Parathyroids (x4): posterior thyroid surface. Salivary glands: parotid, submandibular, sublingual — CN VII traverses the parotid gland.",
+      "Ear: outer (pinna, canal) → middle (tympanic membrane + ossicles: malleus, incus, stapes) → inner (cochlea = hearing, vestibular apparatus = balance).",
+    ],
+    applyIt: [
+      "This gives you the anatomic explanation for a genuinely useful bedside distinction already implicit in your existing Bell's Palsy content: because facial expression muscles (CN VII) and mastication muscles (CN V3) are different muscles, innervated by different nerves, from different pharyngeal arches, a patient with facial weakness but entirely normal, symmetric jaw strength on chewing/clenching is demonstrating an isolated CN VII (not a combined CN V/VII or more central) process — a quick, structurally-grounded confirmation of a peripheral facial nerve palsy.",
+    ],
+  },
   "diencephalon-thalamus-lgn": {
     name: "Thalamus & the Lateral Geniculate Nucleus — Visual Relay",
     priority: "MUST",
@@ -11445,6 +11497,27 @@ const STUDY_PAGES = {
       "This gives you the complete anatomic basis for the hypothalamic-pituitary axis framework already used throughout your existing Endocrine and Reproductive Physiology content: recognizing the two distinct control mechanisms (direct neural connection for posterior pituitary hormones vs. portal-vascular hormonal signaling for anterior pituitary hormones) explains why a hypothalamic lesion produces a broader, more complex clinical picture (combined endocrine AND autonomic/homeostatic disturbance) than an isolated pituitary lesion — a genuinely useful localization distinction for neuroendocrine disease presentations.",
     ],
   },
+  "diencephalon-epithalamus-subthalamus": {
+    name: "Epithalamus & Subthalamus",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard neuroanatomy references"],
+    learnIt: [
+      { h: "Overview", t: "The diencephalon has two additional subdivisions beyond the thalamus and hypothalamus already covered — the epithalamus and subthalamus — completing the full diencephalon and directly setting up (epithalamus/pineal gland) and complementing (subthalamus/movement circuitry) content already covered elsewhere." },
+      { h: "The epithalamus — pineal gland and habenula", t: "The epithalamus consists primarily of the pineal gland (which secretes melatonin, regulating circadian rhythm in coordination with the hypothalamic suprachiasmatic nucleus already covered) and the habenular nuclei (a relay in emotional/limbic circuitry) — the pineal gland's anatomic location, immediately adjacent to the dorsal midbrain/tectal region already covered, is precisely why pineal region tumors (already covered as the classic cause of Dorsal Midbrain/Parinaud Syndrome) compress those adjacent midbrain structures, directly explaining the anatomic basis for a syndrome you've already learned to recognize clinically." },
+      { h: "The subthalamus — subthalamic nucleus", t: "The subthalamus contains the subthalamic nucleus, a component of the basal ganglia motor circuit (functionally and anatomically connected to, though not physically part of, the basal ganglia proper) that normally exerts an inhibitory/modulating influence on movement — damage to the subthalamic nucleus (classically from a small lacunar infarct, already conceptually relevant to the lenticulostriate perforator/lacunar stroke content covered under Cerebral Blood Supply) produces hemiballismus, a dramatic movement disorder characterized by violent, involuntary, large-amplitude flinging movements of the contralateral limbs — a specific, classic, testable clinico-anatomic correlation distinct from the ocular motor findings covered elsewhere in this Neuroanatomy content." },
+      { h: "Clinical relevance — completing the diencephalon", t: "Together with the thalamus (LGN visual relay, already covered) and hypothalamus (autonomic/endocrine control, already covered), the epithalamus and subthalamus complete the diencephalon's four subdivisions — recognizing that the pineal gland's location explains Parinaud syndrome's mechanism (rather than treating that syndrome as an isolated midbrain fact) and that hemiballismus localizes specifically to the contralateral subthalamic nucleus (rather than to the basal ganglia broadly) are both genuinely useful, specific structure-to-symptom correlations worth keeping distinct." },
+    ],
+    memorizeIt: [
+      "Diencephalon's four subdivisions: thalamus (incl. LGN), hypothalamus, epithalamus, subthalamus (all now covered).",
+      "Epithalamus = pineal gland (melatonin, circadian rhythm) + habenular nuclei. Pineal gland's proximity to the dorsal midbrain explains why pineal tumors cause Parinaud syndrome (already covered).",
+      "Subthalamus = subthalamic nucleus (basal ganglia motor circuit, normally inhibitory/modulating).",
+      "Subthalamic nucleus lesion (e.g., small lacunar infarct) → hemiballismus: violent, involuntary, large-amplitude flinging movements of the CONTRALATERAL limbs.",
+    ],
+    applyIt: [
+      "This gives you the anatomic mechanism completing your existing Dorsal Midbrain (Parinaud) Syndrome content: rather than 'pineal tumor causes Parinaud syndrome' being an isolated association to memorize, you now know precisely why — the pineal gland (epithalamus) sits immediately adjacent to the dorsal midbrain tectal structures already covered, so a growing pineal mass directly compresses them — and hemiballismus gives you a second, independent example of a small, discrete diencephalic-region lesion (this time the subthalamic nucleus) producing a dramatic, highly specific, and highly localizable clinical syndrome.",
+    ],
+  },
   "neurohistology-neuron-glia": {
     name: "Neuron Structure & Glial Cell Types",
     priority: "SHOULD",
@@ -11482,9 +11555,32 @@ const STUDY_PAGES = {
       "Schwann cells: PNS myelination — ONE Schwann cell myelinates ONE internodal segment of ONE axon.",
       "MS targets CNS myelin (oligodendrocytes) specifically — explains why it affects optic nerve/brain/spinal cord but spares peripheral nerves.",
       "Schwann cells support peripheral nerve regeneration after injury; CNS (oligodendrocyte) environment generally does NOT support significant regeneration — explains permanence of CNS injuries vs. potential PNS recovery.",
+      "Wallerian degeneration: after axonal transection, the axon segment DISTAL to the injury (disconnected from the cell body) degenerates along with its myelin sheath, and macrophages (in the PNS, aided by Schwann cells, which also help clear debris and form a regenerative scaffold) clear the debris — the proximal segment, still connected to the cell body, may then regenerate down that cleared Schwann cell scaffold in the PNS, but has no equivalent supportive pathway in the CNS.",
     ],
     applyIt: [
       "This gives you the precise cellular explanation for a pattern already implicit in your existing Multiple Sclerosis content: MS is selectively devastating to CNS structures (optic nerve, brain, spinal cord) specifically because it targets oligodendrocytes and CNS myelin, while peripheral nerve function remains entirely unaffected — and this same CNS/PNS cellular distinction explains the broader clinical reality that CNS injuries (including optic nerve damage) carry a much worse regenerative prognosis than comparable peripheral nerve injuries, since the supportive Schwann cell environment enabling PNS regeneration has no CNS equivalent.",
+    ],
+  },
+  "neurohistology-neural-tube-development": {
+    name: "Neural Tube Development & Neural Crest Derivatives",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard embryology/histology references"],
+    learnIt: [
+      { h: "Overview", t: "The entire nervous system — and, remarkably, a substantial portion of the eye's connective tissue structures already covered elsewhere on this platform — originates from a specific embryonic developmental sequence, and understanding this sequence provides the structural basis for both neural tube defects and several already-built ocular anatomy topics." },
+      { h: "The neurulation sequence", t: "Early in development, a thickened strip of ectoderm called the neural plate forms along the embryo's dorsal midline; its lateral edges elevate to form the neural folds, flanking a central neural groove; the folds then meet and fuse in the midline, converting the flat plate into a hollow neural tube (closure begins centrally and proceeds bidirectionally, completing at the cranial and caudal ends slightly later) — the neural tube's cranial end subsequently dilates into three primary neural vesicles (prosencephalon/forebrain, mesencephalon/midbrain — already covered structurally, and rhombencephalon/hindbrain, which further subdivides into the metencephalon [pons/cerebellum] and myelencephalon [medulla], both already covered structurally), while the rest of the tube becomes the spinal cord." },
+      { h: "Neural tube defects — clinical relevance", t: "Failure of neural tube closure produces a spectrum of neural tube defects: anencephaly (failure of cranial neuropore closure, incompatible with life) and spina bifida (failure of caudal neuropore closure, ranging from mild spina bifida occulta to severe myelomeningocele) — maternal folic acid supplementation before and during early pregnancy substantially reduces neural tube defect risk, a genuinely important, board-relevant preventive medicine fact directly tied to this developmental sequence." },
+      { h: "Layers of the neural tube", t: "In cross-section, the developing neural tube wall has three concentric layers: the ependymal layer (innermost, lining the central canal/future ventricular system, giving rise to the ependymal cells already covered under Neuron Structure & Glial Cell Types), the mantle layer (the middle proliferative layer, giving rise to neuronal cell bodies and becoming the gray matter already covered under Tissue Types/Spinal Cord content), and the marginal layer (outermost, becoming the myelinated white matter tracts, already covered under Spinal Cord Tract Organization) — this three-layer developmental sequence is the embryologic origin of the gray-matter/white-matter organization already covered functionally and anatomically." },
+      { h: "Neural crest derivatives — the major cross-reference to existing ocular content", t: "A separate population of cells, the neural crest, arises from the lateral edges of the neural folds (not from the neural tube itself) just before/during tube closure, then migrates extensively throughout the embryo to form a remarkably diverse set of structures: the entire peripheral nervous system (dorsal root ganglia, cranial nerve sensory ganglia, autonomic ganglia, and the Schwann cells already covered), the adrenal medulla (chromaffin cells, already conceptually related to your Pheochromocytoma content), melanocytes — and, critically for this platform, much of the eye's anterior segment connective tissue: the corneal endothelium and stromal keratocytes (already implicit throughout your extensive Cornea content), the iris and ciliary body stroma, the trabecular meshwork (already covered under Aqueous/Glaucoma content), and the sclera — meaning several already-built ocular anatomy and pathology topics share this single common embryologic origin." },
+    ],
+    memorizeIt: [
+      "Neurulation sequence: neural plate → neural folds (flanking the neural groove) → fusion → neural tube → cranial end forms 3 primary vesicles (prosencephalon, mesencephalon, rhombencephalon).",
+      "Neural tube defects: anencephaly (failed cranial closure) and spina bifida (failed caudal closure, occulta to myelomeningocele) — folic acid supplementation reduces risk.",
+      "Neural tube layers (inner to outer): ependymal (→ ependymal cells) → mantle (→ gray matter) → marginal (→ white matter/myelinated tracts).",
+      "Neural crest (NOT the neural tube itself): → entire PNS (ganglia, Schwann cells) + adrenal medulla + melanocytes + ocular anterior segment connective tissue (corneal endothelium/stroma, iris/ciliary body stroma, trabecular meshwork, sclera — all already covered elsewhere on this platform).",
+    ],
+    applyIt: [
+      "This gives you the shared embryologic origin tying together several already-built ocular anatomy topics that might otherwise seem unrelated: the corneal endothelium and stromal keratocytes (Cornea content), the trabecular meshwork (Aqueous/Glaucoma content), and the iris/ciliary body stroma and sclera all derive from neural crest cells, the SAME embryonic cell population that also forms the peripheral nervous system and adrenal medulla — a genuinely satisfying developmental-biology thread connecting anterior segment anatomy, already covered in isolation across multiple ocular condition-area topics, back to one common embryonic origin.",
     ],
   },
   "autonomicanat-sympathetic-pathway": {
@@ -11517,16 +11613,37 @@ const STUDY_PAGES = {
       { h: "Overview", t: "The parasympathetic pathway controlling pupillary constriction and accommodation runs alongside CN III (already covered under Head & Neck Anatomy) but follows a distinct anatomic course worth understanding in its own right, directly explaining the pupil-involvement pattern in CN III palsy and pharmacologic pupil testing." },
       { h: "The pathway — from midbrain to iris", t: "The parasympathetic pathway originates in the Edinger-Westphal nucleus (a subnucleus of the CN III nuclear complex in the midbrain, already conceptually adjacent to your Diencephalon content given its proximity to nearby midbrain structures), travels with the somatic motor fibers of CN III but positioned peripherally/superficially within the nerve (already referenced under Head & Neck Anatomy's CN III palsy content), synapses at the ciliary ganglion in the orbit, and the postganglionic short ciliary nerves then innervate both the iris sphincter (pupillary constriction) and the ciliary muscle (accommodation)." },
       { h: "Why peripheral fiber location matters — direct connection to existing content", t: "This peripheral anatomic position within CN III (already referenced under Head & Neck Anatomy) is precisely why compressive lesions (which exert pressure from outside the nerve inward) affect the parasympathetic fibers early, causing a dilated, poorly-reactive pupil, while ischemic/microvascular lesions (which damage the nerve's blood supply, affecting more central fibers first) often spare the pupil — this single anatomic fact (peripheral fiber location) is the complete explanation for the pupil-sparing vs. pupil-involving distinction already covered." },
-      { h: "Clinical relevance — pharmacologic pupil testing", t: "This pathway's specific anatomic segments can be pharmacologically tested to help distinguish causes of an abnormal pupil: pilocarpine (a direct-acting cholinergic agonist) will constrict a pupil that is dilated due to pharmacologic blockade (e.g., accidental atropine exposure) but will NOT effectively constrict a pupil dilated due to third-nerve palsy with an intact, undamaged iris sphincter — providing a genuinely useful diagnostic distinction between pharmacologic mydriasis and true neurologic (CN III) causes of anisocoria." },
+      { h: "Clinical relevance — pharmacologic pupil testing", t: "This pathway's specific anatomic segments can be pharmacologically tested to help distinguish causes of an abnormal, dilated pupil: instilling dilute/standard pilocarpine (a direct-acting cholinergic agonist) WILL constrict a pupil dilated from third-nerve palsy (since the iris sphincter itself, though denervated, is structurally intact and its muscarinic receptors remain fully responsive to a direct agonist that bypasses the need for a nerve signal), but will NOT effectively constrict a pupil that is pharmacologically dilated (e.g., accidental atropine/scopolamine exposure), since a competitive muscarinic antagonist is already occupying/blocking those same receptors — providing a genuinely useful diagnostic distinction between true neurologic (CN III) mydriasis and pharmacologic mydriasis." },
     ],
     memorizeIt: [
       "Parasympathetic pathway: Edinger-Westphal nucleus (midbrain) → travels with CN III (peripheral position) → ciliary ganglion (orbit) → short ciliary nerves → iris sphincter + ciliary muscle.",
       "Peripheral fiber position within CN III: compressive lesions affect parasympathetic fibers EARLY (pupil involved); microvascular/ischemic lesions often SPARE the pupil (central fibers affected first).",
-      "Pilocarpine test: constricts pharmacologically-dilated pupil (e.g., atropine exposure); does NOT effectively constrict a CN III palsy pupil with intact sphincter.",
+      "Pilocarpine test: WILL constrict a CN III palsy pupil (denervated but structurally intact, receptor-responsive sphincter); will NOT effectively constrict a pharmacologically-blocked pupil (e.g., atropine exposure — receptors already occupied by the antagonist).",
       "This is the SAME peripheral-fiber-location principle already covered under Head & Neck Anatomy's CN III palsy content, now explained at the anatomic pathway level.",
     ],
     applyIt: [
-      "This gives you the complete anatomic mechanism underlying the pupil-sparing vs. pupil-involving CN III palsy distinction already covered under Head & Neck Anatomy: the parasympathetic fibers' peripheral position within the nerve (not central, alongside the somatic motor fibers) is the single anatomic fact explaining why compression (aneurysm) typically involves the pupil while microvascular ischemia typically spares it, and pharmacologic pilocarpine testing gives you an additional diagnostic tool for distinguishing a neurologic mydriasis from a pharmacologic one when the history is unclear.",
+      "This gives you the complete anatomic mechanism underlying the pupil-sparing vs. pupil-involving CN III palsy distinction already covered under Head & Neck Anatomy: the parasympathetic fibers' peripheral position within the nerve (not central, alongside the somatic motor fibers) is the single anatomic fact explaining why compression (aneurysm) typically involves the pupil while microvascular ischemia typically spares it, and pharmacologic pilocarpine testing gives you an additional diagnostic tool — a pupil that constricts to pilocarpine has an intact, agonist-responsive sphincter (consistent with a denervated but structurally normal CN III palsy pupil), while a pupil that fails to constrict indicates the receptors are already chemically blocked (pharmacologic mydriasis) — for distinguishing a neurologic mydriasis from a pharmacologic one when the history is unclear.",
+    ],
+  },
+  "autonomicanat-general-organization": {
+    name: "Autonomic Nervous System — General Organization & Neurotransmitters",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard neuroanatomy/physiology references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the two eye-specific pathways already covered in detail (oculosympathetic chain, CN III parasympathetics), the autonomic nervous system (ANS) as a whole follows a consistent two-neuron organizational plan with a predictable neurotransmitter/receptor pattern — this general framework is what the pharmacologic classes covered elsewhere on this platform (adrenergic and cholinergic agonists/antagonists) actually act upon anatomically." },
+      { h: "The universal two-neuron chain and outflow origins", t: "Every autonomic pathway (sympathetic or parasympathetic) uses a two-neuron relay: a preganglionic neuron (cell body in the CNS) synapses on a postganglionic neuron (cell body in a peripheral ganglion), which then innervates the target tissue — the sympathetic system has a thoracolumbar outflow (preganglionic cell bodies in spinal cord levels T1-L2, already conceptually relevant to the ciliospinal center of Budge at C8-T2 covered under Sympathetic Pathway Anatomy) with short preganglionic/long postganglionic fibers (ganglia close to the spinal cord, in the paravertebral sympathetic chain), while the parasympathetic system has a craniosacral outflow (preganglionic cell bodies in the brainstem — cranial nerves III, VII, IX, and X, already conceptually relevant to the Edinger-Westphal nucleus covered under Parasympathetic Pathway Anatomy — plus sacral spinal levels S2-S4) with long preganglionic/short postganglionic fibers (ganglia located near or within the target organ, e.g., the ciliary ganglion already covered)." },
+      { h: "Neurotransmitters and receptor types", t: "All preganglionic neurons (both sympathetic and parasympathetic) release acetylcholine (ACh) acting on nicotinic receptors at the ganglion — a shared feature regardless of which division is involved; postganglionic neurotransmitters differ by division: parasympathetic postganglionic neurons release ACh acting on muscarinic receptors at the target tissue (already relevant to the pilocarpine — a muscarinic agonist — content covered under Parasympathetic Pathway Anatomy), while most sympathetic postganglionic neurons release norepinephrine (NE) acting on alpha- or beta-adrenergic receptors at the target tissue — with one clinically notable exception: sympathetic postganglionic fibers to sweat glands release ACh (acting on muscarinic receptors) rather than norepinephrine, despite being anatomically sympathetic, explaining why anhidrosis (loss of sweating) is a cholinergic, not adrenergic, deficit within the otherwise-adrenergic sympathetic chain already relevant to your Horner Syndrome content's anhidrosis finding." },
+      { h: "Clinical relevance — connects the anatomy to pharmacology already covered elsewhere", t: "This receptor framework is the direct anatomic basis for the entire class of Autonomic/Neuromuscular Junction pharmacology already covered elsewhere on this platform: adrenergic agonists/antagonists act at the alpha/beta receptors of the sympathetic postganglionic synapse, while cholinergic agonists/antagonists (including pilocarpine, already covered) act at muscarinic receptors of the parasympathetic postganglionic synapse (or, for nicotinic agents, at the ganglionic synapse shared by both divisions) — meaning the general two-neuron/neurotransmitter organization covered here is precisely the anatomic map that specific ANS-acting drugs are targeting." },
+    ],
+    memorizeIt: [
+      "Every ANS pathway: two-neuron chain — preganglionic (CNS cell body) → ganglion → postganglionic (peripheral cell body) → target tissue.",
+      "Sympathetic: thoracolumbar outflow (T1-L2), short preganglionic/long postganglionic (paravertebral chain ganglia close to cord). Parasympathetic: craniosacral outflow (CN III, VII, IX, X + S2-S4), long preganglionic/short postganglionic (ganglia near/within target organ).",
+      "ALL preganglionic neurons (both divisions): ACh → nicotinic receptors at the ganglion.",
+      "Postganglionic: parasympathetic = ACh → muscarinic receptors. Sympathetic = norepinephrine → alpha/beta-adrenergic receptors — EXCEPT sweat glands, which are sympathetic but cholinergic (ACh/muscarinic) — explains the anhidrosis in Horner syndrome (already covered) as a cholinergic deficit.",
+    ],
+    applyIt: [
+      "This gives you the general anatomic/pharmacologic framework underlying the specific ocular pathways already covered in detail: recognizing that pilocarpine works because parasympathetic postganglionic transmission is cholinergic/muscarinic (already covered under Parasympathetic Pathway Anatomy), and that the sympathetic chain's sweat gland innervation is the one cholinergic exception within an otherwise adrenergic system (explaining the anhidrosis component of Horner syndrome, already covered), connects this general ANS organizational framework directly to the eye-specific anatomy and pharmacology already built elsewhere on this platform.",
     ],
   },
   "medulla-cranial-nerve-nuclei": {
@@ -11571,6 +11688,27 @@ const STUDY_PAGES = {
       "This gives you the anatomic explanation for why brainstem-localizing neurologic findings (like the cranial nerve and Horner syndrome findings already covered under Wallenberg syndrome) are treated with such clinical urgency: the same small anatomic region responsible for those localizing signs also houses the vital cardiorespiratory control centers, so any process large enough or progressive enough to threaten these structures represents a genuine emergency — connecting the localization skills already covered to the actual clinical stakes of recognizing brainstem pathology promptly.",
     ],
   },
+  "medulla-cross-sectional-levels": {
+    name: "Medullary Cross-Sectional Levels (Motor/Sensory Decussation, Inferior Olive, Open Medulla)",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard neuroanatomy references (e.g., Snell's Clinical Neuroanatomy)"],
+    learnIt: [
+      { h: "Overview", t: "Classic neuroanatomy identifies medullary cross-sections by their specific rostral-caudal level, based on which landmark structures are visible at that level — this level-based framework is the same skill already applied qualitatively to the CN IX-XII nuclei and vital centers covered, now made explicit and precise enough to distinguish a 'closed' from an 'open' medulla on a cross-section." },
+      { h: "The closed medulla — motor and sensory decussation levels", t: "The most caudal medulla is 'closed' (the central canal, not yet the fourth ventricle, runs through it — no open ventricular space) and contains two classic, sequential landmark levels: the level of motor (pyramidal) decussation, the most caudal level of all, where corticospinal tract fibers cross from one side to the other (already covered under Spinal Cord Tract Organization as the anatomic landmark separating 'above = contralateral weakness' from 'below = ipsilateral weakness'); just rostral to this is the level of sensory decussation, where the internal arcuate fibers (carrying the dorsal column-medial lemniscus pathway, conveying proprioception/vibration/fine touch) cross to form the medial lemniscus on the opposite side — this sequential closed-medulla organization (motor crosses first/most caudally, sensory crosses next) is a classic, specific, testable ordering." },
+      { h: "The open medulla — inferior olive and beyond", t: "Moving further rostrally, the medulla 'opens' as the central canal flares into the floor of the fourth ventricle; the level of the inferior olives marks this open-medulla transition — the inferior olivary nuclear complex (a prominent, olive-shaped bulge visible on the medulla's external surface, already relevant background for the cerebellar connections discussed under Cerebellum, since the inferior olive projects extensively to the cerebellum via the inferior cerebellar peduncle) is present throughout most of the open medulla's length; at the open medulla's more rostral aspect, the dorsal and ventral cochlear nuclei (auditory relay, at the pontomedullary junction) and the vestibular nuclei (balance relay, also spanning into the pons, already conceptually relevant to your Cerebellum and gaze-stability content) sit on the floor of the fourth ventricle, alongside the CN IX-XII nuclei already covered — the open medulla is where the lateral medullary (Wallenberg) syndrome's causative lesion is classically located, since PICA supplies this open-medulla lateral territory." },
+      { h: "Clinical relevance — medial vs. lateral medullary syndrome by level", t: "This level-based framework explains the anatomic distinction between medial medullary syndrome (occlusion of the anterior spinal artery or a vertebral artery branch, affecting paramedian structures — the pyramid/corticospinal tract, medial lemniscus, and CN XII nucleus/fibers — producing contralateral limb weakness, contralateral loss of proprioception/vibration, and ipsilateral tongue deviation, a distinctly different pattern from Wallenberg) and lateral medullary (Wallenberg) syndrome (PICA occlusion, already covered in detail, affecting the lateral open-medulla territory — CN IX/X nuclei, spinothalamic tract, descending sympathetic fibers, and cerebellar connections) — recognizing that these are two anatomically and clinically distinct medullary stroke syndromes, occurring in different vascular territories at different medial-lateral positions within the same brainstem segment, is a genuinely high-yield distinction building directly on the Wallenberg syndrome content already covered." },
+    ],
+    memorizeIt: [
+      "Closed medulla (caudal): level of motor/pyramidal decussation (most caudal — corticospinal tract crosses) → level of sensory decussation (internal arcuate fibers cross, forming the medial lemniscus).",
+      "Open medulla (more rostral): begins at the level of the inferior olives (central canal flares into the 4th ventricle floor); dorsal/ventral cochlear nuclei and vestibular nuclei sit on the 4th ventricle floor here, alongside CN IX-XII nuclei (already covered).",
+      "Medial medullary syndrome (anterior spinal artery/vertebral artery territory): contralateral limb weakness + contralateral proprioception/vibration loss + ipsilateral tongue deviation — a PARAMEDIAN pattern, distinct from Wallenberg.",
+      "Lateral medullary (Wallenberg) syndrome (PICA territory, already covered): occurs in the OPEN medulla's lateral territory — CN IX/X, spinothalamic tract, sympathetic fibers, cerebellar connections.",
+    ],
+    applyIt: [
+      "This gives you the precise level-based vocabulary and the medial/lateral distinction that completes your existing Wallenberg syndrome content: recognizing that Wallenberg is specifically a LATERAL, open-medulla, PICA-territory syndrome — as opposed to a medial medullary syndrome from anterior spinal/vertebral artery territory, which instead produces contralateral weakness and proprioceptive loss with ipsilateral tongue deviation — lets you correctly localize and distinguish two different medullary stroke presentations that could otherwise be conflated, reinforcing the general principle that brainstem syndromes are defined as much by WHICH specific territory (medial vs. lateral) is affected as by which brainstem segment (medulla vs. pons vs. midbrain) is involved.",
+    ],
+  },
   "pons-cranial-nerve-nuclei": {
     name: "Pontine Cranial Nerve Nuclei (V, VI, VII, VIII)",
     priority: "SHOULD",
@@ -11587,6 +11725,7 @@ const STUDY_PAGES = {
       "CN VII axons loop around the CN VI nucleus (facial nerve genu) before exiting — anatomic basis for combined CN VI/VII pontine lesions.",
       "CN VII/VIII nuclei are anatomically close — explains combined facial/hearing-balance dysfunction in acoustic neuroma as it enlarges.",
       "Combined CN VI + VII deficit = pontine (central) lesion. Isolated CN VII palsy without CN VI involvement = more consistent with peripheral (Bell's palsy) etiology.",
+      "By level: caudal (low) pons = facial colliculus level, where the CN VI nucleus and the looping CN VII genu sit together on the floor of the fourth ventricle. Mid pons = trigeminal nuclear level, where the CN V main sensory and motor nuclei are centered.",
     ],
     applyIt: [
       "This gives you a genuinely useful localization principle extending your existing cranial nerve content: a patient with both abduction weakness (CN VI) AND ipsilateral facial weakness (CN VII) should be recognized as having a likely CENTRAL (pontine) lesion given the facial nerve's looping course around the CN VI nucleus, whereas isolated facial weakness alone (without abduction deficit) is more consistent with a peripheral facial nerve process like Bell's palsy — a combined-deficit pattern is exactly the kind of clue that should prompt neuroimaging rather than assuming a purely peripheral facial nerve palsy.",
@@ -11629,6 +11768,7 @@ const STUDY_PAGES = {
       "CN IV: ONLY cranial nerve exiting the brainstem DORSALLY, and the only one innervating a CONTRALATERAL muscle (superior oblique).",
       "Superior colliculus: reflexive visual orienting (saccades toward stimuli), receives direct retinal input.",
       "Pretectal area: pupillary light reflex pathway hub, works with Edinger-Westphal nucleus.",
+      "By level: the CN IV (trochlear) nucleus sits at the INFERIOR colliculus level (caudal midbrain); the CN III (oculomotor) nucleus sits at the SUPERIOR colliculus level (rostral midbrain) — a classic paired fact for identifying a midbrain cross-section by which colliculus and which cranial nerve nucleus it contains.",
     ],
     applyIt: [
       "This gives you a genuinely important anatomic exception worth remembering distinctly from the rest of your cranial nerve content: because CN IV crosses before innervating its target muscle, a CN IV NUCLEUS lesion (rare, but conceptually important to distinguish from a CN IV NERVE lesion after it exits the brainstem) produces a CONTRALATERAL superior oblique palsy — the opposite localizing implication from every other cranial nerve nucleus lesion, which produce ipsilateral deficits — a genuinely testable anatomic quirk.",
@@ -11668,7 +11808,7 @@ const STUDY_PAGES = {
     ],
     memorizeIt: [
       "Four lobes: frontal (motor/executive/voluntary gaze), parietal (somatosensory/spatial), temporal (auditory/memory/object recognition), occipital (vision, contains V1).",
-      "V1 (primary visual cortex): calcarine sulcus, retinotopic map, disproportionate macular representation (cortical magnification).",
+      "V1 (primary visual cortex): calcarine sulcus, retinotopic map, disproportionate macular representation (cortical magnification). Corresponds to Brodmann area 17 (also called the striate cortex, for the visible stripe of Gennari it contains).",
       "Occipital lesion → contralateral homonymous hemianopia, often with MACULAR SPARING (macula's dual PCA/MCA blood supply + large cortical representation) — a high-yield localizing sign specific to occipital (not tract/radiation) lesions.",
       "Bilateral occipital damage → CVI (profound vision loss with a structurally normal eye exam) — already covered under Pediatric content.",
     ],
@@ -11695,6 +11835,27 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you a genuinely practical bedside localization tool extending your existing Pons content: observing that a stroke patient's eyes are deviated toward one side immediately suggests a cortical/hemispheric lesion on that same side (with likely contralateral hemiparesis), while eyes deviated away from a suspected lesion side instead points to a pontine/brainstem process — a quick, imaging-independent clue that complements the cranial nerve localization skills already built throughout your Anatomy content this session.",
+    ],
+  },
+  "cerebrum-white-matter-optic-radiations": {
+    name: "Cerebral White Matter & the Optic Radiations",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard neuroanatomy references (e.g., Snell's Clinical Neuroanatomy)"],
+    learnIt: [
+      { h: "Overview", t: "Cerebral white matter is organized into three fiber classes, and the optic radiations — the specific white matter tract carrying visual information from the LGN (already covered) to the primary visual cortex (already covered) — have a distinctive, clinically critical anatomic split as they pass through the temporal and parietal lobes, directly explaining a genuinely high-yield visual field pattern not yet covered elsewhere on this platform." },
+      { h: "Three classes of cerebral white matter", t: "Projection fibers connect the cortex to lower structures (thalamus, brainstem, spinal cord) — the internal capsule (a compact band of projection fibers between the thalamus and basal ganglia, already conceptually relevant to the lenticulostriate perforator/lacunar stroke content covered under Cerebral Blood Supply, since the internal capsule is the classic site of lacunar infarcts) is the most clinically important example, carrying the corticospinal tract (already covered) among other pathways; commissural fibers connect the two hemispheres, with the corpus callosum being the largest and most important example; association fibers connect different cortical regions WITHIN the same hemisphere (e.g., connecting the visual cortex to adjacent visual association areas) — the optic radiations are technically projection fibers, carrying visual information from the thalamus (LGN) to the cortex." },
+      { h: "The optic radiations — Meyer's loop and the parietal pathway", t: "After leaving the LGN, the optic radiation fibers split into two anatomically distinct bundles based on which part of the visual field they carry: fibers carrying INFERIOR visual field information (from the SUPERIOR retina) take a direct, relatively short parietal lobe route to the visual cortex; fibers carrying SUPERIOR visual field information (from the INFERIOR retina) instead loop anteriorly and inferiorly through the temporal lobe — a detour called Meyer's loop — before turning posteriorly to reach the visual cortex, meaning these fibers travel much further and pass directly through temporal lobe tissue that is otherwise unrelated to primary visual processing." },
+      { h: "Clinical relevance — quadrantanopia patterns", t: "This anatomic split directly explains a classic, high-yield visual field finding not otherwise covered on this platform: a temporal lobe lesion damaging Meyer's loop produces a contralateral SUPERIOR homonymous quadrantanopia (colloquially 'pie in the sky' — loss of the superior visual field, since Meyer's loop carries the fibers representing that field), while a parietal lobe lesion damaging the direct parietal pathway produces a contralateral INFERIOR homonymous quadrantanopia (colloquially 'pie on the floor') — this specific pairing (temporal = superior defect, parietal = inferior defect) is a classic, frequently tested distinction that lets you localize a retrochiasmal lesion to a specific lobe (temporal vs. parietal) purely from the pattern of a homonymous visual field defect, extending the localization framework already built under Cerebral Lobes & Primary Visual Cortex (which addressed full homonymous hemianopia and macular sparing) to partial, quadrant-specific defects." },
+    ],
+    memorizeIt: [
+      "Cerebral white matter: projection fibers (cortex ↔ lower structures, e.g., internal capsule — classic lacunar stroke site), commissural fibers (hemisphere ↔ hemisphere, e.g., corpus callosum), association fibers (region ↔ region, same hemisphere).",
+      "Optic radiations split after the LGN: inferior visual field fibers (superior retina) take a direct PARIETAL route. Superior visual field fibers (inferior retina) loop through the TEMPORAL lobe (Meyer's loop) before reaching the visual cortex.",
+      "Temporal lobe (Meyer's loop) lesion → contralateral SUPERIOR homonymous quadrantanopia ('pie in the sky').",
+      "Parietal lobe lesion → contralateral INFERIOR homonymous quadrantanopia ('pie on the floor').",
+    ],
+    applyIt: [
+      "This gives you the specific quadrant-level extension of the homonymous visual field localization framework already covered under Cerebral Lobes & the Primary Visual Cortex: a patient with a partial, superior-only homonymous quadrantanopia should be localized specifically to the TEMPORAL lobe (Meyer's loop), while an inferior-only homonymous quadrantanopia localizes to the PARIETAL lobe — a genuinely testable refinement that, combined with your existing full-hemianopia/macular-sparing content and the ACA/MCA/PCA vascular territory framework already covered under Cerebral Blood Supply, lets you localize a retrochiasmal lesion with real precision from visual field testing findings alone.",
     ],
   },
   "cerebellum-structure-function": {
@@ -11755,6 +11916,8 @@ const STUDY_PAGES = {
       "MCA stroke (most common): contralateral FACE/ARM-predominant weakness/sensory loss + aphasia (dominant hemisphere) + possible homonymous hemianopia (typically WITHOUT macular sparing, with other deficits).",
       "PCA stroke: isolated homonymous hemianopia WITH macular sparing, often WITHOUT motor/sensory deficits.",
       "Vertebrobasilar/brainstem stroke: combined cranial nerve palsies + crossed sensory findings + ipsilateral ataxia (e.g., Wallenberg/PICA, already covered).",
+      "Lenticulostriate arteries: small penetrating (\"central,\" not surface/cortical) branches off the MCA supplying the internal capsule and basal ganglia — chronic hypertension is their classic risk factor, and their occlusion causes a lacunar stroke.",
+      "Lacunar stroke (e.g., pure motor hemiparesis from an internal capsule lacune): produces a dense contralateral motor OR sensory deficit WITHOUT cortical signs (no aphasia, no visual field cut, no neglect) — a genuinely useful pattern distinguishing a small deep perforator infarct from a larger cortical MCA-territory stroke.",
     ],
     applyIt: [
       "This gives you the complete, integrated stroke-localization framework tying together everything built across this session's Anatomy content: a patient with isolated homonymous hemianopia and macular sparing but no weakness points to PCA territory; the same visual field defect WITH hemiparesis and aphasia points to MCA territory instead; and a combination of cranial nerve findings, crossed sensory loss, and ipsilateral ataxia points to a brainstem/vertebrobasilar event — recognizing which combination of findings belongs to which vascular territory is exactly the kind of synthesis-level clinical reasoning that distinguishes genuine understanding from memorized facts in isolation.",
@@ -11800,6 +11963,27 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you a complete, clinically classic syndrome (Brown-Séquard) that directly follows from the tract-crossing principles already covered under Spinal Cord Tract Organization: recognizing that a hemicord lesion produces ipsilateral motor/proprioceptive loss but contralateral pain/temperature loss isn't an arbitrary fact to memorize, it's the direct, predictable consequence of the corticospinal and dorsal column tracts not yet having crossed at the lesion level while the spinothalamic tract already has — exactly the kind of mechanistic understanding that makes a seemingly complex syndrome logically derivable rather than simply memorized.",
+    ],
+  },
+  "spinalcord-gray-matter-nerves": {
+    name: "Spinal Gray Matter Organization & Spinal Nerves",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard neuroanatomy references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the white matter tracts already covered, the spinal cord's internal gray matter has its own organized structure supporting local reflex arcs, and 31 pairs of spinal nerves connect the cord to the peripheral body — completing the spinal cord's anatomy alongside the tract organization and clinical syndromes already covered." },
+      { h: "Gray matter organization — dorsal and ventral horns", t: "In cross-section, the spinal cord's gray matter forms a butterfly/H-shaped region at the center of the cord (already referenced under Tissue Types/Nervous Tissue content as the 'gray matter inside' arrangement distinguishing spinal cord from brain) — the dorsal (posterior) horn receives incoming sensory information from dorsal root afferents, while the ventral (anterior) horn contains the cell bodies of lower motor neurons whose axons exit via the ventral root to innervate skeletal muscle; a smaller lateral horn (present only at thoracolumbar levels) contains the sympathetic preganglionic neuron cell bodies already covered as the ciliospinal center of Budge under Sympathetic Pathway Anatomy — meaning that structure's precise cellular location within the cord's gray matter is now anatomically specified." },
+      { h: "Local reflex arcs", t: "The gray matter's dorsal horn-to-ventral horn organization is the anatomic substrate for spinal reflex arcs, which can occur entirely at the spinal cord level without requiring the brain: the simplest example is the monosynaptic stretch (myotatic) reflex (e.g., the knee-jerk reflex — a muscle spindle sensory afferent synapses directly onto a ventral horn motor neuron within the same spinal segment), while the withdrawal reflex is a more complex polysynaptic example (a painful stimulus triggers sensory input that, via interneurons within the gray matter, produces both ipsilateral flexor withdrawal and contralateral extensor support) — these local circuits illustrate that basic reflexive motor output does not require the descending corticospinal tract input already covered, though that tract normally modulates/suppresses these reflexes (explaining why an upper motor neuron lesion, disrupting descending inhibition, causes hyperreflexia rather than reduced reflexes)." },
+      { h: "Spinal nerves and sensory ganglia", t: "31 paired spinal nerves (8 cervical, 12 thoracic, 5 lumbar, 5 sacral, 1 coccygeal) form from the union of a dorsal (sensory) root and a ventral (motor) root just outside the cord — the dorsal root ganglion, a swelling on the dorsal root, contains the cell bodies of the primary sensory (afferent) neurons (pseudounipolar neurons, already conceptually distinct from the multipolar motor neurons of the ventral horn) — each spinal nerve's sensory territory maps to a specific dermatome (a mapped skin region), a clinically useful tool for localizing a spinal nerve or nerve root lesion (e.g., in a disc herniation) based on the specific dermatomal pattern of sensory loss or radicular pain reported by the patient." },
+    ],
+    memorizeIt: [
+      "Spinal gray matter (H/butterfly-shaped): dorsal horn (sensory input) + ventral horn (lower motor neuron cell bodies) + lateral horn (thoracolumbar only — sympathetic preganglionic cell bodies, the ciliospinal center of Budge, already covered).",
+      "Stretch (myotatic) reflex: monosynaptic, entirely spinal-level (e.g., knee-jerk). Withdrawal reflex: polysynaptic (ipsilateral flexion + contralateral extension via interneurons).",
+      "Descending corticospinal input normally SUPPRESSES/modulates spinal reflexes — an upper motor neuron lesion removes this suppression, causing HYPERreflexia.",
+      "31 spinal nerve pairs (8 C, 12 T, 5 L, 5 S, 1 Co) = dorsal (sensory) root + ventral (motor) root. Dorsal root ganglion = sensory neuron cell bodies. Dermatomes = clinically useful for localizing nerve root lesions.",
+    ],
+    applyIt: [
+      "This gives you the precise gray-matter location of a structure already covered elsewhere on this platform: the ciliospinal center of Budge (already covered under Sympathetic Pathway Anatomy, spinal levels C8-T2) is specifically located in the spinal cord's LATERAL horn, the same gray matter region present only at thoracolumbar levels — and understanding that descending corticospinal input normally suppresses local spinal reflex arcs explains why upper motor neuron lesions (affecting the corticospinal tract already covered under Spinal Cord Tract Organization) produce hyperreflexia and spasticity, a genuinely useful clinical distinction from the reduced/absent reflexes seen with a lower motor neuron (spinal nerve/ventral horn) lesion instead.",
     ],
   },
   "syscirc-venous-lymphatic": {
@@ -11865,6 +12049,27 @@ const STUDY_PAGES = {
       "This gives you the complete cell-biology pathway underlying protein production, connecting your existing Molecular Biology content (transcription/translation) to the actual physical journey a secreted protein takes: an antibody-producing plasma cell (already covered under Antibody Structure) transcribes its antibody gene in the nucleus, translates it on the rough ER, processes and packages it through the Golgi apparatus, and secretes it via vesicular exocytosis — a genuinely satisfying way to see how the molecular biology and cellular structure content already covered separately actually fit together as one continuous, physical process.",
     ],
   },
+  "gencell-inclusions-cytoskeleton": {
+    name: "Cellular Inclusions & the Cytoskeleton",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard histology/cell biology references"],
+    learnIt: [
+      { h: "Overview", t: "Beyond the membrane-bound organelles already covered, cells contain non-membrane-bound inclusions (accumulated substances, some pathologically relevant) and an internal cytoskeletal scaffold — both provide the structural correlate to disease processes and transport mechanisms already covered elsewhere on this platform, most notably lipofuscin's role in AMD and microtubules' role in axoplasmic transport." },
+      { h: "Cellular inclusions — lipofuscin and beyond", t: "Inclusions are substances accumulated within the cytoplasm that are not themselves organelles: lipofuscin ('age pigment,' a yellow-brown, autofluorescent lipid-protein byproduct of incomplete lysosomal digestion of oxidized/damaged cellular material, already covered under Free Radicals & Antioxidant Defense's oxidative stress content) progressively accumulates within long-lived, minimally-dividing cells — most notably retinal pigment epithelium (RPE) cells, where its accumulation is a central, already-covered feature of Age-Related Macular Degeneration (visible clinically as drusen-associated changes and detectable on fundus autofluorescence imaging) — other inclusions include melanin (already relevant to melanocyte/pigmentation content), glycogen (stored carbohydrate, already covered under Glycogen Synthesis & Breakdown), and lipid droplets (stored triglycerides)." },
+      { h: "The cytoskeleton — three filament systems", t: "The cytoskeleton consists of three filament types with distinct functions: microtubules (the largest-diameter filaments, built from tubulin, forming tracks for organelle/vesicle transport via motor proteins — kinesin for anterograde and dynein for retrograde transport — and also forming the mitotic spindle during cell division); microfilaments (built from actin, the smallest-diameter filaments, providing mechanical support and enabling cell shape change/motility, already conceptually related to the actin-myosin interaction covered under Skeletal Muscle Contraction); and intermediate filaments (a diverse family providing tensile/mechanical strength, e.g., keratin in epithelial cells, already relevant to the corneal epithelium's structural resilience covered under Tissue Types)." },
+      { h: "Clinical relevance — microtubules and axoplasmic transport", t: "Microtubule-based transport is the structural basis for axoplasmic flow within neurons — a genuinely important, already-implicit connection to your existing Papilledema content, since papilledema results specifically from STASIS of axoplasmic transport at the optic nerve head (from raised intracranial pressure compressing the nerve as it crosses the subarachnoid space extension around the optic nerve, already covered), causing swelling from blocked anterograde/retrograde flow along optic nerve axon microtubules rather than from primary optic nerve inflammation — grounding that already-covered pathophysiology in the specific cytoskeletal transport mechanism responsible for it." },
+    ],
+    memorizeIt: [
+      "Lipofuscin: 'age pigment,' lipid-protein byproduct of incomplete lysosomal digestion — accumulates in long-lived cells, most notably RPE — central to Age-Related Macular Degeneration (already covered), detectable via fundus autofluorescence.",
+      "Other inclusions: melanin, glycogen, lipid droplets — substances stored in cytoplasm, not membrane-bound organelles.",
+      "Cytoskeleton: microtubules (tubulin, organelle transport via kinesin/dynein motor proteins + mitotic spindle) — microfilaments (actin, shape/motility) — intermediate filaments (tensile strength, e.g., keratin).",
+      "Axoplasmic transport (microtubule-based) stasis at the optic nerve head = the mechanism of papilledema (already covered) — swelling from blocked transport, not primary inflammation.",
+    ],
+    applyIt: [
+      "This gives you the cellular/structural mechanism underlying two already-built pathology topics: lipofuscin accumulation within RPE cells is the structural, histologic correlate of your existing Age-Related Macular Degeneration content, and microtubule-based axoplasmic transport stasis is the precise cellular mechanism behind your existing Papilledema content's optic disc swelling — connecting both conditions' clinical/fundoscopic findings back to a specific, named cell-biology structure rather than leaving the mechanism at the level of 'swelling' or 'accumulation' in the abstract.",
+    ],
+  },
   "tissuetypes-epithelial-connective": {
     name: "Epithelial & Connective Tissue Classification",
     priority: "SHOULD",
@@ -11875,12 +12080,16 @@ const STUDY_PAGES = {
       { h: "Epithelial tissue — classification by shape and layers", t: "Epithelium is classified by cell shape (squamous — flat; cuboidal — cube-shaped; columnar — tall/column-shaped) and by number of layers (simple — one layer; stratified — multiple layers) — the cornea's outer surface (already implicit in your extensive Cornea content) is covered by non-keratinized stratified squamous epithelium, a classification directly explaining its multi-layer structure and rapid regenerative capacity (since only the basal layer needs to divide, replenishing the more superficial layers as they are shed) already relevant to understanding corneal epithelial healing after abrasion or refractive surgery." },
       { h: "Connective tissue — the supportive matrix", t: "Connective tissue consists of cells embedded within an extracellular matrix (rather than tightly packed cells with minimal matrix, as in epithelium) — this matrix varies enormously by type, from the collagen-rich matrix of dense connective tissue (e.g., the sclera and corneal stroma, both already implicit in your existing content, composed largely of organized collagen already covered under Collagen Structure & Synthesis) to the specialized matrices of cartilage, bone, blood, and adipose tissue." },
       { h: "Direct clinical relevance — connects to existing corneal and collagen content", t: "This classification framework explains why the cornea's structural layers have such different properties: the epithelium (stratified squamous, rapidly regenerating) heals quickly after superficial injury, while the stroma (dense connective tissue, collagen-based, already covered) heals more slowly and can scar — directly relevant to understanding why superficial corneal abrasions typically heal without scarring (epithelial regeneration) while deeper stromal injuries can produce permanent corneal scarring (connective tissue's more limited regenerative capacity, consistent with the general principle that connective tissue repair often involves fibrosis/scarring rather than true regeneration)." },
+      { h: "Cell junctions — the structural basis of the ocular barriers already covered", t: "Epithelial cells are held together by specialized junctional complexes, most importantly the zonula occludens (tight junction), which seals the intercellular space and restricts paracellular (between-cell) movement of molecules — this single structural feature is precisely what forms the blood-retinal barrier (tight junctions between retinal pigment epithelium cells, and between retinal capillary endothelial cells), the blood-aqueous barrier (already covered under Aqueous physiology — tight junctions of the nonpigmented ciliary epithelium and iris/retinal vessel endothelium), and the corneal epithelium's own barrier function (tight junctions of the most superficial epithelial cell layer, which is why an intact corneal epithelium resists fluorescein staining and topical pathogen penetration) — the same junctional structure, in three different locations, explaining three separately-covered ocular barrier concepts." },
+      { h: "Secretory epithelium — modes of secretion", t: "Secretory epithelium is further classified by its mode of release: merocrine secretion (exocytosis, no cell loss — e.g., most exocrine and salivary glands), apocrine secretion (the apical portion of the cell pinches off with the secretion — e.g., the modified sweat glands, and the meibomian-adjacent glands of Moll of the eyelid), and holocrine secretion (the entire cell disintegrates to release its contents — the meibomian glands themselves and sebaceous glands, already implicit in your existing Meibomian Gland Dysfunction/Dry Eye content) — recognizing meibomian glands as holocrine explains why their secretory function is inherently tied to a cycle of cell turnover and lipid accumulation, distinct from the continuous, non-destructive merocrine secretion of the lacrimal gland's aqueous tear component." },
     ],
     memorizeIt: [
       "Epithelium classified by: cell shape (squamous, cuboidal, columnar) + layers (simple, stratified).",
       "Corneal epithelium: non-keratinized stratified squamous — rapid regeneration via basal layer division.",
       "Connective tissue: cells embedded in extracellular matrix (varies by type) — includes dense connective tissue (collagen-rich, e.g., sclera/corneal stroma).",
       "Epithelial injury (superficial) → rapid regeneration, typically no scarring. Connective tissue injury (deep/stromal) → slower healing, can scar/fibrose.",
+      "Zonula occludens (tight junction): seals paracellular space — the shared structural basis of the blood-retinal barrier, blood-aqueous barrier, and corneal epithelial barrier (all already covered).",
+      "Secretion modes: merocrine (exocytosis, cell intact — lacrimal gland, most exocrine glands), apocrine (apical pinch-off — glands of Moll), holocrine (whole cell disintegrates — meibomian/sebaceous glands, already relevant to Meibomian Gland Dysfunction).",
     ],
     applyIt: [
       "This gives you the histologic classification explaining a clinical pattern already implicit throughout your existing Cornea content: superficial corneal abrasions (epithelial, stratified squamous tissue) characteristically heal quickly and without scarring because only the basal epithelial layer needs to regenerate, while deeper injuries reaching the stroma (dense connective tissue, collagen-based) heal more slowly and can produce permanent scarring — a tissue-type-based explanation for why corneal injury depth is such a clinically important prognostic factor.",
@@ -11896,12 +12105,14 @@ const STUDY_PAGES = {
       { h: "Muscle tissue — three histologic types", t: "Skeletal muscle is striated (a banding pattern visible microscopically, reflecting the organized sarcomere structure already covered under Skeletal Muscle Contraction) and voluntary (under conscious control, innervated by the somatic nervous system); cardiac muscle is also striated but involuntary, with distinctive intercalated discs (specialized junctions between cardiac muscle cells containing gap junctions that allow electrical signal propagation, already conceptually relevant to the cardiac conduction concepts covered under Cardiovascular Physiology); smooth muscle lacks striations (hence 'smooth'), is involuntary, and is found in the walls of hollow organs and blood vessels (already relevant to the vascular smooth muscle tone concepts covered under GFR regulation and vasomotor content)." },
       { h: "Nervous tissue — neurons and supporting structures", t: "Nervous tissue consists of neurons (already covered in detail under Neuron Structure & Glial Cell Types) and their supporting glial cells, organized into gray matter (predominantly neuron cell bodies and unmyelinated processes/synapses) and white matter (predominantly myelinated axon tracts, already covered under Myelination) — this gray/white matter distinction is why brain and spinal cord cross-sections show a characteristic visual pattern, with the specific gray/white matter arrangement differing between the brain (gray matter on the outside, cortex) and spinal cord (gray matter on the inside, white matter tracts on the outside, already relevant to the tract organization covered under Spinal Cord Anatomy)." },
       { h: "Direct clinical relevance — connects to existing content", t: "This tissue classification explains why cardiac muscle's intercalated discs are functionally essential (allowing the heart to contract as a coordinated unit via electrical continuity between cells, rather than requiring independent stimulation of every single cell) and why the striated/smooth distinction in muscle tissue directly determines whether a given muscle type is under voluntary or involuntary control — extraocular muscles (already covered under Muscle Fiber Types) are skeletal (striated, voluntary), explaining why patients can consciously direct their eye movements, in contrast to the iris and ciliary muscles, which contain smooth muscle components under autonomic (involuntary) control, already covered under the Sympathetic and Parasympathetic Pathway Anatomy content." },
+      { h: "Peripheral nerve connective tissue coverings", t: "A peripheral nerve is not just a bundle of bare axons — each individual axon (with its Schwann cell myelin, already covered) is wrapped in endoneurium; groups of axons are bundled into fascicles wrapped in perineurium (a mechanically tough layer that also contributes a diffusion barrier, the blood-nerve barrier); and the entire nerve, containing multiple fascicles, is enclosed by an outer epineurium — this three-layer connective tissue organization (endoneurium → perineurium → epineurium, working outward) is directly analogous to skeletal muscle's own three-layer connective tissue wrapping (endomysium → perimysium → epimysium, already implicit in your Muscle Fiber Types content), and it is this connective tissue scaffold — not the axons themselves — that surgeons re-approximate when repairing a lacerated peripheral nerve." },
     ],
     memorizeIt: [
       "Skeletal muscle: striated, voluntary. Cardiac muscle: striated, involuntary, has intercalated discs (electrical coupling between cells). Smooth muscle: non-striated, involuntary.",
       "Nervous tissue: neurons + glial cells; gray matter (cell bodies/synapses) vs. white matter (myelinated axon tracts, already covered).",
       "Brain: gray matter outside (cortex). Spinal cord: gray matter inside, white matter outside — opposite arrangement.",
       "Extraocular muscles: skeletal (voluntary). Iris/ciliary muscles: smooth muscle components (involuntary, autonomic control, already covered under Sympathetic/Parasympathetic Pathway Anatomy).",
+      "Peripheral nerve coverings (inner to outer): endoneurium (around each axon) → perineurium (around each fascicle, forms the blood-nerve barrier) → epineurium (around the whole nerve) — directly parallel to skeletal muscle's endomysium/perimysium/epimysium organization.",
     ],
     applyIt: [
       "This gives you the histologic explanation for a functional distinction already implicit throughout your existing content: extraocular muscles are voluntarily controllable (skeletal, striated) precisely because of their tissue type, while the iris sphincter/dilator and ciliary muscle are involuntary and under autonomic control (smooth muscle) — the same striated-vs-smooth histologic classification explaining why you can consciously choose to look in a particular direction but cannot consciously will your pupil to constrict or your lens to accommodate.",
@@ -11949,6 +12160,27 @@ const STUDY_PAGES = {
       "This gives you the histologic classification underlying your existing Tear Film & Lacrimal Physiology content: the lacrimal gland's exocrine, duct-based organization is precisely why tear secretion is delivered locally to the ocular surface rather than distributed throughout the body — and the pancreas's mixed exocrine/endocrine organization gives you a genuinely instructive real-world example of why a single organ's disease (pancreatitis) can selectively produce either digestive symptoms, diabetes, or both, depending on which specific histologic tissue component is predominantly affected.",
     ],
   },
+  "organsystems-integumentary-cardiovascular": {
+    name: "Integumentary & Cardiovascular System Histology",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard histology references"],
+    learnIt: [
+      { h: "Overview", t: "Skin and blood vessel histology round out the organ systems survey, providing the normal-tissue structural baseline for disease processes already covered under Integumentary Pathology (phakomatoses, dermatoses) and Cardiovascular Pathology (atherosclerosis, hypertension) elsewhere on this platform." },
+      { h: "Skin — layers, glands, and receptors", t: "Skin has two main layers: the epidermis (stratified squamous epithelium, keratinized — distinct from the cornea's own non-keratinized stratified squamous epithelium already covered under Tissue Types — containing melanocytes for pigmentation, already relevant to your neural crest content covered under Neurohistology) and the dermis (dense connective tissue containing hair follicles, glands, and sensory receptors); the cutaneous glands include sebaceous glands (holocrine secretion, already covered under Tissue Types, producing sebum) and sweat glands (eccrine — merocrine secretion, thermoregulatory; apocrine — found in specific body regions); cutaneous sensory receptors include free nerve endings (pain/temperature, unencapsulated) and encapsulated nerve endings such as Pacinian corpuscles (deep pressure/vibration, large and onion-layered) and Meissner corpuscles (light touch, more superficial) — this receptor histology provides the structural basis for the general somatosensory content already covered under Electrophysiology and the Nerve Cell." },
+      { h: "Cardiovascular histology — vessel wall layers and cardiac conduction", t: "Blood vessels share a common three-layer wall organization: tunica intima (innermost, the endothelium already covered plus a thin connective tissue layer), tunica media (smooth muscle + elastic tissue, thickest in arteries — already relevant to the vascular tone/resistance content covered under Circulatory Physiology, and the layer where atherosclerotic plaque, already covered, develops), and tunica adventitia (outer connective tissue) — capillaries, by contrast, consist of only a single endothelial layer (no media/adventitia), enabling the efficient gas/nutrient exchange already covered under Gas Exchange; the heart's conduction system (SA node, AV node, bundle of His, Purkinje fibers, already covered under Electrical Activity of the Heart) consists of specialized, modified cardiac muscle cells (distinct from ordinary contractile cardiomyocytes) that generate and rapidly propagate the electrical impulses already covered functionally." },
+      { h: "Clinical relevance — connecting histology to already-built pathology", t: "This vessel-wall histology directly explains why atherosclerosis (already covered) is fundamentally an intimal/medial disease — lipid-laden macrophages (foam cells) accumulate within the tunica intima, and the resulting plaque can extend into and weaken the tunica media, explaining both luminal narrowing (ischemia) and, in severe cases, vessel wall weakening (aneurysm formation, already relevant to your existing Aneurysm content); similarly, recognizing skin's phakomatosis-relevant structures (melanocytes, dermal connective tissue) provides the normal-tissue baseline against which the abnormal skin lesions already covered under Neurofibromatosis, Tuberous Sclerosis, and Sturge-Weber Syndrome content are best understood." },
+    ],
+    memorizeIt: [
+      "Skin: epidermis (keratinized stratified squamous, melanocytes) + dermis (dense connective tissue — follicles, glands, receptors).",
+      "Cutaneous glands: sebaceous (holocrine, sebum) + sweat (eccrine = merocrine, thermoregulatory; apocrine = specific regions).",
+      "Cutaneous receptors: free nerve endings (pain/temperature) + encapsulated (Pacinian corpuscles = deep pressure/vibration; Meissner corpuscles = light touch).",
+      "Vessel wall (inner to outer): tunica intima (endothelium) → tunica media (smooth muscle/elastic tissue — thickest in arteries, site of atherosclerotic plaque) → tunica adventitia. Capillaries: endothelium only, no media/adventitia.",
+    ],
+    applyIt: [
+      "This gives you the normal-tissue histologic baseline for two already-built pathology topics: atherosclerosis (already covered) is fundamentally an intimal/medial vessel-wall disease process (foam cell accumulation, plaque extension into the media), and the skin's normal melanocyte/dermal connective tissue architecture is the structural backdrop against which the abnormal skin findings already covered under your Phakomatoses content (neurofibromatosis's café-au-lait spots, tuberous sclerosis's ash-leaf spots, Sturge-Weber's port-wine stain) represent a departure from normal.",
+    ],
+  },
   "thorax-heart-chambers": {
     name: "Heart Chambers, Valves, & Coronary Circulation",
     priority: "SHOULD",
@@ -11965,6 +12197,8 @@ const STUDY_PAGES = {
       "Left ventricle: much thicker walls than right (higher systemic pressure demand).",
       "Coronary arteries: LAD (largest territory, anterior wall + septum), circumflex, RCA — arise from aortic root above the aortic valve.",
       "Left-sided HF → pulmonary symptoms (backup into lungs). Right-sided HF → systemic/peripheral symptoms (backup into systemic veins, hepatic congestion).",
+      "Pulmonary circulation is a separate, low-pressure/low-resistance circuit (right ventricle → pulmonary trunk/arteries → lungs → pulmonary veins) — explains the right ventricle's comparatively thin wall relative to the left.",
+      "Heart's gross surfaces: sternocostal (anterior, mostly right ventricle), diaphragmatic/inferior (mostly left ventricle), and the base (posterior, formed mainly by the left atrium) — a basic gross-anatomy orientation for imaging and physical exam correlation.",
     ],
     applyIt: [
       "This gives you the anatomic basis for the left-vs-right heart failure symptom dichotomy already implicit in your existing CHF content: because each ventricle pumps into a specific, distinct circulation (left → systemic, right → pulmonary), failure of one side backs up blood into whichever circulation feeds INTO that failing chamber — left heart failure backs up into the lungs (pulmonary edema), right heart failure backs up into the systemic veins (peripheral edema, hepatic congestion) — a direct, logical consequence of the chamber anatomy rather than an arbitrary clinical pattern to memorize.",
@@ -12022,12 +12256,14 @@ const STUDY_PAGES = {
       { h: "Liver's dual blood supply — direct connection to cirrhosis content", t: "The liver receives blood from two sources: the hepatic artery (oxygenated blood, ~25% of hepatic blood flow) and the portal vein (nutrient-rich but deoxygenated blood draining from the GI tract and spleen, ~75% of hepatic blood flow) — this portal venous system is precisely what becomes pathologically congested in cirrhosis (already covered), since scarred, fibrotic liver tissue increases resistance to portal blood flow, producing the portal hypertension already relevant to your existing Cirrhosis content's ascites and varices findings (esophageal varices form from portal-systemic venous collateral circulation attempting to bypass the high-resistance liver)." },
       { h: "Biliary tract — drainage system", t: "Bile produced by hepatocytes drains via progressively larger bile ducts, converging into the common hepatic duct, joined by the cystic duct (draining the gallbladder, where bile is concentrated and stored between meals, already covered under Digestion & Absorption) to form the common bile duct, which joins the pancreatic duct before draining into the duodenum at the ampulla of Vater — obstruction anywhere along this pathway (e.g., gallstones) causes bile to back up, producing jaundice, directly relevant to the hepatobiliary dysfunction concepts already covered under Cirrhosis." },
       { h: "Renal and pelvic anatomy — direct connection to existing renal physiology content", t: "The kidneys (retroperitoneal, already covered) drain urine via the renal pelvis into the ureters, which travel to the bladder for storage before elimination via the urethra — the kidneys' retroperitoneal position means renal pathology (e.g., pyelonephritis) can produce flank pain with a somewhat different character than the more precisely localized pain typical of intraperitoneal organ pathology (already covered under GI Tract Organization), a genuinely useful clinical pattern-recognition tool connecting this session's peritoneal anatomy content to renal-specific presentations." },
+      { h: "The spleen — the other internal organ", t: "The spleen (intraperitoneal, in the left upper quadrant, protected by the lower left rib cage) is supplied by the splenic artery (a branch of the celiac trunk, the same trunk giving rise to the hepatic and left gastric arteries) and is organized into red pulp (filters and removes aged/damaged red blood cells and encapsulated bacteria, already conceptually relevant to your existing Sickle Cell Disease content, since functional asplenia from recurrent splenic infarction predisposes sickle cell patients to overwhelming infection with encapsulated organisms) and white pulp (lymphoid tissue performing immune surveillance, structurally organized around central arterioles, already conceptually related to your Specific Immunity content) — the spleen's soft, highly vascular, and only partially protected structure also makes it the most commonly injured solid organ in blunt abdominal trauma." },
     ],
     memorizeIt: [
       "Liver dual blood supply: hepatic artery (~25%, oxygenated) + portal vein (~75%, GI/spleen drainage) — portal hypertension in cirrhosis directly reflects this portal system's pathologic congestion.",
       "Biliary drainage: hepatocytes → bile ducts → common hepatic duct + cystic duct (gallbladder) → common bile duct → joins pancreatic duct → ampulla of Vater → duodenum.",
       "Biliary obstruction (e.g., gallstones) → bile backup → jaundice.",
       "Kidney drainage: renal pelvis → ureter → bladder → urethra. Kidneys are retroperitoneal (already covered) — explains flank pain character in renal pathology.",
+      "Spleen: left upper quadrant, supplied by the splenic artery (celiac trunk branch) — red pulp (filters aged RBCs/encapsulated bacteria) + white pulp (lymphoid immune surveillance). Most commonly injured solid organ in blunt abdominal trauma; functional asplenia (e.g., recurrent infarction in sickle cell disease, already covered) predisposes to encapsulated-organism infection.",
     ],
     applyIt: [
       "This gives you the complete anatomic explanation for portal hypertension's downstream effects already covered under your existing Cirrhosis content: because the portal vein supplies the majority of hepatic blood flow and drains the GI tract/spleen, cirrhotic scarring's resistance to portal flow doesn't just affect the liver itself — it backs up pressure throughout this entire venous drainage system, producing the ascites (via the Starling-forces mechanism already covered under Body Fluids Physiology) and esophageal varices (portal-systemic collateral formation) that are hallmark features of decompensated cirrhosis, completing the anatomic-to-functional-to-clinical chain for this condition. This topic completes the entire Systemic Health Anatomy discipline, and with it, ALL of Systemic Health across all 8 disciplines.",
@@ -19930,6 +20166,36 @@ const FLASHCARDS = [
   { id: "fc-1668", objectiveId: "syspharmcardio-chf-lipid", front: "How does niacin maculopathy appear on OCT versus fluorescein angiography, and how does that distinguish it from true CME?", back: "Cystoid-appearing intraretinal fluid on OCT WITHOUT vascular leakage on fluorescein angiography — true inflammatory CME shows FA leakage." },
   { id: "fc-1669", objectiveId: "syspharmendo-hormonal", front: "Why are dopamine agonists (bromocriptine, cabergoline) first-line therapy for prolactinoma?", back: "Dopamine physiologically inhibits prolactin secretion, so activating dopamine receptors suppresses tumor prolactin output and can shrink the tumor." },
   { id: "fc-1670", objectiveId: "syspharmendo-hormonal", front: "What is the classic ocular toxicity of tamoxifen, and how does it differ from hydroxychloroquine retinopathy?", back: "Tamoxifen retinopathy: refractile, crystalline perifoveal deposits — a distinct pattern from hydroxychloroquine's bull's-eye maculopathy, despite both being crystalline/deposit-type drug retinopathies." },
+  { id: "fc-1694", objectiveId: "headneck-skull-orbit-dural-sinuses", front: "Which cranial nerves and structures pass through the superior orbital fissure?", back: "CN III, IV, VI, the ophthalmic (V1) division of CN V, and the superior ophthalmic vein — a single lesion here can cause total ophthalmoplegia plus V1 sensory loss." },
+  { id: "fc-1695", objectiveId: "headneck-skull-orbit-dural-sinuses", front: "Why is CN VI especially vulnerable to cavernous sinus pathology compared to CN III, IV, V1, and V2?", back: "CN VI runs freely WITHIN the cavernous sinus alongside the internal carotid artery, while the other nerves run along its lateral wall — making CN VI the most susceptible to isolated involvement." },
+  { id: "fc-1696", objectiveId: "headneck-skull-orbit-dural-sinuses", front: "Contrast epidural and subdural hemorrhage by location and typical vessel source.", back: "Epidural: between skull and dura, classically arterial (middle meningeal artery), rapid accumulation. Subdural: between dura and arachnoid, classically venous (bridging veins), slower accumulation, often with a lucid interval." },
+  { id: "fc-1697", objectiveId: "headneck-muscles-glands-triangles", front: "Why does Bell's palsy weaken eyelid closure and facial expression but spare chewing?", back: "Facial expression muscles are innervated by CN VII (2nd pharyngeal arch); mastication muscles are innervated by CN V3 (1st pharyngeal arch) — different nerve, different muscles entirely." },
+  { id: "fc-1698", objectiveId: "headneck-muscles-glands-triangles", front: "Which cranial nerve traverses the parotid gland, and what is the clinical significance?", back: "CN VII (facial nerve) — parotid gland surgery carries a well-recognized risk of facial nerve injury." },
+  { id: "fc-1699", objectiveId: "headneck-muscles-glands-triangles", front: "What thin bony wall separates the ethmoid sinus from the orbit, and why does it matter?", back: "The lamina papyracea — its minimal thickness allows ethmoid sinusitis to spread directly into the orbit, causing orbital cellulitis." },
+  { id: "fc-1700", objectiveId: "diencephalon-epithalamus-subthalamus", front: "Why do pineal region tumors cause Parinaud (dorsal midbrain) syndrome?", back: "The pineal gland (epithalamus) sits immediately adjacent to the dorsal midbrain/tectal structures, so a growing pineal mass directly compresses them." },
+  { id: "fc-1701", objectiveId: "diencephalon-epithalamus-subthalamus", front: "A lesion of the subthalamic nucleus produces what movement disorder, and on which side of the body?", back: "Hemiballismus — violent, involuntary, large-amplitude flinging movements of the limbs CONTRALATERAL to the lesion." },
+  { id: "fc-1702", objectiveId: "diencephalon-epithalamus-subthalamus", front: "What are the four subdivisions of the diencephalon?", back: "Thalamus (incl. LGN), hypothalamus, epithalamus (pineal gland, habenula), and subthalamus (subthalamic nucleus)." },
+  { id: "fc-1703", objectiveId: "neurohistology-neural-tube-development", front: "Put the neurulation sequence in order: neural tube, neural plate, neural groove, neural folds.", back: "Neural plate → neural folds (flanking the neural groove) → fusion → neural tube." },
+  { id: "fc-1704", objectiveId: "neurohistology-neural-tube-development", front: "Name four ocular structures that derive embryologically from neural crest cells.", back: "Corneal endothelium and stromal keratocytes, iris/ciliary body stroma, trabecular meshwork, and the sclera." },
+  { id: "fc-1705", objectiveId: "neurohistology-neural-tube-development", front: "What are the three concentric layers of the developing neural tube, and what does each become?", back: "Ependymal layer → ependymal cells; mantle layer → gray matter; marginal layer → white matter (myelinated tracts)." },
+  { id: "fc-1706", objectiveId: "autonomicanat-general-organization", front: "What neurotransmitter and receptor type is used at EVERY autonomic ganglion (both sympathetic and parasympathetic)?", back: "Acetylcholine acting on nicotinic receptors — a feature shared by all preganglionic neurons regardless of division." },
+  { id: "fc-1707", objectiveId: "autonomicanat-general-organization", front: "Why is sweating a 'cholinergic' function despite being sympathetically controlled?", back: "Sympathetic postganglionic fibers to sweat glands are the one exception that release ACh (acting on muscarinic receptors) instead of norepinephrine — explaining why anhidrosis in Horner syndrome is a cholinergic deficit." },
+  { id: "fc-1708", objectiveId: "autonomicanat-general-organization", front: "Contrast the outflow levels of the sympathetic and parasympathetic nervous systems.", back: "Sympathetic: thoracolumbar (T1-L2). Parasympathetic: craniosacral (CN III, VII, IX, X plus S2-S4)." },
+  { id: "fc-1709", objectiveId: "medulla-cross-sectional-levels", front: "In the closed medulla, which decussation occurs first (more caudally): motor or sensory?", back: "Motor (pyramidal) decussation is more caudal; sensory decussation (internal arcuate fibers forming the medial lemniscus) is just rostral to it." },
+  { id: "fc-1710", objectiveId: "medulla-cross-sectional-levels", front: "What landmark marks the transition from the closed to the open medulla?", back: "The level of the inferior olives — the central canal flares into the floor of the fourth ventricle here." },
+  { id: "fc-1711", objectiveId: "medulla-cross-sectional-levels", front: "Contrast medial medullary syndrome and lateral medullary (Wallenberg) syndrome by vascular territory and key findings.", back: "Medial: anterior spinal/vertebral artery territory — contralateral weakness + contralateral proprioception loss + ipsilateral tongue deviation. Lateral (Wallenberg): PICA territory — CN IX/X findings, crossed sensory loss, ipsilateral Horner, ipsilateral ataxia." },
+  { id: "fc-1712", objectiveId: "cerebrum-white-matter-optic-radiations", front: "Which optic radiation fibers take the Meyer's loop route through the temporal lobe, and what visual field do they represent?", back: "Fibers carrying SUPERIOR visual field information (from the inferior retina) loop through the temporal lobe via Meyer's loop." },
+  { id: "fc-1713", objectiveId: "cerebrum-white-matter-optic-radiations", front: "A patient has a contralateral superior homonymous quadrantanopia. Where does the lesion localize?", back: "The temporal lobe (Meyer's loop) — 'pie in the sky.'" },
+  { id: "fc-1714", objectiveId: "cerebrum-white-matter-optic-radiations", front: "Name the three classes of cerebral white matter fiber and give one example of each.", back: "Projection fibers (internal capsule), commissural fibers (corpus callosum), association fibers (intrahemispheric cortex-to-cortex connections)." },
+  { id: "fc-1715", objectiveId: "spinalcord-gray-matter-nerves", front: "In which part of the spinal cord's gray matter is the ciliospinal center of Budge located?", back: "The lateral horn — present only at thoracolumbar spinal levels, containing sympathetic preganglionic neuron cell bodies." },
+  { id: "fc-1716", objectiveId: "spinalcord-gray-matter-nerves", front: "Why does an upper motor neuron lesion cause hyperreflexia rather than reduced reflexes?", back: "Descending corticospinal input normally suppresses/modulates local spinal reflex arcs; removing that suppression disinhibits the reflex, causing hyperreflexia." },
+  { id: "fc-1717", objectiveId: "spinalcord-gray-matter-nerves", front: "What structure contains the cell bodies of primary sensory (afferent) spinal nerve neurons?", back: "The dorsal root ganglion, a swelling on the dorsal (sensory) root, containing pseudounipolar sensory neuron cell bodies." },
+  { id: "fc-1718", objectiveId: "gencell-inclusions-cytoskeleton", front: "What is lipofuscin, and which already-covered retinal condition does its accumulation drive?", back: "A lipid-protein 'age pigment' byproduct of incomplete lysosomal digestion; its accumulation in RPE cells is central to Age-Related Macular Degeneration." },
+  { id: "fc-1719", objectiveId: "gencell-inclusions-cytoskeleton", front: "Which cytoskeletal filament type forms the tracks for kinesin/dynein-mediated organelle transport, and what optic nerve condition depends on this transport?", back: "Microtubules — stasis of microtubule-based axoplasmic transport at the optic nerve head is the mechanism of papilledema." },
+  { id: "fc-1720", objectiveId: "gencell-inclusions-cytoskeleton", front: "Name the three cytoskeletal filament types from largest to smallest diameter.", back: "Microtubules (largest, tubulin) > intermediate filaments (e.g., keratin) > microfilaments (smallest, actin)." },
+  { id: "fc-1721", objectiveId: "organsystems-integumentary-cardiovascular", front: "Name the three layers of a typical blood vessel wall, inner to outer.", back: "Tunica intima (endothelium) → tunica media (smooth muscle/elastic tissue) → tunica adventitia (connective tissue)." },
+  { id: "fc-1722", objectiveId: "organsystems-integumentary-cardiovascular", front: "Why do capillaries lack a tunica media or adventitia?", back: "Capillaries consist of only a single endothelial layer, which maximizes efficiency for gas/nutrient exchange with surrounding tissue." },
+  { id: "fc-1723", objectiveId: "organsystems-integumentary-cardiovascular", front: "Contrast Pacinian and Meissner corpuscles by function and depth.", back: "Pacinian corpuscles: deep, large, onion-layered — detect deep pressure/vibration. Meissner corpuscles: more superficial — detect light touch." },
 ];
 
 const QUESTIONS = [
@@ -25711,6 +25977,74 @@ const QUESTIONS = [
       b: "Correct — thioridazine's pigmentary retinopathy is a dose-related, potentially irreversible toxicity causing visual field and dark-adaptation loss, warranting prompt communication with the prescribing psychiatrist about dose reduction or an alternative agent; chlorpromazine's corneal/lens deposits are a distinct, generally benign finding that rarely requires a change in therapy.",
       c: "Incorrect — both findings are classic, well-established ocular toxicities of these specific phenothiazine antipsychotics.",
       d: "Incorrect — this overgeneralizes; in this specific case, the retinal toxicity (thioridazine) is the more clinically significant, vision-threatening finding, while the corneal/lens deposits (chlorpromazine) are typically benign.",
+    },
+  },
+  {
+    id: "q-341", objectiveId: "headneck-skull-orbit-dural-sinuses", type: "Lesion localization", difficulty: "Hard",
+    stem: "A patient presents with proptosis, chemosis, and a combination of ophthalmoplegia (limited eye movement in multiple directions) plus periocular sensory loss, following several days of worsening sinusitis. Which anatomic structure best explains this combined presentation, and which cranial nerve within it is most vulnerable to isolated early involvement?",
+    choices: [
+      { id: "a", text: "The optic canal; CN II is most vulnerable" },
+      { id: "b", text: "The cavernous sinus; CN VI is most vulnerable, since it runs freely within the sinus itself rather than along its wall" },
+      { id: "c", text: "The jugular foramen; CN X is most vulnerable" },
+      { id: "d", text: "The internal acoustic meatus; CN VIII is most vulnerable" },
+      ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — the optic canal transmits only CN II and the ophthalmic artery, not the combined multi-nerve ophthalmoplegia plus proptosis/chemosis described here, which requires cavernous sinus-level involvement.",
+      b: "Correct — the cavernous sinus carries CN III, IV, V1, V2, and VI (the latter running freely within the sinus alongside the internal carotid artery, rather than along the lateral wall like the others), and posterior spread of sinus/orbital infection into the cavernous sinus produces this classic triad of proptosis, chemosis, and multi-nerve ophthalmoplegia — with CN VI often affected first or most severely given its unprotected position within the sinus.",
+      c: "Incorrect — the jugular foramen transmits CN IX, X, and XI along with the internal jugular vein, and is unrelated to sinusitis-driven orbital/periorbital spread or to ocular motility.",
+      d: "Incorrect — the internal acoustic meatus transmits CN VII and VIII for hearing/facial function, not the ocular motor and V1/V2 sensory findings described here.",
+    },
+  },
+  {
+    id: "q-342", objectiveId: "medulla-cross-sectional-levels", type: "Lesion localization", difficulty: "Hard",
+    stem: "A stroke patient has contralateral limb weakness, contralateral loss of proprioception and vibration sense, and ipsilateral tongue deviation on protrusion. Which medullary territory and vascular distribution best explain this presentation, and how does it differ from Wallenberg syndrome?",
+    choices: [
+      { id: "a", text: "Lateral open medulla, PICA territory — identical to Wallenberg syndrome" },
+      { id: "b", text: "Medial (paramedian) medulla, anterior spinal/vertebral artery territory — a distinct syndrome from Wallenberg's lateral, PICA-territory presentation" },
+      { id: "c", text: "Midbrain, posterior cerebral artery territory" },
+      { id: "d", text: "Pons, basilar artery territory" },
+      ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — this presentation (contralateral weakness, contralateral proprioception/vibration loss, ipsilateral tongue deviation) is the medial medullary syndrome pattern, not Wallenberg; Wallenberg instead produces dysphagia/hoarseness, crossed sensory loss (ipsilateral face/contralateral body pain-temperature), ipsilateral Horner syndrome, and ipsilateral ataxia — a different structure set entirely.",
+      b: "Correct — this is medial medullary syndrome, from occlusion of the anterior spinal artery or a medial vertebral artery branch, affecting the paramedian pyramid (corticospinal tract → contralateral weakness), medial lemniscus (→ contralateral proprioception/vibration loss), and CN XII nucleus/fibers (→ ipsilateral tongue deviation) — anatomically and clinically distinct from lateral medullary (Wallenberg) syndrome, which affects the open medulla's LATERAL territory in the PICA distribution instead.",
+      c: "Incorrect — this specific combination of contralateral long-tract findings with ipsilateral CN XII (tongue) involvement localizes specifically to the medulla (where CN XII originates), not the midbrain.",
+      d: "Incorrect — the pons does not contain the hypoglossal (CN XII) nucleus, which is a medulla-specific structure central to this presentation's localization.",
+    },
+  },
+  {
+    id: "q-343", objectiveId: "cerebrum-white-matter-optic-radiations", type: "Lesion localization", difficulty: "Medium",
+    stem: "A patient's visual field testing reveals a contralateral superior homonymous quadrantanopia ('pie in the sky'). Which lobe is most likely affected, and why?",
+    choices: [
+      { id: "a", text: "Parietal lobe, because it carries the inferior visual field fibers via a direct route" },
+      { id: "b", text: "Temporal lobe, because Meyer's loop carries the superior visual field fibers (from the inferior retina) on their detour through the temporal lobe" },
+      { id: "c", text: "Frontal lobe, because the frontal eye fields process visual field information" },
+      { id: "d", text: "Occipital lobe, because all homonymous field defects localize there regardless of which quadrant is affected" },
+      ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — this reverses the pattern; the parietal lobe's direct optic radiation route carries INFERIOR visual field fibers, so a parietal lesion produces an INFERIOR quadrantanopia ('pie on the floor'), not a superior one.",
+      b: "Correct — after leaving the LGN, fibers carrying superior visual field information (originating from the inferior retina) loop anteriorly through the temporal lobe as Meyer's loop before reaching the visual cortex; a temporal lobe lesion damaging this loop produces a contralateral superior homonymous quadrantanopia.",
+      c: "Incorrect — the frontal eye fields (already covered) control voluntary conjugate gaze, not visual field processing; they are unrelated to quadrantanopia patterns.",
+      d: "Incorrect — while ALL homonymous defects are retrochiasmal, a QUADRANT-specific defect (rather than a full hemianopia) specifically localizes to whichever lobe the optic radiations pass through (temporal for superior quadrant, parietal for inferior quadrant) before reaching the occipital cortex, not to the occipital lobe itself.",
+    },
+  },
+  {
+    id: "q-344", objectiveId: "neurohistology-neural-tube-development", type: "Basic science", difficulty: "Medium",
+    stem: "Which embryonic cell population gives rise to the corneal endothelium, corneal stromal keratocytes, the trabecular meshwork, and the sclera?",
+    choices: [
+      { id: "a", text: "Surface ectoderm" },
+      { id: "b", text: "Neural crest cells" },
+      { id: "c", text: "Neural tube mantle layer" },
+      { id: "d", text: "Mesoderm exclusively" },
+      ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — surface ectoderm gives rise to the corneal and conjunctival EPITHELIUM (and the lens), not to the corneal endothelium/stroma, trabecular meshwork, or sclera.",
+      b: "Correct — neural crest cells, a migratory population arising from the lateral edges of the neural folds (distinct from the neural tube itself), give rise to the corneal endothelium and stromal keratocytes, the iris/ciliary body stroma, the trabecular meshwork, and the sclera — in addition to the peripheral nervous system, Schwann cells, and the adrenal medulla.",
+      c: "Incorrect — the neural tube's mantle layer becomes the central nervous system's gray matter, not any ocular anterior segment connective tissue.",
+      d: "Incorrect — while these structures are sometimes loosely described as 'mesenchymal,' the specific cell population responsible is neural crest (sometimes termed 'ectomesenchyme' for this reason), not ordinary mesoderm.",
     },
   },
 ];
