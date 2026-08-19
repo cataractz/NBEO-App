@@ -1515,6 +1515,7 @@ const SYSPHARMCHEMO_TOPIC_ID = "t-15-8-5"; // Systemic Health(15) > Pharmacology
 // Ties directly into existing Cell Cycle & Its Regulation content.
 const SYSPHARMCHEMO_OBJECTIVES = [
   { id: "syspharmchemo-cellcycle", name: "Cell-Cycle-Specific vs. Non-Specific Chemotherapy Classes", built: true },
+  { id: "syspharmchemo-antimicrobial-antiviral", name: "Antimicrobial & Antiviral Agents — Classes & Mechanisms", built: true },
 ];
 
 const SYSPHARMIMMUNO_TOPIC_ID = "t-15-8-6"; // Systemic Health(15) > Pharmacology(8) > Immunopharmacological agents(6)
@@ -1527,12 +1528,15 @@ const SYSPHARMIMMUNO_OBJECTIVES = [
 const SYSPHARMANTIINFLAMM_TOPIC_ID = "t-15-8-7"; // Systemic Health(15) > Pharmacology(8) > Anti-inflammatory agents(7)
 const SYSPHARMANTIINFLAMM_OBJECTIVES = [
   { id: "syspharmantiinflamm-cox", name: "Systemic NSAIDs — COX-1 vs. COX-2 Selectivity", built: true },
+  { id: "syspharmantiinflamm-steroids", name: "Systemic Corticosteroids — Anti-Inflammatory Mechanism & Ocular Side Effects", built: true },
 ];
 
 const SYSPHARMCNS_TOPIC_ID = "t-15-8-8"; // Systemic Health(15) > Pharmacology(8) > Major drugs acting on the CNS(8)
 const SYSPHARMCNS_OBJECTIVES = [
   { id: "syspharmcns-antidep-antipsych", name: "Antidepressants & Antipsychotics — Major Classes & Ocular Side Effects", built: true },
   { id: "syspharmcns-anticonvulsant", name: "Anticonvulsants — Mechanism Overview", built: true },
+  { id: "syspharmcns-analgesic-sedative", name: "Opioid/Non-Opioid Analgesics & Sedative-Hypnotics/Anxiolytics — Ocular Effects", built: true },
+  { id: "syspharmcns-antiparkinson-abuse", name: "Antiparkinsonians, Skeletal Muscle Relaxants & Drugs of Abuse — Pupil/Ocular Findings", built: true },
 ];
 
 const SYSPHARMANESTHETIC_TOPIC_ID = "t-15-8-9"; // Systemic Health(15) > Pharmacology(8) > General and local anesthetics(9)
@@ -1546,12 +1550,14 @@ const SYSPHARMENDOCRINE_TOPIC_ID = "t-15-8-10"; // Systemic Health(15) > Pharmac
 const SYSPHARMENDOCRINE_OBJECTIVES = [
   { id: "syspharmendo-diabetes", name: "Diabetes Pharmacology — Insulin & Oral Hypoglycemics", built: true },
   { id: "syspharmendo-thyroid-steroid", name: "Thyroid & Systemic Corticosteroid Pharmacology", built: true },
+  { id: "syspharmendo-hormonal", name: "Adenohypophyseal Hormones & Sex Steroid Pharmacology — Ocular Relevance", built: true },
 ];
 
 const SYSPHARMCARDIO_TOPIC_ID = "t-15-8-11"; // Systemic Health(15) > Pharmacology(8) > Major cardiovascular drugs(11)
 const SYSPHARMCARDIO_OBJECTIVES = [
   { id: "syspharmcardio-antihypertensive", name: "Antihypertensive Drug Classes — ACE Inhibitors, ARBs, CCBs, Diuretics", built: true },
   { id: "syspharmcardio-anticoag", name: "Antiarrhythmics & Anticoagulants — Mechanism Overview", built: true },
+  { id: "syspharmcardio-chf-lipid", name: "CHF Agents, Antianginals & Antihyperlipidemics — Mechanism Overview", built: true },
 ];
 
 const SYSPHARMRENAL_TOPIC_ID = "t-15-8-12"; // Systemic Health(15) > Pharmacology(8) > Major drugs acting on the kidneys(12)
@@ -16991,12 +16997,16 @@ const STUDY_PAGES = {
       { h: "Overview", t: "The four ADME processes govern how any systemic drug enters, moves through, transforms within, and ultimately leaves the body — a foundational framework already implicitly applied throughout this platform's ocular pharmacology content, here made explicit for systemic drugs." },
       { h: "Absorption and distribution", t: "Absorption depends on administration route — oral drugs undergo first-pass hepatic metabolism before reaching systemic circulation (reducing bioavailability), while IV administration bypasses this entirely, achieving 100% bioavailability immediately — genuinely analogous to the nasolacrimal systemic absorption route already covered for topical ocular drugs, which similarly bypasses first-pass metabolism. Distribution depends on factors like plasma protein binding and lipophilicity, determining how much drug reaches target tissues versus remaining in circulation." },
       { h: "Metabolism and excretion", t: "Metabolism occurs primarily in the LIVER via cytochrome P450 (CYP450) enzymes (this area's sibling Indications objective), typically converting lipophilic drugs into more water-soluble metabolites through Phase I (oxidation) and Phase II (conjugation) reactions; excretion occurs primarily via the KIDNEYS (already covered under Renal Physiology content), meaning both hepatic and renal function significantly affect drug clearance and appropriate dosing." },
+      { h: "Routes of administration", t: "Route determines onset speed and bioavailability, already implicit in the oral-vs-IV first-pass contrast above: ORAL (convenient, subject to first-pass metabolism and variable absorption), IV (immediate, 100% bioavailable, no first-pass effect — used when rapid onset or precise titration is needed), IM/SUBCUTANEOUS (intermediate onset, avoids first-pass metabolism, used for depot/sustained-release formulations), TOPICAL/TRANSDERMAL (local or, via the nasolacrimal route for ocular drops, unintended systemic absorption — already covered), and INHALED (rapid local delivery to the lungs with comparatively limited systemic absorption, already relevant to this area's sibling Respiratory Drugs objective)." },
+      { h: "Preservatives in multi-dose formulations", t: "Multi-dose liquid formulations (including the vast majority of topical ophthalmic drops already covered throughout this platform) require an antimicrobial PRESERVATIVE to prevent contamination between uses — benzalkonium chloride (BAK), a quaternary ammonium compound, is the most commonly used ophthalmic preservative, acting via detergent-like disruption of microbial cell membranes, but this SAME detergent action also disrupts the tear film lipid layer and corneal/conjunctival epithelial cell membranes with chronic exposure, causing dose- and duration-dependent ocular surface toxicity (punctate epithelial erosions, worsened dry eye) — the mechanistic basis for preferring preservative-free formulations in patients on multiple chronic topical medications (e.g., glaucoma patients on several bottles daily, already covered) or with pre-existing ocular surface disease." },
     ],
     memorizeIt: [
       "ADME: Absorption, Distribution, Metabolism, Excretion — the four processes governing systemic drug fate.",
       "Oral drugs undergo first-pass HEPATIC metabolism before reaching systemic circulation; IV bypasses this entirely.",
       "Metabolism: primarily hepatic, CYP450 enzymes (Phase I oxidation, Phase II conjugation). Excretion: primarily renal (already covered under Renal Physiology).",
       "Both hepatic and renal function affect drug clearance and dosing — relevant to polypharmacy in aging patients (already covered).",
+      "Routes of administration ranked by bioavailability/onset: IV (fastest, 100% bioavailable) > IM/SC > oral (first-pass metabolism) — each route trades off convenience against speed/completeness of delivery.",
+      "BENZALKONIUM CHLORIDE (BAK): most common ophthalmic drop PRESERVATIVE — detergent mechanism kills microbes but also disrupts tear film/epithelium with chronic use, causing dose-dependent ocular surface toxicity. Preservative-free formulations are preferred for patients on multiple daily drops or with ocular surface disease.",
     ],
     applyIt: [
       "This gives you the systemic pharmacokinetic framework directly paralleling your existing Systemic Absorption of Topical Medications content — recognizing that oral administration's first-pass hepatic metabolism reduces bioavailability while topical ocular drops draining nasolacrimally bypass this same process explains why topical beta-blockers (already covered under Antiglaucoma Agents content) can achieve unexpectedly significant systemic effects despite their small administered dose.",
@@ -17030,11 +17040,14 @@ const STUDY_PAGES = {
       { h: "Overview", t: "Cholinergic pharmacology centers on two distinct acetylcholine receptor types — muscarinic and nicotinic — already implicitly relevant to numerous ocular and systemic topics covered throughout this platform, here unified into one receptor-based framework." },
       { h: "Muscarinic receptors", t: "Muscarinic receptors mediate parasympathetic effects at smooth muscle and glands — muscarinic AGONISTS (pilocarpine, already covered under Miotics content) cause pupillary constriction and increased aqueous outflow, while muscarinic ANTAGONISTS (atropine and other cycloplegics, already covered under Mydriatics & Cycloplegics content) block these effects, causing pupillary dilation and cycloplegia." },
       { h: "Nicotinic receptors", t: "Nicotinic receptors are found at the neuromuscular junction (already covered under Neuromuscular Junction Transmission content) and at autonomic ganglia — nicotinic receptor dysfunction at the NMJ (via postsynaptic receptor autoantibodies) is the mechanism of myasthenia gravis (already covered), while acetylcholinesterase inhibitors (already covered as indirect-acting miotics and as myasthenia gravis treatment) increase acetylcholine availability at BOTH muscarinic and nicotinic synapses by preventing its breakdown." },
+      { h: "Ganglionic and neuromuscular junction agents", t: "GANGLIONIC nicotinic receptors (Nn subtype, at autonomic ganglia) are pharmacologically distinct from NMJ nicotinic receptors (Nm subtype) — ganglionic blockers (e.g., trimethaphan, historically used for hypertensive emergencies/controlled hypotension) block transmission through BOTH sympathetic and parasympathetic ganglia simultaneously, a largely obsolete drug class given its unpredictable, non-selective autonomic blockade. At the NMJ specifically, neuromuscular blocking agents used for surgical paralysis are DEPOLARIZING (succinylcholine — an agonist that persistently depolarizes the endplate, initially causing fasciculations then flaccid paralysis) or NON-DEPOLARIZING (rocuronium, vecuronium — competitive nicotinic antagonists producing flaccid paralysis without initial fasciculation), the same NMJ receptor already covered as the myasthenia gravis autoantibody target and as this area's sibling General Anesthesia objective's muscle-relaxation component." },
     ],
     memorizeIt: [
       "Muscarinic agonists (pilocarpine, already covered): miosis + increased outflow. Muscarinic antagonists (atropine/cycloplegics, already covered): mydriasis + cycloplegia.",
       "Nicotinic receptors: NMJ (already covered) + autonomic ganglia — myasthenia gravis (already covered) is a nicotinic/postsynaptic NMJ receptor disorder.",
       "Acetylcholinesterase inhibitors increase ACh at BOTH muscarinic and nicotinic synapses (already covered as indirect miotics and MG treatment).",
+      "Ganglionic (Nn) vs. NMJ (Nm) nicotinic receptors are pharmacologically distinct subtypes — ganglionic blockers (trimethaphan) block both sympathetic and parasympathetic ganglia non-selectively.",
+      "Neuromuscular blockers: DEPOLARIZING (succinylcholine — fasciculations then flaccid paralysis) vs. NON-DEPOLARIZING (rocuronium, vecuronium — competitive antagonists, no fasciculation), both already relevant to this area's sibling General Anesthesia objective.",
     ],
     applyIt: [
       "This unifies your existing Miotics, Mydriatics & Cycloplegics, and Myasthenia Gravis content into one receptor-based framework — recognizing that pilocarpine (muscarinic agonist) and pyridostigmine (acetylcholinesterase inhibitor used for MG) both ultimately increase cholinergic signaling, just via different mechanisms (direct receptor activation vs. preventing ACh breakdown), explains their shared class of cholinergic-enhancing therapeutic effects despite treating entirely different conditions.",
@@ -17106,11 +17119,14 @@ const STUDY_PAGES = {
       { h: "Overview", t: "Inhaled corticosteroids are first-line CONTROLLER therapy for persistent asthma, genuinely distinct in purpose from the rescue bronchodilators already covered under this area's sibling objective, extending the corticosteroid anti-inflammatory mechanism already covered extensively across this platform to the respiratory system." },
       { h: "Inhaled corticosteroids as controller therapy", t: "Unlike bronchodilators (this area's sibling objective, which relax already-constricted airways for immediate relief), inhaled corticosteroids reduce the underlying chronic airway INFLAMMATION driving asthma (already covered as the broad anti-inflammatory corticosteroid mechanism relevant across this platform), taken regularly as maintenance therapy rather than for acute symptom relief — directly analogous to the distinction between acute rescue and chronic controller therapy already implicit in glaucoma's acute (hyperosmotic, already covered) vs. chronic (daily antiglaucoma agents, already covered) treatment paradigms." },
       { h: "Leukotriene modifiers", t: "Leukotriene receptor antagonists (montelukast) block leukotriene-mediated bronchoconstriction and inflammation, providing an alternative or add-on controller therapy option, particularly useful in patients with additional allergic rhinitis symptoms given leukotrienes' broader role in allergic inflammatory pathways." },
+      { h: "Mast cell stabilizers and mucolytics", t: "Systemic/inhaled mast cell stabilizers (cromolyn sodium) prevent mast cell DEGRANULATION (blocking calcium influx into the mast cell rather than blocking a released mediator), the identical stabilization mechanism already covered under Topical Mast Cell Stabilizers for allergic conjunctivitis content, here applied prophylactically before allergen/exercise exposure in asthma rather than therapeutically after symptoms begin — genuinely less effective acutely than either bronchodilators or corticosteroids, largely superseded by inhaled corticosteroids in current practice. Mucolytics (acetylcysteine) reduce sputum viscosity by breaking disulfide bonds within mucus glycoproteins, aiding secretion clearance in COPD/cystic fibrosis (already covered) — a genuinely distinct mechanism from bronchodilation or anti-inflammatory action, targeting the physical properties of mucus itself." },
     ],
     memorizeIt: [
       "Inhaled corticosteroids: CONTROLLER therapy, reduce chronic airway inflammation — regular maintenance use, not acute rescue.",
       "Distinct purpose from bronchodilators (this area's sibling objective, acute relief) — parallels acute vs. chronic treatment paradigms seen elsewhere (e.g., glaucoma, already covered).",
       "Leukotriene modifiers (montelukast): alternative/add-on controller therapy, block leukotriene-mediated bronchoconstriction/inflammation.",
+      "Mast cell stabilizers (cromolyn): PREVENT mast cell degranulation (same mechanism already covered for topical ocular use) — prophylactic, not acute rescue; largely superseded by inhaled corticosteroids.",
+      "Mucolytics (acetylcysteine): break disulfide bonds in mucus glycoproteins, reducing sputum viscosity — a physical/chemical action on mucus, not anti-inflammatory or bronchodilating.",
     ],
     applyIt: [
       "This gives you the controller-vs-rescue therapy distinction directly paralleling treatment paradigms already established elsewhere on this platform — recognizing that inhaled corticosteroids address the underlying inflammatory disease process (like systemic immunosuppressive therapy for chronic uveitis, already covered) while bronchodilators provide symptomatic relief (like cycloplegics for uveitis pain, already covered) reinforces the general clinical principle of treating underlying disease process versus symptoms as two distinct, often complementary therapeutic goals.",
@@ -17173,6 +17189,27 @@ const STUDY_PAGES = {
       "This gives you a genuine therapeutic application of your existing Cell Cycle & Its Regulation content — recognizing that methotrexate (already covered as a uveitis treatment) is the SAME drug class used at different, higher doses as S-phase-specific chemotherapy explains why methotrexate's low-dose immunosuppressive uveitis regimen (already covered) carries far less severe side effects than its oncologic dosing, since the therapeutic goal and dose intensity differ substantially despite sharing the identical antimetabolite mechanism.",
     ],
   },
+  "syspharmchemo-antimicrobial-antiviral": {
+    name: "Antimicrobial & Antiviral Agents — Classes & Mechanisms",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Systemic antimicrobial pharmacology (antibacterial, antifungal, antiparasitic) and antiviral agents are the chemotherapeutic classes this area's sibling objective's cell-cycle framework does NOT cover — organized instead by their bacterial/fungal/viral target, several with direct relevance to eye disease already covered elsewhere on this platform." },
+      { h: "Antibacterial mechanisms by class", t: "Beta-lactams (penicillins, cephalosporins) inhibit bacterial CELL WALL synthesis by binding penicillin-binding proteins/transpeptidases — a target with no human cell equivalent (humans lack a cell wall), explaining their favorable safety profile; fluoroquinolones (ciprofloxacin, moxifloxacin — already covered as topical ocular antibiotics) inhibit bacterial DNA gyrase/topoisomerase IV; macrolides (erythromycin, already covered as a topical treatment for staphylococcal blepharitis/hordeolum, and oral azithromycin, first-line for chlamydial genital and adult inclusion conjunctivitis) and tetracyclines (doxycycline — already covered for MGD/ocular rosacea and its pregnancy contraindication) both inhibit bacterial ribosomal protein synthesis (50S and 30S subunits respectively, the SAME 50S target already covered for erythromycin's blepharitis mechanism, just now generalized to the whole macrolide class); sulfonamides inhibit bacterial folic acid synthesis, a pathway absent in human cells that obtain folate from diet." },
+      { h: "Antifungals and antiparasitics", t: "Azole antifungals (fluconazole, voriconazole) inhibit fungal ERGOSTEROL synthesis (the fungal-specific analog of human cholesterol in cell membranes); polyene antifungals (amphotericin B — already covered for fungal endophthalmitis; natamycin, the first-line topical agent for filamentous fungal keratitis given its superior corneal penetration against molds like Fusarium, genuinely complementary to this platform's existing Fungal Keratitis risk-factor/steroid-avoidance content) directly bind ergosterol, forming membrane pores that cause fungal cell lysis — a genuinely different mechanism (binding the existing sterol vs. blocking its synthesis) from the azoles. Antiparasitic agents vary widely by target organism; antiseptics/disinfectants (povidone-iodine, already covered for pre-operative cataract surgery surface antisepsis) act non-specifically via oxidation/protein denaturation rather than a specific molecular target, explaining their broad-spectrum activity without inducing resistance the way targeted antibiotics can." },
+      { h: "Antiviral agents", t: "Acyclovir and valacyclovir (already covered as first-line therapy for herpes simplex keratitis and herpes zoster ophthalmicus) are GUANOSINE ANALOGS selectively activated by the viral (not human) thymidine kinase enzyme, then incorporated into viral DNA by viral DNA polymerase to terminate chain elongation — this viral-enzyme-dependent activation step is precisely why these agents have high selectivity for virus-infected cells and low toxicity to uninfected human cells, a genuinely elegant mechanism worth understanding beyond simply memorizing 'acyclovir treats herpes.'" },
+    ],
+    memorizeIt: [
+      "Beta-lactams: inhibit bacterial cell wall synthesis (no human equivalent target) — favorable safety profile.",
+      "Fluoroquinolones (already covered topically): inhibit DNA gyrase/topoisomerase IV. Macrolides (erythromycin, already covered topically) / tetracyclines (doxycycline, already covered): inhibit bacterial ribosomal (50S/30S) protein synthesis.",
+      "Azole antifungals: inhibit ERGOSTEROL SYNTHESIS. Polyenes (amphotericin B; natamycin, first-line topical for filamentous fungal keratitis, already covered): directly BIND ergosterol, forming membrane pores — distinct mechanisms.",
+      "Acyclovir/valacyclovir (already covered for HSV keratitis/HZO): guanosine analogs, activated by VIRAL thymidine kinase then incorporated by viral DNA polymerase — selective for infected cells, low toxicity to normal cells.",
+    ],
+    applyIt: [
+      "This gives you the systemic mechanistic basis directly completing your existing Herpes Simplex Keratitis, Herpes Zoster Ophthalmicus, and Bacterial/Fungal Keratitis content — understanding that acyclovir's antiviral selectivity depends entirely on viral thymidine kinase activation explains why it is effective against actively-replicating HSV/VZV but not against latent virus, directly relevant to counseling patients on herpes zoster ophthalmicus (already covered) about why antivirals shorten the acute episode but do not eliminate the risk of future reactivation from latent ganglionic virus.",
+    ],
+  },
   "syspharmimmuno-calcineurin-biologics": {
     name: "Calcineurin Inhibitors & Biologic Immunosuppressants — Systemic Overview",
     priority: "MUST",
@@ -17211,6 +17248,25 @@ const STUDY_PAGES = {
       "This gives you the systemic COX-isoform framework directly extending your existing Topical NSAIDs — Mechanism & Corneal Melt Risk content — just as topical NSAIDs carry a genuine, non-trivial risk (corneal melt, already covered) beyond simple anti-inflammatory benefit, systemic NSAIDs carry their own genuine trade-offs (GI bleeding for non-selective agents, cardiovascular risk for COX-2-selective agents), reinforcing the broader principle that NSAIDs across all applications are not risk-free medications requiring thoughtful selection based on individual patient risk factors.",
     ],
   },
+  "syspharmantiinflamm-steroids": {
+    name: "Systemic Corticosteroids — Anti-Inflammatory Mechanism & Ocular Side Effects",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Systemic corticosteroids are the second major systemic anti-inflammatory drug class alongside this area's sibling NSAID objective — genuinely BROADER in mechanism than NSAIDs, and carrying several distinct, board-classic ocular side effects with chronic use already partly established elsewhere on this platform." },
+      { h: "Mechanism — upstream of NSAIDs in the arachidonic acid cascade", t: "Corticosteroids induce lipocortin (annexin-1), which inhibits PHOSPHOLIPASE A2 — the enzyme that liberates arachidonic acid from membrane phospholipids, the FIRST step in the arachidonic acid cascade, upstream of both the COX pathway (prostaglandins/thromboxane, already covered under this area's sibling NSAID objective) and the LIPOXYGENASE pathway (leukotrienes, already covered under this platform's Leukotriene Modifiers content). Because NSAIDs act only downstream at COX, corticosteroids block BOTH prostaglandin AND leukotriene production, explaining their broader anti-inflammatory efficacy compared to NSAIDs — though at the cost of substantially more systemic side effects with chronic use (already covered under HPA axis suppression content, this area's sibling Endocrine objective)." },
+      { h: "Ocular side effects of chronic systemic corticosteroid use", t: "Chronic systemic corticosteroid use causes POSTERIOR SUBCAPSULAR CATARACT (already covered under Secondary Cataracts content) via a dose- and duration-dependent mechanism distinct from age-related cataract; it can also raise intraocular pressure in 'steroid responders' (already covered under Steroid-Response Glaucoma content) via increased trabecular meshwork outflow resistance from glycosaminoglycan accumulation; and it is associated with central serous chorioretinopathy (CSCR) — a classic, board-tested association in which corticosteroid use (systemic, or even high-dose topical/inhaled/intra-articular) is a major identifiable risk factor for subretinal fluid accumulation at the macula from focal RPE/choroidal dysfunction, typically in young to middle-aged patients, presenting with acute painless central vision distortion/metamorphopsia." },
+    ],
+    memorizeIt: [
+      "Corticosteroids induce LIPOCORTIN, inhibiting PHOSPHOLIPASE A2 — blocks arachidonic acid release UPSTREAM of both COX (prostaglandins) and LIPOXYGENASE (leukotrienes) pathways — broader than NSAIDs (COX-only, already covered).",
+      "Chronic systemic corticosteroids: POSTERIOR SUBCAPSULAR CATARACT (already covered), STEROID-RESPONSE OCULAR HYPERTENSION/GLAUCOMA (already covered), and CENTRAL SEROUS CHORIORETINOPATHY (CSCR) — a classic triad of steroid-associated ocular findings.",
+      "CSCR: corticosteroid use (any route — systemic, topical, inhaled, intra-articular) is a major risk factor; presents with acute painless metamorphopsia/central vision distortion from macular subretinal fluid, typically in young-to-middle-aged patients.",
+    ],
+    applyIt: [
+      "This directly extends your existing Secondary Cataracts, Steroid-Response Glaucoma, and Leukotriene Modifiers content into one unified corticosteroid ocular-risk framework — a patient started on a prolonged systemic corticosteroid course (for any systemic indication) should be monitored for THREE distinct steroid-related ocular findings (cataract, IOP elevation, and CSCR), and a young patient presenting with new central metamorphopsia should always prompt a corticosteroid-use history (including easily-overlooked routes like inhaled, intranasal, or intra-articular injections, already relevant to this platform's Respiratory and Musculoskeletal content) given how frequently CSCR is missed as steroid-associated.",
+    ],
+  },
   "syspharmcns-antidep-antipsych": {
     name: "Antidepressants & Antipsychotics — Major Classes & Ocular Side Effects",
     priority: "MUST",
@@ -17219,15 +17275,17 @@ const STUDY_PAGES = {
     learnIt: [
       { h: "Overview", t: "Major antidepressant and antipsychotic drug classes carry genuine ocular side effects directly extending your existing Systemic Medications Affecting Contact Lens Tolerance content beyond the anticholinergic dry-eye mechanism already covered there." },
       { h: "Antidepressant classes and anticholinergic effects", t: "Tricyclic antidepressants (amitriptyline) have significant ANTICHOLINERGIC activity (already covered under Systemic Medications Affecting Contact Lens Tolerance content as a cause of reduced tear production) and can also precipitate angle closure in susceptible narrow-angle patients via their mydriatic anticholinergic effect (already covered under Mydriasis Contraindication content); SSRIs (fluoxetine) have a more favorable side-effect profile with substantially less anticholinergic activity, explaining their preference as first-line therapy over older tricyclics." },
-      { h: "Antipsychotics", t: "Antipsychotics work primarily through DOPAMINE receptor blockade (typical/first-generation agents) or combined dopamine-serotonin blockade (atypical/second-generation agents) — certain agents carry a risk of pigmentary retinopathy or corneal/lens deposits with long-term use, a genuinely important ocular monitoring consideration for patients on chronic antipsychotic therapy." },
+      { h: "Antipsychotics", t: "Antipsychotics work primarily through DOPAMINE receptor blockade (typical/first-generation agents) or combined dopamine-serotonin blockade (atypical/second-generation agents) — two specific typical (first-generation) phenothiazine agents carry classic, board-tested, DISTINCT ocular toxicities: THIORIDAZINE causes a dose-related pigmentary RETINOPATHY (fine granular pigment clumping progressing to a coarse 'salt-and-pepper' or bone-spicule-like pattern, with associated visual field and dark-adaptation loss) even at therapeutic doses with prolonged use, while CHLORPROMAZINE causes stellate, fine brownish deposits in the corneal endothelium/Descemet's membrane and in the anterior lens capsule (typically not vision-limiting), a genuinely distinct anatomic site and mechanism from thioridazine's retinal toxicity despite both being phenothiazines." },
     ],
     memorizeIt: [
       "Tricyclic antidepressants: significant ANTICHOLINERGIC activity — reduced tear production (already covered) AND can precipitate angle closure in narrow-angle patients (already covered).",
       "SSRIs: substantially less anticholinergic activity than tricyclics — explains preference as first-line therapy.",
-      "Antipsychotics: dopamine (± serotonin) receptor blockade — some agents carry pigmentary retinopathy/corneal-lens deposit risk with long-term use.",
+      "THIORIDAZINE (phenothiazine antipsychotic): dose-related PIGMENTARY RETINOPATHY, even at therapeutic doses — visual field/dark-adaptation loss.",
+      "CHLORPROMAZINE (phenothiazine antipsychotic): corneal (endothelium/Descemet's) and anterior lens capsule deposits — distinct anatomic site from thioridazine, generally not vision-limiting.",
     ],
     applyIt: [
       "This directly extends your existing Systemic Medications Affecting Contact Lens Tolerance and Mydriasis Contraindication Risk content — a patient on a tricyclic antidepressant with new contact lens intolerance AND a narrow angle on prior gonioscopy (already covered) has TWO distinct anticholinergic-mediated risks from the same medication class, reinforcing why a thorough medication history matters for both dry eye and angle-closure risk assessment.",
+      "A patient on long-term thioridazine presenting with new nyctalopia (night blindness) and constricted visual fields should raise immediate concern for thioridazine pigmentary retinopathy — a dose- and duration-dependent, potentially irreversible toxicity requiring coordination with the prescribing psychiatrist about dose reduction or an alternative agent, distinct from the far more benign chlorpromazine corneal/lens deposits (which rarely require any change in therapy).",
     ],
   },
   "syspharmcns-anticonvulsant": {
@@ -17247,6 +17305,46 @@ const STUDY_PAGES = {
     ],
     applyIt: [
       "This gives you a genuine therapeutic application of your existing Action Potential Generation & Propagation content — recognizing that sodium-channel-blocking anticonvulsants share their core molecular target with local anesthetics (this area's sibling objective) explains why both drug classes can cause overlapping side effects (e.g., CNS depression, cardiac conduction effects) at toxic doses, since both act on the same fundamental channel class throughout the body, not just in their intended target tissue.",
+    ],
+  },
+  "syspharmcns-analgesic-sedative": {
+    name: "Opioid/Non-Opioid Analgesics & Sedative-Hypnotics/Anxiolytics — Ocular Effects",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Opioid and non-opioid analgesics, sedative-hypnotics, and anxiolytics are among the most widely prescribed (and most widely misused) CNS drug classes, each carrying a distinctive, board-relevant pupillary or ocular signature genuinely useful for bedside diagnosis." },
+      { h: "Opioid analgesics — the classic miotic drug class", t: "Opioids (morphine, oxycodone, fentanyl, heroin) act on MU-opioid receptors, both centrally (analgesia, respiratory depression, euphoria) and via a distinct central effect on the Edinger-Westphal nucleus (already covered under Pupillary Pathways content) that produces pronounced, often striking MIOSIS — 'pinpoint pupils' are a classic toxidrome finding in opioid overdose, together with respiratory depression and decreased consciousness, and this miosis is characteristically NOT reversed by pain or arousal the way physiologic miosis would be. Non-opioid analgesics (acetaminophen — centrally-acting, hepatotoxic in overdose; NSAIDs, this area's sibling Anti-Inflammatory Agents objective) lack this pupillary effect entirely." },
+      { h: "Sedative-hypnotics and anxiolytics — GABA-ergic, minimal pupillary effect but diplopia/nystagmus risk", t: "Benzodiazepines (diazepam, lorazepam, alprazolam) and barbiturates enhance GABA-A receptor chloride conductance (already covered under this area's sibling Anticonvulsants objective, since the same GABA-ergic mechanism underlies both anxiolysis/sedation and seizure control at different doses) — unlike opioids, they do NOT reliably cause miosis, but CNS-depressant toxicity from either class can produce nystagmus, diplopia, and ataxia, genuinely relevant to a patient presenting with new diplopia who is found to be on a benzodiazepine or has ingested one in overdose. Buspirone, a non-benzodiazepine anxiolytic acting on serotonin (5-HT1A) receptors rather than GABA, lacks this sedative/ocular motor toxicity profile and lacks abuse potential, an important distinguishing feature from benzodiazepines." },
+    ],
+    memorizeIt: [
+      "Opioids (morphine, oxycodone, fentanyl, heroin): MU-receptor agonists — classic finding is pronounced MIOSIS ('pinpoint pupils'), part of the overdose toxidrome with respiratory depression and decreased consciousness.",
+      "Non-opioid analgesics (acetaminophen, NSAIDs — this area's sibling objective): NO pupillary effect — a key distinguishing feature from opioids at the bedside.",
+      "Benzodiazepines/barbiturates: enhance GABA-A chloride conductance (same mechanism as anticonvulsant use, already covered) — do NOT reliably cause miosis, but overdose/toxicity can cause nystagmus, diplopia, ataxia.",
+      "Buspirone: non-benzodiazepine anxiolytic, acts on 5-HT1A receptors (not GABA) — lacks sedation, ocular motor toxicity, and abuse potential seen with benzodiazepines.",
+    ],
+    applyIt: [
+      "This gives you the pupillary-exam-based toxidrome recognition directly complementary to your existing Pupillary Pathways and RAPD-assessment content — a comatose or obtunded patient with bilateral pinpoint miotic pupils and depressed respiration should immediately raise suspicion for opioid overdose (treatable with naloxone), a genuinely distinct pupillary presentation from the FIXED, DILATED pupils of severe anoxic brain injury or the pupillary sparing typically seen in benzodiazepine/barbiturate overdose, making pupil size and reactivity a rapid triage tool in altered-mental-status presentations.",
+    ],
+  },
+  "syspharmcns-antiparkinson-abuse": {
+    name: "Antiparkinsonians, Skeletal Muscle Relaxants & Drugs of Abuse — Pupil/Ocular Findings",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Antiparkinsonian drugs, skeletal muscle relaxants, and drugs of abuse round out the major CNS drug classes not yet covered under this area's other CNS objectives, each with genuine, testable ocular or pupillary associations." },
+      { h: "Antiparkinsonian drugs", t: "Parkinson disease (already covered under Nervous System/Neuromuscular Diseases content as a neurodegenerative disease) reflects DOPAMINE deficiency in the nigrostriatal pathway — levodopa/carbidopa (carbidopa blocks peripheral levodopa-to-dopamine conversion, allowing more levodopa to reach the CNS while reducing peripheral side effects) is first-line replacement therapy; dopamine agonists (pramipexole, ropinirole) and MAO-B inhibitors (selegiline) are additional strategies. Anticholinergic antiparkinsonian agents (benztropine, trihexyphenidyl), used mainly for tremor control, carry the SAME anticholinergic mydriasis/angle-closure-precipitation and dry-eye risk already covered under this area's sibling Antidepressants objective for tricyclics — a genuinely important shared risk across anticholinergic drug classes regardless of their differing primary indications." },
+      { h: "Skeletal muscle relaxants and drugs of abuse — pupil findings", t: "Skeletal muscle relaxants (cyclobenzaprine, baclofen) are centrally-acting CNS depressants for musculoskeletal spasm, generally without a distinctive pupillary signature. Drugs of abuse show characteristically OPPOSITE pupillary effects useful for bedside differentiation: sympathomimetic stimulants (cocaine, amphetamines) cause MYDRIASIS (sympathetic activation) often with tachycardia and hypertension, while opioids (this area's sibling Analgesics objective) cause MIOSIS — hallucinogens (LSD) typically cause mydriasis via serotonergic/sympathomimetic activity, and chronic alcohol use is associated with nystagmus (both acute intoxication-related gaze-evoked nystagmus and, with thiamine deficiency, Wernicke encephalopathy's classic triad of nystagmus/ophthalmoplegia, confusion, and ataxia)." },
+    ],
+    memorizeIt: [
+      "Levodopa/carbidopa: carbidopa blocks PERIPHERAL levodopa-to-dopamine conversion, sparing more levodopa for CNS delivery and reducing peripheral side effects.",
+      "Anticholinergic antiparkinsonians (benztropine, trihexyphenidyl): same mydriasis/angle-closure/dry-eye risk as tricyclic antidepressants (already covered) — shared anticholinergic class risk.",
+      "Drugs of abuse — opposite pupil findings: STIMULANTS (cocaine, amphetamines) and hallucinogens (LSD) → MYDRIASIS. OPIOIDS (this area's sibling objective) → MIOSIS.",
+      "Wernicke encephalopathy (thiamine deficiency, chronic alcoholism): classic triad of NYSTAGMUS/OPHTHALMOPLEGIA, confusion, and ataxia.",
+    ],
+    applyIt: [
+      "This directly extends your existing Mydriasis Contraindication Risk and Nervous System/Neuromuscular Diseases (Parkinson disease) content — recognizing that anticholinergic antiparkinsonian agents (benztropine, trihexyphenidyl) carry the identical angle-closure precipitation risk already established for tricyclic antidepressants means a narrow-angle patient's FULL medication list (not just psychiatric medications) must be reviewed for anticholinergic burden, while a patient presenting with acute nystagmus and confusion with a history of alcohol use disorder should prompt urgent consideration of Wernicke encephalopathy and immediate thiamine repletion before glucose administration.",
     ],
   },
   "syspharmanesthetic-local": {
@@ -17325,6 +17423,26 @@ const STUDY_PAGES = {
       "This gives you a genuinely important clinical pearl directly extending your existing Thyroid Eye Disease content — a patient whose hyperthyroidism is successfully treated with methimazole may still experience ongoing or even worsening orbital inflammation, since normalizing thyroid hormone levels does not directly resolve the autoimmune orbital process, reinforcing that thyroid eye disease's ocular management (already covered) is often managed somewhat independently from systemic thyroid hormone control.",
     ],
   },
+  "syspharmendo-hormonal": {
+    name: "Adenohypophyseal Hormones & Sex Steroid Pharmacology — Ocular Relevance",
+    priority: "SHOULD",
+    verification: "VERIFIED",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Adenohypophyseal (anterior pituitary) hormone pharmacology and sex steroid (estrogen/progestin/androgen) pharmacology round out the major endocrine drug classes not yet covered under this area's other Endocrine objectives, directly extending the pituitary tumor pathophysiology already covered under Hyperpituitarism/Hypopituitarism content into specific pharmacologic management." },
+      { h: "Adenohypophyseal hormone-directed therapy", t: "For prolactinoma (already covered as the most common functioning pituitary adenoma), dopamine agonists (bromocriptine, cabergoline) are first-line therapy — since dopamine physiologically INHIBITS prolactin secretion, activating dopamine receptors directly suppresses tumor prolactin output and can shrink the tumor itself, often avoiding the need for surgery. For acromegaly (already covered as GH excess in adults), somatostatin analogs (octreotide) suppress GH secretion, since somatostatin is the physiologic inhibitor of GH release; growth hormone REPLACEMENT (recombinant GH) is used for the opposite scenario of GH deficiency (already relevant to Hypopituitarism content)." },
+      { h: "Sex steroid pharmacology and tamoxifen retinopathy", t: "Estrogen-containing therapy (oral contraceptives, hormone replacement therapy) carries an increased venous thromboembolic risk from estrogen's pro-coagulant effects on clotting factor synthesis, relevant to this platform's existing Central Retinal Vein Occlusion and Amaurosis Fugax content as a modifiable risk factor to screen for. TAMOXIFEN, a selective estrogen receptor modulator (SERM) used for estrogen-receptor-positive breast cancer (already covered under Reproductive System content), carries a classic, board-tested ocular toxicity distinct from any other sex-steroid-related drug: TAMOXIFEN RETINOPATHY — refractile, crystalline deposits in the inner retina, characteristically in a perifoveal distribution, with high cumulative doses; this is a genuinely distinct entity from hydroxychloroquine retinopathy's bull's-eye maculopathy (already covered under Immunologic System content) despite both being crystalline/deposit-pattern drug retinopathies requiring baseline and periodic ophthalmic screening." },
+    ],
+    memorizeIt: [
+      "Prolactinoma (already covered): dopamine agonists (bromocriptine, cabergoline) — dopamine physiologically INHIBITS prolactin, so agonists suppress tumor output and can shrink the tumor.",
+      "Acromegaly (already covered): somatostatin analogs (octreotide) suppress GH secretion.",
+      "Estrogen therapy (OCPs, HRT): increased venous thromboembolic risk — relevant risk factor for CRVO/amaurosis fugax (already covered).",
+      "TAMOXIFEN (SERM, breast cancer treatment, already covered): classic crystalline/refractile PERIFOVEAL retinal deposits (tamoxifen retinopathy) — a genuinely DISTINCT crystalline retinopathy from hydroxychloroquine's bull's-eye maculopathy (already covered).",
+    ],
+    applyIt: [
+      "This directly extends your existing Hyperpituitarism, Reproductive System (Breast Cancer), and Immunologic System (SLE/hydroxychloroquine) content — recognizing that BOTH tamoxifen and hydroxychloroquine cause crystalline/deposit-type retinal drug toxicity, but with genuinely distinct clinical patterns (tamoxifen's perifoveal refractile deposits vs. hydroxychloroquine's bull's-eye maculopathy with parafoveal RPE change on multimodal imaging, already covered), reinforces why a patient's specific medication (not just 'on a retinal-toxic drug') must be identified to select the correct screening protocol and interpret retinal findings appropriately.",
+    ],
+  },
   "syspharmcardio-antihypertensive": {
     name: "Antihypertensive Drug Classes — ACE Inhibitors, ARBs, CCBs, Diuretics",
     priority: "MUST",
@@ -17364,6 +17482,28 @@ const STUDY_PAGES = {
       "This gives you the pharmacologic prevention strategy directly extending your existing Amaurosis Fugax and Central Retinal Artery Occlusion content — a patient with atrial fibrillation (a source of cardioembolic material, already relevant to existing embolic stroke/CRAO content) on appropriate anticoagulation has reduced risk of the exact embolic event that could otherwise cause amaurosis fugax or CRAO, directly connecting systemic cardiovascular pharmacology to ophthalmic disease prevention.",
     ],
   },
+  "syspharmcardio-chf-lipid": {
+    name: "CHF Agents, Antianginals & Antihyperlipidemics — Mechanism Overview",
+    priority: "MUST",
+    verification: "VERIFIED",
+    sources: ["Standard systemic pharmacology references"],
+    learnIt: [
+      { h: "Overview", t: "Agents for congestive heart failure (CHF), antianginal agents, and antihyperlipidemic drugs round out the major cardiovascular drug classes not yet covered under this area's other Cardiovascular objectives — two of these classes (digoxin and niacin) carry genuinely distinct, classic, board-tested ocular toxicity findings." },
+      { h: "CHF inotropic agents — digoxin and its classic ocular toxicity", t: "Digoxin is a positive inotrope that INHIBITS the Na+/K+-ATPase pump on cardiac myocytes — this raises intracellular sodium, which in turn reduces the activity of the Na+/Ca2+ exchanger, causing intracellular calcium to accumulate and increasing myocardial contractility; digoxin also increases vagal tone, making it useful for ventricular rate control in atrial fibrillation (already relevant to this area's sibling Antiarrhythmics/Anticoagulants objective) in addition to its inotropic effect. Digoxin has a NARROW THERAPEUTIC INDEX (already covered under this area's sibling General Principles objective, alongside warfarin), and digoxin TOXICITY produces a classic, board-tested visual disturbance: XANTHOPSIA (yellow-tinged or yellow-green vision) and halos around lights, thought to result from digoxin's inhibitory effect on retinal Na+/K+-ATPase pumps — a genuinely distinctive, often-tested finding that should prompt immediate suspicion for digoxin toxicity (together with GI symptoms, arrhythmia, and confusion) in a patient reporting new colored-vision disturbance while on the drug." },
+      { h: "Vasodilators for CHF and antianginal agents", t: "Direct vasodilators (hydralazine — arterial; nitrates — venous) reduce cardiac afterload and preload respectively, used in CHF when ACE inhibitors/ARBs (this area's sibling Antihypertensive objective) are contraindicated or insufficient. For angina specifically, nitrates (nitroglycerin) reduce myocardial oxygen DEMAND primarily by venodilation (reducing preload/ventricular wall tension) rather than by significantly increasing coronary blood supply in most cases, complementing beta-blockers and calcium channel blockers (already covered) which reduce oxygen demand by lowering heart rate and contractility." },
+      { h: "Antihyperlipidemic agents", t: "Statins (HMG-CoA reductase inhibitors — atorvastatin, simvastatin) are first-line for hyperlipidemia, blocking the rate-limiting enzyme in hepatic cholesterol synthesis, which upregulates LDL receptor expression and lowers circulating LDL — directly relevant to this platform's existing Atherosclerosis & Coronary Artery Disease content given LDL's central role in atherosclerotic plaque formation. Niacin (nicotinic acid), an older, less commonly used antihyperlipidemic agent (raises HDL, lowers triglycerides), carries its own distinct, classic ocular finding: NIACIN MACULOPATHY — a reversible cystoid-appearing intraretinal fluid pattern at the macula visible on OCT, WITHOUT the vascular leakage seen on fluorescein angiography that would be expected in true inflammatory cystoid macular edema (already covered), a genuinely important distinguishing feature that resolves with drug discontinuation." },
+    ],
+    memorizeIt: [
+      "Digoxin: inhibits Na+/K+-ATPase → increased intracellular Ca2+ (via reduced Na+/Ca2+ exchange) → increased contractility; also increases vagal tone (AFib rate control).",
+      "DIGOXIN TOXICITY: classic ocular finding is XANTHOPSIA (yellow-tinged vision) and halos — narrow therapeutic index (already covered), test for this in any patient on digoxin reporting new color vision change.",
+      "Nitrates (nitroglycerin): reduce myocardial O2 demand primarily via VENODILATION (reduced preload), not primarily by increasing coronary supply.",
+      "Statins: inhibit HMG-CoA reductase (rate-limiting cholesterol synthesis step) → upregulate LDL receptors → lower LDL — first-line antihyperlipidemic, relevant to Atherosclerosis content (already covered).",
+      "Niacin: classic NIACIN MACULOPATHY — reversible cystoid-appearing macular fluid on OCT WITHOUT fluorescein leakage (unlike true CME, already covered) — resolves with discontinuation.",
+    ],
+    applyIt: [
+      "This gives you two genuinely distinctive medication-history-driven ocular findings directly relevant to your existing Cystoid Macular Edema and general medication-side-effect content — a patient on digoxin reporting new yellow-tinged vision or halos should prompt immediate digoxin level testing and toxicity workup (a genuinely dangerous, potentially arrhythmogenic condition, not just a visual nuisance), while a patient on niacin found to have cystoid-appearing macular fluid on OCT that does NOT leak on fluorescein angiography should raise suspicion for niacin maculopathy rather than true inflammatory CME (already covered), since the two entities look similar structurally on OCT but have completely different underlying mechanisms, workups, and management (drug discontinuation vs. anti-inflammatory/anti-VEGF therapy).",
+    ],
+  },
   "syspharmrenal-diuretics": {
     name: "Diuretic Classes by Renal Tubular Site of Action",
     priority: "MUST",
@@ -17372,13 +17512,15 @@ const STUDY_PAGES = {
     learnIt: [
       { h: "Overview", t: "Diuretic classes are organized by their specific renal tubular site of action, already substantially covered under Renal Tubular Function & Reabsorption content — consolidated here as this platform's dedicated systemic Renal Drugs topic." },
       { h: "Loop diuretics — the most potent class", t: "Loop diuretics (furosemide) act at the thick ascending loop of Henle (already covered under Renal Tubular Function content), blocking the Na-K-2Cl cotransporter — the MOST POTENT diuretic class, given this transporter's role in the kidney's countercurrent concentrating mechanism, making loop diuretics first-line for acute volume overload states like decompensated CHF (already covered)." },
-      { h: "Thiazide and potassium-sparing diuretics", t: "Thiazide diuretics act at the distal convoluted tubule (already covered), moderately potent, commonly used for chronic hypertension management (this area's sibling Antihypertensive objective); potassium-sparing diuretics (spironolactone, an aldosterone antagonist) act at the collecting duct (already covered), providing mild diuresis while avoiding the potassium wasting seen with loop/thiazide diuretics — and acetazolamide (a carbonic anhydrase inhibitor, already covered extensively as both a systemic and topical glaucoma medication) acts at the proximal tubule, its diuretic mechanism being the SAME carbonic anhydrase inhibition already covered as the aqueous-production-reducing mechanism in glaucoma." },
+      { h: "Thiazide and potassium-sparing diuretics", t: "Thiazide diuretics act at the distal convoluted tubule (already covered), moderately potent, commonly used for chronic hypertension management (this area's sibling Antihypertensive objective); potassium-sparing diuretics (spironolactone, an aldosterone antagonist) act at the collecting duct (already covered), providing mild diuresis while avoiding the potassium wasting seen with loop/thiazide diuretics — and acetazolamide (a carbonic anhydrase inhibitor, already covered extensively as both a systemic and topical glaucoma medication) acts at the proximal tubule, its diuretic mechanism being the SAME carbonic anhydrase inhibition already covered as the aqueous-production-reducing mechanism in glaucoma. Note that thiazides themselves REDUCE urate excretion (raising serum uric acid and potentially precipitating gout), the opposite direction from the uricosuric agents below." },
+      { h: "Uricosuric agents", t: "Uricosuric agents (probenecid) are a mechanistically distinct renal drug class from the diuretics above — rather than promoting water/electrolyte excretion, they inhibit URATE reabsorption at the proximal tubule, increasing uric acid excretion in urine to lower serum urate levels for chronic gout management (a crystal-induced inflammatory arthropathy distinct from the autoimmune/degenerative arthritides already covered under Musculoskeletal System content); they are ineffective (and relatively contraindicated) in patients with significant renal impairment, since they require adequate renal function to promote urate excretion, and should not be started during an acute gout flare since the resulting shift in urate levels can transiently worsen an acute attack." },
     ],
     memorizeIt: [
       "Loop diuretics (furosemide): thick ascending loop of Henle, blocks Na-K-2Cl transporter — MOST POTENT class, first-line for acute CHF volume overload (already covered).",
-      "Thiazides: distal convoluted tubule — moderate potency, chronic hypertension management.",
+      "Thiazides: distal convoluted tubule — moderate potency, chronic hypertension management. Also REDUCE urate excretion (can precipitate gout) — opposite effect from uricosuric agents.",
       "Potassium-sparing (spironolactone): collecting duct, aldosterone antagonist — avoids potassium wasting.",
       "Acetazolamide (already covered as a glaucoma medication): proximal tubule, carbonic anhydrase inhibition — SAME mechanism whether used systemically as a diuretic or for glaucoma.",
+      "Uricosuric agents (probenecid): inhibit proximal tubular URATE reabsorption, increasing urate excretion — chronic gout management, NOT for acute flares, requires adequate renal function.",
     ],
     applyIt: [
       "This consolidates your existing Renal Tubular Function & Reabsorption and Antiglaucoma Agents content into one unified diuretic framework — recognizing that acetazolamide's diuretic mechanism (proximal tubule carbonic anhydrase inhibition) is identical whether prescribed systemically for edema or as a glaucoma medication (already covered) explains why oral acetazolamide for glaucoma carries genuine systemic diuretic-related side effects (electrolyte disturbance, already covered under CAI content) beyond its ocular IOP-lowering effect.",
@@ -19537,6 +19679,25 @@ const FLASHCARDS = [
   { id: "fc-1625", objectiveId: "resp-lungcancer", front: "How does Lambert-Eaton myasthenic syndrome's weakness pattern differ from myasthenia gravis?", back: "LEMS weakness IMPROVES with repeated muscle use; MG weakness WORSENS (fatigues) with repeated use — the opposite pattern." },
   { id: "fc-1626", objectiveId: "resp-anaphylaxis", front: "What is the first-line, immediate treatment for anaphylaxis, and what should never delay it?", back: "IM epinephrine (anterolateral thigh) — antihistamines and corticosteroids are adjunctive only and should not delay epinephrine administration." },
   { id: "fc-1627", objectiveId: "resp-anaphylaxis", front: "Why must a patient be observed after treatment for anaphylaxis?", back: "Risk of a biphasic reaction — recurrence of symptoms hours after apparent resolution." },
+  // Systemic Pharmacology — new objectives (analgesics/sedatives, antiparkinsonians/abuse, antimicrobial/antiviral, systemic steroids, CHF/lipid, endocrine hormonal)
+  { id: "fc-1653", objectiveId: "syspharmcns-analgesic-sedative", front: "What pupillary finding is classic for opioid overdose, and what other toxidrome features accompany it?", back: "Pronounced miosis ('pinpoint pupils'), together with respiratory depression and decreased consciousness." },
+  { id: "fc-1654", objectiveId: "syspharmcns-analgesic-sedative", front: "Do benzodiazepines cause miosis like opioids do?", back: "No — benzodiazepines/barbiturates do not reliably cause miosis; overdose/toxicity instead produces nystagmus, diplopia, and ataxia." },
+  { id: "fc-1655", objectiveId: "syspharmcns-analgesic-sedative", front: "How does buspirone differ mechanistically from benzodiazepines as an anxiolytic?", back: "Buspirone acts on serotonin (5-HT1A) receptors, not GABA — it lacks the sedation, ocular motor toxicity, and abuse potential of benzodiazepines." },
+  { id: "fc-1656", objectiveId: "syspharmcns-antiparkinson-abuse", front: "Why is carbidopa combined with levodopa in Parkinson disease treatment?", back: "Carbidopa blocks peripheral conversion of levodopa to dopamine, sparing more levodopa to cross into the CNS and reducing peripheral side effects." },
+  { id: "fc-1657", objectiveId: "syspharmcns-antiparkinson-abuse", front: "What ocular risk do anticholinergic antiparkinsonian drugs (benztropine, trihexyphenidyl) share with tricyclic antidepressants?", back: "Mydriasis that can precipitate angle closure in narrow-angle patients, plus reduced tear production/dry eye." },
+  { id: "fc-1658", objectiveId: "syspharmcns-antiparkinson-abuse", front: "Contrast the pupil findings of stimulant/hallucinogen use versus opioid use.", back: "Stimulants (cocaine, amphetamines) and hallucinogens (LSD): mydriasis. Opioids: miosis — opposite pupillary effects." },
+  { id: "fc-1659", objectiveId: "syspharmcns-antiparkinson-abuse", front: "What is the classic triad of Wernicke encephalopathy?", back: "Nystagmus/ophthalmoplegia, confusion, and ataxia — from thiamine deficiency, classically in chronic alcohol use disorder." },
+  { id: "fc-1660", objectiveId: "syspharmchemo-antimicrobial-antiviral", front: "Why do beta-lactam antibiotics have a favorable human safety profile?", back: "They inhibit bacterial cell wall synthesis (penicillin-binding proteins/transpeptidases) — a target with no equivalent in human cells, which lack a cell wall." },
+  { id: "fc-1661", objectiveId: "syspharmchemo-antimicrobial-antiviral", front: "Contrast the mechanism of azole vs. polyene antifungals.", back: "Azoles inhibit ergosterol synthesis; polyenes (amphotericin B, natamycin) directly bind existing ergosterol, forming membrane pores." },
+  { id: "fc-1662", objectiveId: "syspharmchemo-antimicrobial-antiviral", front: "Why is acyclovir selectively toxic to herpesvirus-infected cells but not normal cells?", back: "It requires activation by VIRAL (not human) thymidine kinase before it can be incorporated into viral DNA by viral DNA polymerase, terminating chain elongation." },
+  { id: "fc-1663", objectiveId: "syspharmantiinflamm-steroids", front: "How does the anti-inflammatory mechanism of corticosteroids differ from that of NSAIDs?", back: "Corticosteroids inhibit phospholipase A2 (via lipocortin), blocking arachidonic acid release UPSTREAM of both the COX and lipoxygenase pathways; NSAIDs only block COX, downstream." },
+  { id: "fc-1664", objectiveId: "syspharmantiinflamm-steroids", front: "Name the three classic ocular findings associated with chronic systemic corticosteroid use.", back: "Posterior subcapsular cataract, steroid-response ocular hypertension/glaucoma, and central serous chorioretinopathy (CSCR)." },
+  { id: "fc-1665", objectiveId: "syspharmantiinflamm-steroids", front: "What is the classic presentation of central serous chorioretinopathy, and what is a major risk factor?", back: "Acute painless central metamorphopsia/vision distortion from macular subretinal fluid; corticosteroid use (any route) is a major risk factor." },
+  { id: "fc-1666", objectiveId: "syspharmcardio-chf-lipid", front: "What is the mechanism of digoxin's positive inotropic effect?", back: "Inhibits the Na+/K+-ATPase pump, raising intracellular Na+, which reduces Na+/Ca2+ exchanger activity and increases intracellular Ca2+, boosting contractility." },
+  { id: "fc-1667", objectiveId: "syspharmcardio-chf-lipid", front: "What is the classic visual disturbance of digoxin toxicity?", back: "Xanthopsia (yellow-tinged vision) and halos around lights." },
+  { id: "fc-1668", objectiveId: "syspharmcardio-chf-lipid", front: "How does niacin maculopathy appear on OCT versus fluorescein angiography, and how does that distinguish it from true CME?", back: "Cystoid-appearing intraretinal fluid on OCT WITHOUT vascular leakage on fluorescein angiography — true inflammatory CME shows FA leakage." },
+  { id: "fc-1669", objectiveId: "syspharmendo-hormonal", front: "Why are dopamine agonists (bromocriptine, cabergoline) first-line therapy for prolactinoma?", back: "Dopamine physiologically inhibits prolactin secretion, so activating dopamine receptors suppresses tumor prolactin output and can shrink the tumor." },
+  { id: "fc-1670", objectiveId: "syspharmendo-hormonal", front: "What is the classic ocular toxicity of tamoxifen, and how does it differ from hydroxychloroquine retinopathy?", back: "Tamoxifen retinopathy: refractile, crystalline perifoveal deposits — a distinct pattern from hydroxychloroquine's bull's-eye maculopathy, despite both being crystalline/deposit-type drug retinopathies." },
 ];
 
 const QUESTIONS = [
@@ -25267,6 +25428,57 @@ const QUESTIONS = [
       b: "Correct — Sheard's criterion requires fusional vergence reserve ≥ 2 × phoria. Here, 2 × 6 PD = 12 PD would be required, but only 8 PD of positive fusional vergence is available, so the criterion is NOT met — this patient's fusional reserve is inadequate relative to their phoria, consistent with their symptoms and supporting a role for vision therapy and/or prism.",
       c: "Incorrect — this describes a much weaker (and clinically insufficient) standard than Sheard's actual 2:1 criterion.",
       d: "Incorrect — Sheard's criterion is calculated directly from the phoria and fusional vergence reserve; the associated phoria (fixation disparity measurement) is a related but separate clinical tool, not required to apply Sheard's criterion itself.",
+    },
+  },
+  {
+    id: "q-338", objectiveId: "syspharmcardio-chf-lipid", type: "Clinical application", difficulty: "Medium",
+    stem: "A patient on chronic digoxin therapy for atrial fibrillation reports new yellow-tinged vision and halos around lights. What is the most appropriate next step?",
+    choices: [
+      { id: "a", text: "Reassure the patient this is a benign, expected finding requiring no action" },
+      { id: "b", text: "Obtain a digoxin level and evaluate for digoxin toxicity, given that xanthopsia and halos are a classic sign" },
+      { id: "c", text: "Refer for cataract surgery, since this describes typical cataract-related glare" },
+      { id: "d", text: "Discontinue all cardiac medications immediately without further workup" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — xanthopsia and halos in a patient on digoxin are a classic, board-tested sign of digoxin toxicity, a potentially dangerous condition (risk of arrhythmia) that should never be dismissed as benign.",
+      b: "Correct — xanthopsia (yellow-tinged vision) and halos are a classic visual disturbance of digoxin toxicity, thought to relate to digoxin's inhibitory effect on retinal Na+/K+-ATPase; given digoxin's narrow therapeutic index and the arrhythmogenic risk of toxicity, a digoxin level and toxicity workup are indicated.",
+      c: "Incorrect — while cataract can cause glare/halos, the specific combination of yellow-tinged color vision change in a patient on digoxin is a recognized medication toxicity sign that must be worked up first, not simply attributed to lens changes.",
+      d: "Incorrect — abrupt discontinuation of all cardiac medications without evaluation is not an appropriate or safe response; the specific offending drug (digoxin) should be identified via level testing before any medication changes are made.",
+    },
+  },
+  {
+    id: "q-339", objectiveId: "syspharmendo-hormonal", type: "Clinical differentiation", difficulty: "Medium",
+    stem: "A patient on long-term tamoxifen for breast cancer is found to have refractile, crystalline deposits in a perifoveal distribution on retinal exam. How does this finding differ from hydroxychloroquine retinopathy?",
+    choices: [
+      { id: "a", text: "They are identical findings, since both drugs cause the same bull's-eye maculopathy" },
+      { id: "b", text: "Tamoxifen causes distinctive perifoveal refractile crystalline deposits, a genuinely different pattern from hydroxychloroquine's bull's-eye maculopathy (parafoveal RPE change), despite both being crystalline/deposit-type drug retinopathies" },
+      { id: "c", text: "Tamoxifen never causes any retinal toxicity" },
+      { id: "d", text: "Hydroxychloroquine causes crystalline deposits while tamoxifen causes bull's-eye maculopathy" },
+    ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — while both are drug-induced retinopathies with a deposit/pigmentary component, tamoxifen retinopathy's refractile perifoveal crystals and hydroxychloroquine's bull's-eye maculopathy are distinct clinical and imaging patterns, not the same finding.",
+      b: "Correct — tamoxifen retinopathy characteristically produces refractile, crystalline deposits in a perifoveal distribution, a genuinely distinct pattern from hydroxychloroquine's classic bull's-eye maculopathy (parafoveal RPE atrophy/pigmentary change) — recognizing the specific medication is essential to correctly interpret the retinal finding.",
+      c: "Incorrect — tamoxifen retinopathy is a well-established, board-tested toxicity of long-term/high cumulative-dose tamoxifen use.",
+      d: "Incorrect — this reverses the associations; tamoxifen causes the crystalline perifoveal deposit pattern, while hydroxychloroquine causes bull's-eye maculopathy.",
+    },
+  },
+  {
+    id: "q-340", objectiveId: "syspharmcns-antidep-antipsych", type: "Clinical differentiation", difficulty: "Medium",
+    stem: "A psychiatric patient on long-term thioridazine reports new night blindness and constricted peripheral vision, while a separate patient on chlorpromazine is noted to have asymptomatic brownish deposits in the corneal endothelium and anterior lens capsule on slit-lamp exam. How should these two findings be differentiated?",
+    choices: [
+      { id: "a", text: "Both findings represent the same drug toxicity and require identical management" },
+      { id: "b", text: "The thioridazine patient's findings suggest pigmentary retinopathy, a potentially vision-threatening toxicity requiring prompt communication with the prescriber; the chlorpromazine patient's corneal/lens deposits are typically benign and not vision-limiting" },
+      { id: "c", text: "Neither finding is related to the patients' medications" },
+      { id: "d", text: "The chlorpromazine patient's findings are more urgent, since corneal involvement always threatens vision more than retinal involvement" },
+      ],
+    correct: "b",
+    explanations: {
+      a: "Incorrect — although both are phenothiazine antipsychotics, thioridazine's toxicity targets the retina (dose-related pigmentary retinopathy with visual field/dark-adaptation loss) while chlorpromazine's targets the cornea/lens (typically benign deposits) — genuinely distinct anatomic sites, mechanisms, and clinical urgency.",
+      b: "Correct — thioridazine's pigmentary retinopathy is a dose-related, potentially irreversible toxicity causing visual field and dark-adaptation loss, warranting prompt communication with the prescribing psychiatrist about dose reduction or an alternative agent; chlorpromazine's corneal/lens deposits are a distinct, generally benign finding that rarely requires a change in therapy.",
+      c: "Incorrect — both findings are classic, well-established ocular toxicities of these specific phenothiazine antipsychotics.",
+      d: "Incorrect — this overgeneralizes; in this specific case, the retinal toxicity (thioridazine) is the more clinically significant, vision-threatening finding, while the corneal/lens deposits (chlorpromazine) are typically benign.",
     },
   },
 ];
