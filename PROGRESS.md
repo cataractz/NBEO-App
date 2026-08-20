@@ -5,6 +5,98 @@
 > no memory of this conversation and must be able to pick up from this file alone,
 > plus PROJECT_SPEC.md and the current nbeo-app.jsx.
 
+## READ THIS FIRST — session of 2026-08-20 (part 2): AI Tutor + Global Search
+
+The user asked for two deeply-integrated features — a context-aware **AI
+Tutor** and a universal **Global Search** — operating on the platform's real
+content graph (Blueprint → Topic → Objective → Study Page/Flashcards/
+Questions → Mistakes → Mastery), explicitly not as bolted-on generic
+widgets. Full spec captured in the approved plan at
+`/root/.claude/plans/ancient-orbiting-pike.md` if more detail is needed.
+
+**Architecture reality check that shaped scope** (see that plan file for the
+full reasoning): before this session, only Dashboard/Blueprint/Learn/
+Flashcards/Questions were real — Exams/Images/Study Planner/Mistakes/
+Analytics/AI Tutor were all `ready:false` `ComingSoon` placeholders in `NAV`.
+There was no router, no deep-linking, no "what is the student looking at"
+context signal, and — critically — `window.storage` (a Claude-artifact-only
+API) meant mistake/SRS persistence silently no-op'd on the real deployed
+GitHub Pages site. This is a static site with no backend/API keys, so a live
+LLM call and live web search aren't achievable; the AI Tutor's "model" layer
+is a real retrieval layer over real platform content feeding an honestly-
+labeled mock composer, not a live model.
+
+**Delivered, in 5 sequential validated phases** (each babel-syntax-checked,
+`integrity_check.py`/`audit_coverage.py`-verified unchanged, and Playwright-
+tested against a real dev server before committing — commits `f3ffa3d`
+(Phase 0), `1a105bc` (Phase 1), `e7e058f` (Phase 2), `f592158` (Phase 3),
+`75040f6` (Phase 4)):
+
+1. **Shared infra**: `src/lib/storage.js` fixes real persistence in
+   production (localStorage fallback). Deep-link/navigation plumbing
+   (`navTarget`/`navigateTo` in `NBEOStudyApp`, `initialObjId`/
+   `initialTopicId` on `LearnTab`, `initialCardId` on `FlashcardsTab`,
+   `initialQuestionId`/`filterObjectiveId` on `QuestionsTab`). `tutorContext`
+   state for "currently studying: X" awareness. `src/lib/contentIndex.js` +
+   `src/lib/synonyms.js` (hand-curated NBEO abbreviation map — RAPD, AION/
+   NAION/AAION, "cherry red spot", etc. — the documented seam for a future
+   real semantic/vector search). 8 top-level consts exported from
+   `nbeo-app.jsx` for the new modules to read (verified safe against both
+   Python validation scripts' regexes).
+2. **Global Search**: `src/lib/searchService.js` (ranking: exact title >
+   exact objective > synonym match > current-topic boost > high-yield boost)
+   + `src/components/GlobalSearch.jsx` (Cmd/Ctrl+K command palette, filter
+   chips, grouped actionable results, recent searches, "Ask AI Tutor about
+   '...'" footer). New persistent search trigger added to the main content
+   area of every tab (no desktop top nav existed before — this was the
+   minimal-footprint way to add it).
+3. **Real Mistakes + Analytics tabs**: `QuestionsTab` now logs every
+   attempt (not just misses) to a new `attempt-log` key. `src/lib/
+   analytics.js` computes real mastery/accuracy/weak-objectives/flashcard-
+   box-mix/mistake-trend. Both tabs flipped `ready:true`.
+4. **AI Tutor service layer**: `src/lib/tutorService.js` (one function per
+   mode: explainConcept/teach/startQuiz+evaluateQuizAnswer/explainQuestion/
+   reviewMistakes/compareConditions/buildStudySession) + `src/lib/
+   mockModel.js` (honest template composition over real retrieved content —
+   never fabricates a novel medical claim; `callLanguageModel()` is the
+   documented seam for a future real backend) + `src/lib/webSearchTool.js`
+   (clearly-labeled non-live stub) + `src/lib/conversationStore.js`.
+5. **AI Tutor UI**: `src/components/AITutorPage.jsx` — landing state,
+   context indicator, 📚/🌐/🤖 knowledge-mode selector, and full mode-specific
+   structured views (Teach Me step cards with explanation-level control,
+   real one-at-a-time Quiz Me, Compare's table, Build Session's linked
+   checklist, Review Mistakes' data-grounded narrative). "Ask AI Tutor"
+   button added to `QuestionsTab`'s explanation view. `tutor` flipped
+   `ready:true`.
+
+**Real bugs found and fixed via testing** (not just "it compiles" — see
+individual commit messages for full detail): a search-ranking bug where the
+highYield/context boosts applied unconditionally, letting a completely
+irrelevant high-yield doc pass the `score>0` filter as a false positive
+(caught via `compareConditions` resolving two different conditions to the
+same page); the same bug had already shipped in Phase 1's search and was
+retroactively fixed and re-verified (472 → 80 more-precise matches for
+"cherry red spot", still correctly ranking CRAO first); Compare Conditions'
+table columns showed raw lowercase query text instead of the resolved
+content's real title.
+
+**Final state**: all 8 real tabs (Dashboard, Blueprint, Learn, Flashcards,
+Questions, Mistakes, Analytics, AI Tutor) verified working via a full
+Playwright walkthrough with zero JS console errors; Exams/Images/Study
+Planner remain honest `ComingSoon` placeholders (explicitly out of scope
+this session). `integrity_check.py`/`audit_coverage.py` counts are
+byte-for-byte unchanged from before this session (790 objectives/study
+pages, 1937 flashcards, 379 questions, 274 content topics, 16/16 official
+areas COMPLETE) — this entire feature touches zero curriculum content.
+
+**Next steps, if this is picked up again**: the biggest deliberate gaps are
+(1) no real backend/LLM — `callLanguageModel()` in `mockModel.js` and
+`searchWeb()` in `webSearchTool.js` are the two seams to wire up if a
+backend is ever added; (2) Exams/Images/Study Planner still don't exist as
+real features, so Search's filter chips for those categories always show
+"Not available yet"; (3) `synonyms.js`'s abbreviation map is hand-curated
+and could always use more entries as new content areas get built out.
+
 ## READ THIS FIRST — session of 2026-08-20: 80-drug Drug Reference (Supplemental) area
 
 The user supplied a list of 80 named drugs (pharmacology spanning ocular,
