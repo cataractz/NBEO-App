@@ -5,6 +5,102 @@
 > no memory of this conversation and must be able to pick up from this file alone,
 > plus PROJECT_SPEC.md and the current nbeo-app.jsx.
 
+## READ THIS FIRST — session of 2026-08-20: 80-drug Drug Reference (Supplemental) area
+
+The user supplied a list of 80 named drugs (pharmacology spanning ocular,
+cardiovascular, endocrine, psychiatric, respiratory, GI, immunosuppressant/
+biologic, and antimicrobial classes) and asked for each to be documented
+with 8 fixed fields — drug class, mechanism of action, primary
+indication(s), ocular effects (therapeutic and adverse), major systemic
+side effects, major contraindications/precautions, important drug
+interactions, and a "classic NBEO association" one-liner — added "as a new
+area under the learn tab."
+
+**Key architectural decision**: this content is explicitly NOT part of the
+official 266-topic NBEO outline (`CURRICULUM`), so it could not simply be
+added as ordinary `CONTENT_TOPICS`/topics without corrupting
+`audit_coverage.py`'s official coverage tracking or the Blueprint page
+(which PROJECT_SPEC.md locks to the official outline). Solution: a new
+**"Drug Reference (Supplemental)" area**, using synthetic topicIds
+(`"drugref-*"`, not matching the `t-{area}-{section}-{topic}` pattern that
+`audit_coverage.py` and the Blueprint page key off of) so this content is
+completely invisible to official-coverage tracking while still rendering
+correctly in the Learn tab. This required exactly one small, generic code
+change: `LearnTab`'s `groupedByArea` useMemo now groups any `CONTENT_TOPICS`
+entry with no `CURRICULUM` match under a synthetic "Drug Reference
+(Supplemental)" area (using the topic's own `name` as its discipline
+label) instead of dropping it — see commit `241c501`.
+
+**Method**: all 80 drugs were split into 8 chunks of 10 (grouped
+thematically — e.g. glaucoma/ocular autonomics, ocular anti-inflammatory/
+anti-infective, ocular-toxic systemic drugs, cardiovascular/endocrine,
+psychiatric/neurologic, antipsychotic/respiratory/GI,
+immunosuppressant/biologic/misc). Each chunk was authored by a fresh
+subagent given the exact code shape to follow (topic constants →
+`TOPIC_OBJECTIVES` → `CONTENT_TOPICS` → 10 `STUDY_PAGES` entries with all
+8 fields → 20 flashcards → 2-3 differentiating practice questions) plus
+specific per-drug accuracy guidance and instructions to cross-reference
+existing platform content rather than duplicate/contradict it. Every
+chunk was independently re-validated in the orchestrating session (babel
+syntax check, `integrity_check.py`, `audit_coverage.py`, `git diff
+--stat`, and a manual read of 1-2 specific factual claims in the raw
+added code) before being committed — nothing was trusted from a
+subagent's self-report alone.
+
+**All 8 chunks completed, validated, and pushed** (commits `241c501`
+infra, then `9062391`, `b28e784`, `14a96a8`, `e8b499f`, `c7b0b99`,
+`33c7fde`, `37378de`, `55ae724`):
+1. Glaucoma & Ocular Autonomic Agents — timolol, latanoprost,
+   brimonidine, dorzolamide, acetazolamide, pilocarpine, atropine,
+   tropicamide, cyclopentolate, phenylephrine.
+2. Ocular Anti-Inflammatory & Anti-Infective Agents — prednisolone,
+   dexamethasone, loteprednol, ketorolac, moxifloxacin, tobramycin,
+   doxycycline, acyclovir, valacyclovir, ganciclovir.
+3. Ocular-Toxic & Retinal-Risk Systemic Drugs — natamycin,
+   hydroxychloroquine, chloroquine, ethambutol, amiodarone, digoxin,
+   tamoxifen, topiramate, isotretinoin, sildenafil.
+4. Endocrine, Urologic & Cardiovascular Drugs I — tamsulosin,
+   methotrexate, prednisone, metformin, insulin, levothyroxine,
+   methimazole, propranolol, lisinopril, losartan.
+5. Cardiovascular & Renal Drugs II — warfarin, clopidogrel, furosemide,
+   hydrochlorothiazide, spironolactone, metoprolol, verapamil, diltiazem,
+   atorvastatin, fluoxetine.
+6. Psychiatric & Neurologic Drugs — sertraline, amitriptyline, bupropion,
+   lithium, phenytoin, valproic acid, carbamazepine, gabapentin,
+   diazepam, haloperidol.
+7. Antipsychotic, Respiratory & GI Drugs — risperidone, albuterol,
+   ipratropium, fluticasone, montelukast, omeprazole, ondansetron,
+   metoclopramide, azathioprine, mycophenolate.
+8. Immunosuppressant, Biologic & Misc Drugs — cyclosporine, tacrolimus,
+   adalimumab, infliximab, allopurinol, colchicine, alendronate,
+   rifampin, isoniazid, metronidazole.
+
+**Notable cross-chunk teaching connections built in deliberately** (not
+isolated facts — each drug was written to reference related drugs already
+in the file): carbamazepine's HLA-B*1502 SJS/TEN risk ↔ allopurinol's
+parallel HLA-B*5801 risk; azathioprine's allopurinol interaction was
+flagged in chunk 7 and paid off with allopurinol's own entry in chunk 8;
+phenytoin's nystagmus-toxicity progression vs. carbamazepine's diplopia
+as sibling sodium-channel blockers with different toxicity signatures;
+haloperidol's oculogyric crisis ↔ metoclopramide and risperidone sharing
+the same D2-antagonist mechanism and EPS risk; ipratropium's "nebulizer
+pupil" mydriasis; isoniazid's optic neuritis vs. rifampin's harmless tear
+discoloration as sibling TB-regimen drugs; adalimumab's specific FDA
+uveitis indication vs. infliximab's off-label Behçet-uveitis use.
+
+**Final state after this session**: 790 objectives, 790 study pages, 1937
+flashcards, 379 questions, 274 content topics — `integrity_check.py` zero
+orphans/duplicates, `audit_coverage.py` all 16/16 official curriculum
+areas still COMPLETE (the 80-drug addition is purely supplemental and
+does not affect official outline coverage, by design).
+
+**Next step, if the user asks for more drug coverage**: follow the exact
+same chunking pattern — add a `DRUGREF9_TOPIC_ID`/`DRUGREF9_OBJECTIVES`
+block, extend `TOPIC_OBJECTIVES`/`CONTENT_TOPICS`, and write 8-field
+`STUDY_PAGES` entries + flashcards + questions per drug, validating with
+babel + `integrity_check.py` + `audit_coverage.py` after every chunk
+before committing. Otherwise, no further Drug Reference work is planned.
+
 ## READ THIS FIRST — session of 2026-08-19: full accuracy audit, mobile layout, GitHub Pages deploy
 
 The user asked for every topic's study content to be double-checked for
