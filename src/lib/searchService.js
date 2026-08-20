@@ -55,18 +55,18 @@ function hasWord(text, word) {
 function scoreDoc(doc, queryLower, synonymTerms, context) {
   const title = doc.title.toLowerCase();
   const text = doc.text.toLowerCase();
-  let score = 0;
+  let relevance = 0;
 
-  if (title === queryLower) score += 100;
-  else if (title.startsWith(queryLower)) score += 60;
-  else if (title.includes(queryLower)) score += 40;
+  if (title === queryLower) relevance += 100;
+  else if (title.startsWith(queryLower)) relevance += 60;
+  else if (title.includes(queryLower)) relevance += 40;
 
-  if (doc.type === "objective" && text.includes(queryLower)) score += 25;
+  if (doc.type === "objective" && text.includes(queryLower)) relevance += 25;
 
-  if (text.includes(queryLower)) score += 15;
+  if (text.includes(queryLower)) relevance += 15;
 
   for (const term of synonymTerms) {
-    if (title.includes(term) || text.includes(term)) score += 18;
+    if (title.includes(term) || text.includes(term)) relevance += 18;
   }
 
   // loose per-word overlap so multi-word queries ("pain with eye movement")
@@ -75,8 +75,15 @@ function scoreDoc(doc, queryLower, synonymTerms, context) {
   const words = queryLower.split(/\s+/).filter(w => w.length > 2);
   let wordHits = 0;
   for (const w of words) if (hasWord(text, w)) wordHits++;
-  if (words.length > 1) score += Math.round((wordHits / words.length) * 12);
+  if (words.length > 1) relevance += Math.round((wordHits / words.length) * 12);
 
+  // Everything below is a tie-breaker, never a standalone reason to match —
+  // without this guard, e.g. a high-yield doc with zero textual relevance to
+  // the query would still clear the score>0 filter on its highYield bonus
+  // alone and show up as a false positive.
+  if (relevance === 0) return 0;
+
+  let score = relevance;
   if (context) {
     if (context.topicId && doc.topicId === context.topicId) score += 10;
     if (context.objectiveId && doc.objectiveId === context.objectiveId) score += 14;
