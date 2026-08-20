@@ -124,10 +124,18 @@ export default function GlobalSearch({ open, onOpenChange, index, coverage, tuto
     if (action === "study") navigateTo("learn", { objectiveId: doc.objectiveId || undefined, topicId: doc.topicId || undefined });
     else if (action === "quiz") navigateTo("questions", doc.type === "question"
       ? { questionId: doc.id.replace(/^question:/, "") }
-      : { filterObjectiveId: doc.objectiveId || undefined });
+      // A topic-type result has no objectiveId (topics aren't objectives) —
+      // scope to the whole topic in that case rather than silently passing
+      // an undefined filter, which used to no-op and leave whatever scope
+      // was already active.
+      : doc.objectiveId ? { filterObjectiveId: doc.objectiveId }
+      : doc.topicId ? { topicId: doc.topicId }
+      : {});
     else if (action === "flashcards") navigateTo("flashcards", doc.type === "flashcard"
       ? { flashcardId: doc.id.replace(/^flashcard:/, "") }
-      : { objectiveId: doc.objectiveId || undefined });
+      : doc.objectiveId ? { objectiveId: doc.objectiveId }
+      : doc.topicId ? { topicId: doc.topicId }
+      : {});
     else if (action === "ask-ai") navigateTo("tutor", { objectiveId: doc.objectiveId || undefined, topicId: doc.topicId || undefined, query: doc.title });
     close();
   };
