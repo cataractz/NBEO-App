@@ -69,13 +69,20 @@ export async function explainConcept({ query, context, knowledgeMode = "auto", i
     return { mode: "chat", ...noPlatformAnswer(query), sourcesUsed: { platform: [], web: [] } };
   }
 
-  // Auto (fell through) or explicit Web mode: offer the honest web stub.
+  // Auto (fell through) or explicit Web mode: run a real live search.
   const web = await searchWeb(query);
+  const lead = web.live
+    ? (topObjectiveDoc
+        ? `Platform coverage on this is thin, so I searched the web. `
+        : `I don't have platform content on "${query}" yet, so I searched the web. `) +
+      (web.sources[0]?.snippet ? web.sources[0].snippet : `Here's what I found:`)
+    : `I don't have strong platform coverage for "${query}" yet. ${web.disclaimer}`;
   return {
     mode: "chat",
-    text: `I don't have strong platform coverage for "${query}" yet. ${web.disclaimer}`,
-    sourcesUsed: { platform: [], web: web.sources },
+    text: lead,
+    sourcesUsed: { platform: topObjectiveDoc ? [STUDY_PAGES[topObjectiveDoc.objectiveId]?.name].filter(Boolean) : [], web: web.sources },
     confidence: strength,
+    webLive: web.live,
   };
 }
 

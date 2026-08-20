@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef, useMemo } from "react";
 import { MessageCircle, X, Send, BookOpen, GraduationCap, Brain, AlertTriangle, GitCompare, Zap, CalendarClock, HelpCircle, ChevronRight, Check, XCircle } from "lucide-react";
 import { search } from "../lib/searchService.js";
 import * as tutor from "../lib/tutorService.js";
-import { getConversations, saveConversation } from "../lib/conversationStore.js";
 import { computeMastery } from "../lib/analytics.js";
 
 const KNOWLEDGE_MODES = [
@@ -34,11 +33,23 @@ function resolveObjectiveByName(name, index) {
 
 function SourcesFooter({ sourcesUsed }) {
   if (!sourcesUsed || (!sourcesUsed.platform?.length && !sourcesUsed.web?.length)) return null;
+  const web = sourcesUsed.web || [];
+  const hasLive = web.some(w => w?.url);
   return (
     <div style={{ marginTop: 10, paddingTop: 8, borderTop: "1px dashed #e2e2e2", fontSize: 11, color: "var(--steel)" }}>
       <div style={{ fontWeight: 600, marginBottom: 3 }}>SOURCES USED</div>
-      {sourcesUsed.platform?.length > 0 && <div>📚 Platform: {sourcesUsed.platform.slice(0, 4).join(" · ")}</div>}
-      {sourcesUsed.web?.length > 0 && <div>🌐 Web (suggested, not live-fetched): {sourcesUsed.web.join(" · ")}</div>}
+      {sourcesUsed.platform?.length > 0 && <div style={{ marginBottom: 3 }}>📚 Platform: {sourcesUsed.platform.slice(0, 4).join(" · ")}</div>}
+      {web.length > 0 && (
+        <div>
+          🌐 Web {hasLive ? "(live)" : "(suggested — not fetched)"}:
+          {web.map((w, i) => (
+            <div key={i} style={{ marginLeft: 12 }}>
+              {w.url ? <a href={w.url} target="_blank" rel="noreferrer" style={{ color: "var(--teal)" }}>{w.title}</a> : <span>{w.title}</span>}
+              {w.snippet && <span style={{ color: "var(--steel)" }}> — {w.snippet}</span>}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
@@ -191,22 +202,18 @@ export default function AITutorPage({ tutorContext, setTutorContext, navigateTo,
   const [knowledgeMode, setKnowledgeMode] = useState("auto");
   const [explanationLevel, setExplanationLevel] = useState("student");
   const [transcript, setTranscript] = useState([]);
-  const [recent, setRecent] = useState([]);
   const [pendingMode, setPendingMode] = useState(null); // for chips needing a follow-up (compare/session duration)
   const scrollRef = useRef(null);
   const consumedTarget = useRef(null);
 
-  useEffect(() => { getConversations().then(setRecent); }, [screen === "landing"]);
   useEffect(() => { if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight; }, [transcript]);
 
   const deps = { index, CONTENT_TOPICS, TOPIC_INFO_BY_ID, STUDY_PAGES, FLASHCARDS, QUESTIONS, mistakes: coverage.mistakes || [], attempts: coverage.attempts || [], srsState: srsState || {} };
 
   const pushTurn = (turn) => setTranscript(t => [...t, turn]);
 
-  const startConversation = async (title, mode) => {
+  const startConversation = async (_title, _mode) => {
     setScreen("conversation");
-    await saveConversation({ title, mode, contextLabel: tutorContext?.label });
-    getConversations().then(setRecent);
   };
 
   const runChat = async (text) => {
@@ -395,18 +402,6 @@ export default function AITutorPage({ tutorContext, setTutorContext, navigateTo,
             return <div key={s.id} onClick={() => onSuggestion(s.id)} style={chip}><Icon size={13} /> {s.label}</div>;
           })}
         </div>
-
-        {recent.length > 0 && (
-          <div>
-            <div style={{ fontSize: 11, letterSpacing: 1.5, color: "var(--steel)", fontWeight: 600, marginBottom: 8 }}>RECENT CONVERSATIONS</div>
-            {recent.map(c => (
-              <div key={c.id} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "9px 12px", background: "#fff", border: "1px solid #eee", borderRadius: 9, marginBottom: 6, fontSize: 13 }}>
-                <span>{c.title}</span>
-                <span className="mono" style={{ fontSize: 10.5, color: "var(--steel)" }}>{c.contextLabel || c.mode}</span>
-              </div>
-            ))}
-          </div>
-        )}
       </div>
     );
   }
