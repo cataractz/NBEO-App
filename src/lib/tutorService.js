@@ -166,7 +166,9 @@ export function compareConditions({ names, index, STUDY_PAGES, CONTENT_TOPICS })
   const conditions = names.map(name => {
     const results = search(index, name, { filterType: "objective", perGroupLimit: 1 });
     const doc = results.groups[0]?.results[0];
-    return { name, page: doc ? STUDY_PAGES[doc.objectiveId] : null, objectiveId: doc?.objectiveId };
+    // Prefer the resolved platform title over the user's raw typed text
+    // (which may be lowercase/abbreviated) so the comparison reads cleanly.
+    return { name: doc?.title || name, page: doc ? STUDY_PAGES[doc.objectiveId] : null, objectiveId: doc?.objectiveId };
   });
   const table = composeCompareTable(conditions);
   const missing = conditions.filter(c => !c.page).map(c => c.name);
